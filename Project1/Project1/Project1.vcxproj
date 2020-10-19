@@ -126,6 +126,7 @@
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test1.cpp" />
+    <ClCompile Include="テスト　やさしいC 　レッスン２　サンプル５.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
