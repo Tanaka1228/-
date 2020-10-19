@@ -1,4 +1,7 @@
 #include<iostream>
-jhjhg
-kasfjagkj
-jakfjalk
+using namespace std;
+
+void main()
+{
+
+}
