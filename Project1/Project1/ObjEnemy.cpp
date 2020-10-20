@@ -1,8 +1,8 @@
 //使用するヘッダーファイル
-#include"GameL\DrawTexture.h"
+#include"GameL/DrawTexture.h"
 
 #include"GameHead.h"
-#include"ObjEnemy.h"
+#include"ObjEneym.h"
 
 //使用するネームスペース
 using namespace GameL;
