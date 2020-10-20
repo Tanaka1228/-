@@ -122,37 +122,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Desktop\team_ankoku\チーム開発\チーム開発\GameHead.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\team_ankoku\チーム開発\チーム開発\main.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\Audio.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\DirectXDevice.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\DrawFont.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\DrawTexture.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\GameHead.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\HitBoxManager.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\MultiThread.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\SceneManager.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\SceneObjManager.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\SetWindow.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\UserData.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\WinInputs.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\Audio.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\DirectXDevice.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\Draw2DTex_Source.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\DrawFont.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\DrawTexture.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\GameL_Main.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\HitBoxManager.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\MultiThread.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\SceneManager.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\SceneObjManager.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\SetWindow.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\UserData.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\WinInputs.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
