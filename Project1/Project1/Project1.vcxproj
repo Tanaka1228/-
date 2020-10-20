@@ -136,6 +136,7 @@
     <ClInclude Include="..\..\チーム開発\GameL\UserData.h" />
     <ClInclude Include="..\..\チーム開発\GameL\WinInputs.h" />
     <ClInclude Include="..\..\チーム開発\main.h" />
+    <ClInclude Include="ObjEneym.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneTitle.h" />
@@ -154,6 +155,7 @@
     <ClCompile Include="..\..\チーム開発\GameL\SetWindow.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\UserData.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\WinInputs.cpp" />
+    <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneTitle.cpp" />

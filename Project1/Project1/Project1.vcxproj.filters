@@ -66,6 +66,12 @@
     <ClInclude Include="ObjHero.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\チーム開発\GameL\GameHead.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjEneym.h">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -114,6 +120,9 @@
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
     <ClCompile Include="ObjHero.cpp">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjEnemy.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
   </ItemGroup>
