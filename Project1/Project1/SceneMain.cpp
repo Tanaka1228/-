@@ -34,6 +34,10 @@ void CSceneMain::InitScene()
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 1); //作った主人公オブジェクトをオブジェクトマネージャーに登録
+
+	//敵機オブジェクト作成
+	CObjEnemy* obj_enemy = new CObjEnemy(); //敵機オブジェクト作成
+	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 1); //作った敵機オブジェクトをオブジェクトマネージャーに登録
 }
 
 //ゲームメイン実行中メソッド
