@@ -29,10 +29,10 @@ void CObjEnemy::Draw()
 	RECT_F dst;//描画先表示位置
 
 	//切り取り位置の設定
-	src.m_top = 1.0f; //y
-	src.m_left = 24.0f; //x
-	src.m_right = 223.0f; //x
-	src.m_bottom = 240.0f; //y
+	src.m_top = 3.0f; //y
+	src.m_left = 7.0f; //x
+	src.m_right = 139.0f; //x
+	src.m_bottom = 131.0f; //y
 
 	//表示位置の設定
 	dst.m_top = 0.0f;
