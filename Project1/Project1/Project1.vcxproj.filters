@@ -33,9 +33,6 @@
     <ClInclude Include="..\..\チーム開発\GameL\DrawTexture.h">
       <Filter>リソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\チーム開発\GameL\GameHead.h">
-      <Filter>リソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\チーム開発\GameL\HitBoxManager.h">
       <Filter>リソース ファイル</Filter>
     </ClInclude>
@@ -56,9 +53,6 @@
     </ClInclude>
     <ClInclude Include="..\..\チーム開発\GameL\WinInputs.h">
       <Filter>リソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\チーム開発\GameHead.h">
-      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="..\..\チーム開発\main.h">
       <Filter>ヘッダー ファイル</Filter>

@@ -6,12 +6,13 @@
 using namespace GameL;
 
 //シーン：ゲームタイトル
-class CSeneTitle : public CScene
+class ObjTitle : public CObj
 {
-	public :
-		CSceneTitle();
-		~CSceneTitle();
-		void InitScene();
-		void Scene();
+	public:
+		CObjTitle() {};
+		~CObjTitle() {};
+		void Init();
+		void Action();
+		void Draw();
 	private:
 };

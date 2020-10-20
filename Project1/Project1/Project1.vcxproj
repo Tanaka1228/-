@@ -123,7 +123,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\チーム開発\GameHead.h" />
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h" />
     <ClInclude Include="..\..\チーム開発\GameL\DirectXDevice.h" />
     <ClInclude Include="..\..\チーム開発\GameL\DrawFont.h" />
