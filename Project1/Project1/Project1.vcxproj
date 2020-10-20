@@ -123,7 +123,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\チーム開発\GameHead.h" />
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h" />
     <ClInclude Include="..\..\チーム開発\GameL\DirectXDevice.h" />
     <ClInclude Include="..\..\チーム開発\GameL\DrawFont.h" />
@@ -137,6 +136,7 @@
     <ClInclude Include="..\..\チーム開発\GameL\UserData.h" />
     <ClInclude Include="..\..\チーム開発\GameL\WinInputs.h" />
     <ClInclude Include="..\..\チーム開発\main.h" />
+    <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneTitle.h" />
   </ItemGroup>
@@ -154,6 +154,7 @@
     <ClCompile Include="..\..\チーム開発\GameL\SetWindow.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\UserData.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\WinInputs.cpp" />
+    <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
   </ItemGroup>
