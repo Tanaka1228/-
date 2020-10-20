@@ -63,11 +63,8 @@
     <ClInclude Include="SceneMain.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
-    <ClInclude Include="ObjTitle.h">
-      <Filter>ヘッダー ファイル\title</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\チーム開発\GameL\GameHead.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="ObjHero.h">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -116,8 +113,8 @@
     <ClCompile Include="SceneMain.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
-    <ClCompile Include="ObjTitle.cpp">
-      <Filter>ヘッダー ファイル\title</Filter>
+    <ClCompile Include="ObjHero.cpp">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
