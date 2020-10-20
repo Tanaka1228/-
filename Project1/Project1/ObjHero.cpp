@@ -25,15 +25,15 @@ void CObjHero::Draw()
 	RECT_F src;
 	RECT_F dst;
 
-	src m_top     = 0.0f;
-	src m_left    = 0.0f;
-	src m_right   = 0.0f;
-	src m_bottom  = 0.0f;
+	src m_top     = 1.0f; //y
+	src m_left    = 24.0f; //x
+	src m_right   = 223.0f; //x
+	src m_bottom  = 240.0f; //y
 
 	dst m_top     = 0.0f;
 	dst m_left    = 0.0f;
-	dst m_right   = 0.0f;
-	dst m_bottom  = 0.0f;
+	dst m_right   = 32.0f;
+	dst m_bottom  = 32.0f;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 }
