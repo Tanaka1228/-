@@ -95,5 +95,8 @@
     <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\WinInputs.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\Audio.cpp">
+      <Filter>リソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

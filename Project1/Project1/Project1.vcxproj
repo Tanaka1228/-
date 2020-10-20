@@ -139,6 +139,7 @@
     <ClInclude Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\WinInputs.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\Audio.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\DirectXDevice.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\Draw2DTex_Source.cpp" />
     <ClCompile Include="..\..\..\..\..\Desktop\チーム開発\チーム開発\GameL\DrawFont.cpp" />
