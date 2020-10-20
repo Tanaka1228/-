@@ -16,6 +16,9 @@
     <Filter Include="ヘッダー ファイル\title">
       <UniqueIdentifier>{10ebc352-74ad-4ae0-a38c-657e668520b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\SceneMain">
+      <UniqueIdentifier>{c4ab471b-a843-4834-af93-464af97004ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
