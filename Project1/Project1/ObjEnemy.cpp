@@ -2,7 +2,7 @@
 #include"GameL/DrawTexture.h"
 
 #include"GameHead.h"
-#include"ObjEneym.h"
+#include"ObjEnemy.h"
 
 //使用するネームスペース
 using namespace GameL;

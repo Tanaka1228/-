@@ -69,7 +69,7 @@
     <ClInclude Include="..\..\チーム開発\GameL\GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ObjEneym.h">
+    <ClInclude Include="ObjEnemy.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
   </ItemGroup>

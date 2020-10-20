@@ -136,7 +136,7 @@
     <ClInclude Include="..\..\チーム開発\GameL\UserData.h" />
     <ClInclude Include="..\..\チーム開発\GameL\WinInputs.h" />
     <ClInclude Include="..\..\チーム開発\main.h" />
-    <ClInclude Include="ObjEneym.h" />
+    <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneTitle.h" />
