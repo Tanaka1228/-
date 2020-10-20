@@ -28,7 +28,7 @@ CSceneMain::~CSceneMain()
 //ゲームメイン初期化メソッド
 void CSceneMain::InitScene()
 {
-	//外部グラフィックファイルを読み込み0番に登録(800×600ピクセル)
+	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
