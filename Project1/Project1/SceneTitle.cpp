@@ -23,3 +23,9 @@ CSceneTitle::~CSceneTitle()
 {
 
 }
+
+//ゲームメイン初期化メソッド
+void CSceneTitle::InitScene()
+{
+
+}
