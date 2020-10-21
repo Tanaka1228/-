@@ -1,31 +1,32 @@
-//使用するヘッダ―ファイル
+// 使用するヘッダ―ファイル
 #include"GameL\DrawFont.h"
 #include"GameL\WinInputs.h"
+#include"GameL\SceneObjManager.h"
 
 #include"GameHead.h"
-#include"ObjTitle.h"
+#include"ObjGameOver.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjTitle::Init()
+void CObjGameOver::Init()
 {
-	bool m_key_flag = false;
+	bool m_key_flag=false;//キーフラグ
 }
 
 //アクション
-void CObjTitle::Action()
+void CObjGameOver::Action()
 {
 	//エンターキーを押してシーン：ゲームTitleに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
 	{
 		if (m_key_flag == true)
 		{
-			Scene::SetScene(new CSceneMain());
+			Scene::SetScene(new CSceneTitle());
 			m_key_flag = false;
 		}
-
+		
 	}
 	else
 	{
@@ -34,8 +35,10 @@ void CObjTitle::Action()
 }
 
 //ドロー
-void CObjTitle::Draw()
+void CObjGameOver::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
-	Font::StrDraw(L"ARTIFICIAL HUMAN ～無人世界の旅～", 180, 100, 32, c);
+
+	Font::StrDraw(L"YOU LOST",0,0,32,c);
+	Font::StrDraw(L"GAME OVER",0,40,32,c);
 }

@@ -11,6 +11,7 @@ enum OBJ_NAME
 	OBJ_TITLE,
 	OBJ_ENEMY,
 	OBJ_BULLET,
+	OBJ_GAME_OVER,
 };
 //------------------------------------------------
 
@@ -58,6 +59,7 @@ struct UserData
 #include"ObjTitle.h"
 #include"ObjEnemy.h"
 #include"CObjBullet.h"
+#include"ObjGameOver.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -70,6 +72,6 @@ struct UserData
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
 #define SET_GAME_START CSceneGameOver
-#define SET_GAME_START CSceneTitle 
-#define SET_GAME_START CSceneMain
+//#define SET_GAME_START CSceneTitle 
+//#define SET_GAME_START CSceneMain
 //-----------------------------------------------

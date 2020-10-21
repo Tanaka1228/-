@@ -14,4 +14,5 @@ class CObjTitle : public CObj
 		void Action();
 		void Draw();
 	private:
+		bool m_key_flag;//キーフラグ
 };

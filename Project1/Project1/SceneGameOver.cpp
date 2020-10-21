@@ -28,7 +28,13 @@ CSceneGameOver::~CSceneGameOver()
 //ゲームメイン初期化メソッド
 void CSceneGameOver::InitScene()
 {
-	
+	//出力させる文字のグラフィックを作成
+	Font::SetStrTex(L"YOU LOST");
+	Font::SetStrTex(L"GAME OVER");
+
+	//ゲームオーバーオブジェクト作成
+	CObjGameOver* obj = new CObjGameOver();
+	Objs::InsertObj(obj, OBJ_GAME_OVER, 10);
 }
 
 //実行中メソッド
