@@ -22,7 +22,7 @@ void CObjHero::Action()
 	{
 		//弾丸オブジェクト作成
 		//テスト用：弾丸オブジェクト作成
-	    CObjBullet* obj_b = new CObjBullet(); //弾丸オブジェクト作成
+	    CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
 	    Objs::InsertObj(obj_b, OBJ_BULLET, 1); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
 	}
 

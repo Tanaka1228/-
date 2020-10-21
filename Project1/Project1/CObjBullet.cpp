@@ -6,6 +6,13 @@
 //使用するネームスペース
 using namespace GameL;
 
+//コンストラクタ
+CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に送る
+{
+	m_x = x;
+	m_y = y;
+}
+
 //イニシャライズ
 void CObjBullet::Init()
 {
