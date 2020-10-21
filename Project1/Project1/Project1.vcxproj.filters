@@ -66,13 +66,13 @@
     <ClInclude Include="ObjHero.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\チーム開発\GameL\GameHead.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjEnemy.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
     <ClInclude Include="ObjTitle.h">
+      <Filter>ヘッダー ファイル\title</Filter>
+    </ClInclude>
+    <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル\title</Filter>
     </ClInclude>
   </ItemGroup>
