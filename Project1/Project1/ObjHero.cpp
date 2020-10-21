@@ -47,8 +47,8 @@ void CObjHero::Draw()
 	RECT_F src;
 	RECT_F dst;
 
-	src.m_top     = 1.0f; //y
-	src.m_left    = 24.0f; //x
+	src.m_top     = 1.0f;   //y
+	src.m_left    = 24.0f;  //x
 	src.m_right   = 223.0f; //x
 	src.m_bottom  = 240.0f; //y
 
