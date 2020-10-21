@@ -9,11 +9,12 @@ class CObjBullet : public CObj
 {
 public:
 	CObjBullet(float x,float y);
-	~CObjBullet() {};
+	~CObjBullet(){};
 	void Init();     //イニシャライズ
 	void Action();  //アクション
 	void Draw();   //ドロー
 private:
-	float m_x; //弾丸のX方向の位置用変数
-	float m_y; //弾丸のY方向の位置用変数
+	float m_x;  //弾丸のX方向の位置用変数
+	float m_y;  //弾丸のY方向の位置用変数
+	float m_vx; //弾丸のX方向の位置用変数
 };
