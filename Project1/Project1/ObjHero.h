@@ -14,5 +14,5 @@ public:
 	void Action(); //アクション
 	void Draw(); //ドロー
 private:
-
+	float m_x;  //主人公機のx方向移動用変数
 };
