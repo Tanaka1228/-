@@ -1,6 +1,7 @@
 //使用するヘッダーファイル
 #include"GameL\DrawTexture.h"
 #include"GameL/WinInputs.h"
+#include"GameL\HitBoxManager.h"
 #include"GameHead.h"
 #include"ObjHero.h"
 
@@ -12,6 +13,9 @@ void CObjHero::Init()
 {
 	m_x = 0;
 	m_y = 0;
+
+	//当たり判定用HitBoxを作成
+	Hits::SetHitBox(this, m_x, m_y, 223, 240, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
 
 //アクション
@@ -37,6 +41,16 @@ void CObjHero::Action()
 		m_y+= 1.0f;
 	}
 
+	//HitBoxの内容を更新
+	CHitBox* hit = Hits::GetHitBox(this); //作成したHitBox更新用の入り口を取り出す
+	hit->SetPos(m_x, m_y);                //入り口から新しい位置(主人公機の位置)情報に置き換える
+
+	//敵機オブジェクトと接触したら主人公機削除
+	if (hit->CheckObjNameHit(OBJ_ENEMY) != nullptr)
+	{
+		this->SetStatus(false); //自身に削除命令を出す。
+		Hits::DeleteHitBox(this);//主人公機が所有するHitBoxに削除する。
+	}
 
 }
 

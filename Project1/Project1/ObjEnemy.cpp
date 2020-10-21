@@ -1,5 +1,6 @@
 //使用するヘッダーファイル
 #include"GameL/DrawTexture.h"
+#include"GameL\HitBoxManager.h"
 
 #include"GameHead.h"
 #include"ObjEnemy.h"
@@ -10,13 +11,19 @@ using namespace GameL;
 //イニシャライズ
 void CObjEnemy::Init()
 {
+	m_x = 600;
+	m_y = 400;
 
+	//当たり判定用HitBoxを作成
+	Hits::SetHitBox(this, m_x, m_y, 139, 131, ELEMENT_ENEMY, OBJ_ENEMY, 1);
 }
 
 //アクション
 void CObjEnemy::Action()
 {
-
+	//HitBoxの内容を更新
+	CHitBox* hit = Hits::GetHitBox(this);
+	hit->SetPos(m_x, m_y);
 }
 
 //ドロー
