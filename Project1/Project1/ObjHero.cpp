@@ -21,6 +21,23 @@ void CObjHero::Init()
 //アクション
 void CObjHero::Action()
 {
+	//主人公の弾丸発射
+	if (Input::GetVKey('Z') == true)
+	{
+		//弾丸オブジェクト作成
+		//テスト用：弾丸オブジェクト作成
+	    CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
+	    Objs::InsertObj(obj_b, OBJ_BULLET, 1); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
+	}
+
+
+
+
+
+
+
+
+
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
 		m_x += 1.0f;
@@ -61,11 +78,13 @@ void CObjHero::Draw()
 	RECT_F src;
 	RECT_F dst;
 
-	src.m_top     = 1.0f;   //y
-	src.m_left    = 24.0f;  //x
+	//切り取り位置の設定
+	src.m_top     = 0.0f;   //y
+	src.m_left    = 0.0f;  //x
 	src.m_right   = 223.0f; //x
 	src.m_bottom  = 240.0f; //y
 
+	//表示位置の設定
 	dst.m_top     = 0.0f  +  m_y;
 	dst.m_left    = 0.0f  +  m_x;
 	dst.m_right   = 32.0f +  m_x;

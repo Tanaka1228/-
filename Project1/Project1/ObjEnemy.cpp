@@ -36,8 +36,8 @@ void CObjEnemy::Draw()
 	RECT_F dst;//•`‰ææ•\¦ˆÊ’u
 
 	//Ø‚èæ‚èˆÊ’u‚Ìİ’è
-	src.m_top = 3.0f; //y
-	src.m_left = 7.0f; //x
+	src.m_top = 0.0f; //y
+	src.m_left = 0.0f; //x
 	src.m_right = 139.0f; //x
 	src.m_bottom = 131.0f; //y
 

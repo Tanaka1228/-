@@ -30,4 +30,8 @@ void CSceneTitle::InitScene()
 {
 	//出力させる文字のグラフィックを作成
 	Font::SetStrTex(L"ARTIFICIAL HUMAN ～無人世界の旅～");
+
+	//タイトルオブジェクト作成
+	CObjTitle* obj = new CObjTitle();	//タイトルオブジェクト作成
+	Objs::InsertObj(obj, OBJ_TITLE, 10);//主人公オブジェクト登録
 }

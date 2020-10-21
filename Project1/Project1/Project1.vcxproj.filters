@@ -19,6 +19,9 @@
     <Filter Include="ヘッダー ファイル\SceneMain">
       <UniqueIdentifier>{c4ab471b-a843-4834-af93-464af97004ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\GameOver">
+      <UniqueIdentifier>{96e9c914-9202-4eee-a7eb-ae934cc644ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -78,6 +81,9 @@
     <ClInclude Include="CObjBullet.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ヘッダー ファイル\GameOver</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -136,6 +142,9 @@
     </ClCompile>
     <ClCompile Include="CObjBullet.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp">
+      <Filter>ヘッダー ファイル\GameOver</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
