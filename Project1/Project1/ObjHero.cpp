@@ -11,6 +11,7 @@ using namespace GameL;
 void CObjHero::Init()
 {
 	m_x = 0;
+	m_y = 0;
 }
 
 //アクション
@@ -24,6 +25,16 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 1.0f;
+	}
+
+	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
+	{
+		m_y += 1.0f;
+	}
+
+	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
+	{
+		m_y-= 1.0f;
 	}
 
 
