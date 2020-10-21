@@ -6,7 +6,7 @@
 using namespace GameL;
 
 //シーン：ゲームタイトル
-class CSeneTitle : public CScene
+class CSceneTitle : public CScene
 {
 	public :
 		CSceneTitle();
