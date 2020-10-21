@@ -29,7 +29,10 @@ CSceneMain::~CSceneMain()
 void CSceneMain::InitScene()
 {
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);
+	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
+
+	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"Enemy1.png", 1, TEX_SIZE_512);//敵グラフィック
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(); //主人公オブジェクト作成
