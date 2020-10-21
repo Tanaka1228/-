@@ -51,7 +51,7 @@ struct UserData
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
-#include"ObjTitle"
+#include"ObjTitle.h"
 #include"ObjHero.h"
 #include"ObjEnemy.h"
 //------------------------------------------------
