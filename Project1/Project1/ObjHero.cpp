@@ -29,12 +29,12 @@ void CObjHero::Action()
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
-		m_y += 1.0f;
+		m_y -= 1.0f;
 	}
 
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
-		m_y-= 1.0f;
+		m_y+= 1.0f;
 	}
 
 
@@ -52,10 +52,10 @@ void CObjHero::Draw()
 	src.m_right   = 223.0f; //x
 	src.m_bottom  = 240.0f; //y
 
-	dst.m_top     = 0.0f;
+	dst.m_top     = 0.0f  +  m_y;
 	dst.m_left    = 0.0f  +  m_x;
 	dst.m_right   = 32.0f +  m_x;
-	dst.m_bottom  = 32.0f;
+	dst.m_bottom  = 32.0f +  m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 }
