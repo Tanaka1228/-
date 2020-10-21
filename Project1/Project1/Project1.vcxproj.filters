@@ -66,14 +66,17 @@
     <ClInclude Include="ObjHero.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\チーム開発\GameL\GameHead.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjEnemy.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
     <ClInclude Include="ObjTitle.h">
       <Filter>ヘッダー ファイル\title</Filter>
+    </ClInclude>
+    <ClInclude Include="GameHead.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjBullet.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -90,9 +93,6 @@
       <Filter>リソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="..\..\チーム開発\GameL\DrawTexture.cpp">
-      <Filter>リソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\チーム開発\GameL\GameL_Main.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="..\..\チーム開発\GameL\HitBoxManager.cpp">
@@ -130,6 +130,12 @@
     </ClCompile>
     <ClCompile Include="ObjTitle.cpp">
       <Filter>ヘッダー ファイル\title</Filter>
+    </ClCompile>
+    <ClCompile Include="GameL\GameL_Main.cpp">
+      <Filter>リソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjBullet.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
