@@ -33,11 +33,6 @@ void CObjHero::Action()
 
 
 
-
-
-
-
-
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
 		m_x += 1.0f;
