@@ -3,14 +3,14 @@
 //オブジェクトネーム------------------------------
 enum OBJ_NAME
 {
-	OBJ_TITLE,		//オブジェクト名無し(禁止)
+	OBJ_NO_NAME,	//オブジェクト名無し(禁止)
 					//ゲームで使うオブジェクトの名前
 					//OBJ_○○と表記
-	OBJ_NO_NAME,	//オブジェクト名無し(禁止)
-	//ゲームで使うオブジェクトの名前
-	//OBJ_○○と表記
+		
 	OBJ_HERO,
+	OBJ_TITLE,
 	OBJ_ENEMY,
+	OBJ_BULLET,
 };
 //------------------------------------------------
 
@@ -57,6 +57,7 @@ struct UserData
 #include"ObjHero.h"
 #include"ObjTitle.h"
 #include"ObjEnemy.h"
+#include"CObjBullet.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
