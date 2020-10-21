@@ -73,7 +73,7 @@
       <Filter>ヘッダー ファイル\title</Filter>
     </ClInclude>
     <ClInclude Include="GameHead.h">
-      <Filter>ヘッダー ファイル\title</Filter>
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -90,9 +90,6 @@
       <Filter>リソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="..\..\チーム開発\GameL\DrawTexture.cpp">
-      <Filter>リソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\チーム開発\GameL\GameL_Main.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="..\..\チーム開発\GameL\HitBoxManager.cpp">
@@ -130,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="ObjTitle.cpp">
       <Filter>ヘッダー ファイル\title</Filter>
+    </ClCompile>
+    <ClCompile Include="GameL\GameL_Main.cpp">
+      <Filter>リソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
