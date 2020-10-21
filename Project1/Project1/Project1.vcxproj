@@ -138,6 +138,7 @@
     <ClInclude Include="..\..\チーム開発\main.h" />
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjHero.h" />
+    <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneTitle.h" />
   </ItemGroup>
@@ -157,6 +158,7 @@
     <ClCompile Include="..\..\チーム開発\GameL\WinInputs.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjHero.cpp" />
+    <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
   </ItemGroup>

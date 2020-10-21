@@ -72,6 +72,9 @@
     <ClInclude Include="ObjEnemy.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
+    <ClInclude Include="ObjTitle.h">
+      <Filter>ヘッダー ファイル\title</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -124,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="ObjEnemy.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTitle.cpp">
+      <Filter>ヘッダー ファイル\title</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
