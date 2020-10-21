@@ -63,10 +63,12 @@ struct UserData
 #include"SceneMain.h"
 #include"SceneTitle.h"
 #include"SceneMain.h"
+#include"SceneGameOver.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
+#define SET_GAME_START CSceneGameOver
 #define SET_GAME_START CSceneTitle 
 #define SET_GAME_START CSceneMain
 //-----------------------------------------------
