@@ -14,5 +14,7 @@ public:
 	void Action(); //アクション
 	void Draw(); //ドロー
 private:
+	float m_x; //攻撃する敵機のx方向の位置
+	float m_y; //攻撃する敵機のy方向の位置
 	
 };
