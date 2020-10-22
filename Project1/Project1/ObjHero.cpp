@@ -71,7 +71,6 @@ void CObjHero::Action()
 	{
 		m_y -= 5.0f;
 
-	    
 
 		//float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 		//RECT_F src;

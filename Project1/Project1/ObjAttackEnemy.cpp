@@ -11,7 +11,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjAttackEnemy::Init()
 {
-	
+	m_x = 0.0f;//初期化
+	m_y = 0.0f;
 }
 
 //アクション
