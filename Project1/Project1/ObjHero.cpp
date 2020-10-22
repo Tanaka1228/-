@@ -33,24 +33,24 @@ void CObjHero::Action()
 	if (Input::GetVKey('Z') == true)
 	{
 		//弾丸オブジェクト作成
-		//テスト用：弾丸オブジェクト作成
-	    CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
+        CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
 	    Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
 	}
 
-
-
+	
 
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
 		m_x += 1.0f;
 		m_posture = 1.0f;
+
 	}
 
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 1.0f;
 		m_posture = -3.0f;
+	
 	}
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
