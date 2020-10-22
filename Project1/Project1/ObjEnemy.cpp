@@ -13,6 +13,8 @@ void CObjEnemy::Init()
 {
 	m_x = 600;
 	m_y = 400;
+	m_vx = 0.0f;
+	m_vy = 0.0f;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_ENEMY, 1);
@@ -21,6 +23,35 @@ void CObjEnemy::Init()
 //アクション
 void CObjEnemy::Action()
 {
+	//移動方向
+	m_vx = -1.0f;
+	m_vy = 0.0f;
+
+	//ベクトルの長さを求める(三平方の定理)
+	float r = 0.0f;
+	r = m_vx * m_vx + m_vy * m_vy;
+	r = sqrt(r);//rをルートを求める
+
+	//長さが0かどうか調べる
+	if (r == 0.0f)
+	{
+		;//0なら何もしない。
+	}
+	else
+	{
+		//正規化を行う。
+		m_vx = 1.0f / r * m_vx;
+		m_vy = 1.0f / r * m_vy;
+	}
+
+	//速度を付ける。
+	m_vx*=1.5f;
+	m_vy*=1.5f;
+
+	//移動ベクトルを座標に加算する
+	m_x += m_vx;
+	m_y += m_vy;
+
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
