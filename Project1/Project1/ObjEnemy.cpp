@@ -24,6 +24,13 @@ void CObjEnemy::Action()
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
+
+	//弾丸と接触してるかどうか調べる
+	if (hit->CheckObjNameHit(OBJ_BULLET) != nullptr)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
 }
 
 //ドロー
