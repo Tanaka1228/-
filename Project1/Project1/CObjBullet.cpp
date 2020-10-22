@@ -11,6 +11,7 @@ CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に
 {
 	m_x = x;
 	m_y = y;
+	m_vx = 0.0f;
 }
 
 //イニシャライズ
@@ -23,7 +24,7 @@ void CObjBullet::Init()
 void CObjBullet::Action()
 {
 	m_vx += 4.0f;
-	m_x +=m_vx;
+	m_x  += m_vx;
 
 	//領域外にでたら弾丸を破棄する
 	if (m_x > 800.0f)
@@ -47,10 +48,10 @@ void CObjBullet::Draw()
 	src.m_bottom = 32.0f; //y
 
 	//表示位置の設定
-	dst.m_top = 100.0f  +   m_y;//縦の位置変更
-	dst.m_left = 0.0f   +   m_x;
-	dst.m_right = 45.0f +   m_x;
-	dst.m_bottom = 45.0f+   m_y;
+	dst.m_top    =  0.0f  +   m_y;//縦の位置変更
+	dst.m_left   =  0.0f  +   m_x;
+	dst.m_right  =  45.0f +   m_x;
+	dst.m_bottom =  45.0f +   m_y;
 
 	Draw::Draw(3, &src, &dst, c, 0.0f);
 }

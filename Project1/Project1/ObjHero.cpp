@@ -17,6 +17,7 @@ void CObjHero::Init()
 	m_vx = 0.0f; //移動ベクトル
 	m_vy = 0.0f; //移動ベクトル
 	m_posture = 1.0f; //右向き0.0f 左向き1.0f
+	m_f = true;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 62, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -32,11 +33,20 @@ void CObjHero::Action()
 	//主人公の弾丸発射
 	if (Input::GetVKey('Z') == true)
 	{
-		//弾丸オブジェクト作成
-        CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
-	    Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
-	}
+		if (m_f == true)
+		{
 
+			//弾丸オブジェクト作成
+			CObjBullet* obj_b = new CObjBullet(m_x+30.0f, m_y+32.0f); //弾丸オブジェクト作成
+			Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
+
+			m_f = false;
+		}
+	}
+	else
+	{
+		m_f = true;
+	}
 	
 
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
