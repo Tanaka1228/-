@@ -16,7 +16,7 @@ void CObjHero::Init()
 	m_y = 0;
 	m_vx = 0.0f; //移動ベクトル
 	m_vy = 0.0f; //移動ベクトル
-	m_posture = 1.0f; //右向き0.0f 左向き1.0f
+	m_posture = 0.0f; //右向き0.0f 左向き1.0f
 	m_f = true;
 
 	//当たり判定用HitBoxを作成
@@ -52,14 +52,14 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
 		m_x += 1.0f;
-		m_posture = 1.0f;
+		m_posture = 0.0f;
 
 	}
 
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 1.0f;
-		m_posture = 0.0f;
+		m_posture = 1.0f;
 		
 	}
 
@@ -104,8 +104,8 @@ void CObjHero::Draw()
 
 	//表示位置の設定
 	dst.m_top     = 0.0f  +  m_y;
-	dst.m_left    = (0.0f*m_posture)  +  m_x;
-	dst.m_right   = (32.0f + 30.0f * m_posture) +  m_x;
+	dst.m_left    = (64.0f*m_posture)  +  m_x;
+	dst.m_right   = (64.0f - 64.0f * m_posture) +  m_x;
 	dst.m_bottom  = 32.0f + 50.0f +  m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
