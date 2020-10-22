@@ -1,5 +1,6 @@
 //使用するヘッダーファイル
 #include"GameL/DrawTexture.h"
+#include"GameL\HitBoxManager.h"
 #include"GameHead.h"
 #include"CObjBullet.h"
 
@@ -11,24 +12,39 @@ CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に
 {
 	m_x = x;
 	m_y = y;
+	m_vx = 0.0f;
 }
 
 //イニシャライズ
 void CObjBullet::Init()
 {
+	m_vx = 0.0f;
 
+	//当たり判定用HitBoxを作成
+	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_PLAYER, OBJ_BULLET, 1);
 }
 
 //アクション
 void CObjBullet::Action()
 {
 	m_vx += 4.0f;
-	m_x +=m_vx;
+	m_x  += m_vx;
 
 	//領域外にでたら弾丸を破棄する
 	if (m_x > 800.0f)
 	{
 		this->SetStatus(false);
+	}
+
+	//弾丸のHitBox更新用ポインター取得
+	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
+	hit->SetPos(m_x, m_y);
+
+	//敵機オブジェクトと接触したら弾丸削除
+	if (hit->CheckObjNameHit(OBJ_ENEMY) != nullptr)
+	{
+		this->SetStatus(false);   //自身に削除命令を出す。
+		Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
 	}
 }
 
@@ -47,10 +63,10 @@ void CObjBullet::Draw()
 	src.m_bottom = 32.0f; //y
 
 	//表示位置の設定
-	dst.m_top = 100.0f  +   m_y;//縦の位置変更
-	dst.m_left = 0.0f   +   m_x;
-	dst.m_right = 45.0f +   m_x;
-	dst.m_bottom = 45.0f+   m_y;
+	dst.m_top    =  0.0f  +   m_y;//縦の位置変更
+	dst.m_left   =  0.0f  +   m_x;
+	dst.m_right  =  45.0f +   m_x;
+	dst.m_bottom =  45.0f +   m_y;
 
 	Draw::Draw(3, &src, &dst, c, 0.0f);
 }
