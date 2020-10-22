@@ -45,5 +45,5 @@ void CObjBullet::Draw()
 	dst.m_right = 32.0f +   m_x;
 	dst.m_bottom = 32.0f+   m_y;
 
-	Draw::Draw(0, &src, &dst, c, 0.0f);
+	Draw::Draw(3, &src, &dst, c, 0.0f);
 }
