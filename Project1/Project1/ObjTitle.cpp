@@ -6,6 +6,7 @@
 
 #include"GameHead.h"
 #include"ObjTitle.h"
+#include"SceneMain.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -29,6 +30,17 @@ void CObjTitle::Action()
 	 //マウスのボタンの状態
 	 m_mou_r = Input::GetMouButtonR();
 	 m_mou_l = Input::GetMouButtonL();
+
+	 //マウスの位置とクリックする場所で当たり判定
+	 if (m_mou_x > 230 && m_mou_x < 450 && m_mou_y>400 && m_mou_y < 430)
+	 {
+		 //マウスボタンが押されたらメインに還移
+		 if (m_mou_r == true || m_mou_l == true)
+		 {
+			 Scene::SetScene(new CSceneMain());
+		 }
+	 }
+
 
 	//エンターキーを押してシーン：ゲームTitleに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
