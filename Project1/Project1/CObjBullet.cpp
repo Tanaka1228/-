@@ -22,7 +22,14 @@ void CObjBullet::Init()
 //アクション
 void CObjBullet::Action()
 {
-	m_x += 4.0f;
+	m_vx += 4.0f;
+	m_x +=m_vx;
+
+	//領域外にでたら弾丸を破棄する
+	if (m_x > 800.0f)
+	{
+		this->SetStatus(false);
+	}
 }
 
 //ドロー
