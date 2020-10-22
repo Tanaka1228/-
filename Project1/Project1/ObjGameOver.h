@@ -9,8 +9,8 @@ using namespace GameL;
 class CObjGameOver : public CObj
 {
 public:
-	CObjGameOver();
-	~CObjGameOver();
+	CObjGameOver() {};
+	~CObjGameOver() {};
 	void Init();//イニシャライズ
 	void Action();//アクション
 	void Draw();//ドロー

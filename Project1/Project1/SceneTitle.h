@@ -12,6 +12,6 @@ class CSceneTitle : public CScene
 		CSceneTitle();
 		~CSceneTitle();
 		void InitScene();
-		void Scene();
+		void Scene() {};
 	private:
 };
