@@ -30,7 +30,7 @@ void CObjGameOver::Action()
 	}
 	else
 	{
-		m_key_flag == true;
+		m_key_flag = true;
 	}
 }
 
