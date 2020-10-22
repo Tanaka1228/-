@@ -13,6 +13,8 @@ enum OBJ_NAME
 	OBJ_BULLET,
 	OBJ_GAME_OVER,
 	OBJ_TITLE_BACKGROUND,
+	OBJ_ATTACK_ENEMY,
+	OBJ_BULLET_ENEMY,
 };
 //------------------------------------------------
 
@@ -63,6 +65,9 @@ struct UserData
 #include"CObjBullet.h"
 #include"ObjGameOver.h"
 #include"ObjTitleBackground.h"
+#include"ObjAttackEnemy.h"
+#include"CObjBullteEnemy.h"
+
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------

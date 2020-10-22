@@ -3,10 +3,6 @@
 #include"GameL\HitBoxManager.h"
 #include"GameHead.h"
 #include"CObjBullet.h"
-
-//使用するネームスペース
-using namespace GameL;
-
 //コンストラクタ
 CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に送る
 {
@@ -34,6 +30,10 @@ void CObjBullet::Action()
 	if (m_x > 800.0f)
 	{
 		this->SetStatus(false);
+
+//使用するネームスペース
+using namespace GameL;
+
 	}
 
 	//弾丸のHitBox更新用ポインター取得
