@@ -6,7 +6,7 @@ enum OBJ_NAME
 	OBJ_NO_NAME,	//オブジェクト名無し(禁止)
 					//ゲームで使うオブジェクトの名前
 					//OBJ_○○と表記
-		
+	OBJ_MAIN,	
 	OBJ_HERO,
 	OBJ_TITLE,
 	OBJ_ENEMY,
@@ -56,6 +56,7 @@ struct UserData
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
+#include"ObjMain.h"
 #include"ObjHero.h"
 #include"ObjTitle.h"
 #include"ObjEnemy.h"
@@ -65,7 +66,6 @@ struct UserData
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
-#include"SceneMain.h"
 #include"SceneTitle.h"
 #include"SceneMain.h"
 #include"SceneGameOver.h"

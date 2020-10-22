@@ -29,12 +29,15 @@ CSceneTitle::~CSceneTitle()
 //ゲームメイン初期化メソッド
 void CSceneTitle::InitScene()
 {
+	CObjTitle* p = new CObjTitle();	
+	Objs::InsertObj(p, OBJ_TITLE, 1);
+	
 	//出力させる文字のグラフィックを作成
 	Font::SetStrTex(L"ARTIFICIAL HUMAN ～無人世界の旅～");
 
 	//タイトルオブジェクト作成
-	CObjTitle* obj = new CObjTitle();	//タイトルオブジェクト作成
-	Objs::InsertObj(obj, OBJ_TITLE, 10);//主人公オブジェクト登録
+	CObjTitle* obj = new CObjTitle();	
+	Objs::InsertObj(obj, OBJ_TITLE, 10);
 										
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Sifi_town3_4n-480x270.png", 4, TEX_SIZE_512);//弾丸グラフィック
