@@ -33,8 +33,7 @@ void CObjHero::Action()
 	if (Input::GetVKey('Z') == true)
 	{
 		//弾丸オブジェクト作成
-		//テスト用：弾丸オブジェクト作成
-	    CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
+        CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
 	    Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
 	}
 
@@ -96,7 +95,7 @@ void CObjHero::Draw()
 	//表示位置の設定
 	dst.m_top     = 0.0f  +  m_y;
 	dst.m_left    = (0.0f*m_posture)  +  m_x;
-	dst.m_right   = (64-32.0f + 30.0f * m_posture) +  m_x;
+	dst.m_right   = (32.0f + 30.0f * m_posture) +  m_x;
 	dst.m_bottom  = 32.0f + 50.0f +  m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
