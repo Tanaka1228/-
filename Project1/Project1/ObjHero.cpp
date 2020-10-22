@@ -4,6 +4,7 @@
 #include"GameL\HitBoxManager.h"
 #include"GameHead.h"
 #include"ObjHero.h"
+#include"CObjBullet.h"
 
 
 //使用するネームスペース
@@ -60,8 +61,8 @@ void CObjHero::Action()
 	{
 		m_x -= 5.0f;
 		m_posture = 1.0f;
-		
 	}
+
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
