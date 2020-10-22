@@ -14,6 +14,7 @@ using namespace GameL;
 #include"GameHead.h"
 
 
+
 //コンストラクタ
 CSceneMain::CSceneMain()
 {
@@ -43,7 +44,6 @@ void CSceneMain::InitScene()
 	CObjEnemy* obj_enemy = new CObjEnemy(); //敵機オブジェクト作成
 	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 1); //作った敵機オブジェクトをオブジェクトマネージャーに登録
 
-	
 }
 
 //ゲームメイン実行中メソッド
