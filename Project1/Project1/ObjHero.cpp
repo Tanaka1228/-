@@ -59,8 +59,8 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 1.0f;
-		m_posture = -3.0f;
-	
+		m_posture = 0.0f;
+		
 	}
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
