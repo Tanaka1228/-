@@ -20,6 +20,9 @@ void CObjHero::Init()
 	m_posture = 0.0f; //右向き0.0f 左向き1.0f
 	m_f = true; //弾丸発射制御
 
+	m_ani_time=0; //アニメーションフレーム動作間隔
+    m_ani_frame=1; //描画フレーム
+
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 62, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
@@ -68,6 +71,8 @@ void CObjHero::Action()
 	{
 		m_y -= 5.0f;
 
+	    
+
 		//float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 		//RECT_F src;
 		//RECT_F dst;
@@ -111,13 +116,20 @@ void CObjHero::Action()
 //ドロー
 void CObjHero::Draw()
 {
+	int AniData[4] = //向き情報を登録
+	{
+		0,1,2,3,
+	};
+
+	
+
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 	RECT_F src;
 	RECT_F dst;
 
 	//切り取り位置の設定
 	src.m_top     = 0.0f;   //y
-	src.m_left    = 431.0f;  //x
+	src.m_left = 431.0f ;  //x
 	src.m_right   = 599.0f; //x
 	src.m_bottom = 240.0f; //y
 
