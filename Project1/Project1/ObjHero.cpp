@@ -67,6 +67,24 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
 		m_y -= 5.0f;
+
+		//float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+		//RECT_F src;
+		//RECT_F dst;
+
+		////切り取り位置の設定
+		//src.m_top = 0.0f;   //y
+		//src.m_left = 237.0f;  //x
+		//src.m_right = 420.0f; //x
+		//src.m_bottom = 240.0f; //y
+
+		////表示位置の設定
+		//dst.m_top = 0.0f + m_y;
+		//dst.m_left = (64.0f * m_posture) + m_x;
+		//dst.m_right = (64.0f - 64.0f * m_posture) + m_x;
+		//dst.m_bottom = 32.0f + 50.0f + m_y;
+
+		//Draw::Draw(0, &src, &dst, c, 0.0f);
 	}
 
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
