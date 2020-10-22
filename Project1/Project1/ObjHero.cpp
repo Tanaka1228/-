@@ -35,7 +35,7 @@ void CObjHero::Action()
 	{
 		if (m_f == true)
 		{
-
+			
 			//弾丸オブジェクト作成
 			CObjBullet* obj_b = new CObjBullet(m_x+30.0f, m_y+32.0f); //弾丸オブジェクト作成
 			Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
@@ -51,26 +51,26 @@ void CObjHero::Action()
 
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
-		m_x += 1.0f;
+		m_x += 5.0f;
 		m_posture = 0.0f;
 
 	}
 
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
-		m_x -= 1.0f;
+		m_x -= 5.0f;
 		m_posture = 1.0f;
 		
 	}
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
-		m_y -= 1.0f;
+		m_y -= 5.0f;
 	}
 
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
-		m_y+= 1.0f;
+		m_y+= 5.0f;
 	}
 
 	//HitBoxの内容を更新
