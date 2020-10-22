@@ -22,7 +22,7 @@ void CObjBullet::Init()
 //アクション
 void CObjBullet::Action()
 {
-	m_x += 10.0f;
+	m_x += 4.0f;
 }
 
 //ドロー
@@ -42,8 +42,8 @@ void CObjBullet::Draw()
 	//表示位置の設定
 	dst.m_top = 100.0f  +   m_y;//縦の位置変更
 	dst.m_left = 0.0f   +   m_x;
-	dst.m_right = 32.0f +   m_x;
-	dst.m_bottom = 32.0f+   m_y;
+	dst.m_right = 45.0f +   m_x;
+	dst.m_bottom = 45.0f+   m_y;
 
 	Draw::Draw(3, &src, &dst, c, 0.0f);
 }
