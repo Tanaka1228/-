@@ -15,7 +15,7 @@ void CObjHero::Init()
 	m_y = 0;
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 223, 240, ELEMENT_PLAYER, OBJ_HERO, 1);
+	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
 
 //アクション
@@ -80,13 +80,13 @@ void CObjHero::Draw()
 	src.m_top     = 0.0f;   //y
 	src.m_left    = 0.0f;  //x
 	src.m_right   = 223.0f; //x
-	src.m_bottom  = 240.0f; //y
+	src.m_bottom = 240.0f; //y
 
 	//表示位置の設定
 	dst.m_top     = 0.0f  +  m_y;
 	dst.m_left    = 0.0f  +  m_x;
-	dst.m_right   = 32.0f +  m_x;
-	dst.m_bottom  = 32.0f +  m_y;
+	dst.m_right   = 32.0f+50.0f +  m_x;
+	dst.m_bottom  = 32.0f + 50.0f +  m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 }
