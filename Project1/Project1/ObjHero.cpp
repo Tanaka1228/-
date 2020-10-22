@@ -13,6 +13,9 @@ void CObjHero::Init()
 {
 	m_x = 0;
 	m_y = 0;
+	m_vx = 0.0f; //移動ベクトル
+	m_vy = 0.0f; //移動ベクトル
+	m_posture = 0.0f; //右向き0.0f 左向き1.0f
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 223, 240, ELEMENT_PLAYER, OBJ_HERO, 1);
