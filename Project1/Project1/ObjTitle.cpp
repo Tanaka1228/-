@@ -37,5 +37,6 @@ void CObjTitle::Action()
 void CObjTitle::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
-	Font::StrDraw(L"ARTIFICIAL HUMAN Å`ñ≥êlê¢äEÇÃó∑Å`", 180, 100, 32, c);
+	Font::StrDraw(L"ARTIFICIAL HUMAN ", 270, 100, 32, c);
+	Font::StrDraw(L" Å`ñ≥êlê¢äEÇÃó∑Å`", 250, 150, 32, c);
 }
