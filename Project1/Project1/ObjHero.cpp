@@ -5,6 +5,7 @@
 #include"GameHead.h"
 #include"ObjHero.h"
 
+
 //使用するネームスペース
 using namespace GameL;
 
@@ -15,35 +16,42 @@ void CObjHero::Init()
 	m_y = 0;
 	m_vx = 0.0f; //移動ベクトル
 	m_vy = 0.0f; //移動ベクトル
-	m_posture = 0.0f; //右向き0.0f 左向き1.0f
+	m_posture = 1.0f; //右向き0.0f 左向き1.0f
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
+	Hits::SetHitBox(this, m_x, m_y, 62, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
 
 //アクション
 void CObjHero::Action()
 {
+	//移動ベクトルの破棄
+	m_vx = 0.0f;
+	m_vy = 0.0f;
+
 	//主人公の弾丸発射
 	if (Input::GetVKey('Z') == true)
 	{
 		//弾丸オブジェクト作成
 		//テスト用：弾丸オブジェクト作成
 	    CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
-	    Objs::InsertObj(obj_b, OBJ_BULLET, 1); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
+	    Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
 	}
 
-
-
+	
 
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
 		m_x += 1.0f;
+		m_posture = 1.0f;
+
 	}
 
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 1.0f;
+		m_posture = -3.0f;
+	
 	}
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
@@ -81,14 +89,14 @@ void CObjHero::Draw()
 
 	//切り取り位置の設定
 	src.m_top     = 0.0f;   //y
-	src.m_left    = 0.0f;  //x
-	src.m_right   = 223.0f; //x
+	src.m_left    = 431.0f;  //x
+	src.m_right   = 599.0f; //x
 	src.m_bottom = 240.0f; //y
 
 	//表示位置の設定
 	dst.m_top     = 0.0f  +  m_y;
-	dst.m_left    = 0.0f  +  m_x;
-	dst.m_right   = 32.0f+50.0f +  m_x;
+	dst.m_left    = (0.0f*m_posture)  +  m_x;
+	dst.m_right   = (64-32.0f + 30.0f * m_posture) +  m_x;
 	dst.m_bottom  = 32.0f + 50.0f +  m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
