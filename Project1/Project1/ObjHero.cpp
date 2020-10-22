@@ -33,8 +33,7 @@ void CObjHero::Action()
 	if (Input::GetVKey('Z') == true)
 	{
 		//弾丸オブジェクト作成
-		//テスト用：弾丸オブジェクト作成
-	    CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
+        CObjBullet* obj_b = new CObjBullet(m_x,m_y); //弾丸オブジェクト作成
 	    Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
 	}
 
