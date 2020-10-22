@@ -4,6 +4,7 @@
 #include"GameL\HitBoxManager.h"
 #include"GameHead.h"
 #include"ObjHero.h"
+#include"CObjBullet.h"
 
 
 //使用するネームスペース
@@ -18,6 +19,9 @@ void CObjHero::Init()
 	m_vy = 0.0f; //移動ベクトル
 	m_posture = 0.0f; //右向き0.0f 左向き1.0f
 	m_f = true; //弾丸発射制御
+
+	m_ani_time=0; //アニメーションフレーム動作間隔
+    m_ani_frame=1; //描画フレーム
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 62, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -60,12 +64,32 @@ void CObjHero::Action()
 	{
 		m_x -= 5.0f;
 		m_posture = 1.0f;
-		
 	}
+
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
 		m_y -= 5.0f;
+
+	    
+
+		//float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+		//RECT_F src;
+		//RECT_F dst;
+
+		////切り取り位置の設定
+		//src.m_top = 0.0f;   //y
+		//src.m_left = 237.0f;  //x
+		//src.m_right = 420.0f; //x
+		//src.m_bottom = 240.0f; //y
+
+		////表示位置の設定
+		//dst.m_top = 0.0f + m_y;
+		//dst.m_left = (64.0f * m_posture) + m_x;
+		//dst.m_right = (64.0f - 64.0f * m_posture) + m_x;
+		//dst.m_bottom = 32.0f + 50.0f + m_y;
+
+		//Draw::Draw(0, &src, &dst, c, 0.0f);
 	}
 
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
@@ -92,13 +116,20 @@ void CObjHero::Action()
 //ドロー
 void CObjHero::Draw()
 {
+	int AniData[4] = //向き情報を登録
+	{
+		0,1,2,3,
+	};
+
+	
+
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 	RECT_F src;
 	RECT_F dst;
 
 	//切り取り位置の設定
 	src.m_top     = 0.0f;   //y
-	src.m_left    = 431.0f;  //x
+	src.m_left = 431.0f ;  //x
 	src.m_right   = 599.0f; //x
 	src.m_bottom = 240.0f; //y
 

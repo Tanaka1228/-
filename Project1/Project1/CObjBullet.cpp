@@ -3,12 +3,17 @@
 #include"GameL\HitBoxManager.h"
 #include"GameHead.h"
 #include"CObjBullet.h"
+#include"ObjHero.h"
+
+//使用するネームスペース
+using namespace GameL;
+
 //コンストラクタ
 CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に送る
 {
 	m_x = x;
 	m_y = y;
-	m_vx = 0.0f;
+	m_vx = 0.0f;//速度用変数
 }
 
 //イニシャライズ
@@ -23,8 +28,10 @@ void CObjBullet::Init()
 //アクション
 void CObjBullet::Action()
 {
-	m_vx += 4.0f;
+	m_vx += 6.0f;
 	m_x  += m_vx;
+
+
 
 	//領域外にでたら弾丸を破棄する
 	if (m_x > 800.0f)
