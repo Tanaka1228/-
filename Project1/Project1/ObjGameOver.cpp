@@ -30,7 +30,7 @@ void CObjGameOver::Action()
 	}
 	else
 	{
-		m_key_flag == true;
+		m_key_flag = true;
 	}
 }
 
@@ -39,6 +39,5 @@ void CObjGameOver::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
 
-	Font::StrDraw(L"YOU LOST",0,0,32,c);
-	Font::StrDraw(L"GAME OVER",0,40,32,c);
+	Font::StrDraw(L"GAME OVER",340,250,32,c);
 }

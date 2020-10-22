@@ -36,8 +36,8 @@ void CObjBullet::Draw()
 	//切り取り位置の設定　グラフィックを作っていない
 	src.m_top = 0.0f;   //y
 	src.m_left =0.0f;  //x
-	src.m_right = 0.0f; //x 
-	src.m_bottom = 0.0f; //y
+	src.m_right = 32.0f; //x 
+	src.m_bottom = 32.0f; //y
 
 	//表示位置の設定
 	dst.m_top = 0.0f    +   m_y;
