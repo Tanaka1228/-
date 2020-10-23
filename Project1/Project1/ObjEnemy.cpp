@@ -8,11 +8,17 @@
 //使用するネームスペース
 using namespace GameL;
 
+//コンストラクタ
+CObjEnemy::CObjEnemy(float x, float y)
+{
+	m_x = x;
+	m_y = y;
+}
+
+
 //イニシャライズ
 void CObjEnemy::Init()
 {
-	m_x = 600;
-	m_y = 400;
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
