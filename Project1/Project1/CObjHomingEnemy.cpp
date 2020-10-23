@@ -30,7 +30,7 @@ void CObjHomingEnemy::Init()
 void CObjHomingEnemy::Action()
 {
 	//移動方向
-	m_vx = -1.0f;
+	m_vx = 0.0f;
 	m_vy = 0.0f;
 
 	//ベクトルの長さを求める(三平方の定理)
@@ -82,7 +82,7 @@ void CObjHomingEnemy::Action()
 void CObjHomingEnemy::Draw()
 {
 	//描画カラー情報　R=RED G=Green B=Blue A=alpha(透過情報)
-	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	float c[4] = { 1.0f,1.0f,6.0f,1.0f };
 
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置

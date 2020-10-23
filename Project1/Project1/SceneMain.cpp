@@ -51,6 +51,10 @@ void CSceneMain::InitScene()
 	CObjAttackEnemy* obj_attack_enemy = new CObjAttackEnemy(700,220); //攻撃する敵機オブジェクト作成
 	Objs::InsertObj(obj_attack_enemy, OBJ_ATTACK_ENEMY, 1); //攻撃する敵機オブジェクトをオブジェクトマネージャーに登録
 
+	//誘導敵機オブジェクト作成
+	CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(700, 50); //誘導敵機オブジェクト作成
+	Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 1); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+
 
 	CObjMain* p = new CObjMain();
 	Objs::InsertObj(p, OBJ_MAIN,1);
