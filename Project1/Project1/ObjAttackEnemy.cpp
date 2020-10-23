@@ -11,8 +11,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjAttackEnemy::Init()
 {
-	m_x = 0.0f;//初期化
-	m_y = 0.0f;
+	m_x = 550.0f;//位置初期化
+	m_y = 300.0f;
 }
 
 //アクション
@@ -40,7 +40,7 @@ void CObjAttackEnemy::Draw()
 	dst.m_top = 0.0f + m_y;
 	dst.m_left = 32.0f + 50.0f + m_x;
 	dst.m_right = 0.0f + m_x;
-	dst.m_bottom = 32.0f + 50.0f + m_y;
+	dst.m_bottom = 32.0f + 50.0f + m_y; 
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(1, &src, &dst, c, 0.0f);
