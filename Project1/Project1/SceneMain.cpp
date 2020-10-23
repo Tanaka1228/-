@@ -40,7 +40,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"弾丸＿右.png", 3, TEX_SIZE_512);//弾丸グラフィック
 
 	//主人公オブジェクト作成
-	CObjHero* obj = new CObjHero(); //主人公オブジェクト作成
+	CObjHero* obj = new CObjHero(50,280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 1); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 	//敵機オブジェクト作成
