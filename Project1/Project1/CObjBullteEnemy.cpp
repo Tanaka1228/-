@@ -35,9 +35,10 @@ void CObjBulletEnemy::Draw()
 	RECT_F dst;
 
 	//切り取り位置の設定　グラフィックを作っていない
+	//弾丸を左向きにしている
 	src.m_top = 0.0f;   //y
-	src.m_left = 0.0f;  //x
-	src.m_right = 32.0f; //x 
+	src.m_left = 126.0f;  //x
+	src.m_right = 96.0f; //x 
 	src.m_bottom = 32.0f; //y
 
 	//表示位置の設定
