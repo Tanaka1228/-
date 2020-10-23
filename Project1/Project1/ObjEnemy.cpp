@@ -56,6 +56,14 @@ void CObjEnemy::Action()
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
 
+
+	//敵機が完全に領域外に出たら敵機を破棄する
+	if (m_x < -32.0f)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
+
 	//弾丸と接触してるかどうか調べる
 	if (hit->CheckObjNameHit(OBJ_BULLET) != nullptr)
 	{

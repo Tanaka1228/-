@@ -51,9 +51,6 @@ void CSceneMain::InitScene()
 	CObjAttackEnemy* obj_attack_enemy = new CObjAttackEnemy(); //攻撃する敵機オブジェクト作成
 	Objs::InsertObj(obj_attack_enemy, OBJ_ATTACK_ENEMY, 1); //攻撃する敵機オブジェクトをオブジェクトマネージャーに登録
 
-	//tesuto
-	CObjBulletEnemy* obj_bullte_enemy = new CObjBulletEnemy(100.0f,100.0f); 
-	Objs::InsertObj(obj_bullte_enemy, OBJ_BULLET_ENEMY, 1); 
 
 	CObjMain* p = new CObjMain();
 	Objs::InsertObj(p, OBJ_MAIN,1);

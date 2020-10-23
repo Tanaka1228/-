@@ -18,13 +18,42 @@ CObjBulletEnemy::CObjBulletEnemy(float x, float y)//コンストラクタで受け取った情
 //イニシャライズ
 void CObjBulletEnemy::Init()
 {
-	
+	m_vx = -1.0f;
+	m_vy = 0.0f;
+
+	//当たり判定用HitBoxを作成
+	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_BULLET_ENEMY, 1);
 }
 
 //アクション
 void CObjBulletEnemy::Action()
 {
+	//移動
+	m_x += m_vx * 5.0f;
+	m_y += m_vy * 5.0f;
+
+
 	
+
+	//敵機弾丸のHitBox更新用ポインター取得
+	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
+	hit->SetPos(m_x, m_y);
+
+
+	//敵機弾丸が完全に領域外にでたら敵機弾丸を破棄する
+	if (m_x < -32.0f)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
+	}
+
+
+	//敵機オブジェクトと接触したら弾丸削除
+	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+	{
+		this->SetStatus(false);   //自身に削除命令を出す。
+		Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
+	}
 }
 
 //ドロー

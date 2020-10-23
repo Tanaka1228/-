@@ -33,19 +33,19 @@ void CObjBullet::Action()
 
 
 
-	//領域外にでたら弾丸を破棄する
-	if (m_x > 800.0f)
-	{
-		this->SetStatus(false);
-
-//使用するネームスペース
-using namespace GameL;
-
-	}
 
 	//弾丸のHitBox更新用ポインター取得
 	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
 	hit->SetPos(m_x, m_y);
+
+
+	//領域外にでたら弾丸を破棄する
+	if (m_x > 800.0f)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
+
+	}
 
 	//敵機オブジェクトと接触したら弾丸削除
 	if (hit->CheckObjNameHit(OBJ_ENEMY) != nullptr)

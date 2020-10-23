@@ -15,7 +15,7 @@ void CObjAttackEnemy::Init()
 	m_y = 300.0f;
 	m_vx = 0.0f;
 	m_vy = 0.0f;
-
+	m_time = 0.0f;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_ATTACK_ENEMY, 1);
@@ -24,6 +24,18 @@ void CObjAttackEnemy::Init()
 //アクション
 void CObjAttackEnemy::Action()
 {
+
+	m_time++;//1加算
+
+	if (m_time > 50)
+	{
+		//弾丸敵機オブジェクト
+		CObjBulletEnemy* obj_bullte_enemy = new CObjBulletEnemy(m_x,m_y);
+		Objs::InsertObj(obj_bullte_enemy, OBJ_BULLET_ENEMY, 1);
+	}
+
+
+
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
