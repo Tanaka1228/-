@@ -57,16 +57,19 @@ struct UserData
 #include"ObjHero.h"
 #include"ObjTitle.h"
 #include"ObjEnemy.h"
+#include"ObjStage.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
 #include"SceneMain.h"
 #include"SceneTitle.h"
 #include"SceneMain.h"
+#include"SceneStage.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
 #define SET_GAME_START CSceneTitle 
 #define SET_GAME_START CSceneMain
+#define SET_GAME_START CSceneStage
 //-----------------------------------------------

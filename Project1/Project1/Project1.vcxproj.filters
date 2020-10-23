@@ -19,6 +19,9 @@
     <Filter Include="ヘッダー ファイル\SceneMain">
       <UniqueIdentifier>{c4ab471b-a843-4834-af93-464af97004ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\StageMap">
+      <UniqueIdentifier>{1ad1ea49-e47e-41fa-8422-16d8ce0c8ba4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -75,6 +78,12 @@
     <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="ObjStage.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneStage.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -130,6 +139,12 @@
     </ClCompile>
     <ClCompile Include="GameL\GameL_Main.cpp">
       <Filter>リソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjStage.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneStage.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
