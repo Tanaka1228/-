@@ -135,14 +135,22 @@
     <ClInclude Include="..\..\チーム開発\GameL\UserData.h" />
     <ClInclude Include="..\..\チーム開発\GameL\WinInputs.h" />
     <ClInclude Include="..\..\チーム開発\main.h" />
+    <ClInclude Include="CObjBullet.h" />
+    <ClInclude Include="CObjBullteEnemy.h" />
+    <ClInclude Include="CObjHomingEnemy.h" />
     <ClInclude Include="GameHead.h" />
+    <ClInclude Include="ObjAttackEnemy.h" />
     <ClInclude Include="ObjEnemy.h" />
+    <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjHero.h" />
+    <ClInclude Include="ObjMain.h" />
     <ClInclude Include="ObjStage.h" />
     <ClInclude Include="ObjTitle.h" />
+    <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneStage.h" />
     <ClInclude Include="SceneTitle.h" />
+    <ClInclude Include="ObjTitleBackground.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp" />
@@ -157,7 +165,14 @@
     <ClCompile Include="..\..\チーム開発\GameL\SetWindow.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\UserData.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\WinInputs.cpp" />
+    <ClCompile Include="CObjBullet.cpp" />
+    <ClCompile Include="CObjBullteEnemy.cpp" />
+    <ClCompile Include="CObjHomingEnemy.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
+    <ClCompile Include="ObjAttackEnemy.cpp" />
+    <ClCompile Include="ObjGameOver.cpp" />
+    <ClCompile Include="ObjMain.cpp" />
+    <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjStage.cpp" />
@@ -165,6 +180,7 @@
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="SceneStage.cpp" />
+    <ClCompile Include="ObjTitleBackground.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

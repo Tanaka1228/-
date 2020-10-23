@@ -19,6 +19,9 @@
     <Filter Include="ヘッダー ファイル\SceneMain">
       <UniqueIdentifier>{c4ab471b-a843-4834-af93-464af97004ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\GameOver">
+      <UniqueIdentifier>{96e9c914-9202-4eee-a7eb-ae934cc644ca}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ソース ファイル\StageMap">
       <UniqueIdentifier>{1ad1ea49-e47e-41fa-8422-16d8ce0c8ba4}</UniqueIdentifier>
     </Filter>
@@ -84,6 +87,30 @@
     <ClInclude Include="SceneStage.h">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
+    <ClInclude Include="CObjBullet.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ヘッダー ファイル\GameOver</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameOver.h">
+      <Filter>ヘッダー ファイル\GameOver</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTitleBackground.h">
+      <Filter>ヘッダー ファイル\title</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjMain.h">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjAttackEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjBullteEnemy.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjHomingEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -145,6 +172,30 @@
     </ClCompile>
     <ClCompile Include="SceneStage.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjBullet.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp">
+      <Filter>ヘッダー ファイル\GameOver</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGameOver.cpp">
+      <Filter>ヘッダー ファイル\GameOver</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTitleBackground.cpp">
+      <Filter>ヘッダー ファイル\title</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjMain.cpp">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjAttackEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjBullteEnemy.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjHomingEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
