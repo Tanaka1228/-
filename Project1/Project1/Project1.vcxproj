@@ -137,6 +137,7 @@
     <ClInclude Include="..\..\チーム開発\main.h" />
     <ClInclude Include="CObjBullet.h" />
     <ClInclude Include="CObjBullteEnemy.h" />
+    <ClInclude Include="CObjHomingEnemy.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="ObjAttackEnemy.h" />
     <ClInclude Include="ObjEnemy.h" />
@@ -164,6 +165,7 @@
     <ClCompile Include="..\..\チーム開発\GameL\WinInputs.cpp" />
     <ClCompile Include="CObjBullet.cpp" />
     <ClCompile Include="CObjBullteEnemy.cpp" />
+    <ClCompile Include="CObjHomingEnemy.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
     <ClCompile Include="ObjAttackEnemy.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
