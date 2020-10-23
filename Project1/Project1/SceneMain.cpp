@@ -44,11 +44,11 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(obj, OBJ_HERO, 1); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 	//敵機オブジェクト作成
-	CObjEnemy* obj_enemy = new CObjEnemy(100,100); //敵機オブジェクト作成
+	CObjEnemy* obj_enemy = new CObjEnemy(500,300); //敵機オブジェクト作成
 	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 1); //作った敵機オブジェクトをオブジェクトマネージャーに登録
 
 	//攻撃する敵機オブジェクト作成
-	CObjAttackEnemy* obj_attack_enemy = new CObjAttackEnemy(200,200); //攻撃する敵機オブジェクト作成
+	CObjAttackEnemy* obj_attack_enemy = new CObjAttackEnemy(600,350); //攻撃する敵機オブジェクト作成
 	Objs::InsertObj(obj_attack_enemy, OBJ_ATTACK_ENEMY, 1); //攻撃する敵機オブジェクトをオブジェクトマネージャーに登録
 
 

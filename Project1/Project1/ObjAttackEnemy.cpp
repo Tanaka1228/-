@@ -33,8 +33,10 @@ void CObjAttackEnemy::Action()
 
 	m_time++;//1加算
 
-	if (m_time > 50)
+	if (m_time > 30)//弾丸を発射する間隔
 	{
+		m_time = 0;
+
 		//弾丸敵機オブジェクト
 		CObjBulletEnemy* obj_bullte_enemy = new CObjBulletEnemy(m_x,m_y);
 		Objs::InsertObj(obj_bullte_enemy, OBJ_BULLET_ENEMY, 1);
