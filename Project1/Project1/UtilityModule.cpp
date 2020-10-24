@@ -64,7 +64,7 @@ bool CheckWindow(float pos_x, float pos_y,
 
 
 	//領域チェック
-	if (pos_y < window_h)
+	if (pos_y > window_h)
 	{
 		return false;//領域外
 	}

@@ -44,7 +44,7 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(obj, OBJ_HERO, 1); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 	//敵機オブジェクト作成
-	CObjEnemy* obj_enemy = new CObjEnemy(700,300); //敵機オブジェクト作成
+	CObjEnemy* obj_enemy = new CObjEnemy(800,300); //敵機オブジェクト作成
 	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 1); //作った敵機オブジェクトをオブジェクトマネージャーに登録
 
 	//攻撃する敵機オブジェクト作成
@@ -58,6 +58,10 @@ void CSceneMain::InitScene()
 	//Sin敵機オブジェクト作成
 	CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
 	Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+
+	//拡散敵機オブジェクト作成
+	CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(700, 300); //Sin敵機オブジェクト作成
+	Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 
 
 	CObjMain* p = new CObjMain();
