@@ -5,16 +5,22 @@
 #include"GameHead.h"
 #include"ObjHero.h"
 #include"CObjBullet.h"
+#include"UtilityModule.h"
 
 
 //使用するネームスペース
 using namespace GameL;
 
+//コンストラクタ
+CObjHero::CObjHero(float x, float y)
+{
+	m_x = x;
+	m_y = y;
+}
+
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_x = 0;
-	m_y = 0;
 	m_vx = 0.0f; //移動ベクトル
 	m_vy = 0.0f; //移動ベクトル
 	m_posture = 0.0f; //右向き0.0f 左向き1.0f
@@ -95,6 +101,9 @@ void CObjHero::Action()
 	{
 		m_y+= 5.0f;
 	}
+
+	//移動ベクトルの正規化
+	UnitVec(&m_vy, &m_vx);
 
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this); //作成したHitBox更新用の入り口を取り出す

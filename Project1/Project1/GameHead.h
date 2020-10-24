@@ -15,6 +15,7 @@ enum OBJ_NAME
 	OBJ_TITLE_BACKGROUND,
 	OBJ_ATTACK_ENEMY,
 	OBJ_BULLET_ENEMY,
+	OBJ_HOMING_ENEMY,
 	OBJ_SIN_ENEMY,
 };
 //------------------------------------------------
@@ -68,6 +69,7 @@ struct UserData
 #include"ObjTitleBackground.h"
 #include"ObjAttackEnemy.h"
 #include"CObjBullteEnemy.h"
+#include"CObjHomingEnemy.h"
 #include"CObjSinEnemy.h"
 
 //------------------------------------------------
