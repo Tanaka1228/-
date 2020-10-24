@@ -1,0 +1,79 @@
+//使用するヘッダーファイル
+#include"GameL/DrawTexture.h"
+#include"GameL\HitBoxManager.h"
+#include"GameHead.h"
+#include"CObjAngleBullet.h"
+
+//使用するネームスペース
+using namespace GameL;
+
+//コンストラクタ
+CObjAngleBullet::CObjAngleBullet(float x, float y)//コンストラクタで受け取った情報を変数に送る
+{
+	m_x = x;
+	m_y = y;
+	m_vx = 0.0f;//速度用変数
+}
+
+//イニシャライズ
+void CObjAngleBullet::Init()
+{
+	m_vx = 0.0f;
+	m_vy = 0.0f;
+
+	//当たり判定用HitBoxを作成
+	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_ANGLE_BULLET, 1);
+}
+
+//アクション
+void CObjAngleBullet::Action()
+{
+	m_vx += 6.0f;
+	m_x -= m_vx;
+
+
+
+
+	//弾丸のHitBox更新用ポインター取得
+	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
+	hit->SetPos(m_x, m_y);
+
+
+	//領域外にでたら弾丸を破棄する
+	if (m_x > 800.0f)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
+
+	}
+
+	//主人公機オブジェクトと接触したら弾丸削除
+	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+	{
+		this->SetStatus(false);   //自身に削除命令を出す。
+		Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
+	}
+}
+
+//ドロー
+void CObjAngleBullet::Draw()
+{
+
+	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	RECT_F src;
+	RECT_F dst;
+
+	//切り取り位置の設定　グラフィックを作っていない
+	src.m_top = 0.0f;   //y
+	src.m_left = 0.0f;  //x
+	src.m_right = 32.0f; //x 
+	src.m_bottom = 32.0f; //y
+
+	//表示位置の設定
+	dst.m_top = 0.0f + m_y;//縦の位置変更
+	dst.m_left = 0.0f + m_x;
+	dst.m_right = 45.0f + m_x;
+	dst.m_bottom = 45.0f + m_y;
+
+	Draw::Draw(0, &src, &dst, c, m_r);
+}
