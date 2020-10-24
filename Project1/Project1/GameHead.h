@@ -17,6 +17,7 @@ enum OBJ_NAME
 	OBJ_BULLET_ENEMY,
 	OBJ_HOMING_ENEMY,
 	OBJ_SIN_ENEMY,
+	OBJ_DIFFUSION_ENEMY,
 };
 //------------------------------------------------
 
@@ -71,6 +72,7 @@ struct UserData
 #include"CObjBullteEnemy.h"
 #include"CObjHomingEnemy.h"
 #include"CObjSinEnemy.h"
+#include"ObjDiffusionEnemy.h"
 
 //------------------------------------------------
 

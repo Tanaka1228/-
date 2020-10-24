@@ -108,6 +108,12 @@
     <ClInclude Include="CObjSinEnemy.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
+    <ClInclude Include="ObjDiffusionEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClInclude>
+    <ClInclude Include="AngleBullet.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -193,6 +199,12 @@
     </ClCompile>
     <ClCompile Include="CObjSinEnemy.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDiffusionEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="AngleBullet.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
