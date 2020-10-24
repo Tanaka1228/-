@@ -32,7 +32,7 @@ void CObjDiffusionEnemy::Action()
 {
 	m_time++;//1‰ÁZ
 
-	if (m_time > 0)//’eŠÛ‚ğ”­Ë‚·‚éŠÔŠu
+	if (m_time > 30)//’eŠÛ‚ğ”­Ë‚·‚éŠÔŠu
 	{
 		m_time = 0;
 
