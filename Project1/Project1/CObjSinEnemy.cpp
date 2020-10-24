@@ -45,22 +45,8 @@ void CObjSinEnemy::Action()
 	m_vx = -1.0f;
 	m_vy = sin(3.14/180*m_r);//sinθを求めてm_vyに入れる
 
-	//ベクトルの長さを求める(三平方の定理)
-	float r = 0.0f;
-	r = m_vx * m_vx + m_vy * m_vy;
-	r = sqrt(r);//rをルートを求める
-
-	//長さが0かどうか調べる
-	if (r == 0.0f)
-	{
-		;//0なら何もしない。
-	}
-	else
-	{
-		//正規化を行う。
-		m_vx = 1.0f / r * m_vx;
-		m_vy = 1.0f / r * m_vy;
-	}
+	//移動ベクトルの正規化
+	UnitVec(&m_vy, &m_vx);
 
 	//速度を付ける。
 	m_vx *= 1.5f;
