@@ -30,6 +30,22 @@ void CObjDiffusionEnemy::Init()
 //ƒAƒNƒVƒ‡ƒ“
 void CObjDiffusionEnemy::Action()
 {
+	m_time++;//1‰ÁŽZ
+
+	if (m_time > 0)//’eŠÛ‚ð”­ŽË‚·‚éŠÔŠu
+	{
+		m_time = 0;
+
+		//19”­“®Žž”­ŽË
+		CObjAngleBullet* obj_b;
+		for (int i = 0; i < 360; i += 20)
+		{
+			//Šp“xi‚ÅŠp“x’eŠÛ”­ŽË
+			obj_b = new CObjAngleBullet(m_x, m_y, i, 5.0f);
+			Objs::InsertObj(obj_b, OBJ_ANGLE_BULLET, 1);
+		}
+	}
+
 	//ˆÚ“®•ûŒü
 	m_vx = 0.0f;
 	m_vy = 0.0f;
@@ -43,21 +59,6 @@ void CObjDiffusionEnemy::Action()
 	m_y += m_vy;
 
 
-	m_time++;//1‰ÁŽZ
-
-	if (m_time > 50)//’eŠÛ‚ð”­ŽË‚·‚éŠÔŠu
-	{
-		m_time = 0;
-
-		//19”­“®Žž”­ŽË
-		CObjAngleBullet* obj_b;
-		for (int i = 0; i < 360; i += 20)
-		{
-			//Šp“xi‚ÅŠp“x’eŠÛ”­ŽË
-			obj_b = new CObjAngleBullet(m_x, m_y, i, 5.0f);
-			Objs::InsertObj(obj_b, OBJ_ANGLE_BULLET, 1);
-		}
-	}
 
 	//HitBox‚Ì“à—e‚ðXV
 	CHitBox* hit = Hits::GetHitBox(this);

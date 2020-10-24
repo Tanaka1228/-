@@ -13,14 +13,16 @@ CObjAngleBullet::CObjAngleBullet(float x, float y,float r,float speed)//コンスト
 {
 	m_x = x;
 	m_y = y;
-	
+	m_r = r;
+	m_speed = speed;
 }
 
 //イニシャライズ
 void CObjAngleBullet::Init()
 {
-	m_vx = -1.0f;
-	m_vy = 0.0f;
+
+	m_vx = cos(3.14f / 180.0f * m_r);
+	m_vy = sin(3.14f / 180.0f * m_r);
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_ANGLE_BULLET, 1);
@@ -29,11 +31,9 @@ void CObjAngleBullet::Init()
 //アクション
 void CObjAngleBullet::Action()
 {
+	//移動
 	m_x += m_vx * m_speed;
-	m_x -= m_vy * m_speed;
-
-
-
+	m_y -= m_vy * m_speed;
 
 	//弾丸のHitBox更新用ポインター取得
 	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
