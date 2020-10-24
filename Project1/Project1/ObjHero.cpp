@@ -5,6 +5,7 @@
 #include"GameHead.h"
 #include"ObjHero.h"
 #include"CObjBullet.h"
+#include"UtilityModule.h"
 
 
 //使用するネームスペース
@@ -100,6 +101,9 @@ void CObjHero::Action()
 	{
 		m_y+= 5.0f;
 	}
+
+	//移動ベクトルの正規化
+	UnitVec(&m_vy, &m_vx);
 
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this); //作成したHitBox更新用の入り口を取り出す
