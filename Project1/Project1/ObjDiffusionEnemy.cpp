@@ -62,7 +62,7 @@ void CObjDiffusionEnemy::Action()
 }
 
 //ドロー
-void CObjEnemy::Draw()
+void CObjDiffusionEnemy::Draw()
 {
 	//描画カラー情報　R=RED G=Green B=Blue A=alpha(透過情報)
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
