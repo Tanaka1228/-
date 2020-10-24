@@ -21,6 +21,7 @@ void CObjDiffusionEnemy::Init()
 {
 	m_vx = 0.0f;
 	m_vy = 0.0f;
+	m_time = 0.0f;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_DIFFUSION_ENEMY, 1);
@@ -30,7 +31,7 @@ void CObjDiffusionEnemy::Init()
 void CObjDiffusionEnemy::Action()
 {
 	//移動方向
-	m_vx = -1.0f;
+	m_vx = 0.0f;
 	m_vy = 0.0f;
 
 	//速度を付ける。
@@ -41,10 +42,26 @@ void CObjDiffusionEnemy::Action()
 	m_x += m_vx;
 	m_y += m_vy;
 
+
+	m_time++;//1加算
+
+	if (m_time > 50)//弾丸を発射する間隔
+	{
+		m_time = 0;
+
+		//19発動時発射
+		CObjAngleBullet* obj_b;
+		for (int i = 0; i < 360; i += 20)
+		{
+			//角度iで角度弾丸発射
+			obj_b = new CObjAngleBullet(m_x, m_y, i, 5.0f);
+			Objs::InsertObj(obj_b, OBJ_ANGLE_BULLET, 1);
+		}
+	}
+
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
-
 
 	//敵機が完全に領域外に出たら敵機を破棄する
 	if (m_x < -32.0f)
@@ -65,7 +82,7 @@ void CObjDiffusionEnemy::Action()
 void CObjDiffusionEnemy::Draw()
 {
 	//描画カラー情報　R=RED G=Green B=Blue A=alpha(透過情報)
-	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	float c[4] = { 3.0f,3.0f,1.0f,1.0f };
 
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置

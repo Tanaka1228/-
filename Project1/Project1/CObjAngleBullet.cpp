@@ -3,6 +3,7 @@
 #include"GameL\HitBoxManager.h"
 #include"GameHead.h"
 #include"CObjAngleBullet.h"
+#include"UtilityModule.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -39,12 +40,12 @@ void CObjAngleBullet::Action()
 	hit->SetPos(m_x, m_y);
 
 
-	//領域外にでたら弾丸を破棄する
-	if (m_x < -32.0f)
+	//敵機が完全に領域外に出たら敵機を破棄する
+	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	if (check == false)
 	{
-		this->SetStatus(false);
-		Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
-
+		this->SetStatus(false);//自身に削除命令
+		Hits::DeleteHitBox(this);
 	}
 
 	//主人公機オブジェクトと接触したら弾丸削除
@@ -75,5 +76,5 @@ void CObjAngleBullet::Draw()
 	dst.m_right = 45.0f + m_x;
 	dst.m_bottom = 45.0f + m_y;
 
-	Draw::Draw(0, &src, &dst, c,m_r);
+	Draw::Draw(3, &src, &dst, c,m_r);
 }

@@ -18,4 +18,6 @@ private:
 	float m_y; //敵機のy方向の位置
 	float m_vx;//敵機移動ベクトルX
 	float m_vy;//敵機移動ベクトルY
+	int   m_time;//拡散敵機の角度弾丸をウツ間隔用変数
+
 };
