@@ -25,7 +25,7 @@ void CObjAngleBullet::Init()
 	m_vy = sin(3.14f / 180.0f * m_r);
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_ANGLE_BULLET, 1);
+	Hits::SetHitBox(this, m_x, m_y, 30, 22, ELEMENT_ENEMY, OBJ_ANGLE_BULLET, 1);//位置x 位置ｙ 横幅w 縦幅h
 }
 
 //アクション
@@ -65,16 +65,16 @@ void CObjAngleBullet::Draw()
 	RECT_F dst;
 
 	//切り取り位置の設定　グラフィックを作っていない
-	src.m_top = 0.0f;   //y
-	src.m_left = 0.0f;  //x
-	src.m_right = 32.0f; //x 
-	src.m_bottom = 32.0f; //y
+	src.m_top = 12.0f;   //y
+	src.m_left = 8.0f;  //x
+	src.m_right = 26.0f; //x 
+	src.m_bottom = 19.0f; //y
 
 	//表示位置の設定
-	dst.m_top = 0.0f + m_y;//縦の位置変更
+	dst.m_top = 5.0f + m_y;//縦の位置変更
 	dst.m_left = 0.0f + m_x;
-	dst.m_right = 45.0f + m_x;
-	dst.m_bottom = 45.0f + m_y;
+	dst.m_right = 30.0f + m_x;
+	dst.m_bottom = 19.0f + m_y;
 
 	Draw::Draw(3, &src, &dst, c,m_r);
 }

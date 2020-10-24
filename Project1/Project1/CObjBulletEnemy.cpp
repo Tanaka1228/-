@@ -23,7 +23,7 @@ void CObjBulletEnemy::Init()
 	m_vy = 0.0f;
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_BULLET_ENEMY, 1);
+	Hits::SetHitBox(this, m_x, m_y, 30, 20, ELEMENT_ENEMY, OBJ_BULLET_ENEMY, 1);
 }
 
 //アクション
@@ -62,7 +62,7 @@ void CObjBulletEnemy::Draw()
 	RECT_F src;
 	RECT_F dst;
 
-	//切り取り位置の設定　グラフィックを作っていない
+	//切り取り位置の設定　
 	//弾丸を左向きにしている
 	src.m_top = 0.0f;   //y
 	src.m_left = 126.0f;  //x
@@ -70,10 +70,10 @@ void CObjBulletEnemy::Draw()
 	src.m_bottom = 32.0f; //y
 
 	//表示位置の設定
-	dst.m_top = 0.0f + m_y;//縦の位置変更
-	dst.m_left = 0.0f + m_x;
+	dst.m_top = -10.0f + m_y;//縦の位置変更
+	dst.m_left = -5.0f + m_x;
 	dst.m_right = 45.0f + m_x;
-	dst.m_bottom = 45.0f + m_y;
+	dst.m_bottom = 32.0f + m_y;
 
 	Draw::Draw(3, &src, &dst, c, 0.0f);
 }
