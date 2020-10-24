@@ -16,6 +16,9 @@ enum OBJ_NAME
 	OBJ_ATTACK_ENEMY,
 	OBJ_BULLET_ENEMY,
 	OBJ_HOMING_ENEMY,
+	OBJ_SIN_ENEMY,
+	OBJ_DIFFUSION_ENEMY,
+	OBJ_ANGLE_BULLET,
 };
 //------------------------------------------------
 
@@ -67,8 +70,11 @@ struct UserData
 #include"ObjGameOver.h"
 #include"ObjTitleBackground.h"
 #include"ObjAttackEnemy.h"
-#include"CObjBullteEnemy.h"
+#include"CObjBulletEnemy.h"
 #include"CObjHomingEnemy.h"
+#include"CObjSinEnemy.h"
+#include"ObjDiffusionEnemy.h"
+#include"CObjAngleBullet.h"
 
 #include"ObjStage.h"
 //------------------------------------------------
