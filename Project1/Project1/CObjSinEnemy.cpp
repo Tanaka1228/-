@@ -4,6 +4,9 @@
 
 #include"GameHead.h"
 #include"CObjSinEnemy.h"
+#include"UtilityModule.h"
+
+
 
 //使用するネームスペース
 using namespace GameL;
@@ -42,22 +45,8 @@ void CObjSinEnemy::Action()
 	m_vx = -1.0f;
 	m_vy = sin(3.14/180*m_r);//sinθを求めてm_vyに入れる
 
-	//ベクトルの長さを求める(三平方の定理)
-	float r = 0.0f;
-	r = m_vx * m_vx + m_vy * m_vy;
-	r = sqrt(r);//rをルートを求める
-
-	//長さが0かどうか調べる
-	if (r == 0.0f)
-	{
-		;//0なら何もしない。
-	}
-	else
-	{
-		//正規化を行う。
-		m_vx = 1.0f / r * m_vx;
-		m_vy = 1.0f / r * m_vy;
-	}
+	//移動ベクトルの正規化
+	UnitVec(&m_vy, &m_vx);
 
 	//速度を付ける。
 	m_vx *= 1.5f;
@@ -73,10 +62,13 @@ void CObjSinEnemy::Action()
 
 
 	//敵機が完全に領域外に出たら敵機を破棄する
-	if (m_x < -32.0f)
+	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	if (check == false)
 	{
-		this->SetStatus(false);
+		this->SetStatus(false);//自身に削除命令
 		Hits::DeleteHitBox(this);
+
+		return;
 	}
 
 	//弾丸と接触してるかどうか調べる

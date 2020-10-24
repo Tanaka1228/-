@@ -4,6 +4,7 @@
 
 #include"GameHead.h"
 #include"ObjDiffusionEnemy.h"
+#include"UtilityModule.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -32,7 +33,7 @@ void CObjDiffusionEnemy::Action()
 {
 	m_time++;//1加算
 
-	if (m_time > 30)//弾丸を発射する間隔
+	if (m_time > 50)//弾丸を発射する間隔
 	{
 		m_time = 0;
 
@@ -64,11 +65,16 @@ void CObjDiffusionEnemy::Action()
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
 
+
+
 	//敵機が完全に領域外に出たら敵機を破棄する
-	if (m_x < -32.0f)
+	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	if (check == false)
 	{
-		this->SetStatus(false);
+		this->SetStatus(false);//自身に削除命令
 		Hits::DeleteHitBox(this);
+
+		return;
 	}
 
 	//弾丸と接触してるかどうか調べる

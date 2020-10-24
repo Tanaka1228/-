@@ -56,6 +56,8 @@ void CObjEnemy::Action()
 	{
 		this->SetStatus(false);//©g‚Éíœ–½—ß
 		Hits::DeleteHitBox(this);
+
+		return;
 	}
 
 	//’eŠÛ‚ÆÚG‚µ‚Ä‚é‚©‚Ç‚¤‚©’²‚×‚é

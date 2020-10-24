@@ -10,9 +10,13 @@ class CObjHero : public CObj
 public:
 	CObjHero(float x,float y);
 	~CObjHero() {};
-	void Init(); //イニシャライズ
-	void Action(); //アクション
-	void Draw(); //ドロー
+	void Init();        //イニシャライズ
+	void Action();      //アクション
+	void Draw();        //ドロー
+	void SetX(float x);//位置情報X変更用
+	void SetY(float y);//位置情報Y変更用
+	float GetX();      //位置情報X取得用
+	float GetY();      //位置情報Y取得用
 private:
 	float m_x;  //主人公機のx方向移動用変数
 	float m_y;  //主人公機のy方向移動用変数
