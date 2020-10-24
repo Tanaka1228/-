@@ -15,4 +15,6 @@ public:
 	void Draw();//ドロー
 private:
 	int m_map[27][55];//マップ情報
+
+	float m_scroll;//左右スクロール用
 };
