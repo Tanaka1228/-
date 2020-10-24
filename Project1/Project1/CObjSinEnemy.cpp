@@ -16,7 +16,7 @@ CObjSinEnemy::CObjSinEnemy(float x, float y)
 }
 
 //イニシャライズ
-void CObjEnemy::Init()
+void CObjSinEnemy::Init()
 {
 	m_x = 600;
 	m_y = 400;
@@ -25,11 +25,11 @@ void CObjEnemy::Init()
 	m_r = 0.0f;
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_ENEMY, 1);
+	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_SIN_ENEMY, 1);
 }
 
 //アクション
-void CObjEnemy::Action()
+void CObjSinEnemy::Action()
 {
 	//角度加算
 	m_r += 2.0f;
@@ -88,10 +88,10 @@ void CObjEnemy::Action()
 }
 
 //ドロー
-void CObjEnemy::Draw()
+void CObjSinEnemy::Draw()
 {
 	//描画カラー情報　R=RED G=Green B=Blue A=alpha(透過情報)
-	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	float c[4] = { 5.0f,0.0f,1.0f,1.0f };
 
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
