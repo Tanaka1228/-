@@ -11,6 +11,27 @@
 //使用するネームスペース
 using namespace GameL;
 
+//位置情報X変更用
+void CObjHero::SetX(float x)
+{
+	m_x = x;
+}
+//位置情報Y変更用
+void CObjHero::SetY(float y)
+{
+	m_y = y;
+}
+//位置情報X取得用
+float CObjHero::GetX()
+{
+	return m_x;
+}
+//位置情報Y取得用
+float CObjHero::GetY()
+{
+	return m_y;
+}
+
 //コンストラクタ
 CObjHero::CObjHero(float x, float y)
 {

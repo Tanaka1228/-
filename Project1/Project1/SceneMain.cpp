@@ -63,6 +63,9 @@ void CSceneMain::InitScene()
 	CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(500, 300); //Sin敵機オブジェクト作成
 	Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 
+	//誘導弾丸オブジェクト作成
+	CObjHomingBullet* obj_homing_bullet = new CObjHomingBullet(600, 500); //誘導弾オブジェクト作成
+	Objs::InsertObj(obj_homing_bullet,OBJ_HOMING_BULLET, 1); //誘導弾丸オブジェクトをオブジェクトマネージャーに登録
 
 	CObjMain* p = new CObjMain();
 	Objs::InsertObj(p, OBJ_MAIN,1);

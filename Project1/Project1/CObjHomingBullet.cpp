@@ -29,6 +29,27 @@ void CObjHomingBullet::Init()
 //ƒAƒNƒVƒ‡ƒ“
 void CObjHomingBullet::Action()
 {
+
+	//ålŒö‹@‚Æ—U“±’eŠÛ‚ÅŠp“x‚ğ‚Æ‚é
+	float ar = 170.0f;
+
+	//’eŠÛ‚ÌŒ»İ‚ÌŒü‚¢‚Ä‚¢‚éŠp“x‚ğæ‚é
+	float br = 180.0f;
+
+	float r = 3.14 / 180.0f;//Šp“x‚P‹
+	if (ar < br)
+	{
+		//ˆÚ“®•ûŒü‚É{‚P‹‰Á‚¦‚é
+		m_vx = m_vx * cos(r) - m_vx * sin(r);
+		m_vy = m_vy * cos(r) + m_vy * sin(r);
+	}
+	else
+	{
+	    //ˆÚ“®•ûŒü‚É-‚P‹‰Á‚¦‚é
+		m_vx = m_vx * cos(-r) - m_vx * sin(-r);
+		m_vy = m_vy * cos(-r) + m_vy * sin(-r);
+	}
+
 	//ˆÚ“®
 	m_x += m_vx * 5.0f;
 	m_y += m_vy * 5.0f;
