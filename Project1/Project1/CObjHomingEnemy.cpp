@@ -51,10 +51,13 @@ void CObjHomingEnemy::Action()
 
 
 	//ホーミング敵機が完全に領域外に出たら敵機を破棄する
-	if (m_x < -32.0f)
+	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	if (check == false)
 	{
-		this->SetStatus(false);//自身に削除命令をだす
-		Hits::DeleteHitBox(this);//ホーミング敵機が所有するhitboxに削除
+		this->SetStatus(false);//自身に削除命令
+		Hits::DeleteHitBox(this);
+
+		return;
 	}
 
 	//弾丸と接触してるかどうか調べる
