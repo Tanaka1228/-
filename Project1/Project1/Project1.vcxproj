@@ -135,9 +135,9 @@
     <ClInclude Include="..\..\チーム開発\GameL\UserData.h" />
     <ClInclude Include="..\..\チーム開発\GameL\WinInputs.h" />
     <ClInclude Include="..\..\チーム開発\main.h" />
-    <ClInclude Include="AngleBullet.h" />
+    <ClInclude Include="CObjAngleBullet.h" />
     <ClInclude Include="CObjBullet.h" />
-    <ClInclude Include="CObjBullteEnemy.h" />
+    <ClInclude Include="CObjBulletEnemy.h" />
     <ClInclude Include="CObjHomingEnemy.h" />
     <ClInclude Include="CObjSinEnemy.h" />
     <ClInclude Include="GameHead.h" />
@@ -167,9 +167,9 @@
     <ClCompile Include="..\..\チーム開発\GameL\SetWindow.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\UserData.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\WinInputs.cpp" />
-    <ClCompile Include="AngleBullet.cpp" />
+    <ClCompile Include="CObjAngleBullet.cpp" />
     <ClCompile Include="CObjBullet.cpp" />
-    <ClCompile Include="CObjBullteEnemy.cpp" />
+    <ClCompile Include="CObjBulletEnemy.cpp" />
     <ClCompile Include="CObjHomingEnemy.cpp" />
     <ClCompile Include="CObjSinEnemy.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />

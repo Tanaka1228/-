@@ -96,9 +96,6 @@
     <ClInclude Include="ObjAttackEnemy.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
-    <ClInclude Include="CObjBullteEnemy.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="CObjHomingEnemy.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
@@ -111,7 +108,10 @@
     <ClInclude Include="ObjDiffusionEnemy.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
-    <ClInclude Include="AngleBullet.h">
+    <ClInclude Include="CObjAngleBullet.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjBulletEnemy.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
@@ -188,9 +188,6 @@
     <ClCompile Include="ObjAttackEnemy.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
-    <ClCompile Include="CObjBullteEnemy.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="CObjHomingEnemy.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
@@ -203,7 +200,10 @@
     <ClCompile Include="ObjDiffusionEnemy.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
-    <ClCompile Include="AngleBullet.cpp">
+    <ClCompile Include="CObjAngleBullet.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjBulletEnemy.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

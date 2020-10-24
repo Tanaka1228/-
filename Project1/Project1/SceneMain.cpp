@@ -60,7 +60,7 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 
 	//拡散敵機オブジェクト作成
-	CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(700, 300); //Sin敵機オブジェクト作成
+	CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(500, 300); //Sin敵機オブジェクト作成
 	Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 
 
