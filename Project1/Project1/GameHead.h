@@ -93,6 +93,6 @@ struct UserData
 //#define SET_GAME_START CSceneGameOver
 #define SET_GAME_START CSceneTitle 
 //#define SET_GAME_START CSceneMain
-#define SET_GAME_START CSceneMain
-#define SET_GAME_START CSceneStage
+//#define SET_GAME_START CSceneMain
+//#define SET_GAME_START CSceneStage
 //-----------------------------------------------
