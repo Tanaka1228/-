@@ -48,17 +48,28 @@ void CObjStage::Init()
 	memcpy(m_map, stage_deta, sizeof(int) * (27 * 55));
 
 }
+
 //アクション
 void CObjStage::Action()
 {
+	//主人公の位置を取得
+	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+	float hx = hero->GetX();
+	float hy = hero->GetY();
 
+	//後方スクロールライン
+	if (hx < 80)
+	{
+		hero->SetX(80);//主人公はラインを超えないようににする
+		m_scroll = hero->GetX();//主人公が本来動くべき分の値をm_scrollに加える
+	}
 
-
-
-
-
-
-
+	//前方スクロールライン
+	if (hx > 300)
+	{
+		hero->SetX(300);//主人公のラインを超えないようにする
+		m_scroll = hero->GetX();//主人公が本来動くべき分の値をm_scrollに加える
+	}
 
 }
 
