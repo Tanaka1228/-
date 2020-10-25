@@ -20,6 +20,7 @@ enum OBJ_NAME
 	OBJ_DIFFUSION_ENEMY,
 	OBJ_ANGLE_BULLET,
 	OBJ_HOMING_BULLET,
+	OBJ_STAGE,
 };
 //------------------------------------------------
 

@@ -80,13 +80,6 @@ void CObjStage::Draw()
 	RECT_F src;
 	RECT_F dst;
 
-	//マップチップによるblock設置
-	//切り取り位置の設定
-	src.m_top = 0.0f;
-	src.m_left = 320.0f;
-	src.m_right = src.m_left + 64.0f;
-	src.m_bottom = 64.0f;
-
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -102,14 +95,20 @@ void CObjStage::Draw()
 				if (m_map[i][j] > 0)
 				{
 					//ステージスタート
-					;
-
+					src.m_top = 0.0f;
+					src.m_left = 320.0f + 64.0f;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(0, &src, &dst, c, 0.0f);
 				}
 				else if(m_map[i][j]==3)
 				{
 					//ステージゴール
-					;
-
+					src.m_top = 64.0f;
+					src.m_left = 320.0f + 64.0f;
+					src.m_right = src.m_left + 64.0f;
+					src.m_bottom = src.m_top + 64.0f;
+					Draw::Draw(0, &src, &dst, c, 0.0f);
 				}
 				else
 				{
