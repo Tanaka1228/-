@@ -31,10 +31,22 @@ void CObjHomingBullet::Action()
 {
 
 	//ålŒö‹@‚Æ—U“±’eŠÛ‚ÅŠp“x‚ğ‚Æ‚é
-	float ar = 170.0f;
+	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
+	float x = obj->GetX() - m_x;
+	float y = obj->GetY() - m_y;
+	float ar = atan2(-y, x) * 180.0f / 3.14f;
+	if (ar < 0)
+	{
+		ar = 360 - abs(ar);
+	}
+
 
 	//’eŠÛ‚ÌŒ»İ‚ÌŒü‚¢‚Ä‚¢‚éŠp“x‚ğæ‚é
-	float br = 180.0f;
+	float br = atan2(-m_vy, m_vx) * 180.0f / 3.14f;
+	if (br < 0)
+	{
+		br = 360 - abs(br);
+	}
 
 	float r = 3.14 / 180.0f;//Šp“x‚P‹
 	if (ar < br)
@@ -49,6 +61,7 @@ void CObjHomingBullet::Action()
 		m_vx = m_vx * cos(-r) - m_vx * sin(-r);
 		m_vy = m_vy * cos(-r) + m_vy * sin(-r);
 	}
+	UnitVec(&m_vx, &m_vy);
 
 	//ˆÚ“®
 	m_x += m_vx * 5.0f;
