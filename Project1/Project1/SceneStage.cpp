@@ -30,6 +30,8 @@ CSceneStage::~CSceneStage()
 //ゲームステージ初期化メソッド
 void CSceneStage::InitCScene()
 {
+
+
 }
 
 
