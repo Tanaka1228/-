@@ -48,6 +48,14 @@ void CObjHomingBullet::Action()
 		br = 360 - abs(br);
 	}
 
+	//主人公機と敵機角度があまりにもかけ離れたら
+	if (ar - br > 20)
+	{
+		//移動方向を主人公機の方向にする
+		m_vx = cos(3.14 / 180 * ar);
+		m_vy = -sin(3.14 / 180 * ar);
+	}
+
 	float r = 3.14 / 180.0f;//角度１°
 	if (ar < br)
 	{
@@ -104,8 +112,8 @@ void CObjHomingBullet::Draw()
 	src.m_bottom = 32.0f; //y
 
 	//表示位置の設定
-	dst.m_top = -10.0f + m_y;//縦の位置変更
-	dst.m_left = -5.0f + m_x;
+	dst.m_top = 0.0f + m_y;//縦の位置変更
+	dst.m_left = 0.0f + m_x;
 	dst.m_right = 45.0f + m_x;
 	dst.m_bottom = 32.0f + m_y;
 
