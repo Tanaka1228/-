@@ -23,9 +23,8 @@ private:
 	float m_vx; //移動ベクトル
 	float m_vy; //移動ベクトル
 	float m_posture; //横姿勢
-	float m_Yposture;//縦姿勢
 	bool m_f; //弾丸発射制御用
 
-	int m_ani_time; //アニメーションフレーム動作間隔
-	int m_ani_frame; //描画フレーム
+	int m_ani_time=0; //アニメーションフレーム動作間隔
+	int m_ani_frame=0; //描画フレーム
 };

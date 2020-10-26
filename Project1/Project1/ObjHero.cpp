@@ -83,26 +83,44 @@ void CObjHero::Action()
 	{
 		m_x += 5.0f;
 		m_posture = 0.0f;
-
+		m_ani_frame = 2;
 	}
 
-	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
+	else if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 5.0f;
 		m_posture = 1.0f;
+		m_ani_frame = 3;
 	}
 
 
-	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
+	else	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
 		m_y -= 5.0f;
+		m_ani_frame = 1;
 
 	}
 
-	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
+	else if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
 		m_y+= 5.0f;
+		m_ani_frame = 0;
 	}
+	//else
+	//{
+	//	m_ani_frame = 1; //キー入力がない場合は静止フレームにする
+	//	m_ani_time = 0;
+	//}
+
+	//if (m_ani_time > 4)
+	//{
+	//	m_ani_frame += 1;
+	//	m_ani_time = 0;
+	//}
+	//if (m_ani_frame == 4)
+	//{
+	//	m_ani_frame = 0;
+	//}
 
 	//移動ベクトルの正規化
 	UnitVec(&m_vy, &m_vx);
@@ -137,17 +155,53 @@ void CObjHero::Draw()
 	RECT_F src;
 	RECT_F dst;
 
-	//切り取り位置の設定
-	src.m_top     = 0.0f;   //y
-	src.m_left = 431.0f ;  //x
-	src.m_right   = 599.0f; //x
-	src.m_bottom = 240.0f; //y
+	if (m_ani_frame == 2) 
+	{
+		//切り取り位置の設定
+		src.m_top = 0.0f;   //y
+		src.m_left = 431.0f; //x
+		src.m_right = 599.0f; //x
+		src.m_bottom = 240.0f; //y
+
+	}
+	if (m_ani_frame == 1) 
+	{
+		//切り取り位置の設定
+		src.m_top = 0.0f;   //y
+		src.m_left = 237.0f; //x
+		src.m_right =417.0f; //x
+		src.m_bottom = 240.0f; //y
+	}
+
+	if (m_ani_frame == 0)
+	{
+		//切り取り位置の設定
+		src.m_top = 0.0f;   //y
+		src.m_left = 20.0f; //x
+		src.m_right = 220.0f; //x
+		src.m_bottom = 240.0f; //y
+	}
+
+	if (m_ani_frame == 3)
+	{
+		//切り取り位置の設定
+		src.m_top = 0.0f;   //y
+		src.m_left = 631.0f; //x
+		src.m_right = 794.0f; //x
+		src.m_bottom = 240.0f; //y
+	}
 
 	//表示位置の設定
-	dst.m_top     = 0.0f  +  m_y;
-	dst.m_left    = (64.0f*m_posture)  +  m_x;
-	dst.m_right   = (64.0f - 64.0f * m_posture) +  m_x;
-	dst.m_bottom  = 32.0f + 50.0f +  m_y;
+	dst.m_top   = 0.0f + m_y;
+	dst.m_left  = 0.0f + m_x;
+	dst.m_right = 62.0f + m_x;
+	dst.m_bottom= 82.0f+ m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 }
+
+////表示位置の設定
+//dst.m_top = 0.0f + m_y;
+//dst.m_left = (64.0f * m_posture) + m_x;
+//dst.m_right = (64.0f - 64.0f * m_posture) + m_x;
+//dst.m_bottom = 32.0f + 50.0f + m_y;
