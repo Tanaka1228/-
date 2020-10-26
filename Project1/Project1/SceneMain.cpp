@@ -31,10 +31,6 @@ CSceneMain::~CSceneMain()
 //ゲームメイン初期化メソッド
 void CSceneMain::InitScene()
 {
-	//外部データの読み込み(ステージ情報)
-	unique_ptr<wchar_t>p;//ステージ情報ポインター
-	int size;
-	p = Save::ExternalDataOpen(L"Book.csv", &size);//外部データ読み込み
 
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
