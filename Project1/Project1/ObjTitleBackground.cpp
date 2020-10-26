@@ -54,4 +54,18 @@ void CObjTitleBackground::Draw()
 	dst.m_bottom = 570.f; //y
 
 	Draw::Draw(6, &src, &dst, c, 0.0f);
+	
+	//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+	src.m_top = 0.0f;   //y
+	src.m_left = 0.0f;  //x
+	src.m_right = 174.0f; //x
+	src.m_bottom = 90.0f; //y
+
+	//•\¦ˆÊ’u‚Ìİ’è
+	dst.m_top = 345.0f;//y
+	dst.m_left = 240.0f;//x;
+	dst.m_right = 545.0f;//x
+	dst.m_bottom = 410.f; //y
+
+	Draw::Draw(5, &src, &dst, c, 0.0f);
 }
