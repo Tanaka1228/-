@@ -99,7 +99,7 @@ void CObjStage::Draw()
 					src.m_left = 320.0f + 64.0f;
 					src.m_right = src.m_left + 64.0f;
 					src.m_bottom = src.m_top + 64.0f;
-					Draw::Draw(0, &src, &dst, c, 0.0f);
+					Draw::Draw(7, &src, &dst, c, 0.0f);
 				}
 				else if(m_map[i][j]==3)
 				{
@@ -108,12 +108,12 @@ void CObjStage::Draw()
 					src.m_left = 320.0f + 64.0f;
 					src.m_right = src.m_left + 64.0f;
 					src.m_bottom = src.m_top + 64.0f;
-					Draw::Draw(0, &src, &dst, c, 0.0f);
+					Draw::Draw(7, &src, &dst, c, 0.0f);
 				}
 				else
 				{
 					//•`‰æ
-					Draw::Draw(0, &src, &dst, c, 0.0f);
+					Draw::Draw(7, &src, &dst, c, 0.0f);
 				}
 			}
 		}

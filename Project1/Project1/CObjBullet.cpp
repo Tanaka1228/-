@@ -17,6 +17,8 @@ CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に
 	m_vx = 0.0f;//速度用変数
 }
 
+
+
 //イニシャライズ
 void CObjBullet::Init()
 {
