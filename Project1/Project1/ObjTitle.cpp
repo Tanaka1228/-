@@ -89,7 +89,8 @@ void CObjTitle::Action()
 void CObjTitle::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
-
+	RECT_F src;
+	RECT_F dst;
 
 	//タイトル名の表示
 	Font::StrDraw(L"ARTIFICIAL HUMAN ", 270, 100, 32, c);
@@ -122,6 +123,20 @@ void CObjTitle::Draw()
 		Font::StrDraw(L"L=押している", 20, 40, 12, c);
 	else
 		Font::StrDraw(L"L=押していない", 20, 40, 12, c);
+
+	//切り取り位置の設定
+	src.m_top = 0.0f;   //y
+	src.m_left = 0.0f;  //x
+	src.m_right = 174.0f; //x
+	src.m_bottom = 90.0f; //y
+
+	//表示位置の設定
+	dst.m_top = 345.0f;//y
+	dst.m_left = 240.0f;//x;
+	dst.m_right = 545.0f;//x
+	dst.m_bottom = 410.f; //y
+
+	Draw::Draw(5, &src, &dst, c, 0.0f);
 
 	
 	
