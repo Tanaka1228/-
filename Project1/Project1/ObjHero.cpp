@@ -32,6 +32,11 @@ float CObjHero::GetY()
 	return m_y;
 }
 
+float CObjHero::GetB()
+{
+	return m_ani_frame;
+}
+
 //コンストラクタ
 CObjHero::CObjHero(float x, float y)
 {
@@ -68,6 +73,7 @@ void CObjHero::Action()
 		{
 			if (m_ani_frame == 2)
 			{
+
 				//弾丸オブジェクト作成
 				CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
 				Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
@@ -75,7 +81,7 @@ void CObjHero::Action()
 			if (m_ani_frame == 3)
 			{
 				//弾丸オブジェクト作成
-				CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+				CObjBullet* obj_b = new CObjBullet(m_x+30.0f, m_y + 32.0f); //弾丸オブジェクト作成
 				Objs::InsertObj(obj_b, OBJ_BULLET, 3);
 			}
 			
