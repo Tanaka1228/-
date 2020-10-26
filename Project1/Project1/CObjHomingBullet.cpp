@@ -29,47 +29,44 @@ void CObjHomingBullet::Init()
 //ƒAƒNƒVƒ‡ƒ“
 void CObjHomingBullet::Action()
 {
-
+	float r = 0.0f;
 	//ålŒö‹@‚Æ—U“±’eŠÛ‚ÅŠp“x‚ğ‚Æ‚é
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	float x = obj->GetX() - m_x;
-	float y = obj->GetY() - m_y;
-	float ar = atan2(-y, x) * 180.0f / 3.14f;
-	if (ar < 0)
+
+	//ålŒö‹@‚ª‘¶İ‚·‚éê‡A—U“±Šp“x‚ÌŒvZ‚·‚é
+	if (obj != nullptr)
 	{
-		ar = 360 - abs(ar);
-	}
+		float x = obj->GetX() - m_x;
+		float y = obj->GetY() - m_y;
+		r = GetAtan2Angle(x, -y);
 
 
-	//’eŠÛ‚ÌŒ»İ‚ÌŒü‚¢‚Ä‚¢‚éŠp“x‚ğæ‚é
-	float br = atan2(-m_vy, m_vx) * 180.0f / 3.14f;
-	if (br < 0)
-	{
-		br = 360 - abs(br);
-	}
+		//’eŠÛ‚ÌŒ»İ‚ÌŒü‚¢‚Ä‚¢‚éŠp“x‚ğæ‚é
+		float br = GetAtan2Angle(m_vx, -m_vy);
 
-	//ålŒö‹@‚Æ“G‹@Šp“x‚ª‚ ‚Ü‚è‚É‚à‚©‚¯—£‚ê‚½‚ç
-	if (ar - br > 20)
-	{
-		//ˆÚ“®•ûŒü‚ğålŒö‹@‚Ì•ûŒü‚É‚·‚é
-		m_vx = cos(3.14 / 180 * ar);
-		m_vy = -sin(3.14 / 180 * ar);
-	}
+		//ålŒö‹@‚Æ“G‹@Šp“x‚ª‚ ‚Ü‚è‚É‚à‚©‚¯—£‚ê‚½‚ç
+		if (r - br > 20)
+		{
+			//ˆÚ“®•ûŒü‚ğålŒö‹@‚Ì•ûŒü‚É‚·‚é
+			m_vx = cos(3.14 / 180 * r);
+			m_vy = -sin(3.14 / 180 * r);
+		}
 
-	float r = 3.14 / 180.0f;//Šp“x‚P‹
-	if (ar < br)
-	{
-		//ˆÚ“®•ûŒü‚É{‚P‹‰Á‚¦‚é
-		m_vx = m_vx * cos(r) - m_vx * sin(r);
-		m_vy = m_vy * cos(r) + m_vy * sin(r);
+		float r = 3.14 / 180.0f;//Šp“x‚P‹
+		if (r < br)
+		{
+			//ˆÚ“®•ûŒü‚É{‚P‹‰Á‚¦‚é
+			m_vx = m_vx * cos(r) - m_vx * sin(r);
+			m_vy = m_vy * cos(r) + m_vy * sin(r);
+		}
+		else
+		{
+			//ˆÚ“®•ûŒü‚É-‚P‹‰Á‚¦‚é
+			m_vx = m_vx * cos(-r) - m_vx * sin(-r);
+			m_vy = m_vy * cos(-r) + m_vy * sin(-r);
+		}
+		UnitVec(&m_vx, &m_vy);
 	}
-	else
-	{
-	    //ˆÚ“®•ûŒü‚É-‚P‹‰Á‚¦‚é
-		m_vx = m_vx * cos(-r) - m_vx * sin(-r);
-		m_vy = m_vy * cos(-r) + m_vy * sin(-r);
-	}
-	UnitVec(&m_vx, &m_vy);
 
 	//ˆÚ“®
 	m_x += m_vx * 5.0f;
@@ -100,6 +97,7 @@ void CObjHomingBullet::Action()
 //ƒhƒ[
 void CObjHomingBullet::Draw()
 {
+	float r = 0.0f;
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 	RECT_F src;
 	RECT_F dst;
@@ -117,5 +115,5 @@ void CObjHomingBullet::Draw()
 	dst.m_right = 45.0f + m_x;
 	dst.m_bottom = 32.0f + m_y;
 
-	Draw::Draw(3, &src, &dst, c, 0.0f);
+	Draw::Draw(3, &src, &dst, c, r);
 }
