@@ -56,14 +56,14 @@ void CObjHomingBullet::Action()
 		if (r < br)
 		{
 			//ˆÚ“®•ûŒü‚É{‚P‹‰Á‚¦‚é
-			m_vx = m_vx * cos(r) - m_vx * sin(r);
-			m_vy = m_vy * cos(r) + m_vy * sin(r);
+			m_vx = m_vx * cos( r) - m_vy * sin( r);
+			m_vy = m_vy * cos( r) + m_vx * sin( r);
 		}
 		else
 		{
 			//ˆÚ“®•ûŒü‚É-‚P‹‰Á‚¦‚é
-			m_vx = m_vx * cos(-r) - m_vx * sin(-r);
-			m_vy = m_vy * cos(-r) + m_vy * sin(-r);
+			m_vx = m_vx * cos(-r) - m_vy * sin(-r);
+			m_vy = m_vy * cos(-r) + m_vx * sin(-r);
 		}
 		UnitVec(&m_vx, &m_vy);
 	}
