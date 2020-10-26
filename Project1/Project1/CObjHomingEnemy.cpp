@@ -22,6 +22,7 @@ void CObjHomingEnemy::Init()
 {
 	m_vx = 0.0f;
 	m_vy = 0.0f;
+	m_time = 0;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_HOMING_ENEMY, 1);
@@ -30,6 +31,14 @@ void CObjHomingEnemy::Init()
 //アクション
 void CObjHomingEnemy::Action()
 {
+	m_time++;
+	if (m_time > 100)
+	{
+		m_time = 0;
+		//誘導弾丸作成
+		CObjHomingBullet* obj_homing_bullet = new CObjHomingBullet(m_x, m_y); //誘導弾オブジェクト作成
+		Objs::InsertObj(obj_homing_bullet, OBJ_HOMING_BULLET, 1); //誘導弾丸登録
+	}
 	//移動方向
 	m_vx = 0.0f;
 	m_vy = 0.0f;
