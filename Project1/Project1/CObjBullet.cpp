@@ -16,6 +16,7 @@ CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に
 	m_y = y;
 	m_vx = 0.0f;//速度用変数
 	m_vy = 0.0f;
+	m_pos = 0;
 }
 
 
@@ -40,11 +41,13 @@ void CObjBullet::Action()
 	{
 		m_vx += 6.0f;
 		m_x += m_vx;
+		m_pos = 0.0f;
 	}
 	else if (bx == 3)
 	{
 		m_vx -= 6.0f;
 		m_x   += m_vx;
+		m_pos = 1.0f;
 	}
 
 	//弾丸のHitBox更新用ポインター取得
@@ -84,12 +87,11 @@ void CObjBullet::Draw()
 	src.m_bottom = 32.0f; //y
 
 	//表示位置の設定
-	dst.m_top = 15.0f + m_y;//縦の位置変更
-	dst.m_left = 0.0f + m_x;
-	dst.m_right = 45.0f + m_x;
-	dst.m_bottom = 45.0f + m_y;
+	dst.m_top = 0.0f + m_y;//縦の位置変更
+	dst.m_left = (45.0f*m_pos) + m_x;
+	dst.m_right = (45.0f - 45.0f*m_pos) + m_x;
+	dst.m_bottom = 45.0f-10.0f + m_y;
 	
-
 
 	Draw::Draw(3, &src, &dst, c, 0.0f);
 }
