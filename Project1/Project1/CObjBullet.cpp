@@ -15,8 +15,8 @@ CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に
 	m_x = x;
 	m_y = y;
 	m_vx = 0.0f;//速度用変数
-}
 
+}
 
 
 //イニシャライズ
@@ -33,6 +33,7 @@ void CObjBullet::Action()
 {
 	m_vx += 6.0f;
 	m_x  += m_vx;
+
 
 
 	//弾丸のHitBox更新用ポインター取得
