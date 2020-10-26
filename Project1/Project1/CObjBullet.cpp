@@ -43,7 +43,7 @@ void CObjBullet::Action()
 	if (bx == 3)
 	{
 		m_vx -= 6.0f;
-		m_x   = m_vx;
+		m_x   += m_vx;
 	}
 
 	//弾丸のHitBox更新用ポインター取得
