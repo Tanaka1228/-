@@ -66,6 +66,28 @@ void CObjHero::Action()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
+
+	if (Input::GetVKey('A') == true)
+	{
+		float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+		RECT_F src;
+		RECT_F dst;
+
+		//切り取り位置の設定
+		src.m_top = 0.0f;   //y
+		src.m_left = 0.0f; //x
+		src.m_right = 32.0f; //x
+		src.m_bottom = 32.0f; //y
+
+		//表示位置の設定
+		dst.m_top = 0.0f + m_y;
+		dst.m_left = 0.0f + m_x;
+		dst.m_right = 100.0f + m_x;
+		dst.m_bottom = 100.0f + m_y;
+
+		Draw::Draw(2, &src, &dst, c, 0.0f);
+	}
+	
 	//主人公の弾丸発射
 	if (Input::GetVKey('Z') == true)
 	{
@@ -190,7 +212,7 @@ void CObjHero::Draw()
 		src.m_right = 794.0f; //x
 		src.m_bottom = 240.0f; //y
 	}
-
+	
 	//表示位置の設定
 	dst.m_top   = 0.0f + m_y;
 	dst.m_left  = 0.0f + m_x;
