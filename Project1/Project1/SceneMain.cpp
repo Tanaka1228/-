@@ -79,15 +79,15 @@ void CSceneMain::Scene()
 	}
 	else if (m_time == 300)
 	{
-		//誘導敵機オブジェクト作成
-		CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(700, 50); //誘導敵機オブジェクト作成
-		Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 1); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
-	}
-	else if (m_time == 400)
-	{
 		//拡散敵機オブジェクト作成
 		CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(700, 300); //Sin敵機オブジェクト作成
 		Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+	}
+	else if (m_time == 400)
+	{
+		//誘導敵機オブジェクト作成
+		CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(700, 50); //誘導敵機オブジェクト作成
+		Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 1); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 	}
 	
 }
