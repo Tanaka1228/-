@@ -33,13 +33,11 @@ void CObjBullet::Action()
 	m_x  += m_vx;
 
 
-
-
 	//弾丸のHitBox更新用ポインター取得
 	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
 	hit->SetPos(m_x, m_y);
 
-
+	
 
 	//敵機が完全に領域外に出たら敵機を破棄する
 	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
