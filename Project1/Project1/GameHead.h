@@ -21,6 +21,7 @@ enum OBJ_NAME
 	OBJ_ANGLE_BULLET,
 	OBJ_HOMING_BULLET,
 	OBJ_STAGE,
+	OBJ_BLOCK,
 };
 //------------------------------------------------
 
@@ -78,7 +79,7 @@ struct UserData
 #include"ObjDiffusionEnemy.h"
 #include"CObjAngleBullet.h"
 #include"CObjHomingBullet.h"
-
+#include"ObjBlock.h"
 #include"ObjStage.h"
 //------------------------------------------------
 

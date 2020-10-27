@@ -143,6 +143,7 @@
     <ClInclude Include="CObjSinEnemy.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="ObjAttackEnemy.h" />
+    <ClInclude Include="ObjBlock.h" />
     <ClInclude Include="ObjDiffusionEnemy.h" />
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjGameOver.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="CObjSinEnemy.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
     <ClCompile Include="ObjAttackEnemy.cpp" />
+    <ClCompile Include="ObjBlock.cpp" />
     <ClCompile Include="ObjDiffusionEnemy.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjMain.cpp" />
