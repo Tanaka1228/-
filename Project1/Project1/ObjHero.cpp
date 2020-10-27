@@ -147,6 +147,10 @@ void CObjHero::Action()
 		m_x += 5.0f;
 		m_posture = 0.0f;
 		m_ani_frame = 2;
+		if (Input::GetVKey(VK_SHIFT) == true)
+		{
+			m_x += 5.0f;
+		}
 	}
 
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
@@ -154,6 +158,10 @@ void CObjHero::Action()
 		m_x -= 5.0f;
 		m_posture = 1.0f;
 		m_ani_frame = 3;
+		if (Input::GetVKey(VK_SHIFT) == true)
+		{
+			m_x -= 5.0f;
+		}
 	}
 
 
@@ -161,12 +169,20 @@ void CObjHero::Action()
 	{
 		m_y -= 5.0f;
 		m_ani_frame = 1;
+		if (Input::GetVKey(VK_SHIFT) == true)
+		{
+			m_y -= 5.0f;
+		}
 
 	}
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
 		m_y+= 5.0f;
 		m_ani_frame = 0;
+		if (Input::GetVKey(VK_SHIFT) == true)
+		{
+			m_y += 5.0f;
+		}
 	}
 
 	//移動ベクトルの正規化
