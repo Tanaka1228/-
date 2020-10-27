@@ -15,7 +15,8 @@ CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に
 	m_x = x;
 	m_y = y;
 	m_vx = 0.0f;//速度用変数
-	m_bvx = 0.0f;
+	m_vy = 0.0f;
+	m_pos = 0;
 }
 
 
@@ -23,6 +24,7 @@ CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に
 void CObjBullet::Init()
 {
 	m_vx = 0.0f;
+	m_vy = 0.0f;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_PLAYER, OBJ_BULLET, 1);
@@ -39,11 +41,13 @@ void CObjBullet::Action()
 	{
 		m_vx += 6.0f;
 		m_x += m_vx;
+		m_pos = 0.0f;
 	}
-	if (bx == 3)
+	else if (bx == 3)
 	{
 		m_vx -= 6.0f;
-		m_bvx   = m_vx;
+		m_x   += m_vx;
+		m_pos = 1.0f;
 	}
 
 	//弾丸のHitBox更新用ポインター取得
@@ -75,21 +79,19 @@ void CObjBullet::Draw()
 	RECT_F src;
 	RECT_F dst;
 
-	
-	
-		//切り取り位置の設定　グラフィックを作っていない
-		src.m_top = 0.0f;   //y
-		src.m_left = 0.0f;  //x
-		src.m_right = 32.0f; //x 
-		src.m_bottom = 32.0f; //y
+		
+	//切り取り位置の設定　グラフィックを作っていない	
+	src.m_top = 0.0f;   //y
+	src.m_left = 0.0f;  //x
+	src.m_right = 32.0f; //x 
+	src.m_bottom = 32.0f; //y
 
-		//表示位置の設定
-		dst.m_top = 0.0f + m_y;//縦の位置変更
-		dst.m_left = 0.0f + m_x;
-		dst.m_right = 45.0f + m_x;
-		dst.m_bottom = 45.0f + m_y;
+	//表示位置の設定
+	dst.m_top = 0.0f + m_y;//縦の位置変更
+	dst.m_left = (45.0f*m_pos) + m_x;
+	dst.m_right = (45.0f - 45.0f*m_pos) + m_x;
+	dst.m_bottom = 45.0f-10.0f + m_y;
 	
-
 
 	Draw::Draw(3, &src, &dst, c, 0.0f);
 }

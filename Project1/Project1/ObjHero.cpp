@@ -53,7 +53,7 @@ void CObjHero::Init()
 	m_f = true; //弾丸発射制御
 
 	m_ani_time=0; //アニメーションフレーム動作間隔
-    m_ani_frame=1; //描画フレーム
+    m_ani_frame=2; //描画フレーム
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 62, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -66,33 +66,63 @@ void CObjHero::Action()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
-	//主人公の弾丸発射
-	if (Input::GetVKey('Z') == true)
-	{
-		if (m_f == true)
-		{
-			if (m_ani_frame == 2)
-			{
 
-				//弾丸オブジェクト作成
-				CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
-				Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
-			}
-			if (m_ani_frame == 3)
+	if (Input::GetVKey('A') == true)
+	{
+
+		float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+		RECT_F src;
+		RECT_F dst;
+
+		//切り取り位置の設定
+		src.m_top = 0.0f;   //y
+		src.m_left = 0.0f; //x
+		src.m_right = 32.0f; //x
+		src.m_bottom = 32.0f; //y
+
+		//表示位置の設定
+		dst.m_top = 40.0f + m_y;
+		dst.m_left = 55.0f + m_x;
+		dst.m_right = 95.0f + m_x;
+		dst.m_bottom = 80.0f + m_y;
+
+		Draw::Draw(2, &src, &dst, c, 0.0f);
+
+
+		//主人公の弾丸発射
+		if (Input::GetVKey('Z') == true)
+		{
+			if (m_f == true)
 			{
-				//弾丸オブジェクト作成
-				CObjBullet* obj_b = new CObjBullet(m_x+30.0f, m_y + 32.0f); //弾丸オブジェクト作成
-				Objs::InsertObj(obj_b, OBJ_BULLET, 3);
+				if (m_ani_frame == 2)
+				{
+
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
+				}
+				if (m_ani_frame == 3)
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
+				}
+
+				m_f = false;
 			}
-			
-			m_f = false;
+		}
+		else
+		{
+			m_f = true;
 		}
 	}
-	else
-	{
-		m_f = true;
-	}
-	
+
+
+
+
+
+
+
 
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
@@ -190,7 +220,7 @@ void CObjHero::Draw()
 		src.m_right = 794.0f; //x
 		src.m_bottom = 240.0f; //y
 	}
-
+	
 	//表示位置の設定
 	dst.m_top   = 0.0f + m_y;
 	dst.m_left  = 0.0f + m_x;

@@ -23,6 +23,7 @@ void CObjHomingEnemy::Init()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 	m_time = 0;
+	m_hp = 10;
 
 	//“–‚½‚è”»’è—pHitBox‚ðì¬
 	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_HOMING_ENEMY, 1);
@@ -71,6 +72,10 @@ void CObjHomingEnemy::Action()
 
 	//’eŠÛ‚ÆÚG‚µ‚Ä‚é‚©‚Ç‚¤‚©’²‚×‚é
 	if (hit->CheckObjNameHit(OBJ_BULLET) != nullptr)
+	{
+		m_hp -= 1;	
+	}
+	if (m_hp <= 0)//HP‚ª‚O‚É‚È‚Á‚½‚ç”jŠü
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
