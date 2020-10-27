@@ -135,6 +135,9 @@
     <ClInclude Include="CObjHomingBullet.h">
       <Filter>ソース ファイル\Bullet</Filter>
     </ClInclude>
+    <ClInclude Include="ObjBlock.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -238,6 +241,9 @@
     </ClCompile>
     <ClCompile Include="CObjHomingBullet.cpp">
       <Filter>ソース ファイル\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjBlock.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
