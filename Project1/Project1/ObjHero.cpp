@@ -67,26 +67,26 @@ void CObjHero::Action()
 	m_vy = 0.0f;
 
 
-	if (Input::GetVKey('A') == true)
-	{
+	//if (Input::GetVKey('A') == true)
+	//{
 
-		float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-		RECT_F src;
-		RECT_F dst;
+	//	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	//	RECT_F src;
+	//	RECT_F dst;
 
-		//切り取り位置の設定
-		src.m_top = 0.0f;   //y
-		src.m_left = 0.0f; //x
-		src.m_right = 32.0f; //x
-		src.m_bottom = 32.0f; //y
+	//	//切り取り位置の設定
+	//	src.m_top = 0.0f;   //y
+	//	src.m_left = 0.0f; //x
+	//	src.m_right = 32.0f; //x
+	//	src.m_bottom = 32.0f; //y
 
-		//表示位置の設定
-		dst.m_top = 40.0f + m_y;
-		dst.m_left = 55.0f + m_x;
-		dst.m_right = 95.0f + m_x;
-		dst.m_bottom = 80.0f + m_y;
+	//	//表示位置の設定
+	//	dst.m_top = 40.0f + m_y;
+	//	dst.m_left = 55.0f + m_x;
+	//	dst.m_right = 95.0f + m_x;
+	//	dst.m_bottom = 80.0f + m_y;
 
-		Draw::Draw(2, &src, &dst, c, 0.0f);
+	//	Draw::Draw(2, &src, &dst, c, 0.0f);
 
 
 		//主人公の弾丸発射
@@ -107,6 +107,18 @@ void CObjHero::Action()
 					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
 				}
+				if (m_ani_frame == 1)
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
+				}
+				if (m_ani_frame == 0)
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
+				}
 
 				m_f = false;
 			}
@@ -115,7 +127,7 @@ void CObjHero::Action()
 		{
 			m_f = true;
 		}
-	}
+	//}
 
 
 

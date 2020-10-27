@@ -49,6 +49,18 @@ void CObjBullet::Action()
 		m_x   += m_vx;
 		m_pos = 1.0f;
 	}
+	else if (bx == 1)
+	{
+		m_vy -= 6.0f;
+		m_y += m_vy;
+		m_pos = 1.0f;
+	}
+	else if (bx == 0)
+	{
+		m_vy += 6.0f;
+		m_y += m_vy;
+		m_pos = 1.0f;
+	}
 
 	//弾丸のHitBox更新用ポインター取得
 	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
