@@ -74,6 +74,12 @@ void CSceneMain::Scene()
 		CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
 		Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 	}
+	else if (m_time == 150)
+	{
+		//Sin敵機オブジェクト作成
+		CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
+		Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+	}
 	else if (m_time == 200)
 	{
 		//攻撃する敵機オブジェクト作成
