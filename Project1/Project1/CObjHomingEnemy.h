@@ -19,4 +19,5 @@ private:
 	float m_vx;//敵機移動ベクトルX
 	float m_vy;//敵機移動ベクトルY
 	int m_time;//ホーミング弾丸発射タイミング用
+	int m_hp;//ヒットポイント
 };
