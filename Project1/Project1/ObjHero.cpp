@@ -55,7 +55,7 @@ void CObjHero::Init()
 	m_ani_time=0; //アニメーションフレーム動作間隔
     m_ani_frame=2; //描画フレーム
 
-	m_hp = 5;
+	m_hp = 3;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 62, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -176,13 +176,16 @@ void CObjHero::Action()
 	//敵機オブジェクトと接触したら主人公機削除
 	if (hit->CheckElementHit(ELEMENT_ENEMY) ==true)
 	{
-		this->SetStatus(false); //自身に削除命令を出す。
-		Hits::DeleteHitBox(this);//主人公機が所有するHitBoxに削除する。
+		m_hp -= 1;
+	}
+	if (m_hp <= 0)//HPが０になったら破棄
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
 
 		//主人公消滅でゲームオーバーに移行する
 		Scene::SetScene(new CSceneGameOver());
 	}
-
 }
 
 //ドロー
