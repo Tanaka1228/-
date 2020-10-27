@@ -132,7 +132,7 @@ void CObjTitle::Draw()
 
 	if (Input::GetVKey(VK_DOWN) == true)
 	{
-		m_y += 90;
+		m_y += 15;
 
 		//描画カラー情報　R=RED G=Green B=Blue A=alpha(透過情報)
 		float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -149,10 +149,10 @@ void CObjTitle::Draw()
 		//表示位置の設定
 		dst.m_top = 0.0f + m_y;
 		dst.m_left = 0.0f + m_x;
-		dst.m_right = 64.0f + m_x;
+		dst.m_right = 256.0f + m_x;
 		dst.m_bottom = 64.0f + m_y;
 
-		//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
+		//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
 		Draw::Draw(5, &src, &dst, c, 0.0f);
 	}
 }
