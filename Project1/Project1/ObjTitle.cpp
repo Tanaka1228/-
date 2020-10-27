@@ -46,7 +46,7 @@ void CObjTitle::Action()
 	//	 //マウスボタンが押されたらメインに還移
 	//	 if (m_mou_r == true || m_mou_l == true)
 	//	 {
-	//		Scene::SetScene(new CSceneMain());
+	//		Scene::SetScene(new CScene());
 	//	 }
 	//}
 	//
@@ -55,18 +55,18 @@ void CObjTitle::Action()
 	//	 //マウスボタンが押されたらメインに還移
 	//	 if (m_mou_r == true || m_mou_l == true)
 	//	 {
-	//		 Scene::SetScene(new CSceneMain());
+	//		 Scene::SetScene(new ());
 	//	 }
 	// }
 	// 
-	// if (m_mou_x > 250 && m_mou_x < 500 && m_mou_y>480 && m_mou_y < 530)
-	// {
-	//	 //マウスボタンが押されたらメインに還移
-	//	 if (m_mou_r == true || m_mou_l == true)
-	//	 {
-	//		 Scene::SetScene(new CSceneMain());
-	//	 }
-	// }
+	 if (m_mou_x > 250 && m_mou_x < 500 && m_mou_y>480 && m_mou_y < 530)
+	 {
+		 //マウスボタンが押されたらメインに還移
+		 if (m_mou_r == true || m_mou_l == true)
+		 {
+			 Scene::SetScene(nullptr);
+		 }
+	 }
 
 
 	//エンターキーを押してシーン：ゲームTitleに移行する
@@ -100,12 +100,12 @@ void CObjTitle::Draw()
 	//mainに移行
 	Font::StrDraw(L"◆  ニューゲーム", 250, 350, 32, c);
 
-	//ロード画面に移行
-	Font::StrDraw(L"◆     ロード    ", 250, 400, 32, c);
-	
-	//設定画面に移行
-	Font::StrDraw(L"◆      設定     ", 250, 450, 32, c);
-	
+	////ロード画面に移行
+	//Font::StrDraw(L"◆     ロード    ", 250, 400, 32, c);
+	//
+	////設定画面に移行
+	//Font::StrDraw(L"◆      設定     ", 250, 450, 32, c);
+	//
 	//シャットダウン
 	Font::StrDraw(L"◆ シャットダウン", 250, 500, 32, c);
 
