@@ -55,6 +55,8 @@ void CObjHero::Init()
 	m_ani_time=0; //アニメーションフレーム動作間隔
     m_ani_frame=2; //描画フレーム
 
+	m_hp = 3;
+
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 62, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
@@ -92,28 +94,32 @@ void CObjHero::Action()
 		//主人公の弾丸発射
 		if (Input::GetVKey('Z') == true)
 		{
+
+			
+
 			if (m_f == true)
 			{
-				if (m_ani_frame == 2)
+				
+				if (m_ani_frame == 2)//右
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
 					
 				}
-				if (m_ani_frame == 3)
+				if (m_ani_frame == 3)//左
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
 				}
-				if (m_ani_frame == 1)
+				if (m_ani_frame == 1)//後ろ
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
 				}
-				if (m_ani_frame == 0)
+				if (m_ani_frame == 0)//前
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
@@ -174,13 +180,18 @@ void CObjHero::Action()
 	//敵機オブジェクトと接触したら主人公機削除
 	if (hit->CheckElementHit(ELEMENT_ENEMY) ==true)
 	{
-		this->SetStatus(false); //自身に削除命令を出す。
-		Hits::DeleteHitBox(this);//主人公機が所有するHitBoxに削除する。
+		m_hp -= 1;
+	
+	}
+	
+	if (m_hp <= 0)//HPが０になったら破棄
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
 
 		//主人公消滅でゲームオーバーに移行する
 		Scene::SetScene(new CSceneGameOver());
 	}
-
 }
 
 //ドロー
@@ -198,11 +209,14 @@ void CObjHero::Draw()
 
 	if (m_ani_frame == 2) //右
 	{
+	
 		//切り取り位置の設定
 		src.m_top = 0.0f;   //y
 		src.m_left = 431.0f; //x
 		src.m_right = 599.0f; //x
 		src.m_bottom = 240.0f; //y
+
+		
 
 	}
 	if (m_ani_frame == 1) //上
