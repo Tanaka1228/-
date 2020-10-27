@@ -96,10 +96,10 @@ void CObjHero::Action()
 			{
 				if (m_ani_frame == 2)
 				{
-
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
+					
 				}
 				if (m_ani_frame == 3)
 				{
@@ -143,7 +143,7 @@ void CObjHero::Action()
 		m_ani_frame = 2;
 	}
 
-	else if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
+	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 5.0f;
 		m_posture = 1.0f;
@@ -151,14 +151,13 @@ void CObjHero::Action()
 	}
 
 
-	else	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
+	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
 		m_y -= 5.0f;
 		m_ani_frame = 1;
 
 	}
-
-	else if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
+	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
 		m_y+= 5.0f;
 		m_ani_frame = 0;
