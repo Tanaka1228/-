@@ -12,8 +12,10 @@ using namespace GameL;
 //イニシャライズ
 void CObjBlock::Init()
 {
+	m_scroll = 0.0f;
+
 //マップ情報
-	int block_data[28][55] =
+	int block_data[27][55] =
 	{
 		{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},//1
 		{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},//2
@@ -45,7 +47,7 @@ void CObjBlock::Init()
          
 	};
 	//マップデータをコピー
-	memcpy(m_map, block_data, sizeof(int) * (28 * 55));
+	memcpy(m_map, block_data, sizeof(int) * (27 * 55));
 }
 //アクション
 void CObjBlock::Action()
@@ -79,17 +81,19 @@ void CObjBlock::Draw()
 	src.m_right = src.m_left+64.0f; //x
 	src.m_bottom = 64.0f; //y
 
-	for (int i = 0; i < 28; i++)
+	m_scroll -= 3.0f;//scroll実験用
+
+	for (int i = 0; i < 27; i++)
 	{
 		for (int j = 0; j < 55; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
 				//表示位置の設定
-				dst.m_top = 0.0f;
-				dst.m_left = 0.0f;
-				dst.m_right = 64.0;
-				dst.m_bottom = 64.0;
+				dst.m_top = 0.0f + m_scroll;
+				dst.m_left = 0.0f + m_scroll;
+				dst.m_right = 64.0 + m_scroll;
+				dst.m_bottom = 64.0 + m_scroll;
 
 				//描画
 				Draw::Draw(7, &src, &dst, c, 0.0f);
