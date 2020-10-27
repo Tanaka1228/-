@@ -23,7 +23,7 @@ void CObjHomingEnemy::Init()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 	m_time = 0;
-	m_hp = 2;
+	m_hp = 10;
 
 	//“–‚½‚è”»’è—pHitBox‚ğì¬
 	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_HOMING_ENEMY, 1);
