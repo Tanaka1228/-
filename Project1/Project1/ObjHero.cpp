@@ -69,33 +69,20 @@ void CObjHero::Action()
 	m_vy = 0.0f;
 
 
-	//if (Input::GetVKey('A') == true)
-	//{
 
-	//	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-	//	RECT_F src;
-	//	RECT_F dst;
+	if (Input::GetVKey('A') == true)
+	{
+		m_gun = 1;
 
-	//	//切り取り位置の設定
-	//	src.m_top = 0.0f;   //y
-	//	src.m_left = 0.0f; //x
-	//	src.m_right = 32.0f; //x
-	//	src.m_bottom = 32.0f; //y
-
-	//	//表示位置の設定
-	//	dst.m_top = 40.0f + m_y;
-	//	dst.m_left = 55.0f + m_x;
-	//	dst.m_right = 95.0f + m_x;
-	//	dst.m_bottom = 80.0f + m_y;
-
-	//	Draw::Draw(2, &src, &dst, c, 0.0f);
-
+	}
+	else if (Input::GetVKey('Q') == true)
+	{
+		m_gun = 0;
+	}
 
 		//主人公の弾丸発射
-		if (Input::GetVKey('Z') == true)
+		if (Input::GetVKey('Z') == true&&m_gun==1)
 		{
-
-			
 
 			if (m_f == true)
 			{
@@ -133,7 +120,7 @@ void CObjHero::Action()
 		{
 			m_f = true;
 		}
-	//}
+	
 
 
 
@@ -269,6 +256,32 @@ void CObjHero::Draw()
 	dst.m_bottom= 32.0f+ m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
+
+	if (m_gun==1)
+	{
+
+		float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+		RECT_F src;
+		RECT_F dst;
+
+		//切り取り位置の設定
+		src.m_top = 0.0f;   //y
+		src.m_left = 0.0f; //x
+		src.m_right = 32.0f; //x
+		src.m_bottom = 32.0f; //y
+
+		//表示位置の設定
+		dst.m_top = 10.0f + m_y;
+		dst.m_left = 20.0f + m_x;
+		dst.m_right = 60.0f + m_x;
+		dst.m_bottom = 50.0f + m_y;
+
+		Draw::Draw(2, &src, &dst, c, 0.0f);
+	}
+	else if (m_gun == 0)
+	{
+
+	}
 }
 
 ////表示位置の設定
