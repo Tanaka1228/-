@@ -28,7 +28,7 @@ void CObjSinEnemy::Init()
 	m_r = 0.0f;
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 82, 82, ELEMENT_ENEMY, OBJ_SIN_ENEMY, 1);
+	Hits::SetHitBox(this, m_x, m_y, 42, 42, ELEMENT_ENEMY, OBJ_SIN_ENEMY, 1);
 }
 
 //アクション
@@ -96,9 +96,9 @@ void CObjSinEnemy::Draw()
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_y;
-	dst.m_left = 32.0f + 50.0f + m_x;
+	dst.m_left = 32.0f + 10.0f + m_x;
 	dst.m_right = 0.0f + m_x;
-	dst.m_bottom = 32.0f + 50.0f + m_y;
+	dst.m_bottom = 32.0f + 10.0f + m_y;
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(1, &src, &dst, c, 0.0f);
