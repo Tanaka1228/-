@@ -47,6 +47,12 @@ void CSceneMain::InitScene()
 	//外部グラフィックファイルを読み込み7番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"", 7, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み8番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"拠点の素材.png", 8, TEX_SIZE_512);
+
+	//外部グラフィックファイルを読み込み9番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"床.png", 9, TEX_SIZE_512);
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400,280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 1); //作った主人公オブジェクトをオブジェクトマネージャーに登録

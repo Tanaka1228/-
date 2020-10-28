@@ -18,7 +18,7 @@ public:
 	float GetScroll() { return m_scroll; }
 
 private:
-	int m_map[27][55]; //マップ情報
+	int m_map[10][10]; //マップ情報
 
 	float m_scroll;    //左右スクロール用
 };
