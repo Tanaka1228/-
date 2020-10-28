@@ -58,7 +58,7 @@ void CObjHero::Init()
 	m_hp = 3;
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 62, 82, ELEMENT_PLAYER, OBJ_HERO, 1);
+	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
 
 //アクション
@@ -103,26 +103,26 @@ void CObjHero::Action()
 				if (m_ani_frame == 2)//右
 				{
 					//弾丸オブジェクト作成
-					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
 					
 				}
 				if (m_ani_frame == 3)//左
 				{
 					//弾丸オブジェクト作成
-					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
 				}
 				if (m_ani_frame == 1)//後ろ
 				{
 					//弾丸オブジェクト作成
-					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
 				}
 				if (m_ani_frame == 0)//前
 				{
 					//弾丸オブジェクト作成
-					CObjBullet* obj_b = new CObjBullet(m_x + 30.0f, m_y + 32.0f); //弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
 				}
 
@@ -147,6 +147,10 @@ void CObjHero::Action()
 		m_x += 5.0f;
 		m_posture = 0.0f;
 		m_ani_frame = 2;
+		if (Input::GetVKey(VK_SHIFT) == true)
+		{
+			m_x += 5.0f;
+		}
 	}
 
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
@@ -154,6 +158,10 @@ void CObjHero::Action()
 		m_x -= 5.0f;
 		m_posture = 1.0f;
 		m_ani_frame = 3;
+		if (Input::GetVKey(VK_SHIFT) == true)
+		{
+			m_x -= 5.0f;
+		}
 	}
 
 
@@ -161,12 +169,20 @@ void CObjHero::Action()
 	{
 		m_y -= 5.0f;
 		m_ani_frame = 1;
+		if (Input::GetVKey(VK_SHIFT) == true)
+		{
+			m_y -= 5.0f;
+		}
 
 	}
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
 		m_y+= 5.0f;
 		m_ani_frame = 0;
+		if (Input::GetVKey(VK_SHIFT) == true)
+		{
+			m_y += 5.0f;
+		}
 	}
 
 	//移動ベクトルの正規化
@@ -249,8 +265,8 @@ void CObjHero::Draw()
 	//表示位置の設定
 	dst.m_top   = 0.0f + m_y;
 	dst.m_left  = 0.0f + m_x;
-	dst.m_right = 66.0f+ m_x;
-	dst.m_bottom= 82.0f+ m_y;
+	dst.m_right = 30.0f+ m_x;
+	dst.m_bottom= 32.0f+ m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 }

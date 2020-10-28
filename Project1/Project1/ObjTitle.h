@@ -19,6 +19,9 @@ class CObjTitle : public CObj
 		float m_mou_y;//マウスの位置ｙ
 		float m_mou_r;//マウスの右ボタン
 		float m_mou_l;//マウスの左ボタン
+
+		int m_x;
+		int m_y;//カーソル移動
 	
 
 };

@@ -13,5 +13,7 @@ class CSceneTitle : public CScene
 		~CSceneTitle();
 		void InitScene();
 		void Scene();
+		void Action();
 	private:
+	
 };
