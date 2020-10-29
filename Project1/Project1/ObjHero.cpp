@@ -6,6 +6,7 @@
 #include"ObjHero.h"
 #include"CObjBullet.h"
 #include"UtilityModule.h"
+#include"GameL/DrawFont.h"
 
 
 //使用するネームスペース
@@ -56,6 +57,7 @@ void CObjHero::Init()
     m_ani_frame=2; //描画フレーム
 
 	m_hp = 3;
+	m_gun = 0;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -78,6 +80,8 @@ void CObjHero::Action()
 	else if (Input::GetVKey('Q') == true)
 	{
 		m_gun = 0;
+
+		
 	}
 
 		//主人公の弾丸発射
@@ -280,7 +284,10 @@ void CObjHero::Draw()
 	}
 	else if (m_gun == 0)
 	{
-
+		if (Input::GetVKey('Z') == true)
+		{
+			Font::StrDraw(L"キックテスト", 250, 150, 32, c);
+		}
 	}
 }
 
