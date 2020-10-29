@@ -6,13 +6,22 @@ enum OBJ_NAME
 	OBJ_NO_NAME,	//オブジェクト名無し(禁止)
 					//ゲームで使うオブジェクトの名前
 					//OBJ_○○と表記
-		
+	OBJ_MAIN,	
 	OBJ_HERO,
 	OBJ_TITLE,
 	OBJ_ENEMY,
 	OBJ_BULLET,
 	OBJ_GAME_OVER,
 	OBJ_TITLE_BACKGROUND,
+	OBJ_ATTACK_ENEMY,
+	OBJ_BULLET_ENEMY,
+	OBJ_HOMING_ENEMY,
+	OBJ_SIN_ENEMY,
+	OBJ_DIFFUSION_ENEMY,
+	OBJ_ANGLE_BULLET,
+	OBJ_HOMING_BULLET,
+	OBJ_STAGE,
+	OBJ_BLOCK,
 };
 //------------------------------------------------
 
@@ -56,18 +65,28 @@ struct UserData
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
+#include"ObjMain.h"
 #include"ObjHero.h"
 #include"ObjTitle.h"
 #include"ObjEnemy.h"
 #include"CObjBullet.h"
 #include"ObjGameOver.h"
 #include"ObjTitleBackground.h"
+#include"ObjAttackEnemy.h"
+#include"CObjBulletEnemy.h"
+#include"CObjHomingEnemy.h"
+#include"CObjSinEnemy.h"
+#include"ObjDiffusionEnemy.h"
+#include"CObjAngleBullet.h"
+#include"CObjHomingBullet.h"
+#include"ObjBlock.h"
+#include"ObjStage.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
-#include"SceneMain.h"
 #include"SceneTitle.h"
 #include"SceneMain.h"
+#include"SceneStage.h"
 #include"SceneGameOver.h"
 //-----------------------------------------------
 
@@ -76,4 +95,5 @@ struct UserData
 //#define SET_GAME_START CSceneGameOver
 #define SET_GAME_START CSceneTitle 
 //#define SET_GAME_START CSceneMain
+//#define SET_GAME_START CSceneStage
 //-----------------------------------------------

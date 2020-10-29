@@ -15,4 +15,13 @@ class CObjTitle : public CObj
 		void Draw();
 	private:
 		bool m_key_flag;//キーフラグ
+		float m_mou_x;//マウスの位置ｘ
+		float m_mou_y;//マウスの位置ｙ
+		float m_mou_r;//マウスの右ボタン
+		float m_mou_l;//マウスの左ボタン
+
+		int m_x;
+		int m_y;//カーソル移動
+	
+
 };

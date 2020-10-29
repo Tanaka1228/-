@@ -22,6 +22,15 @@
     <Filter Include="ヘッダー ファイル\GameOver">
       <UniqueIdentifier>{96e9c914-9202-4eee-a7eb-ae934cc644ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\StageMap">
+      <UniqueIdentifier>{1ad1ea49-e47e-41fa-8422-16d8ce0c8ba4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Bullet">
+      <UniqueIdentifier>{909d39e5-6ad4-4a82-9ee2-711c7884e1db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SceneMain\Enemy">
+      <UniqueIdentifier>{be359db1-bb41-4c19-ad9b-8df550dd70e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -69,14 +78,17 @@
     <ClInclude Include="ObjHero.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
-    <ClInclude Include="ObjEnemy.h">
-      <Filter>ヘッダー ファイル\SceneMain</Filter>
-    </ClInclude>
     <ClInclude Include="ObjTitle.h">
       <Filter>ヘッダー ファイル\title</Filter>
     </ClInclude>
     <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjStage.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneStage.h">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
     <ClInclude Include="CObjBullet.h">
       <Filter>ソース ファイル</Filter>
@@ -89,6 +101,42 @@
     </ClInclude>
     <ClInclude Include="ObjTitleBackground.h">
       <Filter>ヘッダー ファイル\title</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjMain.h">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityModule.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjAngleBullet.h">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjBullet.h">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjHomingEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjSinEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjAttackEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDiffusionEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjBulletEnemy.h">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjHomingBullet.h">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjBlock.h">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,14 +185,17 @@
     <ClCompile Include="ObjHero.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
-    <ClCompile Include="ObjEnemy.cpp">
-      <Filter>ヘッダー ファイル\SceneMain</Filter>
-    </ClCompile>
     <ClCompile Include="ObjTitle.cpp">
       <Filter>ヘッダー ファイル\title</Filter>
     </ClCompile>
     <ClCompile Include="GameL\GameL_Main.cpp">
       <Filter>リソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjStage.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneStage.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
     <ClCompile Include="CObjBullet.cpp">
       <Filter>ソース ファイル</Filter>
@@ -157,6 +208,42 @@
     </ClCompile>
     <ClCompile Include="ObjTitleBackground.cpp">
       <Filter>ヘッダー ファイル\title</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjMain.cpp">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityModule.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjAngleBullet.cpp">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjBullet.cpp">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjHomingEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjSinEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjAttackEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDiffusionEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjBulletEnemy.cpp">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjHomingBullet.cpp">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjBlock.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
