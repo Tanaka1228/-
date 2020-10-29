@@ -15,13 +15,9 @@ using namespace GameL;
 void CObjTitle::Init()
 {
 	bool m_key_flag = false;
-	 m_mou_x = 0.0f;
-	 m_mou_y = 0.0f;
-	 m_mou_r = false;
-	 m_mou_l = false;
 	 m_y = 345;
 	 m_x = 240;
-	 m_key_dy = 0.0f;
+	 m_key_uy = 0.0f;
 	 m_key_dy = 0.0f;
 	 m_key_enter = false;
 }
@@ -49,7 +45,7 @@ void CObjTitle::Action()
 	 {
 		 m_y = 349;
 	 }
-	 else if (m_y > 500)
+	 if (m_y > 500)
 	 {
 		 m_y = 500;
 	 }
@@ -67,12 +63,13 @@ void CObjTitle::Action()
 
 	 if (m_x > 200 && m_x < 550 && m_y>480 && m_y < 501)
 	 {
-		 //エンターキーが押されたらメインに還移
+		 //エンターキーが押されたらシャットダウンに還移
 		 if (m_key_enter == true)
 		 {
 			 Scene::SetScene(nullptr);
 		 }
 	 }
+
 
 
 	//if (m_mou_x > 250 && m_mou_x < 500 && m_mou_y>380 && m_mou_y < 430)
@@ -148,8 +145,8 @@ void CObjTitle::Draw()
 	//表示位置の設定
 	dst.m_top = 0.0f+m_y;//y
 	dst.m_left = 0.0f+m_x;//x
-	dst.m_right = 44.0f+m_x;//x
-	dst.m_bottom =44.0f+m_y; //y
+	dst.m_right = 45.0f+m_x;//x
+	dst.m_bottom =45.0f+m_y; //y
 
 	//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(5, &src, &dst, c, 0.0f);
@@ -157,8 +154,8 @@ void CObjTitle::Draw()
 	
 	//仮矢印のボタンの状態
 	if (m_key_enter == true)
-		Font::StrDraw(L"決定=押している", 20, 30, 12, c);
+		Font::StrDraw(L"決定=押している", 20, 20, 12, c);
 	else
-		Font::StrDraw(L"決定=押していない", 20, 30, 12, c);
+		Font::StrDraw(L"決定=押していない", 20, 20, 12, c);
 
 }
