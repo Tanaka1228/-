@@ -53,7 +53,6 @@ void CSceneMain::InitScene()
 	CObjEnemy* obj_enemy = new CObjEnemy(800, 300); //敵機オブジェクト作成
 	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 1); //作った敵機オブジェクトをオブジェクトマネージャーに登録
 
-
 	//タイム初期化
 	m_time = 0;
 	
