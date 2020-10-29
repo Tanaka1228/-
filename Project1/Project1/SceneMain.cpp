@@ -44,14 +44,6 @@ void CSceneMain::InitScene()
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"弾丸＿右.png", 3, TEX_SIZE_512);//弾丸グラフィック
 
-	//外部グラフィックファイルを読み込み7番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"", 7, TEX_SIZE_512);
-
-	//外部グラフィックファイルを読み込み8番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"拠点の素材.png", 8, TEX_SIZE_512);
-
-	//外部グラフィックファイルを読み込み9番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"床.png", 9, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400,280); //主人公オブジェクト作成
@@ -61,9 +53,6 @@ void CSceneMain::InitScene()
 	CObjEnemy* obj_enemy = new CObjEnemy(800, 300); //敵機オブジェクト作成
 	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 1); //作った敵機オブジェクトをオブジェクトマネージャーに登録
 
-	//blockオブジェクト作成
-	CObjBlock* objb = new CObjBlock(); 
-	Objs::InsertObj(objb, OBJ_BLOCK, 9);
 
 	//タイム初期化
 	m_time = 0;
