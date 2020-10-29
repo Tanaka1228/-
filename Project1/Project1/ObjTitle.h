@@ -23,8 +23,8 @@ class CObjTitle : public CObj
 
 		float m_key_uy;//矢印キーの位置ｘ
 		float m_key_dy;//矢印キーの位置 y
-		float m_key_u;//矢印の上ボタン UP
-		float m_key_d;//矢印の下ボタン DOWN
+		float m_key_enter;//決定
+		
 
 
 		int m_x;
