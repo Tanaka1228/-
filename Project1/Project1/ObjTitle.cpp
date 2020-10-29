@@ -38,11 +38,11 @@ void CObjTitle::Action()
 
 	 if (Input::GetVKey(VK_UP) == true)
 	 {
-		 m_y -= 5.0f;
+		 m_y -= 6.0f;
 	 }
 	 else if (Input::GetVKey(VK_DOWN) == true)
 	 {
-		 m_y += 5.0f;
+		 m_y += 6.0f;
 	 }
 
 	 //カーソルの位置とクリックする場所で当たり判定
@@ -55,7 +55,7 @@ void CObjTitle::Action()
 		 }
 	 }
 
-	 if (m_x > 200 && m_x < 550 && m_y>440 && m_y < 530)
+	 if (m_x > 200 && m_x < 550 && m_y>480 && m_y < 530)
 	 {
 		 //エンターキーが押されたらメインに還移
 		 if (m_key_enter == true)
@@ -83,8 +83,6 @@ void CObjTitle::Action()
 	//	 }
 	// }
 	// 
-
-
 
 	////エンターキーを押してシーン：ゲームTitleに移行する
 	//if (Input::GetVKey(VK_RETURN) == true)
@@ -136,14 +134,14 @@ void CObjTitle::Draw()
 	//切り取り位置の設定
 	src.m_top = 0.0f;   //y
 	src.m_left = 0.0f;  //x
-	src.m_right = 174.0f; //x
-	src.m_bottom = 80.0f; //y
+	src.m_right = 255.0f; //x
+	src.m_bottom = 255.0f; //y
 
 	//表示位置の設定
 	dst.m_top = 0.0f+m_y;//y
 	dst.m_left = 0.0f+m_x;//x
-	dst.m_right = 300.0f+m_x;//x
-	dst.m_bottom =32.0f+m_y; //y
+	dst.m_right = 44.0f+m_x;//x
+	dst.m_bottom =44.0f+m_y; //y
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(5, &src, &dst, c, 0.0f);
