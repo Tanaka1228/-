@@ -283,7 +283,19 @@ void CObjHero::Draw()
 		}
 		else if (m_ani_frame == 3)
 		{
-
+			//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+			src.m_top = 0.0f;   //y
+			src.m_left = 33.0f; //x
+			src.m_right = 61.0f; //x
+			src.m_bottom = 18.0f; //y
+		}
+		else if (m_ani_frame == 1)
+		{
+			//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+			src.m_top = 3.0f;   //y
+			src.m_left = 74.0f; //x
+			src.m_right = 83.0f; //x
+			src.m_bottom = 21.0f; //y
 		}
 	}
 
