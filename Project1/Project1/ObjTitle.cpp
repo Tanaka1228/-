@@ -45,8 +45,18 @@ void CObjTitle::Action()
 		 m_y += 6.0f;
 	 }
 
+	 if (m_y < 340)
+	 {
+		 m_y = 340;
+	 }
+	 else if (m_y > 500)
+	 {
+		 m_y = 500;
+	 }
+	 
+
 	 //カーソルの位置とクリックする場所で当たり判定
-	 if (m_x > 200 && m_x < 550 && m_y>320 && m_y < 380)
+	 if (m_x > 200 && m_x < 550 && m_y>330 && m_y < 360)
 	 {
 		 //マウスボタンが押されたらメインに還移
 		 if (m_key_enter == true)
@@ -55,7 +65,7 @@ void CObjTitle::Action()
 		 }
 	 }
 
-	 if (m_x > 200 && m_x < 550 && m_y>480 && m_y < 530)
+	 if (m_x > 200 && m_x < 550 && m_y>480 && m_y < 501)
 	 {
 		 //エンターキーが押されたらメインに還移
 		 if (m_key_enter == true)
