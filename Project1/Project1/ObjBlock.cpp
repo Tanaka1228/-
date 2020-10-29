@@ -12,13 +12,12 @@ using namespace GameL;
 //イニシャライズ
 void CObjBlock::Init()
 {
-	m_scroll = 0.0f;
 
 //マップ情報
 	int block_data[10][10] =
 	{
 		{0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,1,0},
 		{0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0},
@@ -63,7 +62,7 @@ void CObjBlock::Draw()
 	src.m_right = src.m_left+50.0f; //x
 	src.m_bottom = 140.0f; //y
 
-	m_scroll -= 3.0f;//scroll実験用
+	
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -72,10 +71,10 @@ void CObjBlock::Draw()
 			if (m_map[i][j] > 0)
 			{
 				//表示位置の設定
-				dst.m_top = 0.0f + m_scroll;
-				dst.m_left = 0.0f + m_scroll;
-				dst.m_right = 50.0 + m_scroll;
-				dst.m_bottom = 140.0 + m_scroll;
+				dst.m_top = i*64.0f;
+				dst.m_left = j*64.0f;
+				dst.m_right = dst.m_left+64.0;
+				dst.m_bottom = dst.m_top+64.0l;
 
 				//描画
 				Draw::Draw(8, &src, &dst, c, 0.0f);
