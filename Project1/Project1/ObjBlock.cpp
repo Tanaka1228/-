@@ -16,15 +16,15 @@ void CObjBlock::Init()
 //マップ情報
 	int block_data[10][10] =
 	{
-		{0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,1,0},
-		{0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0},
+		{0,4,5,4,5,0,1,0,0,0},
+		{3,6,7,6,7,0,1,2,0,0},
+		{0,0,0,0,0,0,1,0,0,0},
+		{8,8,8,8,8,8,1,2,0,0},
+		{2,2,2,2,2,2,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,2,1,1,2},
+		{0,0,0,0,0,0,2,1,1,2},
 		{0,0,0,0,0,0,0,0,0,0},
 	};
 	//マップデータをコピー
@@ -56,11 +56,7 @@ void CObjBlock::Draw()
 	Draw::Draw(9, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
-	//切り取り位置の設定
-	src.m_top = 0.0f;   //y
-	src.m_left = 0.0f; //x
-	src.m_right = src.m_left+50.0f; //x
-	src.m_bottom = 140.0f; //y
+	
 
 	
 
@@ -68,13 +64,138 @@ void CObjBlock::Draw()
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			if (m_map[i][j] > 0)
+			if (m_map[i][j] == 1)
 			{
+				//切り取り位置の設定
+				src.m_top = 0.0f;   //y
+				src.m_left = 5.0f; //x
+				src.m_right = src.m_left + 50.0f; //x
+				src.m_bottom = 140.0f; //y
+
 				//表示位置の設定
 				dst.m_top = i*64.0f;
 				dst.m_left = j*64.0f;
 				dst.m_right = dst.m_left+64.0;
-				dst.m_bottom = dst.m_top+64.0l;
+				dst.m_bottom = dst.m_top+64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);			
+			}
+			if (m_map[i][j] == 2)
+			{
+				//切り取り位置の設定
+				src.m_top = 0.0f;   //y
+				src.m_left = 220.0f; //x
+				src.m_right =  280.0f; //x
+				src.m_bottom = 60.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 3)
+			{
+				//切り取り位置の設定
+				src.m_top = 60.0f;   //y
+				src.m_left = 220.0f; //x
+				src.m_right = 280.0f; //x
+				src.m_bottom = 115.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 4)
+			{
+				//切り取り位置の設定
+				src.m_top = 0.0f;   //y
+				src.m_left = 350.0f; //x
+				src.m_right = 380.0f; //x
+				src.m_bottom = 45.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 5)
+			{
+				//切り取り位置の設定
+				src.m_top = 0.0f;   //y
+				src.m_left = 380.0f; //x
+				src.m_right = 420.0f; //x
+				src.m_bottom = 45.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 6)
+			{
+				//切り取り位置の設定
+				src.m_top = 45.0f;   //y
+				src.m_left = 350.0f; //x
+				src.m_right = 380.0f; //x
+				src.m_bottom = 80.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 7)
+			{
+				//切り取り位置の設定
+				src.m_top = 45.0f;   //y
+				src.m_left = 380.0f; //x
+				src.m_right = 420.0f; //x
+				src.m_bottom = 80.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 8)
+			{
+				//切り取り位置の設定
+				src.m_top = 0.0f;   //y
+				src.m_left = 70.0f; //x
+				src.m_right = 210.0f; //x
+				src.m_bottom = 60.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
 
 				//描画
 				Draw::Draw(8, &src, &dst, c, 0.0f);

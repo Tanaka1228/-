@@ -31,6 +31,9 @@
     <Filter Include="ヘッダー ファイル\SceneMain\Enemy">
       <UniqueIdentifier>{be359db1-bb41-4c19-ad9b-8df550dd70e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\StageMap\拠点">
+      <UniqueIdentifier>{ec50a100-1ffc-4250-9be8-6e997e7b30b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -136,7 +139,7 @@
       <Filter>ソース ファイル\Bullet</Filter>
     </ClInclude>
     <ClInclude Include="ObjBlock.h">
-      <Filter>ソース ファイル\StageMap</Filter>
+      <Filter>ソース ファイル\StageMap\拠点</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -243,7 +246,7 @@
       <Filter>ソース ファイル\Bullet</Filter>
     </ClCompile>
     <ClCompile Include="ObjBlock.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
+      <Filter>ソース ファイル\StageMap\拠点</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
