@@ -19,7 +19,7 @@ void CObjTitle::Init()
 	 m_mou_y = 0.0f;
 	 m_mou_r = false;
 	 m_mou_l = false;
-	 m_y = 0;
+	 m_y = 285;
 	 m_x = 0;
 	 m_key_dy = 0.0f;
 	 m_key_dy = 0.0f;
@@ -32,11 +32,11 @@ void CObjTitle::Action()
 {
 	if (Input::GetVKey(VK_UP)==true)
 	{
-		m_key_uy += 5;
+		m_y -= 5.0f;
 	}
-	if (Input::GetVKey(VK_DOWN)==true)
+	else if (Input::GetVKey(VK_DOWN)==true)
 	{
-		m_key_dy -= 5;
+		m_y += 5.0f;
 	}
 
 
@@ -143,8 +143,9 @@ void CObjTitle::Draw()
 
 	//仮矢印位置表示
 	wchar_t str[256];
-	swprintf_s(str, L"x=%f,y=%f", m_key_uy, m_key_dy);
-	Font::StrDraw(str, 20, 20, 12, c);
+	swprintf_s(str, L"上 = %d , 下 = %d", m_x, m_y);
+	Font::StrDraw(str, 250, m_y, 32, c);// X  Y  大きさ 
+
 
 
 	////仮マウスのボタンの状態
