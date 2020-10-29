@@ -126,14 +126,12 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"◆  ニューゲーム", 250, 350, 32, c);
 
 	////ロード画面に移行
-	//Font::StrDraw(L"◆     ロード    ", 250, 400, 32, c);
-	//
-	////設定画面に移行
-	//Font::StrDraw(L"◆      設定     ", 250, 450, 32, c);
+	Font::StrDraw(L"◆     ロード    ", 250, 400, 32, c);
+	
+	//設定画面に移行
+	Font::StrDraw(L"◆      設定     ", 250, 450, 32, c);
 	//
 	//シャットダウン
-
-
 	Font::StrDraw(L"◆ シャットダウン", 250, 500, 32, c);
 
 	//仮矢印位置表示
@@ -153,7 +151,7 @@ void CObjTitle::Draw()
 	dst.m_right = 44.0f+m_x;//x
 	dst.m_bottom =44.0f+m_y; //y
 
-	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
+	//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(5, &src, &dst, c, 0.0f);
 
 	
