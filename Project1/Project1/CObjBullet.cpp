@@ -28,7 +28,7 @@ void CObjBullet::Init()
 	m_vy = 0.0f;
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_PLAYER, OBJ_BULLET, 1);
+	Hits::SetHitBox(this, m_x, m_y, 25, 25, ELEMENT_PLAYER, OBJ_BULLET, 1);
 }
 
 //アクション
@@ -100,10 +100,10 @@ void CObjBullet::Draw()
 	src.m_bottom = 32.0f; //y
 
 	//表示位置の設定
-	dst.m_top = 0.0f + m_y;//縦の位置変更
-	dst.m_left = (45.0f*m_Xpos) + m_x;
+	dst.m_top = (32.0f-32.0f*m_Ypos) + m_y;//縦の位置変更
+	dst.m_left = (32.0f*m_Xpos) + m_x;
 	dst.m_right = (32.0f - 32.0f*m_Xpos) + m_x;
-	dst.m_bottom = 32.0f + m_y;
+	dst.m_bottom = (32.0f*m_Ypos) + m_y;
 	
 
 	Draw::Draw(3, &src, &dst, c, 0.0f);

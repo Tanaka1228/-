@@ -33,7 +33,7 @@ float CObjHero::GetY()
 	return m_y;
 }
 
-float CObjHero::GetB()
+float CObjHero::GetB()//弾丸向き取得用
 {
 	return m_ani_frame;
 }
@@ -56,7 +56,7 @@ void CObjHero::Init()
 	m_ani_time=0; //アニメーションフレーム動作間隔
     m_ani_frame=2; //描画フレーム
 
-	m_hp = 3;
+	m_hp = 10;
 	m_gun = 0;
 
 	//当たり判定用HitBoxを作成
@@ -74,14 +74,13 @@ void CObjHero::Action()
 
 	if (Input::GetVKey('A') == true)
 	{
-		m_gun = 1;
+		m_gun = 1;//構えている
 
 	}
 	else if (Input::GetVKey('Q') == true)
 	{
-		m_gun = 0;
+		m_gun = 0;//構えていない
 
-		
 	}
 
 		//主人公の弾丸発射
@@ -223,7 +222,6 @@ void CObjHero::Draw()
 		src.m_right = 599.0f; //x
 		src.m_bottom = 240.0f; //y
 
-		
 
 	}
 	if (m_ani_frame == 1) //上
@@ -261,27 +259,35 @@ void CObjHero::Draw()
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
-	if (m_gun==1)
+	if (m_gun==1)//ハンドガン
 	{
+		if (m_ani_frame == 2)
+		{
+			float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+			RECT_F src;
+			RECT_F dst;
 
-		float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-		RECT_F src;
-		RECT_F dst;
+			//切り取り位置の設定
+			src.m_top = 0.0f;   //y
+			src.m_left = 0.0f; //x
+			src.m_right = 32.0f; //x
+			src.m_bottom = 32.0f; //y
 
-		//切り取り位置の設定
-		src.m_top = 0.0f;   //y
-		src.m_left = 0.0f; //x
-		src.m_right = 32.0f; //x
-		src.m_bottom = 32.0f; //y
+			//表示位置の設定
+			dst.m_top = 10.0f + m_y;
+			dst.m_left = 20.0f + m_x;
+			dst.m_right = 60.0f + m_x;
+			dst.m_bottom = 50.0f + m_y;
 
-		//表示位置の設定
-		dst.m_top = 10.0f + m_y;
-		dst.m_left = 20.0f + m_x;
-		dst.m_right = 60.0f + m_x;
-		dst.m_bottom = 50.0f + m_y;
+			Draw::Draw(2, &src, &dst, c, 0.0f);
+		}
+		else if (m_ani_frame == 3)
+		{
 
-		Draw::Draw(2, &src, &dst, c, 0.0f);
+		}
 	}
+
+
 	else if (m_gun == 0)
 	{
 		if (Input::GetVKey('Z') == true)
