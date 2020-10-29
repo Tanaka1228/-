@@ -45,9 +45,9 @@ void CObjTitle::Action()
 		 m_y += 6.0f;
 	 }
 
-	 if (m_y < 340)
+	 if (m_y < 349)
 	 {
-		 m_y = 340;
+		 m_y = 349;
 	 }
 	 else if (m_y > 500)
 	 {
