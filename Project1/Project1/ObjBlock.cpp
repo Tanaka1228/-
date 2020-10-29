@@ -23,8 +23,8 @@ void CObjBlock::Init()
 		{2,2,2,2,2,2,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,2,1,1,2},
-		{0,0,0,0,0,0,2,1,1,2},
+		{0,0,0,0,0,0,2,9,10,2},
+		{0,0,0,0,0,0,2,11,12,2},
 		{0,0,0,0,0,0,0,0,0,0},
 	};
 	//マップデータをコピー
@@ -46,9 +46,9 @@ void CObjBlock::Draw()
 
 	//背景表示
 	src.m_top = 0.0f;
-	src.m_left = 0.0f;
-	src.m_right = 800.0f;
-	src.m_bottom = 600.0f;
+	src.m_left = 10.0f;
+	src.m_right = 500.0f;
+	src.m_bottom = 500.0f;
 	dst.m_top = 0.0f;
 	dst.m_left = 0.0f;
 	dst.m_right = 800.0f;
@@ -190,6 +190,74 @@ void CObjBlock::Draw()
 				src.m_left = 70.0f; //x
 				src.m_right = 210.0f; //x
 				src.m_bottom = 60.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 9)
+			{
+				//切り取り位置の設定
+				src.m_top = 150.0f;   //y
+				src.m_left = 10.0f; //x
+				src.m_right = 140.0f; //x
+				src.m_bottom = 205.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 10)
+			{
+				//切り取り位置の設定
+				src.m_top = 150.0f;   //y
+				src.m_left = 140.0f; //x
+				src.m_right = 255.0f; //x
+				src.m_bottom = 205.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 11)
+			{
+				//切り取り位置の設定
+				src.m_top = 205.0f;   //y
+				src.m_left = 10.0f; //x
+				src.m_right = 140.0f; //x
+				src.m_bottom = 300.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 64.0f;
+				dst.m_left = j * 64.0;
+				dst.m_right = dst.m_left + 64.0;
+				dst.m_bottom = dst.m_top + 64.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 12)
+			{
+				//切り取り位置の設定
+				src.m_top = 205.0f;   //y
+				src.m_left = 140.0f; //x
+				src.m_right = 255.0f; //x
+				src.m_bottom = 300.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 64.0f;
