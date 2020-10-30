@@ -40,7 +40,7 @@ void CObjAttackEnemy::Action()
 
 		//弾丸敵機オブジェクト
 		CObjBulletEnemy* obj_bullte_enemy = new CObjBulletEnemy(m_x,m_y);
-		Objs::InsertObj(obj_bullte_enemy, OBJ_BULLET_ENEMY, 1);
+		Objs::InsertObj(obj_bullte_enemy, OBJ_BULLET_ENEMY, 4);
 	}
 
 

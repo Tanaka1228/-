@@ -5,19 +5,19 @@
 using namespace GameL;
 
 //オブジェクト：ブロック＆背景
-class CObjBlock :public CObj
+class CObjhospitalRooftop :public CObj
 {
 public:
-	CObjBlock() {};
-	~CObjBlock() {};
+	CObjhospitalRooftop() {};
+	~CObjhospitalRooftop() {};
 	void Init(); //イニシャライズ
 	void Action(); //アクション
 	void Draw(); //ドロー
 
-	
+
 
 private:
-	int m_map[25][25]; //マップ情報(仮）
+	int m_map[10][10]; //マップ情報(仮）
 
-	
+
 };

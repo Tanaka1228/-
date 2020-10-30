@@ -41,10 +41,13 @@ void CSceneStage::InitCScene()
 	//外部グラフィックファイルを読み込み9番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"床.png", 9, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み9番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"病院のボス戦フィールド.png", 10, TEX_SIZE_512);
+
 
 	//blockオブジェクト作成
 	CObjBlock* objb = new CObjBlock();
-	Objs::InsertObj(objb, OBJ_BLOCK, 9);
+	Objs::InsertObj(objb, OBJ_BLOCK, 3);
 
 }
 
