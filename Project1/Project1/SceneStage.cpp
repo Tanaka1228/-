@@ -44,7 +44,7 @@ void CSceneStage::InitCScene()
 
 	//blockオブジェクト作成
 	CObjBlock* objb = new CObjBlock();
-	Objs::InsertObj(objb, OBJ_BLOCK, 9);
+	Objs::InsertObj(objb, OBJ_BLOCK, 3);
 
 }
 

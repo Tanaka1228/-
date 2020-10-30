@@ -43,7 +43,7 @@ void CObjDiffusionEnemy::Action()
 		{
 			//Šp“xi‚ÅŠp“x’eŠÛ”­ŽË
 			obj_b = new CObjAngleBullet(m_x, m_y, i, 5.0f);
-			Objs::InsertObj(obj_b, OBJ_ANGLE_BULLET, 1);
+			Objs::InsertObj(obj_b, OBJ_ANGLE_BULLET, 4);
 		}
 	}
 

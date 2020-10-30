@@ -40,7 +40,7 @@ void CObjHomingEnemy::Action()
 		m_time = 0;
 		//—U“±’eŠÛì¬
 		CObjHomingBullet* obj_homing_bullet = new CObjHomingBullet(m_x, m_y); //—U“±’eƒIƒuƒWƒFƒNƒgì¬
-		Objs::InsertObj(obj_homing_bullet, OBJ_HOMING_BULLET, 1); //—U“±’eŠÛ“o˜^
+		Objs::InsertObj(obj_homing_bullet, OBJ_HOMING_BULLET, 4); //—U“±’eŠÛ“o˜^
 	
 		
 	}

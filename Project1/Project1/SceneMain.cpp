@@ -49,15 +49,15 @@ void CSceneMain::InitScene()
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400,280); //主人公オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 1); //作った主人公オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(obj, OBJ_HERO, 2); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 	//敵機オブジェクト作成
 	CObjEnemy* obj_enemy = new CObjEnemy(800, 300); //敵機オブジェクト作成
-	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 1); //作った敵機オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 3); //作った敵機オブジェクトをオブジェクトマネージャーに登録
 
 	//blockオブジェクト作成
 	CObjBlock* objb = new CObjBlock();
-	Objs::InsertObj(objb, OBJ_BLOCK, 9);
+	Objs::InsertObj(objb, OBJ_BLOCK, 1);
 
 	//タイム初期化
 	m_time = 0;
@@ -76,31 +76,31 @@ void CSceneMain::Scene()
 	{
 		//Sin敵機オブジェクト作成
 		CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
-		Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+		Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 	}
 	else if (m_time == 150)
 	{
 		//Sin敵機オブジェクト作成
 		CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
-		Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+		Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 	}
 	else if (m_time == 200)
 	{
 		//攻撃する敵機オブジェクト作成
 		CObjAttackEnemy* obj_attack_enemy = new CObjAttackEnemy(700, 220); //攻撃する敵機オブジェクト作成
-		Objs::InsertObj(obj_attack_enemy, OBJ_ATTACK_ENEMY, 1); //攻撃する敵機オブジェクトをオブジェクトマネージャーに登録
+		Objs::InsertObj(obj_attack_enemy, OBJ_ATTACK_ENEMY, 3); //攻撃する敵機オブジェクトをオブジェクトマネージャーに登録
 	}
 	else if (m_time == 300)
 	{
 		//拡散敵機オブジェクト作成
 		CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(700, 300); //Sin敵機オブジェクト作成
-		Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 1); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+		Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 	}
 	else if (m_time == 400)
 	{
 		//誘導敵機オブジェクト作成
 		CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(100, 50); //誘導敵機オブジェクト作成
-		Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 1); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+		Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 3); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 	}
 	
 }
