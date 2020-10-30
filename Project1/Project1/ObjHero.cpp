@@ -307,9 +307,9 @@ void CObjHero::Draw()
 
 			//ï\é¶à íuÇÃê›íË
 			dst.m_top = 10.0f + m_y;
-			dst.m_left = 20.0f + m_x;
-			dst.m_right = 60.0f + m_x;
-			dst.m_bottom = 50.0f + m_y;
+			dst.m_left = 5.0f + m_x;
+			dst.m_right = 20.0f + m_x;
+			dst.m_bottom = 32.0f + m_y;
 
 			Draw::Draw(2, &src, &dst, c, 0.0f);
 		}
