@@ -281,21 +281,37 @@ void CObjHero::Draw()
 
 			Draw::Draw(2, &src, &dst, c, 0.0f);
 		}
-		else if (m_ani_frame == 3)
+		else if (m_ani_frame == 3)//左
 		{
 			//切り取り位置の設定
 			src.m_top = 0.0f;   //y
 			src.m_left = 33.0f; //x
 			src.m_right = 61.0f; //x
 			src.m_bottom = 18.0f; //y
+
+			//表示位置の設定
+			dst.m_top = 10.0f + m_y;
+			dst.m_left = -32.0f + m_x;
+			dst.m_right = 0.0f + m_x;
+			dst.m_bottom = 32.0f + m_y;
+
+			Draw::Draw(2, &src, &dst, c, 0.0f);
 		}
-		else if (m_ani_frame == 1)
+		else if (m_ani_frame == 0)//正面
 		{
 			//切り取り位置の設定
 			src.m_top = 3.0f;   //y
 			src.m_left = 74.0f; //x
 			src.m_right = 83.0f; //x
 			src.m_bottom = 21.0f; //y
+
+			//表示位置の設定
+			dst.m_top = 10.0f + m_y;
+			dst.m_left = 20.0f + m_x;
+			dst.m_right = 60.0f + m_x;
+			dst.m_bottom = 50.0f + m_y;
+
+			Draw::Draw(2, &src, &dst, c, 0.0f);
 		}
 	}
 
