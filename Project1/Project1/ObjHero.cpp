@@ -261,6 +261,7 @@ void CObjHero::Draw()
 
 	if (m_gun==1)//ハンドガン
 	{
+		Font::StrDraw(L"構えた", m_x, -32 + m_y, 20, c);
 		if (m_ani_frame == 2)
 		{
 			float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -316,6 +317,8 @@ void CObjHero::Draw()
 	}
 	else if (m_gun == 0)
 	{
+		Font::StrDraw(L"構えていない", m_x, -32 + m_y, 20, c);
+
 		if (Input::GetVKey('Z') == true)
 		{
 			Font::StrDraw(L"キックテスト", m_x, 32+m_y, 20, c);
