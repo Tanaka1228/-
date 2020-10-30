@@ -314,13 +314,11 @@ void CObjHero::Draw()
 			Draw::Draw(2, &src, &dst, c, 0.0f);
 		}
 	}
-
-
 	else if (m_gun == 0)
 	{
 		if (Input::GetVKey('Z') == true)
 		{
-			Font::StrDraw(L"キックテスト", 250, 150, 32, c);
+			Font::StrDraw(L"キックテスト", m_x, 32+m_y, 20, c);
 		}
 	}
 }
