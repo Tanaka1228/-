@@ -307,20 +307,18 @@ void CObjHero::Draw()
 
 			//表示位置の設定
 			dst.m_top = 10.0f + m_y;
-			dst.m_left = 20.0f + m_x;
-			dst.m_right = 60.0f + m_x;
-			dst.m_bottom = 50.0f + m_y;
+			dst.m_left = 5.0f + m_x;
+			dst.m_right = 20.0f + m_x;
+			dst.m_bottom = 32.0f + m_y;
 
 			Draw::Draw(2, &src, &dst, c, 0.0f);
 		}
 	}
-
-
 	else if (m_gun == 0)
 	{
 		if (Input::GetVKey('Z') == true)
 		{
-			Font::StrDraw(L"キックテスト", 250, 150, 32, c);
+			Font::StrDraw(L"キックテスト", m_x, 32+m_y, 20, c);
 		}
 	}
 }
