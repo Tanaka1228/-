@@ -94,26 +94,26 @@ void CObjHero::Action()
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
-					Objs::InsertObj(obj_b, OBJ_BULLET, 3); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
 					
 				}
 				if (m_ani_frame == 3)//左
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
-					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
 				}
 				if (m_ani_frame == 1)//後ろ
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
-					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
 				}
 				if (m_ani_frame == 0)//前
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
-					Objs::InsertObj(obj_b, OBJ_BULLET, 3);
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
 				}
 
 				m_f = false;
