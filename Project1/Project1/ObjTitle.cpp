@@ -32,7 +32,7 @@ void CObjTitle::Action()
 	 m_key_enter = Input::GetVKey(VK_RETURN);
 
 
-	 if (Input::GetVKey(VK_UP) == true)
+	 if (Input::GetVKey(VK_UP) == true)//カーソルの移動
 	 {
 		 m_y -= 6.0f;
 	 }
@@ -41,7 +41,7 @@ void CObjTitle::Action()
 		 m_y += 6.0f;
 	 }
 
-	 if (m_y < 349)
+	 if (m_y < 349)//カーソル制限
 	 {
 		 m_y = 349;
 	 }
@@ -51,10 +51,10 @@ void CObjTitle::Action()
 	 }
 	 
 
-	 //カーソルの位置とクリックする場所で当たり判定
+	 //カーソルの位置とプッシュする場所で当たり判定
 	 if (m_x > 200 && m_x < 550 && m_y>330 && m_y < 360)
 	 {
-		 //マウスボタンが押されたらメインに還移
+		 //エンターキーが押されたらメインに還移
 		 if (m_key_enter == true)
 		 {
 			 Scene::SetScene(new CSceneMain());

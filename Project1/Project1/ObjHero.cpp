@@ -56,8 +56,8 @@ void CObjHero::Init()
 	m_ani_time=0; //アニメーションフレーム動作間隔
     m_ani_frame=2; //描画フレーム
 
-	m_hp = 10;
-	m_gun = 0;
+	m_hp = 10;//主人公のHP
+	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -75,12 +75,10 @@ void CObjHero::Action()
 	if (Input::GetVKey('A') == true)
 	{
 		m_gun = 1;//構えている
-
 	}
 	else if (Input::GetVKey('Q') == true)
 	{
 		m_gun = 0;//構えていない
-
 	}
 
 		//主人公の弾丸発射
@@ -137,7 +135,7 @@ void CObjHero::Action()
 		m_x += 5.0f;
 		m_posture = 0.0f;
 		m_ani_frame = 2;
-		if (Input::GetVKey(VK_SHIFT) == true)
+		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
 			m_x += 5.0f;
 		}
@@ -148,7 +146,7 @@ void CObjHero::Action()
 		m_x -= 5.0f;
 		m_posture = 1.0f;
 		m_ani_frame = 3;
-		if (Input::GetVKey(VK_SHIFT) == true)
+		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
 			m_x -= 5.0f;
 		}
@@ -159,7 +157,7 @@ void CObjHero::Action()
 	{
 		m_y -= 5.0f;
 		m_ani_frame = 1;
-		if (Input::GetVKey(VK_SHIFT) == true)
+		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
 			m_y -= 5.0f;
 		}
@@ -169,7 +167,7 @@ void CObjHero::Action()
 	{
 		m_y+= 5.0f;
 		m_ani_frame = 0;
-		if (Input::GetVKey(VK_SHIFT) == true)
+		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
 			m_y += 5.0f;
 		}
@@ -261,7 +259,7 @@ void CObjHero::Draw()
 
 	if (m_gun==1)//ハンドガン
 	{
-		Font::StrDraw(L"構えた", m_x, -32 + m_y, 20, c);
+		Font::StrDraw(L"構えている", m_x, -32 + m_y, 20, c);
 		if (m_ani_frame == 2)
 		{
 			float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -292,8 +290,8 @@ void CObjHero::Draw()
 
 			//表示位置の設定
 			dst.m_top = 10.0f + m_y;
-			dst.m_left = -32.0f + m_x;
-			dst.m_right = 0.0f + m_x;
+			dst.m_left = -28.0f + m_x;
+			dst.m_right = 0.0f+9.0f + m_x;
 			dst.m_bottom = 32.0f + m_y;
 
 			Draw::Draw(2, &src, &dst, c, 0.0f);
