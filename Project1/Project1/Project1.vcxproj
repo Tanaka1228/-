@@ -159,6 +159,7 @@
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="ObjTitleBackground.h" />
     <ClInclude Include="UtilityModule.h" />
+    <ClInclude Include="hospitalRooftop.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp" />
@@ -197,6 +198,7 @@
     <ClCompile Include="SceneStage.cpp" />
     <ClCompile Include="ObjTitleBackground.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
+    <ClCompile Include="hospitalRooftop.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
