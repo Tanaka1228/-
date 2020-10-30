@@ -19,7 +19,7 @@ void CObjBlock::Init()
 		{0,4,5,4,5,0,1,0,0,0},
 		{3,6,7,6,7,0,1,2,0,0},
 		{0,0,0,0,0,0,1,0,0,0},
-		{8,8,8,8,8,8,1,2,0,0},
+		{8,8,8,8,8,8,8,2,0,0},
 		{2,2,2,2,2,2,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0},
@@ -67,10 +67,10 @@ void CObjBlock::Draw()
 			if (m_map[i][j] == 1)
 			{
 				//切り取り位置の設定
-				src.m_top = 0.0f;   //y
-				src.m_left = 5.0f; //x
-				src.m_right = src.m_left + 50.0f; //x
-				src.m_bottom = 140.0f; //y
+				src.m_top = 135.0f;   //y
+				src.m_left = 315.0f; //x
+				src.m_right = 450.0f; //x
+				src.m_bottom = 215.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i*64.0f;
@@ -186,10 +186,10 @@ void CObjBlock::Draw()
 			if (m_map[i][j] == 8)
 			{
 				//切り取り位置の設定
-				src.m_top = 0.0f;   //y
-				src.m_left = 70.0f; //x
-				src.m_right = 210.0f; //x
-				src.m_bottom = 60.0f; //y
+				src.m_top = 135.0f;   //y
+				src.m_left = 320.0f; //x
+				src.m_right = 435.0f; //x
+				src.m_bottom = 315.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 64.0f;
