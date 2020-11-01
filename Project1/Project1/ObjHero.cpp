@@ -126,10 +126,6 @@ void CObjHero::Action()
 
 
 
-
-
-
-
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
 		m_x += 5.0f;
@@ -151,7 +147,6 @@ void CObjHero::Action()
 			m_x -= 5.0f;
 		}
 	}
-
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
