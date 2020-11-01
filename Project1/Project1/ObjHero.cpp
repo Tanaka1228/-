@@ -58,6 +58,7 @@ void CObjHero::Init()
 
 	m_hp = 10;//主人公のHP
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
+	m_bullet = 6;//弾丸の弾数
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -87,13 +88,18 @@ void CObjHero::Action()
 
 			if (m_f == true)
 			{
+				m_bullet -= 1;
+
+				if (m_bullet < 1)
+				{
+					
+				}
 				
 				if (m_ani_frame == 2)//右
 				{
 					//弾丸オブジェクト作成
 					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 4); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
-					
 				}
 				if (m_ani_frame == 3)//左
 				{
@@ -113,7 +119,9 @@ void CObjHero::Action()
 					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
 				}
-
+				
+				
+				
 				m_f = false;
 			}
 		}
