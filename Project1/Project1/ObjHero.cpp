@@ -82,19 +82,19 @@ void CObjHero::Action()
 		m_gun = 0;//構えていない
 	}
 
+	
+
+	if (m_bullet > 0)
+	{
 		//主人公の弾丸発射
-		if (Input::GetVKey('Z') == true&&m_gun==1)
+		if (Input::GetVKey('Z') == true && m_gun == 1)
 		{
+			
 
 			if (m_f == true)
 			{
 				m_bullet -= 1;
 
-				if (m_bullet < 1)
-				{
-					
-				}
-				
 				if (m_ani_frame == 2)//右
 				{
 					//弾丸オブジェクト作成
@@ -119,9 +119,9 @@ void CObjHero::Action()
 					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
 					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
 				}
-				
-				
-				
+
+
+
 				m_f = false;
 			}
 		}
@@ -129,8 +129,11 @@ void CObjHero::Action()
 		{
 			m_f = true;
 		}
-	
-
+	}
+	else if (m_bullet == 0&&Input::GetVKey('D')==true)//リロード
+	{
+		m_bullet = 6;
+	}
 
 
 
