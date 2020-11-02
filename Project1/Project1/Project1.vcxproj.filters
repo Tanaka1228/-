@@ -31,6 +31,9 @@
     <Filter Include="ヘッダー ファイル\SceneMain\Enemy">
       <UniqueIdentifier>{be359db1-bb41-4c19-ad9b-8df550dd70e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\END">
+      <UniqueIdentifier>{0b705642-b0d7-471b-9248-0955d9c00dea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -141,6 +144,12 @@
     <ClInclude Include="hospitalRooftop.h">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
+    <ClInclude Include="SceneEnd.h">
+      <Filter>ヘッダー ファイル\END</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjEnd.h">
+      <Filter>ヘッダー ファイル\END</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -250,6 +259,12 @@
     </ClCompile>
     <ClCompile Include="hospitalRooftop.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneEnd.cpp">
+      <Filter>ヘッダー ファイル\END</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjEnd.cpp">
+      <Filter>ヘッダー ファイル\END</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

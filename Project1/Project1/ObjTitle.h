@@ -8,7 +8,7 @@ using namespace GameL;
 class CObjTitle : public CObj
 {
 	public :
-		CObjTitle() {};
+		 CObjTitle() {};
 		~CObjTitle() {};
 		void Init();
 		void Action();
