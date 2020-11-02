@@ -59,6 +59,7 @@ void CObjHero::Init()
 	m_hp = 10;//主人公のHP
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
 	m_bullet = 6;//弾丸の弾数
+	test = 0;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -84,7 +85,7 @@ void CObjHero::Action()
 
 	
 
-	if (m_bullet > 0)
+	if (m_bullet > 0)//弾数が0以上なら
 	{
 		//主人公の弾丸発射
 		if (Input::GetVKey('Z') == true && m_gun == 1)
@@ -130,9 +131,9 @@ void CObjHero::Action()
 			m_f = true;
 		}
 	}
-	else if (m_bullet == 0&&Input::GetVKey('D')==true)//リロード
+	if (Input::GetVKey(VK_SPACE)==true)//リロード
 	{
-		m_bullet = 6;
+		m_bullet = 6;	
 	}
 
 
@@ -328,6 +329,9 @@ void CObjHero::Draw()
 			Font::StrDraw(L"キックテスト", m_x, 32+m_y, 20, c);
 		}
 	}
+	wchar_t str[256];
+	swprintf_s(str, L"弾数 %d", m_bullet);
+	Font::StrDraw(str, m_bullet,m_y,32, c);// X  Y  大きさ 
 }
 
 ////表示位置の設定
