@@ -13,7 +13,7 @@
 using namespace GameL;
 
 //ˆÊ’uî•ñX•ÏX—p
-void CObjHero::SetX(float x)
+void CObjHero::SetX(float x) 
 {
 	m_x = x;
 	
