@@ -31,9 +31,6 @@ CSceneEnd::~CSceneEnd()
 //ゲームメイン初期化メソッド
 void CSceneEnd::InitScene()
 {
-
-
-
 	//タイトルオブジェクト作成
 	CObjEnd* obj = new CObjEnd();
 	Objs::InsertObj(obj, OBJ_END, 10);

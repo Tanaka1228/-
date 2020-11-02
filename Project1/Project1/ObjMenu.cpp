@@ -43,10 +43,10 @@ void CObjMenu::Draw()
 	src.m_bottom = 531.0f; //y
 
 	//表示位置の設定
-	dst.m_top = 0.0f;
-	dst.m_left =0.0f;
-	dst.m_right = 214.0f;
-	dst.m_bottom = 519.0f;
+	dst.m_top  = 0.0f;
+	dst.m_left =600.0f;
+	dst.m_right = 800.0f;
+	dst.m_bottom = 500.0f;
 
 	//11番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(11, &src, &dst, c, 0.0f);
