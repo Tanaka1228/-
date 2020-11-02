@@ -112,7 +112,7 @@ void CSceneMain::Scene()
 	if (Input::GetVKey('X') == true)
 	{
 		//メニューオブジェクト作成
-		//CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(100, 50); //誘導敵機オブジェクト作成
-		//Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 3); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+		CObjMenu* obj_menu = new CObjMenu(); //メニューオブジェクト作成
+		Objs::InsertObj(obj_menu, OBJ_HOMING_ENEMY, 14); //メニューオブジェクトをオブジェクトマネージャーに登録
 	}
 }

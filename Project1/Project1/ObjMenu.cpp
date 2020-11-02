@@ -7,18 +7,19 @@
 #include"GameHead.h"
 #include"ObjTitle.h"
 #include"SceneMain.h"
+#include"ObjMenu.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjTitle::Init()
+void CObjMenu::Init()
 {
 	
 }
 
 //アクション
-void CObjTitle::Action()
+void CObjMenu::Action()
 {
 	
 
@@ -26,7 +27,7 @@ void CObjTitle::Action()
 }
 
 //ドロー
-void CObjTitle::Draw()
+void CObjMenu::Draw()
 {
 	
 

@@ -5,11 +5,11 @@
 using namespace GameL;
 
 //オブジェクト：タイトル
-class CObjManu : public CObj
+class CObjMenu : public CObj
 {
 public:
-	CObjManu() {};
-	~CObjManu() {};
+	CObjMenu() {};
+	~CObjMenu() {};
 	void Init();
 	void Action();
 	void Draw();

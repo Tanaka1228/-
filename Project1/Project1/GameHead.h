@@ -23,6 +23,7 @@ enum OBJ_NAME
 	OBJ_STAGE,
 	OBJ_BLOCK,
 	OBJ_END,
+	OBJ_MANU,
 };
 //------------------------------------------------
 
@@ -83,6 +84,7 @@ struct UserData
 #include"ObjBlock.h"
 #include"ObjStage.h"
 #include"ObjEnd.h"
+#include"ObjMenu.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
