@@ -18,11 +18,18 @@ void CObjHero::SetX(float x)
 	m_x = x;
 	
 }
+
 //位置情報Y変更用
 void CObjHero::SetY(float y)
 {
 	m_y = y;
 	
+	
+}
+//位置情報Y変更用
+void CObjHero::SetVY(float vy)
+{
+	m_vy = vy;
 }
 //位置情報X取得用
 float CObjHero::GetX()
@@ -34,7 +41,6 @@ float CObjHero::GetX()
 float CObjHero::GetY()
 {
 	return m_y;
-	
 }
 
 float CObjHero::GetB()//弾丸向き取得用

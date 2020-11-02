@@ -73,7 +73,9 @@ void CObjBlock::Action()
 				if ((hx+32.0f>x)&&(hx<x+32.0f)&&(hy+32.0f>y)&&(hy<y+32.0f))
 				{
 					//“–‚½‚Á‚Ä‚éê‡
-					;
+					hero->SetX(hx);
+					hero->SetY(0.0f);
+					hero->SetVY(0.0f);
 				}
 			}
 		}
