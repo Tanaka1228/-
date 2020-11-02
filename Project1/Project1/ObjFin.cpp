@@ -1,22 +1,24 @@
-// 使用するヘッダ―ファイル
-#include"GameL\DrawFont.h"
+//使用するヘッダ―ファイル
+#include"GameL\DrawTexture.h"
 #include"GameL\WinInputs.h"
 #include"GameL\SceneObjManager.h"
+#include"GameL\DrawFont.h"
 
 #include"GameHead.h"
-#include"ObjGameOver.h"
+#include"ObjFin.h"
+#include"SceneTitle.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjGameOver::Init()
+void CObjFin::Init()
 {
-	 m_key_flag=false;//キーフラグ
+	 m_key_flag = false;//キーフラグ
 }
 
 //アクション
-void CObjGameOver::Action()
+void CObjFin::Action()
 {
 	//エンターキーを押してシーン：ゲームTitleに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
@@ -26,7 +28,7 @@ void CObjGameOver::Action()
 			Scene::SetScene(new CSceneTitle());
 			m_key_flag = false;
 		}
-		
+
 	}
 	else
 	{
@@ -34,10 +36,18 @@ void CObjGameOver::Action()
 	}
 }
 
+
 //ドロー
-void CObjGameOver::Draw()
+void CObjFin::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
+	RECT_F src;
+	RECT_F dst;
 
-	Font::StrDraw(L"GAME OVER",340,250,32,c);
+	//タイトル名の表示
+	Font::StrDraw(L"ｆｉｎ", 350, 250, 32, c);
+	Font::StrDraw(L"by 暗黒紳士団", 590, 550, 32, c);
+
+
+	
 }

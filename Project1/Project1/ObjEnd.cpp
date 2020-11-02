@@ -14,7 +14,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjEnd::Init()
 {
-	bool m_key_flag = false;//キーフラグ
+	m_key_flag = false;//キーフラグ
 }
 
 //アクション
@@ -41,15 +41,12 @@ void CObjEnd::Action()
 void CObjEnd::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
-	RECT_F src;
-	RECT_F dst;
+	
 
 	//タイトル名の表示
 	Font::StrDraw(L"ＥＮＤ", 350, 250, 32, c);
 	Font::StrDraw(L"by 暗黒紳士団", 590, 550, 32, c);
 
 
-	//タイトルオブジェクト作成
-	CObjEnd* obj = new CObjEnd();
-	Objs::InsertObj(obj, OBJ_END, 10);
+	
 }

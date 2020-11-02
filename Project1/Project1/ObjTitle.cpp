@@ -14,7 +14,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjTitle::Init()
 {
-	bool m_key_flag = false;
+	 m_key_flag = false;
 	 m_y = 345;
 	 m_x = 240;
 	 m_key_uy = 0.0f;
