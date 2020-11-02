@@ -37,25 +37,6 @@ void CSceneTitle::InitScene()
 	RECT_F src;
 	RECT_F dst;
 
-	CObjTitle* p = new CObjTitle();
-	Objs::InsertObj(p, OBJ_TITLE, 1);
-
-	//タイトル名の表示
-	Font::StrDraw(L"ARTIFICIAL HUMAN ", 270, 100, 32, c);
-	Font::StrDraw(L" ～無人世界の旅～", 250, 150, 32, c);
-
-	//カーソル選択位置
-	//mainに移行
-	Font::StrDraw(L"◆  ニューゲーム", 250, 350, 32, c);
-
-	//ロード画面に移行
-	Font::StrDraw(L"◆     ロード    ", 250, 400, 32, c);
-
-	//設定画面に移行
-	Font::StrDraw(L"◆      設定     ", 250, 450, 32, c);
-
-	//シャットダウン
-	Font::StrDraw(L"◆ シャットダウン", 250, 500, 32, c);
 
 	//タイトルオブジェクト作成
 	CObjTitle* obj = new CObjTitle();

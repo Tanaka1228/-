@@ -34,6 +34,9 @@
     <Filter Include="ヘッダー ファイル\END">
       <UniqueIdentifier>{0b705642-b0d7-471b-9248-0955d9c00dea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\fin">
+      <UniqueIdentifier>{db616794-692a-476f-a9b9-66893fd026e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -153,6 +156,12 @@
     <ClInclude Include="ObjMenu.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
+    <ClInclude Include="SceneFin.h">
+      <Filter>ヘッダー ファイル\fin</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjFin.h">
+      <Filter>ヘッダー ファイル\fin</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -257,6 +266,9 @@
     <ClCompile Include="ObjBlock.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
+    <ClCompile Include="SceneStage.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
     <ClCompile Include="hospitalRooftop.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
@@ -269,8 +281,11 @@
     <ClCompile Include="ObjMenu.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
-    <ClCompile Include="SceneStage.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
+    <ClCompile Include="SceneFin.cpp">
+      <Filter>ヘッダー ファイル\fin</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjFin.cpp">
+      <Filter>ヘッダー ファイル\fin</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

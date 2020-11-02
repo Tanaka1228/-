@@ -16,29 +16,30 @@ using namespace GameL;
 #include"GameHead.h"
 
 //コンストラクタ
-CSceneEnd::CSceneEnd()
+CSceneFin::CSceneFin()
 {
 
 }
 
 
 //デストラクタ
-CSceneEnd::~CSceneEnd()
+CSceneFin::~CSceneFin()
 {
 
 }
 
 //ゲームメイン初期化メソッド
-void CSceneEnd::InitScene()
+void CSceneFin::InitScene()
 {
-	//タイトルオブジェクト作成
-	CObjEnd* obj = new CObjEnd();
-	Objs::InsertObj(obj, OBJ_END, 10);
 
+
+	//タイトルオブジェクト作成
+	CObjFin* obj = new CObjFin();
+	Objs::InsertObj(obj, OBJ_FIN, 10);
 }
 
 //ゲームメイン実行中メソッド
-void CSceneEnd::Scene()
+void CSceneFin::Scene()
 {
 
 }

@@ -23,6 +23,7 @@ enum OBJ_NAME
 	OBJ_STAGE,
 	OBJ_BLOCK,
 	OBJ_END,
+	OBJ_FIN,
 	OBJ_MANU,
 };
 //------------------------------------------------
@@ -84,6 +85,7 @@ struct UserData
 #include"ObjBlock.h"
 #include"ObjStage.h"
 #include"ObjEnd.h"
+#include"ObjFin.h"
 #include"ObjMenu.h"
 //------------------------------------------------
 
@@ -93,6 +95,7 @@ struct UserData
 #include"SceneStage.h"
 #include"SceneGameOver.h"
 #include"SceneEnd.h"
+#include"SceneFin.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
@@ -100,6 +103,7 @@ struct UserData
 //#define SET_GAME_START CSceneGameOver
 #define SET_GAME_START CSceneTitle 
 //#define SET_GAME_START CSceneEnd 
+//#define SET_GAME_START CSceneFin
 //#define SET_GAME_START CSceneMain
 //#define SET_GAME_START CSceneStage
 //-----------------------------------------------
