@@ -14,31 +14,28 @@ using namespace GameL;
 //イニシャライズ
 void CObjEnd::Init()
 {
-	bool m_key_flag = false;
+	bool m_key_flag = false;//キーフラグ
 }
 
 //アクション
 void CObjEnd::Action()
 {
-	
 	//エンターキーを押してシーン：ゲームTitleに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
 	{
 		if (m_key_flag == true)
 		{
 			Scene::SetScene(new CSceneTitle());
-
+			m_key_flag = false;
 		}
 
 	}
-
 	else
 	{
-		m_key_flag == true;
+		m_key_flag = true;
 	}
-
-
 }
+
 
 //ドロー
 void CObjEnd::Draw()
