@@ -257,9 +257,6 @@
     <ClCompile Include="ObjBlock.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
-    <ClCompile Include="SceneStage.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
     <ClCompile Include="hospitalRooftop.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
@@ -271,6 +268,9 @@
     </ClCompile>
     <ClCompile Include="ObjMenu.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneStage.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
