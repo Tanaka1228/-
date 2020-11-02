@@ -133,7 +133,8 @@ void CObjHero::Action()
 	}
 	if (Input::GetVKey(VK_SPACE)==true)//リロード
 	{
-		m_bullet = 6;	
+		m_bullet = 6;
+		
 	}
 
 
@@ -144,12 +145,13 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
 		m_x += 5.0f;
+		m_posture = 0.0f;
+		m_ani_frame = 2;
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_x -= 2;
 		}
-		m_posture = 0.0f;
-		m_ani_frame = 2;
+		
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
 			m_x += 5.0f;
@@ -159,12 +161,13 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 5.0f;
+		m_posture = 1.0f;
+		m_ani_frame = 3;
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_x += 2;
 		}
-		m_posture = 1.0f;
-		m_ani_frame = 3;
+		
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
 			m_x -= 5.0f;
@@ -174,12 +177,13 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
 		m_y -= 5.0f;
+		m_ani_frame = 1;
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_y += 2;
 		}
 
-		m_ani_frame = 1;
+		
 
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
@@ -190,11 +194,12 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
 		m_y+= 5.0f;
+		m_ani_frame = 0;
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_y -= 2;
 		}
-		m_ani_frame = 0;
+		
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
 			m_y += 5.0f;
@@ -241,7 +246,7 @@ void CObjHero::Draw()
 
 	if (m_ani_frame == 2) //右
 	{
-	
+
 		//切り取り位置の設定
 		src.m_top = 0.0f;   //y
 		src.m_left = 431.0f; //x
@@ -255,7 +260,7 @@ void CObjHero::Draw()
 		//切り取り位置の設定
 		src.m_top = 0.0f;   //y
 		src.m_left = 237.0f; //x
-		src.m_right =417.0f; //x
+		src.m_right = 417.0f; //x
 		src.m_bottom = 240.0f; //y
 	}
 
@@ -276,18 +281,19 @@ void CObjHero::Draw()
 		src.m_right = 794.0f; //x
 		src.m_bottom = 240.0f; //y
 	}
-	
+
 	//表示位置の設定
-	dst.m_top   = 0.0f + m_y;
-	dst.m_left  = 0.0f + m_x;
-	dst.m_right = 30.0f+ m_x;
-	dst.m_bottom= 32.0f+ m_y;
+	dst.m_top = 0.0f + m_y;
+	dst.m_left = 0.0f + m_x;
+	dst.m_right = 30.0f + m_x;
+	dst.m_bottom = 32.0f + m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
-	if (m_gun==1)//ハンドガン
+	if (m_gun == 1)//ハンドガン
 	{
 		Font::StrDraw(L"構えている", m_x, -32 + m_y, 20, c);
+
 		if (m_ani_frame == 2)
 		{
 			float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -319,7 +325,7 @@ void CObjHero::Draw()
 			//表示位置の設定
 			dst.m_top = 10.0f + m_y;
 			dst.m_left = -28.0f + m_x;
-			dst.m_right = 0.0f+9.0f + m_x;
+			dst.m_right = 0.0f + 9.0f + m_x;
 			dst.m_bottom = 32.0f + m_y;
 
 			Draw::Draw(2, &src, &dst, c, 0.0f);
@@ -347,12 +353,13 @@ void CObjHero::Draw()
 
 		if (Input::GetVKey('Z') == true)
 		{
-			Font::StrDraw(L"キックテスト", m_x, 32+m_y, 20, c);
+			Font::StrDraw(L"キックテスト", m_x, 32 + m_y, 20, c);
 		}
 	}
+
 	wchar_t str[256];
-	swprintf_s(str, L"弾数 %d", m_bullet);
-	Font::StrDraw(str, m_bullet,m_y,32, c);// X  Y  大きさ 
+	swprintf_s(str, L"弾数 : %d / 6", m_bullet);
+	Font::StrDraw(str, m_bullet, 550, 30, c);// X  Y  大きさ 
 }
 
 ////表示位置の設定
