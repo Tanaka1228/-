@@ -16,8 +16,10 @@ public:
 
 	float GetX();     //位置情報X取得用
 	float GetY();     //位置情報Y取得用
-	void SetX(float x) {}//位置情報X変更用
-	void SetY(float y) {}//位置情報Y変更用
+	void SetX(float x);//位置情報X変更用
+	void SetY(float y);//位置情報Y変更用
+
+
 	void SetX2(float x) { m_px = x; }
 	void SetY2(float y) { m_py = y; }
 	void SetVY(float vy) { m_vy = vy; }
