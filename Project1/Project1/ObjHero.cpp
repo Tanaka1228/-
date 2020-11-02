@@ -24,7 +24,23 @@ void CObjHero::SetY(float y)
 	m_y = y;
 }
 	
+//位置情報X2変更用
+void CObjHero::SetX2(float x)
+{
+	m_px = x;
+}
 
+//位置情報Y2変更用
+void CObjHero::SetY2(float y)
+{
+	m_py = y;
+}
+
+//位置情報VY変更用
+void CObjHero::SetVY(float vy)
+{
+	m_vy = vy;
+}
 
 //位置情報X取得用
 float CObjHero::GetX()

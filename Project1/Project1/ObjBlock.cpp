@@ -66,8 +66,8 @@ void CObjBlock::Action()
 			if (m_map[i][j] > 0)
 			{
 				//要素番号を座標に変更
-				float x = j * 64.0f;
-				float y = i * 64.0f;
+				float x = j * 32.0f;
+				float y = i * 32.0f;
 
 				//主人公とブロックの当たり判定
 				if ((hx+32.0f>x)&&(hx<x+32.0f)&&(hy+32.0f>y)&&(hy<y+32.0f))
