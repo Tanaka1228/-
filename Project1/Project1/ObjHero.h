@@ -20,9 +20,9 @@ public:
 	void SetY(float y);//位置情報Y変更用
 
 
-	void SetX2(float x) { m_px = x; }
-	void SetY2(float y) { m_py = y; }
-	void SetVY(float vy) { m_vy = vy; }
+	void SetX2(float x); //{ m_px = x; }
+	void SetY2(float y); //{ m_py = y; }
+	void SetVY(float vy); //{ m_vy = vy; }
 	float GetB();
 private:
 	float m_x;  //主人公機のx方向移動用変数
