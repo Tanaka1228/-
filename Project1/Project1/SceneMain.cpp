@@ -6,6 +6,7 @@
 #include"GameL\DrawTexture.h"
 #include"GameL\SceneObjManager.h"
 #include"GameL\UserData.h"
+#include"GameL/WinInputs.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -108,4 +109,10 @@ void CSceneMain::Scene()
 		Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 3); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 	}
 	
+	if (Input::GetVKey('X') == true)
+	{
+		//メニューオブジェクト作成
+		//CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(100, 50); //誘導敵機オブジェクト作成
+		//Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 3); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+	}
 }

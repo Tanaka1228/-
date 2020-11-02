@@ -152,6 +152,7 @@
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjMain.h" />
+    <ClInclude Include="ObjMenu.h" />
     <ClInclude Include="ObjStage.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -194,6 +195,7 @@
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjMain.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
+    <ClCompile Include="ObjMenu.cpp" />
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjHero.cpp" />

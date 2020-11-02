@@ -150,6 +150,9 @@
     <ClInclude Include="ObjEnd.h">
       <Filter>ヘッダー ファイル\END</Filter>
     </ClInclude>
+    <ClInclude Include="ObjMenu.h">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -265,6 +268,9 @@
     </ClCompile>
     <ClCompile Include="ObjEnd.cpp">
       <Filter>ヘッダー ファイル\END</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjMenu.cpp">
+      <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
