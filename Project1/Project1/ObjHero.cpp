@@ -138,9 +138,16 @@ void CObjHero::Action()
 
 
 
+
+
+
 	if (Input::GetVKey(VK_RIGHT) == true) //主人公移動キー 右
 	{
 		m_x += 5.0f;
+		if (m_gun == 1)//武器を構えたら移動速度低下
+		{
+			m_x -= 2;
+		}
 		m_posture = 0.0f;
 		m_ani_frame = 2;
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
@@ -152,6 +159,10 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
 		m_x -= 5.0f;
+		if (m_gun == 1)//武器を構えたら移動速度低下
+		{
+			m_x += 2;
+		}
 		m_posture = 1.0f;
 		m_ani_frame = 3;
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
@@ -163,7 +174,13 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
 		m_y -= 5.0f;
+		if (m_gun == 1)//武器を構えたら移動速度低下
+		{
+			m_y += 2;
+		}
+
 		m_ani_frame = 1;
+
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
 			m_y -= 5.0f;
@@ -173,6 +190,10 @@ void CObjHero::Action()
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
 		m_y+= 5.0f;
+		if (m_gun == 1)//武器を構えたら移動速度低下
+		{
+			m_y -= 2;
+		}
 		m_ani_frame = 0;
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
