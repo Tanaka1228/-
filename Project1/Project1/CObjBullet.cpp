@@ -6,6 +6,7 @@
 #include"ObjHero.h"
 #include"UtilityModule.h"
 
+
 //使用するネームスペース
 using namespace GameL;
 
@@ -34,7 +35,6 @@ void CObjBullet::Init()
 //アクション
 void CObjBullet::Action()
 {
-
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float bx = obj->GetB();
 

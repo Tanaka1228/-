@@ -13,10 +13,12 @@ public:
 	void Init();        //イニシャライズ
 	void Action();      //アクション
 	void Draw();        //ドロー
-	void SetX(float x);//位置情報X変更用
-	void SetY(float y);//位置情報Y変更用
-	float GetX();      //位置情報X取得用
-	float GetY();      //位置情報Y取得用
+
+	float GetX();     //位置情報X取得用
+	float GetY();     //位置情報Y取得用
+	void SetX(float x) { m_px = x; }//位置情報X変更用
+	void SetY(float y) {m_py = y;}//位置情報Y変更用
+	void SetVY(float vy) { m_vy = vy; }
 	float GetB();
 private:
 	float m_x;  //主人公機のx方向移動用変数
@@ -24,6 +26,8 @@ private:
 	float m_vx; //移動ベクトル
 	float m_vy; //移動ベクトル
 	float m_posture; //横姿勢
+	float m_px;
+	float m_py;
 	bool m_f; //弾丸発射制御用
 
 	int m_ani_time=0; //アニメーションフレーム動作間隔
