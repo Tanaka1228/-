@@ -46,6 +46,7 @@ void CObjEnd::Draw()
 
 	//タイトル名の表示
 	Font::StrDraw(L"ＥＮＤ", 350, 250, 32, c);
+	Font::StrDraw(L"by 暗黒紳士団", 590, 550, 32, c);
 
 
 	//タイトルオブジェクト作成
