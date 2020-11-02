@@ -58,6 +58,13 @@ void CObjBlock::Action()
 	float hx = hero->GetX();
 	float hy = hero->GetY();
 
+	//主人公の衝突状態確認用フラグの初期化
+	hero->SetUp(false);
+	hero->SetDown(false);
+	hero->SetLeft(false);
+	hero->SetRight(false);
+	
+
 	//m_mapの全要素にアクセス
 	for (int i = 0; i < 25; i++)
 	{
@@ -72,10 +79,56 @@ void CObjBlock::Action()
 				//主人公とブロックの当たり判定
 				if ((hx+32.0f>x)&&(hx<x+32.0f)&&(hy+32.0f>y)&&(hy<y+32.0f))
 				{
-					//当たってる場合
-					hero->SetX(hx);
-					hero->SetY(0.0f);
-					hero->SetVY(0.0f);
+					//上下左右判定
+
+					//vectorの作成
+					float vx = hx - x;
+					float vy = hy - y;
+
+					//長さを求める
+					float len = sqrt(vx * vx + vy * vy);
+
+					//角度を求める
+					float r = atan2(vy, vx);
+					r = r * 180.0f / 3.14;
+
+					if (r <= 0.0f)
+						r = abs(r);
+					else
+						r = 360.0f - abs(r);
+
+					//角度で上下左右を判定
+					if ((r<45&&r>0)||r>315)
+					{
+						//右
+						hero->SetRight(true);//主人公の左の部分が衝突している
+						hero -> SetX2(x + 32.0f);//ブロックの位置+主人公の幅
+						hero->SetVX(0.0f);//-VX*反発係数
+					}
+					if (r>45&&r<135)
+					{
+						//上
+						hero->SetDown(true);//主人公の下の部分が衝突している
+						hero->SetY2(y - 32.0f);//ブロックの位置-主人公の幅
+						hero->SetVX(0.0f);//-VX*反発係数
+					}
+					if (r>135&&r<225)
+					{
+						//左
+						hero->SetLeft(true);//主人公の右の部分が衝突している
+						hero->SetX2(x - 32.0f);//ブロックの位置-主人公の幅
+						hero->SetVX(0.0f);//-VX*反発係数
+					}
+					if (r>225&&r<315)
+					{
+						//下
+						hero->SetUp(true);//主人公の上の部分が衝突している
+						hero->SetY2(y + 32.0f);//ブロックの位置+主人公の幅
+						hero->SetVX(0.0f);//-VX*反発係数
+						
+					}
+
+					
 				}
 			}
 		}

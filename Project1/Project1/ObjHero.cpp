@@ -24,23 +24,7 @@ void CObjHero::SetY(float y)
 	m_y = y;
 }
 	
-//位置情報X2変更用
-void CObjHero::SetX2(float x)
-{
-	m_px = x;
-}
 
-//位置情報Y2変更用
-void CObjHero::SetY2(float y)
-{
-	m_py = y;
-}
-
-//位置情報VY変更用
-void CObjHero::SetVY(float vy)
-{
-	m_vy = vy;
-}
 
 //位置情報X取得用
 float CObjHero::GetX()
@@ -84,6 +68,12 @@ void CObjHero::Init()
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
+
+	//blockとの衝突状態確認用
+	m_hit_up = false;
+	m_hit_down = false;
+	m_hit_left = false;
+	m_hit_right = false;
 }
 
 //アクション

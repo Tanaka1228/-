@@ -19,11 +19,22 @@ public:
 	void SetX(float x);//位置情報X変更用
 	void SetY(float y);//位置情報Y変更用
 
+	float GetX2() { return m_px; }     //位置情報X2取得用
+	float GetY2() {return m_py;}     //位置情報Y2取得用
+	float GetVX() { return m_vy; }     //位置情報VX取得用
+	float GetVY() { return m_vx; }     //位置情報VY取得用
 
-	void SetX2(float x); //{ m_px = x; }
-	void SetY2(float y); //{ m_py = y; }
-	void SetVY(float vy); //{ m_vy = vy; }
+
+	void SetX2(float x){ m_px = x; }
+	void SetY2(float y){ m_py = y; }
+	void SetVY(float vy){ m_vy = vy; }
+	void SetVX(float vx) { m_vx = vx; }
 	float GetB();
+
+	void SetUp(bool b) { m_hit_up = b; }
+	void SetDown(bool b) { m_hit_down = b; }
+	void SetLeft(bool b) { m_hit_left = b; }
+	void SetRight(bool b) { m_hit_right = b; }
 private:
 	float m_x;  //主人公機のx方向移動用変数
 	float m_y;  //主人公機のy方向移動用変数
@@ -41,4 +52,9 @@ private:
 	int m_bullet;//弾丸の弾数
 	int test;
 	
+	//blockとの衝突状態確認用
+	bool m_hit_up;
+	bool m_hit_down;
+	bool m_hit_left;
+	bool m_hit_right;
 };
