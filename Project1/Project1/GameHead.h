@@ -22,6 +22,8 @@ enum OBJ_NAME
 	OBJ_HOMING_BULLET,
 	OBJ_STAGE,
 	OBJ_BLOCK,
+	OBJ_END,
+	OBJ_MANU,
 };
 //------------------------------------------------
 
@@ -81,6 +83,8 @@ struct UserData
 #include"CObjHomingBullet.h"
 #include"ObjBlock.h"
 #include"ObjStage.h"
+#include"ObjEnd.h"
+#include"ObjMenu.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -88,12 +92,14 @@ struct UserData
 #include"SceneMain.h"
 #include"SceneStage.h"
 #include"SceneGameOver.h"
+#include"SceneEnd.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 ////ゲーム開始時のシーンクラス登録
 //#define SET_GAME_START CSceneGameOver
-#define SET_GAME_START CSceneTitle 
+//#define SET_GAME_START CSceneTitle 
+#define SET_GAME_START CSceneEnd 
 //#define SET_GAME_START CSceneMain
 //#define SET_GAME_START CSceneStage
 //-----------------------------------------------

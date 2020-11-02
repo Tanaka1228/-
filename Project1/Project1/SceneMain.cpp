@@ -6,6 +6,7 @@
 #include"GameL\DrawTexture.h"
 #include"GameL\SceneObjManager.h"
 #include"GameL\UserData.h"
+#include"GameL/WinInputs.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -50,7 +51,8 @@ void CSceneMain::InitScene()
 	//外部グラフィックファイルを読み込み9番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"床.png", 9, TEX_SIZE_512);
 	
-
+	//外部グラフィックファイルを読み込み11番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"メニュー画面.png", 11, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400,280); //主人公オブジェクト作成
@@ -108,4 +110,10 @@ void CSceneMain::Scene()
 		Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 3); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 	}
 	
+	if (Input::GetVKey('X') == true)
+	{
+		//メニューオブジェクト作成
+		CObjMenu* obj_menu = new CObjMenu(); //メニューオブジェクト作成
+		Objs::InsertObj(obj_menu, OBJ_HOMING_ENEMY, 14); //メニューオブジェクトをオブジェクトマネージャーに登録
+	}
 }
