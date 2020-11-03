@@ -7,6 +7,7 @@
 #include"GameHead.h"
 #include"ObjBlock.h"
 
+
 //使用するネームスペース
 using namespace GameL;
 
@@ -55,8 +56,8 @@ void CObjBlock::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	float hx = hero->GetX();
-	float hy = hero->GetY();
+	float hx = hero->GetX2(); 
+	float hy = hero->GetY2();
 
 	//主人公の衝突状態確認用フラグの初期化
 	hero->SetUp(false);
