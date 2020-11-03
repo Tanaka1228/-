@@ -23,9 +23,10 @@ void CObjHero::SetY(float y)
 {
 	m_y = y;
 }
-	
-
-
+float CObjHero::GetB()//弾丸向き取得用
+{
+	return m_ani_frame;
+}
 //位置情報X取得用
 float CObjHero::GetX()
 {
@@ -38,10 +39,7 @@ float CObjHero::GetY()
 	return m_y;
 }
 
-float CObjHero::GetB()//弾丸向き取得用
-{
-	return m_ani_frame;
-}
+
 
 //コンストラクタ
 CObjHero::CObjHero(float x, float y)

@@ -31,13 +31,6 @@ CSceneTitle::~CSceneTitle()
 //ゲームメイン初期化メソッド
 void CSceneTitle::InitScene()
 {
-
-
-	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
-	RECT_F src;
-	RECT_F dst;
-
-
 	//タイトルオブジェクト作成
 	CObjTitle* obj = new CObjTitle();
 	Objs::InsertObj(obj, OBJ_TITLE, 10);
@@ -50,8 +43,6 @@ void CSceneTitle::InitScene()
 	//オブジェクト作成
 	CObjTitleBackground* back = new CObjTitleBackground();
 	Objs::InsertObj(back, OBJ_TITLE_BACKGROUND, 4), (back, OBJ_TITLE_BACKGROUND, 6),(back, OBJ_TITLE_BACKGROUND, 5);
-
-
 
 }
 
