@@ -163,6 +163,10 @@ void CObjHero::Action()
 		
 		if (Input::GetVKey(VK_SHIFT) == true)//‘–‚éˆ—
 		{
+			if (m_gun == 1)
+			{
+				m_x -= 3.0f;
+			}
 			m_x += 5.0f;
 		}
 	}
@@ -179,6 +183,10 @@ void CObjHero::Action()
 		
 		if (Input::GetVKey(VK_SHIFT) == true)//‘–‚éˆ—
 		{
+			if (m_gun == 1)
+			{
+				m_x += 3.0f;
+			}
 			m_x -= 5.0f;
 		}
 	}
@@ -191,11 +199,12 @@ void CObjHero::Action()
 		{
 			m_y += 2;
 		}
-
-		
-
 		if (Input::GetVKey(VK_SHIFT) == true)//‘–‚éˆ—
 		{
+			if (m_gun == 1)
+			{
+				m_y += 3.0f;
+			}
 			m_y -= 5.0f;
 		}
 
@@ -211,6 +220,10 @@ void CObjHero::Action()
 		
 		if (Input::GetVKey(VK_SHIFT) == true)//‘–‚éˆ—
 		{
+			if (m_gun == 1)
+			{
+				m_y -= 3.0f;
+			}
 			m_y += 5.0f;
 		}
 	}
