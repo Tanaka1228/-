@@ -78,7 +78,7 @@ void CObjBlock::Action()
 				float y = i * 32.0f;
 
 				//主人公とブロックの当たり判定
-				if ((hx+32.0f>x)&&(hx<x+32.0f)&&(hy+32.0f>y)&&(hy<y+32.0f))
+				if ((hx + 32.0f > x )&&(hx < x + 32.0f)&&(hy + 32.0f > y)&&(hy < y + 32.0f))
 				{
 					//上下左右判定
 
@@ -103,7 +103,7 @@ void CObjBlock::Action()
 					{
 						//右
 						hero->SetRight(true);//主人公の左の部分が衝突している
-						hero-> SetX2(x + 32.0f);//ブロックの位置+主人公の幅
+						hero->SetX2(x + 32.0f);//ブロックの位置+主人公の幅
 						hero->SetVX(0.0f);//-VX*反発係数
 					}
 					if (r>45&&r<135)
