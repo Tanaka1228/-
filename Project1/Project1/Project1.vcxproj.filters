@@ -263,9 +263,6 @@
     <ClCompile Include="CObjHomingBullet.cpp">
       <Filter>ソース ファイル\Bullet</Filter>
     </ClCompile>
-    <ClCompile Include="ObjBlock.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
     <ClCompile Include="SceneStage.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
@@ -286,6 +283,12 @@
     </ClCompile>
     <ClCompile Include="ObjFin.cpp">
       <Filter>ヘッダー ファイル\fin</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjBlock2.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjBlock.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -238,6 +238,10 @@ void CObjHero::Action()
 		//主人公消滅でゲームオーバーに移行する
 		Scene::SetScene(new CSceneGameOver());
 	}
+
+	//位置の更新
+	m_px += m_x;
+	m_py += m_y;
 }
 
 //ドロー
