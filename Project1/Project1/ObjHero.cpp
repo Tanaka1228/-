@@ -59,7 +59,7 @@ void CObjHero::Init()
 	m_ani_time=0; //アニメーションフレーム動作間隔
     m_ani_frame=2; //描画フレーム
 
-	m_hp = 10;//主人公のHP
+	m_hp = 30;//主人公のHP
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
 	m_bullet = 6;//弾丸の弾数
 	test = 0;
@@ -252,9 +252,6 @@ void CObjHero::Action()
 		Scene::SetScene(new CSceneGameOver());
 	}
 
-	//位置の更新
-	m_px += m_x;
-	m_py += m_y;
 }
 
 //ドロー
