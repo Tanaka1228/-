@@ -88,13 +88,13 @@ void CObjBlock::Action()
 					float vy = hy - y;
 
 					//長さを求める
-					float len = sqrt(vx * vx + vy * vy);
+					float len = sqrt(vx * vx + vy * vy);//sqrt関数は、平方根を返す
 
 					//角度を求める
-					float r = atan2(vy, vx);
+					float r = atan2(vy, vx);//atan2関数はアークタンジェントを返す
 					r = r * 180.0f / 3.14;
 
-					if (r <= 0.0f)
+					if (r <= 0.0f)//abs関数は、値の絶対値を求める 符号を無視した値
 						r = abs(r);
 					else
 						r = 360.0f - abs(r);
