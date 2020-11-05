@@ -267,6 +267,7 @@ void CObjHero::Draw()
 	RECT_F src;
 	RECT_F dst;
 
+	//主人公
 	if (m_ani_frame == 2) //右
 	{
 
@@ -312,6 +313,29 @@ void CObjHero::Draw()
 	dst.m_bottom = 32.0f + m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	if (m_gun == 1)//ハンドガン
 	{
