@@ -66,6 +66,8 @@ void CSceneMain::InitScene()
 	CObjBlock* objb = new CObjBlock();
 	Objs::InsertObj(objb, OBJ_BLOCK, 1);
 
+	
+
 	//ƒ^ƒCƒ€‰Šú‰»
 	m_time = 0;
 	
