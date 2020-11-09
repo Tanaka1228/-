@@ -37,6 +37,9 @@
     <Filter Include="ヘッダー ファイル\fin">
       <UniqueIdentifier>{db616794-692a-476f-a9b9-66893fd026e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\StageMap\SceneMap">
+      <UniqueIdentifier>{4ed81aa8-97b7-4821-a708-69526031ec55}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -91,9 +94,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjStage.h">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneStage.h">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
     <ClInclude Include="CObjBullet.h">
@@ -159,11 +159,17 @@
     <ClInclude Include="ObjFin.h">
       <Filter>ヘッダー ファイル\fin</Filter>
     </ClInclude>
-    <ClInclude Include="SceneBlock.h">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClInclude>
     <ClInclude Include="ObjRooftop.h">
       <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBlock.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneRooftop.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneStage.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -266,9 +272,6 @@
     <ClCompile Include="CObjHomingBullet.cpp">
       <Filter>ソース ファイル\Bullet</Filter>
     </ClCompile>
-    <ClCompile Include="SceneStage.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
     <ClCompile Include="SceneEnd.cpp">
       <Filter>ヘッダー ファイル\END</Filter>
     </ClCompile>
@@ -287,11 +290,17 @@
     <ClCompile Include="ObjBlock.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
-    <ClCompile Include="SceneBlock.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
     <ClCompile Include="ObjRooftop.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBlock.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneRooftop.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneStage.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

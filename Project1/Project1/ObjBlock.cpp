@@ -138,7 +138,7 @@ void CObjBlock::Action()
 					
 					if (m_map[i][j] == 16)//建物からでるとタイトルに戻る(テスト)
 					{
-						Scene::SetScene(new CSceneStage());
+						Scene::SetScene(new CSceneRooftop());
 					}
 
 				}

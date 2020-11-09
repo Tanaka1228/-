@@ -164,7 +164,10 @@
     <ClInclude Include="SceneFin.h" />
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
-    <ClInclude Include="SceneStage.h" />
+    <ClInclude Include="SceneRooftop.h" />
+    <ClInclude Include="SceneStage.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="ObjTitleBackground.h" />
     <ClInclude Include="UtilityModule.h" />
@@ -211,8 +214,11 @@
     </ClCompile>
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneMain.cpp" />
+    <ClCompile Include="SceneRooftop.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
-    <ClCompile Include="SceneStage.cpp" />
+    <ClCompile Include="SceneStage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjTitleBackground.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
