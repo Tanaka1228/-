@@ -25,6 +25,7 @@ enum OBJ_NAME
 	OBJ_END,
 	OBJ_FIN,
 	OBJ_MANU,
+	OBJ_ROOF_TOP,
 };
 //------------------------------------------------
 
@@ -87,6 +88,7 @@ struct UserData
 #include"ObjEnd.h"
 #include"ObjFin.h"
 #include"ObjMenu.h"
+#include"ObjRooftop.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
