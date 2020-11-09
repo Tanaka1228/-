@@ -60,15 +60,15 @@ void CObjInstituteBoss::Draw()
 	RECT_F dst;//描画先表示位置
 
 	//背景表示
-	src.m_top = 100.0f;
+	src.m_top = 0.0f;
 	src.m_left = 0.0f;
 	src.m_right = 800.0f;
-	src.m_bottom = 784.0f;
+	src.m_bottom = 600.0f;
 
 	dst.m_top = 0.0f;
 	dst.m_left = 0.0f;
 	dst.m_right = 800.0f;
-	dst.m_bottom = 784.0f;
+	dst.m_bottom = 600.0f;
 	Draw::Draw(12, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
