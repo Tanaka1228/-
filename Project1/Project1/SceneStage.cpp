@@ -49,10 +49,9 @@ void CSceneStage::InitCScene()
 	CObjBlock* objb = new CObjBlock();
 	Objs::InsertObj(objb, OBJ_BLOCK, 3);
 
-	//blockオブジェクト作成
+	//ステージオブジェクト作成
 	CObjStage* objb = new CObjStage();
 	Objs::InsertObj(objb, OBJ_STAGE, 3);
-
 }
 
 

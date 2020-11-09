@@ -4,6 +4,8 @@
 
 #include"ObjEnemy.h"
 #include"ObjStage.h"
+#include"GameL/SceneManager.h"
+#include"GameL/SceneObjManager.h"
 
 //使用するネームスペース
 using namespace GameL;
