@@ -11,7 +11,7 @@ class CSceneStage :public CScene
 public:
 	CSceneStage();//コンストラクタ
 	~CSceneStage();//デストラクタ
-	void InitCScene();//ゲームステージ初期化メソッド
+	void InitScene();//ゲームステージ初期化メソッド
 	void Scene();//ゲームステージ実行中メソッド
 private:
 
