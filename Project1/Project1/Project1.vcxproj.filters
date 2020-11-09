@@ -162,6 +162,9 @@
     <ClInclude Include="ObjFin.h">
       <Filter>ヘッダー ファイル\fin</Filter>
     </ClInclude>
+    <ClInclude Include="SceneBlock.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -285,6 +288,9 @@
       <Filter>ヘッダー ファイル\fin</Filter>
     </ClCompile>
     <ClCompile Include="ObjBlock.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBlock.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>

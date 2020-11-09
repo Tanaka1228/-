@@ -96,6 +96,7 @@ struct UserData
 #include"SceneGameOver.h"
 #include"SceneEnd.h"
 #include"SceneFin.h"
+#include"SceneBlock.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
