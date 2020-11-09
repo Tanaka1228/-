@@ -42,7 +42,7 @@ void CSceneStage::InitCScene()
 	Draw::LoadImage(L"床.png", 9, TEX_SIZE_512);
 
 	//外部グラフィックファイルを読み込み9番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"病院のボス戦フィールド.png", 10, TEX_SIZE_512);
+	Draw::LoadImage(L"屋上.png", 10, TEX_SIZE_512);
 
 
 	//blockオブジェクト作成

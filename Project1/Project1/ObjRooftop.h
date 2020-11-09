@@ -5,11 +5,11 @@
 using namespace GameL;
 
 //オブジェクト：ブロック＆背景
-class CObjhospitalRooftop :public CObj
+class CObjRooftop :public CObj
 {
 public:
-	CObjhospitalRooftop() {};
-	~CObjhospitalRooftop() {};
+	CObjRooftop() {};
+	~CObjRooftop() {};
 	void Init(); //イニシャライズ
 	void Action(); //アクション
 	void Draw(); //ドロー

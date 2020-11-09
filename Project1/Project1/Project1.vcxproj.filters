@@ -144,9 +144,6 @@
     <ClInclude Include="ObjBlock.h">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
-    <ClInclude Include="hospitalRooftop.h">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClInclude>
     <ClInclude Include="SceneEnd.h">
       <Filter>ヘッダー ファイル\END</Filter>
     </ClInclude>
@@ -163,6 +160,9 @@
       <Filter>ヘッダー ファイル\fin</Filter>
     </ClInclude>
     <ClInclude Include="SceneBlock.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjRooftop.h">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
   </ItemGroup>
@@ -269,9 +269,6 @@
     <ClCompile Include="SceneStage.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
-    <ClCompile Include="hospitalRooftop.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
     <ClCompile Include="SceneEnd.cpp">
       <Filter>ヘッダー ファイル\END</Filter>
     </ClCompile>
@@ -291,6 +288,9 @@
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
     <ClCompile Include="SceneBlock.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjRooftop.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>

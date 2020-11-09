@@ -4,13 +4,13 @@
 #include"GameL\SceneManager.h"
 
 #include"GameHead.h"
-#include"hospitalRooftop.h"
+#include"ObjRooftop.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjhospitalRooftop::Init()
+void CObjRooftop::Init()
 {
 	//マップ情報
 	int block_data[10][10] =
@@ -30,12 +30,12 @@ void CObjhospitalRooftop::Init()
 	memcpy(m_map, block_data, sizeof(int) * (10 * 10));
 }
 //アクション
-void CObjhospitalRooftop::Action()
+void CObjRooftop::Action()
 {
 
 }
 //ドロー
-void CObjhospitalRooftop::Draw()
+void CObjRooftop::Draw()
 {
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -65,3 +65,5 @@ void CObjhospitalRooftop::Draw()
 		}
 	}
 }
+
+
