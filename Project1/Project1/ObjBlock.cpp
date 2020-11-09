@@ -93,45 +93,50 @@ void CObjBlock::Action()
 
 					//角度を求める
 					float r = atan2(vy, vx);//atan2関数はアークタンジェントを返す
-					r = r * 180.0f / 3.14;
+					r = r * 180.0f / 3.14f;
 
 					if (r <= 0.0f)//abs関数は、値の絶対値を求める 符号を無視した値
 						r = abs(r);
 					else
 						r = 360.0f - abs(r);
 
-					//角度で上下左右を判定
-					if ((r < 45 && r > 0) || r > 315)
+					//lenがある一定の長さのより短い場合判定に入る
+					if (len < 44.0f)
 					{
-						//右
-						hero->SetRight(true);//主人公の左の部分が衝突している
-						hero->SetX2(x + 32.0f);//ブロックの位置+主人公の幅
-						hero->SetVX(0.0f);//-VX*反発係数
-					}
-					if (r > 45 && r < 135)
-					{
-						//上
-						hero->SetDown(true);//主人公の下の部分が衝突している
-						hero->SetY2(y - 32.0f);//ブロックの位置-主人公の幅
-						hero->SetVX(0.0f);//-VX*反発係数
-					}
-					if (r > 135 && r < 225)
-					{
-						//左
-						hero->SetLeft(true);//主人公の右の部分が衝突している
-						hero->SetX2(x - 32.0f);//ブロックの位置-主人公の幅
-						hero->SetVX(0.0f);//-VX*反発係数
-					}
-					if (r > 225 && r < 315)
-					{
-						//下
-						hero->SetUp(true);//主人公の上の部分が衝突している
-						hero->SetY2(y + 32.0f);//ブロックの位置+主人公の幅
-						hero->SetVX(0.0f);//-VX*反発係数
+						//角度で上下左右を判定
+						if ((r < 45 && r >= 0)||r>315)
+						{
+							//右
+							hero->SetRight(true);//主人公の左の部分が衝突している
+							hero->SetX2(x + 32.0f);//ブロックの位置+主人公の幅
+							hero->SetVX(0.0f);//-VX*反発係数
+						}
+						if (r > 45 && r < 135)
+						{
+							//上
+							hero->SetDown(true);//主人公の下の部分が衝突している
+							hero->SetY2(y - 32.0f);//ブロックの位置-主人公の幅
+							hero->SetVY(0.0f);//-VX*反発係数
+						}
+						if (r > 135 && r < 225)
+						{
+							//左
+							hero->SetLeft(true);//主人公の右の部分が衝突している
+							hero->SetX2(x - 32.0f);//ブロックの位置-主人公の幅
+							hero->SetVX(0.0f);//-VX*反発係数
+						}
+						if (r > 225 && r < 315)
+						{
+							//下
+							hero->SetUp(true);//主人公の上の部分が衝突している
+							hero->SetY2(y + 32.0f);//ブロックの位置+主人公の幅
+							hero->SetVY(0.0f);//-VX*反発係数
 
+						}
 					}
+					
+					
 					if (m_map[i][j] == 16)//建物からでるとタイトルに戻る(テスト)
-						
 					{
 						Scene::SetScene(new CSceneTitle());
 					}
