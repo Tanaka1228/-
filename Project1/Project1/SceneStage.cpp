@@ -32,14 +32,6 @@ CSceneStage::~CSceneStage()
 void CSceneStage::InitScene()
 {
 
-
-	//外部グラフィックファイルを読み込み9番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"屋上.png", 10, TEX_SIZE_512);
-	
-	//Stageオブジェクト作成
-	CObjRooftop* objb = new CObjRooftop();
-	Objs::InsertObj(objb, OBJ_ROOF_TOP, 3);
-
 }
 
 
