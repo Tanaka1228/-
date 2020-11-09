@@ -134,6 +134,7 @@ void CObjBlock::Action()
 						
 					{
 						Scene::SetScene(new CSceneTitle());
+						
 					}
 
 				}
