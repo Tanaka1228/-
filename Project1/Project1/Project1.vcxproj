@@ -152,6 +152,7 @@
     <ClInclude Include="ObjFin.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjHero.h" />
+    <ClInclude Include="ObjInstituteBoss.h" />
     <ClInclude Include="ObjMain.h" />
     <ClInclude Include="ObjMenu.h" />
     <ClInclude Include="ObjRooftop.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="SceneEnd.h" />
     <ClInclude Include="SceneFin.h" />
     <ClInclude Include="SceneGameOver.h" />
+    <ClInclude Include="SceneInstituteBoss.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneRooftop.h" />
     <ClInclude Include="SceneStage.h">
@@ -200,6 +202,7 @@
     <ClCompile Include="ObjEnd.cpp" />
     <ClCompile Include="ObjFin.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
+    <ClCompile Include="ObjInstituteBoss.cpp" />
     <ClCompile Include="ObjMain.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
@@ -213,6 +216,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjTitle.cpp" />
+    <ClCompile Include="SceneInstituteBoss.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneRooftop.cpp" />
     <ClCompile Include="SceneTitle.cpp" />

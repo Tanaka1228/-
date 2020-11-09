@@ -26,6 +26,7 @@ enum OBJ_NAME
 	OBJ_FIN,
 	OBJ_MANU,
 	OBJ_ROOF_TOP,
+	OBJ_INSTITUTE_BOSS,
 };
 //------------------------------------------------
 
@@ -89,6 +90,7 @@ struct UserData
 #include"ObjFin.h"
 #include"ObjMenu.h"
 #include"ObjRooftop.h"
+#include"ObjInstituteBoss.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -100,6 +102,7 @@ struct UserData
 #include"SceneFin.h"
 #include"SceneBlock.h"
 #include"SceneRooftop.h"
+#include"SceneInstituteBoss.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------

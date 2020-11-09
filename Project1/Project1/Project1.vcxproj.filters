@@ -171,6 +171,12 @@
     <ClInclude Include="SceneStage.h">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClInclude>
+    <ClInclude Include="ObjInstituteBoss.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneInstituteBoss.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -300,6 +306,12 @@
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClCompile>
     <ClCompile Include="SceneStage.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjInstituteBoss.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneInstituteBoss.cpp">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClCompile>
   </ItemGroup>
