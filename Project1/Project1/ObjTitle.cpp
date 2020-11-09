@@ -57,7 +57,8 @@ void CObjTitle::Action()
 		 //エンターキーが押されたらメインに還移
 		 if (m_key_enter == true)
 		 {
-			 Scene::SetScene(new CSceneMain());
+			 //Scene::SetScene(new CSceneMain());
+			 Scene::SetScene(new CSceneBlock());
 		 }
 	 }
 
