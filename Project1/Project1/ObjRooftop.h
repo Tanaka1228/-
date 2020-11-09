@@ -17,7 +17,7 @@ public:
 
 
 private:
-	int m_map[10][10]; //マップ情報(仮）
+	int m_map[25][25]; //マップ情報(仮）
 
 
 };
