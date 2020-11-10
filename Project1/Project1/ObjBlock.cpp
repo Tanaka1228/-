@@ -164,6 +164,7 @@ void CObjBlock::Action()
 							{
 								enter_flag = false;
 							}
+							
 						}
 
 					}
