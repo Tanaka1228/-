@@ -157,14 +157,15 @@ void CObjBlock::Action()
 					{
 						
 						if (Input::GetVKey(VK_RETURN)) 
-						{
+						
 							m_speak = true;
 							enter_flag = true;
-						}
 						
-						/*if (enter_flag == true && Input::GetVKey(VK_RETURN))
+						/*
+						if (enter_flag == true && Input::GetVKey(VK_RETURN))
 						{
 							m_speak = false;
+							enter_flag = false;
 						}*/
 					}
 					else
