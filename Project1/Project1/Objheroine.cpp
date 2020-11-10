@@ -45,7 +45,7 @@ void CObjHeroine::Draw()
 	RECT_F src;//•`‰æŒ³Ø‚èæ‚èˆÊ’u
 	RECT_F dst;//•`‰ææ•\¦ˆÊ’u
 
-	if (m_sp == true)
+	if (m_sp == true&&m_ep==true)
 	{
 			Font::StrDraw(L"‚±‚ñ‚É‚¿‚Í", 400, 120, 42, c);
 	}
