@@ -161,18 +161,22 @@ void CObjBlock::Action()
 							m_speak = true;
 							enter_flag = true;
 						}
+						
+						/*if (enter_flag == true && Input::GetVKey(VK_RETURN))
+						{
+							m_speak = false;
+						}*/
 					}
-					else 
+					else
 					{
 						m_speak = false;
 					}
+					
 
 					if (m_map[i][j] == 16)//Œš•¨‚©‚ç‚Å‚é‚Æ•a‰@‚Ì‰®ã
 					{
 						Scene::SetScene(new CSceneRooftop());
 					}
-
-					
 
 					//if (m_map[i][j] == 18)//—‚Ìq‚Ì‘O‚ÉˆÚ“®‚·‚é‚ÆŒ¤‹†ŠBoss
 					//{
