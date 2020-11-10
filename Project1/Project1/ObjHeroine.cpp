@@ -52,7 +52,7 @@ void CObjHeroine::Draw()
 	else if(m_ep==false)
 	{
 		this->SetStatus(false);//©g‚Éíœ–½—ß
-		Hits::Delete();
+		Font::Delete();
 	}
 
 
