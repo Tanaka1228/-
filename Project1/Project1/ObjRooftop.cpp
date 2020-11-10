@@ -56,28 +56,28 @@ void CObjRooftop::Action()
 	float hx = hero->GetX();
 	float hy = hero->GetY();
     
-	//後方スクロールライン
+	//後方スクロールライン　←
 	if (hx < 400)
 	{
 		hero->SetX(400); //主人公はラインを超えないようにする
 		mx_scroll += hero->GetX(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
-	//前方スクロールライン
+	//前方スクロールライン →
 	if (hx > 400)
 	{
 		hero->SetX(400); //主人公はラインを超えないようにする
 		mx_scroll -= hero->GetX(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
-	//スクロールライン
+	//スクロールライン　↑
 	if (hy > 300)
 	{
 		hero->SetY(300); //主人公はラインを超えないようにする
 		my_scroll -= hero->GetY(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
-	//スクロールライン
+	//スクロールライン　↓
 	if (hy < 300)
 	{
 		hero->SetY(300); //主人公はラインを超えないようにする
