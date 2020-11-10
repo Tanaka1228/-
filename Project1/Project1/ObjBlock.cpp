@@ -65,6 +65,7 @@ void CObjBlock::Init()
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
 
 	m_speak = false;
+	
 }
 //アクション
 void CObjBlock::Action()
@@ -155,18 +156,18 @@ void CObjBlock::Action()
 
 					if (m_map[i][j] == 17)//女の子の前でエンター
 					{
-						if (Input::GetVKey(VK_RETURN))
-						{
-							m_speak = true;
-							enter_flag = true;
-
-							if (Input::GetVKey(VK_RETURN)&&enter_flag==true)
+						
+							if (Input::GetVKey(VK_RETURN) == true)
 							{
-								enter_flag = false;
-							}
-							
-						}
+								m_speak = true;
+								
 
+							}
+						
+						if (Input::GetVKey(VK_RETURN) == false)
+						{
+							enter_flag = false;
+						}
 					}
 					
 					
