@@ -19,5 +19,5 @@ public:
 private:
 	int m_map[25][25]; //マップ情報(仮）
 
-	
+	int speak;//会話の判定
 };

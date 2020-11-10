@@ -40,6 +40,9 @@
     <Filter Include="ソース ファイル\StageMap\SceneMap">
       <UniqueIdentifier>{4ed81aa8-97b7-4821-a708-69526031ec55}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Character">
+      <UniqueIdentifier>{cd04ba3a-ba48-42ae-9779-a49aa0b96314}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -82,9 +85,6 @@
       <Filter>ヘッダー ファイル\title</Filter>
     </ClInclude>
     <ClInclude Include="SceneMain.h">
-      <Filter>ヘッダー ファイル\SceneMain</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjHero.h">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClInclude>
     <ClInclude Include="ObjTitle.h">
@@ -177,6 +177,12 @@
     <ClInclude Include="SceneInstituteBoss.h">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClInclude>
+    <ClInclude Include="ObjHero.h">
+      <Filter>ソース ファイル\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Objheroine.h">
+      <Filter>ソース ファイル\Character</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -219,9 +225,6 @@
       <Filter>ヘッダー ファイル\title</Filter>
     </ClCompile>
     <ClCompile Include="SceneMain.cpp">
-      <Filter>ヘッダー ファイル\SceneMain</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjHero.cpp">
       <Filter>ヘッダー ファイル\SceneMain</Filter>
     </ClCompile>
     <ClCompile Include="ObjTitle.cpp">
@@ -313,6 +316,12 @@
     </ClCompile>
     <ClCompile Include="SceneInstituteBoss.cpp">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjHero.cpp">
+      <Filter>ソース ファイル\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Objheroine.cpp">
+      <Filter>ソース ファイル\Character</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

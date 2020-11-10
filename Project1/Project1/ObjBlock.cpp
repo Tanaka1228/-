@@ -1,5 +1,6 @@
 //使用するヘッダーファイル
 #include"GameL\DrawTexture.h"
+#include"GameL/DrawFont.h"
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
@@ -26,7 +27,7 @@ void CObjBlock::Init()
 		{0,0,15,3,4,5,4,5,4,5,0,1,0,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,3,6,7,6,7,6,7,0,1,2,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,0,0,0,0,0,0,0,0,1,2,0,0,0,17,0,0,0,0,0,15,0,0},
-		{0,0,15,8,8,8,8,8,8,8,8,8,2,0,0,0,18,0,0,0,0,0,15,0,0},
+		{0,0,15,8,8,8,8,8,8,8,8,8,2,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0},
@@ -117,6 +118,7 @@ void CObjBlock::Action()
 							hero->SetDown(true);//主人公の下の部分が衝突している
 							hero->SetY2(y - 32.0f);//ブロックの位置-主人公の幅
 							hero->SetVY(0.0f);//-VX*反発係数
+	
 						}
 						if (r > 135 && r < 225)
 						{
@@ -134,17 +136,16 @@ void CObjBlock::Action()
 
 						}
 					}
-					
-					
+
 					if (m_map[i][j] == 16)//建物からでると病院の屋上
 					{
 						Scene::SetScene(new CSceneRooftop());
 					}
 
-					if (m_map[i][j] == 18)//女の子の前に移動すると研究所Boss
-					{
-						Scene::SetScene(new CSceneInstituteBoss());
-					}
+					//if (m_map[i][j] == 18)//女の子の前に移動すると研究所Boss
+					//{
+					//	Scene::SetScene(new CSceneInstituteBoss());
+					//}
 
 				}
 			}
@@ -161,12 +162,14 @@ void CObjBlock::Draw()
 
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
+	
 
 	//背景表示
 	src.m_top = 0.0f;
 	src.m_left = 10.0f;
 	src.m_right = 500.0f;
 	src.m_bottom = 500.0f;
+
 	dst.m_top = 96.0f;
 	dst.m_left = 96.0f;
 	dst.m_right = 704.0f;
@@ -178,6 +181,8 @@ void CObjBlock::Draw()
 	{
 		for (int j = 0; j < 25; j++)
 		{
+			
+
 			if (m_map[i][j] == 1)
 			{
 				//切り取り位置の設定

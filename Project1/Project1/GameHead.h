@@ -7,26 +7,27 @@ enum OBJ_NAME
 					//ゲームで使うオブジェクトの名前
 					//OBJ_○○と表記
 	OBJ_MAIN,	
-	OBJ_HERO,
-	OBJ_TITLE,
-	OBJ_ENEMY,
-	OBJ_BULLET,
-	OBJ_GAME_OVER,
-	OBJ_TITLE_BACKGROUND,
-	OBJ_ATTACK_ENEMY,
-	OBJ_BULLET_ENEMY,
-	OBJ_HOMING_ENEMY,
-	OBJ_SIN_ENEMY,
-	OBJ_DIFFUSION_ENEMY,
+	OBJ_HERO, //主人公
+	OBJ_TITLE,//ゲームタイトル
+	OBJ_ENEMY,//敵１
+	OBJ_BULLET,//弾丸
+	OBJ_GAME_OVER,//ゲームオーバー
+	OBJ_TITLE_BACKGROUND,//ゲームタイトルの背景
+	OBJ_ATTACK_ENEMY,//攻撃敵機
+	OBJ_BULLET_ENEMY,//弾丸敵機
+	OBJ_HOMING_ENEMY,//誘導敵機
+	OBJ_SIN_ENEMY,//カーブ敵機
+	OBJ_DIFFUSION_ENEMY,//
 	OBJ_ANGLE_BULLET,
 	OBJ_HOMING_BULLET,
-	OBJ_STAGE,
-	OBJ_BLOCK,
+	OBJ_STAGE,//
+	OBJ_BLOCK,//拠点
 	OBJ_END,
 	OBJ_FIN,
-	OBJ_MANU,
-	OBJ_ROOF_TOP,
-	OBJ_INSTITUTE_BOSS,
+	OBJ_MANU,//メニュー
+	OBJ_ROOF_TOP,//病院屋上
+	OBJ_INSTITUTE_BOSS,//研究所ボス
+	OBJ_HEROINE,//ヒロイン
 };
 //------------------------------------------------
 
@@ -91,6 +92,7 @@ struct UserData
 #include"ObjMenu.h"
 #include"ObjRooftop.h"
 #include"ObjInstituteBoss.h"
+#include"Objheroine.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
