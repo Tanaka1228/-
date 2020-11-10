@@ -18,7 +18,10 @@ bool CObjBlock::GetSpeak()
 {
 	return m_speak;
 }
-
+bool CObjBlock::GetEnter()
+{
+	return enter_flag;
+}
 
 
 //イニシャライズ
@@ -116,6 +119,7 @@ void CObjBlock::Action()
 					//lenがある一定の長さのより短い場合判定に入る
 					if (len < 44.0f)
 					{
+
 						//角度で上下左右を判定
 						if ((r < 45 && r >= 0)||r>315)
 						{
@@ -149,21 +153,26 @@ void CObjBlock::Action()
 						}
 					}
 
+					if (m_map[i][j] == 17)//女の子の前でエンター
+					{
+						
+						if (Input::GetVKey(VK_RETURN)) 
+						{
+							m_speak = true;
+							enter_flag = true;
+						}
+					}
+					else 
+					{
+						m_speak = false;
+					}
+
 					if (m_map[i][j] == 16)//建物からでると病院の屋上
 					{
 						Scene::SetScene(new CSceneRooftop());
 					}
 
-					if (m_map[i][j] == 17)//女の子の前でエンター
-					{
-						if (Input::GetVKey(VK_RETURN)) {
-							m_speak = true;
-						}
-					}
-					else
-					{
-						m_speak = false;
-					}
+					
 
 					//if (m_map[i][j] == 18)//女の子の前に移動すると研究所Boss
 					//{

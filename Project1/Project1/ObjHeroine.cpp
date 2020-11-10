@@ -7,6 +7,7 @@
 #include"GameHead.h"
 #include"ObjHeroine.h"
 #include"UtilityModule.h"
+#include<fstream>
 
 //使用するネームスペース
 using namespace GameL;
@@ -31,9 +32,8 @@ void CObjHeroine::Action()
 	CObjBlock* block = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
 
 	m_sp = block->GetSpeak();
+	m_ep = block->GetEnter();
 	
-	
-
 }
 
 //ドロー
@@ -47,8 +47,11 @@ void CObjHeroine::Draw()
 
 	if (m_sp == true)
 	{
-			Font::StrDraw(L" WWWRRRRRYYYYYYYYYY", 400, 120, 42, c);
+			Font::StrDraw(L"こんにちは", 400, 120, 42, c);
 	}
+	
+	
+
 
 	////切り取り位置の設定
 	//src.m_top = 0.0f; //y

@@ -14,9 +14,10 @@ public:
 	void Action(); //アクション
 	void Draw(); //ドロー
 	bool GetSpeak();
+	bool GetEnter();
 
 private:
 	int m_map[25][25]; //マップ情報(仮）
 	int m_speak;
-	
+	int enter_flag;
 };
