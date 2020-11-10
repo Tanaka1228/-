@@ -15,5 +15,5 @@ public:
 	void Draw(); //ドロー
 private:
 	bool m_sp;//会話
-	
+	bool m_ep;//エンターキー2回目時
 };
