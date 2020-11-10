@@ -152,7 +152,7 @@
     <ClInclude Include="ObjFin.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjHero.h" />
-    <ClInclude Include="Objheroine.h" />
+    <ClInclude Include="ObjHeroine.h" />
     <ClInclude Include="ObjInstituteBoss.h" />
     <ClInclude Include="ObjMain.h" />
     <ClInclude Include="ObjMenu.h" />
@@ -203,7 +203,7 @@
     <ClCompile Include="ObjEnd.cpp" />
     <ClCompile Include="ObjFin.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
-    <ClCompile Include="Objheroine.cpp" />
+    <ClCompile Include="ObjHeroine.cpp" />
     <ClCompile Include="ObjInstituteBoss.cpp" />
     <ClCompile Include="ObjMain.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />

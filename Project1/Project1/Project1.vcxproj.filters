@@ -180,7 +180,7 @@
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Character</Filter>
     </ClInclude>
-    <ClInclude Include="Objheroine.h">
+    <ClInclude Include="ObjHeroine.h">
       <Filter>ソース ファイル\Character</Filter>
     </ClInclude>
   </ItemGroup>
@@ -320,7 +320,7 @@
     <ClCompile Include="ObjHero.cpp">
       <Filter>ソース ファイル\Character</Filter>
     </ClCompile>
-    <ClCompile Include="Objheroine.cpp">
+    <ClCompile Include="ObjHeroine.cpp">
       <Filter>ソース ファイル\Character</Filter>
     </ClCompile>
   </ItemGroup>

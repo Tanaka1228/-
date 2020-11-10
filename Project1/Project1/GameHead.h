@@ -92,7 +92,7 @@ struct UserData
 #include"ObjMenu.h"
 #include"ObjRooftop.h"
 #include"ObjInstituteBoss.h"
-#include"Objheroine.h"
+#include"ObjHeroine.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
