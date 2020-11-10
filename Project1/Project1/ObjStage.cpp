@@ -82,6 +82,7 @@ void CObjStage::Draw()
 	RECT_F src;
 	RECT_F dst;
 
+	
 
 	for (int i = 0; i < 10; i++)
 	{

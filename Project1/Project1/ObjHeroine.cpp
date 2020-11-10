@@ -50,6 +50,9 @@ void CObjHeroine::Draw()
 			Font::StrDraw(L"‚±‚ñ‚É‚¿‚Í", 400, 120, 42, c);
 	}
 	
+	
+
+
 	////Ø‚èæ‚èˆÊ’u‚Ìİ’è
 	//src.m_top = 0.0f; //y
 	//src.m_left = 0.0f; //x

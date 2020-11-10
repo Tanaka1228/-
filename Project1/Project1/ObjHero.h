@@ -21,8 +21,8 @@ public:
 
 	float GetX2() { return m_x; }   //位置情報X2取得用　当たり判定
 	float GetY2() { return m_y; }   //位置情報Y2取得用
-	float GetVX() { return m_vy; }   //位置情報VX取得用
-	float GetVY() { return m_vx; }   //位置情報VY取得用
+	float GetVX() { return m_vx; }   //位置情報VX取得用
+	float GetVY() { return m_vy; }   //位置情報VY取得用
 
 	//m_x,m_yはアクションゲーム指南書で言う、m_px,m_pyです。
 
@@ -39,6 +39,8 @@ public:
 
 	float GetB();
 private:
+	float m_px; //位置
+	float m_py;
 	float m_x;  //主人公機のx方向移動用変数
 	float m_y;  //主人公機のy方向移動用変数
 	float m_vx; //移動ベクトル
