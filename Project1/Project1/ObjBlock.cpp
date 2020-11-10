@@ -13,6 +13,14 @@
 //使用するネームスペース
 using namespace GameL;
 
+
+bool CObjBlock::GetSpeak()
+{
+	return m_speak;
+}
+
+
+
 //イニシャライズ
 void CObjBlock::Init()
 {
@@ -52,6 +60,8 @@ void CObjBlock::Init()
 	};
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
+
+	m_speak = false;
 }
 //アクション
 void CObjBlock::Action()
@@ -73,6 +83,8 @@ void CObjBlock::Action()
 	{
 		for (int j = 0; j < 25; j++)
 		{
+			
+
 			if (m_map[i][j] > 0)
 			{
 				
@@ -140,6 +152,17 @@ void CObjBlock::Action()
 					if (m_map[i][j] == 16)//建物からでると病院の屋上
 					{
 						Scene::SetScene(new CSceneRooftop());
+					}
+
+					if (m_map[i][j] == 17)//女の子の前でエンター
+					{
+						if (Input::GetVKey(VK_RETURN)) {
+							m_speak = true;
+						}
+					}
+					else
+					{
+						m_speak = false;
 					}
 
 					//if (m_map[i][j] == 18)//女の子の前に移動すると研究所Boss
