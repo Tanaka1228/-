@@ -105,7 +105,7 @@ void CObjRooftop::Action()
 				float y = i * 32.0f;
 
 				//主人公とブロックの当たり判定
-				if ((hx +(-mx_scroll)+ 32.0f > x) && (hx +(-mx_scroll)< x + 32.0f) && (hy+(-my_scroll) + 32.0f > y) && (hy+(-my_scroll) < y + 32.0f))
+				if ((hx +(-mx_scroll)+ 64.0f > x) && (hx +(-mx_scroll)< x + 64.0f) && (hy+(-my_scroll) + 64.0f > y) && (hy+(-my_scroll) < y + 64.0f))
 				{
 					//上下左右判定
 
@@ -126,7 +126,7 @@ void CObjRooftop::Action()
 						r = 360.0f - abs(r);
 
 					//lenがある一定の長さのより短い場合判定に入る
-					if (len < 44.0f)
+					if (len <44.0f)
 					{
 
 						//角度で上下左右を判定
