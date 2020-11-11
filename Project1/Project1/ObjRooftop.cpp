@@ -90,8 +90,6 @@ void CObjRooftop::Action()
 	{
 		hero->SetY(300); //主人公はラインを超えないようにする
 		my_scroll -= hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
-	
-
 	}
 
 	//m_mapの全要素にアクセス
@@ -137,14 +135,14 @@ void CObjRooftop::Action()
 							//右
 							hero->SetRight(true);//主人公の左の部分が衝突している
 							hero->SetX2(x + 32.0f+(mx_scroll));//ブロックの位置+主人公の幅
-							hero->SetVX(0.0f);//-VX*反発係数
+							
 						}
 						if (r > 45 && r < 135)
 						{
 							//上
 							hero->SetDown(true);//主人公の下の部分が衝突している
 							hero->SetY2(y - 32.0f+(my_scroll));//ブロックの位置-主人公の幅
-							hero->SetVY(0.0f);//-VX*反発係数
+							
 
 						}
 						if (r > 135 && r < 225)
@@ -152,15 +150,14 @@ void CObjRooftop::Action()
 							//左
 							hero->SetLeft(true);//主人公の右の部分が衝突している
 							hero->SetX2(x - 32.0f+(mx_scroll));//ブロックの位置-主人公の幅
-							hero->SetVX(0.0f);//-VX*反発係数
+							
 						}
 						if (r > 225 && r < 315)
 						{
 							//下
 							hero->SetUp(true);//主人公の上の部分が衝突している
 							hero->SetY2(y + 32.0f+(my_scroll));//ブロックの位置+主人公の幅
-							hero->SetVY(0.0f);//-VX*反発係数
-
+							
 						}
 					}
 				}
@@ -190,12 +187,13 @@ void CObjRooftop::Draw()
 	dst.m_right = 800.0f + mx_scroll;  //x
 	dst.m_bottom = 600.0f + my_scroll; //y
 
+	Draw::Draw(10, &src, &dst, c, 0.0f);
 	/*dst.m_top = -100.0f + my_scroll;
 	dst.m_left = -100.0f + mx_scroll;
 	dst.m_right = 1500.0f + mx_scroll;
 	dst.m_bottom = 1468.0f + my_scroll;*/
 
-	Draw::Draw(10, &src, &dst, c, 0.0f);
+	
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 25; i++)
@@ -203,7 +201,7 @@ void CObjRooftop::Draw()
 		for (int j = 0; j < 25; j++)
 		{
 			
-			if (m_map[i][j] == 1)
+			if (m_map[i][j] == 1)//柵
 			{
 				//切り取り位置の設定
 				src.m_top = 350.0f;   //y
@@ -212,10 +210,10 @@ void CObjRooftop::Draw()
 				src.m_bottom = 500.0f; //y
 
 				//表示位置の設定
-				dst.m_top =  i*32.0f +my_scroll;
-				dst.m_left =  j*32.0 + mx_scroll;
-				dst.m_right = dst.m_left+32.0f + mx_scroll;
-				dst.m_bottom = dst.m_top+32.0f + my_scroll;
+				dst.m_top    =  i*32.0f +my_scroll;
+				dst.m_left   =  j*32.0 + mx_scroll;
+				dst.m_right  =  64.0f+ mx_scroll;
+				dst.m_bottom =  64.0f+ my_scroll;
 
 				//描画
 				Draw::Draw(13, &src, &dst, c, 0.0f);
