@@ -206,10 +206,10 @@ void CObjRooftop::Draw()
 			if (m_map[i][j] == 1)
 			{
 				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
-				src.m_top = 350.0f;   //y
+				src.m_top = 0.0f;   //y
 				src.m_left = 0.0f; //x
-				src.m_right = 75.0f; //x
-				src.m_bottom = 500.0f; //y
+				src.m_right = 140.0f; //x
+				src.m_bottom = 100.0f; //y
 
 				//•\¦ˆÊ’u‚Ìİ’è
 				dst.m_top =  i*32.0f +my_scroll;
