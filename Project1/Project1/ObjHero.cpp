@@ -190,7 +190,7 @@ void CObjHero::Action()
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_x += 2;
-			m_vx += m_x;
+			m_vx -= m_x;
 		}
 		
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
@@ -213,7 +213,7 @@ void CObjHero::Action()
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_y += 2;
-			m_vy += m_y;
+			m_vy -= m_y;
 		}
 		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
 		{
