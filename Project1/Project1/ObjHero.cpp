@@ -64,6 +64,7 @@ void CObjHero::Init()
 	m_hp = 30;//主人公のHP
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
 	m_bullet = 6;//弾丸の弾数
+	m_bullet_held = 30;//弾丸の所持数
 	test = 0;
 
 	//当たり判定用HitBoxを作成
@@ -86,9 +87,10 @@ void CObjHero::Action()
 	if (Input::GetVKey('A') == true && m_gun == 1)
 	{
 	m_gun = 0;//構えていない
+	Sleep(5);
 	}
 
-	else if (Input::GetVKey('A') == true && m_gun == 0)
+	else if (Input::GetVKey('A') == true && m_gun == 0&&Sleep)
 	{
 		m_gun = 1;//構えている
 	}
@@ -143,13 +145,10 @@ void CObjHero::Action()
 			m_f = true;
 		}
 	}
-	if (Input::GetVKey(VK_SPACE)==true)//リロード
+	if (Input::GetVKey(VK_SPACE)==true&&m_bullet_held>0)//リロード
 	{
-
-		Sleep(6);
-		if (Sleep) {
+		m_bullet_held -= 6;
 			m_bullet = 6;
-		}
 		
 	}
 
@@ -428,8 +427,11 @@ void CObjHero::Draw()
 	}
 
 	wchar_t str[256];
+	wchar_t strb[256];
 	swprintf_s(str, L"弾数 : %d / 6", m_bullet);
-	Font::StrDraw(str, m_bullet, 550, 30, c);// X  Y  大きさ 
+	swprintf_s(strb, L"弾丸所持数 : %d発", m_bullet_held);
+	Font::StrDraw(str, 10, 550, 30, c);// X  Y 大きさ 
+	Font::StrDraw(strb, 230.0f, 550, 30, c);// X  Y  大きさ 
 }
 
 ////表示位置の設定

@@ -52,6 +52,7 @@ private:
 	int m_hp;//ålŒö‚ÌHP
 	int m_gun;//e‚ÌŒü‚«
 	int m_bullet;//’eŠÛ‚Ì’e”
+	int m_bullet_held;//’eŠÛ‚ÌŠ”
 	int test;
 	
 	//block‚Æ‚ÌÕ“Ëó‘ÔŠm”F—p
