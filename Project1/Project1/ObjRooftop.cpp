@@ -180,7 +180,7 @@ void CObjRooftop::Draw()
 	RECT_F dst;//•`‰ææ•\¦ˆÊ’u
 
 	//Ø‚èæ‚è”wŒi•\¦
-	src.m_top = 100.0f ;
+	src.m_top = 0.0f ;
 	src.m_left = 0.0f ;
 	src.m_right = 800.0f ;
 	src.m_bottom = 784.0f ;
