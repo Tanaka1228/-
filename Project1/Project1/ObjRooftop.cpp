@@ -84,7 +84,6 @@ void CObjRooftop::Action()
 		hero->SetY(300); //主人公はラインを超えないようにする
 		my_scroll -= hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
 	
-
 	}
 	//スクロールライン　↓
 	if (hy < 300)
