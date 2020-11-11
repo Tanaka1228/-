@@ -16,9 +16,7 @@ public:
 
 	float GetX();     //位置情報X取得用
 	float GetY();     //位置情報Y取得用
-	void SetX(float x);//位置情報X変更用
-	void SetY(float y);//位置情報Y変更用
-
+	
 	float GetX2() { return m_x; }   //位置情報X2取得用　当たり判定
 	float GetY2() { return m_y; }   //位置情報Y2取得用
 	float GetVX() { return m_vx; }   //位置情報VX取得用
@@ -26,7 +24,8 @@ public:
 
 	//m_x,m_yはアクションゲーム指南書で言う、m_px,m_pyです。
 
-
+	void SetX(float x);//位置情報X変更用
+	void SetY(float y);//位置情報Y変更用
 	void SetX2(float x)  { m_x = x; }
 	void SetY2(float y)  { m_y = y; }
 	void SetVY(float vy) { m_vy = vy; }

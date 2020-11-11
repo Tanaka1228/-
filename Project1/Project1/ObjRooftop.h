@@ -1,6 +1,7 @@
 #pragma once
 //使用するヘッダー
 #include"GameL\SceneObjManager.h"
+#include"GameL\SceneManager.h"
 //使用するネームスペース
 using namespace GameL;
 
@@ -21,7 +22,7 @@ public:
 	float GetScroll2() { return my_scroll; }
 
 private:
-
+	
 	int m_map[25][55]; //マップ情報
 
 	float mx_scroll; //左右スクロール用
