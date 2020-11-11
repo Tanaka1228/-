@@ -65,6 +65,7 @@ void CObjBlock::Init()
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
 
 	m_speak = false;
+	
 }
 //アクション
 void CObjBlock::Action()
@@ -156,22 +157,18 @@ void CObjBlock::Action()
 					if (m_map[i][j] == 17)//女の子の前でエンター
 					{
 						
-						if (Input::GetVKey(VK_RETURN)) 
-						
-							m_speak = true;
-							enter_flag = true;
-						
-						/*
-						if (enter_flag == true && Input::GetVKey(VK_RETURN))
-						{
-							m_speak = false;
-							enter_flag = false;
-						}*/
+							if (Input::GetVKey(VK_RETURN) == true)
+							{
+								m_speak = true;
+								enter_flag = true;
+
+							}
+						    if (Input::GetVKey(VK_RETURN) == true&&enter_flag==true)
+						    {
+							   enter_flag = false;
+						    }
 					}
-					else
-					{
-						m_speak = false;
-					}
+					
 					
 
 					if (m_map[i][j] == 16)//建物からでると病院の屋上

@@ -56,32 +56,32 @@ void CObjRooftop::Action()
 	float hx = hero->GetX();
 	float hy = hero->GetY();
     
-	//後方スクロールライン
+	//後方スクロールライン　←
 	if (hx < 400)
 	{
 		hero->SetX(400); //主人公はラインを超えないようにする
-		mx_scroll -= hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
+		mx_scroll += hero->GetX(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
-	//前方スクロールライン
+	//前方スクロールライン →
 	if (hx > 400)
 	{
 		hero->SetX(400); //主人公はラインを超えないようにする
-		mx_scroll -= hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
+		mx_scroll -= hero->GetX(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
-	//スクロールライン
+	//スクロールライン　↑
 	if (hy > 300)
 	{
 		hero->SetY(300); //主人公はラインを超えないようにする
-		my_scroll -= hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
+		my_scroll -= hero->GetY(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
-	//スクロールライン
+	//スクロールライン　↓
 	if (hy < 300)
 	{
 		hero->SetY(300); //主人公はラインを超えないようにする
-		my_scroll -= hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
+		my_scroll += hero->GetY(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 }
 //ドロー
@@ -93,7 +93,7 @@ void CObjRooftop::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	//背景表示
+	//切り取り背景表示
 	src.m_top = 100.0f ;
 	src.m_left = 0.0f ;
 	src.m_right = 800.0f ;
@@ -106,13 +106,18 @@ void CObjRooftop::Draw()
 	{
 		for (int j = 0; j < 25; j++)
 		{
-			if (m_map[i][j]==0)
+			if (m_map[i][j]==0)//床
 			{
 				//表示位置の設定
-				dst.m_top = -100.0f + my_scroll;
+				dst.m_top    = 0.0f     + my_scroll;    //y
+				dst.m_left   = 0.0f     + mx_scroll;   //x
+				dst.m_right  = 800.0f   + mx_scroll;  //x
+				dst.m_bottom = 600.0f   + my_scroll; //y
+
+				/*dst.m_top = -100.0f + my_scroll;
 				dst.m_left = -100.0f + mx_scroll;
 				dst.m_right = 1500.0f + mx_scroll;
-				dst.m_bottom = 1468.0f + my_scroll;
+				dst.m_bottom = 1468.0f + my_scroll;*/
 
 				Draw::Draw(10, &src, &dst, c, 0.0f);
 	

@@ -45,11 +45,18 @@ void CObjHeroine::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	if (m_sp == true&&m_ep==true)
+	if (m_sp == true)
 	{
-			Font::StrDraw(L"こんにちは", 400, 120, 42, c);
+		Font::StrDraw(L"こんにちは", 400, 120, 42, c);
 	}
-	
+	if(m_ep==false)
+	{
+		Font::StrDraw(L"消える", 400, 120, 42, c);
+		//this->SetStatus(false);//自身に削除命令
+		//Font::Delete();
+	}
+
+
 	////切り取り位置の設定
 	//src.m_top = 0.0f; //y
 	//src.m_left = 0.0f; //x

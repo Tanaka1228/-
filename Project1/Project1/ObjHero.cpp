@@ -144,7 +144,11 @@ void CObjHero::Action()
 	}
 	if (Input::GetVKey(VK_SPACE)==true)//ÉäÉçÅ[Éh
 	{
-		m_bullet = 6;
+
+		Sleep(6);
+		if (Sleep) {
+			m_bullet = 6;
+		}
 		
 	}
 
