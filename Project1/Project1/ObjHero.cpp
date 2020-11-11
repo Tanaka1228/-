@@ -83,16 +83,17 @@ void CObjHero::Action()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
+	if (Input::GetVKey('A') == true && m_gun == 1)
+	{
+	m_gun = 0;//構えていない
+	}
 
-
-	if (Input::GetVKey('A') == true)
+	else if (Input::GetVKey('A') == true && m_gun == 0)
 	{
 		m_gun = 1;//構えている
 	}
-	else if (Input::GetVKey('Q') == true)
-	{
-		m_gun = 0;//構えていない
-	}
+
+	
 
 	
 
@@ -361,7 +362,7 @@ void CObjHero::Draw()
 
 	if (m_gun == 1)//ハンドガン
 	{
-		Font::StrDraw(L"構えている", m_x, -32 + m_y, 20, c);
+		Font::StrDraw(L"構えている", m_x, -32 + m_y, 16, c);
 
 		if (m_ani_frame == 2)
 		{
@@ -418,11 +419,11 @@ void CObjHero::Draw()
 	}
 	else if (m_gun == 0)
 	{
-		Font::StrDraw(L"構えていない", m_x, -32 + m_y, 20, c);
+		Font::StrDraw(L"構えていない", m_x, -32 + m_y, 16, c);
 
 		if (Input::GetVKey('Z') == true)
 		{
-			Font::StrDraw(L"キックテスト", m_x, 32 + m_y, 20, c);
+			Font::StrDraw(L"キックテスト", m_x, 32 + m_y, 16, c);
 		}
 	}
 
