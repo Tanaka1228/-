@@ -64,6 +64,7 @@ void CObjHero::Init()
 	m_hp = 30;//主人公のHP
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
 	m_bullet = 6;//弾丸の弾数
+	m_bullet_held = 30;//弾丸の所持数
 	test = 0;
 
 	//当たり判定用HitBoxを作成
@@ -83,16 +84,18 @@ void CObjHero::Action()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
+	if (Input::GetVKey('A') == true && m_gun == 1)
+	{
+	m_gun = 0;//構えていない
+	Sleep(5);
+	}
 
-
-	if (Input::GetVKey('A') == true)
+	else if (Input::GetVKey('A') == true && m_gun == 0&&Sleep)
 	{
 		m_gun = 1;//構えている
 	}
-	else if (Input::GetVKey('Q') == true)
-	{
-		m_gun = 0;//構えていない
-	}
+
+	
 
 	
 
@@ -142,14 +145,60 @@ void CObjHero::Action()
 			m_f = true;
 		}
 	}
-	if (Input::GetVKey(VK_SPACE)==true)//リロード
+	if (Input::GetVKey(VK_SPACE)==true&&m_bullet_held>0)//リロード
 	{
-
-		Sleep(6);
-		if (Sleep) {
-			m_bullet = 6;
-		}
+	    
+		if (m_bullet == 6)
+		{
+			m_bullet_held -= 0;
+			if (m_bullet_held > 0) {
+				m_bullet += 0;
+			}
 		
+		}
+		if (m_bullet == 5)
+		{
+			m_bullet_held -= 1;
+			if (m_bullet_held > 0) {
+				m_bullet += 1;
+			}
+		}
+		if (m_bullet == 4)
+		{
+			m_bullet_held -= 2;
+			if (m_bullet_held > 0) {
+				m_bullet += 2;
+			}
+		}
+		if (m_bullet == 3)
+		{
+			m_bullet_held -= 3;
+			if (m_bullet_held > 0) {
+				m_bullet += 3;
+			}
+		}
+		if (m_bullet == 2)
+		{
+			m_bullet_held -= 4;
+			if (m_bullet_held > 0) {
+				m_bullet += 4;
+			}
+		}
+		if (m_bullet == 1)
+		{
+			m_bullet_held -= 5;
+			if (m_bullet_held > 0) {
+				m_bullet += 5;
+			}
+		}
+		if (m_bullet == 0)
+		{
+			m_bullet_held -= 6;
+			if (m_bullet_held > 0) {
+				m_bullet += 6;
+			}
+		}
+
 	}
 
 
@@ -361,7 +410,7 @@ void CObjHero::Draw()
 
 	if (m_gun == 1)//ハンドガン
 	{
-		Font::StrDraw(L"構えている", m_x, -32 + m_y, 20, c);
+		Font::StrDraw(L"構えている", m_x, -32 + m_y, 16, c);
 
 		if (m_ani_frame == 2)
 		{
@@ -418,17 +467,20 @@ void CObjHero::Draw()
 	}
 	else if (m_gun == 0)
 	{
-		Font::StrDraw(L"構えていない", m_x, -32 + m_y, 20, c);
+		Font::StrDraw(L"構えていない", m_x, -32 + m_y, 16, c);
 
 		if (Input::GetVKey('Z') == true)
 		{
-			Font::StrDraw(L"キックテスト", m_x, 32 + m_y, 20, c);
+			Font::StrDraw(L"キックテスト", m_x, 32 + m_y, 16, c);
 		}
 	}
 
 	wchar_t str[256];
+	wchar_t strb[256];
 	swprintf_s(str, L"弾数 : %d / 6", m_bullet);
-	Font::StrDraw(str, m_bullet, 550, 30, c);// X  Y  大きさ 
+	swprintf_s(strb, L"弾丸所持数 : %d発", m_bullet_held);
+	Font::StrDraw(str, 10, 550, 30, c);// X  Y 大きさ 
+	Font::StrDraw(strb, 230.0f, 550, 30, c);// X  Y  大きさ 
 }
 
 ////表示位置の設定

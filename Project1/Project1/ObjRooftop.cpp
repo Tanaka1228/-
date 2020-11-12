@@ -2,6 +2,7 @@
 #include"GameL\DrawTexture.h"
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
+#include"GameL/SceneObjManager.h"
 
 #include"GameHead.h"
 #include"ObjRooftop.h"
@@ -52,8 +53,8 @@ void CObjRooftop::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	float hx = hero->GetX();
-	float hy = hero->GetY();
+	float hx = hero->GetX2();//スクロール
+	float hy = hero->GetY2();
 
 	//主人公の衝突状態確認用フラグの初期化
 	hero->SetUp(false);
@@ -64,31 +65,31 @@ void CObjRooftop::Action()
 	//後方スクロールライン　←
 	if (hx < 400)
 	{
-		hero->SetX(400); //主人公はラインを超えないようにする
-		mx_scroll -= hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
+		hero->SetX2(400); //主人公はラインを超えないようにする
+		mx_scroll -=-9.0f+hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
 		
 	}
 
 	//前方スクロールライン →
 	if (hx > 400)
 	{
-		hero->SetX(400); //主人公はラインを超えないようにする
-		mx_scroll -= hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
+		hero->SetX2(400); //主人公はラインを超えないようにする
+		mx_scroll -=9.0f+hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
 
 	}
 
 	//スクロールライン　↑
 	if (hy > 300)
 	{
-		hero->SetY(300); //主人公はラインを超えないようにする
-		my_scroll -= hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
+		hero->SetY2(300); //主人公はラインを超えないようにする
+		my_scroll -= 9.0f+hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
 	
 	}
 	//スクロールライン　↓
 	if (hy < 300)
 	{
-		hero->SetY(300); //主人公はラインを超えないようにする
-		my_scroll -= hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
+		hero->SetY2(300); //主人公はラインを超えないようにする
+		my_scroll -=-9.0f+ hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
 	//m_mapの全要素にアクセス
@@ -104,13 +105,13 @@ void CObjRooftop::Action()
 				float y = i * 32.0f;
 
 				//主人公とブロックの当たり判定
-				if ((hx +(-mx_scroll)+ 32.0f > x) && (hx +(mx_scroll)< x + 32.0f) && (hy+(-my_scroll) + 32.0f > y) && (hy+(my_scroll) < y + 32.0f))
+				if ((hx +(-mx_scroll)+ 64.0f > x) && (hx +(-mx_scroll)< x + 64.0f) && (hy+(-my_scroll) + 64.0f > y) && (hy+(-my_scroll) < y + 64.0f))
 				{
 					//上下左右判定
 
 					//vectorの作成
-					float vx = hx +(-mx_scroll)- x;
-					float vy = hy +(-my_scroll)- y;
+					float vx = (hx +(-mx_scroll))- x;
+					float vy = (hy +(-my_scroll))- y;
 
 					//長さを求める
 					float len = sqrt(vx * vx + vy * vy);//sqrt関数は、平方根を返す
@@ -125,7 +126,7 @@ void CObjRooftop::Action()
 						r = 360.0f - abs(r);
 
 					//lenがある一定の長さのより短い場合判定に入る
-					if (len < 44.0f)
+					if (len <44.0f)
 					{
 
 						//角度で上下左右を判定
@@ -134,14 +135,14 @@ void CObjRooftop::Action()
 							//右
 							hero->SetRight(true);//主人公の左の部分が衝突している
 							hero->SetX2(x + 32.0f+(mx_scroll));//ブロックの位置+主人公の幅
-							
+							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 45 && r < 135)
 						{
 							//上
 							hero->SetDown(true);//主人公の下の部分が衝突している
 							hero->SetY2(y - 32.0f+(my_scroll));//ブロックの位置-主人公の幅
-							
+							hero->SetVY(0.0f);//-VX*反発係数
 
 						}
 						if (r > 135 && r < 225)
@@ -149,14 +150,14 @@ void CObjRooftop::Action()
 							//左
 							hero->SetLeft(true);//主人公の右の部分が衝突している
 							hero->SetX2(x - 32.0f+(mx_scroll));//ブロックの位置-主人公の幅
-							
+							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 225 && r < 315)
 						{
 							//下
 							hero->SetUp(true);//主人公の上の部分が衝突している
 							hero->SetY2(y + 32.0f+(my_scroll));//ブロックの位置+主人公の幅
-							
+							hero->SetVY(0.0f);//-VX*反発係数
 						}
 					}
 				}
@@ -220,5 +221,3 @@ void CObjRooftop::Draw()
 		}
 	}
 }
-
-
