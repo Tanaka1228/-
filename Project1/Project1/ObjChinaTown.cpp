@@ -5,13 +5,13 @@
 #include"GameL\SceneManager.h"
 
 #include"GameHead.h"
-#include "CObjTyainataun.h"
+#include "ObjChinaTown.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjTyainataun::Init()
+void CObjChinaTown::Init()
 {
 	//マップ情報
 	int block_data[25][55] =
@@ -50,11 +50,11 @@ void CObjTyainataun::Init()
 
 }
 //アクション
-void CObjTyainataun::Action()
+void CObjChinaTown::Action()
 {
 }
 //ドロー
-void CObjTyainataun::Draw()
+void CObjChinaTown::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 

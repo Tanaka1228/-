@@ -141,7 +141,7 @@
     <ClInclude Include="CObjHomingBullet.h" />
     <ClInclude Include="CObjHomingEnemy.h" />
     <ClInclude Include="CObjSinEnemy.h" />
-    <ClInclude Include="CObjTyainataun.h" />
+    <ClInclude Include="ObjChinaTown.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="ObjAttackEnemy.h" />
     <ClInclude Include="ObjBlock.h">
@@ -163,6 +163,7 @@
     </ClInclude>
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneBlock.h" />
+    <ClInclude Include="SceneChinaTown.h" />
     <ClInclude Include="SceneEnd.h" />
     <ClInclude Include="SceneFin.h" />
     <ClInclude Include="SceneGameOver.h" />
@@ -195,7 +196,7 @@
     <ClCompile Include="CObjHomingBullet.cpp" />
     <ClCompile Include="CObjHomingEnemy.cpp" />
     <ClCompile Include="CObjSinEnemy.cpp" />
-    <ClCompile Include="CObjTyainataun.cpp" />
+    <ClCompile Include="ObjChinaTown.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
     <ClCompile Include="ObjAttackEnemy.cpp" />
     <ClCompile Include="ObjBlock.cpp">
@@ -210,6 +211,7 @@
     <ClCompile Include="ObjMain.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
+    <ClCompile Include="SceneChinaTown.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="ObjMenu.cpp" />
     <ClCompile Include="SceneFin.cpp" />

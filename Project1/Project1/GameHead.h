@@ -28,7 +28,7 @@ enum OBJ_NAME
 	OBJ_ROOF_TOP,//病院屋上
 	OBJ_INSTITUTE_BOSS,//研究所ボス
 	OBJ_HEROINE,//ヒロイン
-	OBJ_TYAINATAUN,//チャイナタウン
+	OBJ_CHINA_TOWN,//チャイナタウン
 };
 //------------------------------------------------
 
@@ -94,7 +94,7 @@ struct UserData
 #include"ObjRooftop.h"
 #include"ObjInstituteBoss.h"
 #include"ObjHeroine.h"
-#include"CObjTyainataun.h"
+#include"ObjChinaTown.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -107,6 +107,7 @@ struct UserData
 #include"SceneBlock.h"
 #include"SceneRooftop.h"
 #include"SceneInstituteBoss.h"
+#include"SceneChinaTown.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
