@@ -141,6 +141,7 @@
     <ClInclude Include="CObjHomingBullet.h" />
     <ClInclude Include="CObjHomingEnemy.h" />
     <ClInclude Include="CObjSinEnemy.h" />
+    <ClInclude Include="CObjTyainataun.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="ObjAttackEnemy.h" />
     <ClInclude Include="ObjBlock.h">
@@ -194,6 +195,7 @@
     <ClCompile Include="CObjHomingBullet.cpp" />
     <ClCompile Include="CObjHomingEnemy.cpp" />
     <ClCompile Include="CObjSinEnemy.cpp" />
+    <ClCompile Include="CObjTyainataun.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
     <ClCompile Include="ObjAttackEnemy.cpp" />
     <ClCompile Include="ObjBlock.cpp">

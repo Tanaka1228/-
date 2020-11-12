@@ -183,6 +183,9 @@
     <ClInclude Include="ObjHeroine.h">
       <Filter>ソース ファイル\Character</Filter>
     </ClInclude>
+    <ClInclude Include="CObjTyainataun.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -322,6 +325,9 @@
     </ClCompile>
     <ClCompile Include="ObjHeroine.cpp">
       <Filter>ソース ファイル\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjTyainataun.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
