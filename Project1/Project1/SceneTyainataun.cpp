@@ -45,9 +45,6 @@ void CSceneTyainataun::InitScene()
 	CObjHero* obj = new CObjHero(400, 280);//主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4);//作った主人公のオブジェクトをオブジェクトマネージャーに登録
 
-	//チャイナタウンオブジェクト作成
-	CObjTyainataun* objb = new CObjTyainataun();
-	Objs::InsertObj(objb, OBJ_TYAINATAUN, 3);
 
 }
 
