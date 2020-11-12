@@ -107,6 +107,7 @@ struct UserData
 #include"SceneBlock.h"
 #include"SceneRooftop.h"
 #include"SceneInstituteBoss.h"
+#include"SceneTyainataun.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------

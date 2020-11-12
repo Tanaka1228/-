@@ -186,6 +186,9 @@
     <ClInclude Include="CObjTyainataun.h">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
+    <ClInclude Include="SceneTyainataun.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -328,6 +331,9 @@
     </ClCompile>
     <ClCompile Include="CObjTyainataun.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTyainataun.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
