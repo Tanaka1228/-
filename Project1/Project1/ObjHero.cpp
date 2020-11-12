@@ -147,41 +147,56 @@ void CObjHero::Action()
 	}
 	if (Input::GetVKey(VK_SPACE)==true&&m_bullet_held>0)//ƒŠƒ[ƒh
 	{
-
+	    
 		if (m_bullet == 6)
 		{
 			m_bullet_held -= 0;
-			m_bullet += 0;
+			if (m_bullet_held > 0) {
+				m_bullet += 0;
+			}
+		
 		}
 		if (m_bullet == 5)
 		{
 			m_bullet_held -= 1;
-			m_bullet += 1;
+			if (m_bullet_held > 0) {
+				m_bullet += 1;
+			}
 		}
 		if (m_bullet == 4)
 		{
 			m_bullet_held -= 2;
-			m_bullet += 2;
+			if (m_bullet_held > 0) {
+				m_bullet += 2;
+			}
 		}
 		if (m_bullet == 3)
 		{
 			m_bullet_held -= 3;
-			m_bullet += 3;
+			if (m_bullet_held > 0) {
+				m_bullet += 3;
+			}
 		}
 		if (m_bullet == 2)
 		{
 			m_bullet_held -= 4;
-			m_bullet += 4;
+			if (m_bullet_held > 0) {
+				m_bullet += 4;
+			}
 		}
 		if (m_bullet == 1)
 		{
 			m_bullet_held -= 5;
-			m_bullet += 5;
+			if (m_bullet_held > 0) {
+				m_bullet += 5;
+			}
 		}
 		if (m_bullet == 0)
 		{
 			m_bullet_held -= 6;
-			m_bullet += 6;
+			if (m_bullet_held > 0) {
+				m_bullet += 6;
+			}
 		}
 
 	}
