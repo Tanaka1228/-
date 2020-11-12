@@ -175,7 +175,9 @@
     </ClInclude>
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="ObjTitleBackground.h" />
-    <ClInclude Include="SceneTyainataun.h" />
+    <ClInclude Include="SceneTyainataun.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
   <ItemGroup>
@@ -231,7 +233,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjTitleBackground.cpp" />
-    <ClCompile Include="SceneTyainataun.cpp" />
+    <ClCompile Include="SceneTyainataun.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
