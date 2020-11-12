@@ -183,7 +183,10 @@
     <ClInclude Include="ObjHeroine.h">
       <Filter>ソース ファイル\Character</Filter>
     </ClInclude>
-    <ClInclude Include="CObjTyainataun.h">
+    <ClInclude Include="SceneChinaTown.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjChinaTown.h">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
     <ClInclude Include="SceneTyainataun.h">
@@ -329,7 +332,10 @@
     <ClCompile Include="ObjHeroine.cpp">
       <Filter>ソース ファイル\Character</Filter>
     </ClCompile>
-    <ClCompile Include="CObjTyainataun.cpp">
+    <ClCompile Include="SceneChinaTown.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTown.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
     <ClCompile Include="SceneTyainataun.cpp">
