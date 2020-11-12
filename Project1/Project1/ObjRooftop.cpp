@@ -66,7 +66,7 @@ void CObjRooftop::Action()
 	if (hx < 400)
 	{
 		hero->SetX2(400); //主人公はラインを超えないようにする
-		mx_scroll -=-9.0f+hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
+		mx_scroll -=-6.0f+hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
 		
 	}
 
@@ -74,7 +74,7 @@ void CObjRooftop::Action()
 	if (hx > 400)
 	{
 		hero->SetX2(400); //主人公はラインを超えないようにする
-		mx_scroll -=9.0f+hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
+		mx_scroll -=6.0f+hero->GetVX(); //主人公は本来動くべき分の値をm_scrollに加える
 
 	}
 
@@ -82,14 +82,14 @@ void CObjRooftop::Action()
 	if (hy > 300)
 	{
 		hero->SetY2(300); //主人公はラインを超えないようにする
-		my_scroll -= 9.0f+hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
+		my_scroll -= 6.0f+hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
 	
 	}
 	//スクロールライン　↓
 	if (hy < 300)
 	{
 		hero->SetY2(300); //主人公はラインを超えないようにする
-		my_scroll -=-9.0f+ hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
+		my_scroll -=-6.0f+ hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
 	//m_mapの全要素にアクセス
