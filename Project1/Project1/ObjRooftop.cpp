@@ -20,9 +20,9 @@ void CObjRooftop::Init()
 	int block_data[25][55] =
 	{
 		{0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-		{0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+		{0,1,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1},
+		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,12,4,5,6,4,5,6,4,5,8,9,10,11,1},
 		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -39,10 +39,10 @@ void CObjRooftop::Init()
 		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
-		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,6,2,3,6,2,3,0,0,0,0,1},
 		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-		{0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+		{0,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7},
 		
 	};
 	//マップデータをコピー
@@ -177,7 +177,7 @@ void CObjRooftop::Draw()
 
 	//切り取り背景表示
 	src.m_top = 0.0f ;
-	src.m_left = 0.0f ;
+	src.m_left = 3.0f ;
 	src.m_right = 500.0f ;
 	src.m_bottom = 170.0f ;
 	
@@ -201,7 +201,7 @@ void CObjRooftop::Draw()
 		for (int j = 0; j < 55; j++)
 		{
 			
-			if (m_map[i][j] == 1)//柵
+			if (m_map[i][j] == 1)//壁
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -214,6 +214,239 @@ void CObjRooftop::Draw()
 				dst.m_left   =  j*32.0f + mx_scroll;
 				dst.m_right  =  j*32.0f+32.0f + mx_scroll;
 				dst.m_bottom =  i*32.0f+32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 2)//ベンチ
+			{
+				//切り取り位置の設定
+				src.m_top = 15.0f;   //y
+				src.m_left = 100.0f; //x
+				src.m_right = 130.0f; //x
+				src.m_bottom = 70.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 3)//ベンチ
+			{
+				//切り取り位置の設定
+				src.m_top = 15.0f;   //y
+				src.m_left = 130.0f; //x
+				src.m_right = 170.0f; //x
+				src.m_bottom = 70.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 4)//ベンチ
+			{
+				//切り取り位置の設定
+				src.m_top = 20.0f;   //y
+				src.m_left = 180.0f; //x
+				src.m_right = 210.0f; //x
+				src.m_bottom = 65.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 5)//ベンチ
+			{
+				//切り取り位置の設定
+				src.m_top = 20.0f;   //y
+				src.m_left = 210.0f; //x
+				src.m_right = 245.0f; //x
+				src.m_bottom = 65.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 6)//草
+			{
+				//切り取り位置の設定
+				src.m_top = 20.0f;   //y
+				src.m_left = 260.0f; //x
+				src.m_right = 293.0f; //x
+				src.m_bottom = 55.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 7)//壁
+			{
+				//切り取り位置の設定
+				src.m_top = 18.0f;   //y
+				src.m_left = 390.0f; //x
+				src.m_right = 415.0f; //x
+				src.m_bottom = 40.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 8)//花壇
+			{
+				//切り取り位置の設定
+				src.m_top = 15.0f;   //y
+				src.m_left = 305.0f; //x
+				src.m_right = 370.0f; //x
+				src.m_bottom = 77.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+			
+			if (m_map[i][j] == 9)//草
+			{
+				//切り取り位置の設定
+				src.m_top = 7.0f;   //y
+				src.m_left = 430.0f; //x
+				src.m_right = 495.0f; //x
+				src.m_bottom = 55.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 10)//草
+			{
+				//切り取り位置の設定
+				src.m_top = 85.0f;   //y
+				src.m_left = 5.0f; //x
+				src.m_right = 43.0f; //x
+				src.m_bottom = 115.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 11)//草
+			{
+				//切り取り位置の設定
+				src.m_top = 87.0f;   //y
+				src.m_left = 47.0f; //x
+				src.m_right = 83.0f; //x
+				src.m_bottom = 118.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 12)//草
+			{
+				//切り取り位置の設定
+				src.m_top = 77.0f;   //y
+				src.m_left = 92.0f; //x
+				src.m_right = 129.0f; //x
+				src.m_bottom = 108.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 13)//草
+			{
+				//切り取り位置の設定
+				src.m_top = 70.0f;   //y
+				src.m_left = 130.0f; //x
+				src.m_right = 165.0f; //x
+				src.m_bottom = 105.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(13, &src, &dst, c, 0.0f);
+			}
+
+			if (m_map[i][j] == 14)//草
+			{
+				//切り取り位置の設定
+				src.m_top = 105.0f;   //y
+				src.m_left = 130.0f; //x
+				src.m_right = 165.0f; //x
+				src.m_bottom = 130.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
 				//描画
 				Draw::Draw(13, &src, &dst, c, 0.0f);
