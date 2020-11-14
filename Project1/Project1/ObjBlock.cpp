@@ -13,8 +13,7 @@
 //使用するネームスペース
 using namespace GameL;
 
-
-bool CObjBlock::GetSpeak()
+int CObjBlock::GetSpeak()
 {
 	return m_speak;
 }
@@ -35,9 +34,9 @@ void CObjBlock::Init()
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0},
 		{0,0,15,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,15,0,0},
-		{0,0,15,3,4,5,4,5,4,5,0,1,0,18,0,0,0,0,0,0,0,0,15,0,0},
+		{0,0,15,3,4,5,4,5,4,5,0,1,0,18,0,0,19,0,0,0,0,0,15,0,0},
 		{0,0,15,3,6,7,6,7,6,7,0,1,2,0,0,0,0,0,0,0,0,0,15,0,0},
-		{0,0,15,0,0,0,0,0,0,0,0,1,2,0,0,0,17,0,19,0,0,0,15,0,0},
+		{0,0,15,0,0,0,0,0,0,0,0,1,2,0,0,0,17,0,0,0,0,0,15,0,0},
 		{0,0,15,8,8,8,8,8,8,8,8,8,2,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0},
@@ -154,20 +153,35 @@ void CObjBlock::Action()
 						}
 					}
 
+					CObjHeroine* heroine = (CObjHeroine*)Objs::GetObj(OBJ_HEROINE);
+					key_bflag = heroine->Key_flag();
+
 					if (m_map[i][j] == 17)//女の子の前でエンター
 					{
 						
-							if (Input::GetVKey(VK_RETURN) == true)
+							if (Input::GetVKey(VK_RETURN) == 1)
 							{
-								m_speak = true;
-								enter_flag = true;
-
+								m_speak = 1;
+	
 							}
-						    else if (enter_flag==true&&Input::GetVKey(VK_RETURN) == false)
+
+							if (Input::GetVKey(VK_RETURN) == 2 && key_bflag == 2)
 							{
-								m_speak = false;
-							   enter_flag = false;
-						    }
+								m_speak = 2;
+							}
+									
+						 
+							//if (Input::GetVKey(VK_RETURN) == true)
+							//{
+							//	m_speak = true;
+							//	enter_flag = true;
+
+							//}
+							//else if (enter_flag == true && Input::GetVKey(VK_RETURN) == false)
+							//{
+							//	m_speak = false;
+							//	enter_flag = false;
+							//}
 					}
 					
 					

@@ -147,7 +147,7 @@ void CObjHero::Action()
 	}
 	if (Input::GetVKey(VK_SPACE)==true&&m_bullet_held>0)//ƒŠƒ[ƒh
 	{
-	    
+		
 		if (m_bullet == 6)
 		{
 			m_bullet_held -= 0;
