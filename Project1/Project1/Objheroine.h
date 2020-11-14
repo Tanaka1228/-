@@ -13,7 +13,9 @@ public:
 	void Init(); //イニシャライズ
 	void Action(); //アクション
 	void Draw(); //ドロー
+    int Key_flag(){ return key_flag; }
 private:
-	bool m_sp;//会話
-	bool m_ep;//エンターキー2回目時
+	int m_sp;//会話
+	int m_ep;//エンターキー2回目時
+	int key_flag;
 };
