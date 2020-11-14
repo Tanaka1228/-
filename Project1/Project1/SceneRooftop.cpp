@@ -34,6 +34,9 @@ void CSceneRooftop::InitScene()
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
 
+		//外部グラフィックファイルを読み込み1番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"Enemy1.png", 1, TEX_SIZE_512);//敵グラフィック
+
 	//外部グラフィックファイルを読み込み1番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"ハンドガン.png", 2, TEX_SIZE_512);//ハンドガングラフィック
 
@@ -50,7 +53,6 @@ void CSceneRooftop::InitScene()
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
-	
 	//屋上オブジェクト作成
 	CObjRooftop* objb = new CObjRooftop();
 	Objs::InsertObj(objb, OBJ_ROOF_TOP, 3);

@@ -159,13 +159,13 @@ void CObjBlock::Action()
 					if (m_map[i][j] == 17)//女の子の前でエンター
 					{
 						
-							if (Input::GetVKey(VK_RETURN) == 1)
+							if (Input::GetVKey(VK_RETURN) == true)
 							{
 								m_speak = 1;
 	
 							}
 
-							if (Input::GetVKey(VK_RETURN) == 2 && key_bflag == 2)
+							if (Input::GetVKey(VK_RETURN) == true && key_bflag == 2)
 							{
 								m_speak = 2;
 							}
