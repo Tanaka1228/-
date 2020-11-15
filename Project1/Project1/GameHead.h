@@ -29,7 +29,7 @@ enum OBJ_NAME
 	OBJ_INSTITUTE_BOSS,//研究所ボス
 	OBJ_HEROINE,//ヒロイン
 	OBJ_CHINA_TOWN,//チャイナタウン
-	OBJ_ROOF_TOP_BOSS,
+	OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
 };
 //------------------------------------------------
 

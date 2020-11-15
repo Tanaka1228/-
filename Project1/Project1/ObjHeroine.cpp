@@ -54,7 +54,7 @@ void CObjHeroine::Draw()
 	}
 	if(m_sp == 2)
 	{
-		Font::StrDraw(L"‹’“_‚ğ‚Å‚é", 400, 120, 42, c);
+		Font::StrDraw(L"‹’“_‚ğ‚Å‚Ä‚Ë", 400, 120, 42, c);
 		//this->SetStatus(false);//©g‚Éíœ–½—ß
 		//Font::Delete();
 	}

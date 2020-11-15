@@ -100,7 +100,7 @@ void CObjRooftopBoss::Action()
 	{
 		m_hp -= 1;
 	}
-	if (m_hp <= 0)//HP‚ª‚O‚É‚È‚Á‚½‚ç”jŠü
+	if (m_hp < 0)//HP‚ª‚O‚É‚È‚Á‚½‚ç”jŠü
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);

@@ -170,7 +170,7 @@ void CObjRooftop::Action()
 	}
 
 	//“GoŒ»ƒ‰ƒCƒ“
-	float Xline = hx + (-mx_scroll)+ 300;
+	float Xline = hx + (-mx_scroll)+ 400;
 	float Yline = hy + (my_scroll)-100;
 
 	int ex = ((int)Xline) / 32;
