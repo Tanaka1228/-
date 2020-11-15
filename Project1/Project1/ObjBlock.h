@@ -21,4 +21,5 @@ private:
 	int m_speak;
 	int enter_flag;
 	int key_bflag;
+	int m_time;//ƒ{ƒ^ƒ“§Œä
 };

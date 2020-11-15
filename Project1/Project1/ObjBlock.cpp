@@ -65,6 +65,7 @@ void CObjBlock::Init()
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
 
 	m_speak = false;
+	m_time = 0;
 
 }
 //アクション
@@ -158,28 +159,7 @@ void CObjBlock::Action()
 					CObjHeroine* heroine = (CObjHeroine*)Objs::GetObj(OBJ_HEROINE);
 					key_bflag = heroine->Key_flag();
 
-					if (m_map[i][j]==17)//女の子の前でエンター
-					{
-
-						if (Input::GetVKey(VK_RETURN) == true)
-						{
-							m_speak = 1;
-
-						}
-						if (Input::GetVKey(VK_RETURN) == true && key_bflag == 2)
-						{
-							m_speak = 2;
-						}
-						if (Input::GetVKey(VK_RETURN) == true && key_bflag == 3)
-						{
-							m_speak = 3;
-						}
-						if (Input::GetVKey(VK_RETURN) == true && key_bflag == 4)
-						{
-							m_speak = 4;
-						}
-
-					}
+					
 
 					if (m_map[i][j] == 16)//建物からでると病院の屋上
 					{
@@ -195,8 +175,34 @@ void CObjBlock::Action()
 					}
 					
 				}
+				
 			}
 			
+			if (m_map[i][j]==17)//女の子の前でエンター
+			{
+				m_time++;
+			
+				if (Input::GetVKey(VK_RETURN) == true )
+				{
+					m_speak = 1;
+					
+				}
+				if ((Input::GetVKey(VK_RETURN) == true) && (key_bflag == 2)&&(m_time>200))
+				{
+					m_speak = 2; 
+				}
+				if ((Input::GetVKey(VK_RETURN) == true )&&( key_bflag == 3) && (m_time > 500))
+				{
+				
+					m_speak = 3;
+				}
+				if ((Input::GetVKey(VK_RETURN) == true) && (key_bflag == 4) && (m_time >1000))
+				{
+				
+					m_speak = 4; 
+				}
+
+			}
 		
 		}
 	}
@@ -225,6 +231,10 @@ void CObjBlock::Draw()
 	dst.m_right = 704.0f;
 	dst.m_bottom = 500.0f;
 	Draw::Draw(9, &src, &dst, c, 0.0f);
+
+	wchar_t strt[32];
+	swprintf_s(strt, L"%d", m_time);
+	Font::StrDraw(strt, 10, 100, 28, c);// X  Y 大きさ 
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 25; i++)
