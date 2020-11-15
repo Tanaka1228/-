@@ -21,5 +21,5 @@ private:
 	int m_speak;
 	int enter_flag;
 	int key_bflag;
-	int m_time;//ボタン制御
+	bool m_time;//ボタン制御
 };
