@@ -83,6 +83,7 @@ void CObjHomingBullet::Action()
 
 	//敵機が完全に領域外に出たら敵機を破棄する
 	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+
 	if (check == false)
 	{
 		this->SetStatus(false);//自身に削除命令
