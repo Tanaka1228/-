@@ -50,7 +50,7 @@ void CSceneRooftop::InitScene()
 	Draw::LoadImage(L"病院の屋上の素材.png", 13, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
-	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
+	CObjHero* obj = new CObjHero(400, 800); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 	//屋上オブジェクト作成

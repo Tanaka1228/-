@@ -19,7 +19,7 @@ CObjHomingBullet::CObjHomingBullet(float x, float y)//コンストラクタで受け取った
 //イニシャライズ
 void CObjHomingBullet::Init()
 {
-	m_vx = -1.0f;
+	m_vx = 1.0f;
 	m_vy = 0.0f;
 
 	//当たり判定用HitBoxを作成
@@ -29,7 +29,7 @@ void CObjHomingBullet::Init()
 //アクション
 void CObjHomingBullet::Action()
 {
-	float r = 0.0f;
+
 	//主人公機と誘導弾丸で角度をとる
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	//病院の屋上の情報
@@ -38,24 +38,24 @@ void CObjHomingBullet::Action()
 	//主人公機が存在する場合、誘導角度の計算する
 	if (obj != nullptr)
 	{
-		float x = obj->GetX() - m_x;
-		float y = obj->GetY() - m_y;
-		r = GetAtan2Angle(x, -y);
+		float x = obj->GetX2() + m_x;
+		float y = obj->GetY2() + m_y;
+		float ar = GetAtan2Angle(x, y);
 
 
 		//弾丸の現在の向いている角度を取る
-		float br = GetAtan2Angle(m_vx, -m_vy);
+		float br = GetAtan2Angle(m_vx, m_vy);
 
 		//主人公機と敵機角度があまりにもかけ離れたら
-		if (r - br > 20)
+		if (ar - br > 20)
 		{
 			//移動方向を主人公機の方向にする
-			m_vx = cos(3.14 / 180 * r);
-			m_vy = -sin(3.14 / 180 * r);
+			m_vx = cos(3.14 / 180 * ar);
+			m_vy = -sin(3.14 / 180 * ar);
 		}
 
 		float r = 3.14 / 180.0f;//角度１°
-		if (r < br)
+		if (ar < br)
 		{
 			//移動方向に＋１°加える
 			m_vx = m_vx * cos( r) - m_vy * sin( r);

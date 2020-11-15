@@ -169,16 +169,16 @@ void CObjRooftop::Action()
 		}
 	}
 
-
-	float Xline = hx + (-mx_scroll);
-	float Yline = hy + (-my_scroll);
+	//敵出現ライン
+	float Xline = hx + (mx_scroll)+100;
+	float Yline = hy + (my_scroll)+100;
 
 	int ex = ((int)Xline) / 32;
 	int ey = ((int)Yline) / 32;
 
 	for (int i = 0; i < 25; i++)
 	{
-		//for (int j = 0; j < 55; j++)
+		for (int j = 0; j < 55; j++)
 		
 			if (m_map[i][ex] == 15)
 			{
@@ -478,24 +478,9 @@ void CObjRooftop::Draw()
 				Draw::Draw(13, &src, &dst, c, 0.0f);
 			}
 
-			if (m_map[i][j] == 15)//敵
+			else if (m_map[i][j] == 15)//敵
 			{
-
-				////切り取り位置の設定
-				//src.m_top = 0.0f; //y
-				//src.m_left = 0.0f; //x
-				//src.m_right = 139.0f; //x
-				//src.m_bottom = 131.0f; //y
-
-
-				////表示位置の設定
-				//dst.m_top =i* 32.0f  + my_scroll;            // Y
-				//dst.m_left =j* 32.0f+mx_scroll;      // X
-				//dst.m_right =j* 32.0f+64.0f + mx_scroll;          //  X
-				//dst.m_bottom =i* 32.0f+64.0f + my_scroll;  //  Y
-
-				////0番目に登録したグラフィックをstc・dst・cの情報を元に描画
-				//Draw::Draw(1, &src, &dst, c, 0.0f);
+				;
 			}
 		}
 	}
