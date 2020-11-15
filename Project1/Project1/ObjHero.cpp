@@ -62,10 +62,13 @@ void CObjHero::Init()
     m_ani_frame=2; //描画フレーム
 
 	m_hp = 30;//主人公のHP
+
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
+	gun_type = 0;//　0がリボルバー 1がアサルト
 	m_bullet = 6;//弾丸の弾数
 	m_bullet_held = 30;//弾丸の所持数
-	test = 1;
+	gun_Kama = 1;//銃を構えるフラグ
+	gun_type_flag = 1;//銃の種類フラグ
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -85,7 +88,7 @@ void CObjHero::Action()
 	m_vy = 0.0f;
 	if (Input::GetVKey('A') == true)
 	{
-		if (test == 1)
+		if (gun_Kama == 1)
 		{
 
 			if (m_gun == 1)
@@ -97,16 +100,41 @@ void CObjHero::Action()
 				m_gun = 1;//構えている
 			}
 
-			test = 0;
+			gun_Kama = 0;
+		}
+
+		
+	}
+	else
+	{
+		gun_Kama = 1;
+	}
+
+	if (Input::GetVKey('Q') == true&&m_gun==1)//武器の種類を変える
+	{
+		if (gun_type_flag == 1)
+		{
+			//リボルバー
+			if (gun_type == 0)
+			{
+				gun_type = 1;
+			}
+			//アサルト
+			else if (gun_type == 1)
+			{
+				gun_type = 0;
+			}
+			gun_type_flag = 0;
 		}
 	}
 	else
 	{
-		test = 1;
+		gun_type_flag = 1;
 	}
 	
-
+		
 	
+
 
 	if (m_bullet > 0)//弾数が0以上なら
 	{
@@ -484,16 +512,38 @@ void CObjHero::Draw()
 		}
 	}
 
-	wchar_t str[32];
-	wchar_t strb[32];
-	swprintf_s(str, L"弾数 : %d / 6", m_bullet);
-	swprintf_s(strb, L"弾丸所持数 : %d発", m_bullet_held);
-	Font::StrDraw(str, 10, 560, 22, c);// X  Y 大きさ 
-	Font::StrDraw(strb, 230.0f, 560, 22, c);// X  Y  大きさ 
+	//wchar_t str[32];
+	//swprintf_s(str, L"弾数 : %d / 6", m_bullet);
+	//Font::StrDraw(str, 10, 560, 22, c);// X  Y 大きさ 
+	
 
 	wchar_t strHP[32];
 	swprintf_s(strHP, L"HP : %d", m_hp);
 	Font::StrDraw(strHP, 10, 5, 28, c);// X  Y 大きさ 
+
+	if (gun_type == 0)
+	{
+		wchar_t guntype0[32];
+		swprintf_s(guntype0, L"リボルバー : %d / 6", m_bullet);
+		Font::StrDraw(guntype0, 10, 560, 28, c);// X  Y 大きさ 
+
+		wchar_t strb0[64];
+		swprintf_s(strb0, L"弾丸所持数 : %d発", m_bullet_held);
+		Font::StrDraw(strb0, 300.0f, 560, 22, c);// X  Y  大きさ 
+		
+	}
+	if (gun_type == 1)
+	{
+		wchar_t guntype1[32];
+		swprintf_s(guntype1, L"アサルト : %d / 30", m_bullet);
+		Font::StrDraw(guntype1, 10, 560, 28, c);// X  Y 大きさ 
+
+		wchar_t strb1[64];
+		swprintf_s(strb1, L"弾丸所持数 : %d発", m_bullet_held);
+		Font::StrDraw(strb1, 300.0f, 560, 22, c);// X  Y  大きさ 
+
+	}
+	
 
 }
 

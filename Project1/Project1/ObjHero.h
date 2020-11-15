@@ -51,9 +51,11 @@ private:
 	int m_ani_frame=0; //•`‰æƒtƒŒ[ƒ€
 	int m_hp;//ålŒö‚ÌHP
 	int m_gun;//e‚ÌŒü‚«
+	int gun_type;//e‚Ìí—Ş
 	int m_bullet;//’eŠÛ‚Ì’e”
 	int m_bullet_held;//’eŠÛ‚ÌŠ”
-	int test;
+	int gun_Kama;//e‚ğ\‚¦‚é
+	int gun_type_flag;
 	
 	//block‚Æ‚ÌÕ“Ëó‘ÔŠm”F—p
 	bool m_hit_up;
