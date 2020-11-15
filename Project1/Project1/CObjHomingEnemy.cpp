@@ -27,12 +27,15 @@ void CObjHomingEnemy::Init()
 
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 52, 52, ELEMENT_ENEMY, OBJ_HOMING_ENEMY, 1);
+	Hits::SetHitBox(this, m_x, m_y,132 , 132, ELEMENT_ENEMY, OBJ_HOMING_ENEMY, 1);
 }
 
 //アクション
 void CObjHomingEnemy::Action()
 {
+	//病院の屋上の情報
+	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
+
 	m_time++;
 	if (m_time > 100)
 	{
@@ -63,7 +66,7 @@ void CObjHomingEnemy::Action()
 
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
-	hit->SetPos(m_x, m_y);
+	hit->SetPos(m_x+rooftop->GetScroll(), m_y+rooftop->GetScroll2());
 
 
 	//ホーミング敵機が完全に領域外に出たら敵機を破棄する
@@ -103,11 +106,13 @@ void CObjHomingEnemy::Draw()
 	src.m_right = 139.0f; //x
 	src.m_bottom = 131.0f; //y
 
-	//表示位置の設定
-	dst.m_top = 0.0f + m_y;
-	dst.m_left = 32.0f + 20.0f + m_x;
-	dst.m_right = 0.0f + m_x;
-	dst.m_bottom = 32.0f + 20.0f + m_y;
+	//病院の屋上の情報
+	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
+
+	dst.m_top = 0.0f + m_y + rooftop->GetScroll2();
+	dst.m_left = 32.0f + 100.0f + m_x + rooftop->GetScroll();
+	dst.m_right = 0.0f + m_x + rooftop->GetScroll();
+	dst.m_bottom = 32.0f + 100.0f + m_y + rooftop->GetScroll2();
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(1, &src, &dst, c, 0.0f);

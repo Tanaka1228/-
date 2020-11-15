@@ -32,6 +32,8 @@ void CObjHomingBullet::Action()
 	float r = 0.0f;
 	//ŽålŒö‹@‚Æ—U“±’eŠÛ‚ÅŠp“x‚ð‚Æ‚é
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
+	//•a‰@‚Ì‰®ã‚Ìî•ñ
+	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
 
 	//ŽålŒö‹@‚ª‘¶Ý‚·‚éê‡A—U“±Šp“x‚ÌŒvŽZ‚·‚é
 	if (obj != nullptr)
@@ -75,7 +77,7 @@ void CObjHomingBullet::Action()
 
 	//“G‹@’eŠÛ‚ÌHitBoxXV—pƒ|ƒCƒ“ƒ^[Žæ“¾
 	CHitBox* hit = Hits::GetHitBox(this); //HitBox‚ÌˆÊ’u‚ð’eŠÛ‚ÌˆÊ’u‚ÉXV
-	hit->SetPos(m_x, m_y);
+	hit->SetPos(m_x + rooftop->GetScroll(), m_y + rooftop->GetScroll2());
 
 
 	//“G‹@‚ªŠ®‘S‚É—ÌˆæŠO‚Éo‚½‚ç“G‹@‚ð”jŠü‚·‚é
@@ -109,11 +111,21 @@ void CObjHomingBullet::Draw()
 	src.m_right = 96.0f; //x 
 	src.m_bottom = 32.0f; //y
 
+	////•\Ž¦ˆÊ’u‚ÌÝ’è
+	//dst.m_top = 0.0f + m_y;//c‚ÌˆÊ’u•ÏX
+	//dst.m_left = 0.0f + m_x;
+	//dst.m_right = 45.0f + m_x;
+	//dst.m_bottom = 32.0f + m_y;
+
+
+	//•a‰@‚Ì‰®ã‚Ìî•ñ
+	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
+
 	//•\Ž¦ˆÊ’u‚ÌÝ’è
-	dst.m_top = 0.0f + m_y;//c‚ÌˆÊ’u•ÏX
-	dst.m_left = 0.0f + m_x;
-	dst.m_right = 45.0f + m_x;
-	dst.m_bottom = 32.0f + m_y;
+	dst.m_top = 0.0f + m_y + rooftop->GetScroll2();
+	dst.m_left = 0.0f + m_x + rooftop->GetScroll();
+	dst.m_right = 45.0f + m_x + rooftop->GetScroll();
+	dst.m_bottom = 32.0f + m_y + rooftop->GetScroll2();
 
 	Draw::Draw(3, &src, &dst, c, r);
 }
