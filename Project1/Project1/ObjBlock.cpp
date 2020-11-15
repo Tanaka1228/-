@@ -180,7 +180,7 @@ void CObjBlock::Action()
 			
 			if (m_map[i][j]==17)//女の子の前でエンター
 			{
-				if (m_time == true) {
+				if (Input::GetVKey(VK_RETURN) == true) {
 					
 
 					if (Input::GetVKey(VK_RETURN) == true)
@@ -198,20 +198,20 @@ void CObjBlock::Action()
 					{
 
 						m_speak = 3;
-					
+						
 					}
 					if ((Input::GetVKey(VK_RETURN) == true) && (key_bflag == 4))
 					{
 
 						m_speak = 4;
-					
+						
 					}
-
 					
+					Input::GetVKey(VK_RETURN) == false;
 				}
 				else
 				{
-					m_time = false;
+					Input::GetVKey(VK_RETURN) == true;
 				}
 			}
 		

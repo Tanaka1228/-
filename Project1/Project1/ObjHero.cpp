@@ -65,7 +65,7 @@ void CObjHero::Init()
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
 	m_bullet = 6;//弾丸の弾数
 	m_bullet_held = 30;//弾丸の所持数
-	test = 0;
+	test = 1;
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -84,17 +84,23 @@ void CObjHero::Action()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
-	if (Input::GetVKey('A') == true && m_gun == 1)
+	if (test == 1)
 	{
-	m_gun = 0;//構えていない
-	Sleep(14);
-	}
+		if (Input::GetVKey('A') == true && m_gun == 1)
+		{
+			m_gun = 0;//構えていない
+		}
 
-	else if (Input::GetVKey('A') == true && m_gun == 0)
+		else if (Input::GetVKey('A') == true && m_gun == 0)
+		{
+			m_gun = 1;//構えている
+		}
+		test = 0;
+	}
+	else
 	{
-		m_gun = 1;//構えている
+		test = 1;
 	}
-
 	
 
 	
