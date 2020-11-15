@@ -48,26 +48,26 @@ void CObjHeroine::Draw()
 	if (m_sp == 1)
 	{
 		
-		Font::StrDraw(L"ようこそバーへ", 400, 120, 30, c);
+		Font::StrDraw(L"女の子:ようこそバーへ,一回女の子に近づくと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
 		key_flag = 2;
 		
 	}
 	if(m_sp == 2)
 	{
-		Font::StrDraw(L"一回女の子に近づくと", 400, 120, 30, c);
+		Font::StrDraw(L"女の子：ここは拠点です", 100, 500, 30, c);
 		key_flag = 3;
 		//this->SetStatus(false);//自身に削除命令
 		//Font::Delete();
 	}
 	if (m_sp == 3)
 	{
-		Font::StrDraw(L"会話が進むよ", 400, 120, 30, c);
+		Font::StrDraw(L"女の子：ああああ", 100, 500, 30, c);
 		key_flag = 4;
 		
 	}
 	if (m_sp == 4)
 	{
-		Font::StrDraw(L"拠点をでてね", 400, 120, 30, c);
+		Font::StrDraw(L"女の子：拠点をでてね", 100, 500, 30, c);
 		key_flag = 5;
 	
 	}

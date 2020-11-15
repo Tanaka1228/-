@@ -479,8 +479,8 @@ void CObjHero::Draw()
 	wchar_t strb[32];
 	swprintf_s(str, L"’e” : %d / 6", m_bullet);
 	swprintf_s(strb, L"’eŠÛŠ” : %d”­", m_bullet_held);
-	Font::StrDraw(str, 10, 550, 30, c);// X  Y ‘å‚«‚³ 
-	Font::StrDraw(strb, 230.0f, 550, 30, c);// X  Y  ‘å‚«‚³ 
+	Font::StrDraw(str, 10, 560, 22, c);// X  Y ‘å‚«‚³ 
+	Font::StrDraw(strb, 230.0f, 560, 22, c);// X  Y  ‘å‚«‚³ 
 
 	wchar_t strHP[32];
 	swprintf_s(strHP, L"HP : %d", m_hp);
