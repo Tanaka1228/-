@@ -4,7 +4,7 @@
 //戻り値 bool     :true=計算成功　false=計算失敗
 //内容
 //引数のベクトルを正規化しその値をvx,vy変更
-#include <corecrt_math.h>
+#include <math.h>
 bool UnitVec(float* vx, float* vy)
 {
 
@@ -81,7 +81,7 @@ bool CheckWindow(float pos_x, float pos_y,
 float GetAtan2Angle(float w, float h)
 {
 	//atan2で角度を求める
-	float r = atan2(h, w) * 180.0f / 3.14f;
+	float r = atan2(w, h) * 180.0f / 3.14f;
 
 	//-180°～-0°を180°～360°に変換
 	if (r < 0)

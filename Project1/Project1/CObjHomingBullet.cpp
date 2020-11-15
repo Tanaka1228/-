@@ -38,13 +38,13 @@ void CObjHomingBullet::Action()
 	//éÂêlåˆã@Ç™ë∂ç›Ç∑ÇÈèÍçáÅAóUì±äpìxÇÃåvéZÇ∑ÇÈ
 	if (obj != nullptr)
 	{
-		float x = obj->GetX2() + m_x;
-		float y = obj->GetY2() + m_y;
-		float ar = GetAtan2Angle(x, y);
+		float x = obj->GetX() - m_x;
+		float y = obj->GetY() - m_y;
+		float ar = GetAtan2Angle(x, -y);
 
 
 		//íeä€ÇÃåªç›ÇÃå¸Ç¢ÇƒÇ¢ÇÈäpìxÇéÊÇÈ
-		float br = GetAtan2Angle(m_vx, m_vy);
+		float br = GetAtan2Angle(m_vx, -m_vy);
 
 		//éÂêlåˆã@Ç∆ìGã@äpìxÇ™Ç†Ç‹ÇËÇ…Ç‡Ç©ÇØó£ÇÍÇΩÇÁ
 		if (ar - br > 20)
@@ -55,6 +55,7 @@ void CObjHomingBullet::Action()
 		}
 
 		float r = 3.14 / 180.0f;//äpìxÇPÅã
+
 		if (ar < br)
 		{
 			//à⁄ìÆï˚å¸Ç…Å{ÇPÅãâ¡Ç¶ÇÈ
