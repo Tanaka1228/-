@@ -30,6 +30,7 @@ enum OBJ_NAME
 	OBJ_HEROINE,//ヒロイン
 	OBJ_CHINA_TOWN,//チャイナタウン
 	OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
+	OBJ_GUN,//武器銃
 };
 //------------------------------------------------
 
@@ -97,6 +98,7 @@ struct UserData
 #include"ObjHeroine.h"
 #include"ObjChinaTown.h"
 #include"CObjRooftopBoss.h"
+#include"ObjGun.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------

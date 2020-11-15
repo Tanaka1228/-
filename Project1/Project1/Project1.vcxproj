@@ -152,6 +152,7 @@
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjFin.h" />
     <ClInclude Include="ObjGameOver.h" />
+    <ClInclude Include="ObjGun.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjHeroine.h" />
     <ClInclude Include="ObjInstituteBoss.h" />
@@ -210,6 +211,7 @@
     <ClCompile Include="ObjEnd.cpp" />
     <ClCompile Include="ObjFin.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
+    <ClCompile Include="ObjGun.cpp" />
     <ClCompile Include="ObjHeroine.cpp" />
     <ClCompile Include="ObjInstituteBoss.cpp" />
     <ClCompile Include="ObjMain.cpp" />

@@ -198,6 +198,9 @@
     <ClInclude Include="CObjBullet.h">
       <Filter>ソース ファイル\Character</Filter>
     </ClInclude>
+    <ClInclude Include="ObjGun.h">
+      <Filter>ソース ファイル\Character</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -348,6 +351,9 @@
       <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
     </ClCompile>
     <ClCompile Include="CObjBullet.cpp">
+      <Filter>ソース ファイル\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGun.cpp">
       <Filter>ソース ファイル\Character</Filter>
     </ClCompile>
   </ItemGroup>

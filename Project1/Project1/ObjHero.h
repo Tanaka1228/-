@@ -36,7 +36,14 @@ public:
 	void SetLeft(bool b) { m_hit_left = b; }
 	void SetRight(bool b) { m_hit_right = b; }
 
-	float GetB();
+	float GetB();//弾丸の向き
+	int Get_Gun() { return m_gun; }//銃を構えているか構えていないかを返す
+	int Get_Gun_Kama() { return gun_Kama; ; }//構えているかのフラグ
+	int Get_GunType() { return gun_type; }//銃の種類を返す
+	int Get_Gun_Type_Flag() { return gun_type_flag; }//銃の種類フラグ
+
+	int Get_AniFlame() { return m_ani_frame; }
+
 private:
 	float m_px; //位置
 	float m_py;
