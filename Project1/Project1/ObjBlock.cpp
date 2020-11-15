@@ -38,7 +38,7 @@ void CObjBlock::Init()
 		{0,0,15,3,4,5,4,5,4,5,0,1,0,18,0,0,19,0,0,0,0,0,15,0,0},
 		{0,0,15,3,6,7,6,7,6,7,0,1,2,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,0,0,0,0,0,0,0,0,1,2,0,0,0,17,0,0,0,0,0,15,0,0},
-		{0,0,15,8,8,8,8,8,8,8,8,8,2,0,0,0,0,0,0,0,0,0,15,0,0},
+		{0,0,15,8,8,8,8,8,8,8,8,8,2,0,0,0,20,0,0,0,0,0,15,0,0},
 		{0,0,15,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0},
 		{0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0},
@@ -89,7 +89,7 @@ void CObjBlock::Action()
 		{
 			
 
-			if (m_map[i][j] > 0)
+			if (m_map[i][j] > 0&&m_map[i][j]!=20)
 			{
 				
 				//要素番号を座標に変更
@@ -157,33 +157,7 @@ void CObjBlock::Action()
 					CObjHeroine* heroine = (CObjHeroine*)Objs::GetObj(OBJ_HEROINE);
 					key_bflag = heroine->Key_flag();
 
-					if (m_map[i][j] == 17)//女の子の前でエンター
-					{
-						
-							if (Input::GetVKey(VK_RETURN) == true)
-							{
-								m_speak = 1;
-	
-							}
-
-							if (Input::GetVKey(VK_RETURN) == true && key_bflag == 2)
-							{
-								m_speak = 2;
-							}
-									
-						 
-							//if (Input::GetVKey(VK_RETURN) == true)
-							//{
-							//	m_speak = true;
-							//	enter_flag = true;
-
-							//}
-							//else if (enter_flag == true && Input::GetVKey(VK_RETURN) == false)
-							//{
-							//	m_speak = false;
-							//	enter_flag = false;
-							//}
-					}
+					
 					
 					
 
@@ -200,6 +174,28 @@ void CObjBlock::Action()
 						Scene::SetScene(new CSceneChinaTown());
 					}
 
+				}
+			}
+
+			if (m_map[i][j] == 20)//女の子の前でエンター
+			{
+
+				if (Input::GetVKey(VK_RETURN) == true)
+				{
+					m_speak = 1;
+
+				}
+				if (Input::GetVKey(VK_RETURN) == true && key_bflag == 2)
+				{
+					m_speak = 2;
+				}
+				if (Input::GetVKey(VK_RETURN) == true && key_bflag == 3)
+				{
+					m_speak = 3;
+				}
+				if (Input::GetVKey(VK_RETURN) == true && key_bflag == 4)
+				{
+					m_speak = 4;
 				}
 			}
 		}
