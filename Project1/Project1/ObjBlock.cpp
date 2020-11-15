@@ -182,36 +182,37 @@ void CObjBlock::Action()
 			{
 				if (Input::GetVKey(VK_RETURN) == true) {
 					
-
-					if (Input::GetVKey(VK_RETURN) == true)
+					if (m_time == true)
 					{
-						m_speak = 1;
-						
+						if (key_bflag==1)
+						{
+							m_speak = 1;
+
+						}
+
+						if (key_bflag == 2)
+						{
+							m_speak = 2;
+
+						}
+						if ((key_bflag == 3))
+						{
+
+							m_speak = 3;
+
+						}
+						if ((key_bflag == 4))
+						{
+							m_speak = 4;
+							
+						}
+						m_time = false;
 					}
 				
-					if ((Input::GetVKey(VK_RETURN) == true) && (key_bflag == 2))
-					{
-						m_speak = 2;
-						
-					}
-					if ((Input::GetVKey(VK_RETURN) == true) && (key_bflag == 3))
-					{
-
-						m_speak = 3;
-						
-					}
-					if ((Input::GetVKey(VK_RETURN) == true) && (key_bflag == 4))
-					{
-
-						m_speak = 4;
-						
-					}
-					
-					Input::GetVKey(VK_RETURN) == false;
 				}
 				else
 				{
-					Input::GetVKey(VK_RETURN) == true;
+					m_time = true;
 				}
 			}
 		

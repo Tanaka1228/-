@@ -83,19 +83,22 @@ void CObjHero::Action()
 	//移動ベクトルの破棄
 	m_vx = 0.0f;
 	m_vy = 0.0f;
-
-	if (test == 1)
+	if (Input::GetVKey('A') == true)
 	{
-		if (Input::GetVKey('A') == true && m_gun == 1)
+		if (test == 1)
 		{
-			m_gun = 0;//構えていない
-		}
 
-		else if (Input::GetVKey('A') == true && m_gun == 0)
-		{
-			m_gun = 1;//構えている
+			if (m_gun == 1)
+			{
+				m_gun = 0;//構えていない
+			}
+			else if (m_gun == 0)
+			{
+				m_gun = 1;//構えている
+			}
+
+			test = 0;
 		}
-		test = 0;
 	}
 	else
 	{

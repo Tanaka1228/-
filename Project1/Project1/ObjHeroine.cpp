@@ -16,6 +16,7 @@ using namespace GameL;
 CObjHeroine::CObjHeroine()
 {
 	m_sp = false;
+	key_flag = 1;
 }
 
 
@@ -68,7 +69,7 @@ void CObjHeroine::Draw()
 	if (m_sp == 4)
 	{
 		Font::StrDraw(L"—‚ÌqF‹’“_‚ğ‚Å‚Ä‚Ë", 100, 500, 30, c);
-		key_flag = 5;
+		key_flag = 1;
 	
 	}
 
