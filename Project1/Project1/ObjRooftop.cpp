@@ -92,12 +92,18 @@ void CObjRooftop::Action()
 		my_scroll -=-6.0f+ hero->GetVY(); //主人公は本来動くべき分の値をm_scrollに加える
 	}
 
+	float Xline = hx + (-mx_scroll);
+	float Yline = hy + (-my_scroll);
+
+	int ex = ((int)Xline) / 32;
+	int ey = ((int)Yline) / 32;
+
 	//m_mapの全要素にアクセス
 	for (int i = 0; i < 25; i++)
 	{
 		for (int j = 0; j < 55; j++)
 		{
-			if (m_map[i][j] > 0&&m_map[i][j]!=15)
+			if (m_map[i][j] > 0)
 			{
 
 				//要素番号を座標に変更
@@ -107,6 +113,7 @@ void CObjRooftop::Action()
 				//主人公とブロックの当たり判定
 				if ((hx + (-mx_scroll) + 64.0f > x) && (hx + (-mx_scroll) < x + 64.0f) && (hy + (-my_scroll) + 64.0f > y) && (hy + (-my_scroll) < y + 64.0f))
 				{
+
 					//上下左右判定
 
 					//vectorの作成
@@ -166,29 +173,18 @@ void CObjRooftop::Action()
 					}
 				}
 
+				if (m_map[i][j] == 15)
+				{
+					//敵機オブジェクト作成
+					CObjEnemy* obj_enemy = new CObjEnemy(ex * 32, ey * 32); //敵機オブジェクト作成
+					Objs::InsertObj(obj_enemy, OBJ_ENEMY, 4); //作った敵機オブジェクトをオブジェクトマネージャーに登録
+
+				}
 			}
 		}
 	}
 
-	float Xline = hx + (-mx_scroll) + 500;
-	float Yline = hy + (-my_scroll) + 200;
 
-	int ex = ((int)Xline) / 32;
-	int ey = ((int)Yline) / 32;
-
-	for (int i = 0; i < 25; i++)
-	{
-		for (int j = 0; j < 55; j++)
-		{
-			if (m_map[i][ex] == 15)
-			{
-				//敵機オブジェクト作成
-				CObjEnemy* obj_enemy = new CObjEnemy(ex*32,ey*32); //敵機オブジェクト作成
-				Objs::InsertObj(obj_enemy, OBJ_ENEMY, 4); //作った敵機オブジェクトをオブジェクトマネージャーに登録
-
-			}
-		}
-	}
 
 }
 //ドロー
