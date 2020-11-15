@@ -87,10 +87,10 @@ void CObjHero::Action()
 	if (Input::GetVKey('A') == true && m_gun == 1)
 	{
 	m_gun = 0;//\‚¦‚Ä‚¢‚È‚¢
-	Sleep(5);
+	Sleep(10);
 	}
 
-	else if (Input::GetVKey('A') == true && m_gun == 0&&Sleep)
+	else if (Input::GetVKey('A') == true && m_gun == 0)
 	{
 		m_gun = 1;//\‚¦‚Ä‚¢‚é
 	}

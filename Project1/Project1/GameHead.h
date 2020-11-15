@@ -29,6 +29,7 @@ enum OBJ_NAME
 	OBJ_INSTITUTE_BOSS,//研究所ボス
 	OBJ_HEROINE,//ヒロイン
 	OBJ_CHINA_TOWN,//チャイナタウン
+	OBJ_ROOF_TOP_BOSS,
 };
 //------------------------------------------------
 
@@ -95,6 +96,7 @@ struct UserData
 #include"ObjInstituteBoss.h"
 #include"ObjHeroine.h"
 #include"ObjChinaTown.h"
+#include"CObjRooftopBoss.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------

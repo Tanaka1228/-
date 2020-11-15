@@ -43,6 +43,9 @@
     <Filter Include="ソース ファイル\Character">
       <UniqueIdentifier>{cd04ba3a-ba48-42ae-9779-a49aa0b96314}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\SceneMain\Enemy\EnemyBoss">
+      <UniqueIdentifier>{3c5549f3-b998-40db-a418-8f19a8f1ee12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -192,6 +195,9 @@
     <ClInclude Include="SceneTyainataun.h">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClInclude>
+    <ClInclude Include="CObjRooftopBoss.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -340,6 +346,9 @@
     </ClCompile>
     <ClCompile Include="SceneTyainataun.cpp">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjRooftopBoss.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

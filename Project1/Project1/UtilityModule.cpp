@@ -81,7 +81,7 @@ bool CheckWindow(float pos_x, float pos_y,
 float GetAtan2Angle(float w, float h)
 {
 	//atan2‚ÅŠp“x‚ğ‹‚ß‚é
-	float r = atan2(w, h) * 180.0f / 3.14f;
+	float r = atan2(h, w) * 180.0f / 3.14f;
 
 	//-180‹`-0‹‚ğ180‹`360‹‚É•ÏŠ·
 	if (r < 0)

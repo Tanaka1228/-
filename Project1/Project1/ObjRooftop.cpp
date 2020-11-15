@@ -183,8 +183,8 @@ void CObjRooftop::Action()
 			if (m_map[i][ex] == 15)
 			{
 				//誘導敵機オブジェクト作成
-				CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(ex * 32, i * 32); //誘導敵機オブジェクト作成
-				Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+				CObjRooftopBoss* obj_rooftop_boss = new CObjRooftopBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
+				Objs::InsertObj(obj_rooftop_boss, OBJ_ROOF_TOP_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 
 				m_map[i][ex] = 0;
 			}

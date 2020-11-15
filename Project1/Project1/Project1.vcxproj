@@ -162,6 +162,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjTitle.h" />
+    <ClInclude Include="CObjRooftopBoss.h" />
     <ClInclude Include="SceneBlock.h" />
     <ClInclude Include="SceneChinaTown.h" />
     <ClInclude Include="SceneEnd.h" />
@@ -213,6 +214,7 @@
     <ClCompile Include="ObjInstituteBoss.cpp" />
     <ClCompile Include="ObjMain.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />
+    <ClCompile Include="CObjRooftopBoss.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
     <ClCompile Include="SceneChinaTown.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
