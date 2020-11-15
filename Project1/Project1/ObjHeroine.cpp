@@ -47,12 +47,14 @@ void CObjHeroine::Draw()
 
 	if (m_sp == 1)
 	{
+		
 		Font::StrDraw(L"こんにちは", 400, 120, 42, c);
 		key_flag = 2;
+		
 	}
 	if(m_sp == 2)
 	{
-		Font::StrDraw(L"外に出て", 400, 120, 42, c);
+		Font::StrDraw(L"拠点をでる", 400, 120, 42, c);
 		//this->SetStatus(false);//自身に削除命令
 		//Font::Delete();
 	}

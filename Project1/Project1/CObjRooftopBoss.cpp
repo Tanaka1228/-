@@ -23,6 +23,7 @@ void CObjRooftopBoss::Init()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 	m_time = 0;
+	m_timeboss = 0;
 	m_hp = 18;
 
 
@@ -37,17 +38,32 @@ void CObjRooftopBoss::Action()
 	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
 
 	m_time++;
+	m_timeboss++;
 	if (m_time > 50)
 	{
 
 		m_time = 0;
+
 		//—U“±’eŠÛì¬
 		CObjHomingBullet* obj_homing_bullet = new CObjHomingBullet(m_x, m_y); //—U“±’eƒIƒuƒWƒFƒNƒgì¬
 		Objs::InsertObj(obj_homing_bullet, OBJ_HOMING_BULLET, 4); //—U“±’eŠÛ“o˜^
 
 
 	}
+	if (m_timeboss > 100)
+	{
+		m_timeboss = 0;
 
+		//19”­“®Žž”­ŽË
+		CObjAngleBullet* obj_b;
+		for (int i = 0; i < 360; i += 20)
+		{
+			//Šp“xi‚ÅŠp“x’eŠÛ”­ŽË
+			obj_b = new CObjAngleBullet(m_x, m_y, i, 5.0f);
+			Objs::InsertObj(obj_b, OBJ_ANGLE_BULLET, 4);
+		}
+	}
+	
 
 	//ˆÚ“®•ûŒü
 	m_vx = 0.0f;
@@ -88,6 +104,7 @@ void CObjRooftopBoss::Action()
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
+		Sleep(1000);
 		Scene::SetScene(new CSceneFin());
 	}
 }

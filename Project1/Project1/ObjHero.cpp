@@ -87,7 +87,7 @@ void CObjHero::Action()
 	if (Input::GetVKey('A') == true && m_gun == 1)
 	{
 	m_gun = 0;//ç\Ç¶ÇƒÇ¢Ç»Ç¢
-	Sleep(10);
+	Sleep(14);
 	}
 
 	else if (Input::GetVKey('A') == true && m_gun == 0)

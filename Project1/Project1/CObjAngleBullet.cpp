@@ -31,17 +31,20 @@ void CObjAngleBullet::Init()
 //アクション
 void CObjAngleBullet::Action()
 {
+	//病院の屋上の情報
+	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
+
 	//移動
 	m_x += m_vx * m_speed;
 	m_y -= m_vy * m_speed;
 
 	//弾丸のHitBox更新用ポインター取得
 	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
-	hit->SetPos(m_x, m_y);
+	hit->SetPos(m_x+rooftop->GetScroll(), m_y + rooftop->GetScroll2());
 
 
 	//敵機が完全に領域外に出たら敵機を破棄する
-	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 1700.0f, 700.0f);
 	if (check == false)
 	{
 		this->SetStatus(false);//自身に削除命令
@@ -70,11 +73,20 @@ void CObjAngleBullet::Draw()
 	src.m_right = 26.0f; //x 
 	src.m_bottom = 19.0f; //y
 
+	////表示位置の設定
+	//dst.m_top = 5.0f + m_y;//縦の位置変更
+	//dst.m_left = 0.0f + m_x;
+	//dst.m_right = 30.0f + m_x;
+	//dst.m_bottom = 19.0f + m_y;
+
+	//病院の屋上の情報
+	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
+
 	//表示位置の設定
-	dst.m_top = 5.0f + m_y;//縦の位置変更
-	dst.m_left = 0.0f + m_x;
-	dst.m_right = 30.0f + m_x;
-	dst.m_bottom = 19.0f + m_y;
+	dst.m_top = 5.0f + m_y + rooftop->GetScroll2();
+	dst.m_left = 0.0f + m_x + rooftop->GetScroll();
+	dst.m_right = 30.0f + m_x + rooftop->GetScroll();
+	dst.m_bottom = 19.0f + m_y + rooftop->GetScroll2();
 
 	Draw::Draw(3, &src, &dst, c,m_r);
 }
