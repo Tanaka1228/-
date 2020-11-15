@@ -97,7 +97,7 @@ void CObjRooftop::Action()
 	{
 		for (int j = 0; j < 55; j++)
 		{
-			if (m_map[i][j] > 0)
+			if (m_map[i][j] > 0&&m_map[i][j]!=15)
 			{
 
 				//要素番号を座標に変更
@@ -105,13 +105,13 @@ void CObjRooftop::Action()
 				float y = i * 32.0f;
 
 				//主人公とブロックの当たり判定
-				if ((hx +(-mx_scroll)+ 64.0f > x) && (hx +(-mx_scroll)< x + 64.0f) && (hy+(-my_scroll) + 64.0f > y) && (hy+(-my_scroll) < y + 64.0f))
+				if ((hx + (-mx_scroll) + 64.0f > x) && (hx + (-mx_scroll) < x + 64.0f) && (hy + (-my_scroll) + 64.0f > y) && (hy + (-my_scroll) < y + 64.0f))
 				{
 					//上下左右判定
 
 					//vectorの作成
-					float vx = (hx +(-mx_scroll))- x;
-					float vy = (hy +(-my_scroll))- y;
+					float vx = (hx + (-mx_scroll)) - x;
+					float vy = (hy + (-my_scroll)) - y;
 
 					//長さを求める
 					float len = sqrt(vx * vx + vy * vy);//sqrt関数は、平方根を返す
@@ -126,7 +126,7 @@ void CObjRooftop::Action()
 						r = 360.0f - abs(r);
 
 					//lenがある一定の長さのより短い場合判定に入る
-					if (len <44.0f)
+					if (len < 44.0f)
 					{
 
 						//角度で上下左右を判定
@@ -134,14 +134,14 @@ void CObjRooftop::Action()
 						{
 							//右
 							hero->SetRight(true);//主人公の左の部分が衝突している
-							hero->SetX2(x + 32.0f+(mx_scroll));//ブロックの位置+主人公の幅
+							hero->SetX2(x + 32.0f + (mx_scroll));//ブロックの位置+主人公の幅
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 45 && r < 135)
 						{
 							//上
 							hero->SetDown(true);//主人公の下の部分が衝突している
-							hero->SetY2(y - 32.0f+(my_scroll));//ブロックの位置-主人公の幅
+							hero->SetY2(y - 32.0f + (my_scroll));//ブロックの位置-主人公の幅
 							hero->SetVY(0.0f);//-VX*反発係数
 
 						}
@@ -149,22 +149,47 @@ void CObjRooftop::Action()
 						{
 							//左
 							hero->SetLeft(true);//主人公の右の部分が衝突している
-							hero->SetX2(x - 32.0f+(mx_scroll));//ブロックの位置-主人公の幅
+							hero->SetX2(x - 32.0f + (mx_scroll));//ブロックの位置-主人公の幅
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 225 && r < 315)
 						{
 							//下
 							hero->SetUp(true);//主人公の上の部分が衝突している
-							hero->SetY2(y + 32.0f+(my_scroll));//ブロックの位置+主人公の幅
+							hero->SetY2(y + 32.0f + (my_scroll));//ブロックの位置+主人公の幅
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
+						////敵機オブジェクト作成
+						//CObjEnemy* obj_enemy = new CObjEnemy(); //敵機オブジェクト作成
+						//Objs::InsertObj(obj_enemy, OBJ_ENEMY, 4); //作った敵機オブジェクトをオブジェクトマネージャーに登録
+
 					}
 				}
+
 			}
 		}
 	}
-	
+
+	float Xline = hx + (-mx_scroll) + 500;
+	float Yline = hy + (-my_scroll) + 200;
+
+	int ex = ((int)Xline) / 32;
+	int ey = ((int)Yline) / 32;
+
+	for (int i = 0; i < 25; i++)
+	{
+		for (int j = 0; j < 55; j++)
+		{
+			if (m_map[i][ex] == 15)
+			{
+				//敵機オブジェクト作成
+				CObjEnemy* obj_enemy = new CObjEnemy(ex*32,ey*32); //敵機オブジェクト作成
+				Objs::InsertObj(obj_enemy, OBJ_ENEMY, 4); //作った敵機オブジェクトをオブジェクトマネージャーに登録
+
+			}
+		}
+	}
+
 }
 //ドロー
 void CObjRooftop::Draw()
@@ -452,12 +477,24 @@ void CObjRooftop::Draw()
 				Draw::Draw(13, &src, &dst, c, 0.0f);
 			}
 
-			//if (m_map[i][j] == 15)//草
+			//if (m_map[i][j] == 15)//teki
 			//{
-			//	//敵機オブジェクト作成
-			//	CObjEnemy* obj_enemy = new CObjEnemy(800, 300); //敵機オブジェクト作成
-			//	Objs::InsertObj(obj_enemy, OBJ_ENEMY, 3); //作った敵機オブジェクトをオブジェクトマネージャーに登録
 
+			//	//切り取り位置の設定
+			//	src.m_top = 0.0f; //y
+			//	src.m_left = 0.0f; //x
+			//	src.m_right = 139.0f; //x
+			//	src.m_bottom = 131.0f; //y
+
+
+			//	//表示位置の設定
+			//	dst.m_top =i* 0.0f  + my_scroll;
+			//	dst.m_left =j* 32.0f +mx_scroll;
+			//	dst.m_right =j* 0.0f + mx_scroll;
+			//	dst.m_bottom =i* 32.0f + my_scroll;
+
+			//	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
+			//	Draw::Draw(1, &src, &dst, c, 0.0f);
 			//}
 		}
 	}

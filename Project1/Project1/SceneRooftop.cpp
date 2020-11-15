@@ -57,6 +57,7 @@ void CSceneRooftop::InitScene()
 	CObjRooftop* objb = new CObjRooftop();
 	Objs::InsertObj(objb, OBJ_ROOF_TOP, 3);
 
+
 }
 
 

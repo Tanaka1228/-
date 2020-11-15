@@ -12,8 +12,8 @@ using namespace GameL;
 //コンストラクタ
 CObjEnemy::CObjEnemy(float x, float y)
 {
-	m_x = x;
-	m_y = y;
+	/*m_x = x;
+	m_y = y;*/
 }
 
 
@@ -83,11 +83,14 @@ void CObjEnemy::Draw()
 	src.m_right = 139.0f; //x
 	src.m_bottom = 131.0f; //y
 
+	//病院の屋上の情報
+	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
+
 	//表示位置の設定
-	dst.m_top = 0.0f+m_y;
-	dst.m_left = 32.0f + 10.0f +m_x;
-	dst.m_right = 0.0f+m_x;
-	dst.m_bottom = 32.0f+10.0f+m_y;
+	dst.m_top = 0.0f+m_y+rooftop->GetScroll2();
+	dst.m_left = 32.0f + 10.0f +m_x+rooftop->GetScroll();
+	dst.m_right = 0.0f+m_x + rooftop->GetScroll();
+	dst.m_bottom = 32.0f+10.0f+m_y + rooftop->GetScroll2();
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(1, &src, &dst, c, 0.0f);

@@ -8,7 +8,7 @@ using namespace GameL;
 class CObjEnemy : public CObj
 {
 public:
-	CObjEnemy(float x,float y);//コンストラクタ位置情報	をもらう
+	CObjEnemy(float x, float y);//コンストラクタ位置情報	をもらう
 	~CObjEnemy() {};
 	void Init(); //イニシャライズ
 	void Action(); //アクション

@@ -16,10 +16,10 @@ public:
 	void Draw(); //ÉhÉçÅ[
 
 	void SetScroll(float s) { mx_scroll = s; }
-	float GetScroll() { return mx_scroll; }
+	float GetScroll() { return mx_scroll; }//X
 	
 	void SetScroll2(float s) { my_scroll = s; }
-	float GetScroll2() { return my_scroll; }
+	float GetScroll2() { return my_scroll; }//Y
 
 private:
 	
