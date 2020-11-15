@@ -4,6 +4,7 @@
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
+#include"GameL/HitBoxManager.h"
 
 #include"GameHead.h"
 #include"ObjBlock.h"
@@ -64,7 +65,7 @@ void CObjBlock::Init()
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
 
 	m_speak = false;
-	
+
 }
 //ƒAƒNƒVƒ‡ƒ“
 void CObjBlock::Action()
@@ -203,6 +204,7 @@ void CObjBlock::Action()
 			}
 		}
 	}
+	     
 
 	
 }
