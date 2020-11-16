@@ -223,6 +223,7 @@ void CObjHero::Action()
 		}
 	}//------------------------------------------------------------------------------------------------------
 	
+	//リボルバーのリロード
 	if (Input::GetVKey(VK_SPACE) == true && m_bullet_held > 0)//リロード
 	{
 
@@ -278,58 +279,224 @@ void CObjHero::Action()
 		}
 
 	}
-
+	//アサルトのリロード
 	if (Input::GetVKey(VK_SPACE) == true && ass_bullet_held > 0)//リロードアサルト
 	{
-
-		if (ass_bullet == 6)
+		if (ass_bullet == 30)
 		{
 			ass_bullet_held -= 0;
 			if (ass_bullet_held > 0) {
 				ass_bullet += 0;
 			}
-
 		}
-		if (ass_bullet == 5)
+		if (ass_bullet == 29)
 		{
 			ass_bullet_held -= 1;
 			if (ass_bullet_held > 0) {
 				ass_bullet += 1;
 			}
 		}
-		if (ass_bullet == 4)
+		if (ass_bullet == 28)
 		{
 			ass_bullet_held -= 2;
 			if (ass_bullet_held > 0) {
 				ass_bullet += 2;
 			}
 		}
-		if (ass_bullet == 3)
+		if (ass_bullet == 27)
 		{
 			ass_bullet_held -= 3;
 			if (ass_bullet_held > 0) {
 				ass_bullet += 3;
 			}
 		}
-		if (ass_bullet == 2)
+		if (ass_bullet == 26)
 		{
 			ass_bullet_held -= 4;
 			if (ass_bullet_held > 0) {
 				ass_bullet += 4;
 			}
 		}
-		if (ass_bullet == 1)
+		if (ass_bullet == 25)
 		{
 			ass_bullet_held -= 5;
 			if (ass_bullet_held > 0) {
 				ass_bullet += 5;
 			}
 		}
-		if (ass_bullet == 0)
+		if (ass_bullet == 24)
 		{
 			ass_bullet_held -= 6;
 			if (ass_bullet_held > 0) {
 				ass_bullet += 6;
+			}
+		}
+		if (ass_bullet == 23)
+		{
+			ass_bullet_held -= 7;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 7;
+			}
+		}
+		if (ass_bullet == 22)
+		{
+			ass_bullet_held -= 8;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 8;
+			}
+		}
+		if (ass_bullet == 21)
+		{
+			ass_bullet_held -= 9;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 9;
+			}
+		}
+		if (ass_bullet == 20)
+		{
+			ass_bullet_held -= 10;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 10;
+			}
+		}
+		if (ass_bullet == 19)
+		{
+			ass_bullet_held -= 11;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 11;
+			}
+		}
+		if (ass_bullet == 18)
+		{
+			ass_bullet_held -= 12;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 12;
+			}
+		}
+		if (ass_bullet == 17)
+		{
+			ass_bullet_held -= 13;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 13;
+			}
+		}
+		if (ass_bullet == 16)
+		{
+			ass_bullet_held -= 14;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 14;
+			}
+		}
+		if (ass_bullet == 15)
+		{
+			ass_bullet_held -= 15;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 15;
+			}
+		}
+		if (ass_bullet == 14)
+		{
+			ass_bullet_held -= 16;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 16;
+			}
+		}
+		if (ass_bullet == 13)
+		{
+			ass_bullet_held -= 17;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 17;
+			}
+		}
+		if (ass_bullet == 12)
+		{
+			ass_bullet_held -= 18;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 18;
+			}
+		}
+		if (ass_bullet == 11)
+		{
+			ass_bullet_held -= 19;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 19;
+			}
+		}
+		if (ass_bullet == 10)
+		{
+			ass_bullet_held -= 20;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 20;
+			}
+		}
+		if (ass_bullet == 9)
+		{
+			ass_bullet_held -= 21;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 21;
+			}
+		}
+		if (ass_bullet == 8)
+		{
+			ass_bullet_held -= 22;
+			if (ass_bullet_held > 0) {
+				ass_bullet +=22;
+			}
+		}
+		if (ass_bullet == 7)
+		{
+			ass_bullet_held -= 23;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 23;
+			}
+		}
+		if (ass_bullet == 6)
+		{
+			ass_bullet_held -= 24;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 24;
+			}
+		}
+		if (ass_bullet == 5)
+		{
+			ass_bullet_held -= 25;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 25;
+			}
+		}
+		if (ass_bullet == 4)
+		{
+			ass_bullet_held -= 26;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 26;
+			}
+		}
+		if (ass_bullet == 3)
+		{
+			ass_bullet_held -= 27;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 27;
+			}
+		}
+		if (ass_bullet == 2)
+		{
+			ass_bullet_held -= 28;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 28;
+			}
+		}
+		if (ass_bullet == 1)
+		{
+			ass_bullet_held -= 29;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 29;
+			}
+		}
+		if (ass_bullet == 0)
+		{
+			ass_bullet_held -= 30;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 30;
 			}
 		}
 
