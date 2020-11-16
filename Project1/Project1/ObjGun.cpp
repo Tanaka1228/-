@@ -117,7 +117,7 @@ void CObjGun::Draw()
 	{
 		wchar_t guntype0[32];
 		swprintf_s(guntype0, L"リボルバー : %d / 6", obj->Get_M_Bullet());
-		Font::StrDraw(guntype0, 10, 560, 28, c);// X  Y 大きさ 
+		Font::StrDraw(guntype0, 10, 560, 22, c);// X  Y 大きさ 
 
 		wchar_t strb0[64];
 		swprintf_s(strb0, L"弾丸所持数 : %d発", obj->Get_M_Bullet_Held());
@@ -128,7 +128,7 @@ void CObjGun::Draw()
 	{
 		wchar_t guntype1[32];
 		swprintf_s(guntype1, L"アサルト : %d / 30", obj->Get_M_Ass_Bullet());
-		Font::StrDraw(guntype1, 10, 560, 28, c);// X  Y 大きさ 
+		Font::StrDraw(guntype1, 10, 560, 22, c);// X  Y 大きさ 
 
 		wchar_t strb1[64];
 		swprintf_s(strb1, L"弾丸所持数 : %d発", obj->Get_M_Ass_Bullet_Held());

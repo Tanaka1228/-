@@ -62,13 +62,15 @@ void CObjHeroine::Draw()
 	}
 	if (m_sp == 3)
 	{
-		Font::StrDraw(L"女の子：ああああ", 100, 500, 30, c);
+		Font::StrDraw(L"女の子：Aキーで武器構え・Zキーで発射・Qキーで武器切り替え", 50, 500, 25, c);
+		Font::StrDraw(L"            スペースキーでリロードです", 50, 530, 25, c);
+
 		key_flag = 4;
 		
 	}
 	if (m_sp == 4)
 	{
-		Font::StrDraw(L"女の子：拠点をでてね", 100, 500, 30, c);
+		Font::StrDraw(L"女の子：拠点をでて、敵を倒して", 100, 500, 30, c);
 		key_flag = 1;
 	
 	}
