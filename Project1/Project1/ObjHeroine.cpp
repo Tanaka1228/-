@@ -15,8 +15,10 @@ using namespace GameL;
 //コンストラクタ
 CObjHeroine::CObjHeroine()
 {
+	//Heroineのヘッダーを見たらわかる
 	m_sp = false;
 	key_flag = 1;
+	sp_flag = false;
 }
 
 
@@ -48,46 +50,60 @@ void CObjHeroine::Draw()
 
 	if (m_sp == 1)
 	{
-		
+		sp_flag == true;
 		Font::StrDraw(L"女の子:ようこそバーへ,一回女の子に近づくと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
 		key_flag = 2;
-		
 	}
 	if(m_sp == 2)
 	{
+		sp_flag == true;
 		Font::StrDraw(L"女の子：ここは拠点です", 100, 500, 30, c);
 		key_flag = 3;
-		//this->SetStatus(false);//自身に削除命令
-		//Font::Delete();
+
 	}
 	if (m_sp == 3)
 	{
+		sp_flag == true;
 		Font::StrDraw(L"女の子：Aキーで武器構え・Zキーで発射・Qキーで武器切り替え", 50, 500, 25, c);
 		Font::StrDraw(L"            スペースキーでリロードです", 50, 530, 25, c);
-
 		key_flag = 4;
+
 		
 	}
 	if (m_sp == 4)
 	{
+		sp_flag == true;
+		Font::StrDraw(L"女の子：βテスト・ファイル出力・チャイナタウン", 100, 500, 30, c);
+		key_flag = 5;
+
+	}
+	if (m_sp == 5)
+	{
+		sp_flag == true;
 		Font::StrDraw(L"女の子：拠点をでて、敵を倒して", 100, 500, 30, c);
 		key_flag = 1;
-	
+
 	}
 
 
-	////切り取り位置の設定
-	//src.m_top = 0.0f; //y
-	//src.m_left = 0.0f; //x
-	//src.m_right = 139.0f; //x
-	//src.m_bottom = 131.0f; //y
-
-	////表示位置の設定
-	//dst.m_top = 0.0f;
-	//dst.m_left = 32.0f;
-	//dst.m_right = 0.0f;
-	//dst.m_bottom = 32.0f;
-
-	////0番目に登録したグラフィックをstc・dst・cの情報を元に描画
-	//Draw::Draw(1, &src, &dst, c, 0.0f);
 }
+
+//this->SetStatus(false);//自身に削除命令
+		//Font::Delete();
+
+//
+////会話グラフィック
+////切り取り位置の設定
+//src.m_top = 373.0f; //y
+//src.m_left = 20.0f; //x
+//src.m_right = 780.0f; //x
+//src.m_bottom = 581.0f; //y
+//
+////表示位置の設定
+//dst.m_top = 400.0f;
+//dst.m_left = 40.0f;
+//dst.m_right = 750.0f;
+//dst.m_bottom = 550.0f;
+//
+////0番目に登録したグラフィックをstc・dst・cの情報を元に描画
+//Draw::Draw(10, &src, &dst, c, 0.0f);//0.0fは角度を変えるやつ

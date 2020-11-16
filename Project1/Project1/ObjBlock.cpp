@@ -206,6 +206,11 @@ void CObjBlock::Action()
 							m_speak = 4;
 							
 						}
+						if ((key_bflag == 5))
+						{
+							m_speak = 5;
+
+						}
 						m_time = false;
 					}
 				
