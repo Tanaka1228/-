@@ -13,10 +13,16 @@ using namespace GameL;
 //コンストラクタ
 CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に送る
 {
-	m_x = x;
+	m_x = x;//リボルバー
 	m_y = y;
 	m_vx = 0.0f;//速度用変数
 	m_vy = 0.0f;
+
+	ass_m_x = x;//アサルト
+	ass_m_y = y;
+	ass_m_vx = 0.0f;//速度用変数
+	ass_m_vy = 0.0f;
+
 	m_Xpos = 0;//0は左
 	m_Ypos = 0;//0は上
 }
@@ -41,24 +47,28 @@ void CObjBullet::Action()
 	if (bx == 2)
 	{
 		m_vx += 6.0f;
+		ass_m_x += 3.0f;
 		m_x += m_vx;
 		m_Xpos = 0.0f;
 	}
 	else if (bx == 3)
 	{
 		m_vx -= 6.0f;
+		ass_m_x -= 3.0f;
 		m_x   += m_vx;
 		m_Xpos = 1.0f;
 	}
 	else if (bx == 1)
 	{
 		m_vy -= 6.0f;
+		ass_m_y -= 3.0f;
 		m_y += m_vy;
 		m_Ypos = 0.0f;
 	}
 	else if (bx == 0)
 	{
 		m_vy += 6.0f;
+		ass_m_y += 3.0f;
 		m_y += m_vy;
 		m_Ypos = 1.0f;
 	}
@@ -92,19 +102,41 @@ void CObjBullet::Draw()
 	RECT_F src;
 	RECT_F dst;
 
-		
-	//切り取り位置の設定　グラフィックを作っていない	
-	src.m_top = 0.0f;   //y
-	src.m_left = 0.0f;  //x
-	src.m_right = 32.0f; //x 
-	src.m_bottom = 32.0f; //y
+	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
 
-	//表示位置の設定
-	dst.m_top = (32.0f-32.0f*m_Ypos) + m_y;//縦の位置変更
-	dst.m_left = (32.0f*m_Xpos) + m_x;
-	dst.m_right = (32.0f - 32.0f*m_Xpos) + m_x;
-	dst.m_bottom = (32.0f*m_Ypos) + m_y;
-	
 
-	Draw::Draw(3, &src, &dst, c, 0.0f);
+	//if (obj->Get_Gun_Type_Flag() == 0)
+   //{
+		//切り取り位置の設定　グラフィックを作っていない	
+		src.m_top = 0.0f;   //y
+		src.m_left = 0.0f;  //x
+		src.m_right = 32.0f; //x 
+		src.m_bottom = 32.0f; //y
+
+		//表示位置の設定
+		dst.m_top = (32.0f - 32.0f * m_Ypos) + m_y;//縦の位置変更
+		dst.m_left = (32.0f * m_Xpos) + m_x;
+		dst.m_right = (32.0f - 32.0f * m_Xpos) + m_x;
+		dst.m_bottom = (32.0f * m_Ypos) + m_y;
+
+
+		Draw::Draw(3, &src, &dst, c, 0.0f);
+	//}
+	//if (obj->Get_Gun_Type_Flag() == 1)
+	//{
+		//切り取り位置の設定　グラフィックを作っていない	
+		//src.m_top = 0.0f;   //y
+		//src.m_left = 0.0f;  //x
+		//src.m_right = 32.0f; //x 
+		//src.m_bottom = 32.0f; //y
+
+		////表示位置の設定
+		//dst.m_top = (32.0f - 32.0f * m_Ypos) + ass_m_y;//縦の位置変更
+		//dst.m_left = (32.0f * m_Xpos) + ass_m_x;
+		//dst.m_right = (32.0f - 32.0f * m_Xpos) + ass_m_x;
+		//dst.m_bottom = (32.0f * m_Ypos) + ass_m_y;
+
+
+		//Draw::Draw(3, &src, &dst, c, 0.0f);
+	//}
 }

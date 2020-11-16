@@ -98,6 +98,7 @@ void CObjRooftopBoss::Action()
 	//’eŠÛ‚ÆÚG‚µ‚Ä‚é‚©‚Ç‚¤‚©’²‚×‚é
 	if (hit->CheckObjNameHit(OBJ_BULLET) != nullptr)
 	{
+		
 		m_hp -= 1;
 	}
 	if (m_hp < 0)//HP‚ª‚O‚É‚È‚Á‚½‚ç”jŠü

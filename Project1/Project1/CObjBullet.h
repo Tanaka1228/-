@@ -19,6 +19,12 @@ private:
 	float m_y;  //弾丸のY方向の位置用変数
 	float m_vx; //弾丸のX方向の速度用変数
 	float m_vy; //弾丸のY方向の位置用変数
+	//--------------------------------------
+	float ass_m_x;  //アサルト弾丸のX方向の位置用変数
+	float ass_m_y;  //弾丸のY方向の位置用変数
+	float ass_m_vx; //弾丸のX方向の速度用変数
+	float ass_m_vy; //弾丸のY方向の位置用変数
+
 	int m_Xpos;//弾丸向きX
 	int m_Ypos;//弾丸向きY
 };

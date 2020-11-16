@@ -177,7 +177,7 @@ void CObjHero::Action()
 	if (m_bullet > 0)//’e”‚ª0ˆÈã‚È‚ç --------------ƒŠƒ{ƒ‹ƒo[--------------------------------------------
 	{
 		//ŽålŒö‚Ì’eŠÛ”­ŽË
-		if (Input::GetVKey('Z') == true && m_gun == 1)
+		if (Input::GetVKey('Z') == true && m_gun == 1&&gun_type==0)
 		{
 			
 
@@ -230,7 +230,7 @@ void CObjHero::Action()
 		if ( m_bullet== 6)
 		{
 			m_bullet_held -= 0;
-			if (m_bullet_held > 0) {
+			if (m_bullet_held >= 0) {
 				m_bullet += 0;
 			}
 
@@ -238,42 +238,42 @@ void CObjHero::Action()
 		if (m_bullet == 5)
 		{
 			m_bullet_held -= 1;
-			if (m_bullet_held > 0) {
+			if (m_bullet_held >= 0) {
 				m_bullet += 1;
 			}
 		}
 		if (m_bullet == 4)
 		{
 			m_bullet_held -= 2;
-			if (m_bullet_held > 0) {
+			if (m_bullet_held >= 0) {
 				m_bullet += 2;
 			}
 		}
 		if (m_bullet == 3)
 		{
 			m_bullet_held -= 3;
-			if (m_bullet_held > 0) {
+			if (m_bullet_held >= 0) {
 				m_bullet += 3;
 			}
 		}
 		if (m_bullet == 2)
 		{
 			m_bullet_held -= 4;
-			if (m_bullet_held > 0) {
+			if (m_bullet_held >= 0) {
 				m_bullet += 4;
 			}
 		}
 		if (m_bullet == 1)
 		{
 			m_bullet_held -= 5;
-			if (m_bullet_held > 0) {
+			if (m_bullet_held >= 0) {
 				m_bullet += 5;
 			}
 		}
 		if (m_bullet == 0)
 		{
 			m_bullet_held -= 6;
-			if (m_bullet_held > 0) {
+			if (m_bullet_held >= 0) {
 				m_bullet += 6;
 			}
 		}
@@ -495,7 +495,7 @@ void CObjHero::Action()
 		if (ass_bullet == 0)
 		{
 			ass_bullet_held -= 30;
-			if (ass_bullet_held > 0) {
+			if (ass_bullet_held >= 0) {
 				ass_bullet += 30;
 			}
 		}
