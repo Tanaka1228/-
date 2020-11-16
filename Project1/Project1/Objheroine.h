@@ -17,5 +17,6 @@ public:
 private:
 	int m_sp;//会話
 	int m_ep;//エンターキー2回目時
-	int key_flag;
+	int key_flag;//会話のフラグ
+	bool sp_flag;//会話のグラフィックのフラグ
 };
