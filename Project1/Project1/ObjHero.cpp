@@ -132,11 +132,44 @@ void CObjHero::Action()
 		gun_type_flag = 1;
 	}
 	
+	if (m_bullet > 0)//弾数が0以上なら   ------------アサルト-------------------------------------------------------
+	{
+		//主人公の弾丸発射
+		if (Input::GetVKey('Z') == true && m_gun == 1&&gun_type==1)
+		{
+				m_bullet -= 1;
+
+				if (m_ani_frame == 2)//右
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
+				}
+				if (m_ani_frame == 3)//左
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
+				}
+				if (m_ani_frame == 1)//後ろ
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
+				}
+				if (m_ani_frame == 0)//前
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
+				}
+
+		}
 		
-	
+	}//------------------------------------------------------------------------------------------------------
 
 
-	if (m_bullet > 0)//弾数が0以上なら
+	if (m_bullet > 0)//弾数が0以上なら --------------リボルバー--------------------------------------------
 	{
 		//主人公の弾丸発射
 		if (Input::GetVKey('Z') == true && m_gun == 1)
@@ -145,6 +178,8 @@ void CObjHero::Action()
 
 			if (m_f == true)
 			{
+				m_fire = true;
+
 				m_bullet -= 1;
 
 				if (m_ani_frame == 2)//右
@@ -175,23 +210,24 @@ void CObjHero::Action()
 
 
 				m_f = false;
-			}
+		}
 		}
 		else
 		{
 			m_f = true;
 		}
-	}
-	if (Input::GetVKey(VK_SPACE)==true&&m_bullet_held>0)//リロード
+	}//------------------------------------------------------------------------------------------------------
+	
+	if (Input::GetVKey(VK_SPACE) == true && m_bullet_held > 0)//リロード
 	{
-		
-		if (m_bullet == 6)
+
+		if ( m_bullet== 6)
 		{
 			m_bullet_held -= 0;
 			if (m_bullet_held > 0) {
 				m_bullet += 0;
 			}
-		
+
 		}
 		if (m_bullet == 5)
 		{
@@ -237,7 +273,6 @@ void CObjHero::Action()
 		}
 
 	}
-
 
 
 
@@ -423,95 +458,6 @@ void CObjHero::Draw()
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//if (m_gun == 1)//ハンドガン
-	//{
-	//	Font::StrDraw(L"構えている", m_x, -32 + m_y, 16, c);
-
-	//	if (m_ani_frame == 2)
-	//	{
-	//		float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-	//		RECT_F src;
-	//		RECT_F dst;
-
-	//		//切り取り位置の設定
-	//		src.m_top = 0.0f;   //y
-	//		src.m_left = 0.0f; //x
-	//		src.m_right = 32.0f; //x
-	//		src.m_bottom = 32.0f; //y
-
-	//		//表示位置の設定
-	//		dst.m_top = 10.0f + m_y;
-	//		dst.m_left = 20.0f + m_x;
-	//		dst.m_right = 60.0f + m_x;
-	//		dst.m_bottom = 50.0f + m_y;
-
-	//		Draw::Draw(2, &src, &dst, c, 0.0f);
-	//	}
-	//	else if (m_ani_frame == 3)//左
-	//	{
-	//		//切り取り位置の設定
-	//		src.m_top = 0.0f;   //y
-	//		src.m_left = 33.0f; //x
-	//		src.m_right = 61.0f; //x
-	//		src.m_bottom = 18.0f; //y
-
-	//		//表示位置の設定
-	//		dst.m_top = 10.0f + m_y;
-	//		dst.m_left = -28.0f + m_x;
-	//		dst.m_right = 0.0f + 9.0f + m_x;
-	//		dst.m_bottom = 32.0f + m_y;
-
-	//		Draw::Draw(2, &src, &dst, c, 0.0f);
-	//	}
-	//	else if (m_ani_frame == 0)//正面
-	//	{
-	//		//切り取り位置の設定
-	//		src.m_top = 3.0f;   //y
-	//		src.m_left = 74.0f; //x
-	//		src.m_right = 83.0f; //x
-	//		src.m_bottom = 21.0f; //y
-
-	//		//表示位置の設定
-	//		dst.m_top = 10.0f + m_y;
-	//		dst.m_left = 5.0f + m_x;
-	//		dst.m_right = 20.0f + m_x;
-	//		dst.m_bottom = 32.0f + m_y;
-
-	//		Draw::Draw(2, &src, &dst, c, 0.0f);
-	//	}
-	//}
-	//else if (m_gun == 0)
-	//{
-	//	Font::StrDraw(L"構えていない", m_x, -32 + m_y, 16, c);
-
-	//	if (Input::GetVKey('Z') == true)
-	//	{
-	//		Font::StrDraw(L"キックテスト", m_x, 32 + m_y, 16, c);
-	//	}
-	//}
-
 	//wchar_t str[32];
 	//swprintf_s(str, L"弾数 : %d / 6", m_bullet);
 	//Font::StrDraw(str, 10, 560, 22, c);// X  Y 大きさ 
@@ -521,30 +467,7 @@ void CObjHero::Draw()
 	swprintf_s(strHP, L"HP : %d", m_hp);
 	Font::StrDraw(strHP, 10, 5, 28, c);// X  Y 大きさ 
 
-	if (gun_type == 0)
-	{
-		wchar_t guntype0[32];
-		swprintf_s(guntype0, L"リボルバー : %d / 6", m_bullet);
-		Font::StrDraw(guntype0, 10, 560, 28, c);// X  Y 大きさ 
-
-		wchar_t strb0[64];
-		swprintf_s(strb0, L"弾丸所持数 : %d発", m_bullet_held);
-		Font::StrDraw(strb0, 300.0f, 560, 22, c);// X  Y  大きさ 
-		
-	}
-	if (gun_type == 1)
-	{
-		wchar_t guntype1[32];
-		swprintf_s(guntype1, L"アサルト : %d / 30", m_bullet);
-		Font::StrDraw(guntype1, 10, 560, 28, c);// X  Y 大きさ 
-
-		wchar_t strb1[64];
-		swprintf_s(strb1, L"弾丸所持数 : %d発", m_bullet_held);
-		Font::StrDraw(strb1, 300.0f, 560, 22, c);// X  Y  大きさ 
-
-	}
 	
-
 }
 
 ////表示位置の設定

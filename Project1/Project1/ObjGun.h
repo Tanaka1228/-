@@ -15,6 +15,10 @@ public:
 	void Draw();   //ƒhƒ[
 
 private:
-	int m_gun;
-	int m_ani_frame;
+	int m_f;//’eŠÛ§Œä
+	int m_gun;//e‚ÌŒü‚«
+	int m_bullet;//’eŠÛ‚Ì”
+	int m_bullet_held;//’eŠÛ‚ÌŠ”
+	int m_ani_frame;//eŒü‚«
+
 };

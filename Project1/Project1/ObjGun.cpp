@@ -21,16 +21,19 @@ CObjGun::CObjGun()//コンストラクタで受け取った情報を変数に送る
 //イニシャライズ
 void CObjGun::Init()
 {
-	
 	m_ani_frame = 2;
-	
+	m_bullet = 6;
+	m_bullet_held = 30;
+	m_f =true;
 }
 
 //アクション
 void CObjGun::Action()
 {
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
-
+	m_ani_frame = obj->Get_AniFlame();
+	//m_bullet = obj->Get_M_Bullet();//弾丸数
+	//m_bullet_held = obj->Get_M_Bullet_Held();//所持数
 }
 
 //ドロー
@@ -110,5 +113,26 @@ void CObjGun::Draw()
 		}
 	}
 
+	if (obj->Get_GunType() == 0)
+	{
+		wchar_t guntype0[32];
+		swprintf_s(guntype0, L"リボルバー : %d / 6", obj->Get_M_Bullet());
+		Font::StrDraw(guntype0, 10, 560, 28, c);// X  Y 大きさ 
 
+		wchar_t strb0[64];
+		swprintf_s(strb0, L"弾丸所持数 : %d発", obj->Get_M_Bullet_Held());
+		Font::StrDraw(strb0, 300.0f, 560, 22, c);// X  Y  大きさ 
+
+	}
+	if (obj->Get_GunType() == 1)
+	{
+		wchar_t guntype1[32];
+		swprintf_s(guntype1, L"アサルト : %d / 30", obj->Get_M_Bullet());
+		Font::StrDraw(guntype1, 10, 560, 28, c);// X  Y 大きさ 
+
+		wchar_t strb1[64];
+		swprintf_s(strb1, L"弾丸所持数 : %d発", obj->Get_M_Bullet_Held());
+		Font::StrDraw(strb1, 300.0f, 560, 22, c);// X  Y  大きさ 
+
+	}
 }

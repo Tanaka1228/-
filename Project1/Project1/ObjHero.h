@@ -43,6 +43,9 @@ public:
 	int Get_Gun_Type_Flag() { return gun_type_flag; }//e‚Ìí—Şƒtƒ‰ƒO
 
 	int Get_AniFlame() { return m_ani_frame; }
+	int Get_M_Bullet() { return m_bullet; }//’eŠÛ”
+	int Get_M_Bullet_Held() { return m_bullet_held; }//’eŠÛŠ”
+	int Get_Fire_Flag() { return m_fire; }
 
 private:
 	float m_px; //ˆÊ’u
@@ -63,6 +66,7 @@ private:
 	int m_bullet_held;//’eŠÛ‚ÌŠ”
 	int gun_Kama;//e‚ğ\‚¦‚é
 	int gun_type_flag;
+	int m_fire;//”­Ë
 	
 	//block‚Æ‚ÌÕ“Ëó‘ÔŠm”F—p
 	bool m_hit_up;
