@@ -56,19 +56,24 @@ void CObjHero::Init()
 	m_vx = 0.0f; //移動ベクトル
 	m_vy = 0.0f; //移動ベクトル
 	m_posture = 0.0f; //右向き0.0f 左向き1.0f
-	m_f = true; //弾丸発射制御
+
 
 	m_ani_time=0; //アニメーションフレーム動作間隔
     m_ani_frame=2; //描画フレーム
 
 	m_hp = 30;//主人公のHP
-
+	//--------------------------------------------------------------------
+	m_f = true; //弾丸発射制御
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
 	gun_type = 0;//　0がリボルバー 1がアサルト
-	m_bullet = 6;//弾丸の弾数
+	m_bullet = 6;//弾丸の弾数　リボルバー
 	m_bullet_held = 30;//弾丸の所持数
 	gun_Kama = 1;//銃を構えるフラグ
 	gun_type_flag = 1;//銃の種類フラグ
+	ass_bullet = 30;//アサルト弾丸数
+	ass_bullet_held = 150;//アサルト弾丸所持数
+
+	//---------------------------------------------------------------
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -132,12 +137,12 @@ void CObjHero::Action()
 		gun_type_flag = 1;
 	}
 	
-	if (m_bullet > 0)//弾数が0以上なら   ------------アサルト-------------------------------------------------------
+	if (ass_bullet > 0)//弾数が0以上なら   ------------アサルト-------------------------------------------------------
 	{
 		//主人公の弾丸発射
 		if (Input::GetVKey('Z') == true && m_gun == 1&&gun_type==1)
 		{
-				m_bullet -= 1;
+				ass_bullet -= 1;
 
 				if (m_ani_frame == 2)//右
 				{
@@ -178,7 +183,7 @@ void CObjHero::Action()
 
 			if (m_f == true)
 			{
-				m_fire = true;
+			
 
 				m_bullet -= 1;
 
@@ -274,7 +279,61 @@ void CObjHero::Action()
 
 	}
 
+	if (Input::GetVKey(VK_SPACE) == true && ass_bullet_held > 0)//リロードアサルト
+	{
 
+		if (ass_bullet == 6)
+		{
+			ass_bullet_held -= 0;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 0;
+			}
+
+		}
+		if (ass_bullet == 5)
+		{
+			ass_bullet_held -= 1;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 1;
+			}
+		}
+		if (ass_bullet == 4)
+		{
+			ass_bullet_held -= 2;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 2;
+			}
+		}
+		if (ass_bullet == 3)
+		{
+			ass_bullet_held -= 3;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 3;
+			}
+		}
+		if (ass_bullet == 2)
+		{
+			ass_bullet_held -= 4;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 4;
+			}
+		}
+		if (ass_bullet == 1)
+		{
+			ass_bullet_held -= 5;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 5;
+			}
+		}
+		if (ass_bullet == 0)
+		{
+			ass_bullet_held -= 6;
+			if (ass_bullet_held > 0) {
+				ass_bullet += 6;
+			}
+		}
+
+	}
 
 
 

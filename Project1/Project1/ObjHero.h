@@ -43,9 +43,13 @@ public:
 	int Get_Gun_Type_Flag() { return gun_type_flag; }//銃の種類フラグ
 
 	int Get_AniFlame() { return m_ani_frame; }
-	int Get_M_Bullet() { return m_bullet; }//弾丸数
+
+	int Get_M_Bullet() { return m_bullet; }//弾丸数　リボルバー
 	int Get_M_Bullet_Held() { return m_bullet_held; }//弾丸所持数
-	int Get_Fire_Flag() { return m_fire; }
+
+	int Get_M_Ass_Bullet() { return ass_bullet; }//弾丸数　アサルト
+	int Get_M_Ass_Bullet_Held() { return ass_bullet_held; }//弾丸所持数
+
 
 private:
 	float m_px; //位置
@@ -57,17 +61,24 @@ private:
 	float m_posture; //横姿勢
 	bool m_f; //弾丸発射制御用
 
+	//---------------------------------------------------
+
 	int m_ani_time=0; //アニメーションフレーム動作間隔
 	int m_ani_frame=0; //描画フレーム
 	int m_hp;//主人公のHP
 	int m_gun;//銃の向き
 	int gun_type;//銃の種類
-	int m_bullet;//弾丸の弾数
-	int m_bullet_held;//弾丸の所持数
 	int gun_Kama;//銃を構える
 	int gun_type_flag;
-	int m_fire;//発射
-	
+
+	//---------------------------------------------------
+
+	int ass_bullet;//アサルト弾丸の弾数
+	int ass_bullet_held;//アサルト弾丸の所持数
+	int m_bullet;//弾丸の弾数 リボルバー
+	int m_bullet_held;//弾丸の所持数　リボルバー
+
+	//---------------------------------------------------
 	//blockとの衝突状態確認用
 	bool m_hit_up;
 	bool m_hit_down;
