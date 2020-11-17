@@ -57,7 +57,7 @@ void CObjHeroine::Draw()
 		
 		wchar_t str1[32];
 		fin >> str1;
-		wprintf_s(str1,"%s\n", str1);
+		swprintf_s(str1,L"%s\n", str1);
 		Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  ‘å‚«‚³ 
 
 
