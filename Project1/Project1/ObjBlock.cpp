@@ -65,7 +65,6 @@ void CObjBlock::Init()
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
 
 	m_speak = false;
-	m_time = true;
 
 }
 //アクション
@@ -82,6 +81,8 @@ void CObjBlock::Action()
 	hero->SetLeft(false);
 	hero->SetRight(false);
 
+	//踏んでいるblockの種類を初期化
+	hero->SetBT(0);
 
 	//m_mapの全要素にアクセス
 	for (int i = 0; i < 25; i++)
@@ -128,6 +129,7 @@ void CObjBlock::Action()
 							//右
 							hero->SetRight(true);//主人公の左の部分が衝突している
 							hero->SetX2(x + 32.0f);//ブロックの位置+主人公の幅
+							hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 45 && r < 135)
@@ -135,6 +137,7 @@ void CObjBlock::Action()
 							//上
 							hero->SetDown(true);//主人公の下の部分が衝突している
 							hero->SetY2(y - 32.0f);//ブロックの位置-主人公の幅
+							hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 	
 						}
@@ -143,6 +146,7 @@ void CObjBlock::Action()
 							//左
 							hero->SetLeft(true);//主人公の右の部分が衝突している
 							hero->SetX2(x - 32.0f);//ブロックの位置-主人公の幅
+							hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 225 && r < 315)
@@ -150,6 +154,7 @@ void CObjBlock::Action()
 							//下
 							hero->SetUp(true);//主人公の上の部分が衝突している
 							hero->SetY2(y + 32.0f);//ブロックの位置+主人公の幅
+							hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 
 						}
@@ -176,49 +181,6 @@ void CObjBlock::Action()
 					
 				}
 				
-			}
-			
-			if (m_map[i][j]==17)//女の子の前でエンター
-			{
-				if (Input::GetVKey(VK_RETURN) == true) {
-					
-					if (m_time == true)
-					{
-						if (key_bflag==1)
-						{
-							m_speak = 1;
-
-						}
-
-						if (key_bflag == 2)
-						{
-							m_speak = 2;
-
-						}
-						if ((key_bflag == 3))
-						{
-
-							m_speak = 3;
-
-						}
-						if ((key_bflag == 4))
-						{
-							m_speak = 4;
-							
-						}
-						if ((key_bflag == 5))
-						{
-							m_speak = 5;
-
-						}
-						m_time = false;
-					}
-				
-				}
-				else
-				{
-					m_time = true;
-				}
 			}
 		
 		}

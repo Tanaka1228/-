@@ -19,4 +19,6 @@ private:
 	int m_ep;//エンターキー2回目時
 	int key_flag;//会話のフラグ
 	bool sp_flag;//会話のグラフィックのフラグ
+
+	bool m_key_control;//会話キー制御
 };

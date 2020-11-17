@@ -19,23 +19,68 @@ CObjHeroine::CObjHeroine()
 	m_sp = false;
 	key_flag = 1;
 	sp_flag = false;
+	m_key_control = true;
 }
 
 
 //イニシャライズ
 void CObjHeroine::Init()
 {
-	
+	m_ep = 1;
 }
 
 //アクション
 void CObjHeroine::Action()
 {
-	//CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjBlock* block = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
 
 	m_sp = block->GetSpeak();
 	m_ep = block->GetEnter();
+
+	if (hero->GetBT() == 17)
+	{
+		if (Input::GetVKey(VK_RETURN) == true) {
+
+			if (m_key_control == true)
+			{
+				if (key_flag == 1)
+				{
+					m_sp = 1;
+
+				}
+
+				if (key_flag == 2)
+				{
+					m_sp = 2;
+
+				}
+				if ((key_flag == 3))
+				{
+
+					m_sp = 3;
+
+				}
+				if ((key_flag == 4))
+				{
+					m_sp = 4;
+
+				}
+				if ((key_flag == 5))
+				{
+					m_sp = 5;
+
+				}
+				m_key_control = false;
+			}
+
+		}
+		else
+		{
+			m_key_control = true;
+		}
+	}
+
 	
 }
 

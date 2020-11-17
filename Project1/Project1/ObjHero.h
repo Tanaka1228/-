@@ -50,7 +50,8 @@ public:
 	int Get_M_Ass_Bullet() { return ass_bullet; }//弾丸数　アサルト
 	int Get_M_Ass_Bullet_Held() { return ass_bullet_held; }//弾丸所持数
 
-
+	int GetBT() { return m_block_type; }
+	void SetBT(int t) { m_block_type = t; }
 private:
 	float m_px; //位置
 	float m_py;
@@ -84,4 +85,7 @@ private:
 	bool m_hit_down;
 	bool m_hit_left;
 	bool m_hit_right;
+
+	//踏んでいるblockの種類を確認用
+	int m_block_type;
 };
