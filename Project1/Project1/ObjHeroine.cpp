@@ -26,7 +26,7 @@ CObjHeroine::CObjHeroine()
 //イニシャライズ
 void CObjHeroine::Init()
 {
-	m_ep = 1;
+	
 }
 
 //アクション
@@ -35,8 +35,6 @@ void CObjHeroine::Action()
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjBlock* block = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
 
-	m_sp = block->GetSpeak();
-	m_ep = block->GetEnter();
 
 	if (hero->GetBT() == 17)
 	{
@@ -107,7 +105,7 @@ void CObjHeroine::Draw()
 
 
 		sp_flag == true;
-		//Font::StrDraw(L"女の子:ようこそバーへ,一回女の子に近づくと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
+		//Font::StrDraw(L"女の子:ようこそバーへ,女の子に引っ付くと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
 		key_flag = 2;
 	}
 	if(m_sp == 2)

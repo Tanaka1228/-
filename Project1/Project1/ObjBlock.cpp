@@ -14,21 +14,11 @@
 //使用するネームスペース
 using namespace GameL;
 
-int CObjBlock::GetSpeak()
-{
-	return m_speak;
-}
-bool CObjBlock::GetEnter()
-{
-	return enter_flag;
-}
-
-
 //イニシャライズ
 void CObjBlock::Init()
 {
 
-//マップ情報
+	//マップ情報
 	int block_data[25][25] =
 	{
 
@@ -57,14 +47,12 @@ void CObjBlock::Init()
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-								 
-		
+
+
 
 	};
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
-
-	m_speak = false;
 
 }
 //アクション
@@ -160,11 +148,6 @@ void CObjBlock::Action()
 						}
 
 					}
-
-					CObjHeroine* heroine = (CObjHeroine*)Objs::GetObj(OBJ_HEROINE);
-					key_bflag = heroine->Key_flag();
-
-					
 
 					if (m_map[i][j] == 16)//建物からでると病院の屋上
 					{

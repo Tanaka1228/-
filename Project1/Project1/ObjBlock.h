@@ -13,13 +13,11 @@ public:
 	void Init(); //イニシャライズ
 	void Action(); //アクション
 	void Draw(); //ドロー
-int GetSpeak();
-	bool GetEnter();
 
 private:
 	int m_map[25][25]; //マップ情報(仮）
-	int m_speak;
-	int enter_flag;
-	int key_bflag;
-	bool m_time;//ボタン制御
+
+
+
+
 };
