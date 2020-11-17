@@ -48,10 +48,21 @@ void CObjHeroine::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
+
+
+	//Font::StrDraw(str1, 300.0f, 560, 22, c);// X  Y  大きさ 
+
 	if (m_sp == 1)
 	{
+		wifstream fin("会話.txt");
+		wchar_t str1[32];
+		fin >> str1;
+		wprintf_s(str1,"%s\n", str1);
+		Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
+
+
 		sp_flag == true;
-		Font::StrDraw(L"女の子:ようこそバーへ,一回女の子に近づくと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
+		//Font::StrDraw(L"女の子:ようこそバーへ,一回女の子に近づくと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
 		key_flag = 2;
 	}
 	if(m_sp == 2)
