@@ -103,7 +103,7 @@ void CObjGun::Draw()
 			Draw::Draw(2, &src, &dst, c, 0.0f);
 		}
 	}
-	else if (m_gun == 0)
+	else if (obj->Get_Gun() == 0)
 	{
 		Font::StrDraw(L"\‚¦‚Ä‚¢‚È‚¢", obj->GetX(), -32 + obj->GetY(), 16, c);
 
