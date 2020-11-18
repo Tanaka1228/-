@@ -201,6 +201,9 @@
     <ClInclude Include="ObjGun.h">
       <Filter>ソース ファイル\Character</Filter>
     </ClInclude>
+    <ClInclude Include="CObjAssBullet.h">
+      <Filter>ソース ファイル\Bullet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -355,6 +358,9 @@
     </ClCompile>
     <ClCompile Include="ObjGun.cpp">
       <Filter>ソース ファイル\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjAssBullet.cpp">
+      <Filter>ソース ファイル\Bullet</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

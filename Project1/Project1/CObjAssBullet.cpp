@@ -2,7 +2,7 @@
 #include"GameL/DrawTexture.h"
 #include"GameL\HitBoxManager.h"
 #include"GameHead.h"
-#include"CObjBullet.h"
+#include"CObjAssBullet.h"
 #include"ObjHero.h"
 #include"UtilityModule.h"
 
@@ -11,13 +11,9 @@
 using namespace GameL;
 
 //コンストラクタ
-CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に送る
+CObjAssBullet::CObjAssBullet(float x, float y)//コンストラクタで受け取った情報を変数に送る
 {
-	m_x = x;//リボルバー
-	m_y = y;
-	m_vx = 0.0f;//速度用変数
-	m_vy = 0.0f;
-
+	
 	ass_m_x = x;//アサルト
 	ass_m_y = y;
 	ass_m_vx = 0.0f;//速度用変数
@@ -29,10 +25,12 @@ CObjBullet::CObjBullet(float x, float y)//コンストラクタで受け取った情報を変数に
 
 
 //イニシャライズ
-void CObjBullet::Init()
+void CObjAssBullet::Init()
 {
 	m_vx = 0.0f;
 	m_vy = 0.0f;
+	ass_m_vx = 0.0f;//速度用変数
+	ass_m_vy = 0.0f;
 
 	m_eff.m_top = 32;
 	m_eff.m_left = 0;
@@ -41,14 +39,14 @@ void CObjBullet::Init()
 	m_ani = 0;
 	m_ani_time = 0;
 	m_del = false;
-	
+
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 25, 22, ELEMENT_PLAYER, OBJ_BULLET, 1);
+	Hits::SetHitBox(this, ass_m_x, ass_m_y, 25, 22, ELEMENT_PLAYER, OBJ_ASS_BULLET, 1);
 }
 
 //アクション
-void CObjBullet::Action()
+void CObjAssBullet::Action()
 {
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float bx = obj->GetB();
@@ -91,34 +89,34 @@ void CObjBullet::Action()
 
 	if (bx == 2)
 	{
-		m_vx += 6.0f;
-		m_x += m_vx;
+		ass_m_vx += 3.0f;
+		ass_m_x += ass_m_vx;
 		m_Xpos = 0.0f;
 	}
 	else if (bx == 3)
 	{
-		m_vx -= 6.0f;
-		m_x   += m_vx;
+		ass_m_vx -= 3.0f;
+		ass_m_x += ass_m_vx;
 		m_Xpos = 1.0f;
 	}
 	else if (bx == 1)
 	{
-		m_vy -= 6.0f;
-		m_y += m_vy;
+		ass_m_vy -= 3.0f;
+		ass_m_y += ass_m_vx;
 		m_Ypos = 0.0f;
 	}
 	else if (bx == 0)
 	{
-		m_vy += 6.0f;
-		m_y += m_vy;
+		ass_m_vy += 3.0f;
+		ass_m_y += ass_m_y;
 		m_Ypos = 1.0f;
 	}
 
 	//弾丸のHitBox更新用ポインター取得
 	CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
-	hit->SetPos(m_x, m_y);
+	hit->SetPos(ass_m_x, ass_m_y);
 
-	
+
 
 	//敵機が完全に領域外に出たら敵機を破棄する
 	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
@@ -136,18 +134,18 @@ void CObjBullet::Action()
 	}
 	//オブジェクト情報群と当たり判定行い、当たっていれば削除
    /*  for (int i = 0; i < 6; i++)
-     {
+	 {
 		 if (hit->CheckObjNameHit(data_base[i]) != nullptr)
 		 {
 			 m_del = true;
 			 hit->SetInvincibility(true);
 		}
-    }*/
+	}*/
 
 }
 
 //ドロー
-void CObjBullet::Draw()
+void CObjAssBullet::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 	RECT_F src;
@@ -156,30 +154,28 @@ void CObjBullet::Draw()
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
 
 	//表示位置の設定
-	dst.m_top = (32.0f - 32.0f * m_Ypos) + m_y;//縦の位置変更
-	dst.m_left = (32.0f * m_Xpos) + m_x;
-	dst.m_right = (32.0f - 32.0f * m_Xpos) + m_x;
-	dst.m_bottom = (32.0f * m_Ypos) + m_y;
-		
+	dst.m_top = (32.0f - 32.0f * m_Ypos) + ass_m_y;//縦の位置変更
+	dst.m_left = (32.0f * m_Xpos) + ass_m_x;
+	dst.m_right = (32.0f - 32.0f * m_Xpos) + ass_m_x;
+	dst.m_bottom = (32.0f * m_Ypos) + ass_m_y;
 
-		if (m_del == true)
-		{
-			//着弾アニメーション描画
-			Draw::Draw(14, &m_eff, &dst, c, 0.0f);
-		}
-		else
-		{
-		
 
-			//切り取り位置の設定　
-			src.m_top = 0.0f;   //y
-			src.m_left = 0.0f;  //x
-			src.m_right = 32.0f; //x 
-			src.m_bottom = 32.0f; //y
+	if (m_del == true)
+	{
+		//着弾アニメーション描画
+		Draw::Draw(14, &m_eff, &dst, c, 0.0f);
+	}
+	else
+	{
 
-			Draw::Draw(3, &src, &dst, c, 0.0f);
-		}
 
-		
-	
+		//切り取り位置の設定　
+		src.m_top = 0.0f;   //y
+		src.m_left = 0.0f;  //x
+		src.m_right = 32.0f; //x 
+		src.m_bottom = 32.0f; //y
+
+		Draw::Draw(3, &src, &dst, c, 0.0f);
+	}
+
 }

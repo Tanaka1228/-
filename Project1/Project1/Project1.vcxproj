@@ -136,6 +136,7 @@
     <ClInclude Include="..\..\チーム開発\GameL\WinInputs.h" />
     <ClInclude Include="..\..\チーム開発\main.h" />
     <ClInclude Include="CObjAngleBullet.h" />
+    <ClInclude Include="CObjAssBullet.h" />
     <ClInclude Include="CObjBullet.h" />
     <ClInclude Include="CObjBulletEnemy.h" />
     <ClInclude Include="CObjHomingBullet.h" />
@@ -196,6 +197,7 @@
     <ClCompile Include="..\..\チーム開発\GameL\UserData.cpp" />
     <ClCompile Include="..\..\チーム開発\GameL\WinInputs.cpp" />
     <ClCompile Include="CObjAngleBullet.cpp" />
+    <ClCompile Include="CObjAssBullet.cpp" />
     <ClCompile Include="CObjBullet.cpp" />
     <ClCompile Include="CObjBulletEnemy.cpp" />
     <ClCompile Include="CObjHomingBullet.cpp" />
