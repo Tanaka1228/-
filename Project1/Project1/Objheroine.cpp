@@ -104,9 +104,9 @@ void CObjHeroine::Draw()
 	//--------------------------テスト
 	ifstream ifs;
 	char str2[32];
-	ifs.open("会話.txt",ios::in);
+	ifs.open(L"会話.txt",ios::in);
 	ifs >> str2;
-	//swprintf_s(str2,L"%s\n", str2);
+	sprintf_s(str2,"%s\n", str2);
 	//Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
 	ifs.close();
 	//-----------------------------
