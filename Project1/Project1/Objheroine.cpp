@@ -69,6 +69,11 @@ void CObjHeroine::Action()
 					m_sp = 5;
 
 				}
+				if ((key_flag == 6))
+				{
+					m_sp = 6;
+
+				}
 				m_key_control = false;
 			}
 
@@ -135,6 +140,13 @@ void CObjHeroine::Draw()
 	{
 		sp_flag == true;
 		Font::StrDraw(L"女の子：拠点をでて、敵を倒して", 100, 500, 30, c);
+		key_flag = 6;
+
+	}
+	if (m_sp == 6)
+	{
+		sp_flag == true;
+		Font::StrDraw(L"  ", 100, 500, 30, c);
 		key_flag = 1;
 
 	}
