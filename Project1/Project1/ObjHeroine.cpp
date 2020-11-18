@@ -97,7 +97,7 @@ void CObjHeroine::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	//setlocale(LC_ALL, "Japanese");
+	setlocale(LC_ALL, "Japanese");
 	
 	wifstream fin(L"会話.txt",ios::in);
 
@@ -106,8 +106,8 @@ void CObjHeroine::Draw()
 	char str2[32];
 	ifs.open("会話.txt",ios::in);
 	ifs >> str2;
-	//swprintf_s(str2, L"%s\n", str2);
-	//Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
+	//swprintf_s(str2,L"%s\n", str2);
+	//Font::StrDraw(, 50.0f, 500, 25, c);// X  Y  大きさ 
 	//-----------------------------
 
 	
