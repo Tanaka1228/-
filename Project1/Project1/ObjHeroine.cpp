@@ -102,12 +102,12 @@ void CObjHeroine::Draw()
 	wifstream fin(L"会話.txt",ios::in);
 
 	//--------------------------テスト
-	wchar_t str2[32];
-	wifstream ifs;
-	ifs.open(L"会話.txt",ios::in);
+	ifstream ifs;
+	char str2[32];
+	ifs.open("会話.txt",ios::in);
 	ifs >> str2;
-	swprintf_s(str2, L"%s\n", str2);
-	Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
+	//swprintf_s(str2, L"%s\n", str2);
+	//Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
 	//-----------------------------
 
 	
@@ -117,8 +117,8 @@ void CObjHeroine::Draw()
 
 		wchar_t str1[32];
 		fin >> str1;
-		swprintf_s(str1,L"%s\n", str1);
-		Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
+		//swprintf_s(str1,L"%s\n", str1);
+		//Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
 
 		sp_flag == true;
 		//Font::StrDraw(L"女の子:ようこそバーへ,女の子に引っ付くと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
