@@ -110,7 +110,7 @@ void CObjHeroine::Draw()
 	Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  ‘å‚«‚³ 
 	//-----------------------------
 
-
+	
 
 	if (m_sp == 1)
 	{
