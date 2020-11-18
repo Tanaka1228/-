@@ -64,6 +64,7 @@ void CObjHero::Init()
 	m_hp = 30;//主人公のHP
 	//--------------------------------------------------------------------
 	m_f = true; //弾丸発射制御
+	m_ass_f = true;
 	m_gun = 0;//銃の構えているか　0が構えていない 　1が構えている
 	gun_type = 0;//　0がリボルバー 1がアサルト
 	m_bullet = 6;//弾丸の弾数　リボルバー
@@ -139,42 +140,6 @@ void CObjHero::Action()
 		gun_type_flag = 1;
 	}
 	
-	if (ass_bullet > 0)//弾数が0以上なら   ------------アサルト-------------------------------------------------------
-	{
-		//主人公の弾丸発射
-		if (Input::GetVKey('Z') == true && m_gun == 1&&gun_type==1)
-		{
-				ass_bullet -= 1;
-
-				if (m_ani_frame == 2)//右
-				{
-					//弾丸オブジェクト作成
-					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
-					Objs::InsertObj(obj_b, OBJ_BULLET, 4); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
-				}
-				if (m_ani_frame == 3)//左
-				{
-					//弾丸オブジェクト作成
-					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
-					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
-				}
-				if (m_ani_frame == 1)//後ろ
-				{
-					//弾丸オブジェクト作成
-					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
-					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
-				}
-				if (m_ani_frame == 0)//前
-				{
-					//弾丸オブジェクト作成
-					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
-					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
-				}
-
-		}
-		
-	}//------------------------------------------------------------------------------------------------------
-
 
 	if (m_bullet > 0)//弾数が0以上なら --------------リボルバー--------------------------------------------
 	{
@@ -217,14 +182,56 @@ void CObjHero::Action()
 
 
 				m_f = false;
-		}
+	       	}
 		}
 		else
 		{
 			m_f = true;
 		}
 	}//------------------------------------------------------------------------------------------------------
-	
+
+
+
+	if (ass_bullet > 0)//弾数が0以上なら   ------------アサルト-------------------------------------------------------
+	{
+		//主人公の弾丸発射
+		if (Input::GetVKey('Z') == true && m_gun == 1 && gun_type == 1)
+		{
+			
+
+				ass_bullet -= 1;
+
+				if (m_ani_frame == 2)//右
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4); //作った弾丸オブジェクトをオブジェクトマネージャーに登録
+				}
+				if (m_ani_frame == 3)//左
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
+				}
+				if (m_ani_frame == 1)//後ろ
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
+				}
+				if (m_ani_frame == 0)//前
+				{
+					//弾丸オブジェクト作成
+					CObjBullet* obj_b = new CObjBullet(m_x + 0.0f, m_y + 0.0f); //弾丸オブジェクト作成
+					Objs::InsertObj(obj_b, OBJ_BULLET, 4);
+				}
+			
+			
+		}
+		
+
+	}//------------------------------------------------------------------------------------------------------
+
 	//リボルバーのリロード
 	if (Input::GetVKey(VK_SPACE) == true && m_bullet_held > 0)//リロード
 	{
