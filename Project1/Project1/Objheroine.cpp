@@ -97,16 +97,18 @@ void CObjHeroine::Draw()
 	RECT_F dst;//描画先表示位置
 
 	setlocale(LC_ALL, "Japanese");
-	wifstream fin("会話.txt");
+	ifstream fin("会話.txt");
+
 
 
 	if (m_sp == 1)
 	{
 		
-		wchar_t str1[32];
+		char str1[32];
 		fin >> str1;
-		swprintf_s(str1,L"%s\n", str1);
-		Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
+
+		//swprintf_s(str1,L"%s\n", str1);
+		//Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
 
 
 		sp_flag == true;
