@@ -34,6 +34,14 @@ void CObjBullet::Init()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
+	m_eff.m_top = 32;
+	m_eff.m_left = 0;
+	m_eff.m_right = 32;
+	m_eff.m_bottom = 64;
+	m_ani = 0;
+	m_ani_time = 0;
+	
+
 	//“–‚½‚è”»’è—pHitBox‚ðì¬
 	Hits::SetHitBox(this, m_x, m_y, 25, 22, ELEMENT_PLAYER, OBJ_BULLET, 1);
 }
@@ -103,6 +111,15 @@ void CObjBullet::Draw()
 	RECT_F dst;
 
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
+
+	//ƒAƒjƒ`‚µ‚å‚ñRECTî•ñ
+	RECT_F ani_src[4] =
+	{
+		{32,0,32,64},
+		{32,32,64,64},
+		{32,64,96,64},
+		{32,96,128,64},
+	};
 
 
 	//if (obj->Get_Gun_Type_Flag() == 0)

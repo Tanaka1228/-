@@ -1,6 +1,7 @@
 #pragma once
 //使用するヘッダー
 #include"GameL/SceneObjManager.h"
+#include"GameL/DrawTexture.h"
 //使用するネームスペース
 using namespace GameL;
 
@@ -27,4 +28,9 @@ private:
 
 	int m_Xpos;//弾丸向きX
 	int m_Ypos;//弾丸向きY
+
+	int m_ani;//着弾アニメーション用
+	int m_ani_time;//着弾アニメーション間隔タイム
+	bool m_del;//削除チェック
+	RECT_F m_eff;//着弾エフェクト描画用
 };
