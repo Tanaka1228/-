@@ -102,10 +102,12 @@ void CObjHeroine::Draw()
 	wifstream fin(L"会話.txt",ios::in);
 
 	//--------------------------テスト
-	char str2[32];
-	ifstream ifs;
-	ifs.open("会話.txt",ios::in);
+	wchar_t str2[32];
+	wifstream ifs;
+	ifs.open(u8"会話.txt",ios::in);
 	ifs >> str2;
+	swprintf_s(str2, L"%s\n", str2);
+	Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
 	//-----------------------------
 
 	if (m_sp == 1)
