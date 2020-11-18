@@ -9,6 +9,7 @@
 #include"UtilityModule.h"
 #include<fstream>
 
+
 //使用するネームスペース
 using namespace GameL;
 
@@ -96,24 +97,31 @@ void CObjHeroine::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	setlocale(LC_ALL, "Japanese");
-	ifstream fin("会話.txt");
+	//setlocale(LC_ALL, "Japanese");
+	
+	wifstream fin(L"会話.txt",ios::in);
 
-
+	//--------------------------テスト
+	char str2[32];
+	ifstream ifs;
+	ifs.open("会話.txt",ios::in);
+	ifs >> str2;
+	//-----------------------------
 
 	if (m_sp == 1)
 	{
-		
-		char str1[32];
-		fin >> str1;
 
-		//swprintf_s(str1,L"%s\n", str1);
-		//Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
+		wchar_t str1[32];
+		fin >> str1;
+		swprintf_s(str1,L"%s\n", str1);
+		Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
+
 
 
 		sp_flag == true;
 		//Font::StrDraw(L"女の子:ようこそバーへ,女の子に引っ付くと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
 		key_flag = 2;
+
 	}
 	if(m_sp == 2)
 	{
@@ -153,6 +161,7 @@ void CObjHeroine::Draw()
 
 	}
 
+	fin.close();
 
 }
 
