@@ -107,7 +107,8 @@ void CObjHeroine::Draw()
 	ifs.open("‰ï˜b.txt",ios::in);
 	ifs >> str2;
 	//swprintf_s(str2,L"%s\n", str2);
-	//Font::StrDraw(, 50.0f, 500, 25, c);// X  Y  ‘å‚«‚³ 
+	//Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  ‘å‚«‚³ 
+	ifs.close();
 	//-----------------------------
 
 	
