@@ -29,6 +29,7 @@ private:
 	int m_Xpos;//弾丸向きX
 	int m_Ypos;//弾丸向きY
 
+	
 	int m_ani;//着弾アニメーション用
 	int m_ani_time;//着弾アニメーション間隔タイム
 	bool m_del;//削除チェック

@@ -40,6 +40,7 @@ void CObjBullet::Init()
 	m_eff.m_bottom = 64;
 	m_ani = 0;
 	m_ani_time = 0;
+	m_del = false;
 	
 
 	//当たり判定用HitBoxを作成
@@ -51,6 +52,42 @@ void CObjBullet::Action()
 {
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	float bx = obj->GetB();
+
+	if (m_del == true)
+	{
+		//アニメ～しょんRECT情報
+		RECT_F ani_src[4] =
+		{
+			{32,0,32,64},
+			{32,32,64,64},
+			{32,64,96,64},
+			{32,96,128,64},
+		};
+
+		//アニメーションのコマ間隔制御
+		if (m_ani_time > 2)
+		{
+			m_ani++;//アニメーションのコマを1つ進める
+			m_ani_time = 0;
+
+			m_eff = ani_src[m_ani];//アニメーションのRECT配列からm_ani番目のRECT情報を取得
+		}
+		else
+		{
+			m_ani_time++;
+		}
+
+		//着弾アニメーション終了で本当にオブジェクトの破棄
+		if (m_ani == 4)
+		{
+			this->SetStatus(false);
+			Hits::DeleteHitBox(this);
+		}
+
+		return;//消滅処理は、ここでアクションメソッドを終了させる
+	}
+
+
 
 	if (bx == 2)
 	{
@@ -101,6 +138,16 @@ void CObjBullet::Action()
 		this->SetStatus(false);   //自身に削除命令を出す。
 		Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
 	}
+	//オブジェクト情報群と当たり判定行い、当たっていれば削除
+   /*  for (int i = 0; i < 6; i++)
+     {
+		 if (hit->CheckObjNameHit(data_base[i]) != nullptr)
+		 {
+			 m_del = true;
+			 hit->SetInvincibility(true);
+		}
+    }*/
+
 }
 
 //ドロー
@@ -112,48 +159,31 @@ void CObjBullet::Draw()
 
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
 
-	//アニメ～しょんRECT情報
-	RECT_F ani_src[4] =
-	{
-		{32,0,32,64},
-		{32,32,64,64},
-		{32,64,96,64},
-		{32,96,128,64},
-	};
+	//表示位置の設定
+	dst.m_top = (32.0f - 32.0f * m_Ypos) + m_y;//縦の位置変更
+	dst.m_left = (32.0f * m_Xpos) + m_x;
+	dst.m_right = (32.0f - 32.0f * m_Xpos) + m_x;
+	dst.m_bottom = (32.0f * m_Ypos) + m_y;
+		
 
+		if (m_del == true)
+		{
+			//着弾アニメーション描画
+			Draw::Draw(14, &m_eff, &dst, c, 0.0f);
+		}
+		else
+		{
+		
 
-	//if (obj->Get_Gun_Type_Flag() == 0)
-   //{
-		//切り取り位置の設定　グラフィックを作っていない	
-		src.m_top = 0.0f;   //y
-		src.m_left = 0.0f;  //x
-		src.m_right = 32.0f; //x 
-		src.m_bottom = 32.0f; //y
+			//切り取り位置の設定　
+			src.m_top = 0.0f;   //y
+			src.m_left = 0.0f;  //x
+			src.m_right = 32.0f; //x 
+			src.m_bottom = 32.0f; //y
 
-		//表示位置の設定
-		dst.m_top = (32.0f - 32.0f * m_Ypos) + m_y;//縦の位置変更
-		dst.m_left = (32.0f * m_Xpos) + m_x;
-		dst.m_right = (32.0f - 32.0f * m_Xpos) + m_x;
-		dst.m_bottom = (32.0f * m_Ypos) + m_y;
+			Draw::Draw(3, &src, &dst, c, 0.0f);
+		}
 
-
-		Draw::Draw(3, &src, &dst, c, 0.0f);
-	//}
-	//if (obj->Get_Gun_Type_Flag() == 1)
-	//{
-		//切り取り位置の設定　グラフィックを作っていない	
-		//src.m_top = 0.0f;   //y
-		//src.m_left = 0.0f;  //x
-		//src.m_right = 32.0f; //x 
-		//src.m_bottom = 32.0f; //y
-
-		////表示位置の設定
-		//dst.m_top = (32.0f - 32.0f * m_Ypos) + ass_m_y;//縦の位置変更
-		//dst.m_left = (32.0f * m_Xpos) + ass_m_x;
-		//dst.m_right = (32.0f - 32.0f * m_Xpos) + ass_m_x;
-		//dst.m_bottom = (32.0f * m_Ypos) + ass_m_y;
-
-
-		//Draw::Draw(3, &src, &dst, c, 0.0f);
-	//}
+		
+	
 }
