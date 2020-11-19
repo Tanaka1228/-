@@ -124,7 +124,6 @@ void CObjHeroine::Draw()
 		Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
 
 		sp_flag == true;
-		//Font::StrDraw(L"女の子:ようこそバーへ,女の子に引っ付くと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
 		key_flag = 2;
 
 		fin.close();
