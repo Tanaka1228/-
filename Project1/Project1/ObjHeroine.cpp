@@ -114,23 +114,23 @@ void CObjHeroine::Draw()
 
 	
 
-	if (m_sp == 1)
+	if (m_sp == 1)//エンターキーを一回押したとき
 	{
 		sp_flag == true;
 
-		ifstream fin("会話.txt", ios::in);
-		char str1[64];//本体
+		ifstream fin("会話.txt", ios::in);//テキストデータをを読み込み
+		char str1[64];//ただの配列
 		wchar_t wstr1[64];
-		fin.seekg(0,ios::cur);
-		fin >> str1;
+		fin.seekg(0,ios::cur);//0バイト数進める
+		fin >> str1;//str1にテキストを入れる
 
-		sprintf_s(str1, "%s", str1);
-		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);
-		Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ 
+		sprintf_s(str1, "%s", str1);//出力
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
+		Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
 	
 
 		key_flag = 2;
-		fin.close();
+		fin.close();//ファイルを閉じる
 	}
 		if (m_sp == 2)
 		{
@@ -151,7 +151,7 @@ void CObjHeroine::Draw()
 			fin.close();
 		}
 	
-	if (m_sp == 3)
+	if (m_sp == 2)
 	{
 		sp_flag == true;
 
@@ -162,7 +162,7 @@ void CObjHeroine::Draw()
 		fin >>str3;
 		sprintf_s(str3, "%s", str3);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
-		Font::StrDraw(wstr3, 50.0f, 500, 25, c);// X  Y  大きさ
+		Font::StrDraw(wstr3, 50.0f, 530, 25, c);// X  Y  大きさ
 
 		key_flag = 4;
 		fin.close();
