@@ -212,14 +212,14 @@ void CObjChinaTownBoss::Draw()
 	//背景表示
 	src.m_top = 0.0f;
 	src.m_left = 0.0f;
-	src.m_right = 800.0f;
-	src.m_bottom = 600.0f;
+	src.m_right = 60.0f;
+	src.m_bottom = 95.0f;
 
 	dst.m_top = 64.0f + my_scroll;
 	dst.m_left = 64.0f + mx_scroll;
 	dst.m_right = 1600.0f + mx_scroll;
 	dst.m_bottom = 900.0f + my_scroll;
-	Draw::Draw(12, &src, &dst, c, 0.0f);
+	Draw::Draw(16, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 50; i++)
@@ -241,7 +241,7 @@ void CObjChinaTownBoss::Draw()
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
 				//描画
-				Draw::Draw(15, &src, &dst, c, 0.0f);
+				Draw::Draw(17, &src, &dst, c, 0.0f);
 
 			}
 			if (m_map[i][j] == 2)//壁
@@ -259,7 +259,7 @@ void CObjChinaTownBoss::Draw()
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
 				//描画
-				Draw::Draw(15, &src, &dst, c, 0.0f);
+				Draw::Draw(17, &src, &dst, c, 0.0f);
 
 			}
 		}
