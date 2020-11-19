@@ -36,6 +36,11 @@ public:
 	void SetLeft(bool b) { m_hit_left = b; }
 	void SetRight(bool b) { m_hit_right = b; }
 
+	bool GetUp() { return m_hit_up; }
+	bool GetDown() { return m_hit_down; }
+	bool GetLeft() { return m_hit_left; }
+	bool GetRight(){ return m_hit_right; }
+
 	float GetB();//弾丸の向き
 	int Get_Gun() { return m_gun; }//銃を構えているか構えていないかを返す
 	int Get_Gun_Kama() { return gun_Kama; ; }//構えているかのフラグ
