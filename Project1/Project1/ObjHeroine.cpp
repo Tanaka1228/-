@@ -99,39 +99,42 @@ void CObjHeroine::Draw()
 
 	setlocale(LC_ALL, "Japanese");
 	
-	wifstream fin(L"会話.txt",ios::in);
-	ifstream ifs(L"会話.txt", ios::in);
+	ifstream fin("会話.txt",ios::in);
+	//ifstream ifs(L"会話.txt", ios::in);
 
-	//--------------------------テスト
-
-	                 //ifstream ifs;
-	char str2[32];
-	                 //ifs.open(L"会話.txt",ios::in);
-	ifs >> str2;
-	sprintf_s(str2,"%s\n", str2);
-	//Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
-	ifs.close();
-
+	//--------------------------テスト       
+	//wchar_t str1[32];
+	//ifs >> str2;
+	//sprintf_s(str2,"%s\n", str2);
+	//MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str2, 32, str1, 32);
+	//Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
+	//ifs.close();
 	//-----------------------------
 
 	
 
 	if (m_sp == 1)
 	{
-
-		wchar_t str1[32];
+		char str1[64];
+		wchar_t str2[64];
 		fin >> str1;
-		//swprintf_s(str1,L"%s\n", str1);
-		//Font::StrDraw(str1, 50.0f, 500, 25, c);// X  Y  大きさ 
+		sprintf_s(str1, "%s", str1);
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, str2, 64);
+	
+		Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
 
 		sp_flag == true;
 		//Font::StrDraw(L"女の子:ようこそバーへ,女の子に引っ付くと会話が進むよ", 50, 500, 25, c);//X Y 大きさ カラー？
 		key_flag = 2;
 
+		fin.close();
 	}
 	if(m_sp == 2)
 	{
 		sp_flag == true;
+
+
+
 		Font::StrDraw(L"女の子：ここは拠点です", 100, 500, 30, c);
 		key_flag = 3;
 
@@ -167,7 +170,7 @@ void CObjHeroine::Draw()
 
 	}
 
-	fin.close();
+
 
 }
 
