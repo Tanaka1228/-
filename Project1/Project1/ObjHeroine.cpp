@@ -97,12 +97,13 @@ void CObjHeroine::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	setlocale(LC_ALL, "Japanese");
+	//setlocale(LC_ALL, "Japanese");
 	
-	ifstream fin("会話.txt",ios::in);
-	//ifstream ifs(L"会話.txt", ios::in);
+	
+	
 
-	//--------------------------テスト       
+	//--------------------------テスト  
+	//ifstream ifs(L"会話.txt", ios::in);
 	//wchar_t str1[32];
 	//ifs >> str2;
 	//sprintf_s(str2,"%s\n", str2);
@@ -115,37 +116,75 @@ void CObjHeroine::Draw()
 
 	if (m_sp == 1)
 	{
-		char str1[64];
-		wchar_t str2[64];
-		fin >> str1;
-		sprintf_s(str1, "%s", str1);
-		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, str2, 64);
-	
-		Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
-
 		sp_flag == true;
-		key_flag = 2;
 
+		ifstream fin("会話.txt", ios::in);
+		char str1[64];//本体
+		char str2[64];//本体
+		wchar_t wstr1[64];
+		wchar_t wstr2[64];
+		fin >> str1 >> str2;
+
+		sprintf_s(str1, "%s", str1);
+		//	sprintf_s(str2, "%s", str2);
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);
+		//MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str2, 64, wstr2, 64);
+		Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ 
+	//	Font::StrDraw(wstr2, 50.0f, 400, 25, c);// X  Y  大きさ 
+
+		key_flag = 2;
 		fin.close();
 	}
-	if(m_sp == 2)
-	{
-		sp_flag == true;
+		if (m_sp == 2)
+		{
+			sp_flag == true;
 
+			ifstream fin("会話.txt", ios::in);
+			char str1[64];//本体
+			char str2[64];//本体
+			wchar_t wstr1[64];
+			wchar_t wstr2[64];
+			fin >> str1 >> str2;
 
+			//sprintf_s(str1, "%s", str1);
+			sprintf_s(str2, "%s", str2);
+			//MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);
+			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str2, 64, wstr2, 64);
+			//Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ 
+			Font::StrDraw(wstr2, 50.0f, 500, 25, c);// X  Y  大きさ 
 
-		Font::StrDraw(L"女の子：ここは拠点です", 100, 500, 30, c);
-		key_flag = 3;
-
-	}
+			key_flag = 3;
+			fin.close();
+		}
+	
 	if (m_sp == 3)
 	{
 		sp_flag == true;
-		Font::StrDraw(L"女の子：Aキーで武器構え・Zキーで発射・Qキーで武器切り替え", 50, 500, 25, c);
-		Font::StrDraw(L"            スペースキーでリロードです", 50, 530, 25, c);
+
+		ifstream fin("会話.txt", ios::in);
+		char str1[64];//本体
+		char str2[64];//本体
+		wchar_t wstr1[64];
+		wchar_t wstr2[64];
+		char str3[64];//本体
+		char str4[64];//本体
+		wchar_t wstr3[64];
+		wchar_t wstr4[64];
+		fin >> str1 >> str2>>str3>>str4;
+
+		sprintf_s(str3, "%s", str3);
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
+		sprintf_s(str4, "%s", str4);
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str4, 64, wstr4, 64);
+		Font::StrDraw(wstr3, 50.0f, 500, 25, c);// X  Y  大きさ 
+		Font::StrDraw(wstr4, 50.0f, 530, 25, c);// X  Y  大きさ 
+
+
+		//Font::StrDraw(L"女の子：Aキーで武器構え・Zキーで発射・Qキーで武器切り替え", 50, 500, 25, c);
+		//Font::StrDraw(L"            スペースキーでリロードです", 50, 530, 25, c);
 		key_flag = 4;
 
-		
+		fin.close();
 	}
 	if (m_sp == 4)
 	{
