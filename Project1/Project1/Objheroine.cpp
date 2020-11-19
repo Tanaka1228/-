@@ -132,22 +132,22 @@ void CObjHeroine::Draw()
 		key_flag = 2;
 		fin.close();//ファイルを閉じる
 	}
-		if (m_sp == 2)
+		if (m_sp == 1)
 		{
 			sp_flag == true;
 
 			ifstream fin("会話.txt", ios::in);
 			char str1[64];//本体
 			wchar_t wstr1[64];
-			fin.seekg(60, ios::cur);
+			fin.seekg(48, ios::cur);
 			fin >> str1;
 
 			sprintf_s(str1, "%s", str1);
 			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);
-			Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ 
+			Font::StrDraw(wstr1, 50.0f, 530, 25, c);// X  Y  大きさ 
 		
 
-			key_flag = 3;
+			key_flag = 2;
 			fin.close();
 		}
 	
@@ -158,35 +158,38 @@ void CObjHeroine::Draw()
 		ifstream fin("会話.txt", ios::in);
 		char str3[64];//本体
 		wchar_t wstr3[64];
-		fin.seekg(84, ios::cur);
+		fin.seekg(94, ios::cur);
+		fin >>str3;
+		sprintf_s(str3, "%s", str3);
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
+		Font::StrDraw(wstr3, 50.0f, 500, 25, c);// X  Y  大きさ
+
+		key_flag = 5;
+		fin.close();
+	}
+	if (m_sp == 2)
+	{
+		sp_flag == true;
+
+		ifstream fin("会話.txt", ios::in);
+		char str3[64];//本体
+		wchar_t wstr3[64];
+		fin.seekg(158, ios::cur);
 		fin >>str3;
 		sprintf_s(str3, "%s", str3);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
 		Font::StrDraw(wstr3, 50.0f, 530, 25, c);// X  Y  大きさ
 
-		key_flag = 4;
+		key_flag = 5;
 		fin.close();
 	}
-	if (m_sp == 4)
-	{
-		sp_flag == true;
 
-		ifstream fin("会話.txt", ios::in);
-		char str4[64];//本体
-		wchar_t wstr4[64];
-		fin.seekg(144, ios::cur);
-		fin >> str4;
-		sprintf_s(str4, "%s", str4);
-		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str4, 64, wstr4, 64);
-		Font::StrDraw(wstr4, 50.0f, 500, 25, c);// X  Y  大きさ 
-		
-		key_flag = 5;
 
-	}
+	
 	if (m_sp == 5)
 	{
 		sp_flag == true;
-		Font::StrDraw(L"女の子：拠点をでて、敵を倒して", 100, 500, 30, c);
+		Font::StrDraw(L"女の子：拠点を出て、敵を倒して来てください", 100, 500, 30, c);
 		key_flag = 6;
 
 	}
