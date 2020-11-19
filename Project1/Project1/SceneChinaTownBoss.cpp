@@ -56,6 +56,10 @@ void CSceneChinaTownBoss::InitScene()
 	CObjChinaTownBoss* objb = new CObjChinaTownBoss();
 	Objs::InsertObj(objb, OBJ_CHINA_TOWN_BOSS, 3);
 
+	//銃オブジェクト作成
+	CObjGun* objg = new CObjGun();
+	Objs::InsertObj(objg, OBJ_GUN, 5);
+
 }
 
 

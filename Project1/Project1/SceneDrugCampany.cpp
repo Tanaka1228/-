@@ -46,6 +46,9 @@ void CSceneDrugCampany::InitScene()
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
+	//銃オブジェクト作成
+	CObjGun* objg = new CObjGun();
+	Objs::InsertObj(objg, OBJ_GUN, 5);
 
 	//製薬会社オブジェクト作成
 	CObjDrugCampany* objd = new CObjDrugCampany(); //製薬会社オブジェクト作成
