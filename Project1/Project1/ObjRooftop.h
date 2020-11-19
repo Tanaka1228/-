@@ -25,7 +25,7 @@ public:
 
 private:
 	
-	int m_map[25][55]; //マップ情報
+	int m_map[38][83]; //マップ情報
 
 	float mx_scroll; //左右スクロール用
 	float my_scroll; //左右スクロール用
