@@ -54,6 +54,6 @@ void CSceneHospital::InitScene()
 
 
 //ゲームステージ実行中メソッド
-void CSceneDrugCampany::Scene()
+void CSceneHospital::Scene()
 {
 }
