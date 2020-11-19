@@ -43,6 +43,10 @@ void CSceneInstituteBoss::InitScene()
 	//外部グラフィックファイルを読み込み12番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"研究所のボス戦フィールド.png", 12, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み15番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"研究所ボス戦フィールドの素材.png", 15, TEX_SIZE_512);
+
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
