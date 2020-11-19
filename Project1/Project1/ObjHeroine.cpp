@@ -114,26 +114,23 @@ void CObjHeroine::Draw()
 
 	
 
-	if (m_sp == 1)
+	if (m_sp == 1)//エンターキーを一回押したとき
 	{
 		sp_flag == true;
 
-		ifstream fin("会話.txt", ios::in);
-		char str1[64];//本体
-		char str2[64];//本体
+		ifstream fin("会話.txt", ios::in);//テキストデータをを読み込み
+		char str1[64];//ただの配列
 		wchar_t wstr1[64];
-		wchar_t wstr2[64];
-		fin >> str1 >> str2;
+		fin.seekg(0,ios::cur);//0バイト数進める
+		fin >> str1;//str1にテキストを入れる
 
-		sprintf_s(str1, "%s", str1);
-		//	sprintf_s(str2, "%s", str2);
-		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);
-		//MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str2, 64, wstr2, 64);
-		Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ 
-	//	Font::StrDraw(wstr2, 50.0f, 400, 25, c);// X  Y  大きさ 
+		sprintf_s(str1, "%s", str1);//出力
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
+		Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
+	
 
 		key_flag = 2;
-		fin.close();
+		fin.close();//ファイルを閉じる
 	}
 		if (m_sp == 2)
 		{
@@ -141,54 +138,48 @@ void CObjHeroine::Draw()
 
 			ifstream fin("会話.txt", ios::in);
 			char str1[64];//本体
-			char str2[64];//本体
 			wchar_t wstr1[64];
-			wchar_t wstr2[64];
-			fin >> str1 >> str2;
+			fin.seekg(60, ios::cur);
+			fin >> str1;
 
-			//sprintf_s(str1, "%s", str1);
-			sprintf_s(str2, "%s", str2);
-			//MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);
-			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str2, 64, wstr2, 64);
-			//Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ 
-			Font::StrDraw(wstr2, 50.0f, 500, 25, c);// X  Y  大きさ 
+			sprintf_s(str1, "%s", str1);
+			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);
+			Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ 
+		
 
 			key_flag = 3;
 			fin.close();
 		}
 	
-	if (m_sp == 3)
+	if (m_sp == 2)
 	{
 		sp_flag == true;
 
 		ifstream fin("会話.txt", ios::in);
-		char str1[64];//本体
-		char str2[64];//本体
-		wchar_t wstr1[64];
-		wchar_t wstr2[64];
 		char str3[64];//本体
-		char str4[64];//本体
 		wchar_t wstr3[64];
-		wchar_t wstr4[64];
-		fin >> str1 >> str2>>str3>>str4;
-
+		fin.seekg(84, ios::cur);
+		fin >>str3;
 		sprintf_s(str3, "%s", str3);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
-		Font::StrDraw(wstr3, 50.0f, 500, 25, c);// X  Y  大きさ
+		Font::StrDraw(wstr3, 50.0f, 530, 25, c);// X  Y  大きさ
 
-		sprintf_s(str4, "%s", str4);
-		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str4, 64, wstr4, 64);
-		Font::StrDraw(wstr4, 50.0f, 530, 25, c);// X  Y  大きさ 
-
-	
 		key_flag = 4;
-
 		fin.close();
 	}
 	if (m_sp == 4)
 	{
 		sp_flag == true;
-		Font::StrDraw(L"女の子：βテスト・ファイル出力・チャイナタウン", 100, 500, 30, c);
+
+		ifstream fin("会話.txt", ios::in);
+		char str4[64];//本体
+		wchar_t wstr4[64];
+		fin.seekg(144, ios::cur);
+		fin >> str4;
+		sprintf_s(str4, "%s", str4);
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str4, 64, wstr4, 64);
+		Font::StrDraw(wstr4, 50.0f, 500, 25, c);// X  Y  大きさ 
+		
 		key_flag = 5;
 
 	}
