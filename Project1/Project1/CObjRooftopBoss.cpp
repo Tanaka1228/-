@@ -105,8 +105,8 @@ void CObjRooftopBoss::Action()
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
-		Sleep(1000);
-		Scene::SetScene(new CSceneFin());
+		Sleep(400);
+		//Scene::SetScene(new CSceneFin());
 	}
 }
 
