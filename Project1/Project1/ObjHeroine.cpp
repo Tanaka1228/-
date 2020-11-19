@@ -112,6 +112,7 @@ void CObjHeroine::Draw()
 	//ifs.close();
 	//-----------------------------
 
+	//二行テキストを出すときは、2行目のY軸を30上げるといい感じになる
 	
 
 	if (m_sp == 1)//エンターキーを一回押したとき
@@ -126,7 +127,7 @@ void CObjHeroine::Draw()
 
 		sprintf_s(str1, "%s", str1);//出力
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-		Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
+		Font::StrDraw(wstr1, 50.0f, 480, 25, c);// X  Y  大きさ     
 	
 
 		key_flag = 2;
@@ -144,7 +145,7 @@ void CObjHeroine::Draw()
 
 			sprintf_s(str1, "%s", str1);
 			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);
-			Font::StrDraw(wstr1, 50.0f, 530, 25, c);// X  Y  大きさ 
+			Font::StrDraw(wstr1, 50.0f, 510, 25, c);// X  Y  大きさ 
 		
 
 			key_flag = 2;
@@ -162,7 +163,7 @@ void CObjHeroine::Draw()
 		fin >>str3;
 		sprintf_s(str3, "%s", str3);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
-		Font::StrDraw(wstr3, 50.0f, 500, 25, c);// X  Y  大きさ
+		Font::StrDraw(wstr3, 50.0f, 480, 25, c);// X  Y  大きさ
 
 		key_flag = 5;
 		fin.close();
@@ -178,20 +179,26 @@ void CObjHeroine::Draw()
 		fin >>str3;
 		sprintf_s(str3, "%s", str3);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
-		Font::StrDraw(wstr3, 50.0f, 530, 25, c);// X  Y  大きさ
+		Font::StrDraw(wstr3, 50.0f, 510, 25, c);// X  Y  大きさ
 
 		key_flag = 5;
 		fin.close();
 	}
 
-
-	
 	if (m_sp == 5)
 	{
 		sp_flag == true;
-		Font::StrDraw(L"女の子：拠点を出て、敵を倒して来てください", 100, 500, 30, c);
-		key_flag = 6;
+		ifstream fin("会話.txt", ios::in);
+		char str3[64];//本体
+		wchar_t wstr3[64];
+		fin.seekg(194, ios::cur);
+		fin >> str3;
+		sprintf_s(str3, "%s", str3);
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
+		Font::StrDraw(wstr3, 50.0f, 480, 25, c);// X  Y  大きさ
 
+		key_flag = 6;
+		fin.close();
 	}
 	if (m_sp == 6)
 	{
