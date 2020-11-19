@@ -174,14 +174,13 @@ void CObjHeroine::Draw()
 
 		sprintf_s(str3, "%s", str3);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
+		Font::StrDraw(wstr3, 50.0f, 500, 25, c);// X  Y  大きさ
+
 		sprintf_s(str4, "%s", str4);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str4, 64, wstr4, 64);
-		Font::StrDraw(wstr3, 50.0f, 500, 25, c);// X  Y  大きさ 
 		Font::StrDraw(wstr4, 50.0f, 530, 25, c);// X  Y  大きさ 
 
-
-		//Font::StrDraw(L"女の子：Aキーで武器構え・Zキーで発射・Qキーで武器切り替え", 50, 500, 25, c);
-		//Font::StrDraw(L"            スペースキーでリロードです", 50, 530, 25, c);
+	
 		key_flag = 4;
 
 		fin.close();
