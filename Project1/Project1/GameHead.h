@@ -34,6 +34,7 @@ enum OBJ_NAME
 	OBJ_ASS_BULLET,//アサルトライフルの弾丸
 	OBJ_DRUG_CAMPANY,//製薬会社
 	OBJ_HOSPITAL,//病院
+	OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
 };
 //------------------------------------------------
 
@@ -105,6 +106,7 @@ struct UserData
 #include"CObjAssBullet.h"
 #include"ObjDrugCampany.h"
 #include"ObjHospital.h"
+#include"ObjChinaTownBoss.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------

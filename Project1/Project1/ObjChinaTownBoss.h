@@ -1,19 +1,19 @@
 #pragma once
 //使用するヘッダー
 #include"GameL\SceneObjManager.h"
+#include"GameL\SceneManager.h"
 //使用するネームスペース
 using namespace GameL;
 
 //オブジェクト：ブロック＆背景
-class CObjInstituteBoss :public CObj
+class CObjChinaTownBoss :public CObj
 {
 public:
-	CObjInstituteBoss() {};
-	~CObjInstituteBoss() {};
+	CObjChinaTownBoss() {};
+	~CObjChinaTownBoss() {};
 	void Init(); //イニシャライズ
 	void Action(); //アクション
 	void Draw(); //ドロー
-
 
 	void SetScroll(float s) { mx_scroll = s; }
 	float GetScroll() { return mx_scroll; }//X
@@ -22,8 +22,10 @@ public:
 	float GetScroll2() { return my_scroll; }//Y
 
 
+
 private:
-	int m_map[50][51]; //マップ情報(仮）
+
+	int m_map[50][51]; //マップ情報
 
 	float mx_scroll; //左右スクロール用
 	float my_scroll; //左右スクロール用

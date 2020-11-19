@@ -5,13 +5,13 @@
 
 #include"GameL\SceneObjManager.h"
 #include"GameHead.h"
-#include"ObjInstituteBoss.h"
+#include"ObjChinaTownBoss.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjInstituteBoss::Init()
+void CObjChinaTownBoss::Init()
 {
 	mx_scroll = 0.0f;
 	my_scroll = 0.0f;
@@ -49,14 +49,14 @@ void CObjInstituteBoss::Init()
 		{0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
 		{0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
-		
+
 
 	};
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (50 * 51));
 }
 //アクション
-void CObjInstituteBoss::Action()
+void CObjChinaTownBoss::Action()
 {
 
 	//主人公の位置を取得
@@ -127,7 +127,7 @@ void CObjInstituteBoss::Action()
 	{
 		for (int j = 0; j < 51; j++)
 		{
-			if (m_map[i][j] > 0 )
+			if (m_map[i][j] > 0)
 			{
 
 				//要素番号を座標に変更
@@ -190,7 +190,7 @@ void CObjInstituteBoss::Action()
 							hero->SetY2(y + 40.0f + (my_scroll));//ブロックの位置+主人公の幅
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
-						
+
 					}
 				}
 
@@ -201,7 +201,7 @@ void CObjInstituteBoss::Action()
 	}
 }
 //ドロー
-void CObjInstituteBoss::Draw()
+void CObjChinaTownBoss::Draw()
 {
 	//描画カラー情報
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
@@ -231,8 +231,8 @@ void CObjInstituteBoss::Draw()
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
 				src.m_left = 0.0f; //x
-				src.m_right = 88.0f; //x
-				src.m_bottom = 55.0f; //y
+				src.m_right = 0.0f; //x
+				src.m_bottom = 0.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
@@ -247,10 +247,10 @@ void CObjInstituteBoss::Draw()
 			if (m_map[i][j] == 2)//壁
 			{
 				//切り取り位置の設定
-				src.m_top = 20.0f;   //y
-				src.m_left = 118.0f; //x
-				src.m_right = 145.0f; //x
-				src.m_bottom = 50.0f; //y
+				src.m_top = 0.0f;   //y
+				src.m_left = 0.0f; //x
+				src.m_right = 0.0f; //x
+				src.m_bottom = 0.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;

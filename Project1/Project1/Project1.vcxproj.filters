@@ -216,6 +216,12 @@
     <ClInclude Include="SceneHospital.h">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClInclude>
+    <ClInclude Include="ObjChinaTownBoss.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaTownBoss.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -384,6 +390,12 @@
       <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
     <ClCompile Include="SceneHospital.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTownBoss.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaTownBoss.cpp">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClCompile>
   </ItemGroup>

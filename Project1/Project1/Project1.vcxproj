@@ -148,6 +148,7 @@
     <ClInclude Include="ObjBlock.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjChinaTownBoss.h" />
     <ClInclude Include="ObjDiffusionEnemy.h" />
     <ClInclude Include="ObjDrugCampany.h" />
     <ClInclude Include="ObjEnd.h" />
@@ -169,6 +170,7 @@
     <ClInclude Include="CObjRooftopBoss.h" />
     <ClInclude Include="SceneBlock.h" />
     <ClInclude Include="SceneChinaTown.h" />
+    <ClInclude Include="SceneChinaTownBoss.h" />
     <ClInclude Include="SceneDrugCampany.h" />
     <ClInclude Include="SceneEnd.h" />
     <ClInclude Include="SceneFin.h" />
@@ -213,6 +215,7 @@
     <ClCompile Include="ObjBlock.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ObjChinaTownBoss.cpp" />
     <ClCompile Include="ObjDiffusionEnemy.cpp" />
     <ClCompile Include="ObjDrugCampany.cpp" />
     <ClCompile Include="ObjEnd.cpp" />
@@ -227,6 +230,7 @@
     <ClCompile Include="CObjRooftopBoss.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
     <ClCompile Include="SceneChinaTown.cpp" />
+    <ClCompile Include="SceneChinaTownBoss.cpp" />
     <ClCompile Include="SceneDrugCampany.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="ObjMenu.cpp" />
