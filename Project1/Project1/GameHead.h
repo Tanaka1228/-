@@ -125,6 +125,7 @@ struct UserData
 #include"SceneDrugCampany.h"
 #include"SceneHospital.h"
 #include"SceneInstitute.h"
+#include"SceneChinaTownBoss.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
