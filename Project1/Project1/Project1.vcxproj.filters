@@ -46,6 +46,21 @@
     <Filter Include="ヘッダー ファイル\SceneMain\Enemy\EnemyBoss">
       <UniqueIdentifier>{3c5549f3-b998-40db-a418-8f19a8f1ee12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\StageMap\病院">
+      <UniqueIdentifier>{3eef1b41-18cc-41ae-a902-a80f0bf15c8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\StageMap\研究所">
+      <UniqueIdentifier>{4aac3737-570b-4ee3-a509-916a8d7b1511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\StageMap\拠点">
+      <UniqueIdentifier>{0a0d0fb3-29fb-4082-a275-4244d2f50b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\StageMap\チャイナタウン">
+      <UniqueIdentifier>{4f5aad73-ef6c-49d8-9097-6e1894232470}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\StageMap\製薬会社">
+      <UniqueIdentifier>{f817723a-8151-4751-95c3-d0c15d511351}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -141,9 +156,6 @@
     <ClInclude Include="CObjHomingBullet.h">
       <Filter>ソース ファイル\Bullet</Filter>
     </ClInclude>
-    <ClInclude Include="ObjBlock.h">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClInclude>
     <ClInclude Include="SceneEnd.h">
       <Filter>ヘッダー ファイル\END</Filter>
     </ClInclude>
@@ -159,22 +171,7 @@
     <ClInclude Include="ObjFin.h">
       <Filter>ヘッダー ファイル\fin</Filter>
     </ClInclude>
-    <ClInclude Include="ObjRooftop.h">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneBlock.h">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneRooftop.h">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClInclude>
     <ClInclude Include="SceneStage.h">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjInstituteBoss.h">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneInstituteBoss.h">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClInclude>
     <ClInclude Include="ObjHero.h">
@@ -182,12 +179,6 @@
     </ClInclude>
     <ClInclude Include="ObjHeroine.h">
       <Filter>ソース ファイル\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneChinaTown.h">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjChinaTown.h">
-      <Filter>ソース ファイル\StageMap</Filter>
     </ClInclude>
     <ClInclude Include="SceneTyainataun.h">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
@@ -204,17 +195,47 @@
     <ClInclude Include="CObjAssBullet.h">
       <Filter>ソース ファイル\Bullet</Filter>
     </ClInclude>
-    <ClInclude Include="ObjDrugCampany.h">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneDrugCampany.h">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    <ClInclude Include="SceneHospital.h">
+      <Filter>ソース ファイル\StageMap\病院</Filter>
     </ClInclude>
     <ClInclude Include="ObjHospital.h">
-      <Filter>ソース ファイル\StageMap</Filter>
+      <Filter>ソース ファイル\StageMap\病院</Filter>
     </ClInclude>
-    <ClInclude Include="SceneHospital.h">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    <ClInclude Include="SceneInstitute.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneInstituteBoss.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjInstitute.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjInstituteBoss.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBlock.h">
+      <Filter>ソース ファイル\StageMap\拠点</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjBlock.h">
+      <Filter>ソース ファイル\StageMap\拠点</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaTown.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjChinaTown.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneRooftop.h">
+      <Filter>ソース ファイル\StageMap\病院</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjRooftop.h">
+      <Filter>ソース ファイル\StageMap\病院</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampany.h">
+      <Filter>ソース ファイル\StageMap\製薬会社</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDrugCampany.h">
+      <Filter>ソース ファイル\StageMap\製薬会社</Filter>
     </ClInclude>
     <ClInclude Include="ObjChinaTownBoss.h">
       <Filter>ソース ファイル\StageMap</Filter>
@@ -332,25 +353,7 @@
     <ClCompile Include="ObjFin.cpp">
       <Filter>ヘッダー ファイル\fin</Filter>
     </ClCompile>
-    <ClCompile Include="ObjBlock.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjRooftop.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneBlock.cpp">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneRooftop.cpp">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClCompile>
     <ClCompile Include="SceneStage.cpp">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjInstituteBoss.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneInstituteBoss.cpp">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClCompile>
     <ClCompile Include="ObjHero.cpp">
@@ -358,12 +361,6 @@
     </ClCompile>
     <ClCompile Include="ObjHeroine.cpp">
       <Filter>ソース ファイル\Character</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneChinaTown.cpp">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjChinaTown.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
     <ClCompile Include="SceneTyainataun.cpp">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
@@ -380,17 +377,47 @@
     <ClCompile Include="CObjAssBullet.cpp">
       <Filter>ソース ファイル\Bullet</Filter>
     </ClCompile>
-    <ClCompile Include="SceneDrugCampany.cpp">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjDrugCampany.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
+    <ClCompile Include="SceneHospital.cpp">
+      <Filter>ソース ファイル\StageMap\病院</Filter>
     </ClCompile>
     <ClCompile Include="ObjHospital.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
+      <Filter>ソース ファイル\StageMap\病院</Filter>
     </ClCompile>
-    <ClCompile Include="SceneHospital.cpp">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    <ClCompile Include="SceneInstitute.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneInstituteBoss.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjInstitute.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjInstituteBoss.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBlock.cpp">
+      <Filter>ソース ファイル\StageMap\拠点</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjBlock.cpp">
+      <Filter>ソース ファイル\StageMap\拠点</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaTown.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTown.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneRooftop.cpp">
+      <Filter>ソース ファイル\StageMap\病院</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjRooftop.cpp">
+      <Filter>ソース ファイル\StageMap\病院</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampany.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampany.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社</Filter>
     </ClCompile>
     <ClCompile Include="ObjChinaTownBoss.cpp">
       <Filter>ソース ファイル\StageMap</Filter>

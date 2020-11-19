@@ -6,13 +6,13 @@
 #include"GameL\SceneObjManager.h"
 
 #include"GameHead.h"
-#include "ObjHospital.h"
+#include "ObjInstitute.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjHospital::Init()
+void CObjInstitute::Init()
 {
 	mx_scroll = 0.0f;
 	my_scroll = 0.0f;
@@ -28,7 +28,7 @@ void CObjHospital::Init()
 
 }
 //アクション
-void CObjHospital::Action()
+void CObjInstitute::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
@@ -199,7 +199,7 @@ void CObjHospital::Action()
 
 }
 //ドロー
-void CObjHospital::Draw()
+void CObjInstitute::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
@@ -212,10 +212,10 @@ void CObjHospital::Draw()
 	src.m_right = 0.0f; // X
 	src.m_bottom = 0.0f;// Y 
 
-	dst.m_top = 0.0f+ my_scroll;
-	dst.m_left = 0.0f+ mx_scroll;
-	dst.m_right = 0.0f+ mx_scroll;
-	dst.m_bottom = 0.0+ my_scroll;
+	dst.m_top = 0.0f + my_scroll;
+	dst.m_left = 0.0f + mx_scroll;
+	dst.m_right = 0.0f + mx_scroll;
+	dst.m_bottom = 0.0 + my_scroll;
 	Draw::Draw(10, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
