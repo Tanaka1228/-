@@ -237,11 +237,11 @@
     <ClInclude Include="ObjDrugCampany.h">
       <Filter>ソース ファイル\StageMap\製薬会社</Filter>
     </ClInclude>
-    <ClInclude Include="ObjChinaTownBoss.h">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClInclude>
     <ClInclude Include="SceneChinaTownBoss.h">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjChinaTownBoss.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -419,11 +419,11 @@
     <ClCompile Include="ObjDrugCampany.cpp">
       <Filter>ソース ファイル\StageMap\製薬会社</Filter>
     </ClCompile>
-    <ClCompile Include="ObjChinaTownBoss.cpp">
-      <Filter>ソース ファイル\StageMap</Filter>
-    </ClCompile>
     <ClCompile Include="SceneChinaTownBoss.cpp">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTownBoss.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
