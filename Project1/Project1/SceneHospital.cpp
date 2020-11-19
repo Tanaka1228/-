@@ -12,24 +12,24 @@ using namespace GameL;
 
 //使用するヘッダー
 #include"GameHead.h"
-#include "SceneDrugCampany.h"
+#include "SceneHospital.h"
 
 
 
 //コンストラクタ
-CSceneDrugCampany::CSceneDrugCampany()
+CSceneHospital::CSceneHospital()
 {
 }
 
 //デストラクタ
-CSceneDrugCampany::~CSceneDrugCampany()
+CSceneHospital::~CSceneHospital()
 {
 }
 
 
 
 //ゲームステージ初期化メソッド
-void CSceneDrugCampany::InitScene()
+void CSceneHospital::InitScene()
 {
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
@@ -40,16 +40,16 @@ void CSceneDrugCampany::InitScene()
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"弾丸＿右.png", 3, TEX_SIZE_512);//弾丸グラフィック
 
-	
+
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 
-	//製薬会社オブジェクト作成
-	CObjDrugCampany* objd = new CObjDrugCampany(); //製薬会社オブジェクト作成
-	Objs::InsertObj(objd, OBJ_DRUG_CAMPANY, 5); //作った製薬会社オブジェクトをオブジェクトマネージャーに登録
+	//病院オブジェクト作成
+	CObjHospital* objh = new CObjHospital(); //病院オブジェクト作成
+	Objs::InsertObj(objh, OBJ_HOSPITAL, 5); //作った病院オブジェクトをオブジェクトマネージャーに登録
 }
 
 

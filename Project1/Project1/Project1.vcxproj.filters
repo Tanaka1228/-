@@ -210,6 +210,12 @@
     <ClInclude Include="SceneDrugCampany.h">
       <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClInclude>
+    <ClInclude Include="ObjHospital.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneHospital.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -373,6 +379,12 @@
     </ClCompile>
     <ClCompile Include="ObjDrugCampany.cpp">
       <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjHospital.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneHospital.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

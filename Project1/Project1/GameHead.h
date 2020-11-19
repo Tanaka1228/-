@@ -32,7 +32,8 @@ enum OBJ_NAME
 	OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
 	OBJ_GUN,//武器銃
 	OBJ_ASS_BULLET,//アサルトライフルの弾丸
-	OBJ_DRUG_CAMPANY,
+	OBJ_DRUG_CAMPANY,//製薬会社
+	OBJ_HOSPITAL,//病院
 };
 //------------------------------------------------
 
@@ -103,6 +104,7 @@ struct UserData
 #include"ObjGun.h"
 #include"CObjAssBullet.h"
 #include"ObjDrugCampany.h"
+#include"ObjHospital.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -117,6 +119,7 @@ struct UserData
 #include"SceneInstituteBoss.h"
 #include"SceneChinaTown.h"
 #include"SceneDrugCampany.h"
+#include"SceneHospital.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
