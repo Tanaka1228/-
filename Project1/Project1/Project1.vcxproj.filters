@@ -204,6 +204,12 @@
     <ClInclude Include="CObjAssBullet.h">
       <Filter>ソース ファイル\Bullet</Filter>
     </ClInclude>
+    <ClInclude Include="ObjDrugCampany.h">
+      <Filter>ソース ファイル\StageMap</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampany.h">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -361,6 +367,12 @@
     </ClCompile>
     <ClCompile Include="CObjAssBullet.cpp">
       <Filter>ソース ファイル\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampany.cpp">
+      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampany.cpp">
+      <Filter>ソース ファイル\StageMap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
