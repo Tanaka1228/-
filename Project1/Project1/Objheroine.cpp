@@ -20,7 +20,7 @@ CObjHeroine::CObjHeroine()
 	m_sp = false;
 	key_flag = 1;
 	sp_flag = false;
-	m_key_control = true;
+	m_key_control = true; 
 }
 
 
