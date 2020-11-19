@@ -100,15 +100,18 @@ void CObjHeroine::Draw()
 	setlocale(LC_ALL, "Japanese");
 	
 	wifstream fin(L"会話.txt",ios::in);
+	ifstream ifs(L"会話.txt", ios::in);
 
 	//--------------------------テスト
-	ifstream ifs;
+
+	                 //ifstream ifs;
 	char str2[32];
-	ifs.open(L"会話.txt",ios::in);
+	                 //ifs.open(L"会話.txt",ios::in);
 	ifs >> str2;
 	sprintf_s(str2,"%s\n", str2);
 	//Font::StrDraw(str2, 50.0f, 500, 25, c);// X  Y  大きさ 
 	ifs.close();
+
 	//-----------------------------
 
 	
