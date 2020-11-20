@@ -20,21 +20,23 @@ enum OBJ_NAME
 	OBJ_DIFFUSION_ENEMY,//
 	OBJ_ANGLE_BULLET,
 	OBJ_HOMING_BULLET,
-	OBJ_STAGE,//
-	OBJ_BLOCK,//拠点
 	OBJ_END,
 	OBJ_FIN,
 	OBJ_MANU,//メニュー
+	OBJ_HEROINE,//ヒロイン
+	OBJ_GUN,//武器銃
+	OBJ_ASS_BULLET,//アサルトライフルの弾丸
+	//------マップ-------------------------------------------
+	OBJ_BLOCK,//拠点
 	OBJ_ROOF_TOP,//病院屋上
 	OBJ_INSTITUTE_BOSS,//研究所ボス
 	OBJ_INSTITUTE,//研究所
-	OBJ_HEROINE,//ヒロイン
 	OBJ_CHINA_TOWN,//チャイナタウン
 	OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
-	OBJ_GUN,//武器銃
-	OBJ_ASS_BULLET,//アサルトライフルの弾丸
 	OBJ_DRUG_CAMPANY,//製薬会社
-	OBJ_HOSPITAL,//病院
+	OBJ_HOSPITAL,//病院1階
+	OBJ_HOSPITAL2,//病院2階
+	OBJ_HOSPITAL3,//病院3階
 	OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
 };
 //------------------------------------------------
@@ -94,7 +96,6 @@ struct UserData
 #include"CObjAngleBullet.h"
 #include"CObjHomingBullet.h"
 #include"ObjBlock.h"
-#include"ObjStage.h"
 #include"ObjEnd.h"
 #include"ObjFin.h"
 #include"ObjMenu.h"
@@ -107,6 +108,8 @@ struct UserData
 #include"CObjAssBullet.h"
 #include"ObjDrugCampany.h"
 #include"ObjHospital.h"
+#include"ObjHospital2.h"
+#include"ObjHospital3.h"
 #include"ObjChinaTownBoss.h"
 #include"ObjInstitute.h"
 //------------------------------------------------
@@ -114,7 +117,6 @@ struct UserData
 //ゲームシーンクラスヘッダ------------------------
 #include"SceneTitle.h"
 #include"SceneMain.h"
-#include"SceneStage.h"
 #include"SceneGameOver.h"
 #include"SceneEnd.h"
 #include"SceneFin.h"
@@ -124,6 +126,8 @@ struct UserData
 #include"SceneChinaTown.h"
 #include"SceneDrugCampany.h"
 #include"SceneHospital.h"
+#include"SceneHospital2.h"
+#include"SceneHospital3.h"
 #include"SceneInstitute.h"
 #include"SceneChinaTownBoss.h"
 //-----------------------------------------------

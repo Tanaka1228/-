@@ -1,4 +1,5 @@
 #pragma once
+
 //使用するヘッダーファイル
 #include"GameL\SceneManager.h"
 
@@ -6,11 +7,11 @@
 using namespace GameL;
 
 //シーン：ステージ
-class CSceneStage :public CScene
+class CSceneHospital2 :public CScene
 {
 public:
-	CSceneStage();//コンストラクタ
-	~CSceneStage();//デストラクタ
+	CSceneHospital2();//コンストラクタ
+	~CSceneHospital2();//デストラクタ
 	void InitScene();//ゲームステージ初期化メソッド
 	void Scene();//ゲームステージ実行中メソッド
 private:

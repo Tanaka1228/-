@@ -159,14 +159,13 @@
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjHeroine.h" />
     <ClInclude Include="ObjHospital.h" />
+    <ClInclude Include="ObjHospital2.h" />
+    <ClInclude Include="ObjHospital3.h" />
     <ClInclude Include="ObjInstitute.h" />
     <ClInclude Include="ObjInstituteBoss.h" />
     <ClInclude Include="ObjMain.h" />
     <ClInclude Include="ObjMenu.h" />
     <ClInclude Include="ObjRooftop.h" />
-    <ClInclude Include="ObjStage.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="CObjRooftopBoss.h" />
     <ClInclude Include="SceneBlock.h" />
@@ -177,13 +176,12 @@
     <ClInclude Include="SceneFin.h" />
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneHospital.h" />
+    <ClInclude Include="SceneHospital2.h" />
+    <ClInclude Include="SceneHospital3.h" />
     <ClInclude Include="SceneInstitute.h" />
     <ClInclude Include="SceneInstituteBoss.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneRooftop.h" />
-    <ClInclude Include="SceneStage.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="ObjTitleBackground.h" />
     <ClInclude Include="SceneTyainataun.h">
@@ -226,6 +224,8 @@
     <ClCompile Include="ObjGun.cpp" />
     <ClCompile Include="ObjHeroine.cpp" />
     <ClCompile Include="ObjHospital.cpp" />
+    <ClCompile Include="ObjHospital2.cpp" />
+    <ClCompile Include="ObjHospital3.cpp" />
     <ClCompile Include="ObjInstitute.cpp" />
     <ClCompile Include="ObjInstituteBoss.cpp" />
     <ClCompile Include="ObjMain.cpp" />
@@ -241,19 +241,15 @@
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjHero.cpp" />
-    <ClCompile Include="ObjStage.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneHospital.cpp" />
+    <ClCompile Include="SceneHospital2.cpp" />
+    <ClCompile Include="SceneHospital3.cpp" />
     <ClCompile Include="SceneInstitute.cpp" />
     <ClCompile Include="SceneInstituteBoss.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneRooftop.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
-    <ClCompile Include="SceneStage.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="ObjTitleBackground.cpp" />
     <ClCompile Include="SceneTyainataun.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
