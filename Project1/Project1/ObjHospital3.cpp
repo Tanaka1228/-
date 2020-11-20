@@ -102,27 +102,18 @@ void CObjHospital3::Action()
 		}
 	}
 
-
-
-
-
 	//主人公の衝突状態確認用フラグの初期化
 	hero->SetUp(false);
 	hero->SetDown(false);
 	hero->SetLeft(false);
 	hero->SetRight(false);
 
-
-
-
-
-
 	//m_mapの全要素にアクセス
 	for (int i = 0; i < 25; i++)
 	{
 		for (int j = 0; j < 25; j++)
 		{
-			if (m_map[i][j] > 0 && m_map[i][j] != 15)
+			if (m_map[i][j] > 0)
 			{
 
 				//要素番号を座標に変更
@@ -236,10 +227,10 @@ void CObjHospital3::Draw()
 	src.m_right = 87.0f; // X
 	src.m_bottom = 87.0f;// Y 
 
-	dst.m_top = 0.0f + my_scroll;
-	dst.m_left = 0.0f + mx_scroll;
-	dst.m_right = 87.0f + mx_scroll;
-	dst.m_bottom = 87.0 + my_scroll;
+	dst.m_top = 64.0f + my_scroll;
+	dst.m_left = 64.0f + mx_scroll;
+	dst.m_right = 2000.0f + mx_scroll;
+	dst.m_bottom = 1000.0 + my_scroll;
 	Draw::Draw(4, &src, &dst, c, 0.0f);//病院の床
 
 	//マップチップによるblock設置

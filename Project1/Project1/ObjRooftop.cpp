@@ -197,7 +197,7 @@ void CObjRooftop::Action()
 						}
 						if (m_map[i][j] == 41||m_map[i][j]==42)//ƒhƒA‚É“ü‚é‚Æ•a‰@‚ÉˆÚ“®
 						{
-							Scene::SetScene(new CSceneHospital());
+							Scene::SetScene(new CSceneHospital3());
 						}
 					}
 				}
