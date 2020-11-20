@@ -40,7 +40,8 @@ void CSceneInstitute::InitScene()
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"弾丸＿右.png", 3, TEX_SIZE_512);//弾丸グラフィック
 
-
+	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"研究所地下そざ.png", 4, TEX_SIZE_512);//弾丸グラフィック
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
