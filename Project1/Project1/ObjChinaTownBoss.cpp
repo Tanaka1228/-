@@ -229,10 +229,10 @@ void CObjChinaTownBoss::Draw()
 			if (m_map[i][j] == 1)//壁
 			{
 				//切り取り位置の設定
-				src.m_top = 0.0f;   //y
-				src.m_left = 0.0f; //x
-				src.m_right = 0.0f; //x
-				src.m_bottom = 0.0f; //y
+				src.m_top = 18.0f;   //y
+				src.m_left = 11.0f; //x
+				src.m_right = 82.0f; //x
+				src.m_bottom = 91.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
@@ -247,10 +247,10 @@ void CObjChinaTownBoss::Draw()
 			if (m_map[i][j] == 2)//壁
 			{
 				//切り取り位置の設定
-				src.m_top = 0.0f;   //y
-				src.m_left = 0.0f; //x
-				src.m_right = 0.0f; //x
-				src.m_bottom = 0.0f; //y
+				src.m_top = 18.0f;   //y
+				src.m_left = 104.0f; //x
+				src.m_right = 177.0f; //x
+				src.m_bottom = 91.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
