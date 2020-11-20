@@ -54,6 +54,7 @@ void CObjChinaTown::Init()
 //アクション
 void CObjChinaTown::Action()
 {
+
 }
 //ドロー
 void CObjChinaTown::Draw()
