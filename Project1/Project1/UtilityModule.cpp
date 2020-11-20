@@ -1,10 +1,15 @@
+#include"math.h"
+#include"GameL/DrawTexture.h"
+
+using namespace GameL;
+
 //--UnitVec関数----
 //引数1 float* vx :ベクトルのX成分のポインタ
 //引数2 float* vy :ベクトルのY成分のポインタ
 //戻り値 bool     :true=計算成功　false=計算失敗
 //内容
 //引数のベクトルを正規化しその値をvx,vy変更
-#include <math.h>
+
 bool UnitVec(float* vx, float* vy)
 {
 
@@ -86,8 +91,55 @@ float GetAtan2Angle(float w, float h)
 	//-180°～-0°を180°～360°に変換
 	if (r < 0)
 	{
-		r = 360 - fabsf(r);
+		r = 360 - fabs(r);
 	}
 
 	return r;
+}
+
+
+//---GetBulletEffect関数
+//引数1　　int* ani;　　　　着弾アニメーション
+//引数2    int* ani_time;　 着弾アニメーション間隔タイム
+//引数3    bool del;        削除チェック（true=着弾エフェクト　false=通常の弾丸）
+//引数4    int timing　　　 間隔区間
+//戻り値   RECT_F eff;　　　描画するRECT
+//delで弾丸のRECTや着弾effectのRECT（アニメーションのRECT）を返す
+RECT_F GetBulletEffec(int* ani, int* ani_time, bool del, int timing)
+{
+	//返すRECT情報
+	RECT_F rect;
+
+	//ブラぐで通常弾丸か着弾アニメーション処理分岐
+	if (del == true)
+	{
+		//着弾アニメーション
+		//リソース着弾アニメーション位置
+		RECT_F ani_src[4] =
+		{
+			{32,0,32,64},
+			{32,32,64,64},
+			{32,64,96,64},
+			{32,96,128,64},
+		};
+		//アニメーションのコマ間隔
+		if (*ani_time > timing)
+		{
+			*ani += 1;     //アニメーションのコマを一つ進める
+			*ani_time = 0;
+		}
+		else
+		{
+			*ani_time += 1;
+		}
+		rect = ani_src[*ani];//アニメーションのRECT配列からm_ania番目のRECT情報を渡す
+	}
+	else
+	{
+		//弾丸アニメーションなし
+		//リソース弾丸位置
+		RECT_F bullet = { 0.0f,96.0f,126.0f,32.0f };
+		rect = bullet;
+	}
+	return rect;
 }

@@ -3,6 +3,7 @@
 #include"GameL\HitBoxManager.h"
 #include"GameHead.h"
 #include"CObjBulletEnemy.h"
+#include"CObjHomingBullet.h"
 #include"UtilityModule.h"
 
 //使用するネームスペース
@@ -13,14 +14,16 @@ CObjHomingBullet::CObjHomingBullet(float x, float y)//コンストラクタで受け取った
 {
 	m_x = x;
 	m_y = y;
-
 }
 
 //イニシャライズ
 void CObjHomingBullet::Init()
 {
-	m_vx = 1.0f;
+	m_vx =- 1.0f;
 	m_vy = 0.0f;
+	
+	//移動ベクトルｎ正規化
+	UnitVec(&m_vy, &m_vx);
 
 	//当たり判定用HitBoxを作成
 	Hits::SetHitBox(this, m_x, m_y, 30, 20, ELEMENT_ENEMY, OBJ_HOMING_BULLET, 1);
@@ -40,11 +43,13 @@ void CObjHomingBullet::Action()
 	{
 		float x = obj->GetX() - m_x;
 		float y = obj->GetY() - m_y;
-		float ar = GetAtan2Angle(x, -y);
+		float ar = GetAtan2Angle(x,-y);//主人公機と弾丸の角度
 
 
 		//弾丸の現在の向いている角度を取る
 		float br = GetAtan2Angle(m_vx, -m_vy);
+		
+
 
 		//主人公機と敵機角度があまりにもかけ離れたら
 		if (ar - br > 20)
@@ -112,12 +117,6 @@ void CObjHomingBullet::Draw()
 	src.m_left = 126.0f;  //x
 	src.m_right = 96.0f; //x 
 	src.m_bottom = 32.0f; //y
-
-	////表示位置の設定
-	//dst.m_top = 0.0f + m_y;//縦の位置変更
-	//dst.m_left = 0.0f + m_x;
-	//dst.m_right = 45.0f + m_x;
-	//dst.m_bottom = 32.0f + m_y;
 
 
 	//病院の屋上の情報
