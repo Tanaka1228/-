@@ -727,10 +727,61 @@ void CObjHospital::Draw()
 			if (m_map[i][j] == 29)//ベッド
 			{
 				//切り取り位置の設定
-				src.m_top = 408.0f;   //y
-				src.m_left = 54.0f; //x
-				src.m_right = 161.0f; //x
+				src.m_top = 350.0f;   //y
+				src.m_left = 173.0f; //x
+				src.m_right = 237.0f; //x
 				src.m_bottom = 473.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 30)// M R I
+			{
+				//切り取り位置の設定
+				src.m_top = 350.0f;   //y
+				src.m_left = 244.0f; //x
+				src.m_right = 371.0f; //x
+				src.m_bottom = 517.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 30)// 棚
+			{
+				//切り取り位置の設定
+				src.m_top = 485.0f;   //y
+				src.m_left = 10.0f; //x
+				src.m_right = 129.0f; //x
+				src.m_bottom = 554.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 30)// 棚 2
+			{
+				//切り取り位置の設定
+				src.m_top = 485.0f;   //y
+				src.m_left = 147.0f; //x
+				src.m_right = 234.0f; //x
+				src.m_bottom = 554.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
