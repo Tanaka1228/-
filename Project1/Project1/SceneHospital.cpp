@@ -48,15 +48,15 @@ void CSceneHospital::InitScene()
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(obj, OBJ_HERO, 2); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
-	Objs::InsertObj(objg, OBJ_GUN, 5);
+	Objs::InsertObj(objg, OBJ_GUN, 3);
 
 	//病院オブジェクト作成
 	CObjHospital* objh = new CObjHospital(); //病院オブジェクト作成
-	Objs::InsertObj(objh, OBJ_HOSPITAL, 5); //作った病院オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(objh, OBJ_HOSPITAL, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
 }
 
 
