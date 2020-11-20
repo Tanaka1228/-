@@ -231,7 +231,7 @@ void CObjHospital3::Draw()
 	dst.m_left = 64.0f + mx_scroll;
 	dst.m_right = 2000.0f + mx_scroll;
 	dst.m_bottom = 1000.0 + my_scroll;
-	Draw::Draw(4, &src, &dst, c, 0.0f);//病院の床
+	Draw::Draw(6, &src, &dst, c, 0.0f);//病院の床
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 25; i++)
