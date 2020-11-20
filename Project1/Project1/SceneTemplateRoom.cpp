@@ -64,6 +64,6 @@ void CSceneTemplateRoom::InitScene()
 
 
 //ゲームステージ実行中メソッド
-void CSceneHospital3::Scene()
+void CSceneTemplateRoom::Scene()
 {
 }
