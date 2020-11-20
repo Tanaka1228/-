@@ -20,7 +20,31 @@ void CObjHospital::Init()
 	//マップ情報
 	int block_data[25][25] =
 	{
-
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 
 	};
 	//マップデータをコピー
@@ -224,7 +248,7 @@ void CObjHospital::Draw()
 		for (int j = 0; j < 25; j++)
 		{
 
-			if (m_map[i][j] == 1)//壁
+			if (m_map[i][j] == 1)//壁　ボス
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -241,7 +265,7 @@ void CObjHospital::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 2)//壁
+			if (m_map[i][j] == 2)//壁　ボス
 			{
 				//切り取り位置の設定
 				src.m_top = 18.0f;   //y
@@ -401,6 +425,312 @@ void CObjHospital::Draw()
 				src.m_left = 336.0f; //x
 				src.m_right = 454.0f; //x
 				src.m_bottom = 183.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 12)//ゴミ箱
+			{
+				//切り取り位置の設定
+				src.m_top = 147.0f;   //y
+				src.m_left = 521.0f; //x
+				src.m_right = 548.0f; //x
+				src.m_bottom = 185.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 13)//横ベッド
+			{
+				//切り取り位置の設定
+				src.m_top = 182.0f;   //y
+				src.m_left = 1.0f; //x
+				src.m_right = 120.0f; //x
+				src.m_bottom = 269.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 14)//縦ベッド
+			{
+				//切り取り位置の設定
+				src.m_top = 184.0f;   //y
+				src.m_left = 137.0f; //x
+				src.m_right = 214.0f; //x
+				src.m_bottom = 323.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 15)//ちっさいテレビ
+			{
+				//切り取り位置の設定
+				src.m_top = 186.0f;   //y
+				src.m_left = 228.0f; //x
+				src.m_right = 273.0f; //x
+				src.m_bottom = 271.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 16)//ちっさい机
+			{
+				//切り取り位置の設定
+				src.m_top = 207.0f;   //y
+				src.m_left = 284.0f; //x
+				src.m_right = 327.0f; //x
+				src.m_bottom = 273.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 17)//椅子正面
+			{
+				//切り取り位置の設定
+				src.m_top = 190.0f;   //y
+				src.m_left = 334.0f; //x
+				src.m_right = 363.0f; //x
+				src.m_bottom = 232.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 18)//丸椅子
+			{
+				//切り取り位置の設定
+				src.m_top = 237.0f;   //y
+				src.m_left = 336.0f; //x
+				src.m_right = 361.0f; //x
+				src.m_bottom = 272.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 19)//栄養入れるやつ
+			{
+				//切り取り位置の設定
+				src.m_top = 192.0f;   //y
+				src.m_left = 367.0f; //x
+				src.m_right = 400.0f; //x
+				src.m_bottom = 276.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 20)//栄養入れるやつ 2
+			{
+				//切り取り位置の設定
+				src.m_top = 192.0f;   //y
+				src.m_left = 416.0f; //x
+				src.m_right = 506.0f; //x
+				src.m_bottom = 262.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 21)//機械1
+			{
+				//切り取り位置の設定
+				src.m_top = 198.0f;   //y
+				src.m_left = 521.0f; //x
+				src.m_right = 543.0f; //x
+				src.m_bottom = 258.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 22)//機械2
+			{
+				//切り取り位置の設定
+				src.m_top = 195.0f;   //y
+				src.m_left = 573.0f; //x
+				src.m_right = 617.0f; //x
+				src.m_bottom = 267.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 23)//機械3
+			{
+				//切り取り位置の設定
+				src.m_top = 189.0f;   //y
+				src.m_left = 627.0f; //x
+				src.m_right = 685.0f; //x
+				src.m_bottom = 267.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 24)//機械4
+			{
+				//切り取り位置の設定
+				src.m_top = 278.0f;   //y
+				src.m_left = 6.0f; //x
+				src.m_right = 86.0f; //x
+				src.m_bottom = 350.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 25)//洗面
+			{
+				//切り取り位置の設定
+				src.m_top = 283.0f;   //y
+				src.m_left = 232.0f; //x
+				src.m_right = 323.0f; //x
+				src.m_bottom = 334.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 26)//車椅子
+			{
+				//切り取り位置の設定
+				src.m_top = 280.0f;   //y
+				src.m_left = 336.0f; //x
+				src.m_right = 418.0f; //x
+				src.m_bottom = 347.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 27)//緑ソファ縦
+			{
+				//切り取り位置の設定
+				src.m_top = 360.0f;   //y
+				src.m_left = 5.0f; //x
+				src.m_right = 53.0f; //x
+				src.m_bottom = 473.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 28)//緑ソファ横
+			{
+				//切り取り位置の設定
+				src.m_top = 408.0f;   //y
+				src.m_left = 54.0f; //x
+				src.m_right = 161.0f; //x
+				src.m_bottom = 473.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 29)//ベッド
+			{
+				//切り取り位置の設定
+				src.m_top = 408.0f;   //y
+				src.m_left = 54.0f; //x
+				src.m_right = 161.0f; //x
+				src.m_bottom = 473.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
