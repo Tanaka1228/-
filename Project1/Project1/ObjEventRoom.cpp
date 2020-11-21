@@ -4,6 +4,7 @@
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
+#include<fstream>
 
 #include"GameHead.h"
 #include "ObjEventRoom.h"
@@ -30,7 +31,7 @@ void CObjEventRoom::Init()
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -50,6 +51,9 @@ void CObjEventRoom::Init()
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
 
+	m_sp = false;
+	key_flag = 1;
+	m_key_control = true;
 }
 //アクション
 void CObjEventRoom::Action()
@@ -178,8 +182,9 @@ void CObjEventRoom::Action()
 						}
 						if (m_map[i][j] == 41 || m_map[i][j] == 42)//ドアに入ると拠点に移動
 						{
-							Scene::SetScene(new CSceneBlock());
+						
 						}
+
 					}
 				}
 
@@ -189,29 +194,54 @@ void CObjEventRoom::Action()
 		}
 	}
 
-	//敵出現ライン
-	//float Xline = hx + (-mx_scroll) + 400;
-	//float Yline = hy + (my_scroll)-100;
 
-	//int ex = ((int)Xline) / 32;
-	//int ey = ((int)Yline) / 32;
+	if (hero->GetBT() == 17)//イベント部屋のオブジェクトの前でエンター
+	{
+		if (Input::GetVKey(VK_RETURN) == true) {
 
-	//for (int i = 0; i < 25; i++)
-	//{
-	//	for (int j = 0; j < 25; j++)
+			if (m_key_control == true)
+			{
+				if (key_flag == 1)
+				{
+					m_sp = 1;
 
-	//		if (m_map[i][ex] == 15)
-	//		{
-	//			//誘導敵機オブジェクト作成
-	//			CObjRooftopBoss* obj_rooftop_boss = new CObjRooftopBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-	//			Objs::InsertObj(obj_rooftop_boss, OBJ_ROOF_TOP_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+				}
 
-	//			m_map[i][ex] = 0;
-	//		}
+				if (key_flag == 2)
+				{
+					m_sp = 2;
 
+				}
+				if ((key_flag == 3))
+				{
 
-	//}
+					m_sp = 3;
 
+				}
+				if ((key_flag == 4))
+				{
+					m_sp = 4;
+
+				}
+				if ((key_flag == 5))
+				{
+					m_sp = 5;
+
+				}
+				if ((key_flag == 6))
+				{
+					m_sp = 6;
+
+				}
+				m_key_control = false;
+			}
+
+		}
+		else
+		{
+			m_key_control = true;
+		}
+	}
 }
 //ドロー
 void CObjEventRoom::Draw()
@@ -227,11 +257,31 @@ void CObjEventRoom::Draw()
 	src.m_right = 87.0f; // X
 	src.m_bottom = 87.0f;// Y 
 
-	dst.m_top = 64.0f + my_scroll;
-	dst.m_left = 64.0f + mx_scroll;
-	dst.m_right = 2000.0f + mx_scroll;
-	dst.m_bottom = 1000.0 + my_scroll;
+	dst.m_top = 0.0f + my_scroll;
+	dst.m_left =0.0f + mx_scroll;
+	dst.m_right = 0.0f + mx_scroll;
+	dst.m_bottom =0.0 + my_scroll;
 	Draw::Draw(6, &src, &dst, c, 0.0f);//病院の床
+
+
+	if (m_sp == 1)//エンターキーを一回押したとき
+	{
+		
+		ifstream fin("イベント会話.txt", ios::in);//テキストデータをを読み込み
+		char str1[64];//ただの配列
+		wchar_t wstr1[64];
+		fin.seekg(0, ios::cur);//0バイト数進める
+		fin >> str1;//str1にテキストを入れる
+
+		sprintf_s(str1, "%s", str1);//出力
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
+		Font::StrDraw(wstr1, 50.0f, 480, 25, c);// X  Y  大きさ     
+
+
+		key_flag = 2;
+		fin.close();//ファイルを閉じる
+	}
+
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 25; i++)

@@ -27,4 +27,8 @@ private:
 	float mx_scroll; //左右スクロール用
 	float my_scroll; //左右スクロール用
 
+	int m_key_control;//会話制御
+	int	key_flag;//会話フラグ
+	int m_sp;//会話の種類フラグ
+
 };
