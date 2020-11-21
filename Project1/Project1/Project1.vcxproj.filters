@@ -300,6 +300,12 @@
     <ClInclude Include="SceneXRayRoom.h">
       <Filter>ソース ファイル\StageMap\病院\レントゲン室</Filter>
     </ClInclude>
+    <ClInclude Include="Objlnstitute1.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenelnstitute1.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -514,6 +520,15 @@
     </ClCompile>
     <ClCompile Include="SceneXRayRoom.cpp">
       <Filter>ソース ファイル\StageMap\病院\レントゲン室</Filter>
+    </ClCompile>
+    <ClCompile Include="Objlnstitute1.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenelnstitute1.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="Objlnstitute2.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
