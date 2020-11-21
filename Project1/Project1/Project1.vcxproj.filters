@@ -76,6 +76,9 @@
     <Filter Include="ソース ファイル\StageMap\病院\部屋">
       <UniqueIdentifier>{d69f2bd0-add1-4220-9ac3-549ef38f861e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\StageMap\病院\手術室">
+      <UniqueIdentifier>{c3943e85-4cd5-4a67-8ce2-fdd47e7529c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -276,6 +279,12 @@
     <ClInclude Include="SceneEventRoom.h">
       <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
     </ClInclude>
+    <ClInclude Include="ObjOpeRoom.h">
+      <Filter>ソース ファイル\StageMap\病院\手術室</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneOpeRoom.h">
+      <Filter>ソース ファイル\StageMap\病院\手術室</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -475,6 +484,12 @@
     </ClCompile>
     <ClCompile Include="SceneEventRoom.cpp">
       <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjOpeRoom.cpp">
+      <Filter>ソース ファイル\StageMap\病院\手術室</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneOpeRoom.cpp">
+      <Filter>ソース ファイル\StageMap\病院\手術室</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

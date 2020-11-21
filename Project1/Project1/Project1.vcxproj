@@ -166,6 +166,7 @@
     <ClInclude Include="ObjInstituteBoss.h" />
     <ClInclude Include="ObjMain.h" />
     <ClInclude Include="ObjMenu.h" />
+    <ClInclude Include="ObjOpeRoom.h" />
     <ClInclude Include="ObjRooftop.h" />
     <ClInclude Include="ObjTemplateRoom.h" />
     <ClInclude Include="ObjTitle.h" />
@@ -184,6 +185,7 @@
     <ClInclude Include="SceneInstitute.h" />
     <ClInclude Include="SceneInstituteBoss.h" />
     <ClInclude Include="SceneMain.h" />
+    <ClInclude Include="SceneOpeRoom.h" />
     <ClInclude Include="SceneRooftop.h" />
     <ClInclude Include="SceneTemplateRoom.h" />
     <ClInclude Include="SceneTitle.h" />
@@ -234,6 +236,7 @@
     <ClCompile Include="ObjInstitute.cpp" />
     <ClCompile Include="ObjInstituteBoss.cpp" />
     <ClCompile Include="ObjMain.cpp" />
+    <ClCompile Include="ObjOpeRoom.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />
     <ClCompile Include="CObjRooftopBoss.cpp" />
     <ClCompile Include="ObjTemplateRoom.cpp" />
@@ -255,6 +258,7 @@
     <ClCompile Include="SceneInstitute.cpp" />
     <ClCompile Include="SceneInstituteBoss.cpp" />
     <ClCompile Include="SceneMain.cpp" />
+    <ClCompile Include="SceneOpeRoom.cpp" />
     <ClCompile Include="SceneRooftop.cpp" />
     <ClCompile Include="SceneTemplateRoom.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
