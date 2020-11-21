@@ -46,7 +46,7 @@ void CObjInstitute::Init()
 
 	};
 	//マップデータをコピー
-	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
+	memcpy(m_map, block_data, sizeof(int) * (30 * 30));
 
 }
 //アクション
