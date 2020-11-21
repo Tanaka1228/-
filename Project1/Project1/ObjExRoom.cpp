@@ -27,7 +27,7 @@ void CObjExRoom::Init()
 
 }
 //アクション
-void CObjOpeRoom::Action()
+void CObjExRoom::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
