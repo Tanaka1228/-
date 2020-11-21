@@ -1370,6 +1370,91 @@ void CObjChinaTownBoss::Draw()
 				//描画
 				Draw::Draw(17, &src, &dst, c, 0.0f);
 			}
+			if (m_map[i][j] == 65)//自動車　青　左向き
+			{
+				//切り取り位置の設定
+				src.m_top = 382.0f;   //y
+				src.m_left = 5.0f; //x
+				src.m_right = 70.0f; //x
+				src.m_bottom = 419.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 26.0f + mx_scroll;
+				dst.m_right = j * 26.0f + 96.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
+
+				//描画
+				Draw::Draw(17, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 66)//自動車　青　右向き
+			{
+				//切り取り位置の設定
+				src.m_top = 383.0f;   //y
+				src.m_left = 72.0f; //x
+				src.m_right = 135.0f; //x
+				src.m_bottom = 419.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 26.0f + mx_scroll;
+				dst.m_right = j * 26.0f + 96.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
+
+				//描画
+				Draw::Draw(17, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 67)//自動車　左向き　白
+			{
+				//切り取り位置の設定
+				src.m_top = 348.0f;   //y
+				src.m_left = 218.0f; //x
+				src.m_right = 282.0f; //x
+				src.m_bottom = 382.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 26.0f + mx_scroll;
+				dst.m_right = j * 26.0f + 96.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
+
+				//描画
+				Draw::Draw(17, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 68)//自動車　右向き　白
+			{
+				//切り取り位置の設定
+				src.m_top = 347.0f;   //y
+				src.m_left = 283.0f; //x
+				src.m_right = 348.0f; //x
+				src.m_bottom = 381.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 26.0f + mx_scroll;
+				dst.m_right = j * 26.0f + 96.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
+
+				//描画
+				Draw::Draw(17, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 69)//自動車　左向き　赤
+			{
+				//切り取り位置の設定
+				src.m_top = 393.0f;   //y
+				src.m_left = 218.0f; //x
+				src.m_right = 348.0f; //x
+				src.m_bottom = 381.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 26.0f + mx_scroll;
+				dst.m_right = j * 26.0f + 96.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
+
+				//描画
+				Draw::Draw(17, &src, &dst, c, 0.0f);
+			}
 		}
 	}
 }
