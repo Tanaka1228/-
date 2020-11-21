@@ -32,15 +32,19 @@ enum OBJ_NAME
 	OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
 	OBJ_CHINA_TOWN,//チャイナタウン
 	
+
 	OBJ_INSTITUTE_BOSS,//研究所ボス
 	OBJ_INSTITUTE,//研究所
 
+	//--------------病院---------------------
 	OBJ_ROOF_TOP,//病院屋上
 	OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
 	OBJ_HOSPITAL,//病院1階
 	OBJ_HOSPITAL2,//病院2階
 	OBJ_HOSPITAL3,//病院3階
 	OBJ_TEMPLATE_ROOM,//病院の部屋
+	OBJ_EVENT_ROOM,//病院のイベント部屋
+	//----------------------------------------
 
 	OBJ_DRUG_CAMPANY,//製薬会社
 };
@@ -118,6 +122,7 @@ struct UserData
 #include"ObjTemplateRoom.h"
 #include"ObjChinaTownBoss.h"
 #include"ObjInstitute.h"
+#include"ObjEventRoom.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -137,6 +142,7 @@ struct UserData
 #include"SceneTemplateRoom.h"
 #include"SceneInstitute.h"
 #include"SceneChinaTownBoss.h"
+#include"SceneEventRoom.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------

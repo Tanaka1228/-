@@ -153,6 +153,7 @@
     <ClInclude Include="ObjDrugCampany.h" />
     <ClInclude Include="ObjEnd.h" />
     <ClInclude Include="ObjEnemy.h" />
+    <ClInclude Include="ObjEventRoom.h" />
     <ClInclude Include="ObjFin.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjGun.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="SceneChinaTownBoss.h" />
     <ClInclude Include="SceneDrugCampany.h" />
     <ClInclude Include="SceneEnd.h" />
+    <ClInclude Include="SceneEventRoom.h" />
     <ClInclude Include="SceneFin.h" />
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneHospital.h" />
@@ -221,6 +223,7 @@
     <ClCompile Include="ObjDiffusionEnemy.cpp" />
     <ClCompile Include="ObjDrugCampany.cpp" />
     <ClCompile Include="ObjEnd.cpp" />
+    <ClCompile Include="ObjEventRoom.cpp" />
     <ClCompile Include="ObjFin.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjGun.cpp" />
@@ -240,6 +243,7 @@
     <ClCompile Include="SceneDrugCampany.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="ObjMenu.cpp" />
+    <ClCompile Include="SceneEventRoom.cpp" />
     <ClCompile Include="SceneFin.cpp" />
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />

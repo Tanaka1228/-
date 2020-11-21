@@ -270,6 +270,12 @@
     <ClInclude Include="SceneTemplateRoom.h">
       <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
     </ClInclude>
+    <ClInclude Include="ObjEventRoom.h">
+      <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneEventRoom.h">
+      <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -462,6 +468,12 @@
       <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
     </ClCompile>
     <ClCompile Include="SceneTemplateRoom.cpp">
+      <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjEventRoom.cpp">
+      <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneEventRoom.cpp">
       <Filter>ソース ファイル\StageMap\病院\部屋</Filter>
     </ClCompile>
   </ItemGroup>
