@@ -164,4 +164,5 @@ struct UserData
 //#define SET_GAME_START CSceneFin
 //#define SET_GAME_START CSceneMain
 //#define SET_GAME_START CSceneStage
+//#define SET_GAME_START CSceneTemplateRoom
 //-----------------------------------------------

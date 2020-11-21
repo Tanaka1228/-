@@ -21,6 +21,22 @@ void CObjTemplateRoom::Init()
 	int block_data[25][25] =
 	{
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+		{0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0},
+		{0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,0,0},
+		{0,0,1,18,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,1,0,0},
+		{0,0,1,0,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,1,0,0},
+		{0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,11,0,1,0,0},
+		{0,0,1,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+		{0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+		{0,0,1,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+		{0,0,1,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+		{0,0,1,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+		{0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+		{0,0,1,0,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+		{0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
+		{0,0,1,18,0,19,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,1,0,0},
+		{0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0},
+		{0,0,2,2,2,2,2,2,2,2,2,2,31,31,2,2,2,2,2,2,2,2,2,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -29,23 +45,6 @@ void CObjTemplateRoom::Init()
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-
 	};
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
@@ -176,9 +175,9 @@ void CObjTemplateRoom::Action()
 							hero->SetY2(y + 40.0f + (my_scroll));//ブロックの位置+主人公の幅
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
-						if (m_map[i][j] == 41 || m_map[i][j] == 42)//ドアに入ると拠点に移動
+						if (m_map[i][j] == 31)//ドアに入ると拠点に移動
 						{
-							Scene::SetScene(new CSceneBlock());
+							Scene::SetScene(new CSceneHospital2());
 						}
 					}
 				}
@@ -227,10 +226,10 @@ void CObjTemplateRoom::Draw()
 	src.m_right = 87.0f; // X
 	src.m_bottom = 87.0f;// Y 
 
-	dst.m_top = 64.0f + my_scroll;
-	dst.m_left = 64.0f + mx_scroll;
-	dst.m_right = 2000.0f + mx_scroll;
-	dst.m_bottom = 1000.0 + my_scroll;
+	dst.m_top = 96.0f + my_scroll;
+	dst.m_left = 96.0f + mx_scroll;
+	dst.m_right = 704.0f + mx_scroll;
+	dst.m_bottom = 500.0f + my_scroll;
 	Draw::Draw(6, &src, &dst, c, 0.0f);//病院の床
 
 	//マップチップによるblock設置
@@ -284,8 +283,8 @@ void CObjTemplateRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 110.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -335,8 +334,8 @@ void CObjTemplateRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -392,13 +391,13 @@ void CObjTemplateRoom::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 10)//ついたて
+			if (m_map[i][j] == 10)//椅子後ろ
 			{
 				//切り取り位置の設定
-				src.m_top = 83.0f;   //y
-				src.m_left = 336.0f; //x
-				src.m_right = 454.0f; //x
-				src.m_bottom = 183.0f; //y
+				src.m_top = 144.0f;   //y
+				src.m_left = 472.0f; //x
+				src.m_right = 505.0f; //x
+				src.m_bottom = 182.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
@@ -409,7 +408,7 @@ void CObjTemplateRoom::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 11)//椅子小 後ろ
+			if (m_map[i][j] == 11)//ついたて
 			{
 				//切り取り位置の設定
 				src.m_top = 83.0f;   //y
@@ -420,8 +419,8 @@ void CObjTemplateRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -454,8 +453,8 @@ void CObjTemplateRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 80.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -489,7 +488,7 @@ void CObjTemplateRoom::Draw()
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_bottom = i * 32.0f + 34.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -539,8 +538,8 @@ void CObjTemplateRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 24.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 24.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -557,7 +556,7 @@ void CObjTemplateRoom::Draw()
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_bottom = i * 32.0f + 45.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -658,8 +657,8 @@ void CObjTemplateRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 60.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
