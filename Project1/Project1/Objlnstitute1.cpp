@@ -6,13 +6,13 @@
 #include"GameL\SceneObjManager.h"
 
 #include"GameHead.h"
-#include"ObjLnstitute1.h"  
+#include"ObjInstitute1.h"  
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjLnstitute1::Init()
+void CObjInstitute1::Init()
 {
 	mx_scroll = 0.0f;
 	my_scroll = 0.0f;
@@ -39,7 +39,7 @@ void CObjLnstitute1::Init()
 
 }
 //アクション
-void CObjInstitute::Action()
+void CObjInstitute1::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
@@ -210,7 +210,7 @@ void CObjInstitute::Action()
 
 }
 //ドロー
-void CObjInstitute::Draw()
+void CObjInstitute1::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 

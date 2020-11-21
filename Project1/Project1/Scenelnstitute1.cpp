@@ -12,24 +12,24 @@ using namespace GameL;
 
 //使用するヘッダー
 #include"GameHead.h"
-#include "ObjInstitute.h"
+#include"ObjInstitute1.h"
 
 
 
 //コンストラクタ
-CSceneInstitute::CSceneInstitute()
+CSceneInstitute1::CSceneInstitute1()
 {
 }
 
 //デストラクタ
-CSceneInstitute::~CSceneInstitute()
+CSceneInstitute1::~CSceneInstitute1()
 {
 }
 
 
 
 //ゲームステージ初期化メソッド
-void CSceneInstitute::InitScene()
+void CSceneInstitute1::InitScene()
 {
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
@@ -57,12 +57,12 @@ void CSceneInstitute::InitScene()
 	Objs::InsertObj(objg, OBJ_GUN, 5);
 
 	//研究所オブジェクト作成
-	CObjInstitute* obji = new CObjInstitute(); //研究所オブジェクト作成
-	Objs::InsertObj(obji, OBJ_INSTITUTE, 5); //作った研究所オブジェクトをオブジェクトマネージャーに登録
+	CObjInstitute* obji = new CObjInstitute1(); //研究所オブジェクト作成
+	Objs::InsertObj(obji, OBJ_INSTITUTE1, 5); //作った研究所オブジェクトをオブジェクトマネージャーに登録
 }
 
 
 //ゲームステージ実行中メソッド
-void CSceneInstitute::Scene()
+void CSceneInstitute1::Scene()
 {
 }
