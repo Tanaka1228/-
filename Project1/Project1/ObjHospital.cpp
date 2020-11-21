@@ -230,17 +230,6 @@ void CObjHospital::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	//背景表示
-	src.m_top = 0.0f;   // Y
-	src.m_left = 0.0f;  // X
-	src.m_right = 87.0f; // X
-	src.m_bottom = 87.0f;// Y 
-
-	dst.m_top = 0.0f+ my_scroll;
-	dst.m_left = 0.0f+ mx_scroll;
-	dst.m_right = 87.0f+ mx_scroll;
-	dst.m_bottom = 87.0+ my_scroll;
-	Draw::Draw(4, &src, &dst, c, 0.0f);//病院の床
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 25; i++)
@@ -791,6 +780,21 @@ void CObjHospital::Draw()
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 31)
+			{
+				//背景表示
+				src.m_top = 0.0f;   // Y
+				src.m_left = 0.0f;  // X
+				src.m_right = 87.0f; // X
+				src.m_bottom = 87.0f;// Y 
+
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
+
+				Draw::Draw(6, &src, &dst, c, 0.0f);//病院の床
 			}
 		}
 	}
