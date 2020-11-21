@@ -14,7 +14,7 @@ using namespace GameL;
 //イニシャライズ
 void CObjHospital::Init()
 {
-	mx_scroll = 0.0f;
+	mx_scroll =-420.0f;
 	my_scroll = 0.0f;
 
 	//マップ情報

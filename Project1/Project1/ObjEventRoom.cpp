@@ -184,9 +184,9 @@ void CObjEventRoom::Action()
 							hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
-						if (m_map[i][j] == 41 || m_map[i][j] == 42)//ドアに入ると拠点に移動
+						if (m_map[i][j] == 31)//ドアに入ると二階
 						{
-						
+							Scene::SetScene(new CSceneHospital2());
 						}
 
 					}
@@ -282,7 +282,7 @@ void CObjEventRoom::Draw()
 		Font::StrDraw(wstr1, 110.0f, 50, 25, c);// X  Y  大きさ     
 
 
-		key_flag = 1;
+		key_flag = 2;
 		fin.close();//ファイルを閉じる
 	}
 
