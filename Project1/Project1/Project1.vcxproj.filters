@@ -300,10 +300,10 @@
     <ClInclude Include="SceneXRayRoom.h">
       <Filter>ソース ファイル\StageMap\病院\レントゲン室</Filter>
     </ClInclude>
-    <ClInclude Include="Objlnstitute1.h">
+    <ClInclude Include="ObjInstitute1.h">
       <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClInclude>
-    <ClInclude Include="Scenelnstitute1.h">
+    <ClInclude Include="SceneInstitute1.h">
       <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClInclude>
   </ItemGroup>
@@ -521,13 +521,13 @@
     <ClCompile Include="SceneXRayRoom.cpp">
       <Filter>ソース ファイル\StageMap\病院\レントゲン室</Filter>
     </ClCompile>
-    <ClCompile Include="Objlnstitute1.cpp">
-      <Filter>ソース ファイル\StageMap\研究所</Filter>
-    </ClCompile>
-    <ClCompile Include="Scenelnstitute1.cpp">
-      <Filter>ソース ファイル\StageMap\研究所</Filter>
-    </ClCompile>
     <ClCompile Include="Objlnstitute2.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjInstitute1.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneInstitute1.cpp">
       <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClCompile>
   </ItemGroup>
