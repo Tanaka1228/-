@@ -279,7 +279,7 @@ void CObjEventRoom::Draw()
 
 		sprintf_s(str1, "%s", str1);//出力
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-		Font::StrDraw(wstr1, 50.0f, 480, 25, c);// X  Y  大きさ     
+		Font::StrDraw(wstr1, 110.0f, 50, 25, c);// X  Y  大きさ     
 
 
 		key_flag = 1;
