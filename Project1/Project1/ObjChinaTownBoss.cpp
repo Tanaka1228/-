@@ -2,8 +2,8 @@
 #include"GameL\DrawTexture.h"
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
-
 #include"GameL\SceneObjManager.h"
+
 #include"GameHead.h"
 #include"ObjChinaTownBoss.h"
 
@@ -256,6 +256,28 @@ void CObjChinaTownBoss::Action()
 
 			}
 		}
+	}
+	//敵出現ライン
+	float Xline = hx + (-mx_scroll) -1100;
+	float Yline = hy + (my_scroll)-300;
+
+	int ex = ((int)Xline) / 32;
+	int ey = ((int)Yline) / 32;
+
+	for (int i = 0; i < 100; i++)
+	{
+		for (int j = 0; j < 100; j++)
+
+			if (m_map[i][ex] == 81)
+			{
+				//誘導敵機オブジェクト作成
+				CObjChinatownBoss* obj_chinatown_boss = new CObjChinatownBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
+				Objs::InsertObj(obj_chinatown_boss, OBJ_CHINA_TOWN_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+
+				m_map[i][ex] = 0;
+			}
+
+
 	}
 }
 //ドロー
