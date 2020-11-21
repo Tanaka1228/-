@@ -197,7 +197,7 @@ void CObjExRoom::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	Font::StrDraw(L"病院：3階", 600, 10, 32, c);
+	Font::StrDraw(L"病院：診察室", 600, 10, 32, c);
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 25; i++)

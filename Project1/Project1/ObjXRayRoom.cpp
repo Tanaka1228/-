@@ -6,13 +6,13 @@
 #include"GameL\SceneObjManager.h"
 
 #include"GameHead.h"
-#include "ObjOpeRoom.h"
+#include "ObjXRayRoom.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjOpeRoom::Init()
+void CObjXRayRoom::Init()
 {
 	mx_scroll = 0.0f;
 	my_scroll = 0.0f;
@@ -27,7 +27,7 @@ void CObjOpeRoom::Init()
 
 }
 //アクション
-void CObjOpeRoom::Action()
+void CObjXRayRoom::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
@@ -155,7 +155,7 @@ void CObjOpeRoom::Action()
 						{
 							Scene::SetScene(new CSceneRooftop());
 						}
-						
+
 					}
 				}
 
@@ -190,14 +190,14 @@ void CObjOpeRoom::Action()
 
 }
 //ドロー
-void CObjOpeRoom::Draw()
+void CObjXRayRoom::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
-	Font::StrDraw(L"病院：手術室", 600, 10, 32, c);
+	Font::StrDraw(L"病院：レントゲン室", 600, 10, 32, c);
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 25; i++)

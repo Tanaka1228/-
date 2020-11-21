@@ -46,6 +46,7 @@ enum OBJ_NAME
 	OBJ_EVENT_ROOM,//病院のイベント部屋
 	OBJ_OPE_ROOM,//病院の手術室
 	OBJ_EX_ROOM,//病院の診察室
+	OBJ_XRAY_ROOM,//病院のレントゲン室
 	//----------------------------------------
 
 	OBJ_DRUG_CAMPANY,//製薬会社
@@ -127,6 +128,7 @@ struct UserData
 #include"ObjEventRoom.h"
 #include"ObjOpeRoom.h"
 #include"ObjExRoom.h"
+#include"ObjXRayRoom.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -149,6 +151,7 @@ struct UserData
 #include"SceneEventRoom.h"
 #include"SceneOpeRoom.h"
 #include"SceneExRoom.h"
+#include"SceneXRayRoom.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------

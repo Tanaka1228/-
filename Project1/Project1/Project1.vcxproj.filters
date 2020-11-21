@@ -192,9 +192,6 @@
     <ClInclude Include="ObjHeroine.h">
       <Filter>ソース ファイル\Character</Filter>
     </ClInclude>
-    <ClInclude Include="SceneTyainataun.h">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClInclude>
     <ClInclude Include="CObjRooftopBoss.h">
       <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
     </ClInclude>
@@ -296,6 +293,12 @@
     </ClInclude>
     <ClInclude Include="SceneExRoom.h">
       <Filter>ソース ファイル\StageMap\病院\診察所</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjXRayRoom.h">
+      <Filter>ソース ファイル\StageMap\病院\レントゲン室</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneXRayRoom.h">
+      <Filter>ソース ファイル\StageMap\病院\レントゲン室</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -410,9 +413,6 @@
     <ClCompile Include="ObjHeroine.cpp">
       <Filter>ソース ファイル\Character</Filter>
     </ClCompile>
-    <ClCompile Include="SceneTyainataun.cpp">
-      <Filter>ソース ファイル\StageMap\SceneMap</Filter>
-    </ClCompile>
     <ClCompile Include="CObjRooftopBoss.cpp">
       <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
     </ClCompile>
@@ -508,6 +508,12 @@
     </ClCompile>
     <ClCompile Include="SceneExRoom.cpp">
       <Filter>ソース ファイル\StageMap\病院\診察所</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjXRayRoom.cpp">
+      <Filter>ソース ファイル\StageMap\病院\レントゲン室</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneXRayRoom.cpp">
+      <Filter>ソース ファイル\StageMap\病院\レントゲン室</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

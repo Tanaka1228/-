@@ -172,6 +172,7 @@
     <ClInclude Include="ObjTemplateRoom.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="CObjRooftopBoss.h" />
+    <ClInclude Include="ObjXRayRoom.h" />
     <ClInclude Include="SceneBlock.h" />
     <ClInclude Include="SceneChinaTown.h" />
     <ClInclude Include="SceneChinaTownBoss.h" />
@@ -192,9 +193,7 @@
     <ClInclude Include="SceneTemplateRoom.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="ObjTitleBackground.h" />
-    <ClInclude Include="SceneTyainataun.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="SceneXRayRoom.h" />
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +242,7 @@
     <ClCompile Include="ObjRooftop.cpp" />
     <ClCompile Include="CObjRooftopBoss.cpp" />
     <ClCompile Include="ObjTemplateRoom.cpp" />
+    <ClCompile Include="ObjXRayRoom.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
     <ClCompile Include="SceneChinaTown.cpp" />
     <ClCompile Include="SceneChinaTownBoss.cpp" />
@@ -267,9 +267,7 @@
     <ClCompile Include="SceneTemplateRoom.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="ObjTitleBackground.cpp" />
-    <ClCompile Include="SceneTyainataun.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="SceneXRayRoom.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
