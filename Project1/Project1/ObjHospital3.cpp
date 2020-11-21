@@ -48,7 +48,7 @@ void CObjHospital3::Init()
 
 	};
 	//マップデータをコピー
-	memcpy(m_map, block_data, sizeof(int) * (25 * 50));
+	memcpy(m_map3, block_data, sizeof(int) * (25 * 50));
 
 }
 //アクション
@@ -113,7 +113,7 @@ void CObjHospital3::Action()
 	{
 		for (int j = 0; j < 50; j++)
 		{
-			if (m_map[i][j] > 0&&m_map[i][j]!=31)
+			if (m_map3[i][j] > 0&&m_map3[i][j]!=31)
 			{
 
 				//要素番号を座標に変更
@@ -176,7 +176,7 @@ void CObjHospital3::Action()
 							hero->SetY2(y + 40.0f + (my_scroll));//ブロックの位置+主人公の幅
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
-						if (m_map[i][j] == 32)//ドアに入ると病院屋上に移動
+						if (m_map3[i][j] == 32)//ドアに入ると病院屋上に移動
 						{
 							Scene::SetScene(new CSceneRooftop());
 						}
@@ -229,7 +229,7 @@ void CObjHospital3::Draw()
 		for (int j = 0; j < 50; j++)
 		{
 
-			if (m_map[i][j] == 1)//壁　ボス
+			if (m_map3[i][j] == 1)//壁　ボス
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -246,7 +246,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 2)//壁　ボス
+			if (m_map3[i][j] == 2)//壁　ボス
 			{
 				//切り取り位置の設定
 				src.m_top = 18.0f;   //y
@@ -263,7 +263,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 3)//カーテン
+			if (m_map3[i][j] == 3)//カーテン
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -280,7 +280,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 4)//カウンター横
+			if (m_map3[i][j] == 4)//カウンター横
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -297,7 +297,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 5)//カウンター縦
+			if (m_map3[i][j] == 5)//カウンター縦
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -314,7 +314,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 6)//テレビ
+			if (m_map3[i][j] == 6)//テレビ
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -331,7 +331,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 7)//縦長イス
+			if (m_map3[i][j] == 7)//縦長イス
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -348,7 +348,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 8)//イス
+			if (m_map3[i][j] == 8)//イス
 			{
 				//切り取り位置の設定
 				src.m_top = 91.0f;   //y
@@ -365,7 +365,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 9)//窓口
+			if (m_map3[i][j] == 9)//窓口
 			{
 				//切り取り位置の設定
 				src.m_top = 94.0f;   //y
@@ -382,7 +382,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 10)//ついたて
+			if (m_map3[i][j] == 10)//ついたて
 			{
 				//切り取り位置の設定
 				src.m_top = 83.0f;   //y
@@ -399,7 +399,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 11)//椅子小 後ろ
+			if (m_map3[i][j] == 11)//椅子小 後ろ
 			{
 				//切り取り位置の設定
 				src.m_top = 83.0f;   //y
@@ -416,7 +416,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 12)//ゴミ箱
+			if (m_map3[i][j] == 12)//ゴミ箱
 			{
 				//切り取り位置の設定
 				src.m_top = 147.0f;   //y
@@ -433,7 +433,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 13)//横ベッド
+			if (m_map3[i][j] == 13)//横ベッド
 			{
 				//切り取り位置の設定
 				src.m_top = 182.0f;   //y
@@ -450,7 +450,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 14)//縦ベッド
+			if (m_map3[i][j] == 14)//縦ベッド
 			{
 				//切り取り位置の設定
 				src.m_top = 184.0f;   //y
@@ -467,7 +467,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 15)//ちっさいテレビ
+			if (m_map3[i][j] == 15)//ちっさいテレビ
 			{
 				//切り取り位置の設定
 				src.m_top = 186.0f;   //y
@@ -484,7 +484,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 16)//ちっさい机
+			if (m_map3[i][j] == 16)//ちっさい机
 			{
 				//切り取り位置の設定
 				src.m_top = 207.0f;   //y
@@ -501,7 +501,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 17)//椅子正面
+			if (m_map3[i][j] == 17)//椅子正面
 			{
 				//切り取り位置の設定
 				src.m_top = 190.0f;   //y
@@ -518,7 +518,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 18)//丸椅子
+			if (m_map3[i][j] == 18)//丸椅子
 			{
 				//切り取り位置の設定
 				src.m_top = 237.0f;   //y
@@ -535,7 +535,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 19)//栄養入れるやつ
+			if (m_map3[i][j] == 19)//栄養入れるやつ
 			{
 				//切り取り位置の設定
 				src.m_top = 192.0f;   //y
@@ -552,7 +552,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 20)//栄養入れるやつ 2
+			if (m_map3[i][j] == 20)//栄養入れるやつ 2
 			{
 				//切り取り位置の設定
 				src.m_top = 192.0f;   //y
@@ -569,7 +569,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 21)//機械1
+			if (m_map3[i][j] == 21)//機械1
 			{
 				//切り取り位置の設定
 				src.m_top = 198.0f;   //y
@@ -586,7 +586,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 22)//機械2
+			if (m_map3[i][j] == 22)//機械2
 			{
 				//切り取り位置の設定
 				src.m_top = 195.0f;   //y
@@ -603,7 +603,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 23)//機械3
+			if (m_map3[i][j] == 23)//機械3
 			{
 				//切り取り位置の設定
 				src.m_top = 189.0f;   //y
@@ -620,7 +620,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 24)//機械4
+			if (m_map3[i][j] == 24)//機械4
 			{
 				//切り取り位置の設定
 				src.m_top = 278.0f;   //y
@@ -637,7 +637,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 25)//洗面
+			if (m_map3[i][j] == 25)//洗面
 			{
 				//切り取り位置の設定
 				src.m_top = 283.0f;   //y
@@ -654,7 +654,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 26)//車椅子
+			if (m_map3[i][j] == 26)//車椅子
 			{
 				//切り取り位置の設定
 				src.m_top = 280.0f;   //y
@@ -671,7 +671,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 27)//緑ソファ縦
+			if (m_map3[i][j] == 27)//緑ソファ縦
 			{
 				//切り取り位置の設定
 				src.m_top = 360.0f;   //y
@@ -688,7 +688,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 28)//緑ソファ横
+			if (m_map3[i][j] == 28)//緑ソファ横
 			{
 				//切り取り位置の設定
 				src.m_top = 408.0f;   //y
@@ -705,7 +705,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 29)//ベッド
+			if (m_map3[i][j] == 29)//ベッド
 			{
 				//切り取り位置の設定
 				src.m_top = 350.0f;   //y
@@ -722,7 +722,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 30)// M R I
+			if (m_map3[i][j] == 30)// M R I
 			{
 				//切り取り位置の設定
 				src.m_top = 350.0f;   //y
@@ -739,7 +739,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 30)// 棚
+			if (m_map3[i][j] == 30)// 棚
 			{
 				//切り取り位置の設定
 				src.m_top = 485.0f;   //y
@@ -756,7 +756,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 30)// 棚 2
+			if (m_map3[i][j] == 30)// 棚 2
 			{
 				//切り取り位置の設定
 				src.m_top = 485.0f;   //y
@@ -773,7 +773,7 @@ void CObjHospital3::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 31) 
+			if (m_map3[i][j] == 31) 
 			{
 				//背景表示
 				src.m_top = 0.0f;   // Y
