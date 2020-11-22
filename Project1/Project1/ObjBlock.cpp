@@ -166,7 +166,7 @@ void CObjBlock::Action()
 					}
 					if (m_map[i][j] == 22)//—‚Ìq‚Ì‘O‚És‚­‚Æ
 					{
-						Scene::SetScene(new CSceneInstitute());
+						Scene::SetScene(new CSceneDrugCampany());
 					}
 					
 					
