@@ -1,82 +1,82 @@
 ﻿#pragma once
 
-//�I�u�W�F�N�g�l�[��------------------------------
+//オブジェクトネーム------------------------------
 enum OBJ_NAME
 {
-	OBJ_NO_NAME,	//�I�u�W�F�N�g������(�֎~)
-					//�Q�[���Ŏg���I�u�W�F�N�g�̖��O
-					//OBJ_�����ƕ\�L
-	OBJ_MAIN,	
-	OBJ_HERO, //��l��
-	OBJ_TITLE,//�Q�[���^�C�g��
-	OBJ_ENEMY,//�G�P
-	OBJ_BULLET,//�e��
-	OBJ_GAME_OVER,//�Q�[���I�[�o�[
-	OBJ_TITLE_BACKGROUND,//�Q�[���^�C�g���̔w�i
-	OBJ_ATTACK_ENEMY,//�U���G�@
-	OBJ_BULLET_ENEMY,//�e�ۓG�@
-	OBJ_HOMING_ENEMY,//�U���G�@
-	OBJ_SIN_ENEMY,//�J�[�u�G�@
-	OBJ_DIFFUSION_ENEMY,//
-	OBJ_ANGLE_BULLET,
-	OBJ_HOMING_BULLET,
-	OBJ_END,
-	OBJ_FIN,
-	OBJ_MANU,//���j���[
-	OBJ_HEROINE,//�q���C��
-	OBJ_GUN,//����e
-	OBJ_ASS_BULLET,//�A�T���g���C�t���̒e��
+	OBJ_NO_NAME,	//オブジェクト名無し(禁止)
+					//ゲームで使うオブジェクトの名前
+					//OBJ_○○と表記
+					OBJ_MAIN,
+					OBJ_HERO, //主人公
+					OBJ_TITLE,//ゲームタイトル
+					OBJ_ENEMY,//敵１
+					OBJ_BULLET,//弾丸
+					OBJ_GAME_OVER,//ゲームオーバー
+					OBJ_TITLE_BACKGROUND,//ゲームタイトルの背景
+					OBJ_ATTACK_ENEMY,//攻撃敵機
+					OBJ_BULLET_ENEMY,//弾丸敵機
+					OBJ_HOMING_ENEMY,//誘導敵機
+					OBJ_SIN_ENEMY,//カーブ敵機
+					OBJ_DIFFUSION_ENEMY,//
+					OBJ_ANGLE_BULLET,
+					OBJ_HOMING_BULLET,
+					OBJ_END,
+					OBJ_FIN,
+					OBJ_MANU,//メニュー
+					OBJ_HEROINE,//ヒロイン
+					OBJ_GUN,//武器銃
+					OBJ_ASS_BULLET,//アサルトライフルの弾丸
 
-	//------�}�b�v-------------------------------------------
-	OBJ_BLOCK,//���_
-	OBJ_CHINA_TOWN_BOSS,//�`���C�i�^�E���̃{�X��t�B�[���h
-	OBJ_CHINA_TOWN,//�`���C�i�^�E��
-	OBJ_CHINA_TOWN_BOSS_BOSS,//�`���C�i�^�E���̃{�X��t�B�[���hBOSS
-	
-	OBJ_INSTITUTE_BOSS_BOSS,
-
-	OBJ_INSTITUTE_BOSS,//�������{�X
-	OBJ_INSTITUTE,//������
-	OBJ_INSTITUTE1,//�����������P
-	OBJ_INSTITUTE2,//����������2
-	OBJ_INSTITUTE3,//�����������R
-	OBJ_INSTITUTE4,//���������S
-	OBJ_INSTITUTE5,//��������5
-	OBJ_INSTITUTE6,//��������6
-	OBJ_INSTITUTE7,//��������7
-	OBJ_INSTITUTE8,//��������8
-	OBJ_INSTITUTE9,//��������9
-	OBJ_INSTITUTE10,//��������10
-	OBJ_INSTITUTE11,//��������11
-	OBJ_INSTITUTE12,//��������12
-	OBJ_INSTITUTE13,//�����L��13
-	OBJ_INSTITUTE14,//�����L��14
-	//--------------�a�@---------------------
-	OBJ_ROOF_TOP,//�a�@����
-	OBJ_ROOF_TOP_BOSS,//�a�@�̉���BOSS
-	OBJ_HOSPITAL,//�a�@1�K
-	OBJ_HOSPITAL2,//�a�@2�K
-	OBJ_HOSPITAL3,//�a�@3�K
-	OBJ_TEMPLATE_ROOM,//�a�@�̕���
-	OBJ_EVENT_ROOM,//�a�@�̃C�x���g����
-	OBJ_OPE_ROOM,//�a�@�̎�p��
-	OBJ_EX_ROOM,//�a�@�̐f�@��
-	OBJ_XRAY_ROOM,//�a�@�̃����g�Q����
-
-	//----------------------------------------
-
-	OBJ_DRUG_CAMPANY,//������
+					//------マップ-------------------------------------------
+					OBJ_BLOCK,//拠点
+					OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
+					OBJ_CHINA_TOWN,//チャイナタウン
+					OBJ_CHINA_TOWN_BOSS_BOSS,//チャイナタウンのボス戦フィールドBOSS
 
 
+
+					OBJ_INSTITUTE_BOSS,//研究所ボス
+					OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
+					OBJ_INSTITUTE,//研究所
+					OBJ_INSTITUTE1,//研究所部屋１
+					OBJ_INSTITUTE2,//研究所部屋2
+					OBJ_INSTITUTE3,//研究所部屋３
+					OBJ_INSTITUTE4,//研究部屋４
+					OBJ_INSTITUTE5,//研究部屋5
+					OBJ_INSTITUTE6,//研究部屋6
+					OBJ_INSTITUTE7,//研究部屋7
+					OBJ_INSTITUTE8,//研究部屋8
+					OBJ_INSTITUTE9,//研究部屋9
+					OBJ_INSTITUTE10,//研究部屋10
+					OBJ_INSTITUTE11,//研究部屋11
+					OBJ_INSTITUTE12,//研究部屋12
+					OBJ_INSTITUTE13,//研究廊下13
+					OBJ_INSTITUTE14,//研究廊下14
+					//--------------病院---------------------
+					OBJ_ROOF_TOP,//病院屋上
+					OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
+					OBJ_HOSPITAL,//病院1階
+					OBJ_HOSPITAL2,//病院2階
+					OBJ_HOSPITAL3,//病院3階
+					OBJ_TEMPLATE_ROOM,//病院の部屋
+					OBJ_EVENT_ROOM,//病院のイベント部屋
+					OBJ_OPE_ROOM,//病院の手術室
+					OBJ_EX_ROOM,//病院の診察室
+					OBJ_XRAY_ROOM,//病院のレントゲン室
+
+					//----------------------------------------
+
+
+					OBJ_DRUG_CAMPANY,//製薬会社
 };
 //------------------------------------------------
 
-//�����蔻�葮��----------------------------------
+//当たり判定属性----------------------------------
 enum HIT_ELEMENTS
 {
-	ELEMENT_NULL,//�������� �S�Ă̑����Ɠ����蔻�肪���s�����
-	//�ȉ��@�����������m�ł͓����蔻��͎��s����Ȃ�
-	//�����͒ǉ��\�����A�f�o�b�N���̐F�͏����ݒ蕪��������
+	ELEMENT_NULL,//属性無し 全ての属性と当たり判定が実行される
+	//以下　同じ属性同士では当たり判定は実行されない
+	//属性は追加可能だが、デバック時の色は初期設定分しか無い
 	ELEMENT_PLAYER,
 	ELEMENT_ENEMY,
 	ELEMENT_ITEM,
@@ -91,26 +91,26 @@ enum HIT_ELEMENTS
 //------------------------------------------------
 
 //------------------------------------------------
-//�Z�[�u�����[�h�ƃV�[���Ԃ̂���肷��f�[�^
+//セーブ＆ロードとシーン間のやり取りするデータ
 struct UserData
 {
-	int mSeveData;	//�T���v���Z�[�u�f�[�^
-	
+	int mSeveData;	//サンプルセーブデータ
+
 };
 //------------------------------------------------
 
 
-//�Q�[����Ŏg�p�����O���[�o���ϐ��E�萔�E��--
+//ゲーム内で使用されるグローバル変数・定数・列挙--
 
 
 
 //------------------------------------------------
-//�Q�[����Ŏg�p����N���X�w�b�_------------------
+//ゲーム内で使用するクラスヘッダ------------------
 
 
 //------------------------------------------------
 
-//�Q�[���V�[���I�u�W�F�N�g�w�b�_------------------
+//ゲームシーンオブジェクトヘッダ------------------
 #include"ObjMain.h"
 #include"ObjHero.h"
 #include"ObjTitle.h"
@@ -168,7 +168,7 @@ struct UserData
 
 //------------------------------------------------
 
-//�Q�[���V�[���N���X�w�b�_------------------------
+//ゲームシーンクラスヘッダ------------------------
 #include"SceneTitle.h"
 #include"SceneMain.h"
 #include"SceneGameOver.h"
@@ -206,8 +206,8 @@ struct UserData
 
 //-----------------------------------------------
 
-//�V�[���X�^�[�g�N���X---------------------------
-////�Q�[���J�n���̃V�[���N���X�o�^
+//シーンスタートクラス---------------------------
+////ゲーム開始時のシーンクラス登録
 //#define SET_GAME_START CSceneGameOver
 #define SET_GAME_START CSceneTitle 
 //#define SET_GAME_START CSceneEnd 
