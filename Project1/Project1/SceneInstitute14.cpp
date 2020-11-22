@@ -50,15 +50,15 @@ void CSceneInstitute14::InitScene()
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(obj, OBJ_HERO, 5); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
-	Objs::InsertObj(objg, OBJ_GUN, 5);
+	Objs::InsertObj(objg, OBJ_GUN, 6);
 
 	//研究所オブジェクト作成
 	CObjInstitute14* obji = new CObjInstitute14(); //研究所オブジェクト作成
-	Objs::InsertObj(obji, OBJ_INSTITUTE14, 5); //作った研究所オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(obji, OBJ_INSTITUTE14, 4); //作った研究所オブジェクトをオブジェクトマネージャーに登録
 }
 
 
