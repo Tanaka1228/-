@@ -312,6 +312,12 @@
     <ClInclude Include="SceneInstitute2.h">
       <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClInclude>
+    <ClInclude Include="ObjInstitute3.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneInstitute3.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -537,6 +543,12 @@
       <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClCompile>
     <ClCompile Include="SceneInstitute2.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjInstitute3.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneInstitute3.cpp">
       <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClCompile>
   </ItemGroup>

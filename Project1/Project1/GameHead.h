@@ -36,7 +36,8 @@ enum OBJ_NAME
 	OBJ_INSTITUTE_BOSS,//研究所ボス
 	OBJ_INSTITUTE,//研究所
 	OBJ_INSTITUTE1,//研究所部屋１
-	OBJ_INSTITUTE2,//研究部屋2
+	OBJ_INSTITUTE2,//研究所部屋2
+	OBJ_INSTITUTE3,//研究所部屋３
 	//--------------病院---------------------
 	OBJ_ROOF_TOP,//病院屋上
 	OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
@@ -132,6 +133,7 @@ struct UserData
 #include"ObjXRayRoom.h"
 #include"ObjInstitute1.h"
 #include"ObjInstitute2.h"
+#include"ObjInstitute3.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -157,6 +159,7 @@ struct UserData
 #include"SceneXRayRoom.h"
 #include"SceneInstitute1.h"
 #include"SceneInstitute2.h"
+#include"SceneInstitute3.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
