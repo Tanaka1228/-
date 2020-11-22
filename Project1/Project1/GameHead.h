@@ -35,6 +35,7 @@ enum OBJ_NAME
 	
 
 	OBJ_INSTITUTE_BOSS,//研究所ボス
+	OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
 	OBJ_INSTITUTE,//研究所
 	OBJ_INSTITUTE1,//研究所部屋１
 	OBJ_INSTITUTE2,//研究所部屋2
@@ -61,25 +62,7 @@ enum OBJ_NAME
 	OBJ_OPE_ROOM,//病院の手術室
 	OBJ_EX_ROOM,//病院の診察室
 	OBJ_XRAY_ROOM,//病院のレントゲン室
-	OBJ_INSTITUTE_BOSS,//研究所ボス
-	OBJ_INSTITUTE,//研究所
-	OBJ_INSTITUTE1,//研究所部屋１
-	OBJ_INSTITUTE2,//研究部屋2
-	OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
-	OBJ_INSTITUTE3,//�����������R
-	//--------------病院---------------------
-	OBJ_ROOF_TOP,//病院屋上
-	OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
-	OBJ_HOSPITAL,//病院1階
-	OBJ_HOSPITAL2,//病院2階
-	OBJ_HOSPITAL3,//病院3階
-	OBJ_TEMPLATE_ROOM,//病院の部屋
-	OBJ_EVENT_ROOM,//病院のイベント部屋
-	OBJ_OPE_ROOM,//病院の手術室
-	OBJ_EX_ROOM,//病院の診察室
-	OBJ_XRAY_ROOM,//病院のレントゲン室
-	//----------------------------------------
-
+	
 	OBJ_DRUG_CAMPANY,//製薬会社
 };
 //------------------------------------------------
