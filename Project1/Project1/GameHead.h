@@ -6,36 +6,36 @@ enum OBJ_NAME
 	OBJ_NO_NAME,	//ƒIƒuƒWƒFƒNƒg–¼–³‚µ(‹ÖŽ~)
 					//ƒQ[ƒ€‚ÅŽg‚¤ƒIƒuƒWƒFƒNƒg‚Ì–¼‘O
 					//OBJ_››‚Æ•\‹L
-					OBJ_MAIN,
-					OBJ_HERO, //ŽålŒö
-					OBJ_TITLE,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹
-					OBJ_ENEMY,//“G‚P
-					OBJ_BULLET,//’eŠÛ
-					OBJ_GAME_OVER,//ƒQ[ƒ€ƒI[ƒo[
-					OBJ_TITLE_BACKGROUND,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹‚Ì”wŒi
-					OBJ_ATTACK_ENEMY,//UŒ‚“G‹@
-					OBJ_BULLET_ENEMY,//’eŠÛ“G‹@
-					OBJ_HOMING_ENEMY,//—U“±“G‹@
-					OBJ_SIN_ENEMY,//ƒJ[ƒu“G‹@
-					OBJ_DIFFUSION_ENEMY,//
-					OBJ_ANGLE_BULLET,
-					OBJ_HOMING_BULLET,
-					OBJ_END,
-					OBJ_FIN,
-					OBJ_MANU,//ƒƒjƒ…[
-					OBJ_HEROINE,//ƒqƒƒCƒ“
-					OBJ_GUN,//•Šíe
-					OBJ_ASS_BULLET,//ƒAƒTƒ‹ƒgƒ‰ƒCƒtƒ‹‚Ì’eŠÛ
+	OBJ_MAIN,	
+	OBJ_HERO, //ŽålŒö
+	OBJ_TITLE,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹
+	OBJ_ENEMY,//“G‚P
+	OBJ_BULLET,//’eŠÛ
+	OBJ_GAME_OVER,//ƒQ[ƒ€ƒI[ƒo[
+	OBJ_TITLE_BACKGROUND,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹‚Ì”wŒi
+	OBJ_ATTACK_ENEMY,//UŒ‚“G‹@
+	OBJ_BULLET_ENEMY,//’eŠÛ“G‹@
+	OBJ_HOMING_ENEMY,//—U“±“G‹@
+	OBJ_SIN_ENEMY,//ƒJ[ƒu“G‹@
+	OBJ_DIFFUSION_ENEMY,//
+	OBJ_ANGLE_BULLET,
+	OBJ_HOMING_BULLET,
+	OBJ_END,
+	OBJ_FIN,
+	OBJ_MANU,//ƒƒjƒ…[
+	OBJ_HEROINE,//ƒqƒƒCƒ“
+	OBJ_GUN,//•Šíe
+	OBJ_ASS_BULLET,//ƒAƒTƒ‹ƒgƒ‰ƒCƒtƒ‹‚Ì’eŠÛ
 
-					//------ƒ}ƒbƒv-------------------------------------------
-					OBJ_BLOCK,//‹’“_
-					OBJ_CHINA_TOWN_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒh
-					OBJ_CHINA_TOWN,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“
-					OBJ_CHINA_TOWN_BOSS_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒhBOSS
+	//------ƒ}ƒbƒv-------------------------------------------
+	OBJ_BLOCK,//‹’“_
+	OBJ_CHINA_TOWN_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒh
+	OBJ_CHINA_TOWN,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“
+	OBJ_CHINA_TOWN_BOSS_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒhBOSS
+	
 
 
-					<<<<<< < HEAD
-					OBJ_INSTITUTE_BOSS,//Œ¤‹†Šƒ{ƒX
+	OBJ_INSTITUTE_BOSS,//Œ¤‹†Šƒ{ƒX
 	OBJ_INSTITUTE_BOSS_BOSS,//Œ¤‹†Šƒ{ƒXƒ{ƒX
 	OBJ_INSTITUTE,//Œ¤‹†Š
 	OBJ_INSTITUTE1,//Œ¤‹†Š•”‰®‚P
@@ -63,30 +63,12 @@ enum OBJ_NAME
 	OBJ_OPE_ROOM,//•a‰@‚ÌŽèpŽº
 	OBJ_EX_ROOM,//•a‰@‚ÌfŽ@Žº
 	OBJ_XRAY_ROOM,//•a‰@‚ÌƒŒƒ“ƒgƒQƒ“Žº
-	====== =
-	OBJ_INSTITUTE_BOSS,//ç ”ç©¶æ‰€ãƒœã‚¹
-	OBJ_INSTITUTE,//ç ”ç©¶æ‰€
-	OBJ_INSTITUTE1,//ç ”ç©¶æ‰€éƒ¨å±‹ï¼E
-	OBJ_INSTITUTE2,//ç ”ç©¶éƒ¨å±E
-	OBJ_INSTITUTE_BOSS_BOSS,//ç ”ç©¶æ‰€ãƒœã‚¹ãƒœã‚¹
-	OBJ_INSTITUTE3,//E½E½E½E½E½E½E½E½E½E½E½R
-	//--------------ç—E™¢---------------------
-	OBJ_ROOF_TOP,//ç—E™¢å±‹ä¸E
-	OBJ_ROOF_TOP_BOSS,//ç—E™¢ã®å±‹ä¸ŠBOSS
-	OBJ_HOSPITAL,//ç—E™¢1éšE
-	OBJ_HOSPITAL2,//ç—E™¢2éšE
-	OBJ_HOSPITAL3,//ç—E™¢3éšE
-	OBJ_TEMPLATE_ROOM,//ç—E™¢ã®éƒ¨å±E
-	OBJ_EVENT_ROOM,//ç—E™¢ã®ã‚¤ãƒ™ãƒ³ãƒˆéƒ¨å±E
-	OBJ_OPE_ROOM,//ç—E™¢ã®æ‰‹è¡“å®¤
-	OBJ_EX_ROOM,//ç—E™¢ã®è¨ºå¯Ÿå®¤
-	OBJ_XRAY_ROOM,//ç—E™¢ã®ãƒ¬ãƒ³ãƒˆã‚²ãƒ³å®¤
-	>>>>>> > 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
+
 	//----------------------------------------
 
-
+	
 	OBJ_DRUG_CAMPANY,//»–ò‰ïŽÐ
-}
+};
 //------------------------------------------------
 
 //“–‚½‚è”»’è‘®«----------------------------------
@@ -183,6 +165,7 @@ struct UserData
 #include"ObjInstitute13.h"
 
 #include"CObjInstituteBossBoss.h"
+
 //------------------------------------------------
 
 //ƒQ[ƒ€ƒV[ƒ“ƒNƒ‰ƒXƒwƒbƒ_------------------------
