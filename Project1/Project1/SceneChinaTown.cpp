@@ -40,21 +40,24 @@ void CSceneChinaTown::InitScene()
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"弾丸＿右.png", 3, TEX_SIZE_512);//弾丸グラフィック
 
-		//外部のグラフィックファイルを読み込み10番に登録(512×512)はあまり関係ないらしい
-	Draw::LoadImage(L"チャイナタウン.pug", 10, TEX_SIZE_512);
+	//外部グラフィックファイルを読み込み16番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"チャイナタウンのボス戦フィールド.png", 16, TEX_SIZE_512);
+
+	//外部グラフィックファイルを読み込み17番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"チャイナタウンボス戦フィールドの素材.png", 17, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(obj, OBJ_HERO, 5); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
 
 	//チャイナタウンオブジェクト作成
 	CObjChinaTown* objc = new CObjChinaTown(); //チャイナタウンオブジェクト作成
-	Objs::InsertObj(objc, OBJ_CHINA_TOWN, 5); //作ったチャイナタウンオブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(objc, OBJ_CHINA_TOWN, 4); //作ったチャイナタウンオブジェクトをオブジェクトマネージャーに登録
 
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
-	Objs::InsertObj(objg, OBJ_GUN, 5);
+	Objs::InsertObj(objg, OBJ_GUN, 6);
 }
 
 
