@@ -192,6 +192,10 @@ void CObjInstituteBoss::Action()
 						}
 						
 					}
+					if (m_map[i][j] == 19||20)//—‚Ìq‚Ì‘O‚ÉˆÚ“®‚·‚é‚ÆŒ¤‹†ŠBoss
+					{
+						Scene::SetScene(new CSceneInstitute14());
+					}
 				}
 
 
