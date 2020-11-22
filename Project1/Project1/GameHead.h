@@ -38,6 +38,7 @@ enum OBJ_NAME
 	OBJ_INSTITUTE,//研究所
 	OBJ_INSTITUTE1,//研究所部屋１
 	OBJ_INSTITUTE2,//研究部屋2
+	OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
 	//--------------病院---------------------
 	OBJ_ROOF_TOP,//病院屋上
 	OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
@@ -134,6 +135,7 @@ struct UserData
 #include"ObjInstitute1.h"
 #include"ObjInstitute2.h"
 #include"CObjChinaTownBossBoss.h"
+#include"CObjInstituteBossBoss.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------

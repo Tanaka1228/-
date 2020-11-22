@@ -142,6 +142,7 @@
     <ClInclude Include="CObjChinaTownBossBoss.h" />
     <ClInclude Include="CObjHomingBullet.h" />
     <ClInclude Include="CObjHomingEnemy.h" />
+    <ClInclude Include="CObjInstituteBossBoss.h" />
     <ClInclude Include="CObjSinEnemy.h" />
     <ClInclude Include="ObjChinaTown.h" />
     <ClInclude Include="GameHead.h" />
@@ -221,6 +222,7 @@
     <ClCompile Include="CObjChinaTownBossBoss.cpp" />
     <ClCompile Include="CObjHomingBullet.cpp" />
     <ClCompile Include="CObjHomingEnemy.cpp" />
+    <ClCompile Include="CObjInstituteBossBoss.cpp" />
     <ClCompile Include="CObjSinEnemy.cpp" />
     <ClCompile Include="ObjChinaTown.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />

@@ -315,6 +315,9 @@
     <ClInclude Include="CObjChinaTownBossBoss.h">
       <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
     </ClInclude>
+    <ClInclude Include="CObjInstituteBossBoss.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -543,6 +546,9 @@
       <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClCompile>
     <ClCompile Include="CObjChinaTownBossBoss.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjInstituteBossBoss.cpp">
       <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
     </ClCompile>
   </ItemGroup>
