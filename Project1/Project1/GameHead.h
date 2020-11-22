@@ -33,7 +33,7 @@ enum OBJ_NAME
 	OBJ_CHINA_TOWN,//�`���C�i�^�E��
 	OBJ_CHINA_TOWN_BOSS_BOSS,//�`���C�i�^�E���̃{�X��t�B�[���hBOSS
 	
-
+	OBJ_INSTITUTE_BOSS_BOSS,
 
 	OBJ_INSTITUTE_BOSS,//�������{�X
 	OBJ_INSTITUTE,//������
@@ -67,33 +67,7 @@ enum OBJ_NAME
 
 	OBJ_DRUG_CAMPANY,//������
 
-	OBJ_INSTITUTE1,//研究所部屋！E
-	OBJ_INSTITUTE2,//研究所部屁E
-	OBJ_INSTITUTE3,//研究所部屋！E
-	OBJ_INSTITUTE4,//研究部屋！E
-	OBJ_INSTITUTE5,//研究部屁E
-	OBJ_INSTITUTE6,//研究部屁E
-	OBJ_INSTITUTE7,//研究部屁E
-	OBJ_INSTITUTE8,//研究部屁E
-	OBJ_INSTITUTE9,//研究部屁E
-	OBJ_INSTITUTE10,//研究部屁E0
-	OBJ_INSTITUTE11,//研究部屁E1
-	OBJ_INSTITUTE12,//研究部屁E2
-	OBJ_INSTITUTE13,//研究廊丁E3
-	OBJ_INSTITUTE14,//研究廊丁E4
-	//--------------痁E��---------------------
-	OBJ_ROOF_TOP,//痁E��屋丁E
-	OBJ_ROOF_TOP_BOSS,//痁E��の屋上BOSS
-	OBJ_HOSPITAL,//痁E��1隁E
-	OBJ_HOSPITAL2,//痁E��2隁E
-	OBJ_HOSPITAL3,//痁E��3隁E
-	OBJ_TEMPLATE_ROOM,//痁E��の部屁E
-	OBJ_EVENT_ROOM,//痁E��のイベント部屁E
-	OBJ_OPE_ROOM,//痁E��の手術室
-	OBJ_EX_ROOM,//痁E��の診察室
-	OBJ_XRAY_ROOM,//痁E��のレントゲン室
-	
-	OBJ_DRUG_CAMPANY,//製薬会社
+
 };
 //------------------------------------------------
 
