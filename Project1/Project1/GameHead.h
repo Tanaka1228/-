@@ -34,9 +34,8 @@ enum OBJ_NAME
 	OBJ_CHINA_TOWN_BOSS_BOSS,//�`���C�i�^�E���̃{�X��t�B�[���hBOSS
 	
 
-<<<<<<< HEAD
+
 	OBJ_INSTITUTE_BOSS,//�������{�X
-	OBJ_INSTITUTE_BOSS_BOSS,//�������{�X�{�X
 	OBJ_INSTITUTE,//������
 	OBJ_INSTITUTE1,//�����������P
 	OBJ_INSTITUTE2,//����������2
@@ -63,9 +62,11 @@ enum OBJ_NAME
 	OBJ_OPE_ROOM,//�a�@�̎�p��
 	OBJ_EX_ROOM,//�a�@�̐f�@��
 	OBJ_XRAY_ROOM,//�a�@�̃����g�Q����
-=======
+
 	OBJ_INSTITUTE_BOSS,//研究所ボス
+	OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
 	OBJ_INSTITUTE,//研究所
+
 	OBJ_INSTITUTE1,//研究所部屋！E
 	OBJ_INSTITUTE2,//研究部屁E
 	OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
@@ -81,11 +82,38 @@ enum OBJ_NAME
 	OBJ_OPE_ROOM,//痁E��の手術室
 	OBJ_EX_ROOM,//痁E��の診察室
 	OBJ_XRAY_ROOM,//痁E��のレントゲン室
->>>>>>> 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
+
 	//----------------------------------------
 
-	
 	OBJ_DRUG_CAMPANY,//������
+
+	OBJ_INSTITUTE1,//研究所部屋！E
+	OBJ_INSTITUTE2,//研究所部屁E
+	OBJ_INSTITUTE3,//研究所部屋！E
+	OBJ_INSTITUTE4,//研究部屋！E
+	OBJ_INSTITUTE5,//研究部屁E
+	OBJ_INSTITUTE6,//研究部屁E
+	OBJ_INSTITUTE7,//研究部屁E
+	OBJ_INSTITUTE8,//研究部屁E
+	OBJ_INSTITUTE9,//研究部屁E
+	OBJ_INSTITUTE10,//研究部屁E0
+	OBJ_INSTITUTE11,//研究部屁E1
+	OBJ_INSTITUTE12,//研究部屁E2
+	OBJ_INSTITUTE13,//研究廊丁E3
+	OBJ_INSTITUTE14,//研究廊丁E4
+	//--------------痁E��---------------------
+	OBJ_ROOF_TOP,//痁E��屋丁E
+	OBJ_ROOF_TOP_BOSS,//痁E��の屋上BOSS
+	OBJ_HOSPITAL,//痁E��1隁E
+	OBJ_HOSPITAL2,//痁E��2隁E
+	OBJ_HOSPITAL3,//痁E��3隁E
+	OBJ_TEMPLATE_ROOM,//痁E��の部屁E
+	OBJ_EVENT_ROOM,//痁E��のイベント部屁E
+	OBJ_OPE_ROOM,//痁E��の手術室
+	OBJ_EX_ROOM,//痁E��の診察室
+	OBJ_XRAY_ROOM,//痁E��のレントゲン室
+	
+	OBJ_DRUG_CAMPANY,//製薬会社
 };
 //------------------------------------------------
 
@@ -169,7 +197,7 @@ struct UserData
 #include"ObjInstitute2.h"
 #include"ObjInstitute3.h"  
 #include"CObjChinaTownBossBoss.h"
-<<<<<<< HEAD
+
 #include"ObjInstitute4.h"
 #include"ObjInstitute5.h"
 #include"ObjInstitute6.h"
@@ -181,9 +209,9 @@ struct UserData
 #include"ObjInstitute12.h"
 #include"ObjInstitute13.h"
 #include"ObjInstitute13.h"
-=======
+
 #include"CObjInstituteBossBoss.h"
->>>>>>> 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
+
 //------------------------------------------------
 
 //�Q�[���V�[���N���X�w�b�_------------------------
