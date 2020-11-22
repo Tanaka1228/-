@@ -31,6 +31,7 @@ enum OBJ_NAME
 	OBJ_BLOCK,//拠点
 	OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
 	OBJ_CHINA_TOWN,//チャイナタウン
+	OBJ_CHINA_TOWN_BOSS_BOSS,//チャイナタウンのボス戦フィールドBOSS
 	
 
 	OBJ_INSTITUTE_BOSS,//研究所ボス
@@ -132,6 +133,7 @@ struct UserData
 #include"ObjXRayRoom.h"
 #include"ObjInstitute1.h"
 #include"ObjInstitute2.h"
+#include"CObjChinaTownBossBoss.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -157,6 +159,7 @@ struct UserData
 #include"SceneXRayRoom.h"
 #include"SceneInstitute1.h"
 #include"SceneInstitute2.h"
+
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------

@@ -312,6 +312,9 @@
     <ClInclude Include="SceneInstitute2.h">
       <Filter>ソース ファイル\StageMap\研究所</Filter>
     </ClInclude>
+    <ClInclude Include="CObjChinaTownBossBoss.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -538,6 +541,9 @@
     </ClCompile>
     <ClCompile Include="SceneInstitute2.cpp">
       <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjChinaTownBossBoss.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
