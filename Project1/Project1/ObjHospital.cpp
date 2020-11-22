@@ -127,6 +127,7 @@ void CObjHospital::Action()
 	{
 		for (int j = 0; j < 50; j++)
 		{
+
 			if (m_map[i][j] > 0&&m_map[i][j]!=31)
 			{
 
@@ -286,6 +287,9 @@ void CObjHospital::Draw()
 	RECT_F src;//描画元切り取り位置
 	RECT_F dst;//描画先表示位置
 
+	//主人公の位置を取得
+	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+
 	Font::StrDraw(L"病院：1階", 600, 10, 32, c);
 
 
@@ -306,7 +310,7 @@ void CObjHospital::Draw()
 	if (m_sp == 1)//エンターキーを一回押したとき
 	{
 
-		ifstream fin("病院受付.txt", ios::in);//テキストデータをを読み込み
+		ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
 		char str1[64];//ただの配列
 		wchar_t wstr1[64];
 		fin.seekg(0, ios::cur);//0バイト数進める
@@ -314,7 +318,7 @@ void CObjHospital::Draw()
 
 		sprintf_s(str1, "%s", str1);//出力
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-		Font::StrDraw(wstr1, 110.0f, 50, 25, c);// X  Y  大きさ     
+		Font::StrDraw(wstr1, 200.0f, 50, 25, c);// X  Y  大きさ     
 
 
 		key_flag = 2;
@@ -323,18 +327,35 @@ void CObjHospital::Draw()
 	if (m_sp == 1)//エンターキーを一回押したとき
 	{
 
-		ifstream fin("病院受付.txt", ios::in);//テキストデータをを読み込み
+		ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
 		char str1[64];//ただの配列
 		wchar_t wstr1[64];
-		fin.seekg(18, ios::cur);//0バイト数進める
+		fin.seekg(10, ios::cur);//0バイト数進める
+		fin >> str1;//str1にテキストを入れる
+
+		sprintf_s(str1, "%s", str1);//出力
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
+		Font::StrDraw(wstr1, 200.0f, 70, 25, c);// X  Y  大きさ     
+
+
+		key_flag = 2;
+		fin.close();//ファイルを閉じる
+	}
+	if (m_sp==2)//エンターキーを一回押したとき
+	{
+
+		ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
+		char str1[64];//ただの配列
+		wchar_t wstr1[64];
+		fin.seekg(24, ios::cur);//0バイト数進める
 		fin >> str1;//str1にテキストを入れる
 
 		sprintf_s(str1, "%s", str1);//出力
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
 		Font::StrDraw(wstr1, 140.0f, 55, 25, c);// X  Y  大きさ     
 
+		key_flag = 3;
 
-		key_flag = 2;
 		fin.close();//ファイルを閉じる
 	}
 

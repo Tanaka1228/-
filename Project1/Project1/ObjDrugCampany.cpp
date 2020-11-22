@@ -263,16 +263,33 @@ void CObjDrugCampany::Draw()
 
 	dst.m_top = 0.0f + my_scroll;
 	dst.m_left = 0.0f + mx_scroll;
-	dst.m_right = 2000.0f + mx_scroll;
-	dst.m_bottom = 2000.0 + my_scroll;
+	dst.m_right = 500.0f + mx_scroll;
+	dst.m_bottom = 500.0 + my_scroll;
 	Draw::Draw(5, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
-	for (int i = 0; i < 25; i++)
+	for (int i = 0; i < 50; i++)
 	{
-		for (int j = 0; j < 25; j++)
+		for (int j = 0; j < 50; j++)
 		{
+			if (m_map[i][j] == 1)//壁
+			{
+				//切り取り位置の設定
+				src.m_top = 18.0f;   //y
+				src.m_left = 11.0f; //x
+				src.m_right = 82.0f; //x
+				src.m_bottom = 91.0f; //y
 
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(17, &src, &dst, c, 0.0f);
+
+			}
 		}
 	}
 }

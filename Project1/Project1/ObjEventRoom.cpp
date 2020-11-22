@@ -338,8 +338,8 @@ void CObjEventRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 110.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -446,13 +446,13 @@ void CObjEventRoom::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 10)//ついたて
+			if (m_map[i][j] == 10)//いす後ろ
 			{
 				//切り取り位置の設定
-				src.m_top = 83.0f;   //y
-				src.m_left = 336.0f; //x
-				src.m_right = 454.0f; //x
-				src.m_bottom = 183.0f; //y
+				src.m_top = 144.0f;   //y
+				src.m_left = 472.0f; //x
+				src.m_right = 505.0f; //x
+				src.m_bottom = 182.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
@@ -463,7 +463,7 @@ void CObjEventRoom::Draw()
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 11)//椅子小 後ろ
+			if (m_map[i][j] == 11)//ついたて
 			{
 				//切り取り位置の設定
 				src.m_top = 83.0f;   //y
@@ -474,8 +474,8 @@ void CObjEventRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -508,8 +508,8 @@ void CObjEventRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -542,7 +542,7 @@ void CObjEventRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 34.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
 				//描画
@@ -712,8 +712,8 @@ void CObjEventRoom::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 60.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
