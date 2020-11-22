@@ -168,6 +168,7 @@
     <ClInclude Include="ObjHospital3.h" />
     <ClInclude Include="ObjInstitute.h" />
     <ClInclude Include="ObjInstitute2.h" />
+    <ClInclude Include="ObjInstitute3.h" />
     <ClInclude Include="ObjInstituteBoss.h" />
     <ClInclude Include="ObjInstitute1.h" />
     <ClInclude Include="ObjMain.h" />
@@ -191,6 +192,7 @@
     <ClInclude Include="SceneHospital2.h" />
     <ClInclude Include="SceneHospital3.h" />
     <ClInclude Include="SceneInstitute.h" />
+    <ClInclude Include="SceneInstitute3.h" />
     <ClInclude Include="SceneInstituteBoss.h" />
     <ClInclude Include="SceneInstitute1.h" />
     <ClInclude Include="SceneMain.h" />
@@ -246,6 +248,7 @@
     <ClCompile Include="ObjHospital2.cpp" />
     <ClCompile Include="ObjHospital3.cpp" />
     <ClCompile Include="ObjInstitute.cpp" />
+    <ClCompile Include="ObjInstitute3.cpp" />
     <ClCompile Include="ObjInstituteBoss.cpp" />
     <ClCompile Include="ObjInstitute1.cpp" />
     <ClCompile Include="ObjInstitute2.cpp" />
@@ -273,6 +276,7 @@
     <ClCompile Include="SceneHospital3.cpp" />
     <ClCompile Include="SceneInstitute.cpp" />
     <ClCompile Include="SceneInstitute2.cpp" />
+    <ClCompile Include="SceneInstitute3.cpp" />
     <ClCompile Include="SceneInstituteBoss.cpp" />
     <ClCompile Include="SceneInstitute1.cpp" />
     <ClCompile Include="SceneMain.cpp" />
