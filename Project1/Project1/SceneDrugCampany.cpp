@@ -56,7 +56,7 @@ void CSceneDrugCampany::InitScene()
 
 	//製薬会社オブジェクト作成
 	CObjDrugCampany* objd = new CObjDrugCampany(); //製薬会社オブジェクト作成
-	Objs::InsertObj(objd, OBJ_DRUG_CAMPANY, 5); //作った製薬会社オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(objd, OBJ_DRUG_CAMPANY, 3); //作った製薬会社オブジェクトをオブジェクトマネージャーに登録
 }
 
 

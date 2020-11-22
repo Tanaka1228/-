@@ -216,7 +216,7 @@ void CObjDrugCampany::Draw()
 	dst.m_left = 0.0f + mx_scroll;
 	dst.m_right = 500.0f + mx_scroll;
 	dst.m_bottom = 500.0 + my_scroll;
-	Draw::Draw(10, &src, &dst, c, 0.0f);
+	Draw::Draw(5, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
 	for (int i = 0; i < 500; i++)
