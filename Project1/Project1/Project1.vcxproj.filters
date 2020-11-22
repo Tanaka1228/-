@@ -67,9 +67,6 @@
     <Filter Include="ソース ファイル\StageMap\病院\2階">
       <UniqueIdentifier>{5e7ffde4-8f53-4d22-858c-1b110c6e7d3b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\StageMap\病院\ボス">
-      <UniqueIdentifier>{d566aa3e-a46f-4bf6-902d-acff116ad339}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\StageMap\病院\3階">
       <UniqueIdentifier>{2a713243-8be1-4968-a48e-b8ba50191233}</UniqueIdentifier>
     </Filter>
@@ -84,6 +81,9 @@
     </Filter>
     <Filter Include="ソース ファイル\StageMap\病院\レントゲン室">
       <UniqueIdentifier>{66724bfd-b7ce-4e4d-afee-cba86d54e5e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\StageMap\病院\3階\ボス">
+      <UniqueIdentifier>{d566aa3e-a46f-4bf6-902d-acff116ad339}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -247,10 +247,10 @@
       <Filter>ソース ファイル\StageMap\病院\１階</Filter>
     </ClInclude>
     <ClInclude Include="ObjRooftop.h">
-      <Filter>ソース ファイル\StageMap\病院\ボス</Filter>
+      <Filter>ソース ファイル\StageMap\病院\3階\ボス</Filter>
     </ClInclude>
     <ClInclude Include="SceneRooftop.h">
-      <Filter>ソース ファイル\StageMap\病院\ボス</Filter>
+      <Filter>ソース ファイル\StageMap\病院\3階\ボス</Filter>
     </ClInclude>
     <ClInclude Include="ObjHospital2.h">
       <Filter>ソース ファイル\StageMap\病院\2階</Filter>
@@ -558,10 +558,10 @@
       <Filter>ソース ファイル\StageMap\病院\１階</Filter>
     </ClCompile>
     <ClCompile Include="ObjRooftop.cpp">
-      <Filter>ソース ファイル\StageMap\病院\ボス</Filter>
+      <Filter>ソース ファイル\StageMap\病院\3階\ボス</Filter>
     </ClCompile>
     <ClCompile Include="SceneRooftop.cpp">
-      <Filter>ソース ファイル\StageMap\病院\ボス</Filter>
+      <Filter>ソース ファイル\StageMap\病院\3階\ボス</Filter>
     </ClCompile>
     <ClCompile Include="ObjHospital2.cpp">
       <Filter>ソース ファイル\StageMap\病院\2階</Filter>
