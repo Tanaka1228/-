@@ -139,7 +139,9 @@
     <ClInclude Include="CObjAssBullet.h" />
     <ClInclude Include="CObjBullet.h" />
     <ClInclude Include="CObjBulletEnemy.h" />
-    <ClInclude Include="CObjChinaTownBossBoss.h" />
+    <ClInclude Include="CObjChinaTownBossBoss.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="CObjHomingBullet.h" />
     <ClInclude Include="CObjHomingEnemy.h" />
     <ClInclude Include="CObjInstituteBossBoss.h" />
@@ -167,6 +169,7 @@
     <ClInclude Include="ObjHospital3.h" />
     <ClInclude Include="ObjInstitute.h" />
     <ClInclude Include="ObjInstitute2.h" />
+    <ClInclude Include="ObjInstitute3.h" />
     <ClInclude Include="ObjInstituteBoss.h" />
     <ClInclude Include="ObjInstitute1.h" />
     <ClInclude Include="ObjMain.h" />
@@ -190,6 +193,7 @@
     <ClInclude Include="SceneHospital2.h" />
     <ClInclude Include="SceneHospital3.h" />
     <ClInclude Include="SceneInstitute.h" />
+    <ClInclude Include="SceneInstitute3.h" />
     <ClInclude Include="SceneInstituteBoss.h" />
     <ClInclude Include="SceneInstitute1.h" />
     <ClInclude Include="SceneMain.h" />
@@ -219,7 +223,9 @@
     <ClCompile Include="CObjAssBullet.cpp" />
     <ClCompile Include="CObjBullet.cpp" />
     <ClCompile Include="CObjBulletEnemy.cpp" />
-    <ClCompile Include="CObjChinaTownBossBoss.cpp" />
+    <ClCompile Include="CObjChinaTownBossBoss.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CObjHomingBullet.cpp" />
     <ClCompile Include="CObjHomingEnemy.cpp" />
     <ClCompile Include="CObjInstituteBossBoss.cpp" />
@@ -244,6 +250,7 @@
     <ClCompile Include="ObjHospital2.cpp" />
     <ClCompile Include="ObjHospital3.cpp" />
     <ClCompile Include="ObjInstitute.cpp" />
+    <ClCompile Include="ObjInstitute3.cpp" />
     <ClCompile Include="ObjInstituteBoss.cpp" />
     <ClCompile Include="ObjInstitute1.cpp" />
     <ClCompile Include="ObjInstitute2.cpp" />
@@ -271,6 +278,7 @@
     <ClCompile Include="SceneHospital3.cpp" />
     <ClCompile Include="SceneInstitute.cpp" />
     <ClCompile Include="SceneInstitute2.cpp" />
+    <ClCompile Include="SceneInstitute3.cpp" />
     <ClCompile Include="SceneInstituteBoss.cpp" />
     <ClCompile Include="SceneInstitute1.cpp" />
     <ClCompile Include="SceneMain.cpp" />
