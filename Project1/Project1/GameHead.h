@@ -36,6 +36,7 @@ enum OBJ_NAME
 
 <<<<<<< HEAD
 	OBJ_INSTITUTE_BOSS,//研究所ボス
+	OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
 	OBJ_INSTITUTE,//研究所
 	OBJ_INSTITUTE1,//研究所部屋１
 	OBJ_INSTITUTE2,//研究所部屋2
@@ -83,6 +84,7 @@ enum OBJ_NAME
 >>>>>>> 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
 	//----------------------------------------
 
+	
 	OBJ_DRUG_CAMPANY,//製薬会社
 };
 //------------------------------------------------
