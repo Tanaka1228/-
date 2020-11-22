@@ -34,7 +34,7 @@ enum OBJ_NAME
 	OBJ_CHINA_TOWN_BOSS_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒhBOSS
 	
 
-<<<<<<< HEAD
+
 	OBJ_INSTITUTE_BOSS,//Œ¤‹†Šƒ{ƒX
 	OBJ_INSTITUTE_BOSS_BOSS,//Œ¤‹†Šƒ{ƒXƒ{ƒX
 	OBJ_INSTITUTE,//Œ¤‹†Š
@@ -63,25 +63,7 @@ enum OBJ_NAME
 	OBJ_OPE_ROOM,//•a‰@‚Ìèpº
 	OBJ_EX_ROOM,//•a‰@‚Ìf@º
 	OBJ_XRAY_ROOM,//•a‰@‚ÌƒŒƒ“ƒgƒQƒ“º
-=======
-	OBJ_INSTITUTE_BOSS,//ç ”ç©¶æ‰€ãƒœã‚¹
-	OBJ_INSTITUTE,//ç ”ç©¶æ‰€
-	OBJ_INSTITUTE1,//ç ”ç©¶æ‰€éƒ¨å±‹ï¼E
-	OBJ_INSTITUTE2,//ç ”ç©¶éƒ¨å±E
-	OBJ_INSTITUTE_BOSS_BOSS,//ç ”ç©¶æ‰€ãƒœã‚¹ãƒœã‚¹
-	OBJ_INSTITUTE3,//E½E½E½E½E½E½E½E½E½E½E½R
-	//--------------ç—E™¢---------------------
-	OBJ_ROOF_TOP,//ç—E™¢å±‹ä¸E
-	OBJ_ROOF_TOP_BOSS,//ç—E™¢ã®å±‹ä¸ŠBOSS
-	OBJ_HOSPITAL,//ç—E™¢1éšE
-	OBJ_HOSPITAL2,//ç—E™¢2éšE
-	OBJ_HOSPITAL3,//ç—E™¢3éšE
-	OBJ_TEMPLATE_ROOM,//ç—E™¢ã®éƒ¨å±E
-	OBJ_EVENT_ROOM,//ç—E™¢ã®ã‚¤ãƒ™ãƒ³ãƒˆéƒ¨å±E
-	OBJ_OPE_ROOM,//ç—E™¢ã®æ‰‹è¡“å®¤
-	OBJ_EX_ROOM,//ç—E™¢ã®è¨ºå¯Ÿå®¤
-	OBJ_XRAY_ROOM,//ç—E™¢ã®ãƒ¬ãƒ³ãƒˆã‚²ãƒ³å®¤
->>>>>>> 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
+
 	//----------------------------------------
 
 	
@@ -169,7 +151,7 @@ struct UserData
 #include"ObjInstitute2.h"
 #include"ObjInstitute3.h"  
 #include"CObjChinaTownBossBoss.h"
-<<<<<<< HEAD
+
 #include"ObjInstitute4.h"
 #include"ObjInstitute5.h"
 #include"ObjInstitute6.h"
@@ -181,9 +163,9 @@ struct UserData
 #include"ObjInstitute12.h"
 #include"ObjInstitute13.h"
 #include"ObjInstitute13.h"
-=======
+
 #include"CObjInstituteBossBoss.h"
->>>>>>> 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
+
 //------------------------------------------------
 
 //ƒQ[ƒ€ƒV[ƒ“ƒNƒ‰ƒXƒwƒbƒ_------------------------
