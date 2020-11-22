@@ -28,7 +28,7 @@ void CObjInstituteBossBoss::Init()
 
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 232, 232, ELEMENT_ENEMY, OBJ_Institute_BOSS_BOSS, 1);
+	Hits::SetHitBox(this, m_x, m_y, 232, 232, ELEMENT_ENEMY, OBJ_INSTITUTE_BOSS_BOSS, 1);
 }
 
 //アクション
@@ -126,7 +126,7 @@ void CObjInstituteBossBoss::Draw()
 	src.m_bottom = 131.0f; //y
 
 	//病院の屋上の情報
-	CObj* InstituteBoss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);
+	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);
 
 	dst.m_top = 0.0f + m_y + instituteboss->GetScroll2();
 	dst.m_left = 32.0f + 200.0f + m_x + instituteboss->GetScroll();
