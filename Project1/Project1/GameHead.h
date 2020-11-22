@@ -1,78 +1,95 @@
-#pragma once
+ï»¿#pragma once
 
-//ƒIƒuƒWƒFƒNƒgƒl[ƒ€------------------------------
+//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãƒãƒ¼ãƒ ------------------------------
 enum OBJ_NAME
 {
-	OBJ_NO_NAME,	//ƒIƒuƒWƒFƒNƒg–¼–³‚µ(‹ÖŽ~)
-					//ƒQ[ƒ€‚ÅŽg‚¤ƒIƒuƒWƒFƒNƒg‚Ì–¼‘O
-					//OBJ_››‚Æ•\‹L
+	OBJ_NO_NAME,	//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆåç„¡ã—(ç¦æ­¢)
+					//ã‚²ãƒ¼ãƒ ã§ä½¿ã†ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®åå‰
+					//OBJ_â—‹â—‹ã¨è¡¨è¨˜
 	OBJ_MAIN,	
-	OBJ_HERO, //ŽålŒö
-	OBJ_TITLE,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹
-	OBJ_ENEMY,//“G‚P
-	OBJ_BULLET,//’eŠÛ
-	OBJ_GAME_OVER,//ƒQ[ƒ€ƒI[ƒo[
-	OBJ_TITLE_BACKGROUND,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹‚Ì”wŒi
-	OBJ_ATTACK_ENEMY,//UŒ‚“G‹@
-	OBJ_BULLET_ENEMY,//’eŠÛ“G‹@
-	OBJ_HOMING_ENEMY,//—U“±“G‹@
-	OBJ_SIN_ENEMY,//ƒJ[ƒu“G‹@
+	OBJ_HERO, //ä¸»äººå…¬
+	OBJ_TITLE,//ã‚²ãƒ¼ãƒ ã‚¿ã‚¤ãƒˆãƒ«
+	OBJ_ENEMY,//æ•µï¼‘
+	OBJ_BULLET,//å¼¾ä¸¸
+	OBJ_GAME_OVER,//ã‚²ãƒ¼ãƒ ã‚ªãƒ¼ãƒãƒ¼
+	OBJ_TITLE_BACKGROUND,//ã‚²ãƒ¼ãƒ ã‚¿ã‚¤ãƒˆãƒ«ã®èƒŒæ™¯
+	OBJ_ATTACK_ENEMY,//æ”»æ’ƒæ•µæ©Ÿ
+	OBJ_BULLET_ENEMY,//å¼¾ä¸¸æ•µæ©Ÿ
+	OBJ_HOMING_ENEMY,//èª˜å°Žæ•µæ©Ÿ
+	OBJ_SIN_ENEMY,//ã‚«ãƒ¼ãƒ–æ•µæ©Ÿ
 	OBJ_DIFFUSION_ENEMY,//
 	OBJ_ANGLE_BULLET,
 	OBJ_HOMING_BULLET,
 	OBJ_END,
 	OBJ_FIN,
-	OBJ_MANU,//ƒƒjƒ…[
-	OBJ_HEROINE,//ƒqƒƒCƒ“
-	OBJ_GUN,//•Šíe
-	OBJ_ASS_BULLET,//ƒAƒTƒ‹ƒgƒ‰ƒCƒtƒ‹‚Ì’eŠÛ
+	OBJ_MANU,//ãƒ¡ãƒ‹ãƒ¥ãƒ¼
+	OBJ_HEROINE,//ãƒ’ãƒ­ã‚¤ãƒ³
+	OBJ_GUN,//æ­¦å™¨éŠƒ
+	OBJ_ASS_BULLET,//ã‚¢ã‚µãƒ«ãƒˆãƒ©ã‚¤ãƒ•ãƒ«ã®å¼¾ä¸¸
 
-	//------ƒ}ƒbƒv-------------------------------------------
-	OBJ_BLOCK,//‹’“_
-	OBJ_CHINA_TOWN_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒh
-	OBJ_CHINA_TOWN,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“
-	OBJ_CHINA_TOWN_BOSS_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒhBOSS
+	//------ãƒžãƒƒãƒ—-------------------------------------------
+	OBJ_BLOCK,//æ‹ ç‚¹
+	OBJ_CHINA_TOWN_BOSS,//ãƒãƒ£ã‚¤ãƒŠã‚¿ã‚¦ãƒ³ã®ãƒœã‚¹æˆ¦ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰
+	OBJ_CHINA_TOWN,//ãƒãƒ£ã‚¤ãƒŠã‚¿ã‚¦ãƒ³
+	OBJ_CHINA_TOWN_BOSS_BOSS,//ãƒãƒ£ã‚¤ãƒŠã‚¿ã‚¦ãƒ³ã®ãƒœã‚¹æˆ¦ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰BOSS
 	
 
-	OBJ_INSTITUTE_BOSS,//Œ¤‹†Šƒ{ƒX
-	OBJ_INSTITUTE,//Œ¤‹†Š
-	OBJ_INSTITUTE1,//Œ¤‹†Š•”‰®‚P
-	OBJ_INSTITUTE2,//Œ¤‹†Š•”‰®2
-	OBJ_INSTITUTE3,//Œ¤‹†Š•”‰®‚R
-	OBJ_INSTITUTE4,//Œ¤‹†•”‰®‚S
-	OBJ_INSTITUTE5,//Œ¤‹†•”‰®5
-	OBJ_INSTITUTE6,//Œ¤‹†•”‰®6
-	OBJ_INSTITUTE7,//Œ¤‹†•”‰®7
-	OBJ_INSTITUTE8,//Œ¤‹†•”‰®8
-	OBJ_INSTITUTE9,//Œ¤‹†•”‰®9
-	OBJ_INSTITUTE10,//Œ¤‹†•”‰®10
-	OBJ_INSTITUTE11,//Œ¤‹†•”‰®11
-	OBJ_INSTITUTE12,//Œ¤‹†•”‰®12
-	OBJ_INSTITUTE13,//Œ¤‹†˜L‰º13
-	OBJ_INSTITUTE14,//Œ¤‹†˜L‰º14
-	//--------------•a‰@---------------------
-	OBJ_ROOF_TOP,//•a‰@‰®ã
-	OBJ_ROOF_TOP_BOSS,//•a‰@‚Ì‰®ãBOSS
-	OBJ_HOSPITAL,//•a‰@1ŠK
-	OBJ_HOSPITAL2,//•a‰@2ŠK
-	OBJ_HOSPITAL3,//•a‰@3ŠK
-	OBJ_TEMPLATE_ROOM,//•a‰@‚Ì•”‰®
-	OBJ_EVENT_ROOM,//•a‰@‚ÌƒCƒxƒ“ƒg•”‰®
-	OBJ_OPE_ROOM,//•a‰@‚ÌŽèpŽº
-	OBJ_EX_ROOM,//•a‰@‚ÌfŽ@Žº
-	OBJ_XRAY_ROOM,//•a‰@‚ÌƒŒƒ“ƒgƒQƒ“Žº
+	OBJ_INSTITUTE_BOSS,//ç ”ç©¶æ‰€ãƒœã‚¹
+	OBJ_INSTITUTE,//ç ”ç©¶æ‰€
+	OBJ_INSTITUTE1,//ç ”ç©¶æ‰€éƒ¨å±‹ï¼‘
+	OBJ_INSTITUTE2,//ç ”ç©¶æ‰€éƒ¨å±‹2
+	OBJ_INSTITUTE3,//ç ”ç©¶æ‰€éƒ¨å±‹ï¼“
+	OBJ_INSTITUTE4,//ç ”ç©¶éƒ¨å±‹ï¼”
+	OBJ_INSTITUTE5,//ç ”ç©¶éƒ¨å±‹5
+	OBJ_INSTITUTE6,//ç ”ç©¶éƒ¨å±‹6
+	OBJ_INSTITUTE7,//ç ”ç©¶éƒ¨å±‹7
+	OBJ_INSTITUTE8,//ç ”ç©¶éƒ¨å±‹8
+	OBJ_INSTITUTE9,//ç ”ç©¶éƒ¨å±‹9
+	OBJ_INSTITUTE10,//ç ”ç©¶éƒ¨å±‹10
+	OBJ_INSTITUTE11,//ç ”ç©¶éƒ¨å±‹11
+	OBJ_INSTITUTE12,//ç ”ç©¶éƒ¨å±‹12
+	OBJ_INSTITUTE13,//ç ”ç©¶å»Šä¸‹13
+	OBJ_INSTITUTE14,//ç ”ç©¶å»Šä¸‹14
+	//--------------ç—…é™¢---------------------
+	OBJ_ROOF_TOP,//ç—…é™¢å±‹ä¸Š
+	OBJ_ROOF_TOP_BOSS,//ç—…é™¢ã®å±‹ä¸ŠBOSS
+	OBJ_HOSPITAL,//ç—…é™¢1éšŽ
+	OBJ_HOSPITAL2,//ç—…é™¢2éšŽ
+	OBJ_HOSPITAL3,//ç—…é™¢3éšŽ
+	OBJ_TEMPLATE_ROOM,//ç—…é™¢ã®éƒ¨å±‹
+	OBJ_EVENT_ROOM,//ç—…é™¢ã®ã‚¤ãƒ™ãƒ³ãƒˆéƒ¨å±‹
+	OBJ_OPE_ROOM,//ç—…é™¢ã®æ‰‹è¡“å®¤
+	OBJ_EX_ROOM,//ç—…é™¢ã®è¨ºå¯Ÿå®¤
+	OBJ_XRAY_ROOM,//ç—…é™¢ã®ãƒ¬ãƒ³ãƒˆã‚²ãƒ³å®¤
+	OBJ_INSTITUTE_BOSS,//ç ”ç©¶æ‰€ãƒœã‚¹
+	OBJ_INSTITUTE,//ç ”ç©¶æ‰€
+	OBJ_INSTITUTE1,//ç ”ç©¶æ‰€éƒ¨å±‹ï¼‘
+	OBJ_INSTITUTE2,//ç ”ç©¶éƒ¨å±‹2
+	OBJ_INSTITUTE_BOSS_BOSS,//ç ”ç©¶æ‰€ãƒœã‚¹ãƒœã‚¹
+	OBJ_INSTITUTE3,//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½R
+	//--------------ç—…é™¢---------------------
+	OBJ_ROOF_TOP,//ç—…é™¢å±‹ä¸Š
+	OBJ_ROOF_TOP_BOSS,//ç—…é™¢ã®å±‹ä¸ŠBOSS
+	OBJ_HOSPITAL,//ç—…é™¢1éšŽ
+	OBJ_HOSPITAL2,//ç—…é™¢2éšŽ
+	OBJ_HOSPITAL3,//ç—…é™¢3éšŽ
+	OBJ_TEMPLATE_ROOM,//ç—…é™¢ã®éƒ¨å±‹
+	OBJ_EVENT_ROOM,//ç—…é™¢ã®ã‚¤ãƒ™ãƒ³ãƒˆéƒ¨å±‹
+	OBJ_OPE_ROOM,//ç—…é™¢ã®æ‰‹è¡“å®¤
+	OBJ_EX_ROOM,//ç—…é™¢ã®è¨ºå¯Ÿå®¤
+	OBJ_XRAY_ROOM,//ç—…é™¢ã®ãƒ¬ãƒ³ãƒˆã‚²ãƒ³å®¤
 	//----------------------------------------
 
-	OBJ_DRUG_CAMPANY,//»–ò‰ïŽÐ
+	OBJ_DRUG_CAMPANY,//è£½è–¬ä¼šç¤¾
 };
 //------------------------------------------------
 
-//“–‚½‚è”»’è‘®«----------------------------------
+//å½“ãŸã‚Šåˆ¤å®šå±žæ€§----------------------------------
 enum HIT_ELEMENTS
 {
-	ELEMENT_NULL,//‘®«–³‚µ ‘S‚Ä‚Ì‘®«‚Æ“–‚½‚è”»’è‚ªŽÀs‚³‚ê‚é
-	//ˆÈ‰º@“¯‚¶‘®«“¯Žm‚Å‚Í“–‚½‚è”»’è‚ÍŽÀs‚³‚ê‚È‚¢
-	//‘®«‚Í’Ç‰Á‰Â”\‚¾‚ªAƒfƒoƒbƒNŽž‚ÌF‚Í‰ŠúÝ’è•ª‚µ‚©–³‚¢
+	ELEMENT_NULL,//å±žæ€§ç„¡ã— å…¨ã¦ã®å±žæ€§ã¨å½“ãŸã‚Šåˆ¤å®šãŒå®Ÿè¡Œã•ã‚Œã‚‹
+	//ä»¥ä¸‹ã€€åŒã˜å±žæ€§åŒå£«ã§ã¯å½“ãŸã‚Šåˆ¤å®šã¯å®Ÿè¡Œã•ã‚Œãªã„
+	//å±žæ€§ã¯è¿½åŠ å¯èƒ½ã ãŒã€ãƒ‡ãƒãƒƒã‚¯æ™‚ã®è‰²ã¯åˆæœŸè¨­å®šåˆ†ã—ã‹ç„¡ã„
 	ELEMENT_PLAYER,
 	ELEMENT_ENEMY,
 	ELEMENT_ITEM,
@@ -87,26 +104,26 @@ enum HIT_ELEMENTS
 //------------------------------------------------
 
 //------------------------------------------------
-//ƒZ[ƒu•ƒ[ƒh‚ÆƒV[ƒ“ŠÔ‚Ì‚â‚èŽæ‚è‚·‚éƒf[ƒ^
+//ã‚»ãƒ¼ãƒ–ï¼†ãƒ­ãƒ¼ãƒ‰ã¨ã‚·ãƒ¼ãƒ³é–“ã®ã‚„ã‚Šå–ã‚Šã™ã‚‹ãƒ‡ãƒ¼ã‚¿
 struct UserData
 {
-	int mSeveData;	//ƒTƒ“ƒvƒ‹ƒZ[ƒuƒf[ƒ^
+	int mSeveData;	//ã‚µãƒ³ãƒ—ãƒ«ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿
 	
 };
 //------------------------------------------------
 
 
-//ƒQ[ƒ€“à‚ÅŽg—p‚³‚ê‚éƒOƒ[ƒoƒ‹•Ï”E’è”E—ñ‹“--
+//ã‚²ãƒ¼ãƒ å†…ã§ä½¿ç”¨ã•ã‚Œã‚‹ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°ãƒ»å®šæ•°ãƒ»åˆ—æŒ™--
 
 
 
 //------------------------------------------------
-//ƒQ[ƒ€“à‚ÅŽg—p‚·‚éƒNƒ‰ƒXƒwƒbƒ_------------------
+//ã‚²ãƒ¼ãƒ å†…ã§ä½¿ç”¨ã™ã‚‹ã‚¯ãƒ©ã‚¹ãƒ˜ãƒƒãƒ€------------------
 
 
 //------------------------------------------------
 
-//ƒQ[ƒ€ƒV[ƒ“ƒIƒuƒWƒFƒNƒgƒwƒbƒ_------------------
+//ã‚²ãƒ¼ãƒ ã‚·ãƒ¼ãƒ³ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãƒ˜ãƒƒãƒ€------------------
 #include"ObjMain.h"
 #include"ObjHero.h"
 #include"ObjTitle.h"
@@ -158,9 +175,10 @@ struct UserData
 #include"ObjInstitute12.h"
 #include"ObjInstitute13.h"
 #include"ObjInstitute13.h"
+#include"CObjInstituteBossBoss.h"
 //------------------------------------------------
 
-//ƒQ[ƒ€ƒV[ƒ“ƒNƒ‰ƒXƒwƒbƒ_------------------------
+//ã‚²ãƒ¼ãƒ ã‚·ãƒ¼ãƒ³ã‚¯ãƒ©ã‚¹ãƒ˜ãƒƒãƒ€------------------------
 #include"SceneTitle.h"
 #include"SceneMain.h"
 #include"SceneGameOver.h"
@@ -198,8 +216,8 @@ struct UserData
 
 //-----------------------------------------------
 
-//ƒV[ƒ“ƒXƒ^[ƒgƒNƒ‰ƒX---------------------------
-////ƒQ[ƒ€ŠJŽnŽž‚ÌƒV[ƒ“ƒNƒ‰ƒX“o˜^
+//ã‚·ãƒ¼ãƒ³ã‚¹ã‚¿ãƒ¼ãƒˆã‚¯ãƒ©ã‚¹---------------------------
+////ã‚²ãƒ¼ãƒ é–‹å§‹æ™‚ã®ã‚·ãƒ¼ãƒ³ã‚¯ãƒ©ã‚¹ç™»éŒ²
 //#define SET_GAME_START CSceneGameOver
 #define SET_GAME_START CSceneTitle 
 //#define SET_GAME_START CSceneEnd 

@@ -185,7 +185,7 @@ void CObjChinaTownBoss::Action()
 	{
 		for (int j = 0; j < 100; j++)
 		{
-			if (m_map[i][j] > 0)
+			if (m_map[i][j] > 0&&m_map[i][j]!=81)
 			{
 
 				//要素番号を座標に変更
@@ -258,8 +258,8 @@ void CObjChinaTownBoss::Action()
 		}
 	}
 	//敵出現ライン
-	float Xline = hx + (-mx_scroll) +400;
-	float Yline = hy + (my_scroll) -100;
+	float Xline = hx + (-mx_scroll) -1100;
+	float Yline = hy + (my_scroll) -400;
 
 	int ex = ((int)Xline) / 32;
 	int ey = ((int)Yline) / 32;
@@ -270,14 +270,12 @@ void CObjChinaTownBoss::Action()
 
 			if (m_map[i][ex] == 81)
 			{
-				//誘導敵機オブジェクト作成
-				CObjChinaTownBossBoss* obj_chinatown_boss_boss = new CObjChinaTownBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-				Objs::InsertObj(obj_chinatown_boss_boss, OBJ_CHINA_TOWN_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+				////誘導敵機オブジェクト作成
+				//CObjChinaTownBossBoss* obj_chinatown_boss_boss = new CObjChinaTownBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
+				//Objs::InsertObj(obj_chinatown_boss_boss, OBJ_CHINA_TOWN_BOSS_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 
 				m_map[i][ex] = 0;
 			}
-
-
 	}
 }
 //ドロー

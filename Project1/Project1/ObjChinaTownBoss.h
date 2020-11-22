@@ -15,11 +15,11 @@ public:
 	void Action(); //アクション
 	void Draw(); //ドロー
 
-	void SetScroll(float s) { mx_scroll = s; }
-	float GetScroll() { return mx_scroll; }//X
+	void SetScroll3(float s) { mx_scroll = s; }
+	float GetScroll3() { return mx_scroll; }//X
 
-	void SetScroll2(float s) { my_scroll = s; }
-	float GetScroll2() { return my_scroll; }//Y
+	void SetScroll4(float s) { my_scroll = s; }
+	float GetScroll4() { return my_scroll; }//Y
 
 
 

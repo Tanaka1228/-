@@ -139,9 +139,12 @@
     <ClInclude Include="CObjAssBullet.h" />
     <ClInclude Include="CObjBullet.h" />
     <ClInclude Include="CObjBulletEnemy.h" />
-    <ClInclude Include="CObjChinaTownBossBoss.h" />
+    <ClInclude Include="CObjChinaTownBossBoss.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="CObjHomingBullet.h" />
     <ClInclude Include="CObjHomingEnemy.h" />
+    <ClInclude Include="CObjInstituteBossBoss.h" />
     <ClInclude Include="CObjSinEnemy.h" />
     <ClInclude Include="ObjChinaTown.h" />
     <ClInclude Include="GameHead.h" />
@@ -242,9 +245,12 @@
     <ClCompile Include="CObjAssBullet.cpp" />
     <ClCompile Include="CObjBullet.cpp" />
     <ClCompile Include="CObjBulletEnemy.cpp" />
-    <ClCompile Include="CObjChinaTownBossBoss.cpp" />
+    <ClCompile Include="CObjChinaTownBossBoss.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CObjHomingBullet.cpp" />
     <ClCompile Include="CObjHomingEnemy.cpp" />
+    <ClCompile Include="CObjInstituteBossBoss.cpp" />
     <ClCompile Include="CObjSinEnemy.cpp" />
     <ClCompile Include="ObjChinaTown.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />

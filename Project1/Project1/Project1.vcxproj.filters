@@ -387,6 +387,9 @@
     <ClInclude Include="SceneInstitute14.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="CObjInstituteBossBoss.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -688,6 +691,9 @@
     </ClCompile>
     <ClCompile Include="SceneInstitute14.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjInstituteBossBoss.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyBoss</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
