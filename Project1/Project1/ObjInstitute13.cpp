@@ -6,13 +6,13 @@
 #include"GameL\SceneObjManager.h"
 
 #include"GameHead.h"
-#include "ObjInstitute.h"
+#include "ObjInstitute13.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjInstitute::Init()
+void CObjInstitute13::Init()
 {
 	mx_scroll = 0.0f;
 	my_scroll = 0.0f;
@@ -44,11 +44,11 @@ void CObjInstitute::Init()
 		{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
 	};
 	//マップデータをコピー
-	memcpy(m_map, block_data, sizeof(int) * (60* 60));
+	memcpy(m_map, block_data, sizeof(int) * (60 * 60));
 
 }
 //アクション
-void CObjInstitute::Action()
+void CObjInstitute13::Action()
 {
 	//主人公の位置を取得
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
@@ -114,7 +114,7 @@ void CObjInstitute::Action()
 
 
 	//m_mapの全要素にアクセス
-	for (int i = 0; i <60; i++)
+	for (int i = 0; i < 60; i++)
 	{
 		for (int j = 0; j < 60; j++)
 		{
@@ -219,7 +219,7 @@ void CObjInstitute::Action()
 
 }
 //ドロー
-void CObjInstitute::Draw()
+void CObjInstitute13::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
@@ -243,7 +243,7 @@ void CObjInstitute::Draw()
 	{
 		for (int j = 0; j < 60; j++)
 		{
-			
+
 			if (m_map[i][j] == 1)//壁
 			{
 				//切り取り位置の設定

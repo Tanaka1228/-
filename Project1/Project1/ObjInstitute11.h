@@ -7,11 +7,11 @@ using namespace GameL;
 
 
 //オブジェクト：ブロック&背景
-class CObjInstitute :public CObj
+class CObjInstitute11 :public CObj
 {
 public:
-	CObjInstitute() {};
-	~CObjInstitute() {};
+	CObjInstitute11() {};
+	~CObjInstitute11() {};
 	void Init();//イニシャライズ
 	void Action();//アクション
 	void Draw();//ドロー
@@ -22,7 +22,7 @@ public:
 	void SetScroll2(float s) { my_scroll = s; }
 	float GetScroll2() { return my_scroll; }
 private:
-	int m_map[60][60];//マップ情報(仮)
+	int m_map[40][40];//マップ情報(仮)
 
 	float mx_scroll; //左右スクロール用
 	float my_scroll; //左右スクロール用
