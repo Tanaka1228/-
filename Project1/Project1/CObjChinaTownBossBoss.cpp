@@ -34,7 +34,7 @@ void CObjChinaTownBossBoss::Init()
 //アクション
 void CObjChinaTownBossBoss::Action()
 {
-	//病院の屋上の情報
+	//チャイナタウンボス戦フィールドの情報
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 
 	m_time++;
@@ -82,11 +82,11 @@ void CObjChinaTownBossBoss::Action()
 
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
-	hit->SetPos(m_x + chinatownboss->GetScroll(), m_y + chinatownboss->GetScroll2());
+	hit->SetPos(m_x + chinatownboss->GetScroll3(), m_y + chinatownboss->GetScroll4());
 
 
 	//ホーミング敵機が完全に領域外に出たら敵機を破棄する
-	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 3072.0f, 2752.0f);
+	bool check = CheckWindow(m_x, m_y, 0.0f, 0.0f, 3072.0f, 2752.0f);
 	if (check == false)
 	{
 		this->SetStatus(false);//自身に削除命令
@@ -113,6 +113,9 @@ void CObjChinaTownBossBoss::Action()
 //ドロー
 void CObjChinaTownBossBoss::Draw()
 {
+	//チャイナタウンボス戦フィールドの情報
+	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
+
 	//描画カラー情報　R=RED G=Green B=Blue A=alpha(透過情報)
 	float c[4] = { 3.0f,3.0f,3.0f,1.0f };
 
@@ -122,17 +125,14 @@ void CObjChinaTownBossBoss::Draw()
 	//切り取り位置の設定
 	src.m_top = 0.0f; //y
 	src.m_left = 0.0f; //x
-	src.m_right = 139.0f; //x
-	src.m_bottom = 131.0f; //y
+	src.m_right = 60.0f; //x
+	src.m_bottom = 95.0f; //y
 
-	//病院の屋上の情報
-	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
-
-	dst.m_top = 0.0f + m_y + chinatownboss->GetScroll2();
-	dst.m_left = 32.0f + 200.0f + m_x + chinatownboss->GetScroll();
-	dst.m_right = 0.0f + m_x + chinatownboss->GetScroll();
-	dst.m_bottom = 32.0f + 200.0f + m_y + chinatownboss->GetScroll2();
+	dst.m_top = 0.0f + m_y + chinatownboss->GetScroll4();
+	dst.m_left = 0.0f + 0.0f + m_x + chinatownboss->GetScroll3();
+	dst.m_right = 3072.0f + m_x + chinatownboss->GetScroll3();
+	dst.m_bottom = 2752.0f + 200.0f + m_y + chinatownboss->GetScroll4();
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
-	Draw::Draw(1, &src, &dst, c, 0.0f);
+	Draw::Draw(16, &src, &dst, c, 0.0f);
 }

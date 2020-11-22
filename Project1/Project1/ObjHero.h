@@ -19,6 +19,7 @@ public:
 	
 	float GetX2() { return m_x; }   //位置情報X2取得用　当たり判定
 	float GetY2() { return m_y; }   //位置情報Y2取得用
+	  //位置情報Y2取得用
 	float GetVX() { return m_vx; }   //位置情報VX取得用
 	float GetVY() { return m_vy; }   //位置情報VY取得用
 
