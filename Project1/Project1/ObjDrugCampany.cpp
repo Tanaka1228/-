@@ -18,13 +18,13 @@ void CObjDrugCampany::Init()
 	my_scroll = 0.0f;
 
 	//マップ情報
-	int block_data[25][25] =
+	int block_data[250][250] =
 	{
 		
 
 	};
 	//マップデータをコピー
-	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
+	memcpy(m_map, block_data, sizeof(int) * (250 * 250));
 
 }
 //アクション
@@ -209,19 +209,19 @@ void CObjDrugCampany::Draw()
     //背景表示
 	src.m_top = 0.0f;   // Y
 	src.m_left = 0.0f;  // X
-	src.m_right = 0.0f; // X
-	src.m_bottom = 0.0f;// Y 
+	src.m_right = 500.0f; // X
+	src.m_bottom = 500.0f;// Y 
 
 	dst.m_top = 0.0f + my_scroll;
 	dst.m_left = 0.0f + mx_scroll;
-	dst.m_right = 0.0f + mx_scroll;
-	dst.m_bottom = 0.0 + my_scroll;
+	dst.m_right = 500.0f + mx_scroll;
+	dst.m_bottom = 500.0 + my_scroll;
 	Draw::Draw(10, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
-	for (int i = 0; i < 25; i++)
+	for (int i = 0; i < 500; i++)
 	{
-		for (int j = 0; j < 25; j++)
+		for (int j = 0; j < 500; j++)
 		{
 			
 		}
