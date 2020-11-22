@@ -6,36 +6,36 @@ enum OBJ_NAME
 	OBJ_NO_NAME,	//ƒIƒuƒWƒFƒNƒg–¼–³‚µ(‹ÖŽ~)
 					//ƒQ[ƒ€‚ÅŽg‚¤ƒIƒuƒWƒFƒNƒg‚Ì–¼‘O
 					//OBJ_››‚Æ•\‹L
-	OBJ_MAIN,	
-	OBJ_HERO, //ŽålŒö
-	OBJ_TITLE,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹
-	OBJ_ENEMY,//“G‚P
-	OBJ_BULLET,//’eŠÛ
-	OBJ_GAME_OVER,//ƒQ[ƒ€ƒI[ƒo[
-	OBJ_TITLE_BACKGROUND,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹‚Ì”wŒi
-	OBJ_ATTACK_ENEMY,//UŒ‚“G‹@
-	OBJ_BULLET_ENEMY,//’eŠÛ“G‹@
-	OBJ_HOMING_ENEMY,//—U“±“G‹@
-	OBJ_SIN_ENEMY,//ƒJ[ƒu“G‹@
-	OBJ_DIFFUSION_ENEMY,//
-	OBJ_ANGLE_BULLET,
-	OBJ_HOMING_BULLET,
-	OBJ_END,
-	OBJ_FIN,
-	OBJ_MANU,//ƒƒjƒ…[
-	OBJ_HEROINE,//ƒqƒƒCƒ“
-	OBJ_GUN,//•Šíe
-	OBJ_ASS_BULLET,//ƒAƒTƒ‹ƒgƒ‰ƒCƒtƒ‹‚Ì’eŠÛ
+					OBJ_MAIN,
+					OBJ_HERO, //ŽålŒö
+					OBJ_TITLE,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹
+					OBJ_ENEMY,//“G‚P
+					OBJ_BULLET,//’eŠÛ
+					OBJ_GAME_OVER,//ƒQ[ƒ€ƒI[ƒo[
+					OBJ_TITLE_BACKGROUND,//ƒQ[ƒ€ƒ^ƒCƒgƒ‹‚Ì”wŒi
+					OBJ_ATTACK_ENEMY,//UŒ‚“G‹@
+					OBJ_BULLET_ENEMY,//’eŠÛ“G‹@
+					OBJ_HOMING_ENEMY,//—U“±“G‹@
+					OBJ_SIN_ENEMY,//ƒJ[ƒu“G‹@
+					OBJ_DIFFUSION_ENEMY,//
+					OBJ_ANGLE_BULLET,
+					OBJ_HOMING_BULLET,
+					OBJ_END,
+					OBJ_FIN,
+					OBJ_MANU,//ƒƒjƒ…[
+					OBJ_HEROINE,//ƒqƒƒCƒ“
+					OBJ_GUN,//•Šíe
+					OBJ_ASS_BULLET,//ƒAƒTƒ‹ƒgƒ‰ƒCƒtƒ‹‚Ì’eŠÛ
 
-	//------ƒ}ƒbƒv-------------------------------------------
-	OBJ_BLOCK,//‹’“_
-	OBJ_CHINA_TOWN_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒh
-	OBJ_CHINA_TOWN,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“
-	OBJ_CHINA_TOWN_BOSS_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒhBOSS
-	
+					//------ƒ}ƒbƒv-------------------------------------------
+					OBJ_BLOCK,//‹’“_
+					OBJ_CHINA_TOWN_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒh
+					OBJ_CHINA_TOWN,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“
+					OBJ_CHINA_TOWN_BOSS_BOSS,//ƒ`ƒƒƒCƒiƒ^ƒEƒ“‚Ìƒ{ƒXíƒtƒB[ƒ‹ƒhBOSS
 
-<<<<<<< HEAD
-	OBJ_INSTITUTE_BOSS,//Œ¤‹†Šƒ{ƒX
+
+					<<<<<< < HEAD
+					OBJ_INSTITUTE_BOSS,//Œ¤‹†Šƒ{ƒX
 	OBJ_INSTITUTE_BOSS_BOSS,//Œ¤‹†Šƒ{ƒXƒ{ƒX
 	OBJ_INSTITUTE,//Œ¤‹†Š
 	OBJ_INSTITUTE1,//Œ¤‹†Š•”‰®‚P
@@ -63,7 +63,7 @@ enum OBJ_NAME
 	OBJ_OPE_ROOM,//•a‰@‚ÌŽèpŽº
 	OBJ_EX_ROOM,//•a‰@‚ÌfŽ@Žº
 	OBJ_XRAY_ROOM,//•a‰@‚ÌƒŒƒ“ƒgƒQƒ“Žº
-=======
+	====== =
 	OBJ_INSTITUTE_BOSS,//ç ”ç©¶æ‰€ãƒœã‚¹
 	OBJ_INSTITUTE,//ç ”ç©¶æ‰€
 	OBJ_INSTITUTE1,//ç ”ç©¶æ‰€éƒ¨å±‹ï¼E
@@ -81,12 +81,12 @@ enum OBJ_NAME
 	OBJ_OPE_ROOM,//ç—E™¢ã®æ‰‹è¡“å®¤
 	OBJ_EX_ROOM,//ç—E™¢ã®è¨ºå¯Ÿå®¤
 	OBJ_XRAY_ROOM,//ç—E™¢ã®ãƒ¬ãƒ³ãƒˆã‚²ãƒ³å®¤
->>>>>>> 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
+	>>>>>> > 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
 	//----------------------------------------
 
-	
+
 	OBJ_DRUG_CAMPANY,//»–ò‰ïŽÐ
-};
+}
 //------------------------------------------------
 
 //“–‚½‚è”»’è‘®«----------------------------------
@@ -169,7 +169,7 @@ struct UserData
 #include"ObjInstitute2.h"
 #include"ObjInstitute3.h"  
 #include"CObjChinaTownBossBoss.h"
-<<<<<<< HEAD
+
 #include"ObjInstitute4.h"
 #include"ObjInstitute5.h"
 #include"ObjInstitute6.h"
@@ -181,9 +181,8 @@ struct UserData
 #include"ObjInstitute12.h"
 #include"ObjInstitute13.h"
 #include"ObjInstitute13.h"
-=======
+
 #include"CObjInstituteBossBoss.h"
->>>>>>> 650aa39bf6aff5a8eae6933d9f8d2fc3f01affa8
 //------------------------------------------------
 
 //ƒQ[ƒ€ƒV[ƒ“ƒNƒ‰ƒXƒwƒbƒ_------------------------
