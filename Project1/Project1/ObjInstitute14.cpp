@@ -1,4 +1,4 @@
-//g—p‚·‚éƒwƒbƒ_[ƒtƒ@ƒCƒ‹
+ï»¿//ï¿½gï¿½pï¿½ï¿½ï¿½ï¿½wï¿½bï¿½_ï¿½[ï¿½tï¿½@ï¿½Cï¿½ï¿½
 #include"GameL\DrawTexture.h"
 #include"GameL/DrawFont.h"
 #include"GameL\WinInputs.h"
@@ -8,20 +8,20 @@
 #include"GameHead.h"
 #include "ObjInstitute14.h"
 
-//g—p‚·‚éƒl[ƒ€ƒXƒy[ƒX
+//ï¿½gï¿½pï¿½ï¿½ï¿½ï¿½lï¿½[ï¿½ï¿½ï¿½Xï¿½yï¿½[ï¿½X
 using namespace GameL;
 
-//ƒCƒjƒVƒƒƒ‰ƒCƒY
+//ï¿½Cï¿½jï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½Y
 void CObjInstitute14::Init()
 {
 	mx_scroll = 0.0f;
 	my_scroll = 0.0f;
 
-	//ƒ}ƒbƒvî•ñ
+	//ï¿½}ï¿½bï¿½vï¿½ï¿½ï¿½
 	int block_data[60][60] =
 	{
 		{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-		{1,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,23,23,0,0,0,0,0,0,0,0,0,5,0,0,0,1},
+		{1,0,5,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,66,0,0,0,0,0,0,23,23,0,0,0,0,0,0,0,0,0,5,0,0,0,1},
 		{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -42,61 +42,63 @@ void CObjInstitute14::Init()
 		{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{1,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,01,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,1},
 		{1,1,1,1,1,1,1,1,1,1,25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+		{1,0,5,0,0,0,0,0,0,0,67,0,0,0,0,0,0,0,01,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,1},
+		{1,1,1,1,1,1,1,1,1,1,60,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,60,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
 		                                                                                            
 	                                 
 	};
-	//ƒ}ƒbƒvƒf[ƒ^‚ğƒRƒs[
+	//ï¿½}ï¿½bï¿½vï¿½fï¿½[ï¿½^ï¿½ï¿½Rï¿½sï¿½[
 	memcpy(m_map, block_data, sizeof(int) * (60 * 60));
 
 }
-//ƒAƒNƒVƒ‡ƒ“
+//ï¿½Aï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½
 void CObjInstitute14::Action()
 {
-	//ålŒö‚ÌˆÊ’u‚ğæ“¾
+	//ï¿½ï¿½lï¿½ï¿½ï¿½ÌˆÊ’uï¿½ï¿½æ“¾
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	float hx = hero->GetX2();//ƒXƒNƒ[ƒ‹
+	float hx = hero->GetX2();//ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½
 	float hy = hero->GetY2();
 
 
 	if (hero->GetRight() == false)
 	{
-		//Œã•ûƒXƒNƒ[ƒ‹ƒ‰ƒCƒ“@©
+		//ï¿½ï¿½ï¿½ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½@ï¿½ï¿½
 		if (hx < 400)
 		{
-			hero->SetX2(400); //ålŒö‚Íƒ‰ƒCƒ“‚ğ’´‚¦‚È‚¢‚æ‚¤‚É‚·‚é
-			mx_scroll -= -6.0f + hero->GetVX(); //ålŒö‚Í–{—ˆ“®‚­‚×‚«•ª‚Ì’l‚ğm_scroll‚É‰Á‚¦‚é
+			hero->SetX2(400); //ï¿½ï¿½lï¿½ï¿½ï¿½Íƒï¿½ï¿½Cï¿½ï¿½ï¿½ğ’´‚ï¿½ï¿½È‚ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½ï¿½
+			mx_scroll -= -6.0f + hero->GetVX(); //ï¿½ï¿½lï¿½ï¿½ï¿½Í–{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×‚ï¿½ï¿½ï¿½ï¿½Ì’lï¿½ï¿½m_scrollï¿½É‰ï¿½ï¿½ï¿½ï¿½ï¿½
 		}
 	}
 
 	if (hero->GetLeft() == false)
 	{
-		//‘O•ûƒXƒNƒ[ƒ‹ƒ‰ƒCƒ“ ¨
+		//ï¿½Oï¿½ï¿½ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ ï¿½ï¿½
 		if (hx > 400)
 		{
-			hero->SetX2(400); //ålŒö‚Íƒ‰ƒCƒ“‚ğ’´‚¦‚È‚¢‚æ‚¤‚É‚·‚é
-			mx_scroll -= 6.0f + hero->GetVX(); //ålŒö‚Í–{—ˆ“®‚­‚×‚«•ª‚Ì’l‚ğm_scroll‚É‰Á‚¦‚é
+			hero->SetX2(400); //ï¿½ï¿½lï¿½ï¿½ï¿½Íƒï¿½ï¿½Cï¿½ï¿½ï¿½ğ’´‚ï¿½ï¿½È‚ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½ï¿½
+			mx_scroll -= 6.0f + hero->GetVX(); //ï¿½ï¿½lï¿½ï¿½ï¿½Í–{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×‚ï¿½ï¿½ï¿½ï¿½Ì’lï¿½ï¿½m_scrollï¿½É‰ï¿½ï¿½ï¿½ï¿½ï¿½
 
 		}
 	}
 
 	if (hero->GetDown() == false)
 	{
-		//ƒXƒNƒ[ƒ‹ƒ‰ƒCƒ“@ª
+		//ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½@ï¿½ï¿½
 		if (hy > 300)
 		{
-			hero->SetY2(300); //ålŒö‚Íƒ‰ƒCƒ“‚ğ’´‚¦‚È‚¢‚æ‚¤‚É‚·‚é
-			my_scroll -= 6.0f + hero->GetVY(); //ålŒö‚Í–{—ˆ“®‚­‚×‚«•ª‚Ì’l‚ğm_scroll‚É‰Á‚¦‚é
+			hero->SetY2(300); //ï¿½ï¿½lï¿½ï¿½ï¿½Íƒï¿½ï¿½Cï¿½ï¿½ï¿½ğ’´‚ï¿½ï¿½È‚ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½ï¿½
+			my_scroll -= 6.0f + hero->GetVY(); //ï¿½ï¿½lï¿½ï¿½ï¿½Í–{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×‚ï¿½ï¿½ï¿½ï¿½Ì’lï¿½ï¿½m_scrollï¿½É‰ï¿½ï¿½ï¿½ï¿½ï¿½
 
 		}
 	}
 
 	if (hero->GetUp() == false)
 	{
-		//ƒXƒNƒ[ƒ‹ƒ‰ƒCƒ“@«
+		//ï¿½Xï¿½Nï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½@ï¿½ï¿½
 		if (hy < 300)
 		{
-			hero->SetY2(300); //ålŒö‚Íƒ‰ƒCƒ“‚ğ’´‚¦‚È‚¢‚æ‚¤‚É‚·‚é
-			my_scroll -= -6.0f + hero->GetVY(); //ålŒö‚Í–{—ˆ“®‚­‚×‚«•ª‚Ì’l‚ğm_scroll‚É‰Á‚¦‚é
+			hero->SetY2(300); //ï¿½ï¿½lï¿½ï¿½ï¿½Íƒï¿½ï¿½Cï¿½ï¿½ï¿½ğ’´‚ï¿½ï¿½È‚ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½ï¿½
+			my_scroll -= -6.0f + hero->GetVY(); //ï¿½ï¿½lï¿½ï¿½ï¿½Í–{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×‚ï¿½ï¿½ï¿½ï¿½Ì’lï¿½ï¿½m_scrollï¿½É‰ï¿½ï¿½ï¿½ï¿½ï¿½
 		}
 	}
 
@@ -104,7 +106,7 @@ void CObjInstitute14::Action()
 
 
 
-	//ålŒö‚ÌÕ“Ëó‘ÔŠm”F—pƒtƒ‰ƒO‚Ì‰Šú‰»
+	//ï¿½ï¿½lï¿½ï¿½ï¿½ÌÕ“Ëï¿½ÔŠmï¿½Fï¿½pï¿½tï¿½ï¿½ï¿½Oï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½
 	hero->SetUp(false);
 	hero->SetDown(false);
 	hero->SetLeft(false);
@@ -115,7 +117,7 @@ void CObjInstitute14::Action()
 
 
 
-	//m_map‚Ì‘S—v‘f‚ÉƒAƒNƒZƒX
+	//m_mapï¿½Ì‘Sï¿½vï¿½fï¿½ÉƒAï¿½Nï¿½Zï¿½X
 	for (int i = 0; i < 60; i++)
 	{
 		for (int j = 0; j < 60; j++)
@@ -123,69 +125,85 @@ void CObjInstitute14::Action()
 			if (m_map[i][j] > 0 && m_map[i][j] != 15)
 			{
 
-				//—v‘f”Ô†‚ğÀ•W‚É•ÏX
+				//ï¿½vï¿½fï¿½Ôï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½É•ÏX
 				float x = j * 32.0f;
 				float y = i * 32.0f;
 
-				//ålŒö‚ÆƒuƒƒbƒN‚Ì“–‚½‚è”»’è
+				//ï¿½ï¿½lï¿½ï¿½ï¿½Æƒuï¿½ï¿½ï¿½bï¿½Nï¿½Ì“ï¿½ï¿½ï¿½ï¿½è”»ï¿½ï¿½
 				if ((hx + (-mx_scroll) + 64.0f > x) && (hx + (-mx_scroll) < x + 64.0f) && (hy + (-my_scroll) + 64.0f > y) && (hy + (-my_scroll) < y + 64.0f))
 				{
 
-					//ã‰º¶‰E”»’è
+					//ï¿½ã‰ºï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½ï¿½
 
-					//vector‚Ìì¬
+					//vectorï¿½Ìì¬
 					float vx = (hx + (-mx_scroll)) - x;
 					float vy = (hy + (-my_scroll)) - y;
 
-					//’·‚³‚ğ‹‚ß‚é
-					float len = sqrt(vx * vx + vy * vy);//sqrtŠÖ”‚ÍA•½•ûª‚ğ•Ô‚·
+					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½
+					float len = sqrt(vx * vx + vy * vy);//sqrtï¿½Öï¿½ï¿½ÍAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô‚ï¿½
 
-					//Šp“x‚ğ‹‚ß‚é
-					float r = atan2(vy, vx);//atan2ŠÖ”‚ÍƒA[ƒNƒ^ƒ“ƒWƒFƒ“ƒg‚ğ•Ô‚·
+					//ï¿½pï¿½xï¿½ï¿½ï¿½ï¿½ß‚ï¿½
+					float r = atan2(vy, vx);//atan2ï¿½Öï¿½ï¿½ÍƒAï¿½[ï¿½Nï¿½^ï¿½ï¿½ï¿½Wï¿½Fï¿½ï¿½ï¿½gï¿½ï¿½Ô‚ï¿½
 					r = r * 180.0f / 3.14f;
 
-					if (r <= 0.0f)//absŠÖ”‚ÍA’l‚Ìâ‘Î’l‚ğ‹‚ß‚é •„†‚ğ–³‹‚µ‚½’l
+					if (r <= 0.0f)//absï¿½Öï¿½ï¿½ÍAï¿½lï¿½Ìï¿½Î’lï¿½ï¿½ï¿½ï¿½ß‚ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ğ–³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½l
 						r = abs(r);
 					else
 						r = 360.0f - abs(r);
 
-					//len‚ª‚ ‚éˆê’è‚Ì’·‚³‚Ì‚æ‚è’Z‚¢ê‡”»’è‚É“ü‚é
+					//lenï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì’ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½Zï¿½ï¿½ï¿½ê‡ï¿½ï¿½ï¿½ï¿½É“ï¿½ï¿½ï¿½
 					if (len < 44.0f)
 					{
 
-						//Šp“x‚Åã‰º¶‰E‚ğ”»’è
+						//ï¿½pï¿½xï¿½Åã‰ºï¿½ï¿½ï¿½Eï¿½ğ”»’ï¿½
 						if ((r < 45 && r >= 0) || r > 315)
 						{
-							//‰E
-							hero->SetRight(true);//ålŒö‚Ì¶‚Ì•”•ª‚ªÕ“Ë‚µ‚Ä‚¢‚é
-							hero->SetX2(x + 40.0f + (mx_scroll));//ƒuƒƒbƒN‚ÌˆÊ’u+ålŒö‚Ì•
-							hero->SetVX(0.0f);//-VX*”½”­ŒW”
+							//ï¿½E
+							hero->SetRight(true);//ï¿½ï¿½lï¿½ï¿½ï¿½Ìï¿½ï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ“Ë‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½
+							hero->SetX2(x + 40.0f + (mx_scroll));//ï¿½uï¿½ï¿½ï¿½bï¿½Nï¿½ÌˆÊ’u+ï¿½ï¿½lï¿½ï¿½ï¿½Ì•ï¿½
+							hero->SetVX(0.0f);//-VX*ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½
 						}
 						if (r > 45 && r < 135)
 						{
-							//ã
-							hero->SetDown(true);//ålŒö‚Ì‰º‚Ì•”•ª‚ªÕ“Ë‚µ‚Ä‚¢‚é
-							hero->SetY2(y - 40.0f + (my_scroll));//ƒuƒƒbƒN‚ÌˆÊ’u-ålŒö‚Ì•
-							hero->SetVY(0.0f);//-VX*”½”­ŒW”
+							//ï¿½ï¿½
+							hero->SetDown(true);//ï¿½ï¿½lï¿½ï¿½ï¿½Ì‰ï¿½ï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ“Ë‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½
+							hero->SetY2(y - 40.0f + (my_scroll));//ï¿½uï¿½ï¿½ï¿½bï¿½Nï¿½ÌˆÊ’u-ï¿½ï¿½lï¿½ï¿½ï¿½Ì•ï¿½
+							hero->SetVY(0.0f);//-VX*ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½
 
 						}
 						if (r > 135 && r < 225)
 						{
-							//¶
-							hero->SetLeft(true);//ålŒö‚Ì‰E‚Ì•”•ª‚ªÕ“Ë‚µ‚Ä‚¢‚é
-							hero->SetX2(x - 40.0f + (mx_scroll));//ƒuƒƒbƒN‚ÌˆÊ’u-ålŒö‚Ì•
-							hero->SetVX(0.0f);//-VX*”½”­ŒW”
+							//ï¿½ï¿½
+							hero->SetLeft(true);//ï¿½ï¿½lï¿½ï¿½ï¿½Ì‰Eï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ“Ë‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½
+							hero->SetX2(x - 40.0f + (mx_scroll));//ï¿½uï¿½ï¿½ï¿½bï¿½Nï¿½ÌˆÊ’u-ï¿½ï¿½lï¿½ï¿½ï¿½Ì•ï¿½
+							hero->SetVX(0.0f);//-VX*ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½
 						}
 						if (r > 225 && r < 315)
 						{
-							//‰º
-							hero->SetUp(true);//ålŒö‚Ìã‚Ì•”•ª‚ªÕ“Ë‚µ‚Ä‚¢‚é
-							hero->SetY2(y + 40.0f + (my_scroll));//ƒuƒƒbƒN‚ÌˆÊ’u+ålŒö‚Ì•
-							hero->SetVY(0.0f);//-VX*”½”­ŒW”
+							//ï¿½ï¿½
+							hero->SetUp(true);//ï¿½ï¿½lï¿½ï¿½ï¿½Ìï¿½Ì•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ“Ë‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½
+							hero->SetY2(y + 40.0f + (my_scroll));//ï¿½uï¿½ï¿½ï¿½bï¿½Nï¿½ÌˆÊ’u+ï¿½ï¿½lï¿½ï¿½ï¿½Ì•ï¿½
+							hero->SetVY(0.0f);//-VX*ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½
 						}
-						if (m_map[i][j] == 40)//ƒGƒŒƒx[ƒ^[‚É“ü‚é‚ÆŒ¤‹†ŠˆêŠK‚ÉˆÚ“®
+						if (m_map[i][j] == 40)//ï¿½Gï¿½ï¿½ï¿½xï¿½[ï¿½^ï¿½[ï¿½É“ï¿½ï¿½ï¿½ÆŒï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½ÉˆÚ“ï¿½
 						{
 							Scene::SetScene(new CSceneInstitute());
+						}
+						if (m_map[i][j] == 65)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5
+						{
+							Scene::SetScene(new CSceneInstitute5());
+						}
+						if (m_map[i][j] == 66)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½6
+						{
+							Scene::SetScene(new CSceneInstitute6());
+						}
+						if (m_map[i][j] == 67)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½7
+						{
+							Scene::SetScene(new CSceneInstitute7());
+						}
+						if (m_map[i][j] == 68)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½8
+						{
+							Scene::SetScene(new CSceneInstitute8());
 						}
 					}
 				}
@@ -196,7 +214,7 @@ void CObjInstitute14::Action()
 		}
 	}
 
-	//“GoŒ»ƒ‰ƒCƒ“
+	//ï¿½Gï¿½oï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½
 	//float Xline = hx + (-mx_scroll) + 400;
 	//float Yline = hy + (my_scroll)-100;
 
@@ -209,9 +227,9 @@ void CObjInstitute14::Action()
 
 	//		if (m_map[i][ex] == 15)
 	//		{
-	//			//—U“±“G‹@ƒIƒuƒWƒFƒNƒgì¬
-	//			CObjRooftopBoss* obj_rooftop_boss = new CObjRooftopBoss(ex * 32, i * 32); //—U“±“G‹@ƒIƒuƒWƒFƒNƒgì¬
-	//			Objs::InsertObj(obj_rooftop_boss, OBJ_ROOF_TOP_BOSS, 4); //—U“±“G‹@ƒIƒuƒWƒFƒNƒg‚ğƒIƒuƒWƒFƒNƒgƒ}ƒl[ƒWƒƒ[‚É“o˜^
+	//			//ï¿½Uï¿½ï¿½ï¿½Gï¿½@ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ì¬
+	//			CObjRooftopBoss* obj_rooftop_boss = new CObjRooftopBoss(ex * 32, i * 32); //ï¿½Uï¿½ï¿½ï¿½Gï¿½@ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ì¬
+	//			Objs::InsertObj(obj_rooftop_boss, OBJ_ROOF_TOP_BOSS, 4); //ï¿½Uï¿½ï¿½ï¿½Gï¿½@ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½}ï¿½lï¿½[ï¿½Wï¿½ï¿½ï¿½[ï¿½É“oï¿½^
 
 	//			m_map[i][ex] = 0;
 	//		}
@@ -220,15 +238,15 @@ void CObjInstitute14::Action()
 	//}
 
 }
-//ƒhƒ[
+//ï¿½hï¿½ï¿½ï¿½[
 void CObjInstitute14::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
-	RECT_F src;//•`‰æŒ³Ø‚èæ‚èˆÊ’u
-	RECT_F dst;//•`‰ææ•\¦ˆÊ’u
+	RECT_F src;//ï¿½`ï¿½æŒ³ï¿½Ø‚ï¿½ï¿½ï¿½Ê’u
+	RECT_F dst;//ï¿½`ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½Ê’u
 
-	//”wŒi•\¦
+	//ï¿½wï¿½iï¿½\ï¿½ï¿½
 	src.m_top = 73.0f;   // Y
 	src.m_left = 21.0f;  // X
 	src.m_right = 106.0f; // X
@@ -240,513 +258,529 @@ void CObjInstitute14::Draw()
 	dst.m_bottom = 700.0 + my_scroll;
 	Draw::Draw(30, &src, &dst, c, 0.0f);
 
-	//ƒ}ƒbƒvƒ`ƒbƒv‚É‚æ‚éblockİ’u
+	//ï¿½}ï¿½bï¿½vï¿½`ï¿½bï¿½vï¿½É‚ï¿½ï¿½blockï¿½İ’u
 	for (int i = 0; i < 60; i++)
 	{
 		for (int j = 0; j < 60; j++)
 		{
 
-			if (m_map[i][j] == 1)//•Ç
+			if (m_map[i][j] == 1)//ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 73.0f;   //y
 				src.m_left = 3.0f; //x
 				src.m_right = 61.0f; //x
 				src.m_bottom = 130.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
 
-			if (m_map[i][j] == 4)//ƒGƒŒƒx[ƒ^[
+			if (m_map[i][j] == 4)//ï¿½Gï¿½ï¿½ï¿½xï¿½[ï¿½^ï¿½[
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 2.0f;   //y
 				src.m_left = 136.0f; //x
 				src.m_right = 190.0f; //x
 				src.m_bottom = 4.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 5)//‘
+			if (m_map[i][j] == 5)//ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 2.0f;   //y
 				src.m_left = 208.0f; //x
 				src.m_right = 231.0f; //x
 				src.m_bottom = 59.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 6)//ƒRƒs[‹@
+			if (m_map[i][j] == 6)//ï¿½Rï¿½sï¿½[ï¿½@
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 4.0f;   //y
 				src.m_left = 237.0f; //x
 				src.m_right = 265.0f; //x
 				src.m_bottom = 48.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 7)//Š÷
+			if (m_map[i][j] == 7)//ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 6.0f;   //y
 				src.m_left = 335.0f; //x
 				src.m_right = 397.0f; //x
 				src.m_bottom = 44.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 8)//ƒfƒXƒN
+			if (m_map[i][j] == 8)//ï¿½fï¿½Xï¿½N
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 4.0f;   //y
 				src.m_left = 397.0f; //x
 				src.m_right = 456.0f; //x
 				src.m_bottom = 44.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 9)//ÀŒ±“¹‹ï
+			if (m_map[i][j] == 9)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 77.0f;   //y
 				src.m_left = 76.0f; //x
 				src.m_right = 137.0f; //x
 				src.m_bottom = 120.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 18)//’I
+			if (m_map[i][j] == 18)//ï¿½I
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 72.0f;   //y
 				src.m_left = 143.0f; //x
 				src.m_right = 178.0f; //x
 				src.m_bottom = 123.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 10)//…ƒKƒ‰ƒX
+			if (m_map[i][j] == 10)//ï¿½ï¿½ï¿½Kï¿½ï¿½ï¿½X
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 69.0f;   //y
 				src.m_left = 194.0f; //x
 				src.m_right = 238.0f; //x
 				src.m_bottom = 140.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 11)//ŠK’i
+			if (m_map[i][j] == 11)//ï¿½Kï¿½i
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 80.0f;   //y
 				src.m_left = 255.0f; //x
 				src.m_right = 306.0f; //x
 				src.m_bottom = 135.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 12)//©”Ì‹@
+			if (m_map[i][j] == 12)//ï¿½ï¿½ï¿½Ì‹@
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 74.0f;   //y
 				src.m_left = 317.0f; //x
 				src.m_right = 365.0f; //x
 				src.m_bottom = 82.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 13)//ƒ‚ƒjƒ^[1
+			if (m_map[i][j] == 13)//ï¿½ï¿½ï¿½jï¿½^ï¿½[1
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 81.0f;   //y
 				src.m_left = 366.0f; //x
 				src.m_right = 422.0f; //x
 				src.m_bottom = 120.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 14)//ƒpƒ\ƒRƒ“
+			if (m_map[i][j] == 14)//ï¿½pï¿½\ï¿½Rï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 85.0f;   //y
 				src.m_left = 436.0f; //x
 				src.m_right = 471.0f; //x
 				src.m_bottom = 121.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 15)//ˆÖq
+			if (m_map[i][j] == 15)//ï¿½Öq
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 150.0f;   //y
 				src.m_left = 18.0f; //x
 				src.m_right = 39.0f; //x
 				src.m_bottom = 181.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 16)//•Ç
+			if (m_map[i][j] == 16)//ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 153.0f;   //y
 				src.m_left = 78.0f; //x
 				src.m_right = 110.0f; //x
 				src.m_bottom = 186.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 17)//ƒ}ƒbƒg
+			if (m_map[i][j] == 17)//ï¿½}ï¿½bï¿½g
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 156.0f;   //y
 				src.m_left = 121.0f; //x
 				src.m_right = 181.0f; //x
 				src.m_bottom = 189.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 19)//ƒzƒƒCƒgƒ{[ƒh
+			if (m_map[i][j] == 19)//ï¿½zï¿½ï¿½ï¿½Cï¿½gï¿½{ï¿½[ï¿½h
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 150.0f;   //y
 				src.m_left = 199.0f; //x
 				src.m_right = 266.0f; //x
 				src.m_bottom = 194.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 21)//“c’†æ¶‚Ì‘Š–_
+			if (m_map[i][j] == 21)//ï¿½cï¿½ï¿½ï¿½æ¶ï¿½Ì‘ï¿½ï¿½_
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 153.0f;   //y
 				src.m_left = 274.0f; //x
 				src.m_right = 330.0f; //x
 				src.m_bottom = 196.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 22)//ƒRƒs[‹@
+			if (m_map[i][j] == 22)//ï¿½Rï¿½sï¿½[ï¿½@
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 146.0f;   //y
 				src.m_left = 351.0f; //x
 				src.m_right = 398.0f; //x
 				src.m_bottom = 199.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 23)//‰×•¨“ü‚ê
+			if (m_map[i][j] == 23)//ï¿½×•ï¿½ï¿½ï¿½ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 150.0f;   //y
 				src.m_left = 402.0f; //x
 				src.m_right = 459.0f; //x
 				src.m_bottom = 199.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 24)//ƒ‚ƒjƒ^[‚Q
+			if (m_map[i][j] == 24)//ï¿½ï¿½ï¿½jï¿½^ï¿½[ï¿½Q
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 6.0f;   //y
 				src.m_left = 196.0f; //x
 				src.m_right = 73.0f; //x
 				src.m_bottom = 252.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 25)//ƒpƒlƒ‹
+			if (m_map[i][j] == 25)//ï¿½pï¿½lï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 194.0f;   //y
 				src.m_left = 90.0f; //x
 				src.m_right = 143.0f; //x
 				src.m_bottom = 271.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 26)//Á‰ÎŠí
+			if (m_map[i][j] == 26)//ï¿½ï¿½ï¿½ÎŠï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 271.0f;   //y
 				src.m_left = 120.0f; //x
 				src.m_right = 193.0f; //x
 				src.m_bottom = 245.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 27)//ƒSƒ~” 
+			if (m_map[i][j] == 27)//ï¿½Sï¿½~ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 205.0f;   //y
 				src.m_left = 215.0f; //x
 				src.m_right = 248.0f; //x
 				src.m_bottom = 251.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 28)//…“¹
+			if (m_map[i][j] == 28)//ï¿½ï¿½ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 209.0f;   //y
 				src.m_left = 325.0f; //x
 				src.m_right = 351.0f; //x
 				src.m_bottom = 264.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 29)//–ò
+			if (m_map[i][j] == 29)//ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 223.0f;   //y
 				src.m_left = 380.0f; //x
 				src.m_right = 421.0f; //x
 				src.m_bottom = 257.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 30)//” 
+			if (m_map[i][j] == 30)//ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 212.0f;   //y
 				src.m_left = 435.0f; //x
 				src.m_right = 473.0f; //x
 				src.m_bottom = 257.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 31)//–ò
+			if (m_map[i][j] == 31)//ï¿½ï¿½
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 275.0f;   //y
 				src.m_left = 180.0f; //x
 				src.m_right = 198.0f; //x
 				src.m_bottom = 318.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 40)//“–‚½‚è”»’è
+			if (m_map[i][j] == 40)//ï¿½ï¿½ï¿½ï¿½ï¿½è”»ï¿½ï¿½
 			{
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 			}
-			if (m_map[i][j] == 60)//Œ¤‹†ŠƒhƒA
+			if (m_map[i][j] == 60)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½hï¿½A
 			{
-				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
+				//ï¿½Ø‚ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				src.m_top = 371.0f;   //y
 				src.m_left = 39.0f; //x
 				src.m_right = 114.0f; //x
 				src.m_bottom = 440.0f; //y
 
-				//•\¦ˆÊ’u‚Ìİ’è
+				//ï¿½\ï¿½ï¿½ï¿½Ê’uï¿½Ìİ’ï¿½
 				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
-				//•`‰æ
+				//ï¿½`ï¿½ï¿½
 				Draw::Draw(5, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 65)//ï¿½ï¿½ï¿½ï¿½ï¿½è”»ï¿½ï¿½
+			{
+				
+			}
+			if (m_map[i][j] == 66)//ï¿½ï¿½ï¿½ï¿½ï¿½è”»ï¿½ï¿½
+			{
+
+			}
+			if (m_map[i][j] == 67)//ï¿½ï¿½ï¿½ï¿½ï¿½è”»ï¿½ï¿½
+			{
+
+			}
+			if (m_map[i][j] == 68)//ï¿½ï¿½ï¿½ï¿½ï¿½è”»ï¿½ï¿½
+			{
+
 			}
 		}
 	}
