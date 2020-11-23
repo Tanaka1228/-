@@ -108,11 +108,30 @@ void CObjInstituteBoss::Action()
 		}
 	}
 
+	//敵出現ライン
+	float Xline = hx + (-mx_scroll) - 50;
+	float Yline = hy + (my_scroll)-50;
 
+	int ex = ((int)Xline) / 32;
+	int ey = ((int)Yline) / 32;
 
+	for (int i = 0; i < 50; i++)
+	{
+		for (int j = 0; j < 51; j++)
+		
+			if (m_map[i][ex] == 21)
+			{
+				//拡散敵機オブジェクト作成
+				CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(-50, -50); //Sin敵機オブジェクト作成
+				Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+				
 
+				m_map[i][ex] = 0;
+			}
 
-	//主人公の衝突状態確認用フラグの初期化
+	}
+
+    //主人公の衝突状態確認用フラグの初期化
 	hero->SetUp(false);
 	hero->SetDown(false);
 	hero->SetLeft(false);
@@ -204,29 +223,7 @@ void CObjInstituteBoss::Action()
 			}
 		}
 	}
-	//敵出現ライン
-	//float Xline = hx + (-mx_scroll) - 200;
-	//float Yline = hy + (my_scroll)-200;
-
-	//int ex = ((int)Xline) / 32;
-	//int ey = ((int)Yline) / 32;
-
-	//for (int i = 0; i < 100; i++)
-	//{
-	//	for (int j = 0; j < 100; j++)
-
-	//		//if (m_map[i][ex] == 21)
-	//		//{
-	//		//	////誘導敵機オブジェクト作成
-	//		//	//CObjInstituteBossBoss* obj_institute_boss_boss = new CObjInstituteBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-	//		//	//Objs::InsertObj(obj_institute_boss_boss, OBJ_INSTITUTE_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
-
-	//		//	m_map[i][ex] = 0;
-	//		//}
-	//		;
-
-
-	//}
+	
 }
 //ドロー
 void CObjInstituteBoss::Draw()
