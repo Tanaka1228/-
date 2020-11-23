@@ -274,7 +274,7 @@ void CObjInstitute13::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			
+
 
 			if (m_map[i][j] == 4)//エレベーター
 			{
@@ -735,7 +735,7 @@ void CObjInstitute13::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			
+
 			if (m_map[i][j] == 31)//薬
 			{
 				//切り取り位置の設定
