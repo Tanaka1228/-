@@ -318,9 +318,9 @@ void CObjDrugCampany::Draw()
 	Draw::Draw(5, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
-	for (int i = 0; i < 50; i++)
+	for (int i = 0; i < 200; i++)
 	{
-		for (int j = 0; j < 50; j++)
+		for (int j = 0; j < 200; j++)
 		{
 			if (m_map[i][j] == 1)//壁
 			{
