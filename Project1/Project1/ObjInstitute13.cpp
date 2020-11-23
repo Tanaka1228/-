@@ -189,9 +189,9 @@ void CObjInstitute13::Action()
 						}
 						
 
-						if ( m_map[i][j] == 20)//研究所13
+						if ( m_map[i][j] == 20)//研究所14
 						{
-							Scene::SetScene(new CSceneInstitute13());
+							Scene::SetScene(new CSceneInstitute14());
 						}
 					}
 				}
@@ -259,6 +259,23 @@ void CObjInstitute13::Draw()
 				src.m_left = 3.0f; //x
 				src.m_right = 61.0f; //x
 				src.m_bottom = 130.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(5, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 2)//階段
+			{
+				//切り取り位置の設定
+				src.m_top = 275.0f;   //y
+				src.m_left = 216.0f; //x
+				src.m_right = 384.0f; //x
+				src.m_bottom = 426.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
@@ -712,23 +729,7 @@ void CObjInstitute13::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 2)//階段
-			{
-				//切り取り位置の設定
-				src.m_top = 275.0f;   //y
-				src.m_left = 216.0f; //x
-				src.m_right = 384.0f; //x
-				src.m_bottom = 426.0f; //y
-
-				//表示位置の設定
-				dst.m_top = i * 32.0f + my_scroll;
-				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
-
-				//描画
-				Draw::Draw(5, &src, &dst, c, 0.0f);
-			}
+			
 			if (m_map[i][j] == 31)//薬
 			{
 				//切り取り位置の設定
