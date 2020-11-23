@@ -1,4 +1,4 @@
-﻿//�g�p����w�b�_�[�t�@�C��
+﻿
 #include"GameL\DrawTexture.h"
 #include"GameL/DrawFont.h"
 #include"GameL\WinInputs.h"
@@ -8,16 +8,15 @@
 #include"GameHead.h"
 #include "ObjInstitute.h"
 
-//�g�p����l�[���X�y�[�X
+
 using namespace GameL;
 
-//�C�j�V�����C�Y
+
 void CObjInstitute::Init()
 {
 	mx_scroll = 0.0f;
 	my_scroll = 0.0f;
 
-	//�}�b�v���
 	int block_data[60][60] =
 	{
 
@@ -46,58 +45,57 @@ void CObjInstitute::Init()
 		{1,29,29,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,1},
 		{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
 	};
-	//�}�b�v�f�[�^��R�s�[
+	
 	memcpy(m_map, block_data, sizeof(int) * (60* 60));
 
 }
-//�A�N�V����
+
 void CObjInstitute::Action()
 {
-	//��l���̈ʒu��擾
+	
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	float hx = hero->GetX2();//�X�N���[��
+	float hx = hero->GetX2();//
 	float hy = hero->GetY2();
 
 
 	if (hero->GetRight() == false)
 	{
-		//����X�N���[�����C���@��
+		
 		if (hx < 400)
 		{
-			hero->SetX2(400); //��l���̓��C���𒴂��Ȃ��悤�ɂ���
-			mx_scroll -= -6.0f + hero->GetVX(); //��l���͖{�������ׂ����̒l��m_scroll�ɉ�����
+			hero->SetX2(400); //
+			mx_scroll -= -6.0f + hero->GetVX(); //
 		}
 	}
 
 	if (hero->GetLeft() == false)
 	{
-		//�O���X�N���[�����C�� ��
+		
 		if (hx > 400)
 		{
-			hero->SetX2(400); //��l���̓��C���𒴂��Ȃ��悤�ɂ���
-			mx_scroll -= 6.0f + hero->GetVX(); //��l���͖{�������ׂ����̒l��m_scroll�ɉ�����
-
+			hero->SetX2(400); 
+			mx_scroll -= 6.0f + hero->GetVX(); 
 		}
 	}
 
 	if (hero->GetDown() == false)
 	{
-		//�X�N���[�����C���@��
+		
 		if (hy > 300)
 		{
-			hero->SetY2(300); //��l���̓��C���𒴂��Ȃ��悤�ɂ���
-			my_scroll -= 6.0f + hero->GetVY(); //��l���͖{�������ׂ����̒l��m_scroll�ɉ�����
+			hero->SetY2(300); 
+			my_scroll -= 6.0f + hero->GetVY();
 
 		}
 	}
 
 	if (hero->GetUp() == false)
 	{
-		//�X�N���[�����C���@��
+		
 		if (hy < 300)
 		{
-			hero->SetY2(300); //��l���̓��C���𒴂��Ȃ��悤�ɂ���
-			my_scroll -= -6.0f + hero->GetVY(); //��l���͖{�������ׂ����̒l��m_scroll�ɉ�����
+			hero->SetY2(300); 
+			my_scroll -= -6.0f + hero->GetVY(); 
 		}
 	}
 
@@ -105,7 +103,7 @@ void CObjInstitute::Action()
 
 
 
-	//��l���̏Փˏ�Ԋm�F�p�t���O�̏�����
+	
 	hero->SetUp(false);
 	hero->SetDown(false);
 	hero->SetLeft(false);
@@ -116,7 +114,7 @@ void CObjInstitute::Action()
 
 
 
-	//m_map�̑S�v�f�ɃA�N�Z�X
+	
 	for (int i = 0; i <60; i++)
 	{
 		for (int j = 0; j < 60; j++)
@@ -124,28 +122,28 @@ void CObjInstitute::Action()
 			if (m_map[i][j] > 0 && m_map[i][j] != 15)
 			{
 
-				//�v�f�ԍ�����W�ɕύX
+				
 				float x = j * 32.0f;
 				float y = i * 32.0f;
 
-				//��l���ƃu���b�N�̓����蔻��
+				
 				if ((hx + (-mx_scroll) + 64.0f > x) && (hx + (-mx_scroll) < x + 64.0f) && (hy + (-my_scroll) + 64.0f > y) && (hy + (-my_scroll) < y + 64.0f))
 				{
 
-					//�㉺���E����
+					
 
-					//vector�̍쐬
+					
 					float vx = (hx + (-mx_scroll)) - x;
 					float vy = (hy + (-my_scroll)) - y;
 
-					//��������߂�
-					float len = sqrt(vx * vx + vy * vy);//sqrt�֐��́A��������Ԃ�
+					
+					float len = sqrt(vx * vx + vy * vy);
 
-					//�p�x����߂�
-					float r = atan2(vy, vx);//atan2�֐��̓A�[�N�^���W�F���g��Ԃ�
+					
+					float r = atan2(vy, vx);
 					r = r * 180.0f / 3.14f;
 
-					if (r <= 0.0f)//abs�֐��́A�l�̐�Βl����߂� �����𖳎������l
+					if (r <= 0.0f)
 						r = abs(r);
 					else
 						r = 360.0f - abs(r);
