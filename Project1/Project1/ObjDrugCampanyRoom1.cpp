@@ -507,7 +507,7 @@ void CObjDrugCampanyRoom1::Draw()
 				//切り取り位置の設定
 				src.m_top = 198.0f;   //y
 				src.m_left = 232.0f; //x
-				src.m_right = 22５.0f; //x
+				src.m_right = 225.0f; //x
 				src.m_bottom = 223.0f; //y
 
 				//表示位置の設定
@@ -544,7 +544,7 @@ void CObjDrugCampanyRoom1::Draw()
 			{
 				//切り取り位置の設定
 				src.m_top = 198.0f;   //y
-				src.m_left = 2８3.0f; //x
+				src.m_left = 283.0f; //x
 				src.m_right = 206.0f; //x
 				src.m_bottom = 223.0f; //y
 
