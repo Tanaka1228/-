@@ -644,8 +644,8 @@ void CObjInstitute13::Draw()
 
 				//•`‰æ
 				Draw::Draw(5, &src, &dst, c, 0.0f);
-			}
 			if (m_map[i][j] == 26)//Á‰ÎŠí
+			
 			{
 				//Ø‚èæ‚èˆÊ’u‚Ìİ’è
 				src.m_top = 271.0f;   //y
