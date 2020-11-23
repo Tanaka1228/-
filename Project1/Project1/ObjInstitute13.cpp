@@ -269,23 +269,7 @@ void CObjInstitute13::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 2)//階段
-			{
-				//切り取り位置の設定
-				src.m_top = 275.0f;   //y
-				src.m_left = 216.0f; //x
-				src.m_right = 384.0f; //x
-				src.m_bottom = 426.0f; //y
-
-				//表示位置の設定
-				dst.m_top = i * 32.0f + my_scroll;
-				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
-
-				//描画
-				Draw::Draw(5, &src, &dst, c, 0.0f);
-			}
+			
 
 			if (m_map[i][j] == 4)//エレベーター
 			{
@@ -304,6 +288,23 @@ void CObjInstitute13::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
+			if (m_map[i][j] == 2)//階段
+			{
+				//切り取り位置の設定
+				src.m_top = 275.0f;   //y
+				src.m_left = 216.0f; //x
+				src.m_right = 384.0f; //x
+				src.m_bottom = 426.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+			}
+				//描画
+				Draw::Draw(5, &src, &dst, c, 0.0f);
+			
 			if (m_map[i][j] == 5)//草
 			{
 				//切り取り位置の設定
