@@ -57,7 +57,7 @@ void CSceneInstituteBoss::InitScene()
 
 	//研究所のボス戦フィールドオブジェクト作成
 	CObjInstituteBoss* objb = new CObjInstituteBoss();
-	Objs::InsertObj(objb, OBJ_INSTITUTE_BOSS, 3);
+	Objs::InsertObj(objb, OBJ_INSTITUTE_BOSS, 4);
 
 }
 
