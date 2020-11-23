@@ -159,6 +159,11 @@
     <ClInclude Include="ObjDrugCampany.h" />
     <ClInclude Include="ObjDrugCampany2.h" />
     <ClInclude Include="ObjDrugCampany3.h" />
+    <ClInclude Include="ObjDrugCampanyRoom1.h" />
+    <ClInclude Include="ObjDrugCampanyRoom2.h" />
+    <ClInclude Include="ObjDrugCampanyRoom3.h" />
+    <ClInclude Include="ObjDrugCampanyRoom4.h" />
+    <ClInclude Include="ObjDrugCampanyRoom5.h" />
     <ClInclude Include="ObjEnd.h" />
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjEventRoom.h" />
@@ -201,6 +206,11 @@
     <ClInclude Include="SceneDrugCampany.h" />
     <ClInclude Include="SceneDrugCampany2.h" />
     <ClInclude Include="SceneDrugCampany3.h" />
+    <ClInclude Include="SceneDrugCampanyRoom1.h" />
+    <ClInclude Include="SceneDrugCampanyRoom2.h" />
+    <ClInclude Include="SceneDrugCampanyRoom3.h" />
+    <ClInclude Include="SceneDrugCampanyRoom4.h" />
+    <ClInclude Include="SceneDrugCampanyRoom5.h" />
     <ClInclude Include="SceneEnd.h" />
     <ClInclude Include="SceneEventRoom.h" />
     <ClInclude Include="SceneExRoom.h" />
@@ -271,6 +281,11 @@
     <ClCompile Include="ObjDrugCampany.cpp" />
     <ClCompile Include="ObjDrugCampany2.cpp" />
     <ClCompile Include="ObjDrugCampany3.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom1.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom2.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom3.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom4.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom5.cpp" />
     <ClCompile Include="ObjEnd.cpp" />
     <ClCompile Include="ObjEventRoom.cpp" />
     <ClCompile Include="ObjExRoom.cpp" />
@@ -309,6 +324,11 @@
     <ClCompile Include="SceneDrugCampany.cpp" />
     <ClCompile Include="SceneDrugCampany2.cpp" />
     <ClCompile Include="SceneDrugCampany3.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom1.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom2.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom3.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom4.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom5.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="ObjMenu.cpp" />
     <ClCompile Include="SceneEventRoom.cpp" />
