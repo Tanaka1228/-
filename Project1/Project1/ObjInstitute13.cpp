@@ -226,6 +226,7 @@ void CObjInstitute13::Action()
 	//}
 
 }
+
 //ドロー
 void CObjInstitute13::Draw()
 {
@@ -269,7 +270,7 @@ void CObjInstitute13::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			
+
 
 			if (m_map[i][j] == 4)//エレベーター
 			{
@@ -302,9 +303,9 @@ void CObjInstitute13::Draw()
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 			}
-				//描画
-				Draw::Draw(5, &src, &dst, c, 0.0f);
-			
+			//描画
+			Draw::Draw(5, &src, &dst, c, 0.0f);
+
 			if (m_map[i][j] == 5)//草
 			{
 				//切り取り位置の設定
@@ -641,11 +642,11 @@ void CObjInstitute13::Draw()
 				dst.m_left = j * 32.0f + mx_scroll;
 				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
-
-				//描画
-				Draw::Draw(5, &src, &dst, c, 0.0f);
+			}
+			//描画
+			Draw::Draw(5, &src, &dst, c, 0.0f);
 			if (m_map[i][j] == 26)//消火器
-			
+
 			{
 				//切り取り位置の設定
 				src.m_top = 271.0f;   //y
@@ -730,7 +731,7 @@ void CObjInstitute13::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			
+
 			if (m_map[i][j] == 31)//薬
 			{
 				//切り取り位置の設定
@@ -748,6 +749,7 @@ void CObjInstitute13::Draw()
 				//描画
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
+
 		}
 	}
 }
