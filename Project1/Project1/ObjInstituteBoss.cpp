@@ -193,9 +193,9 @@ void CObjInstituteBoss::Action()
 						}
 						
 					}
-					if (m_map[i][j] == 19|| m_map[i][j] == 20)//女の子の前に移動すると研究所Boss
+					if (m_map[i][j] == 19|| m_map[i][j] == 20)//研究所13
 					{
-						Scene::SetScene(new CSceneInstitute14());
+						Scene::SetScene(new CSceneInstitute13());
 					}
 				}
 
@@ -217,9 +217,9 @@ void CObjInstituteBoss::Action()
 
 			if (m_map[i][ex] == 21)
 			{
-				//誘導敵機オブジェクト作成
-				CObjInstituteBossBoss* obj_institute_boss_boss = new CObjInstituteBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-				Objs::InsertObj(obj_institute_boss_boss, OBJ_INSTITUTE_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+				////誘導敵機オブジェクト作成
+				//CObjInstituteBossBoss* obj_institute_boss_boss = new CObjInstituteBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
+				//Objs::InsertObj(obj_institute_boss_boss, OBJ_INSTITUTE_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 
 				m_map[i][ex] = 0;
 			}
