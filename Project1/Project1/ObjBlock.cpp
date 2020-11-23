@@ -161,10 +161,6 @@ void CObjBlock::Action()
 					{
 						Scene::SetScene(new CSceneChinaTown());
 					}
-					if (m_map[i][j] == 21)//カウンターに移動するとチャイナタウンのボス戦フィールド
-					{
-						Scene::SetScene(new CSceneChinaTownBoss());
-					}
 					if (m_map[i][j] == 22)//女の子の前に行くと
 					{
 						Scene::SetScene(new CSceneDrugCampany());
