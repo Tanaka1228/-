@@ -215,14 +215,14 @@ void CObjInstituteBoss::Action()
 	{
 		for (int j = 0; j < 100; j++)
 
-			if (m_map[i][ex] == 21)
-			{
-				////誘導敵機オブジェクト作成
-				//CObjInstituteBossBoss* obj_institute_boss_boss = new CObjInstituteBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-				//Objs::InsertObj(obj_institute_boss_boss, OBJ_INSTITUTE_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+			//if (m_map[i][ex] == 21)
+			//{
+			//	////誘導敵機オブジェクト作成
+			//	//CObjInstituteBossBoss* obj_institute_boss_boss = new CObjInstituteBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
+			//	//Objs::InsertObj(obj_institute_boss_boss, OBJ_INSTITUTE_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 
-				m_map[i][ex] = 0;
-			}
+			//	m_map[i][ex] = 0;
+			//}
 			;
 
 

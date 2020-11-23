@@ -248,14 +248,12 @@ void CObjChinaTown::Action()
 	{
 		for (int j = 0; j < 100; j++)
 
-			if (m_map[i][ex] == 81)
-			{
-				////誘導敵機オブジェクト作成
-				//CObjChinaTownBossBoss* obj_chinatown_boss_boss = new CObjChinaTownBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-				//Objs::InsertObj(obj_chinatown_boss_boss, OBJ_CHINA_TOWN_BOSS_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+			//if (m_map[i][ex] == 81)
+			//	////誘導敵機オブジェクト作成
+			//	//CObjChinaTownBossBoss* obj_chinatown_boss_boss = new CObjChinaTownBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
+			//	//Objs::InsertObj(obj_chinatown_boss_boss, OBJ_CHINA_TOWN_BOSS_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 
-				m_map[i][ex] = 0;
-			}
+				m_map[i][ex] = 0;		
 	}
 }
 //ドロー
