@@ -396,6 +396,12 @@
     <ClInclude Include="SceneDrugCampany2.h">
       <Filter>ソース ファイル\StageMap\製薬会社</Filter>
     </ClInclude>
+    <ClInclude Include="ObjDrugCampany3.h">
+      <Filter>ソース ファイル\StageMap\製薬会社</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampany3.h">
+      <Filter>ソース ファイル\StageMap\製薬会社</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -705,6 +711,12 @@
       <Filter>ソース ファイル\StageMap\製薬会社</Filter>
     </ClCompile>
     <ClCompile Include="SceneDrugCampany2.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampany3.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampany3.cpp">
       <Filter>ソース ファイル\StageMap\製薬会社</Filter>
     </ClCompile>
   </ItemGroup>
