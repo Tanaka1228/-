@@ -27,7 +27,7 @@ void CObjInstituteBossBoss::Init()
 
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 232, 232, ELEMENT_ENEMY, OBJ_INSTITUTE_BOSS_BOSS, 1);
+	Hits::SetHitBox(this, m_x, m_y, 264, 264, ELEMENT_ENEMY, OBJ_INSTITUTE_BOSS_BOSS, 1);
 }
 
 //アクション
@@ -113,16 +113,16 @@ void CObjInstituteBossBoss::Draw()
 	//切り取り位置の設定
 	src.m_top = 0.0f; //y
 	src.m_left = 0.0f; //x
-	src.m_right = 800.0f; //x
-	src.m_bottom = 600.0f; //y
+	src.m_right = 139.0f; //x
+	src.m_bottom = 131.0f; //y
 
 	
 
-	dst.m_top = 64.0f + m_y + instituteboss->GetScroll2();
-	dst.m_left = 64.0f + 0.0f + m_x + instituteboss->GetScroll();
-	dst.m_right = 1600.0f + m_x + instituteboss->GetScroll();
-	dst.m_bottom = 900.0f + m_y + instituteboss->GetScroll2();
+	dst.m_top = 0.0f + m_y + instituteboss->GetScroll2();
+	dst.m_left = 0.0f + m_x + instituteboss->GetScroll();
+	dst.m_right = 64.0f+200.0f + m_x + instituteboss->GetScroll();
+	dst.m_bottom = 64.0f+200.0f + m_y + instituteboss->GetScroll2();
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
-	Draw::Draw(12, &src, &dst, c, 0.0f);
+	Draw::Draw(1, &src, &dst, c, 0.0f);
 }
