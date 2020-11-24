@@ -28,7 +28,7 @@ void CObjRooftopBoss::Init()
 
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 232, 100, ELEMENT_ENEMY, OBJ_ROOF_TOP_BOSS, 1);
+	Hits::SetHitBox(this, m_x, m_y, 232, 232, ELEMENT_ENEMY, OBJ_ROOF_TOP_BOSS, 1);
 }
 
 //アクション
