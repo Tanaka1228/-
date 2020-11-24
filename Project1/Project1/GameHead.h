@@ -74,6 +74,7 @@ enum OBJ_NAME
 					OBJ_DRUG_CAMPANY_ROOM2,//製薬会社部屋2
 					OBJ_DRUG_CAMPANY_ROOM3,//製薬会社部屋3
 					OBJ_DRUG_CAMPANY_ROOM4,//製薬会社部屋4
+					OBJ_DRUG_CAMPANY_ROOM5,//製薬会社部屋5
 };
 //------------------------------------------------
 
@@ -149,6 +150,7 @@ struct UserData
 #include"ObjDrugCampanyRoom2.h"
 #include"ObjDrugCampanyRoom3.h"
 #include"ObjDrugCampanyRoom4.h"
+#include"ObjDrugCampanyRoom5.h"
 #include"ObjHospital.h"
 #include"ObjHospital2.h"
 #include"ObjHospital3.h"
@@ -197,6 +199,7 @@ struct UserData
 #include"SceneDrugCampanyRoom2.h"
 #include"SceneDrugCampanyRoom3.h"
 #include"SceneDrugCampanyRoom4.h"
+#include"SceneDrugCampanyRoom5.h"
 #include"SceneHospital.h"
 #include"SceneHospital2.h"
 #include"SceneHospital3.h"
