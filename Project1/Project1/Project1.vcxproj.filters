@@ -465,6 +465,12 @@
     <ClInclude Include="ObjMap.h">
       <Filter>ソース ファイル\StageMap\シーンマップ</Filter>
     </ClInclude>
+    <ClInclude Include="ObjChinaTown_b.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaTown_b.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -838,6 +844,12 @@
     </ClCompile>
     <ClCompile Include="ObjMap.cpp">
       <Filter>ソース ファイル\StageMap\シーンマップ</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTown_b.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaTown _b.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

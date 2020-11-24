@@ -152,6 +152,7 @@
     <ClInclude Include="CObjSinEnemy.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjChinaTown_b.h" />
     <ClInclude Include="ObjChinaTown.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="ObjAttackEnemy.h">
@@ -218,6 +219,7 @@
     <ClInclude Include="SceneBlock.h" />
     <ClInclude Include="SceneChinaTown.h" />
     <ClInclude Include="SceneChinaTownBoss.h" />
+    <ClInclude Include="SceneChinaTown_b.h" />
     <ClInclude Include="SceneDrugCampany.h" />
     <ClInclude Include="SceneDrugCampany2.h" />
     <ClInclude Include="SceneDrugCampany3.h" />
@@ -293,6 +295,7 @@
     <ClCompile Include="CObjSinEnemy.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ObjChinaTown_b.cpp" />
     <ClCompile Include="ObjChinaTown.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
     <ClCompile Include="ObjAttackEnemy.cpp">
@@ -351,6 +354,7 @@
     <ClCompile Include="ObjTemplateRoom.cpp" />
     <ClCompile Include="ObjXRayRoom.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
+    <ClCompile Include="SceneChinaTown _b.cpp" />
     <ClCompile Include="SceneChinaTown.cpp" />
     <ClCompile Include="SceneChinaTownBoss.cpp" />
     <ClCompile Include="SceneDrugCampany.cpp" />

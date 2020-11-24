@@ -33,6 +33,7 @@ enum OBJ_NAME
 					OBJ_BLOCK,//拠点
 					OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
 					OBJ_CHINA_TOWN,//チャイナタウン
+					OBJ_CHINA_TOWN_b,//チャイナタウンｂ
 					OBJ_CHINA_TOWN_BOSS_BOSS,//チャイナタウンのボス戦フィールドBOSS
 
 
@@ -191,6 +192,7 @@ struct UserData
 
 #include"CObjInstituteBossBoss.h"
 #include"ObjMap.h"
+#include"ObjChinaTown_b.h"
 
 //------------------------------------------------
 
@@ -240,7 +242,7 @@ struct UserData
 #include"SceneInstitute12.h"
 #include"SceneInstitute13.h"
 #include"SceneInstitute14.h"
-
+#include"SceneChinaTown_b.h"
 
 //-----------------------------------------------
 
