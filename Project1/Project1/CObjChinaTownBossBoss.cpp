@@ -28,7 +28,7 @@ void CObjChinaTownBossBoss::Init()
 
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 232, 232, ELEMENT_ENEMY, OBJ_CHINA_TOWN_BOSS_BOSS, 1);
+	Hits::SetHitBox(this, m_x, m_y, 464, 464, ELEMENT_ENEMY, OBJ_CHINA_TOWN_BOSS_BOSS, 1);
 }
 
 //アクション
