@@ -55,6 +55,7 @@ void CObjHospital::Init()
 	m_sp = false;
 	key_flag = 1;
 	m_key_control = true;
+	map_flag = true;
 }
 //アクション
 void CObjHospital::Action()
@@ -255,29 +256,23 @@ void CObjHospital::Action()
 			m_key_control = true;
 		}
 	}
-	//敵出現ライン
-	//float Xline = hx + (-mx_scroll) + 400;
-	//float Yline = hy + (my_scroll)-100;
+	
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
 
-	//int ex = ((int)Xline) / 32;
-	//int ey = ((int)Yline) / 32;
+			
+			map_flag2 = true;
+			
+		}
+		map_flag = false;
 
-	//for (int i = 0; i < 25; i++)
-	//{
-	//	for (int j = 0; j < 25; j++)
-
-	//		if (m_map[i][ex] == 15)
-	//		{
-	//			//誘導敵機オブジェクト作成
-	//			CObjRooftopBoss* obj_rooftop_boss = new CObjRooftopBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-	//			Objs::InsertObj(obj_rooftop_boss, OBJ_ROOF_TOP_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
-
-	//			m_map[i][ex] = 0;
-	//		}
-
-
-	//}
-
+	}
+	else
+	{
+		map_flag = true;
+	}
 }
 //ドロー
 void CObjHospital::Draw()
@@ -305,6 +300,22 @@ void CObjHospital::Draw()
 	dst.m_bottom = 800.0f+ my_scroll;
 
 	Draw::Draw(6, &src, &dst, c, 0.0f);//病院の床
+
+	if (map_flag2 == true)//マップ表示
+	{
+		//背景表示
+		src.m_top = 75.0f;   // Y
+		src.m_left = 105.0f;  // X
+		src.m_right = 700.0f; // X
+		src.m_bottom = 466.0f;// Y 
+
+		dst.m_top = 32.0f;
+		dst.m_left = 32.0f;
+		dst.m_right = 64.0f;
+		dst.m_bottom =64.0f;
+
+		Draw::Draw(8, &src, &dst, c, 0.0f);//病院の床
+	}
 
 
 	if (m_sp == 1)//エンターキーを一回押したとき

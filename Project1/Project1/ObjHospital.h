@@ -31,4 +31,7 @@ private:
 	int	key_flag;//会話フラグ
 	int m_sp;//会話の種類フラグ
 
+	bool map_flag;
+	bool map_flag2;
+
 };
