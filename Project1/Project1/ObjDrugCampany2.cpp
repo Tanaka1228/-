@@ -268,22 +268,22 @@ void CObjDrugCampany2::Action()
 						{
 							Scene::SetScene(new CSceneDrugCampany3());
 						}
-						if (m_map[i][j] == 5)//扉を開けると部屋1に移動
+						if (m_map[i][j] == 5)//扉を開けると部屋5に移動
 						{
-							Scene::SetScene(new CSceneDrugCampanyRoom1());
+							Scene::SetScene(new CSceneDrugCampanyRoom5());
 						}
 
-						if (m_map[i][j] == 6)//扉を開けると部屋2に移動
+						if (m_map[i][j] == 6)//扉を開けると部屋6に移動
 						{
-							Scene::SetScene(new CSceneDrugCampanyRoom2());
+							Scene::SetScene(new CSceneDrugCampanyRoom6());
 						}
-						if (m_map[i][j] == 8)//扉を開けると部屋3に移動
+						if (m_map[i][j] == 8)//扉を開けると部屋7に移動
 						{
-							Scene::SetScene(new CSceneDrugCampanyRoom3());
+							Scene::SetScene(new CSceneDrugCampanyRoom7());
 						}
-						if (m_map[i][j] == 9)//扉を開けると部屋4に移動
+						if (m_map[i][j] == 9)//扉を開けると部屋8に移動
 						{
-							Scene::SetScene(new CSceneDrugCampanyRoom4());
+							Scene::SetScene(new CSceneDrugCampanyRoom8());
 						}
 						if (m_map[i][j] == 10)//エレベーターに入ると1階に移動
 						{
