@@ -450,32 +450,32 @@
     <ClInclude Include="SceneDrugCampanyRoom5.h">
       <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
     </ClInclude>
-    <ClInclude Include="ObjDrugCampanyRoom6.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjDrugCampanyRoom7.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjDrugCampanyRoom8.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjDrugCampanyRoom9.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneDrugCampanyRoom6.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneDrugCampanyRoom7.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneDrugCampanyRoom8.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneDrugCampanyRoom9.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjMap.h">
       <Filter>ソース ファイル\StageMap\シーンマップ</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDrugCampanyRoom6.h">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDrugCampanyRoom7.h">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDrugCampanyRoom8.h">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDrugCampanyRoom9.h">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampanyRoom6.h">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampanyRoom7.h">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampanyRoom8.h">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampanyRoom9.h">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
     </ClInclude>
     <ClInclude Include="ObjChinaMob.h">
       <Filter>ソース ファイル\Character\チャイナタウンのモブ</Filter>
@@ -827,32 +827,32 @@
     <ClCompile Include="SceneDrugCampanyRoom5.cpp">
       <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
     </ClCompile>
-    <ClCompile Include="ObjDrugCampanyRoom6.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjDrugCampanyRoom7.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjDrugCampanyRoom8.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjDrugCampanyRoom9.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneDrugCampanyRoom6.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneDrugCampanyRoom7.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneDrugCampanyRoom8.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneDrugCampanyRoom9.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjMap.cpp">
       <Filter>ソース ファイル\StageMap\シーンマップ</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampanyRoom6.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampanyRoom7.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampanyRoom8.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampanyRoom9.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampanyRoom6.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampanyRoom7.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampanyRoom8.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampanyRoom9.cpp">
+      <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
     </ClCompile>
     <ClCompile Include="ObjChinaMob.cpp">
       <Filter>ソース ファイル\Character\チャイナタウンのモブ</Filter>
