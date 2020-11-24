@@ -172,6 +172,10 @@
     <ClInclude Include="ObjDrugCampanyRoom3.h" />
     <ClInclude Include="ObjDrugCampanyRoom4.h" />
     <ClInclude Include="ObjDrugCampanyRoom5.h" />
+    <ClInclude Include="ObjDrugCampanyRoom6.h" />
+    <ClInclude Include="ObjDrugCampanyRoom7.h" />
+    <ClInclude Include="ObjDrugCampanyRoom8.h" />
+    <ClInclude Include="ObjDrugCampanyRoom9.h" />
     <ClInclude Include="ObjEnd.h" />
     <ClInclude Include="ObjEnemy.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -221,6 +225,10 @@
     <ClInclude Include="SceneDrugCampanyRoom3.h" />
     <ClInclude Include="SceneDrugCampanyRoom4.h" />
     <ClInclude Include="SceneDrugCampanyRoom5.h" />
+    <ClInclude Include="SceneDrugCampanyRoom6.h" />
+    <ClInclude Include="SceneDrugCampanyRoom7.h" />
+    <ClInclude Include="SceneDrugCampanyRoom8.h" />
+    <ClInclude Include="SceneDrugCampanyRoom9.h" />
     <ClInclude Include="SceneEnd.h" />
     <ClInclude Include="SceneEventRoom.h" />
     <ClInclude Include="SceneExRoom.h" />
@@ -304,6 +312,10 @@
     <ClCompile Include="ObjDrugCampanyRoom3.cpp" />
     <ClCompile Include="ObjDrugCampanyRoom4.cpp" />
     <ClCompile Include="ObjDrugCampanyRoom5.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom6.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom7.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom8.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom9.cpp" />
     <ClCompile Include="ObjEnd.cpp" />
     <ClCompile Include="ObjEventRoom.cpp" />
     <ClCompile Include="ObjExRoom.cpp" />
@@ -347,6 +359,10 @@
     <ClCompile Include="SceneDrugCampanyRoom3.cpp" />
     <ClCompile Include="SceneDrugCampanyRoom4.cpp" />
     <ClCompile Include="SceneDrugCampanyRoom5.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom6.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom7.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom8.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom9.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="ObjMenu.cpp" />
     <ClCompile Include="SceneEventRoom.cpp" />

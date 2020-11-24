@@ -75,6 +75,11 @@ enum OBJ_NAME
 					OBJ_DRUG_CAMPANY_ROOM3,//製薬会社部屋3
 					OBJ_DRUG_CAMPANY_ROOM4,//製薬会社部屋4
 					OBJ_DRUG_CAMPANY_ROOM5,//製薬会社部屋5
+					OBJ_DRUG_CAMPANY_ROOM6,//製薬会社部屋６
+					OBJ_DRUG_CAMPANY_ROOM7,//製薬会社部屋7
+					OBJ_DRUG_CAMPANY_ROOM8,//製薬会社部屋8
+					OBJ_DRUG_CAMPANY_ROOM9,//製薬会社部屋9
+
 };
 //------------------------------------------------
 
@@ -151,6 +156,10 @@ struct UserData
 #include"ObjDrugCampanyRoom3.h"
 #include"ObjDrugCampanyRoom4.h"
 #include"ObjDrugCampanyRoom5.h"
+#include"ObjDrugCampanyRoom6.h"
+#include"ObjDrugCampanyRoom7.h"
+#include"ObjDrugCampanyRoom8.h"
+#include"ObjDrugCampanyRoom9.h"
 #include"ObjHospital.h"
 #include"ObjHospital2.h"
 #include"ObjHospital3.h"
@@ -200,6 +209,10 @@ struct UserData
 #include"SceneDrugCampanyRoom3.h"
 #include"SceneDrugCampanyRoom4.h"
 #include"SceneDrugCampanyRoom5.h"
+#include"SceneDrugCampanyRoom6.h"
+#include"SceneDrugCampanyRoom7.h"
+#include"SceneDrugCampanyRoom8.h"
+#include"SceneDrugCampanyRoom9.h"
 #include"SceneHospital.h"
 #include"SceneHospital2.h"
 #include"SceneHospital3.h"
@@ -224,6 +237,7 @@ struct UserData
 #include"SceneInstitute12.h"
 #include"SceneInstitute13.h"
 #include"SceneInstitute14.h"
+
 
 //-----------------------------------------------
 

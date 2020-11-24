@@ -435,6 +435,30 @@
     <ClInclude Include="SceneDrugCampanyRoom5.h">
       <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
     </ClInclude>
+    <ClInclude Include="ObjDrugCampanyRoom6.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDrugCampanyRoom7.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDrugCampanyRoom8.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjDrugCampanyRoom9.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampanyRoom6.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampanyRoom7.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampanyRoom8.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDrugCampanyRoom9.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -781,6 +805,30 @@
     </ClCompile>
     <ClCompile Include="SceneDrugCampanyRoom5.cpp">
       <Filter>ソース ファイル\StageMap\製薬会社\部屋</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampanyRoom6.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampanyRoom7.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampanyRoom8.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugCampanyRoom9.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampanyRoom6.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampanyRoom7.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampanyRoom8.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDrugCampanyRoom9.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
