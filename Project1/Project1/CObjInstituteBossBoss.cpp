@@ -22,7 +22,6 @@ void CObjInstituteBossBoss::Init()
 {
 	m_vx = 0.0f;
 	m_vy = 0.0f;
-	m_time = 0;
 	m_timeboss = 0;
 	m_hp = 18;
 
@@ -37,19 +36,8 @@ void CObjInstituteBossBoss::Action()
 	//Œ¤‹†Šƒ{ƒXíƒtƒB[ƒ‹ƒh‚Ìî•ñ
 	CObjInstituteBoss* Instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);
 
-	m_time++;
+	
 	m_timeboss++;
-	if (m_time > 50)
-	{
-
-		m_time = 0;
-
-		//—U“±’eŠÛì¬
-		CObjHomingBullet* obj_homing_bullet = new CObjHomingBullet(m_x, m_y); //—U“±’eƒIƒuƒWƒFƒNƒgì¬
-		Objs::InsertObj(obj_homing_bullet, OBJ_HOMING_BULLET, 4); //—U“±’eŠÛ“o˜^
-
-
-	}
 	if (m_timeboss > 100)
 	{
 		m_timeboss = 0;
