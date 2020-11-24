@@ -94,6 +94,15 @@
     <Filter Include="ソース ファイル\Character\チャイナタウンのモブ">
       <UniqueIdentifier>{9fc5bc1d-454a-4960-8fae-fef84638c79a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Character\病院のモブ">
+      <UniqueIdentifier>{de1800b2-4ba6-43ad-be74-5460d437cfaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Character\製薬会社のモブ">
+      <UniqueIdentifier>{a475ed08-7d68-4647-b5a5-9a79ba7f36ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Character\研究所のモブ">
+      <UniqueIdentifier>{6861202b-8af7-4ff4-aa01-e7f689784b33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">

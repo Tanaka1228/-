@@ -124,7 +124,7 @@ void CObjChinaMob::Draw()
 			ifstream fin("チャイナタウン会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(44, ios::cur);//0バイト数進める
+			fin.seekg(46, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
