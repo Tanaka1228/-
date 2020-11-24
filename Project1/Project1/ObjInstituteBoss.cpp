@@ -122,8 +122,8 @@ void CObjInstituteBoss::Action()
 			if (m_map[i][ex] == 21)
 			{
 				//拡散敵機オブジェクト作成
-				CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(ex*32.0f, i*32.0f); //Sin敵機オブジェクト作成
-				Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+				CObjInstituteBossBoss* objs = new CObjInstituteBossBoss(ex*32.0f, i*32.0f); //Sin敵機オブジェクト作成
+				Objs::InsertObj(objs, OBJ_INSTITUTE_BOSS_BOSS, 5); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
 				
 
 				m_map[i][ex] = 0;
