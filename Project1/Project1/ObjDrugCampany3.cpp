@@ -698,9 +698,9 @@ void CObjDrugCampany3::Draw()
 
 				//ï\é¶à íuÇÃê›íË
 				dst.m_top = i * 32.0f + my_scroll;
-				dst.m_left = j * 31.7f + mx_scroll;
-				dst.m_right = j * 33.5f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 35.0f + 32.0f + my_scroll;
+				dst.m_left = j * 32.7f + mx_scroll;
+				dst.m_right = j * 32.0f + 33.5f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 35.0f + my_scroll;
 
 				//ï`âÊ
 				Draw::Draw(4, &src, &dst, c, 0.0f);
