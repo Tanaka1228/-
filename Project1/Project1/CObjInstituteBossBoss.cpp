@@ -22,13 +22,12 @@ void CObjInstituteBossBoss::Init()
 {
 	m_vx = 0.0f;
 	m_vy = 0.0f;
-	m_time = 0;
 	m_timeboss = 0;
 	m_hp = 18;
 
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 232, 232, ELEMENT_ENEMY, OBJ_INSTITUTE_BOSS_BOSS, 1);
+	Hits::SetHitBox(this, m_x, m_y, 264, 264, ELEMENT_ENEMY, OBJ_INSTITUTE_BOSS_BOSS, 1);
 }
 
 //アクション
@@ -37,19 +36,8 @@ void CObjInstituteBossBoss::Action()
 	//研究所ボス戦フィールドの情報
 	CObjInstituteBoss* Instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);
 
-	m_time++;
+	
 	m_timeboss++;
-	if (m_time > 50)
-	{
-
-		m_time = 0;
-
-		//誘導弾丸作成
-		CObjHomingBullet* obj_homing_bullet = new CObjHomingBullet(m_x, m_y); //誘導弾オブジェクト作成
-		Objs::InsertObj(obj_homing_bullet, OBJ_HOMING_BULLET, 4); //誘導弾丸登録
-
-
-	}
 	if (m_timeboss > 100)
 	{
 		m_timeboss = 0;
@@ -86,7 +74,7 @@ void CObjInstituteBossBoss::Action()
 
 
 	//ホーミング敵機が完全に領域外に出たら敵機を破棄する
-	bool check = CheckWindow(m_x, m_y, 64.0f, 64.0f, 1600.0f, 900.0f);
+	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 1600.0f, 900.0f);
 	if (check == false)
 	{
 		this->SetStatus(false);//自身に削除命令
@@ -106,7 +94,7 @@ void CObjInstituteBossBoss::Action()
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 		Sleep(400);
-		//Scene::SetScene(new CSceneFin());
+		Scene::SetScene(new CSceneFin());
 	}
 }
 
@@ -125,16 +113,16 @@ void CObjInstituteBossBoss::Draw()
 	//切り取り位置の設定
 	src.m_top = 0.0f; //y
 	src.m_left = 0.0f; //x
-	src.m_right = 800.0f; //x
-	src.m_bottom = 600.0f; //y
+	src.m_right = 139.0f; //x
+	src.m_bottom = 131.0f; //y
 
 	
 
-	dst.m_top = 64.0f + m_y + instituteboss->GetScroll2();
-	dst.m_left = 64.0f + 0.0f + m_x + instituteboss->GetScroll();
-	dst.m_right = 1600.0f + m_x + instituteboss->GetScroll();
-	dst.m_bottom = 900.0f + m_y + instituteboss->GetScroll2();
+	dst.m_top = 0.0f + m_y + instituteboss->GetScroll2();
+	dst.m_left = 0.0f + m_x + instituteboss->GetScroll();
+	dst.m_right = 64.0f+200.0f + m_x + instituteboss->GetScroll();
+	dst.m_bottom = 64.0f+200.0f + m_y + instituteboss->GetScroll2();
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
-	Draw::Draw(12, &src, &dst, c, 0.0f);
+	Draw::Draw(1, &src, &dst, c, 0.0f);
 }

@@ -37,19 +37,8 @@ void CObjChinaTownBossBoss::Action()
 	//チャイナタウンボス戦フィールドの情報
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 
-	m_time++;
+
 	m_timeboss++;
-	if (m_time > 50)
-	{
-
-		m_time = 0;
-
-		//誘導弾丸作成
-		CObjHomingBullet* obj_homing_bullet = new CObjHomingBullet(m_x, m_y); //誘導弾オブジェクト作成
-		Objs::InsertObj(obj_homing_bullet, OBJ_HOMING_BULLET, 4); //誘導弾丸登録
-
-
-	}
 	if (m_timeboss > 100)
 	{
 		m_timeboss = 0;
@@ -83,7 +72,7 @@ void CObjChinaTownBossBoss::Action()
 	//HitBoxの内容を更新
 	CHitBox* hit = Hits::GetHitBox(this);
 
-	hit->SetPos(m_x + chinatownboss->GetScroll3(), m_y + chinatownboss->GetScroll4());
+	hit->SetPos(m_x + chinatownboss->GetScroll(), m_y + chinatownboss->GetScroll2());
 
 
 	//ホーミング敵機が完全に領域外に出たら敵機を破棄する
@@ -107,7 +96,6 @@ void CObjChinaTownBossBoss::Action()
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 		Sleep(400);
-		//Scene::SetScene(new CSceneFin());
 	}
 }
 
@@ -126,13 +114,13 @@ void CObjChinaTownBossBoss::Draw()
 	//切り取り位置の設定
 	src.m_top = 0.0f; //y
 	src.m_left = 0.0f; //x
-	src.m_right = 60.0f; //x
-	src.m_bottom = 95.0f; //y
+	src.m_right = 131.0f; //x
+	src.m_bottom = 139.0f; //y
 
-	dst.m_top = 0.0f + m_y + chinatownboss->GetScroll4();
-	dst.m_left = 32.0f + 200.0f + m_x + chinatownboss->GetScroll3();
-	dst.m_right = 0.0f + m_x + chinatownboss->GetScroll3();
-	dst.m_bottom = 32.0f + 200.0f + m_y + chinatownboss->GetScroll4();
+	dst.m_top = 0.0f + m_y + chinatownboss->GetScroll2();
+	dst.m_left = 32.0f + 500.0f + m_x + chinatownboss->GetScroll();
+	dst.m_right = 0.0f + m_x + chinatownboss->GetScroll();
+	dst.m_bottom = 32.0f + 500.0f + m_y + chinatownboss->GetScroll2();
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(1, &src, &dst, c, 0.0f);

@@ -488,10 +488,10 @@ void CObjDrugCampany3::Draw()
 				src.m_bottom = 127.0f; //y
 
 				//表示位置の設定
-				dst.m_top = i * 30.0f + my_scroll;
-				dst.m_left = j * 30.72f + mx_scroll;
-				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
-				dst.m_bottom = i * 31.8f + 32.0f + my_scroll;
+				dst.m_top = i * 28.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 28.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
@@ -698,9 +698,9 @@ void CObjDrugCampany3::Draw()
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;
-				dst.m_left = j * 32.7f + mx_scroll;
-				dst.m_right = j * 32.0f + 33.5f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 35.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
