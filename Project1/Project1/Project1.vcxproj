@@ -143,19 +143,27 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="CObjHomingBullet.h" />
-    <ClInclude Include="CObjHomingEnemy.h" />
+    <ClInclude Include="CObjHomingEnemy.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="CObjInstituteBossBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="CObjSinEnemy.h" />
+    <ClInclude Include="CObjSinEnemy.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjChinaTown.h" />
     <ClInclude Include="GameHead.h" />
-    <ClInclude Include="ObjAttackEnemy.h" />
+    <ClInclude Include="ObjAttackEnemy.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjBlock.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjChinaTownBoss.h" />
-    <ClInclude Include="ObjDiffusionEnemy.h" />
+    <ClInclude Include="ObjDiffusionEnemy.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjDrugCampany.h" />
     <ClInclude Include="ObjDrugCampany2.h" />
     <ClInclude Include="ObjDrugCampany3.h" />
@@ -165,7 +173,9 @@
     <ClInclude Include="ObjDrugCampanyRoom4.h" />
     <ClInclude Include="ObjDrugCampanyRoom5.h" />
     <ClInclude Include="ObjEnd.h" />
-    <ClInclude Include="ObjEnemy.h" />
+    <ClInclude Include="ObjEnemy.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjEventRoom.h" />
     <ClInclude Include="ObjExRoom.h" />
     <ClInclude Include="ObjFin.h" />
@@ -265,19 +275,27 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="CObjHomingBullet.cpp" />
-    <ClCompile Include="CObjHomingEnemy.cpp" />
+    <ClCompile Include="CObjHomingEnemy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CObjInstituteBossBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="CObjSinEnemy.cpp" />
+    <ClCompile Include="CObjSinEnemy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjChinaTown.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
-    <ClCompile Include="ObjAttackEnemy.cpp" />
+    <ClCompile Include="ObjAttackEnemy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjBlock.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjChinaTownBoss.cpp" />
-    <ClCompile Include="ObjDiffusionEnemy.cpp" />
+    <ClCompile Include="ObjDiffusionEnemy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjDrugCampany.cpp" />
     <ClCompile Include="ObjDrugCampany2.cpp" />
     <ClCompile Include="ObjDrugCampany3.cpp" />
@@ -335,7 +353,9 @@
     <ClCompile Include="SceneExRoom.cpp" />
     <ClCompile Include="SceneFin.cpp" />
     <ClCompile Include="SceneGameOver.cpp" />
-    <ClCompile Include="ObjEnemy.cpp" />
+    <ClCompile Include="ObjEnemy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneHospital.cpp" />
