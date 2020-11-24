@@ -94,7 +94,7 @@ void CObjInstituteBossBoss::Action()
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 		Sleep(400);
-		//Scene::SetScene(new CSceneFin());
+		Scene::SetScene(new CSceneFin());
 	}
 }
 
