@@ -1960,8 +1960,8 @@ void CObjChinaTown::Draw()
 						//表示位置の設定
 						dst.m_top = i * 32.0f + my_scroll;//y
 						dst.m_left = j * 32.0f + mx_scroll;//x
-						dst.m_right =j*32.0f+ 32.0f + mx_scroll;//x
-						dst.m_bottom = i*32.0f + 32.0f + my_scroll; //y
+						dst.m_right =j*32.0f+ 45.0f + mx_scroll;//x
+						dst.m_bottom = i*32.0f + 45.0f + my_scroll; //y
 
 						//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
 						Draw::Draw(6, &src, &dst, c, 0.0f);

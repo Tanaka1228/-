@@ -95,27 +95,45 @@ void CObjChinaMob::Draw()
 	RECT_F dst;//描画先表示位置
 
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	
+	CObjChinaTown* chinatown = (CObjChinaTown*)Objs::GetObj(OBJ_CHINA_TOWN);
 
-
-	if (m_sp == 1)//エンターキーを一回押したとき
+	if (chinatown != nullptr) 
 	{
-		sp_flag == true;
+		if (m_sp == 1)//エンターキーを一回押したとき
+		{
+			sp_flag == true;
 
-		ifstream fin("会話.txt", ios::in);//テキストデータをを読み込み
-		char str1[64];//ただの配列
-		wchar_t wstr1[64];
-		fin.seekg(0, ios::cur);//0バイト数進める
-		fin >> str1;//str1にテキストを入れる
+			ifstream fin("チャイナタウン会話.txt", ios::in);//テキストデータをを読み込み
+			char str1[64];//ただの配列
+			wchar_t wstr1[64];
+			fin.seekg(0, ios::cur);//0バイト数進める
+			fin >> str1;//str1にテキストを入れる
 
-		sprintf_s(str1, "%s", str1);//出力
-		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-		Font::StrDraw(wstr1, 50.0f, 480, 25, c);// X  Y  大きさ     
+			sprintf_s(str1, "%s", str1);//出力
+			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
+			Font::StrDraw(wstr1, 50.0f, 500, 30, c);// X  Y  大きさ     
 
 
-		key_flag = 2;
-		fin.close();//ファイルを閉じる
+			key_flag = 2;
+			fin.close();//ファイルを閉じる
+		}
+		if (m_sp == 2)//エンターキーを一回押したとき
+		{
+			sp_flag == true;
+
+			ifstream fin("チャイナタウン会話.txt", ios::in);//テキストデータをを読み込み
+			char str1[64];//ただの配列
+			wchar_t wstr1[64];
+			fin.seekg(44, ios::cur);//0バイト数進める
+			fin >> str1;//str1にテキストを入れる
+
+			sprintf_s(str1, "%s", str1);//出力
+			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
+			Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
+
+
+			key_flag = 3;
+			fin.close();//ファイルを閉じる
+		}
 	}
-	
-
 }
