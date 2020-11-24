@@ -14,8 +14,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjDrugCampany::Init()
 {
-	mx_scroll = 0.0f;
-	my_scroll = 0.0f;
+	mx_scroll =0.0f;
+	my_scroll= -2900.0f;
 
 	//マップ情報
 	int block_data[200][200] =
