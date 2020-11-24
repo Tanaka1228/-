@@ -107,7 +107,6 @@ void CObjChinaTownBossBoss::Action()
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 		Sleep(400);
-		//Scene::SetScene(new CSceneFin());
 	}
 }
 

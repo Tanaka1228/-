@@ -260,27 +260,27 @@ void CObjChinaTownBoss::Action()
 			}
 		}
 	}
-	////敵出現ライン
-	//float xline = hx + (-mx_scroll) -100;
+	//敵出現ライン
+	float xline = hx + (-mx_scroll) -100;
 	//float yline = hy + (my_scroll) -200;
 
-	//int ex = ((int)xline) / 32;
+	int ex = ((int)xline) / 32;
 	//int ey = ((int)yline) / 32;
 
-	//for (int i = 0; i < 100; i++)
-	//{
-	//	//for (int j = 0; j < 100; j++)
-	//	
-	//		if (m_map[i][ex] == 81)
-	//		{
-	//			//誘導敵機オブジェクト作成
-	//			CObjChinaTownBossBoss* objc = new CObjChinaTownBossBoss(ex * 32.0f, i * 32.0f); //誘導敵機オブジェクト作成
-	//			Objs::InsertObj(objc, OBJ_CHINA_TOWN_BOSS_BOSS, 5); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+	for (int i = 0; i < 100; i++)
+	{
+		//for (int j = 0; j < 100; j++)
+		
+			if (m_map[i][ex] == 81)
+			{
+				//誘導敵機オブジェクト作成
+				CObjChinaTownBossBoss* objc = new CObjChinaTownBossBoss(ex * 32.0f, i * 32.0f); //誘導敵機オブジェクト作成
+				Objs::InsertObj(objc, OBJ_CHINA_TOWN_BOSS_BOSS, 5); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
 
-	//			m_map[i][ex] = 0;
-	//		}
-	//	
-	//}
+				m_map[i][ex] = 0;
+			}
+		
+	}
 }
 //ドロー
 void CObjChinaTownBoss::Draw()

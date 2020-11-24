@@ -173,9 +173,9 @@ void CObjInstitute5::Action()
 							hero->SetY2(y + 40.0f + (my_scroll));//ブロックの位置+主人公の幅
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
-						if (m_map[i][j] == 41 || m_map[i][j] == 42)//ドアに入ると拠点に移動
+						if (m_map[i][j] == 25)//ドアに入ると移動
 						{
-							Scene::SetScene(new CSceneBlock());
+							Scene::SetScene(new CSceneInstitute14());
 						}
 					}
 				}
