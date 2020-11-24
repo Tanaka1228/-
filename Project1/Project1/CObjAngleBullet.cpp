@@ -37,6 +37,8 @@ void CObjAngleBullet::Action()
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	//チャイナタウンBOSSの情報
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
+	//研究所BOSSの情報
+	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_Institute_Boss);
 
 	if (rooftop != nullptr)
 	{
@@ -93,7 +95,34 @@ void CObjAngleBullet::Action()
 				this->SetStatus(false);   //自身に削除命令を出す。
 				Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
 			}
-		
+	}
+	if (instituteboss != nullptr)
+	{
+
+		//移動
+		m_x += m_vx * m_speed;
+		m_y -= m_vy * m_speed;
+
+		//弾丸のHitBox更新用ポインター取得
+		CHitBox* hit = Hits::GetHitBox(this); //HitBoxの位置を弾丸の位置に更新
+		hit->SetPos(m_x + instituteboss->GetScroll(), m_y + instituteboss->GetScroll2());
+
+
+		//敵機が完全に領域外に出たら敵機を破棄する
+		bool check = CheckWindow(m_x, m_y, 0.0f, 0.0f, 3000.0f, 2500.0f);
+		if (check == false)
+		{
+			this->SetStatus(false);//自身に削除命令
+			Hits::DeleteHitBox(this);
+		}
+
+		//主人公機オブジェクトと接触したら弾丸削除
+		if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+		{
+			this->SetStatus(false);   //自身に削除命令を出す。
+			Hits::DeleteHitBox(this); //弾丸が所有するHitBoxに削除する。
+		}
+
 
 
 	}
@@ -124,6 +153,9 @@ void CObjAngleBullet::Draw()
 	//チャイナタウンBOSSの情報
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 
+	//研究所BOSSの情報
+	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);
+
 	if (rooftop != nullptr)
 	{
 		//表示位置の設定
@@ -142,6 +174,16 @@ void CObjAngleBullet::Draw()
 		dst.m_left = 0.0f + m_x + chinatownboss->GetScroll();
 		dst.m_right = 45.0f + m_x + chinatownboss->GetScroll();
 		dst.m_bottom = 32.0f + m_y + chinatownboss->GetScroll2();
+
+		Draw::Draw(3, &src, &dst, c, m_r);
+	}
+	if (instituteboss != nullptr)
+	{
+		//表示位置の設定
+		dst.m_top = 0.0f + m_y + instituteboss->GetScroll2();
+		dst.m_left = 0.0f + m_x + instituteboss->GetScroll();
+		dst.m_right = 45.0f + m_x + instituteboss->GetScroll();
+		dst.m_bottom = 32.0f + m_y + instituteboss->GetScroll2();
 
 		Draw::Draw(3, &src, &dst, c, m_r);
 	}
