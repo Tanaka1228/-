@@ -26,6 +26,8 @@ enum OBJ_NAME
 					OBJ_HEROINE,//ヒロイン
 					OBJ_GUN,//武器銃
 					OBJ_ASS_BULLET,//アサルトライフルの弾丸
+					OBJ_MAP,//各マップの全体図
+
 
 					//------マップ-------------------------------------------
 					OBJ_BLOCK,//拠点
@@ -188,6 +190,7 @@ struct UserData
 #include"ObjInstitute13.h"
 
 #include"CObjInstituteBossBoss.h"
+#include"ObjMap.h"
 
 //------------------------------------------------
 

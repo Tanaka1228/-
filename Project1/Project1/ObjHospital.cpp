@@ -301,21 +301,7 @@ void CObjHospital::Draw()
 
 	Draw::Draw(6, &src, &dst, c, 0.0f);//病院の床
 
-	if (map_flag2 == true)//マップ表示
-	{
-		//背景表示
-		src.m_top = 75.0f;   // Y
-		src.m_left = 105.0f;  // X
-		src.m_right = 700.0f; // X
-		src.m_bottom = 466.0f;// Y 
-
-		dst.m_top = 32.0f;
-		dst.m_left = 32.0f;
-		dst.m_right = 64.0f;
-		dst.m_bottom =64.0f;
-
-		Draw::Draw(8, &src, &dst, c, 0.0f);//病院の床
-	}
+	
 
 
 	if (m_sp == 1)//エンターキーを一回押したとき

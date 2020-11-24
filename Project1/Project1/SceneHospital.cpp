@@ -59,6 +59,10 @@ void CSceneHospital::InitScene()
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 2); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
+
+	CObjMap* objm = new CObjMap();//マップ図
+	Objs::InsertObj(objm, OBJ_MAP, 4);
+
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
 	Objs::InsertObj(objg, OBJ_GUN, 3);

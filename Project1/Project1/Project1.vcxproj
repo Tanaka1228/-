@@ -207,6 +207,7 @@
     <ClInclude Include="ObjInstituteBoss.h" />
     <ClInclude Include="ObjInstitute1.h" />
     <ClInclude Include="ObjMain.h" />
+    <ClInclude Include="ObjMap.h" />
     <ClInclude Include="ObjMenu.h" />
     <ClInclude Include="ObjOpeRoom.h" />
     <ClInclude Include="ObjRooftop.h" />
@@ -343,6 +344,7 @@
     <ClCompile Include="ObjInstitute1.cpp" />
     <ClCompile Include="ObjInstitute2.cpp" />
     <ClCompile Include="ObjMain.cpp" />
+    <ClCompile Include="ObjMap.cpp" />
     <ClCompile Include="ObjOpeRoom.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />
     <ClCompile Include="CObjRooftopBoss.cpp" />

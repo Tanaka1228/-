@@ -21,6 +21,9 @@ public:
 
 	void SetScroll2(float s) { my_scroll = s; }
 	float GetScroll2() { return my_scroll; }
+
+	bool GetMap() { return map_flag2; }
+
 private:
 	int m_map[26][50];//ƒ}ƒbƒvî•ñ(‰¼)
 
