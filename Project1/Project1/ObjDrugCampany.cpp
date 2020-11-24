@@ -487,6 +487,8 @@ void CObjDrugCampany::Draw()
 
 
 			}
+
+			
 		}
 	}
 }
