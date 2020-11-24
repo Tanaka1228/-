@@ -67,6 +67,10 @@ void CSceneChinaTown::InitScene()
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
 	Objs::InsertObj(objg, OBJ_GUN, 6);
+
+	//チャイナタウンオブジェクト作成
+	CObjChinaMob* objm = new CObjChinaMob(); //チャイナタウンモブオブジェクト作成
+	Objs::InsertObj(objm, OBJ_CHINA_MOB, 6); //作ったチャイナタウンオブジェクトをオブジェクトマネージャーに登録
 }
 
 
