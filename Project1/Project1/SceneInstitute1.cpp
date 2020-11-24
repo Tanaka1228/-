@@ -58,7 +58,7 @@ void CSceneInstitute1::InitScene()
 
 	//研究所オブジェクト作成
 	CObjInstitute1* obji = new CObjInstitute1(); //研究所オブジェクト作成
-	Objs::InsertObj(obji, OBJ_INSTITUTE1, 5); //作った研究所オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(obji, OBJ_INSTITUTE1,3); //作った研究所オブジェクトをオブジェクトマネージャーに登録
 }
 
 
