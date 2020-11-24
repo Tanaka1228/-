@@ -139,8 +139,14 @@
     <ClInclude Include="CObjAssBullet.h" />
     <ClInclude Include="CObjBullet.h" />
     <ClInclude Include="CObjBulletEnemy.h" />
+    <ClInclude Include="CObjChinaTownBossBoss.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="CObjHomingBullet.h" />
     <ClInclude Include="CObjHomingEnemy.h" />
+    <ClInclude Include="CObjInstituteBossBoss.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="CObjSinEnemy.h" />
     <ClInclude Include="ObjChinaTown.h" />
     <ClInclude Include="GameHead.h" />
@@ -148,39 +154,94 @@
     <ClInclude Include="ObjBlock.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjChinaTownBoss.h" />
     <ClInclude Include="ObjDiffusionEnemy.h" />
+    <ClInclude Include="ObjDrugCampany.h" />
+    <ClInclude Include="ObjDrugCampany2.h" />
+    <ClInclude Include="ObjDrugCampany3.h" />
+    <ClInclude Include="ObjDrugCampanyRoom1.h" />
+    <ClInclude Include="ObjDrugCampanyRoom2.h" />
+    <ClInclude Include="ObjDrugCampanyRoom3.h" />
+    <ClInclude Include="ObjDrugCampanyRoom4.h" />
+    <ClInclude Include="ObjDrugCampanyRoom5.h" />
     <ClInclude Include="ObjEnd.h" />
     <ClInclude Include="ObjEnemy.h" />
+    <ClInclude Include="ObjEventRoom.h" />
+    <ClInclude Include="ObjExRoom.h" />
     <ClInclude Include="ObjFin.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjGun.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjHeroine.h" />
+    <ClInclude Include="ObjHospital.h" />
+    <ClInclude Include="ObjHospital2.h" />
+    <ClInclude Include="ObjHospital3.h" />
+    <ClInclude Include="ObjInstitute.h" />
+    <ClInclude Include="ObjInstitute10.h" />
+    <ClInclude Include="ObjInstitute11.h" />
+    <ClInclude Include="ObjInstitute12.h" />
+    <ClInclude Include="ObjInstitute13.h" />
+    <ClInclude Include="ObjInstitute14.h" />
+    <ClInclude Include="ObjInstitute2.h" />
+    <ClInclude Include="ObjInstitute3.h" />
+    <ClInclude Include="ObjInstitute4.h" />
+    <ClInclude Include="ObjInstitute5.h" />
+    <ClInclude Include="ObjInstitute6.h" />
+    <ClInclude Include="ObjInstitute7.h" />
+    <ClInclude Include="ObjInstitute8.h" />
+    <ClInclude Include="ObjInstitute9.h" />
     <ClInclude Include="ObjInstituteBoss.h" />
+    <ClInclude Include="ObjInstitute1.h" />
     <ClInclude Include="ObjMain.h" />
     <ClInclude Include="ObjMenu.h" />
+    <ClInclude Include="ObjOpeRoom.h" />
     <ClInclude Include="ObjRooftop.h" />
-    <ClInclude Include="ObjStage.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="ObjTemplateRoom.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="CObjRooftopBoss.h" />
+    <ClInclude Include="ObjXRayRoom.h" />
     <ClInclude Include="SceneBlock.h" />
     <ClInclude Include="SceneChinaTown.h" />
+    <ClInclude Include="SceneChinaTownBoss.h" />
+    <ClInclude Include="SceneDrugCampany.h" />
+    <ClInclude Include="SceneDrugCampany2.h" />
+    <ClInclude Include="SceneDrugCampany3.h" />
+    <ClInclude Include="SceneDrugCampanyRoom1.h" />
+    <ClInclude Include="SceneDrugCampanyRoom2.h" />
+    <ClInclude Include="SceneDrugCampanyRoom3.h" />
+    <ClInclude Include="SceneDrugCampanyRoom4.h" />
+    <ClInclude Include="SceneDrugCampanyRoom5.h" />
     <ClInclude Include="SceneEnd.h" />
+    <ClInclude Include="SceneEventRoom.h" />
+    <ClInclude Include="SceneExRoom.h" />
     <ClInclude Include="SceneFin.h" />
     <ClInclude Include="SceneGameOver.h" />
+    <ClInclude Include="SceneHospital.h" />
+    <ClInclude Include="SceneHospital2.h" />
+    <ClInclude Include="SceneHospital3.h" />
+    <ClInclude Include="SceneInstitute.h" />
+    <ClInclude Include="SceneInstitute10.h" />
+    <ClInclude Include="SceneInstitute11.h" />
+    <ClInclude Include="SceneInstitute12.h" />
+    <ClInclude Include="SceneInstitute13.h" />
+    <ClInclude Include="SceneInstitute14.h" />
+    <ClInclude Include="SceneInstitute3.h" />
+    <ClInclude Include="SceneInstitute4.h" />
+    <ClInclude Include="SceneInstitute5.h" />
+    <ClInclude Include="SceneInstitute6.h" />
+    <ClInclude Include="SceneInstitute7.h" />
+    <ClInclude Include="SceneInstitute8.h" />
+    <ClInclude Include="SceneInstitute9.h" />
     <ClInclude Include="SceneInstituteBoss.h" />
+    <ClInclude Include="SceneInstitute1.h" />
     <ClInclude Include="SceneMain.h" />
+    <ClInclude Include="SceneOpeRoom.h" />
     <ClInclude Include="SceneRooftop.h" />
-    <ClInclude Include="SceneStage.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="SceneTemplateRoom.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="ObjTitleBackground.h" />
-    <ClInclude Include="SceneTyainataun.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="SceneXRayRoom.h" />
+    <ClInclude Include="SceneInstitute2.h" />
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
   <ItemGroup>
@@ -200,8 +261,14 @@
     <ClCompile Include="CObjAssBullet.cpp" />
     <ClCompile Include="CObjBullet.cpp" />
     <ClCompile Include="CObjBulletEnemy.cpp" />
+    <ClCompile Include="CObjChinaTownBossBoss.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CObjHomingBullet.cpp" />
     <ClCompile Include="CObjHomingEnemy.cpp" />
+    <ClCompile Include="CObjInstituteBossBoss.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CObjSinEnemy.cpp" />
     <ClCompile Include="ObjChinaTown.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
@@ -209,39 +276,94 @@
     <ClCompile Include="ObjBlock.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ObjChinaTownBoss.cpp" />
     <ClCompile Include="ObjDiffusionEnemy.cpp" />
+    <ClCompile Include="ObjDrugCampany.cpp" />
+    <ClCompile Include="ObjDrugCampany2.cpp" />
+    <ClCompile Include="ObjDrugCampany3.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom1.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom2.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom3.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom4.cpp" />
+    <ClCompile Include="ObjDrugCampanyRoom5.cpp" />
     <ClCompile Include="ObjEnd.cpp" />
+    <ClCompile Include="ObjEventRoom.cpp" />
+    <ClCompile Include="ObjExRoom.cpp" />
     <ClCompile Include="ObjFin.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjGun.cpp" />
     <ClCompile Include="ObjHeroine.cpp" />
+    <ClCompile Include="ObjHospital.cpp" />
+    <ClCompile Include="ObjHospital2.cpp" />
+    <ClCompile Include="ObjHospital3.cpp" />
+    <ClCompile Include="ObjInstitute.cpp" />
+    <ClCompile Include="ObjInstitute10.cpp" />
+    <ClCompile Include="ObjInstitute11.cpp" />
+    <ClCompile Include="ObjInstitute12.cpp" />
+    <ClCompile Include="ObjInstitute13.cpp" />
+    <ClCompile Include="ObjInstitute14.cpp" />
+    <ClCompile Include="ObjInstitute3.cpp" />
+    <ClCompile Include="ObjInstitute4.cpp" />
+    <ClCompile Include="ObjInstitute5.cpp" />
+    <ClCompile Include="ObjInstitute6.cpp" />
+    <ClCompile Include="ObjInstitute7.cpp" />
+    <ClCompile Include="ObjInstitute8.cpp" />
+    <ClCompile Include="ObjInstitute9.cpp" />
     <ClCompile Include="ObjInstituteBoss.cpp" />
+    <ClCompile Include="ObjInstitute1.cpp" />
+    <ClCompile Include="ObjInstitute2.cpp" />
     <ClCompile Include="ObjMain.cpp" />
+    <ClCompile Include="ObjOpeRoom.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />
     <ClCompile Include="CObjRooftopBoss.cpp" />
+    <ClCompile Include="ObjTemplateRoom.cpp" />
+    <ClCompile Include="ObjXRayRoom.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
     <ClCompile Include="SceneChinaTown.cpp" />
+    <ClCompile Include="SceneChinaTownBoss.cpp" />
+    <ClCompile Include="SceneDrugCampany.cpp" />
+    <ClCompile Include="SceneDrugCampany2.cpp" />
+    <ClCompile Include="SceneDrugCampany3.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom1.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom2.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom3.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom4.cpp" />
+    <ClCompile Include="SceneDrugCampanyRoom5.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="ObjMenu.cpp" />
+    <ClCompile Include="SceneEventRoom.cpp" />
+    <ClCompile Include="SceneExRoom.cpp" />
     <ClCompile Include="SceneFin.cpp" />
     <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjHero.cpp" />
-    <ClCompile Include="ObjStage.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="ObjTitle.cpp" />
+    <ClCompile Include="SceneHospital.cpp" />
+    <ClCompile Include="SceneHospital2.cpp" />
+    <ClCompile Include="SceneHospital3.cpp" />
+    <ClCompile Include="SceneInstitute.cpp" />
+    <ClCompile Include="SceneInstitute11.cpp" />
+    <ClCompile Include="SceneInstitute12.cpp" />
+    <ClCompile Include="SceneInstitute13.cpp" />
+    <ClCompile Include="SceneInstitute14.cpp" />
+    <ClCompile Include="SceneInstitute2.cpp" />
+    <ClCompile Include="SceneInstitute3.cpp" />
+    <ClCompile Include="SceneInstitute4.cpp" />
     <ClCompile Include="SceneInstituteBoss.cpp" />
+    <ClCompile Include="SceneInstitute1.cpp" />
+    <ClCompile Include="SceneInstitute10.cpp" />
+    <ClCompile Include="SceneInstitute5.cpp" />
+    <ClCompile Include="SceneInstitute6.cpp" />
+    <ClCompile Include="SceneInstitute7.cpp" />
+    <ClCompile Include="SceneInstitute8.cpp" />
+    <ClCompile Include="SceneInstitute9.cpp" />
     <ClCompile Include="SceneMain.cpp" />
+    <ClCompile Include="SceneOpeRoom.cpp" />
     <ClCompile Include="SceneRooftop.cpp" />
+    <ClCompile Include="SceneTemplateRoom.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
-    <ClCompile Include="SceneStage.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="ObjTitleBackground.cpp" />
-    <ClCompile Include="SceneTyainataun.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="SceneXRayRoom.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

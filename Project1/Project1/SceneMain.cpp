@@ -79,43 +79,43 @@ void CSceneMain::InitScene()
 //ゲームメイン実行中メソッド
 void CSceneMain::Scene()
 {
-	m_time++;
+	//m_time++;
 
-	if (m_time == 100)
-	{
-		//Sin敵機オブジェクト作成
-		CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
-		Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
-	}
-	else if (m_time == 150)
-	{
-		//Sin敵機オブジェクト作成
-		CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
-		Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
-	}
-	else if (m_time == 200)
-	{
-		//攻撃する敵機オブジェクト作成
-		CObjAttackEnemy* obj_attack_enemy = new CObjAttackEnemy(700, 220); //攻撃する敵機オブジェクト作成
-		Objs::InsertObj(obj_attack_enemy, OBJ_ATTACK_ENEMY, 3); //攻撃する敵機オブジェクトをオブジェクトマネージャーに登録
-	}
-	else if (m_time == 300)
-	{
-		//拡散敵機オブジェクト作成
-		CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(700, 300); //Sin敵機オブジェクト作成
-		Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
-	}
-	else if (m_time == 400)
-	{
-		//誘導敵機オブジェクト作成
-		CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(100, 50); //誘導敵機オブジェクト作成
-		Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 3); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
-	}
-	
-	if (Input::GetVKey('X') == true)
-	{
-		//メニューオブジェクト作成
-		CObjMenu* obj_menu = new CObjMenu(); //メニューオブジェクト作成
-		Objs::InsertObj(obj_menu, OBJ_HOMING_ENEMY, 14); //メニューオブジェクトをオブジェクトマネージャーに登録
-	}
+	//if (m_time == 100)
+	//{
+	//	//Sin敵機オブジェクト作成
+	//	CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
+	//	Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+	//}
+	//else if (m_time == 150)
+	//{
+	//	//Sin敵機オブジェクト作成
+	//	CObjSinEnemy* obj_sin_enemy = new CObjSinEnemy(700, 300); //Sin敵機オブジェクト作成
+	//	Objs::InsertObj(obj_sin_enemy, OBJ_SIN_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+	//}
+	//else if (m_time == 200)
+	//{
+	//	//攻撃する敵機オブジェクト作成
+	//	CObjAttackEnemy* obj_attack_enemy = new CObjAttackEnemy(700, 220); //攻撃する敵機オブジェクト作成
+	//	Objs::InsertObj(obj_attack_enemy, OBJ_ATTACK_ENEMY, 3); //攻撃する敵機オブジェクトをオブジェクトマネージャーに登録
+	//}
+	//else if (m_time == 300)
+	//{
+	//	//拡散敵機オブジェクト作成
+	//	CObjDiffusionEnemy* obj_diffusion_enemy = new CObjDiffusionEnemy(700, 300); //Sin敵機オブジェクト作成
+	//	Objs::InsertObj(obj_diffusion_enemy, OBJ_DIFFUSION_ENEMY, 3); //Sin敵機オブジェクトをオブジェクトマネージャーに登録
+	//}
+	//else if (m_time == 400)
+	//{
+	//	//誘導敵機オブジェクト作成
+	//	CObjHomingEnemy* obj_homing_enemy = new CObjHomingEnemy(100, 50); //誘導敵機オブジェクト作成
+	//	Objs::InsertObj(obj_homing_enemy, OBJ_HOMING_ENEMY, 3); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+	//}
+	//
+	//if (Input::GetVKey('X') == true)
+	//{
+	//	//メニューオブジェクト作成
+	//	CObjMenu* obj_menu = new CObjMenu(); //メニューオブジェクト作成
+	//	Objs::InsertObj(obj_menu, OBJ_HOMING_ENEMY, 14); //メニューオブジェクトをオブジェクトマネージャーに登録
+	//}
 }

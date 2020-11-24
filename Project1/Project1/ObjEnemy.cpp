@@ -6,6 +6,7 @@
 #include"ObjEnemy.h"
 #include"UtilityModule.h"
 
+
 //使用するネームスペース
 using namespace GameL;
 
@@ -71,6 +72,7 @@ void CObjEnemy::Action()
 //ドロー
 void CObjEnemy::Draw()
 {
+
 	//描画カラー情報　R=RED G=Green B=Blue A=alpha(透過情報)
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
@@ -83,14 +85,14 @@ void CObjEnemy::Draw()
 	src.m_right = 139.0f; //x
 	src.m_bottom = 131.0f; //y
 
-	//病院の屋上の情報
-	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
+	//研究所ボス戦フィールドの情報
+	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);
 
 	//表示位置の設定
-	dst.m_top = 0.0f+m_y+rooftop->GetScroll2();
-	dst.m_left = 32.0f + 10.0f +m_x+rooftop->GetScroll();
-	dst.m_right = 0.0f+m_x + rooftop->GetScroll();
-	dst.m_bottom = 32.0f+10.0f+m_y + rooftop->GetScroll2();
+	dst.m_top = 0.0f+m_y+instituteboss->GetScroll2();
+	dst.m_left = 32.0f + 10.0f +m_x+instituteboss->GetScroll();
+	dst.m_right = 0.0f+m_x + instituteboss->GetScroll();
+	dst.m_bottom = 32.0f+10.0f+m_y + instituteboss->GetScroll2();
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(1, &src, &dst, c, 0.0f);

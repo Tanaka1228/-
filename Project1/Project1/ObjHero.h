@@ -19,6 +19,7 @@ public:
 	
 	float GetX2() { return m_x; }   //位置情報X2取得用　当たり判定
 	float GetY2() { return m_y; }   //位置情報Y2取得用
+	  //位置情報Y2取得用
 	float GetVX() { return m_vx; }   //位置情報VX取得用
 	float GetVY() { return m_vy; }   //位置情報VY取得用
 
@@ -35,6 +36,11 @@ public:
 	void SetDown(bool b) { m_hit_down = b; }
 	void SetLeft(bool b) { m_hit_left = b; }
 	void SetRight(bool b) { m_hit_right = b; }
+
+	bool GetUp() { return m_hit_up; }
+	bool GetDown() { return m_hit_down; }
+	bool GetLeft() { return m_hit_left; }
+	bool GetRight(){ return m_hit_right; }
 
 	float GetB();//弾丸の向き
 	int Get_Gun() { return m_gun; }//銃を構えているか構えていないかを返す

@@ -62,7 +62,7 @@ void CSceneRooftop::InitScene()
 
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
-	Objs::InsertObj(objg, OBJ_GUN, 4);
+	Objs::InsertObj(objg, OBJ_GUN, 5);
 }
 
 

@@ -28,7 +28,7 @@ void CObjRooftopBoss::Init()
 
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 232, 232, ELEMENT_ENEMY, OBJ_ROOF_TOP_BOSS, 1);
+	Hits::SetHitBox(this, m_x, m_y, 232, 100, ELEMENT_ENEMY, OBJ_ROOF_TOP_BOSS, 1);
 }
 
 //アクション
@@ -86,7 +86,7 @@ void CObjRooftopBoss::Action()
 
 
 	//ホーミング敵機が完全に領域外に出たら敵機を破棄する
-	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 1700.0f, 705.0f);
+	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 2655.0f, 1057.0f);
 	if (check == false)
 	{
 		this->SetStatus(false);//自身に削除命令
@@ -105,8 +105,8 @@ void CObjRooftopBoss::Action()
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
-		Sleep(1000);
-		Scene::SetScene(new CSceneFin());
+		Sleep(400);
+		//Scene::SetScene(new CSceneFin());
 	}
 }
 

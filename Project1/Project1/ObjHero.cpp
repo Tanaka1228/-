@@ -61,7 +61,7 @@ void CObjHero::Init()
 	m_ani_time=0; //アニメーションフレーム動作間隔
     m_ani_frame=2; //描画フレーム
 
-	m_hp = 30;//主人公のHP
+	m_hp = 10;//主人公のHP
 	//--------------------------------------------------------------------
 	m_f = true; //弾丸発射制御
 	m_ass_f = true;
@@ -525,16 +525,7 @@ void CObjHero::Action()
 			m_vx -= m_x;
 		}
 		
-		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
-		{
-			if (m_gun == 1)
-			{
-				m_x -= 3.0f;
-				m_vx -= m_x;
-			}
-			m_x += 5.0f;
-			m_vx += m_x;
-		}
+		
 	}
 
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
@@ -549,16 +540,7 @@ void CObjHero::Action()
 			m_vx -= m_x;
 		}
 		
-		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
-		{
-			if (m_gun == 1)
-			{
-				m_x += 3.0f;
-				m_vx += m_x;
-			}
-			m_x -= 5.0f;
-			m_vx -= m_x;
-		}
+		
 	}
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
@@ -571,17 +553,7 @@ void CObjHero::Action()
 			m_y += 2;
 			m_vy -= m_y;
 		}
-		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
-		{
-			if (m_gun == 1)
-			{
-				m_y += 3.0f;
-				m_vy += m_y;
-			}
-			m_y -= 5.0f;
-			m_vy -= m_y;
-		}
-
+	
 	}
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
@@ -594,16 +566,6 @@ void CObjHero::Action()
 			m_vy -= m_y;
 		}
 		
-		if (Input::GetVKey(VK_SHIFT) == true)//走る処理
-		{
-			if (m_gun == 1)
-			{
-				m_y -= 3.0f;
-				m_vy -= m_y;
-			}
-			m_y += 5.0f;
-			m_vy += m_y;
-		}
 	}
 
 	//移動ベクトルの正規化
