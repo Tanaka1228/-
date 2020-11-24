@@ -12,24 +12,24 @@ using namespace GameL;
 
 //使用するヘッダー
 #include"GameHead.h"
-#include "SceneDrugCampanyRoom5.h"
+#include "SceneDrugCampanyRoom8.h"
 
 
 
 //コンストラクタ
-CSceneDrugCampanyRoom5::CSceneDrugCampanyRoom5()
+CSceneDrugCampanyRoom8::CSceneDrugCampanyRoom8()
 {
 }
 
 //デストラクタ
-CSceneDrugCampanyRoom5::~CSceneDrugCampanyRoom5()
+CSceneDrugCampanyRoom8::~CSceneDrugCampanyRoom8()
 {
 }
 
 
 
 //ゲームステージ初期化メソッド
-void CSceneDrugCampanyRoom5::InitScene()
+void CSceneDrugCampanyRoom8::InitScene()
 {
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
@@ -40,10 +40,8 @@ void CSceneDrugCampanyRoom5::InitScene()
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"弾丸＿右.png", 3, TEX_SIZE_512);//弾丸グラフィック
 
-	
-
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"社長室.png", 4, TEX_SIZE_512);//グラフィック
+	Draw::LoadImage(L"製薬会社.png", 4, TEX_SIZE_512);//グラフィック
 
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"製薬会社　床.png", 5, TEX_SIZE_512);//グラフィック
@@ -57,12 +55,12 @@ void CSceneDrugCampanyRoom5::InitScene()
 	Objs::InsertObj(objg, OBJ_GUN, 5);
 
 	//製薬会社オブジェクト作成
-	CObjDrugCampanyRoom5* objd = new CObjDrugCampanyRoom5(); //製薬会社オブジェクト作成
-	Objs::InsertObj(objd, OBJ_DRUG_CAMPANY_ROOM5, 3); //作った製薬会社オブジェクトをオブジェクトマネージャーに登録
+	CObjDrugCampanyRoom8* objd = new CObjDrugCampanyRoom8(); //製薬会社オブジェクト作成
+	Objs::InsertObj(objd, OBJ_DRUG_CAMPANY_ROOM8, 3); //作った製薬会社オブジェクトをオブジェクトマネージャーに登録
 }
 
 
 //ゲームステージ実行中メソッド
-void CSceneDrugCampanyRoom5::Scene()
+void CSceneDrugCampanyRoom8::Scene()
 {
 }
