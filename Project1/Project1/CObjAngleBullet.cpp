@@ -38,7 +38,7 @@ void CObjAngleBullet::Action()
 	//チャイナタウンBOSSの情報
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 	//研究所BOSSの情報
-	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_Institute_Boss);
+	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);
 
 	if (rooftop != nullptr)
 	{
