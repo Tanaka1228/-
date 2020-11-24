@@ -217,7 +217,7 @@ void CObjRooftop::Action()
 
 	for (int i = 0; i < 38; i++)
 	{
-		for (int j = 0; j < 83; j++)
+		//for (int j = 0; j < 83; j++)
 		
 			if (m_map[i][ex] == 15)
 			{
