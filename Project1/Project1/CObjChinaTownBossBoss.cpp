@@ -38,6 +38,7 @@ void CObjChinaTownBossBoss::Action()
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 
 
+	m_timeboss++;
 	if (m_timeboss > 100)
 	{
 		m_timeboss = 0;
@@ -113,13 +114,13 @@ void CObjChinaTownBossBoss::Draw()
 	//切り取り位置の設定
 	src.m_top = 0.0f; //y
 	src.m_left = 0.0f; //x
-	src.m_right = 60.0f; //x
-	src.m_bottom = 95.0f; //y
+	src.m_right = 131.0f; //x
+	src.m_bottom = 139.0f; //y
 
 	dst.m_top = 0.0f + m_y + chinatownboss->GetScroll2();
-	dst.m_left = 32.0f + 200.0f + m_x + chinatownboss->GetScroll();
+	dst.m_left = 32.0f + 500.0f + m_x + chinatownboss->GetScroll();
 	dst.m_right = 0.0f + m_x + chinatownboss->GetScroll();
-	dst.m_bottom = 32.0f + 200.0f + m_y + chinatownboss->GetScroll2();
+	dst.m_bottom = 32.0f + 500.0f + m_y + chinatownboss->GetScroll2();
 
 	//0番目に登録したグラフィックをstc・dst・cの情報を元に描画
 	Draw::Draw(1, &src, &dst, c, 0.0f);
