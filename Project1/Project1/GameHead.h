@@ -27,7 +27,7 @@ enum OBJ_NAME
 					OBJ_GUN,//武器銃
 					OBJ_ASS_BULLET,//アサルトライフルの弾丸
 					OBJ_MAP,//各マップの全体図
-
+					OBJ_CHINA_MOB,//チャイナタウンのモブ
 
 					//------マップ-------------------------------------------
 					OBJ_BLOCK,//拠点
@@ -192,6 +192,8 @@ struct UserData
 #include"CObjInstituteBossBoss.h"
 #include"ObjMap.h"
 
+#include"ObjChinaMob.h"
+
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -252,5 +254,6 @@ struct UserData
 //#define SET_GAME_START CSceneFin
 //#define SET_GAME_START CSceneMain
 //#define SET_GAME_START CSceneStage
-//#define SET_GAME_START CSceneTemplateRoom
+//#define SET_GAME_START CSceneHospital
+
 //-----------------------------------------------

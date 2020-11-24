@@ -56,6 +56,7 @@ void CObjHospital::Init()
 	key_flag = 1;
 	m_key_control = true;
 	map_flag = true;
+	map_flag2 = false;
 }
 //アクション
 void CObjHospital::Action()
@@ -264,14 +265,14 @@ void CObjHospital::Action()
 
 			
 			map_flag2 = true;
+			map_flag = false;
 			
 		}
-		map_flag = false;
-
 	}
 	else
 	{
 		map_flag = true;
+		map_flag2 = false;
 	}
 }
 //ドロー
@@ -300,8 +301,6 @@ void CObjHospital::Draw()
 	dst.m_bottom = 800.0f+ my_scroll;
 
 	Draw::Draw(6, &src, &dst, c, 0.0f);//病院の床
-
-	
 
 
 	if (m_sp == 1)//エンターキーを一回押したとき

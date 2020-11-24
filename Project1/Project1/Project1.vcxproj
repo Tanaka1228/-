@@ -152,6 +152,7 @@
     <ClInclude Include="CObjSinEnemy.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjChinaMob.h" />
     <ClInclude Include="ObjChinaTown.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="ObjAttackEnemy.h">
@@ -293,6 +294,7 @@
     <ClCompile Include="CObjSinEnemy.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ObjChinaMob.cpp" />
     <ClCompile Include="ObjChinaTown.cpp" />
     <ClCompile Include="GameL\GameL_Main.cpp" />
     <ClCompile Include="ObjAttackEnemy.cpp">

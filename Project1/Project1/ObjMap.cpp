@@ -48,27 +48,68 @@ void CObjMap::Draw()
 
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjHospital* hospital = (CObjHospital*)Objs::GetObj(OBJ_HOSPITAL);
+	CObjHospital2* hospital2 = (CObjHospital2*)Objs::GetObj(OBJ_HOSPITAL2);
+	CObjHospital3* hospital3 = (CObjHospital3*)Objs::GetObj(OBJ_HOSPITAL3);
 
 	if (hospital != nullptr)
 	{
 		if (hospital->GetMap() == true)
 		{
+
 			//îwåiï\é¶
-			src.m_top = 75.0f;   // Y
-			src.m_left = 105.0f;  // X
-			src.m_right = 700.0f; // X
-			src.m_bottom = 466.0f;// Y 
+			src.m_top = 10.0f;   // Y
+			src.m_left = 11.0f;  // X
+			src.m_right = 220.0f; // X
+			src.m_bottom =165.0f;// Y 
 
-			dst.m_top = 32.0f;
-			dst.m_left = 32.0f;
-			dst.m_right = 64.0f+64.0f;
-			dst.m_bottom = 64.0f+64.0f;
+			dst.m_top = 100.0f;
+			dst.m_left = 100.0f;
+			dst.m_right = 350.0f+0.0f;
+			dst.m_bottom = 300.0f+0.0f;
 
-			Draw::Draw(8, &src, &dst, c, 0.0f);//ïaâ@ÇÃè∞
+			Draw::Draw(1, &src, &dst, c, 0.0f);//ïaâ@ÇÃè∞
 		}
 
 	}
+	if (hospital2 != nullptr)
+	{
+		if (hospital2->GetMap() == true)
+		{
 
+			//îwåiï\é¶
+			src.m_top = 15.0f;   // Y
+			src.m_left = 254.0f;  // X
+			src.m_right = 461.0f; // X
+			src.m_bottom = 170.0f;// Y 
 
+			dst.m_top = 100.0f;
+			dst.m_left = 100.0f;
+			dst.m_right = 350.0f + 0.0f;
+			dst.m_bottom = 300.0f + 0.0f;
+
+			Draw::Draw(1, &src, &dst, c, 0.0f);//ïaâ@ÇÃè∞
+		}
+
+	}
+	if (hospital3 != nullptr)
+	{
+		if (hospital3->GetMap() == true)
+		{
+
+			//îwåiï\é¶
+			src.m_top = 18.0f;   // Y
+			src.m_left =502.0f;  // X
+			src.m_right = 739.0f; // X
+			src.m_bottom =164.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 100.0f;
+			dst.m_right = 350.0f + 0.0f;
+			dst.m_bottom = 300.0f + 0.0f;
+
+			Draw::Draw(1, &src, &dst, c, 0.0f);//ïaâ@ÇÃè∞
+		}
+
+	}
 
 }
