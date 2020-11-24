@@ -91,6 +91,9 @@
     <Filter Include="ソース ファイル\StageMap\シーンマップ">
       <UniqueIdentifier>{f49c20fa-7397-4033-8314-54abc818c644}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Character\チャイナタウンのモブ">
+      <UniqueIdentifier>{9fc5bc1d-454a-4960-8fae-fef84638c79a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -465,6 +468,9 @@
     <ClInclude Include="ObjMap.h">
       <Filter>ソース ファイル\StageMap\シーンマップ</Filter>
     </ClInclude>
+    <ClInclude Include="ObjChinaMob.h">
+      <Filter>ソース ファイル\Character\チャイナタウンのモブ</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -838,6 +844,9 @@
     </ClCompile>
     <ClCompile Include="ObjMap.cpp">
       <Filter>ソース ファイル\StageMap\シーンマップ</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaMob.cpp">
+      <Filter>ソース ファイル\Character\チャイナタウンのモブ</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
