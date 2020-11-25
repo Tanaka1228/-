@@ -339,20 +339,9 @@ void CObjHospital::Draw()
 	}
 	if (m_sp==2)//エンターキーを一回押したとき
 	{
+		Font::StrDraw(L"", 200.0f, 70, 25, c);// X  Y  大きさ     
 
-		ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
-		char str1[64];//ただの配列
-		wchar_t wstr1[64];
-		fin.seekg(24, ios::cur);//0バイト数進める
-		fin >> str1;//str1にテキストを入れる
-
-		sprintf_s(str1, "%s", str1);//出力
-		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-		Font::StrDraw(wstr1, 140.0f, 55, 25, c);// X  Y  大きさ     
-
-		key_flag = 3;
-
-		fin.close();//ファイルを閉じる
+		key_flag = 1;
 	}
 
 	//マップチップによるblock設置
