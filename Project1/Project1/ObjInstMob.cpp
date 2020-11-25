@@ -42,7 +42,7 @@ void CObjInstMob::Action()
 	//------------------研究所1階の会話フラグ-----------------------
 	if (inst != nullptr)
 	{
-		if (hero->GetBT() == 36)//この数字には研究所で設定したモブの番号を
+		if (hero->GetBT() == 73)//この数字には研究所で設定したモブの番号を
 		{
 			mob_flag = 1;//モブ一体目のフラグ
 			if (Input::GetVKey(VK_RETURN) == true) {
@@ -152,7 +152,7 @@ void CObjInstMob::Action()
 	//----------地下2階の会話フラグ----------------------------------
 	if (inst13 != nullptr)
 	{
-		if (hero->GetBT() == 99)//主人公が数字(ブロック)に触れていれば
+		if (hero->GetBT() == 66)//主人公が数字(ブロック)に触れていれば
 		{
 			mob_flag = 1;
 
@@ -279,15 +279,33 @@ void CObjInstMob::Draw()
 		{
 			sp_flag == true;
 
-			ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み------------------〇
-			char str1[64];//ただの配列----------文字数が多くなったら要素数を変えてよい
+			ifstream fin("研究所の会話.txt", ios::in);//テキストデータをを読み込み------------------〇
+			char str1[100];//ただの配列----------文字数が多くなったら要素数を変えてよい
+			wchar_t wstr1[100];
+			fin.seekg(0, ios::cur);//0バイト数進める-----------〇------------------
+			fin >> str1;//str1にテキストを入れる
+
+			sprintf_s(str1, "%s", str1);//出力
+			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 100, wstr1, 100);//文字をユニコードに変換する
+			Font::StrDraw(wstr1, 50.0f, 470, 30, c);// X  Y  大きさ     ---------------〇-------------------
+
+
+			key_flag = 2;
+			fin.close();//ファイルを閉じる
+		}
+		if (m_sp == 1)//エンターキーを一回押したとき
+		{
+			sp_flag == true;
+
+			ifstream fin("研究所の会話.txt", ios::in);//テキストデータをを読み込み
+			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(24, ios::cur);//0バイト数進める-----------〇------------------
+			fin.seekg(50, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
 			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 50.0f, 500, 30, c);// X  Y  大きさ     ---------------〇-------------------
+			Font::StrDraw(wstr1, 250.0f, 500, 30, c);// X  Y  大きさ     
 
 
 			key_flag = 2;
@@ -297,33 +315,15 @@ void CObjInstMob::Draw()
 		{
 			sp_flag == true;
 
-			ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
+			ifstream fin("研究所の会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(74, ios::cur);//0バイト数進める
+			fin.seekg(70, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
 			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
-
-
-			key_flag = 3;
-			fin.close();//ファイルを閉じる
-		}
-		if (m_sp == 2)//エンターキーを一回押したとき
-		{
-			sp_flag == true;
-
-			ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
-			char str1[64];//ただの配列
-			wchar_t wstr1[64];
-			fin.seekg(130, ios::cur);//0バイト数進める
-			fin >> str1;//str1にテキストを入れる
-
-			sprintf_s(str1, "%s", str1);//出力
-			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 200.0f, 530, 25, c);// X  Y  大きさ     
+			Font::StrDraw(wstr1, 50.0f, 470, 30, c);// X  Y  大きさ     
 
 
 			key_flag = 3;
@@ -342,7 +342,7 @@ void CObjInstMob::Draw()
 		{
 			sp_flag == true;
 
-			ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
+			ifstream fin("研究所の会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
 			fin.seekg(162, ios::cur);//0バイト数進める
@@ -360,7 +360,7 @@ void CObjInstMob::Draw()
 		{
 			sp_flag == true;
 
-			ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
+			ifstream fin("研究所の会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
 			fin.seekg(222, ios::cur);//0バイト数進める
@@ -378,7 +378,7 @@ void CObjInstMob::Draw()
 		{
 			sp_flag == true;
 
-			ifstream fin("病院1階.txt", ios::in);//テキストデータをを読み込み
+			ifstream fin("研究所の会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[100];//ただの配列
 			wchar_t wstr1[100];
 			fin.seekg(260, ios::cur);//0バイト数進める
@@ -406,15 +406,15 @@ void CObjInstMob::Draw()
 		{
 			sp_flag == true;
 
-			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
+			ifstream fin("研究所の会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(0, ios::cur);//0バイト数進める
+			fin.seekg(118, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
 			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 50.0f, 500, 30, c);// X  Y  大きさ     
+			Font::StrDraw(wstr1, 40.0f, 500, 30, c);// X  Y  大きさ     
 
 
 			key_flag = 2;
@@ -424,73 +424,27 @@ void CObjInstMob::Draw()
 		{
 			sp_flag == true;
 
-			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
+			ifstream fin("研究所の会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(18, ios::cur);//0バイト数進める
+			fin.seekg(170, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
 			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
+			Font::StrDraw(wstr1, 50.0f, 500, 30, c);// X  Y  大きさ     
 
 
 			key_flag = 3;
 			fin.close();//ファイルを閉じる
 		}
-		if (m_sp == 2)//エンターキーを一回押したとき
-		{
-			sp_flag == true;
-
-			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
-			char str1[64];//ただの配列
-			wchar_t wstr1[64];
-			fin.seekg(66, ios::cur);//0バイト数進める
-			fin >> str1;//str1にテキストを入れる
-
-			sprintf_s(str1, "%s", str1);//出力
-			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 50.0f, 530, 25, c);// X  Y  大きさ     
-
-
-			key_flag = 3;
-			fin.close();//ファイルを閉じる
-		}
+	
 		if (m_sp == 3)//エンターキーを一回押したとき
 		{
-			sp_flag == true;
+			
+			Font::StrDraw(L"", 50.0f, 500, 25, c);// X  Y  大きさ     
 
-			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
-			char str1[64];//ただの配列
-			wchar_t wstr1[64];
-			fin.seekg(110, ios::cur);//0バイト数進める
-			fin >> str1;//str1にテキストを入れる
-
-			sprintf_s(str1, "%s", str1);//出力
-			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
-
-
-
-			fin.close();//ファイルを閉じる
-		}
-		if (m_sp == 4)//エンターキーを一回押したとき
-		{
-			sp_flag == true;
-
-			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
-			char str1[64];//ただの配列
-			wchar_t wstr1[64];
-			fin.seekg(158, ios::cur);//0バイト数進める
-			fin >> str1;//str1にテキストを入れる
-
-			sprintf_s(str1, "%s", str1);//出力
-			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
-
-
-
-			fin.close();//ファイルを閉じる
+			key_flag = 1;
 		}
 	}
 	//----------------------------------------------------------------------------------------
