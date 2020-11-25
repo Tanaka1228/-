@@ -5,11 +5,11 @@
 using namespace GameL;
 
 //オブジェクト : 敵機
-class CObjInstMob : public CObj
+class CObjHosMob : public CObj
 {
 public:
-	CObjInstMob();//コンストラクタ位置情報	をもらう
-	~CObjInstMob() {};
+	CObjHosMob();//コンストラクタ位置情報	をもらう
+	~CObjHosMob() {};
 	void Init(); //イニシャライズ
 	void Action(); //アクション
 	void Draw(); //ドロー
