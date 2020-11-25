@@ -17,8 +17,7 @@ private:
 	int m_sp;//会話
 	int key_flag;//会話のフラグ
 	int mob_flag;//ケビン,マイケル、トーマス
-	int mob_flag1;//ケビン,マイケル、トーマス
-	int mob_flag2;//ケビン,マイケル、トーマス
+
 	
 	bool sp_flag;//会話のグラフィックのフラグ
 
