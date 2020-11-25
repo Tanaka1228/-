@@ -489,6 +489,18 @@
     <ClInclude Include="ObjHosMob.h">
       <Filter>ソース ファイル\Character\病院のモブ</Filter>
     </ClInclude>
+    <ClInclude Include="ObjChinaTown_c.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaTown_c.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjChinaTown_d.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaTown_d.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -874,6 +886,18 @@
     </ClCompile>
     <ClCompile Include="ObjHosMob.cpp">
       <Filter>ソース ファイル\Character\病院のモブ</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTown_c.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaTown_c.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTown_d.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaTown_d.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
