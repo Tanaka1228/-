@@ -220,7 +220,7 @@ void CObjChinaMob::Draw()
 			key_flag = 2;
 			fin.close();//ファイルを閉じる
 		}
-		if (m_sp == 2)//エンターキーを一回押したとき
+		if (m_sp == 2)//エンターキーを2回押したとき
 		{
 			sp_flag == true;
 
@@ -238,10 +238,16 @@ void CObjChinaMob::Draw()
 			key_flag = 3;
 			fin.close();//ファイルを閉じる
 		}
+		if (m_sp == 3)//エンターキーを3回押したとき
+		{
+			
+			Font::StrDraw(L"", 50.0f, 500, 25, c);// X  Y  大きさ     
+
+			key_flag = 1;
+		}
 	}
 
 	if (chinatownboss != nullptr)
-		CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 	{
 		if (m_sp == 1)//エンターキーを一回押したとき
 		{
