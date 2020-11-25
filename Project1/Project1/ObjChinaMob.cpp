@@ -396,7 +396,7 @@ void CObjChinaMob::Draw()
 				ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 				char str1[64];//ただの配列
 				wchar_t wstr1[64];
-				fin.seekg(18, ios::cur);//0バイト数進める
+				fin.seekg(188, ios::cur);//0バイト数進める
 				fin >> str1;//str1にテキストを入れる
 
 				sprintf_s(str1, "%s", str1);//出力
@@ -414,7 +414,7 @@ void CObjChinaMob::Draw()
 				ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 				char str1[64];//ただの配列
 				wchar_t wstr1[64];
-				fin.seekg(66, ios::cur);//0バイト数進める
+				fin.seekg(228, ios::cur);//0バイト数進める
 				fin >> str1;//str1にテキストを入れる
 
 				sprintf_s(str1, "%s", str1);//出力
@@ -455,7 +455,7 @@ void CObjChinaMob::Draw()
 			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(158, ios::cur);//0バイト数進める
+			fin.seekg(156, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
@@ -473,7 +473,7 @@ void CObjChinaMob::Draw()
 			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(192, ios::cur);//0バイト数進める
+			fin.seekg(188, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
@@ -491,7 +491,7 @@ void CObjChinaMob::Draw()
 			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(234, ios::cur);//0バイト数進める
+			fin.seekg(228, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
@@ -499,7 +499,7 @@ void CObjChinaMob::Draw()
 			Font::StrDraw(wstr1, 50.0f, 500, 30, c);// X  Y  大きさ     
 
 
-			key_flag = 4;
+			key_flag = 1;
 			fin.close();//ファイルを閉じる
 		}
 
@@ -515,7 +515,7 @@ void CObjChinaMob::Draw()
 			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(277, ios::cur);//0バイト数進める
+			fin.seekg(268, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
@@ -533,7 +533,7 @@ void CObjChinaMob::Draw()
 			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(321, ios::cur);//0バイト数進める
+			fin.seekg(310, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
@@ -551,7 +551,7 @@ void CObjChinaMob::Draw()
 			ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(360, ios::cur);//0バイト数進める
+			fin.seekg(346, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
