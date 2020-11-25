@@ -28,6 +28,7 @@ enum OBJ_NAME
 					OBJ_ASS_BULLET,//アサルトライフルの弾丸
 					OBJ_MAP,//各マップの全体図
 					OBJ_CHINA_MOB,//チャイナタウンのモブ
+					OBJ_HOS_MOB,//病院のモブ
 
 					//------マップ-------------------------------------------
 					OBJ_BLOCK,//拠点
@@ -195,6 +196,7 @@ struct UserData
 #include"ObjChinaTown_b.h"
 
 #include"ObjChinaMob.h"
+#include"ObjHosMob.h"
 
 //------------------------------------------------
 
@@ -251,11 +253,11 @@ struct UserData
 //シーンスタートクラス---------------------------
 ////ゲーム開始時のシーンクラス登録
 //#define SET_GAME_START CSceneGameOver
-#define SET_GAME_START CSceneTitle 
+//#define SET_GAME_START CSceneTitle 
 //#define SET_GAME_START CSceneEnd 
 //#define SET_GAME_START CSceneFin
 //#define SET_GAME_START CSceneMain
 //#define SET_GAME_START CSceneStage
-//#define SET_GAME_START CSceneHospital
+#define SET_GAME_START CSceneHospital
 
 //-----------------------------------------------

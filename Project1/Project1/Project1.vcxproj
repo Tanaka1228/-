@@ -189,6 +189,7 @@
     <ClInclude Include="ObjGun.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjHeroine.h" />
+    <ClInclude Include="ObjHosMob.h" />
     <ClInclude Include="ObjHospital.h" />
     <ClInclude Include="ObjHospital2.h" />
     <ClInclude Include="ObjHospital3.h" />
@@ -329,6 +330,7 @@
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjGun.cpp" />
     <ClCompile Include="ObjHeroine.cpp" />
+    <ClCompile Include="ObjHosMob.cpp" />
     <ClCompile Include="ObjHospital.cpp" />
     <ClCompile Include="ObjHospital2.cpp" />
     <ClCompile Include="ObjHospital3.cpp" />

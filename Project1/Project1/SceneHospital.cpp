@@ -55,13 +55,20 @@ void CSceneHospital::InitScene()
 	//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"病院マップ.png", 1, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"武器商売ロボット.png", 8, TEX_SIZE_512);
+
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 2); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
-
 	CObjMap* objm = new CObjMap();//マップ図
 	Objs::InsertObj(objm, OBJ_MAP, 4);
+
+	//モブオブジェクト追加
+	CObjHosMob* objhosmob = new CObjHosMob();//モブ
+	Objs::InsertObj(objhosmob, OBJ_HOS_MOB, 4);
 
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
