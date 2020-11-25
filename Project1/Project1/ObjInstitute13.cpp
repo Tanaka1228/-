@@ -66,6 +66,8 @@ void CObjInstitute13::Action()
 	float hx = hero->GetX2();//�X�N���[��
 	float hy = hero->GetY2();
 
+	//踏んでいるblockの種類を初期化
+	hero->SetBT(0);
 
 	if (hero->GetRight() == false)
 	{
@@ -168,6 +170,7 @@ void CObjInstitute13::Action()
 							//�E
 							hero->SetRight(true);//��l���̍��̕������Փ˂��Ă���
 							hero->SetX2(x + 40.0f + (mx_scroll));//�u���b�N�̈ʒu+��l���̕�
+							hero->SetBT(m_map[i][j]);
 							hero->SetVX(0.0f);//-VX*�����W��
 						}
 						if (r > 45 && r < 135)
@@ -175,6 +178,7 @@ void CObjInstitute13::Action()
 							//��
 							hero->SetDown(true);//��l���̉��̕������Փ˂��Ă���
 							hero->SetY2(y - 40.0f + (my_scroll));//�u���b�N�̈ʒu-��l���̕�
+							hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);//-VX*�����W��
 
 						}
@@ -183,6 +187,7 @@ void CObjInstitute13::Action()
 							//��
 							hero->SetLeft(true);//��l���̉E�̕������Փ˂��Ă���
 							hero->SetX2(x - 40.0f + (mx_scroll));//�u���b�N�̈ʒu-��l���̕�
+							hero->SetBT(m_map[i][j]);
 							hero->SetVX(0.0f);//-VX*�����W��
 						}
 						if (r > 225 && r < 315)
@@ -190,6 +195,7 @@ void CObjInstitute13::Action()
 							//��
 							hero->SetUp(true);//��l���̏�̕������Փ˂��Ă���
 							hero->SetY2(y + 40.0f + (my_scroll));//�u���b�N�̈ʒu+��l���̕�
+							hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);//-VX*�����W��
 						}
 						
@@ -804,6 +810,23 @@ void CObjInstitute13::Draw()
 			}
 			if (m_map[i][j] == 64)//�����蔻��
 			{
+			}
+			if (m_map[i][j] ==65)//　モブロボット表示
+			{
+				//切り取り位置の設定
+				src.m_top = 0.0f;   //y
+				src.m_left = 0.0f;  //x
+				src.m_right = 32.0f; //x
+				src.m_bottom = 32.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;//y
+				dst.m_left = j * 32.0f + mx_scroll;//x
+				dst.m_right = j * 32.0f + 45.0f + mx_scroll;//x
+				dst.m_bottom = i * 32.0f + 45.0f + my_scroll; //y
+
+				//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
+				Draw::Draw(6, &src, &dst, c, 0.0f);
 			}
 		}
 	}

@@ -66,6 +66,8 @@ void CObjHospital::Action()
 	float hx = hero->GetX2();//ƒXƒNƒ[ƒ‹
 	float hy = hero->GetY2();
 
+	//“¥‚ñ‚Å‚¢‚éblock‚ÌŽí—Þ‚ð‰Šú‰»
+	hero->SetBT(0);
 
 	if (hero->GetRight() == false)
 	{

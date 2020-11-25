@@ -29,6 +29,7 @@ enum OBJ_NAME
 					OBJ_MAP,//各マップの全体図
 					OBJ_CHINA_MOB,//チャイナタウンのモブ
 					OBJ_HOS_MOB,//病院のモブ
+					OBJ_INST_MOB,//研究所のモブ
 
 					//------マップ-------------------------------------------
 					OBJ_BLOCK,//拠点
@@ -202,6 +203,7 @@ struct UserData
 
 #include"ObjChinaMob.h"
 #include"ObjHosMob.h"
+#include"ObjInstMob.h"
 
 //------------------------------------------------
 
