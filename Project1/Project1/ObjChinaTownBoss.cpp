@@ -224,6 +224,8 @@ void CObjChinaTownBoss::Action()
 							//右
 							hero->SetRight(true);//主人公の左の部分が衝突している
 							hero->SetX2(x + 39.0f + (mx_scroll));//ブロックの位置+主人公の幅
+							if (m_map[i][j] == 99)
+								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 45 && r < 135)
@@ -231,6 +233,8 @@ void CObjChinaTownBoss::Action()
 							//上
 							hero->SetDown(true);//主人公の下の部分が衝突している
 							hero->SetY2(y - 39.0f + (my_scroll));//ブロックの位置-主人公の幅
+							if (m_map[i][j] == 99)
+								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 
 						}
@@ -239,6 +243,8 @@ void CObjChinaTownBoss::Action()
 							//左
 							hero->SetLeft(true);//主人公の右の部分が衝突している
 							hero->SetX2(x - 39.0f + (mx_scroll));//ブロックの位置-主人公の幅
+							if (m_map[i][j] == 99)
+								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 225 && r < 315)
@@ -246,6 +252,8 @@ void CObjChinaTownBoss::Action()
 							//下
 							hero->SetUp(true);//主人公の上の部分が衝突している
 							hero->SetY2(y + 39.0f + (my_scroll));//ブロックの位置+主人公の幅
+							if (m_map[i][j] == 99)
+								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
 						if (m_map[i][j] ==82)//下に行くとチャイナタウンボス
