@@ -1,3 +1,5 @@
+
+
 //使用するヘッダーファイル
 #include"GameL/DrawTexture.h"
 #include"GameL\HitBoxManager.h"
@@ -35,8 +37,8 @@ void CObjHosMob::Init()
 void CObjHosMob::Action()
 {
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	CObjHospital*hospital = (CObjHospital*)Objs::GetObj(OBJ_HOSPITAL);//病院の一階
-	CObjHospital2*hospital2 = (CObjHospital2*)Objs::GetObj(OBJ_HOSPITAL2);//病院の二階
+	CObjHospital* hospital = (CObjHospital*)Objs::GetObj(OBJ_HOSPITAL);//病院の一階
+	CObjHospital2* hospital2 = (CObjHospital2*)Objs::GetObj(OBJ_HOSPITAL2);//病院の二階
 
 	if (hospital != nullptr)
 	{
@@ -86,7 +88,7 @@ void CObjHosMob::Action()
 			else
 			{
 				m_key_control = true;
-				
+
 			}
 		}
 		if (hero->GetBT() == 37)
@@ -135,7 +137,7 @@ void CObjHosMob::Action()
 			else
 			{
 				m_key_control = true;
-			
+
 			}
 		}
 	}
@@ -260,7 +262,7 @@ void CObjHosMob::Draw()
 	CObjHospital* hospital = (CObjHospital*)Objs::GetObj(OBJ_HOSPITAL);//病院の一階
 	CObjHospital2* hospital2 = (CObjHospital2*)Objs::GetObj(OBJ_HOSPITAL2);//病院の二階
 
-	if (hospital != nullptr&&mob_flag==1)
+	if (hospital != nullptr && mob_flag == 1)
 	{
 		if (m_sp == 1)//エンターキーを一回押したとき
 		{
@@ -386,7 +388,7 @@ void CObjHosMob::Draw()
 	}
 
 
-	if( hospital2 != nullptr)
+	if (hospital2 != nullptr)
 	{
 		if (m_sp == 1)//エンターキーを一回押したとき
 		{
@@ -480,3 +482,4 @@ void CObjHosMob::Draw()
 		}
 	}
 }
+
