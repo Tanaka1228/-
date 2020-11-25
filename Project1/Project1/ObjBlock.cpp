@@ -515,6 +515,24 @@ void CObjBlock::Draw()
 				//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
 				Draw::Draw(8, &src, &dst, c, 0.0f);
 			}
+			if (m_map[i][j] == 24)//当たり判定
+			{
+				//切り取り位置の設定
+				src.m_top = 295.0f;   //y
+				src.m_left = 200.0f; //x
+				src.m_right = 265.0f; //x
+				src.m_bottom = 360.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f;
+				dst.m_left = j * 32.0;
+				dst.m_right = dst.m_left + 32.0;
+				dst.m_bottom = dst.m_top + 32.0;
+
+				//描画
+				Draw::Draw(8, &src, &dst, c, 0.0f);
+			}
+
 			if (m_map[i][j] == 25)//当たり判定
 			{
 				
