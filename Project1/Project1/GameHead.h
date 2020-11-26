@@ -194,6 +194,7 @@ struct UserData
 #include"ObjInstitute12.h"
 #include"ObjInstitute13.h"
 #include"ObjInstitute13.h"
+#include"ObjInstitute14.h"
 
 #include"CObjInstituteBossBoss.h"
 #include"ObjMap.h"
