@@ -261,7 +261,7 @@ void CObjChinaTownBoss::Action()
 						}
 						if (m_map[i][j] ==82)//下に行くとチャイナタウンボス
 						{
-							Scene::SetScene(new CSceneHospital());
+							Scene::SetScene(new CSceneChinaTown_b());
 						}
 					}
 				}
