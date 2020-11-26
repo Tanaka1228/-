@@ -1925,15 +1925,15 @@ void CObjChinaTown_b::Draw()
 			if (m_map[i][j] == 100)//看板チャイナタウン
 			{
 				//切り取り位置の設定
-				src.m_top = 20.0f;   //y
-				src.m_left = 21.0f;  //x
-				src.m_right = 96.0f; //x
-				src.m_bottom = 179.0f; //y
+				src.m_top = 48.0f;   //y
+				src.m_left = 114.0f;  //x
+				src.m_right = 205.0f; //x
+				src.m_bottom = 189.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;//y
 				dst.m_left = j * 32.0f + mx_scroll;//x
-				dst.m_right = j * 32.0f + 56.0f + mx_scroll;//x
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;//x
 				dst.m_bottom = i * 32.0f + 64.0f + my_scroll; //y
 
 				//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
@@ -1942,10 +1942,10 @@ void CObjChinaTown_b::Draw()
 			if (m_map[i][j] == 101)//看板病院
 			{
 				//切り取り位置の設定
-				src.m_top = 18.0f;   //y
-				src.m_left =121.0f;  //x
-				src.m_right = 200.0f; //x
-				src.m_bottom = 177.0f; //y
+				src.m_top = 45.0f;   //y
+				src.m_left =213.0f;  //x
+				src.m_right = 292.0f; //x
+				src.m_bottom = 203.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;//y
@@ -1959,10 +1959,10 @@ void CObjChinaTown_b::Draw()
 			if (m_map[i][j] == 102)//看板
 			{
 				//切り取り位置の設定
-				src.m_top = 15.0f;   //y
-				src.m_left = 221.0f;  //x
-				src.m_right = 302.0f; //x
-				src.m_bottom = 177.0f; //y
+				src.m_top = 42.0f;   //y
+				src.m_left = 313.0f;  //x
+				src.m_right = 393.0f; //x
+				src.m_bottom = 203.0f; //y
 
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;//y
