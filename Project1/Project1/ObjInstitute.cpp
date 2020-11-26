@@ -47,7 +47,8 @@ void CObjInstitute::Init()
 	};
 	
 	memcpy(m_map, block_data, sizeof(int) * (60* 60));
-
+	map_flag = true;
+	map_flag2 = false;
 }
 
 void CObjInstitute::Action()
@@ -213,28 +214,23 @@ void CObjInstitute::Action()
 		}
 	}
 
-	//�G�o�����C��
-	//float Xline = hx + (-mx_scroll) + 400;
-	//float Yline = hy + (my_scroll)-100;
 
-	//int ex = ((int)Xline) / 32;
-	//int ey = ((int)Yline) / 32;
-
-	//for (int i = 0; i < 25; i++)
-	//{
-	//	for (int j = 0; j < 25; j++)
-
-	//		if (m_map[i][ex] == 15)
-	//		{
-	//			//�U���G�@�I�u�W�F�N�g�쐬
-	//			CObjRooftopBoss* obj_rooftop_boss = new CObjRooftopBoss(ex * 32, i * 32); //�U���G�@�I�u�W�F�N�g�쐬
-	//			Objs::InsertObj(obj_rooftop_boss, OBJ_ROOF_TOP_BOSS, 4); //�U���G�@�I�u�W�F�N�g��I�u�W�F�N�g�}�l�[�W���[�ɓo�^
-
-	//			m_map[i][ex] = 0;
-	//		}
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
 
 
-	//}
+			map_flag2 = true;
+			map_flag = false;
+
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
+	}
 
 }
 //�h���[
