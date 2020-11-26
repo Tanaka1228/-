@@ -439,8 +439,17 @@ void CObjChinaMob::Draw()
 				Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
 
 
-			key_flag = 1;
+			key_flag = 4;
 			fin.close();//ファイルを閉じる
+		}
+		if (m_sp == 4)//エンターキーを一回押したとき
+		{
+
+			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
+
+
+			key_flag = 1;
+
 		}
 	}
 
@@ -498,8 +507,17 @@ void CObjChinaMob::Draw()
 			Font::StrDraw(wstr1, 50.0f, 500, 30, c);// X  Y  大きさ     
 
 
-			key_flag = 1;
+			key_flag = 4;
 			fin.close();//ファイルを閉じる
+		}
+		if (m_sp == 4)//エンターキーを一回押したとき
+		{
+
+			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
+
+
+			key_flag = 1;
+
 		}
 
 	}
@@ -560,6 +578,15 @@ void CObjChinaMob::Draw()
 
 			key_flag = 4;
 			fin.close();//ファイルを閉じる
+		}
+		if (m_sp == 4)//エンターキーを一回押したとき
+		{
+
+			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
+
+
+			key_flag = 1;
+
 		}
 
 	}
