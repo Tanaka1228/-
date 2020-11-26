@@ -245,8 +245,7 @@ void CObjChinaMob::Action()
 		//チャイナタウンのB
 		if (chinatown_b != nullptr)
 		{
-
-			if (hero->GetBT() == 99)
+			if (hero->GetBT() == 97)
 			{
 				mob_flag == 1;
 				if (Input::GetVKey(VK_RETURN) == true) {
@@ -576,10 +575,10 @@ if (chinatown_b != nullptr && mob_flag == 1)
 	{
 		sp_flag == true;
 
-		ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
+		ifstream fin("チャイナタウン会話.txt", ios::in);//テキストデータをを読み込み
 		char str1[64];//ただの配列
 		wchar_t wstr1[64];
-		fin.seekg(0, ios::cur);//0バイト数進める
+		fin.seekg(98, ios::cur);//0バイト数進める
 		fin >> str1;//str1にテキストを入れる
 
 		sprintf_s(str1, "%s", str1);//出力
@@ -590,14 +589,14 @@ if (chinatown_b != nullptr && mob_flag == 1)
 		key_flag = 2;
 		fin.close();//ファイルを閉じる
 	}
-	if (m_sp == 2)//エンターキーを一回押したとき
+	if (m_sp == 1)//エンターキーを一回押したとき
 	{
 		sp_flag == true;
 
-		ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
+		ifstream fin("チャイナタウン会話.txt", ios::in);//テキストデータをを読み込み
 		char str1[64];//ただの配列
 		wchar_t wstr1[64];
-		fin.seekg(18, ios::cur);//0バイト数進める
+		fin.seekg(114, ios::cur);//0バイト数進める
 		fin >> str1;//str1にテキストを入れる
 
 		sprintf_s(str1, "%s", str1);//出力
@@ -605,7 +604,26 @@ if (chinatown_b != nullptr && mob_flag == 1)
 		Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
 
 
-		key_flag = 3;
+		key_flag =2;
+		fin.close();//ファイルを閉じる
+
+	}
+	if (m_sp == 1)//エンターキーを一回押したとき
+	{
+		sp_flag == true;
+
+		ifstream fin("チャイナタウン会話.txt", ios::in);//テキストデータをを読み込み
+		char str1[64];//ただの配列
+		wchar_t wstr1[64];
+		fin.seekg(124, ios::cur);//0バイト数進める
+		fin >> str1;//str1にテキストを入れる
+
+		sprintf_s(str1, "%s", str1);//出力
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
+		Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
+
+
+		key_flag = 2;
 		fin.close();//ファイルを閉じる
 
 	}
