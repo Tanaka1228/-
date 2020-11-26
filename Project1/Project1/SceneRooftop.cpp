@@ -52,6 +52,9 @@ void CSceneRooftop::InitScene()
 	//外部グラフィックファイルを読み込み13番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"先生のグラフィック.png", 14, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"武器商売ロボット.png", 6, TEX_SIZE_512);
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 800); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
@@ -63,6 +66,10 @@ void CSceneRooftop::InitScene()
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
 	Objs::InsertObj(objg, OBJ_GUN, 5);
+
+	//モブオブジェクト追加
+	CObjHosMob* objhosmob = new CObjHosMob();//モブ
+	Objs::InsertObj(objhosmob, OBJ_HOS_MOB, 4);
 }
 
 

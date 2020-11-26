@@ -559,9 +559,10 @@ void CObjChinaMob::Draw()
 			Font::StrDraw(wstr1, 50.0f, 500, 30, c);// X  Y  ‘å‚«‚³     
 
 
-			key_flag = 1;
+			key_flag = 4;
 			fin.close();//ƒtƒ@ƒCƒ‹‚ð•Â‚¶‚é
 		}
+
 	}
 	
 	
