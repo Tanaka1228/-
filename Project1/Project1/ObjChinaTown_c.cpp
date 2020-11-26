@@ -1961,6 +1961,25 @@ void CObjChinaTown_c::Draw()
 				//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
 				Draw::Draw(6, &src, &dst, c, 0.0f);
 			}
+
+			if (m_map[i][j] == 1001)//壁
+			{
+				//切り取り位置の設定
+				src.m_top = 239.0f;   //y
+				src.m_left = 211.0f; //x
+				src.m_right = 310.0f; //x
+				src.m_bottom = 309.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+
+				//描画
+				Draw::Draw(7, &src, &dst, c, 0.0f);
+
+			}
 		}
 	}
 }
