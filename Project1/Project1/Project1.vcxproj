@@ -180,6 +180,7 @@
     <ClInclude Include="ObjDrugCampanyRoom7.h" />
     <ClInclude Include="ObjDrugCampanyRoom8.h" />
     <ClInclude Include="ObjDrugCampanyRoom9.h" />
+    <ClInclude Include="ObjDrugMob.h" />
     <ClInclude Include="ObjEnd.h" />
     <ClInclude Include="ObjEnemy.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -330,6 +331,7 @@
     <ClCompile Include="ObjDrugCampanyRoom7.cpp" />
     <ClCompile Include="ObjDrugCampanyRoom8.cpp" />
     <ClCompile Include="ObjDrugCampanyRoom9.cpp" />
+    <ClCompile Include="ObjDrugMob.cpp" />
     <ClCompile Include="ObjEnd.cpp" />
     <ClCompile Include="ObjEventRoom.cpp" />
     <ClCompile Include="ObjExRoom.cpp" />
