@@ -50,7 +50,7 @@ void CSceneChinaTown_b::InitScene()
 	Draw::LoadImage(L"チャイナタウンボス戦フィールドの素材.png", 17, TEX_SIZE_512);
 
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"製薬会社　床.png", 5, TEX_SIZE_512);//グラフィック
+	Draw::LoadImage(L"看板.png", 5, TEX_SIZE_512);//グラフィック
 
 	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"武器商売ロボット.png", 6, TEX_SIZE_512);
@@ -61,7 +61,7 @@ void CSceneChinaTown_b::InitScene()
 
 	//モブオブジェクト追加
 	CObjChinaMob* objchinamob = new CObjChinaMob();//モブ
-	Objs::InsertObj(objchinamob, OBJ_CHINA_MOB, 5);
+	Objs::InsertObj(objchinamob, OBJ_CHINA_MOB, 6);
 
 	//チャイナタウンオブジェクト作成
 	CObjChinaTown_b* objc = new CObjChinaTown_b(); //チャイナタウンオブジェクト作成
