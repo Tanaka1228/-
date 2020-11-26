@@ -216,6 +216,7 @@ void CObjChinaTown_d::Action()
 void CObjChinaTown_d::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	
 
 	RECT_F src;//ï`âÊå≥êÿÇËéÊÇËà íu
 	RECT_F dst;//ï`âÊêÊï\é¶à íu
@@ -1891,6 +1892,38 @@ void CObjChinaTown_d::Draw()
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 
 			}
+
+			if (m_map[i][j] == 98)//âÆç™ÇP
+			{
+
+				//îwåiï\é¶
+				src.m_top = 134.0f;   // Y
+				src.m_left = 21.0f;  // X
+				src.m_right = 182.0f; // X
+				src.m_bottom = 265.0f;// Y 
+
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				Draw::Draw(5, &src, &dst, c, 0.0f);
 		}
+
+			if (m_map[i][j] == 99)//âÆç™ÇQ
+			{
+
+				//îwåiï\é¶
+				src.m_top = 232.0f;   // Y
+				src.m_left = 225.0f;  // X
+				src.m_right = 375.0f; // X
+				src.m_bottom = 355.0f;// Y 
+
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
+				Draw::Draw(5, &src, &dst, c, 0.0f);
+			}
 	}
+}
 }
