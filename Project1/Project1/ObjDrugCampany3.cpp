@@ -316,10 +316,10 @@ void CObjDrugCampany3::Draw()
 	src.m_right = 500.0f; // X
 	src.m_bottom = 500.0f;// Y 
 
-	dst.m_top = 0.0f + my_scroll;
-	dst.m_left = 0.0f + mx_scroll;
-	dst.m_right = 4400.0f + mx_scroll;
-	dst.m_bottom = 4400.0 + my_scroll;
+	dst.m_top = 160.0f + my_scroll;
+	dst.m_left = 290.0f + mx_scroll;
+	dst.m_right = 2940.0f + mx_scroll;
+	dst.m_bottom = 3040.0 + my_scroll;
 	Draw::Draw(5, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
@@ -488,10 +488,10 @@ void CObjDrugCampany3::Draw()
 				src.m_bottom = 127.0f; //y
 
 				//表示位置の設定
-				dst.m_top = i * 28.0f + my_scroll;
+				dst.m_top = i * 32.0f + my_scroll;
 				dst.m_left = j * 32.0f + mx_scroll;
-				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
-				dst.m_bottom = i * 32.0f + 28.0f + my_scroll;
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);

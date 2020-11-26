@@ -336,10 +336,10 @@ void CObjDrugCampany2::Draw()
 	src.m_right = 500.0f; // X
 	src.m_bottom = 500.0f;// Y 
 
-	dst.m_top = 0.0f + my_scroll;
-	dst.m_left = 0.0f + mx_scroll;
-	dst.m_right = 4400.0f + mx_scroll;
-	dst.m_bottom = 4400.0 + my_scroll;
+	dst.m_top = 160.0f + my_scroll;
+	dst.m_left = 290.0f + mx_scroll;
+	dst.m_right = 2940.0f + mx_scroll;
+	dst.m_bottom = 3040.0 + my_scroll;
 	Draw::Draw(5, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置
