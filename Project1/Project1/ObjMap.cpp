@@ -145,10 +145,10 @@ void CObjMap::Draw()
 		{
 
 			//îwåiï\é¶
-			src.m_top =25.0f;   // Y
-			src.m_left = 98.0f;  // X
-			src.m_right = 477.0f; // X
-			src.m_bottom = 513.0f;// Y 
+			src.m_top =14.0f;   // Y
+			src.m_left = 29.0f;  // X
+			src.m_right = 493.0f; // X
+			src.m_bottom = 500.0f;// Y 
 
 			dst.m_top = 100.0f;
 			dst.m_left = 0.0f;
