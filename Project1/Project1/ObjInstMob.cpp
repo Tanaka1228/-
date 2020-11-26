@@ -37,6 +37,7 @@ void CObjInstMob::Action()
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjInstitute* inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);//研究所1階
 	CObjInstitute13* inst13 = (CObjInstitute13*)Objs::GetObj(OBJ_INSTITUTE13);//研究所地下2階
+	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);//研究所BOSS
 
 
 	//------------------研究所1階の会話フラグ-----------------------
@@ -205,7 +206,60 @@ void CObjInstMob::Action()
 		
 	}
 	//---------------------------------------------------------------
+	if (instituteboss != nullptr)
+	{
+		if (hero->GetBT() == 99)//主人公が数字(ブロック)に触れていれば
+		{
+			mob_flag = 1;
 
+			if (Input::GetVKey(VK_RETURN) == true) {
+
+				if (m_key_control == true)
+				{
+					if (key_flag == 1)
+					{
+						m_sp = 1;
+
+					}
+
+					if (key_flag == 2)
+					{
+						m_sp = 2;
+
+					}
+					if ((key_flag == 3))
+					{
+
+						m_sp = 3;
+
+					}
+					if ((key_flag == 4))
+					{
+						m_sp = 4;
+
+					}
+					if ((key_flag == 5))
+					{
+						m_sp = 5;
+
+					}
+					if ((key_flag == 6))
+					{
+						m_sp = 6;
+
+					}
+					m_key_control = false;
+				}
+
+			}
+			else
+			{
+				m_key_control = true;
+			}
+		}
+
+
+	}
 }
 
 //ドロー
@@ -220,6 +274,7 @@ void CObjInstMob::Draw()
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjInstitute* inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);//研究所1階
 	CObjInstitute13* inst13 = (CObjInstitute13*)Objs::GetObj(OBJ_INSTITUTE13);//研究所地下2階
+	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);//研究所BOSS
 
 	//------触っるやつは「〇」を付けています----------------------------------------------------
 
@@ -400,4 +455,33 @@ void CObjInstMob::Draw()
 		}
 	}
 	//----------------------------------------------------------------------------------------
+	if (instituteboss != nullptr && mob_flag == 1)
+	{
+		if (m_sp == 1)//エンターキーを一回押したとき
+		{
+			sp_flag == true;
+
+			ifstream fin("研究所ボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
+			char str1[64];//ただの配列
+			wchar_t wstr1[64];
+			fin.seekg(0, ios::cur);//0バイト数進める
+			fin >> str1;//str1にテキストを入れる
+
+			sprintf_s(str1, "%s", str1);//出力
+			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
+			Font::StrDraw(wstr1, 40.0f, 500, 30, c);// X  Y  大きさ     
+
+
+			key_flag = 2;
+			fin.close();//ファイルを閉じる
+		}
+
+		if (m_sp == 2)//エンターキーを一回押したとき
+		{
+
+			Font::StrDraw(L"", 50.0f, 500, 25, c);// X  Y  大きさ     
+
+			key_flag = 1;
+		}
+	}
 }

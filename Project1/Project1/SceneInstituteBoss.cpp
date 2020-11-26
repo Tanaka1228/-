@@ -49,6 +49,8 @@ void CSceneInstituteBoss::InitScene()
 	//外部グラフィックファイルを読み込み15番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"研究所ボス戦フィールドの素材.png", 15, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImageW(L"武器商売ロボット.png", 31, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
@@ -62,6 +64,9 @@ void CSceneInstituteBoss::InitScene()
 	CObjInstituteBoss* objb = new CObjInstituteBoss();
 	Objs::InsertObj(objb, OBJ_INSTITUTE_BOSS, 3);
 
+	//モブオブジェクト追加
+	CObjInstMob* objinstmob = new CObjInstMob();//モブ
+	Objs::InsertObj(objinstmob, OBJ_INST_MOB, 6);
 }
 
 
