@@ -29,12 +29,15 @@ enum OBJ_NAME
 					OBJ_MAP,//各マップの全体図
 					OBJ_CHINA_MOB,//チャイナタウンのモブ
 					OBJ_HOS_MOB,//病院のモブ
+					OBJ_INST_MOB,//研究所のモブ
 
 					//------マップ-------------------------------------------
 					OBJ_BLOCK,//拠点
 					OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
 					OBJ_CHINA_TOWN,//チャイナタウン
-					OBJ_CHINA_TOWN_b,//チャイナタウンｂ
+					OBJ_CHINA_TOWN_B,//チャイナタウンb
+					OBJ_CHINA_TOWN_C,//チャイナタウンc
+					OBJ_CHINA_TOWN_D,//チャイナタウンd
 					OBJ_CHINA_TOWN_BOSS_BOSS,//チャイナタウンのボス戦フィールドBOSS
 
 
@@ -194,9 +197,13 @@ struct UserData
 #include"CObjInstituteBossBoss.h"
 #include"ObjMap.h"
 #include"ObjChinaTown_b.h"
+#include"ObjChinaTown_c.h"
+#include"ObjChinaTown_d.h"
+
 
 #include"ObjChinaMob.h"
 #include"ObjHosMob.h"
+#include"ObjInstMob.h"
 
 //------------------------------------------------
 
@@ -247,6 +254,8 @@ struct UserData
 #include"SceneInstitute13.h"
 #include"SceneInstitute14.h"
 #include"SceneChinaTown_b.h"
+#include"SceneChinaTown_c.h"
+#include"SceneChinaTown_d.h"
 
 //-----------------------------------------------
 
@@ -258,6 +267,8 @@ struct UserData
 //#define SET_GAME_START CSceneFin
 //#define SET_GAME_START CSceneMain
 //#define SET_GAME_START CSceneStage
-#define SET_GAME_START CSceneHospital
+//#define SET_GAME_START CSceneHospital
+//#define SET_GAME_START CSceneInstitute13
+
 
 //-----------------------------------------------

@@ -74,6 +74,9 @@ void CObjChinaTown_b::Action()
 	float hy = hero->GetY2();
 
 
+	//踏んでいるblockの種類を初期化
+	hero->SetBT(0);
+
 	if (hero->GetRight() == false)
 	{
 		//後方スクロールライン　←
@@ -175,6 +178,7 @@ void CObjChinaTown_b::Action()
 							//右
 							hero->SetRight(true);//主人公の左の部分が衝突している
 							hero->SetX2(x + 39.0f + (mx_scroll));//ブロックの位置+主人公の幅
+							hero->SetBT(m_map[i][j]);
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 45 && r < 135)
@@ -182,6 +186,7 @@ void CObjChinaTown_b::Action()
 							//上
 							hero->SetDown(true);//主人公の下の部分が衝突している
 							hero->SetY2(y - 39.0f + (my_scroll));//ブロックの位置-主人公の幅
+							hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);//-VX*反発係数
 
 						}
@@ -190,6 +195,7 @@ void CObjChinaTown_b::Action()
 							//左
 							hero->SetLeft(true);//主人公の右の部分が衝突している
 							hero->SetX2(x - 39.0f + (mx_scroll));//ブロックの位置-主人公の幅
+							hero->SetBT(m_map[i][j]);
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 225 && r < 315)
@@ -197,6 +203,7 @@ void CObjChinaTown_b::Action()
 							//下
 							hero->SetUp(true);//主人公の上の部分が衝突している
 							hero->SetY2(y + 39.0f + (my_scroll));//ブロックの位置+主人公の幅
+							hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
 						if (m_map[i][j] == 98)//下に行くとチャイナタウンボス
@@ -1909,6 +1916,23 @@ void CObjChinaTown_b::Draw()
 				dst.m_bottom = i * 32.0f + 32.0f + my_scroll;
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 
+			}
+			if (m_map[i][j] == 99)//モブロボット表示
+			{
+				//切り取り位置の設定
+				src.m_top = 0.0f;   //y
+				src.m_left = 0.0f;  //x
+				src.m_right = 32.0f; //x
+				src.m_bottom = 32.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;//y
+				dst.m_left = j * 32.0f + mx_scroll;//x
+				dst.m_right = j * 32.0f + 45.0f + mx_scroll;//x
+				dst.m_bottom = i * 32.0f + 45.0f + my_scroll; //y
+
+				//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
+				Draw::Draw(6, &src, &dst, c, 0.0f);
 			}
 		}
 	}

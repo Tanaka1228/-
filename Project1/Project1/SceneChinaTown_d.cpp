@@ -12,24 +12,24 @@ using namespace GameL;
 
 //使用するヘッダー
 #include"GameHead.h"
-#include "SceneChinaTown_b.h"
+#include "SceneChinaTown_d.h"
 
 
 
 //コンストラクタ
-CSceneChinaTown_b::CSceneChinaTown_b()
+CSceneChinaTown_d::CSceneChinaTown_d()
 {
 }
 
 //デストラクタ
-CSceneChinaTown_b::~CSceneChinaTown_b()
+CSceneChinaTown_d::~CSceneChinaTown_d()
 {
 }
 
 
 
 //ゲームステージ初期化メソッド
-void CSceneChinaTown_b::InitScene()
+void CSceneChinaTown_d::InitScene()
 {
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
@@ -52,19 +52,13 @@ void CSceneChinaTown_b::InitScene()
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"製薬会社　床.png", 5, TEX_SIZE_512);//グラフィック
 
-	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"武器商売ロボット.png", 6, TEX_SIZE_512);
-
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 5); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
-	//モブオブジェクト追加
-	CObjChinaMob* objchinamob = new CObjChinaMob();//モブ
-	Objs::InsertObj(objchinamob, OBJ_CHINA_MOB, 5);
 
 	//チャイナタウンオブジェクト作成
-	CObjChinaTown_b* objc = new CObjChinaTown_b(); //チャイナタウンオブジェクト作成
+	CObjChinaTown_d* objc = new CObjChinaTown_d(); //チャイナタウンオブジェクト作成
 	Objs::InsertObj(objc, OBJ_CHINA_TOWN, 4); //作ったチャイナタウンオブジェクトをオブジェクトマネージャーに登録
 
 	//銃オブジェクト作成
@@ -74,6 +68,6 @@ void CSceneChinaTown_b::InitScene()
 
 
 //ゲームステージ実行中メソッド
-void CSceneChinaTown_b::Scene()
+void CSceneChinaTown_d::Scene()
 {
 }
