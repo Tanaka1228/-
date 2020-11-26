@@ -504,6 +504,9 @@
     <ClInclude Include="ObjInstMob.h">
       <Filter>ソース ファイル\Character\研究所のモブ</Filter>
     </ClInclude>
+    <ClInclude Include="ObjDrugMob.h">
+      <Filter>ソース ファイル\Character\製薬会社のモブ</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -904,6 +907,9 @@
     </ClCompile>
     <ClCompile Include="ObjInstMob.cpp">
       <Filter>ソース ファイル\Character\研究所のモブ</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjDrugMob.cpp">
+      <Filter>ソース ファイル\Character\製薬会社のモブ</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
