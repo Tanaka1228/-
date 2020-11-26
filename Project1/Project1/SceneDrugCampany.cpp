@@ -49,6 +49,9 @@ void CSceneDrugCampany::InitScene()
 	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"武器商売ロボット.png", 6, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み7番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"製薬会社１階マップ.png", 7, TEX_SIZE_512);
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
@@ -56,6 +59,10 @@ void CSceneDrugCampany::InitScene()
 	//製薬会社のモブオブジェクト追加
 	CObjDrugMob* objdrugmob = new CObjDrugMob();//モブ
 	Objs::InsertObj(objdrugmob, OBJ_DRUG_MOB, 6);
+
+	//マップ図
+	CObjMap* objm = new CObjMap();//マップ図
+	Objs::InsertObj(objm, OBJ_MAP, 4);
 
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
