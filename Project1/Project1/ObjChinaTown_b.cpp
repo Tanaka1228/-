@@ -14,8 +14,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjChinaTown_b::Init()
 {
-	mx_scroll = -200.0f;
-	my_scroll = +100.0f;
+	mx_scroll = +350.0f;
+	my_scroll = -600.0f;
 
 	//マップ情報
 	int block_data[65][54] =
