@@ -15,7 +15,7 @@ using namespace GameL;
 void CObjInstitute14::Init()
 {
 	mx_scroll = -555.0f;
-	my_scroll = -1180.0f;
+	my_scroll = +190.0f;
 
 	//�}�b�v���
 	int block_data[60][60] =
