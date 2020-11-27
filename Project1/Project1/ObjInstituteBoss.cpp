@@ -222,7 +222,7 @@ void CObjInstituteBoss::Action()
 					}
 					if (m_map[i][j] == 19|| m_map[i][j] == 20)//Œ¤‹†Š13
 					{
-						Scene::SetScene(new CSceneInstitute13());
+						Scene::SetScene(new CSceneInstitute13A());
 					}
 				}
 

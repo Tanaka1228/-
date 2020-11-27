@@ -36,7 +36,7 @@ void CObjInstMob::Action()
 {
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjInstitute* inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);//Œ¤‹†Š1ŠK
-	CObjInstitute13* inst13 = (CObjInstitute13*)Objs::GetObj(OBJ_INSTITUTE13);//Œ¤‹†Š’n‰º2ŠK
+	CObjInstitute13A* inst13 = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);//Œ¤‹†Š’n‰º2ŠK
 	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);//Œ¤‹†ŠBOSS
 
 
@@ -273,7 +273,7 @@ void CObjInstMob::Draw()
 
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjInstitute* inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);//Œ¤‹†Š1ŠK
-	CObjInstitute13* inst13 = (CObjInstitute13*)Objs::GetObj(OBJ_INSTITUTE13);//Œ¤‹†Š’n‰º2ŠK
+	CObjInstitute13A* inst13 = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);//Œ¤‹†Š’n‰º2ŠK
 	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);//Œ¤‹†ŠBOSS
 
 	//------G‚Á‚é‚â‚Â‚ÍuZv‚ğ•t‚¯‚Ä‚¢‚Ü‚·----------------------------------------------------

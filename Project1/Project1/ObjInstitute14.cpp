@@ -208,7 +208,7 @@ void CObjInstitute14::Action()
 						}
 						if (m_map[i][j] == 69)
 						{
-							Scene::SetScene(new CSceneInstitute13());
+							Scene::SetScene(new CSceneInstitute13A());
 						}
 					}
 				}
