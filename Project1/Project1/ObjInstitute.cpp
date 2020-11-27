@@ -205,6 +205,10 @@ void CObjInstitute::Action()
 						{
 							Scene::SetScene(new CSceneInstitute12());
 						}
+						if (m_map[i][j] == 4)
+						{
+							Scene::SetScene(new CSceneInstitute14());
+						}
 					}
 				}
 

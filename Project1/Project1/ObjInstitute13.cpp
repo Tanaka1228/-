@@ -14,8 +14,8 @@ using namespace GameL;
 //�C�j�V�����C�Y
 void CObjInstitute13::Init()
 {
-	mx_scroll = -1280.0f;
-	my_scroll = -500.0f;
+	mx_scroll = -590.0f;
+	my_scroll = +100.0f;
 
 	//�}�b�v���
 	int block_data[70][70] =
@@ -56,6 +56,9 @@ void CObjInstitute13::Init()
 	};
 	//�}�b�v�f�[�^��R�s�[
 	memcpy(m_map, block_data, sizeof(int) * (70 * 70));
+	map_flag = true;
+	map_flag2 = false;
+	
 
 }
 //�A�N�V����
@@ -231,8 +234,26 @@ void CObjInstitute13::Action()
 
 			}
 		}
+		
 	}
 
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
+
+
+			map_flag2 = true;
+			map_flag = false;
+
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
+
+	}
 	//�G�o�����C��
 	//float Xline = hx + (-mx_scroll) + 400;
 	//float Yline = hy + (my_scroll)-100;
@@ -828,7 +849,7 @@ void CObjInstitute13::Draw()
 
 				//1番目に登録したグラフィックをstc・dst・cの情報を元に描画
 
-				Draw::Draw(31, &src, &dst, c, 0.0f);
+				Draw::Draw(6, &src, &dst, c, -1.0f);
 			}
 			
 		}

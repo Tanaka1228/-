@@ -24,7 +24,7 @@ void CObjEventRoom::Init()
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 		{0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0},
 		{0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,0,0},
-		{0,0,1,18,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,1,0,0},
+		{0,0,1,18,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,1,0,0},
 		{0,0,1,0,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
 		{0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,11,0,1,0,0},
 		{0,0,1,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
@@ -199,7 +199,7 @@ void CObjEventRoom::Action()
 	}
 
 
-	if (hero->GetBT() == 15)//イベント部屋のオブジェクトの前でエンター
+	if (hero->GetBT() == 32)//イベント部屋のオブジェクトの前でエンター
 	{
 		if (Input::GetVKey(VK_RETURN) == true) {
 
@@ -285,6 +285,69 @@ void CObjEventRoom::Draw()
 		key_flag = 2;
 		fin.close();//ファイルを閉じる
 	}
+	if (m_sp == 2)//エンターキーを一回押したとき
+	{
+
+		ifstream fin("イベント会話.txt", ios::in);//テキストデータをを読み込み
+		char str1[100];//ただの配列
+		wchar_t wstr1[100];
+		fin.seekg(44, ios::cur);//0バイト数進める
+		fin >> str1;//str1にテキストを入れる
+
+		sprintf_s(str1, "%s", str1);//出力
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 100, wstr1, 100);//文字をユニコードに変換する
+		Font::StrDraw(wstr1, 14.0f, 50, 23, c);// X  Y  大きさ     
+
+
+		key_flag = 3;
+		fin.close();//ファイルを閉じる
+	}
+	if (m_sp == 3)//エンターキーを一回押したとき
+	{
+
+		ifstream fin("イベント会話.txt", ios::in);//テキストデータをを読み込み
+		char str1[100];//ただの配列
+		wchar_t wstr1[100];
+		fin.seekg(114, ios::cur);//0バイト数進める
+		fin >> str1;//str1にテキストを入れる
+
+		sprintf_s(str1, "%s", str1);//出力
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 100, wstr1, 100);//文字をユニコードに変換する
+		Font::StrDraw(wstr1,110.0f, 50, 25, c);// X  Y  大きさ     
+
+
+		key_flag =4;
+		fin.close();//ファイルを閉じる
+	}
+	if (m_sp ==4)//エンターキーを一回押したとき
+	{
+
+		ifstream fin("イベント会話.txt", ios::in);//テキストデータをを読み込み
+		char str1[100];//ただの配列
+		wchar_t wstr1[100];
+		fin.seekg(158, ios::cur);//0バイト数進める
+		fin >> str1;//str1にテキストを入れる
+
+		sprintf_s(str1, "%s", str1);//出力
+		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 100, wstr1, 100);//文字をユニコードに変換する
+		Font::StrDraw(wstr1, 110.0f, 50, 25, c);// X  Y  大きさ     
+
+
+		key_flag = 5;
+		fin.close();//ファイルを閉じる
+	}
+	if (m_sp == 5)//エンターキーを一回押したとき
+	{
+		Font::StrDraw(L"", 110.0f, 50, 25, c);// X  Y  大きさ     
+		key_flag = 1;
+		
+	}
+
+
+
+
+
+
 
 
 	//マップチップによるblock設置
@@ -836,6 +899,23 @@ void CObjEventRoom::Draw()
 
 				//描画
 				Draw::Draw(4, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 32)//武器商売ロボット表示
+			{
+				//切り取り位置の設定
+				src.m_top = 0.0f;   //y
+				src.m_left = 0.0f;  //x
+				src.m_right = 32.0f; //x
+				src.m_bottom = 32.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;//y
+				dst.m_left = j * 32.0f + mx_scroll;//x
+				dst.m_right = j * 32.0f + 45.0f + mx_scroll;//x
+				dst.m_bottom = i * 32.0f + 45.0f + my_scroll; //y
+
+				//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
+				Draw::Draw(7, &src, &dst, c, 0.0f);
 			}
 		}
 	}
