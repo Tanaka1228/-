@@ -54,7 +54,7 @@ void CSceneInstitute13::InitScene()
 
 	//モブオブジェクト追加
 	CObjInstMob* objinstmob = new CObjInstMob();//モブ
-	Objs::InsertObj(objinstmob, OBJ_INST_MOB, 9);
+	Objs::InsertObj(objinstmob, OBJ_INST_MOB, 6);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
@@ -70,7 +70,7 @@ void CSceneInstitute13::InitScene()
 
 		//マップ図
 	CObjMap* objm = new CObjMap();//マップ図
-	Objs::InsertObj(objm, OBJ_MAP, 5);
+	Objs::InsertObj(objm, OBJ_MAP, 6);
 }
 
 

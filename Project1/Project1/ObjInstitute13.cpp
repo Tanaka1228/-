@@ -849,7 +849,7 @@ void CObjInstitute13::Draw()
 
 				//1番目に登録したグラフィックをstc・dst・cの情報を元に描画
 
-				Draw::Draw(31, &src, &dst, c, 0.0f);
+				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
 			
 		}
