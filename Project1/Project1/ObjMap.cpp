@@ -193,9 +193,9 @@ void CObjMap::Draw()
 
 			//îwåiï\é¶
 			src.m_top = 0.0f;   // Y
-			src.m_left = 370.0f;  // X
+			src.m_left = 360.0f;  // X
 			src.m_right =1211.0f; // X
-			src.m_bottom =646.0f;// Y 
+			src.m_bottom =656.0f;// Y 
 
 			dst.m_top = 100.0f;
 			dst.m_left = 0.0f;
