@@ -14,8 +14,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjDrugCampany3::Init()
 {
-	mx_scroll = 0.0f;
-	my_scroll = 0.0f;
+	mx_scroll = -1130.0f;
+	my_scroll = -2600.0f;
 
 	//マップ情報
 	int block_data[200][200] =
@@ -268,6 +268,10 @@ void CObjDrugCampany3::Action()
 						if (m_map[i][j] == 31)//部屋5に移動
 						{
 							Scene::SetScene(new CSceneDrugCampanyRoom5());
+						}
+						if (m_map[i][j] == 7)
+						{
+							Scene::SetScene(new CSceneDrugCampany2());
 						}
 					}
 				}
