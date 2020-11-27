@@ -204,7 +204,7 @@ void CObjChinaTown_c::Action()
 						{
 							Scene::SetScene(new CSceneHospital());
 						}
-						if (m_map[i][j] == 1000)//右に行くとマップc
+						if (m_map[i][j] == 1000)//右に行くとマップd
 						{
 							Scene::SetScene(new CSceneChinaTown_d());
 						}
