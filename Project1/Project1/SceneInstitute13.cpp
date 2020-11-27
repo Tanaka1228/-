@@ -50,11 +50,11 @@ void CSceneInstitute13::InitScene()
 	Draw::LoadImage(L"研究所床.png", 30, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 
 		//外部グラフィックファイルを読み込み6番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"研究所地下2階.png", 6, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"研究所地下２階.png", 8, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 
 	//モブオブジェクト追加
 	CObjInstMob* objinstmob = new CObjInstMob();//モブ
-	Objs::InsertObj(objinstmob, OBJ_INST_MOB, 6);
+	Objs::InsertObj(objinstmob, OBJ_INST_MOB, 9);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
@@ -70,7 +70,7 @@ void CSceneInstitute13::InitScene()
 
 		//マップ図
 	CObjMap* objm = new CObjMap();//マップ図
-	Objs::InsertObj(objm, OBJ_MAP, 6);
+	Objs::InsertObj(objm, OBJ_MAP, 5);
 }
 
 

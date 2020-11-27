@@ -52,11 +52,16 @@ void CSceneChinaTownBoss::InitScene()
 	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"武器商売ロボット.png", 6, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み7番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"チャイナタウンボス戦フィールドのマップ.png", 7, TEX_SIZE_512);//弾丸グラフィック
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
 
+	//マップ図
+	CObjMap* objma = new CObjMap();//マップ図
+	Objs::InsertObj(objma, OBJ_MAP, 5);
 
 	//チャイナタウンのボス戦フィールドオブジェクト作成
 	CObjChinaTownBoss* objb = new CObjChinaTownBoss();
@@ -68,6 +73,8 @@ void CSceneChinaTownBoss::InitScene()
 	//チャイナタウンオブジェクト作成
 	CObjChinaMob* objm = new CObjChinaMob(); //チャイナタウンモブオブジェクト作成
 	Objs::InsertObj(objm, OBJ_CHINA_MOB, 6); //作ったチャイナタウンオブジェクトをオブジェクトマネージャーに登録
+
+		
 }
 
 

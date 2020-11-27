@@ -56,6 +56,7 @@ void CObjMap::Draw()
 	CObjInstitute*inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);
 	CObjInstitute14* inst14 = (CObjInstitute14*)Objs::GetObj(OBJ_INSTITUTE14);
 	CObjInstitute13* inst13 = (CObjInstitute13*)Objs::GetObj(OBJ_INSTITUTE13);
+	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 
 	
 	//病院一階のマップ図
@@ -243,7 +244,28 @@ void CObjMap::Draw()
 			dst.m_right = 400.0f + 0.0f;
 			dst.m_bottom = 400.0f + 0.0f;
 
-			Draw::Draw(6, &src, &dst, c, 0.0f);
+			Draw::Draw(8, &src, &dst, c, 0.0f);
+		}
+
+	}
+	//チャイナタウンボス戦フィールド
+	if (chinatownboss != nullptr)
+	{
+		if (chinatownboss->GetMap() == true)
+		{
+
+			//背景表示
+			src.m_top = 0.0f;   // Y
+			src.m_left = 0.0f;  // X
+			src.m_right = 500.0f; // X
+			src.m_bottom = 500.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(7, &src, &dst, c, 0.0f);
 		}
 
 	}

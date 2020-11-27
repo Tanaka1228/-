@@ -112,6 +112,7 @@ void CObjChinaTownBoss::Init()
 	};
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (100 * 100));
+	map_flag = true;
 }
 //アクション
 void CObjChinaTownBoss::Action()
@@ -289,6 +290,19 @@ void CObjChinaTownBoss::Action()
 
 			m_map[i][ex] = 0;
 		}
+	}
+
+	if (Input::GetVKey('X') == true)
+	{
+		
+		
+			map_flag = true;
+
+		
+	}
+	else
+	{
+		map_flag = false;
 	}
 }
 //ドロー
