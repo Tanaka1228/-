@@ -203,7 +203,7 @@ void CObjInstitute13::Action()
 						}
 						
 
-						if ( m_map[i][j] == 20)//������14
+						if ( m_map[i][j] == 4)//������14
 						{
 							Scene::SetScene(new CSceneInstitute14());
 						}
