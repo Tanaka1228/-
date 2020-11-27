@@ -234,25 +234,26 @@ void CObjInstitute13::Action()
 
 			}
 		}
-		if (Input::GetVKey('X') == true)
-		{
-			if (map_flag == true)
-			{
-
-				
-				map_flag2 = true;
-				map_flag = false;
-
-			}
-		}
-		else
-		{
-			map_flag = true;
-			map_flag2 = false;
-			
-		}
+		
 	}
 
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
+
+
+			map_flag2 = true;
+			map_flag = false;
+
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
+
+	}
 	//�G�o�����C��
 	//float Xline = hx + (-mx_scroll) + 400;
 	//float Yline = hy + (my_scroll)-100;

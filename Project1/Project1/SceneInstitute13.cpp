@@ -70,7 +70,7 @@ void CSceneInstitute13::InitScene()
 
 		//マップ図
 	CObjMap* objm = new CObjMap();//マップ図
-	Objs::InsertObj(objm, OBJ_MAP, 5);
+	Objs::InsertObj(objm, OBJ_MAP, 6);
 }
 
 
