@@ -12,24 +12,24 @@ using namespace GameL;
 
 //使用するヘッダー
 #include"GameHead.h"
-#include"ObjInstitute15.h"
+#include"ObjInstitute13A.h"
 
 
 
 //コンストラクタ
-CSceneInstitute15::CSceneInstitute15()
+CSceneInstitute13A::CSceneInstitute13A()
 {
 }
 
 //デストラクタ
-CSceneInstitute15::~CSceneInstitute15()
+CSceneInstitute13A::~CSceneInstitute13A()
 {
 }
 
 
 
 //ゲームステージ初期化メソッド
-void CSceneInstitute15::InitScene()
+void CSceneInstitute13A::InitScene()
 {
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
@@ -43,32 +43,38 @@ void CSceneInstitute15::InitScene()
 	//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"研究所地下そざ.png", 5, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 
+	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImageW(L"武器商売ロボット.png", 6, TEX_SIZE_512);
+
 	//外部グラフィックファイルを読み込み6番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"研究所床.png", 30, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 
-	//外部グラフィックファイルを読み込み6番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"研究所地下１階.png", 6, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
+		//外部グラフィックファイルを読み込み6番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"研究所地下２階.png", 8, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 
+	//モブオブジェクト追加
+	CObjInstMob* objinstmob = new CObjInstMob();//モブ
+	Objs::InsertObj(objinstmob, OBJ_INST_MOB, 6);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 5); //作った主人公オブジェクトをオブジェクトマネージャーに登録
-
-		//マップ図
-	CObjMap* objm = new CObjMap();//マップ図
-	Objs::InsertObj(objm, OBJ_MAP, 5);
 
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
 	Objs::InsertObj(objg, OBJ_GUN, 6);
 
 	//研究所オブジェクト作成
-	CObjInstitute15* obji = new CObjInstitute15(); //研究所オブジェクト作成
-	Objs::InsertObj(obji, OBJ_INSTITUTE15, 4); //作った研究所オブジェクトをオブジェクトマネージャーに登録
+	CObjInstitute13* obji = new CObjInstitute13(); //研究所オブジェクト作成
+	Objs::InsertObj(obji, OBJ_INSTITUTE13, 4); //作った研究所オブジェクトをオブジェクトマネージャーに登録
+
+		//マップ図
+	CObjMap* objm = new CObjMap();//マップ図
+	Objs::InsertObj(objm, OBJ_MAP, 6);
 }
 
 
 //ゲームステージ実行中メソッド
-void CSceneInstitute15::Scene()
+void CSceneInstitute13A::Scene()
 {
 }

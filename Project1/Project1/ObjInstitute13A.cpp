@@ -1,22 +1,24 @@
-﻿#include"GameL\DrawTexture.h"
+﻿//�g�p����w�b�_�[�t�@�C��
+#include"GameL\DrawTexture.h"
 #include"GameL/DrawFont.h"
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
 
 #include"GameHead.h"
-#include "ObjInstitute15.h"
+#include "ObjInstitute13A.h"
 
-
+//�g�p����l�[���X�y�[�X
 using namespace GameL;
 
-
-void CObjInstitute15::Init()
+//�C�j�V�����C�Y
+void CObjInstitute13A::Init()
 {
-	mx_scroll = 0.0f;
-	my_scroll = 0.0f;
+	mx_scroll = -590.0f;
+	my_scroll = +100.0f;
 
-	int block_data[60][60] =
+	//�}�b�v���
+	int block_data[70][70] =
 	{
 		{1,1,1,1,1,1,1,1,1,50,1,1,1,1,1,1,1,1,1,25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,25,1,1,1,1,1,1,1,1,1},
 		{1,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,23,23,0,0,0,0,0,0,0,0,0,5,0,0,0,1},
@@ -52,17 +54,19 @@ void CObjInstitute15::Init()
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,2,50,1,1,1,1,1,1},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,50,0,0,0,0,0,0},
 	};
-
-	memcpy(m_map, block_data, sizeof(int) * (60 * 60));
+	//�}�b�v�f�[�^��R�s�[
+	memcpy(m_map, block_data, sizeof(int) * (70 * 70));
 	map_flag = true;
 	map_flag2 = false;
+
+
 }
-
-void CObjInstitute15::Action()
+//�A�N�V����
+void CObjInstitute13A::Action()
 {
-
+	//��l���̈ʒu��擾
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	float hx = hero->GetX2();//
+	float hx = hero->GetX2();//�X�N���[��
 	float hy = hero->GetY2();
 
 	//踏んでいるblockの種類を初期化
@@ -70,42 +74,43 @@ void CObjInstitute15::Action()
 
 	if (hero->GetRight() == false)
 	{
-
+		//����X�N���[�����C���@��
 		if (hx < 400)
 		{
-			hero->SetX2(400); //
-			mx_scroll -= -6.0f + hero->GetVX(); //
+			hero->SetX2(400); //��l���̓��C���𒴂��Ȃ��悤�ɂ���
+			mx_scroll -= -6.0f + hero->GetVX(); //��l���͖{�������ׂ����̒l��m_scroll�ɉ�����
 		}
 	}
 
 	if (hero->GetLeft() == false)
 	{
-
+		//�O���X�N���[�����C�� ��
 		if (hx > 400)
 		{
-			hero->SetX2(400);
-			mx_scroll -= 6.0f + hero->GetVX();
+			hero->SetX2(400); //��l���̓��C���𒴂��Ȃ��悤�ɂ���
+			mx_scroll -= 6.0f + hero->GetVX(); //��l���͖{�������ׂ����̒l��m_scroll�ɉ�����
+
 		}
 	}
 
 	if (hero->GetDown() == false)
 	{
-
+		//�X�N���[�����C���@��
 		if (hy > 300)
 		{
-			hero->SetY2(300);
-			my_scroll -= 6.0f + hero->GetVY();
+			hero->SetY2(300); //��l���̓��C���𒴂��Ȃ��悤�ɂ���
+			my_scroll -= 6.0f + hero->GetVY(); //��l���͖{�������ׂ����̒l��m_scroll�ɉ�����
 
 		}
 	}
 
 	if (hero->GetUp() == false)
 	{
-
+		//�X�N���[�����C���@��
 		if (hy < 300)
 		{
-			hero->SetY2(300);
-			my_scroll -= -6.0f + hero->GetVY();
+			hero->SetY2(300); //��l���̓��C���𒴂��Ȃ��悤�ɂ���
+			my_scroll -= -6.0f + hero->GetVY(); //��l���͖{�������ׂ����̒l��m_scroll�ɉ�����
 		}
 	}
 
@@ -113,7 +118,7 @@ void CObjInstitute15::Action()
 
 
 
-
+	//��l���̏Փˏ�Ԋm�F�p�t���O�̏�����
 	hero->SetUp(false);
 	hero->SetDown(false);
 	hero->SetLeft(false);
@@ -124,36 +129,36 @@ void CObjInstitute15::Action()
 
 
 
-
-	for (int i = 0; i < 60; i++)
+	//m_map�̑S�v�f�ɃA�N�Z�X
+	for (int i = 0; i < 70; i++)
 	{
-		for (int j = 0; j < 60; j++)
+		for (int j = 0; j < 70; j++)
 		{
 			if (m_map[i][j] > 0)
 			{
 
-
+				//�v�f�ԍ�����W�ɕύX
 				float x = j * 32.0f;
 				float y = i * 32.0f;
 
-
+				//��l���ƃu���b�N�̓����蔻��
 				if ((hx + (-mx_scroll) + 64.0f > x) && (hx + (-mx_scroll) < x + 64.0f) && (hy + (-my_scroll) + 64.0f > y) && (hy + (-my_scroll) < y + 64.0f))
 				{
 
+					//�㉺���E����
 
-
-
+					//vector�̍쐬
 					float vx = (hx + (-mx_scroll)) - x;
 					float vy = (hy + (-my_scroll)) - y;
 
+					//��������߂�
+					float len = sqrt(vx * vx + vy * vy);//sqrt�֐��́A��������Ԃ�
 
-					float len = sqrt(vx * vx + vy * vy);
-
-
-					float r = atan2(vy, vx);
+					//�p�x����߂�
+					float r = atan2(vy, vx);//atan2�֐��̓A�[�N�^���W�F���g��Ԃ�
 					r = r * 180.0f / 3.14f;
 
-					if (r <= 0.0f)
+					if (r <= 0.0f)//abs�֐��́A�l�̐�Βl����߂� �����𖳎������l
 						r = abs(r);
 					else
 						r = 360.0f - abs(r);
@@ -196,25 +201,31 @@ void CObjInstitute15::Action()
 							hero->SetBT(m_map[i][j]);
 							hero->SetVY(0.0f);//-VX*�����W��
 						}
-						if (m_map[i][j] == 69)//������9
-						{
-							Scene::SetScene(new CSceneInstitute9());
-						}
-						if (m_map[i][j] == 70)//������10
-						{
-							Scene::SetScene(new CSceneInstitute10());
-						}
-						if (m_map[i][j] == 71)//������11
-						{
-							Scene::SetScene(new CSceneInstitute11());
-						}
-						if (m_map[i][j] == 72)//������12
-						{
-							Scene::SetScene(new CSceneInstitute12());
-						}
-						if (m_map[i][j] == 4)
+
+
+						if (m_map[i][j] == 4)//������14
 						{
 							Scene::SetScene(new CSceneInstitute14());
+						}
+						if (m_map[i][j] == 2 || m_map[i][j] == 50)//������BOSS
+						{
+							Scene::SetScene(new CSceneInstituteBoss());
+						}
+						if (m_map[i][j] == 61)//������1
+						{
+							Scene::SetScene(new CSceneInstitute1());
+						}
+						if (m_map[i][j] == 62)//������2
+						{
+							Scene::SetScene(new CSceneInstitute2());
+						}
+						if (m_map[i][j] == 63)//������3
+						{
+							Scene::SetScene(new CSceneInstitute3());
+						}
+						if (m_map[i][j] == 64)//������4
+						{
+							Scene::SetScene(new CSceneInstitute4());
 						}
 					}
 				}
@@ -223,8 +234,8 @@ void CObjInstitute15::Action()
 
 			}
 		}
-	}
 
+	}
 
 	if (Input::GetVKey('X') == true)
 	{
@@ -241,11 +252,34 @@ void CObjInstitute15::Action()
 	{
 		map_flag = true;
 		map_flag2 = false;
+
 	}
+	//�G�o�����C��
+	//float Xline = hx + (-mx_scroll) + 400;
+	//float Yline = hy + (my_scroll)-100;
+
+	//int ex = ((int)Xline) / 32;
+	//int ey = ((int)Yline) / 32;
+
+	//for (int i = 0; i < 25; i++)
+	//{
+	//	for (int j = 0; j < 25; j++)
+
+	//		if (m_map[i][ex] == 15)
+	//		{
+	//			//�U���G�@�I�u�W�F�N�g�쐬
+	//			CObjRooftopBoss* obj_rooftop_boss = new CObjRooftopBoss(ex * 32, i * 32); //�U���G�@�I�u�W�F�N�g�쐬
+	//			Objs::InsertObj(obj_rooftop_boss, OBJ_ROOF_TOP_BOSS, 4); //�U���G�@�I�u�W�F�N�g��I�u�W�F�N�g�}�l�[�W���[�ɓo�^
+
+	//			m_map[i][ex] = 0;
+	//		}
+
+
+	//}
 
 }
 //�h���[
-void CObjInstitute15::Draw()
+void CObjInstitute13A::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
@@ -261,13 +295,13 @@ void CObjInstitute15::Draw()
 	dst.m_top = 0.0f + my_scroll;
 	dst.m_left = 0.0f + mx_scroll;
 	dst.m_right = 1990.0f + mx_scroll;
-	dst.m_bottom = 900.0 + my_scroll;
+	dst.m_bottom = 1000.0 + my_scroll;
 	Draw::Draw(30, &src, &dst, c, 0.0f);
 
 	//�}�b�v�`�b�v�ɂ��block�ݒu
-	for (int i = 0; i < 60; i++)
+	for (int i = 0; i < 70; i++)
 	{
-		for (int j = 0; j < 60; j++)
+		for (int j = 0; j < 70; j++)
 		{
 
 			if (m_map[i][j] == 1)//��
@@ -288,6 +322,7 @@ void CObjInstitute15::Draw()
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
 
+
 			if (m_map[i][j] == 4)//�G���x�[�^�[
 			{
 				//�؂���ʒu�̐ݒ�
@@ -305,6 +340,23 @@ void CObjInstitute15::Draw()
 				//�`��
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
+			if (m_map[i][j] == 2)//�K�i
+			{
+				//�؂���ʒu�̐ݒ�
+				src.m_top = 277.0f;   //y
+				src.m_left = 220.0f; //x
+				src.m_right = 289.0f; //x
+				src.m_bottom = 346.0f; //y
+
+				//�\���ʒu�̐ݒ�
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 64.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
+			}
+			//�`��
+			Draw::Draw(5, &src, &dst, c, 0.0f);
+
 			if (m_map[i][j] == 5)//��
 			{
 				//�؂���ʒu�̐ݒ�
@@ -730,6 +782,7 @@ void CObjInstitute15::Draw()
 				//�`��
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
+
 			if (m_map[i][j] == 31)//��
 			{
 				//�؂���ʒu�̐ݒ�
@@ -746,6 +799,9 @@ void CObjInstitute15::Draw()
 
 				//�`��
 				Draw::Draw(5, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 50)//�����蔻��
+			{
 			}
 			if (m_map[i][j] == 60)//�������h�A
 			{
@@ -764,23 +820,20 @@ void CObjInstitute15::Draw()
 				//�`��
 				Draw::Draw(5, &src, &dst, c, 0.0f);
 			}
-			if (m_map[i][j] == 69)//�����蔻��
-			{
 
-			}
-			if (m_map[i][j] == 70)//�����蔻��
+			if (m_map[i][j] == 61)//�����蔻��
 			{
-
 			}
-			if (m_map[i][j] == 71)//�����蔻��
+			if (m_map[i][j] == 62)//�����蔻��
 			{
-
 			}
-			if (m_map[i][j] == 72)//�����蔻��
+			if (m_map[i][j] == 63)//�����蔻��
 			{
-
 			}
-			if (m_map[i][j] == 73)//　モブロボット表示
+			if (m_map[i][j] == 64)//�����蔻��
+			{
+			}
+			if (m_map[i][j] == 70)//　モブロボット表示
 			{
 				//切り取り位置の設定
 				src.m_top = 0.0f;   //y
@@ -791,16 +844,14 @@ void CObjInstitute15::Draw()
 				//表示位置の設定
 				dst.m_top = i * 32.0f + my_scroll;//y
 				dst.m_left = j * 32.0f + mx_scroll;//x
-				dst.m_right = j * 32.0f + 45.0f + mx_scroll;//x
-				dst.m_bottom = i * 32.0f + 45.0f + my_scroll; //y
+				dst.m_right = j * 32.0f + 32.0f + mx_scroll;//x
+				dst.m_bottom = i * 32.0f + 32.0f + my_scroll; //y
 
-				//5番目に登録したグラフィックをstc・dst・cの情報を元に描画
-				Draw::Draw(6, &src, &dst, c, 0.0f);
+				//1番目に登録したグラフィックをstc・dst・cの情報を元に描画
+
+				Draw::Draw(6, &src, &dst, c, -1.0f);
 			}
+
 		}
 	}
 }
-
-
-
-

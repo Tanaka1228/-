@@ -58,9 +58,9 @@ enum OBJ_NAME
 					OBJ_INSTITUTE10,//研究部屋10
 					OBJ_INSTITUTE11,//研究部屋11
 					OBJ_INSTITUTE12,//研究部屋12
-					OBJ_INSTITUTE13,//研究廊下13
+					OBJ_INSTITUTE13A,//研究廊下13
 					OBJ_INSTITUTE14,//研究廊下14
-					OBJ_INSTITUTE15,//研究廊下15
+					
 					//--------------病院---------------------
 					OBJ_ROOF_TOP,//病院屋上
 					OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
@@ -193,10 +193,9 @@ struct UserData
 #include"ObjInstitute10.h"
 #include"ObjInstitute11.h"
 #include"ObjInstitute12.h"
-#include"ObjInstitute13.h"
-#include"ObjInstitute13.h"
+#include"ObjInstitute13A.h"
 #include"ObjInstitute14.h"
-#include"ObjInstitute15.h"
+
 
 #include"CObjInstituteBossBoss.h"
 #include"ObjMap.h"
@@ -256,9 +255,8 @@ struct UserData
 #include"SceneInstitute10.h"
 #include"SceneInstitute11.h"
 #include"SceneInstitute12.h"
-#include"SceneInstitute13.h"
+#include"SceneInstitute13A.h"
 #include"SceneInstitute14.h"
-#include"SceneInstitute15.h"
 #include"SceneChinaTown_b.h"
 #include"SceneChinaTown_c.h"
 #include"SceneChinaTown_d.h"

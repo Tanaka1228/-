@@ -201,12 +201,10 @@
     <ClInclude Include="ObjInstitute11.h" />
     <ClInclude Include="ObjInstitute12.h" />
     <ClInclude Include="ObjInstitute13.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjInstitute14.h" />
-    <ClInclude Include="ObjInstitute15.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjInstitute13A.h" />
+    <ClInclude Include="ObjInstitute14.h" />
     <ClInclude Include="ObjInstitute2.h" />
     <ClInclude Include="ObjInstitute3.h" />
     <ClInclude Include="ObjInstitute4.h" />
@@ -258,12 +256,10 @@
     <ClInclude Include="SceneInstitute11.h" />
     <ClInclude Include="SceneInstitute12.h" />
     <ClInclude Include="SceneInstitute13.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="SceneInstitute14.h" />
-    <ClInclude Include="SceneInstitute15.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="SceneInstitute13A.h" />
+    <ClInclude Include="SceneInstitute14.h" />
     <ClInclude Include="SceneInstitute3.h" />
     <ClInclude Include="SceneInstitute4.h" />
     <ClInclude Include="SceneInstitute5.h" />
@@ -358,12 +354,10 @@
     <ClCompile Include="ObjInstitute11.cpp" />
     <ClCompile Include="ObjInstitute12.cpp" />
     <ClCompile Include="ObjInstitute13.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjInstitute14.cpp" />
-    <ClCompile Include="ObjInstitute15.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ObjInstitute13A.cpp" />
+    <ClCompile Include="ObjInstitute14.cpp" />
     <ClCompile Include="ObjInstitute3.cpp" />
     <ClCompile Include="ObjInstitute4.cpp" />
     <ClCompile Include="ObjInstitute5.cpp" />
@@ -418,12 +412,10 @@
     <ClCompile Include="SceneInstitute11.cpp" />
     <ClCompile Include="SceneInstitute12.cpp" />
     <ClCompile Include="SceneInstitute13.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="SceneInstitute14.cpp" />
-    <ClCompile Include="SceneInstitute15.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="SceneInstitute13A.cpp" />
+    <ClCompile Include="SceneInstitute14.cpp" />
     <ClCompile Include="SceneInstitute2.cpp" />
     <ClCompile Include="SceneInstitute3.cpp" />
     <ClCompile Include="SceneInstitute4.cpp" />

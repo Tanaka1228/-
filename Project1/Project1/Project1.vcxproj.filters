@@ -507,10 +507,10 @@
     <ClInclude Include="ObjDrugMob.h">
       <Filter>ソース ファイル\Character\製薬会社のモブ</Filter>
     </ClInclude>
-    <ClInclude Include="ObjInstitute15.h">
+    <ClInclude Include="ObjInstitute13A.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneInstitute15.h">
+    <ClInclude Include="SceneInstitute13A.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
@@ -917,10 +917,10 @@
     <ClCompile Include="ObjDrugMob.cpp">
       <Filter>ソース ファイル\Character\製薬会社のモブ</Filter>
     </ClCompile>
-    <ClCompile Include="ObjInstitute15.cpp">
+    <ClCompile Include="ObjInstitute13A.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="SceneInstitute15.cpp">
+    <ClCompile Include="SceneInstitute13A.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
