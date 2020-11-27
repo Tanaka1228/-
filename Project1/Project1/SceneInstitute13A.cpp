@@ -65,8 +65,8 @@ void CSceneInstitute13A::InitScene()
 	Objs::InsertObj(objg, OBJ_GUN, 6);
 
 	//研究所オブジェクト作成
-	CObjInstitute13* obji = new CObjInstitute13(); //研究所オブジェクト作成
-	Objs::InsertObj(obji, OBJ_INSTITUTE13, 4); //作った研究所オブジェクトをオブジェクトマネージャーに登録
+	CObjInstitute13A* obji = new CObjInstitute13A(); //研究所オブジェクト作成
+	Objs::InsertObj(obji, OBJ_INSTITUTE13A, 4); //作った研究所オブジェクトをオブジェクトマネージャーに登録
 
 		//マップ図
 	CObjMap* objm = new CObjMap();//マップ図

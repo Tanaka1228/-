@@ -7,11 +7,11 @@ using namespace GameL;
 
 
 //オブジェクト：ブロック&背景
-class CObjChinaTown13A :public CObj
+class CObjInstitute13A :public CObj
 {
 public:
-	CObjChinaTown13A() {};
-	~CObjChinaTown13A() {};
+	CObjInstitute13A() {};
+	~CObjInstitute13A() {};
 	void Init();//イニシャライズ
 	void Action();//アクション
 	void Draw();//ドロー
