@@ -49,6 +49,8 @@ void CSceneInstitute13::InitScene()
 	//外部グラフィックファイルを読み込み6番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"研究所床.png", 30, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 
+		//外部グラフィックファイルを読み込み6番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"研究所地下2階.png", 6, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 
 	//モブオブジェクト追加
 	CObjInstMob* objinstmob = new CObjInstMob();//モブ
@@ -65,6 +67,10 @@ void CSceneInstitute13::InitScene()
 	//研究所オブジェクト作成
 	CObjInstitute13* obji = new CObjInstitute13(); //研究所オブジェクト作成
 	Objs::InsertObj(obji, OBJ_INSTITUTE13, 4); //作った研究所オブジェクトをオブジェクトマネージャーに登録
+
+		//マップ図
+	CObjMap* objm = new CObjMap();//マップ図
+	Objs::InsertObj(objm, OBJ_MAP, 5);
 }
 
 

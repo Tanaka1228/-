@@ -55,6 +55,7 @@ void CObjMap::Draw()
 	CObjDrugCampany3* drug3 = (CObjDrugCampany3*)Objs::GetObj(OBJ_DRUG_CAMPANY3);
 	CObjInstitute*inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);
 	CObjInstitute14* inst14 = (CObjInstitute14*)Objs::GetObj(OBJ_INSTITUTE14);
+	CObjInstitute13* inst13 = (CObjInstitute13*)Objs::GetObj(OBJ_INSTITUTE13);
 
 	
 	//ïaâ@àÍäKÇÃÉ}ÉbÉvê}
@@ -215,6 +216,27 @@ void CObjMap::Draw()
 			src.m_left = 104.0f;  // X
 			src.m_right = 971.0f; // X
 			src.m_bottom =535.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(6, &src, &dst, c, 0.0f);
+		}
+
+	}
+	//å§ãÜèäínâ∫2äK
+	if (inst13 != nullptr)
+	{
+		if (inst13->GetMap() == true)
+		{
+
+			//îwåiï\é¶
+			src.m_top = 53.0f;   // Y
+			src.m_left = 121.0f;  // X
+			src.m_right = 817.0f; // X
+			src.m_bottom = 464.0f;// Y 
 
 			dst.m_top = 100.0f;
 			dst.m_left = 0.0f;
