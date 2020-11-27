@@ -259,9 +259,10 @@ void CObjChinaTownBoss::Action()
 								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
-						if (m_map[i][j] ==82)//下に行くとチャイナタウンボス
+						if (m_map[i][j] ==82)//右に行くとチャイナタウンｂ
 						{
 							Scene::SetScene(new CSceneChinaTown_b());
+							
 						}
 					}
 				}

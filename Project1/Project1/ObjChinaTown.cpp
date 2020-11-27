@@ -241,6 +241,7 @@ void CObjChinaTown::Action()
 						if (m_map[i][j] == 98)//下に行くとチャイナタウンボス
 						{
 							Scene::SetScene(new CSceneChinaTownBoss());
+							
 						}
 
 					}
