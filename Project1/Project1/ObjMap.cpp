@@ -55,7 +55,7 @@ void CObjMap::Draw()
 	CObjDrugCampany3* drug3 = (CObjDrugCampany3*)Objs::GetObj(OBJ_DRUG_CAMPANY3);
 	CObjInstitute*inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);
 	CObjInstitute14* inst14 = (CObjInstitute14*)Objs::GetObj(OBJ_INSTITUTE14);
-	CObjInstitute13A* inst13A = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);
+	CObjInstitute13A* inst13a = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 
 	
@@ -228,9 +228,9 @@ void CObjMap::Draw()
 
 	}
 	//Œ¤‹†Š’n‰º2ŠK
-	if (inst13A != nullptr)
+	if (inst13a != nullptr)
 	{
-		if (inst13A->GetMap() == true)
+		if (inst13a->GetMap() == true)
 		{
 
 			//”wŒi•\¦

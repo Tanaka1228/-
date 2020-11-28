@@ -36,7 +36,7 @@ void CObjInstMob::Action()
 {
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjInstitute* inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);//研究所1階
-	CObjInstitute13A* inst13 = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);//研究所地下2階
+	CObjInstitute13A* inst13a = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);//研究所地下2階
 	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);//研究所BOSS
 
 
@@ -151,7 +151,7 @@ void CObjInstMob::Action()
 
 
 	//----------地下2階の会話フラグ----------------------------------
-	if (inst13 != nullptr)
+	if (inst13a != nullptr)
 	{
 		if (hero->GetBT() == 70)//主人公が数字(ブロック)に触れていれば
 		{
@@ -273,7 +273,7 @@ void CObjInstMob::Draw()
 
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjInstitute* inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);//研究所1階
-	CObjInstitute13A* inst13 = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);//研究所地下2階
+	CObjInstitute13A* inst13a = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);//研究所地下2階
 	CObjInstituteBoss* instituteboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);//研究所BOSS
 
 	//------触っるやつは「〇」を付けています----------------------------------------------------
@@ -407,7 +407,7 @@ void CObjInstMob::Draw()
 	//}
 
 	//------地下2階--------------------------------------------------------------------------------------------------
-	if (inst13 != nullptr && mob_flag == 1)
+	if (inst13a != nullptr && mob_flag == 1)
 	{
 		if (m_sp == 1)//エンターキーを一回押したとき
 		{
