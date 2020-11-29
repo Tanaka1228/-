@@ -409,6 +409,7 @@ void CObjHosMob::Draw()
 		}
 		if (m_sp == 3)
 		{
+			sp_flag = false;
 			Font::StrDraw(L"", 200.0f, 530, 25, c);// X  Y  ‘å‚«‚³    
 			key_flag = 1;
 		}
@@ -471,6 +472,7 @@ void CObjHosMob::Draw()
 		}
 		if (m_sp == 4)
 		{
+			sp_flag = false;
 			Font::StrDraw(L"", 200.0f, 530, 25, c);// X  Y  ‘å‚«‚³    
 			key_flag = 1;
 		}
@@ -578,8 +580,7 @@ void CObjHosMob::Draw()
 		{
 			
 			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  ‘å‚«‚³     
-
-
+			sp_flag = false;
 			key_flag = 1;
 			
 		}

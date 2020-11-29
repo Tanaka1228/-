@@ -72,11 +72,11 @@ void CSceneRooftop::InitScene()
 
 	//モブオブジェクト追加
 	CObjHosMob* objhosmob = new CObjHosMob();//モブ
-	Objs::InsertObj(objhosmob, OBJ_HOS_MOB, 4);
+	Objs::InsertObj(objhosmob, OBJ_HOS_MOB, 5);
 
 	//会話の背景オブジェクト作成
 	CObjSpBack* objsp = new CObjSpBack(); //会話の背景作成
-	Objs::InsertObj(objsp, OBJ_SP_BACK, 5); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(objsp, OBJ_SP_BACK, 4); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
 }
 
 

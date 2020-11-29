@@ -83,7 +83,7 @@ void CSceneHospital::InitScene()
 
 	//会話の背景オブジェクト作成
 	CObjSpBack* objsp = new CObjSpBack(); //会話の背景作成
-	Objs::InsertObj(objsp, OBJ_SP_BACK, 5); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
+	Objs::InsertObj(objsp, OBJ_SP_BACK, 3); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
 }
 
 
