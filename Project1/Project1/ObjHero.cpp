@@ -77,7 +77,7 @@ void CObjHero::Init()
 	//---------------------------------------------------------------
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 36, 36, ELEMENT_PLAYER, OBJ_HERO, 1);
+	Hits::SetHitBox(this, m_x, m_y, 34, 34, ELEMENT_PLAYER, OBJ_HERO, 1);
 
 	//blockとの衝突状態確認用
 	m_hit_up = false;
@@ -650,7 +650,7 @@ void CObjHero::Draw()
 	dst.m_top = 0.0f + m_y;
 	dst.m_left = 0.0f + m_x;
 	dst.m_right = 36.0f + m_x;
-	dst.m_bottom = 36.0f + m_y;
+	dst.m_bottom = 34.0f + m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
