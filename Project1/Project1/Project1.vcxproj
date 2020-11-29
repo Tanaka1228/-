@@ -221,6 +221,7 @@
     <ClInclude Include="ObjMenu.h" />
     <ClInclude Include="ObjOpeRoom.h" />
     <ClInclude Include="ObjRooftop.h" />
+    <ClInclude Include="ObjSpBack.h" />
     <ClInclude Include="ObjTemplateRoom.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="CObjRooftopBoss.h" />
@@ -374,6 +375,7 @@
     <ClCompile Include="ObjOpeRoom.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />
     <ClCompile Include="CObjRooftopBoss.cpp" />
+    <ClCompile Include="ObjSpBack.cpp" />
     <ClCompile Include="ObjTemplateRoom.cpp" />
     <ClCompile Include="ObjXRayRoom.cpp" />
     <ClCompile Include="SceneBlock.cpp" />

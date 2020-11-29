@@ -31,6 +31,7 @@ enum OBJ_NAME
 					OBJ_HOS_MOB,//病院のモブ
 					OBJ_INST_MOB,//研究所のモブ
 					OBJ_DRUG_MOB,//製薬会社のモブ
+					OBJ_SP_BACK,//会話の背景
 
 					//------マップ-------------------------------------------
 					OBJ_BLOCK,//拠点
@@ -208,6 +209,7 @@ struct UserData
 #include"ObjHosMob.h"
 #include"ObjInstMob.h"
 #include"ObjDrugMob.h"
+#include"ObjSpBack.h"
 
 //------------------------------------------------
 

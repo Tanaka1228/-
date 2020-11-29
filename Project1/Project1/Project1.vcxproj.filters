@@ -103,6 +103,9 @@
     <Filter Include="ソース ファイル\Character\研究所のモブ">
       <UniqueIdentifier>{6861202b-8af7-4ff4-aa01-e7f689784b33}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Character\会話の背景">
+      <UniqueIdentifier>{93ab699d-0ef0-4446-b9e8-9327c28d8a73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -513,6 +516,9 @@
     <ClInclude Include="SceneInstitute13A.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="ObjSpBack.h">
+      <Filter>ソース ファイル\Character\会話の背景</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -922,6 +928,9 @@
     </ClCompile>
     <ClCompile Include="SceneInstitute13A.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjSpBack.cpp">
+      <Filter>ソース ファイル\Character\会話の背景</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
