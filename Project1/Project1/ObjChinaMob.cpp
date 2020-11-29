@@ -357,7 +357,8 @@ void CObjChinaMob::Draw()
 		}
 		if (m_sp == 3)//エンターキーを3回押したとき
 		{
-			
+			sp_flag = false;
+
 			Font::StrDraw(L"", 50.0f, 500, 25, c);// X  Y  大きさ     
 
 			key_flag = 1;

@@ -36,68 +36,6 @@ void CObjSpBack::Init()
 //アクション
 void CObjSpBack::Action()
 {
-	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	CObjDrugCampany* drug = (CObjDrugCampany*)Objs::GetObj(OBJ_DRUG_CAMPANY);//製薬会社の一階
-
-
-	if (drug != nullptr)
-	{
-		if (hero->GetBT() == 10)
-		{
-			mob_flag = 1;
-			if (Input::GetVKey(VK_RETURN) == true) {
-
-				if (m_key_control == true)
-				{
-					if (key_flag == 1)
-					{
-						m_sp = 1;
-
-					}
-
-					if (key_flag == 2)
-					{
-						m_sp = 2;
-
-					}
-					if ((key_flag == 3))
-					{
-
-						m_sp = 3;
-
-					}
-					if ((key_flag == 4))
-					{
-						m_sp = 4;
-
-					}
-					if ((key_flag == 5))
-					{
-						m_sp = 5;
-
-					}
-					if ((key_flag == 6))
-					{
-						m_sp = 6;
-
-					}
-					m_key_control = false;
-				}
-
-			}
-			else
-			{
-				m_key_control = true;
-
-			}
-		}
-
-	}
-
-
-
-
-
 
 
 }
@@ -113,8 +51,26 @@ void CObjSpBack::Draw()
 
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjDrugCampany* drug = (CObjDrugCampany*)Objs::GetObj(OBJ_DRUG_CAMPANY);//製薬会社の一階
+	CObjChinaMob* chinamob = (CObjChinaMob*)Objs::GetObj(OBJ_CHINA_MOB);//チャイナタウンのモブ
 
 
+
+	if (chinamob->Sp_Flag() == true) 
+	{
+		//切り取り位置の設定
+		src.m_top = 372.0f;   //y
+		src.m_left = 18.0f; //x
+		src.m_right = 781.0f; //x
+		src.m_bottom = 581.0f; //y
+
+		//表示位置の設定
+		dst.m_top = 0.0f;
+		dst.m_left = 0.0f;
+		dst.m_right = 32.0f;
+		dst.m_bottom = 32.0f;
+
+		Draw::Draw(7, &src, &dst, c, 0.0f);
+	}
 
 }
 
