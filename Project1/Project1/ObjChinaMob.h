@@ -14,7 +14,7 @@ public:
 	void Action(); //アクション
 	void Draw(); //ドロー
 
-	int Sp_Flag() { return sp_flag; }
+	bool Sp_Flag() { return sp_flag; }
 private:
 	int m_sp;//会話
 	int key_flag;//会話のフラグ

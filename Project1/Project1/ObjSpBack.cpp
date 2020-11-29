@@ -52,25 +52,28 @@ void CObjSpBack::Draw()
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
 	CObjDrugCampany* drug = (CObjDrugCampany*)Objs::GetObj(OBJ_DRUG_CAMPANY);//製薬会社の一階
 	CObjChinaMob* chinamob = (CObjChinaMob*)Objs::GetObj(OBJ_CHINA_MOB);//チャイナタウンのモブ
+	CObjChinaTown* chinatown = (CObjChinaTown*)Objs::GetObj(OBJ_CHINA_TOWN);
+	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
+	CObjChinaTown_b* chinatown_b = (CObjChinaTown_b*)Objs::GetObj(OBJ_CHINA_TOWN_B);//チャイナタウンのB
 
-
-
-	if (chinamob->Sp_Flag() == true) 
+	if (chinatown != nullptr)
 	{
-		//切り取り位置の設定
-		src.m_top = 372.0f;   //y
-		src.m_left = 18.0f; //x
-		src.m_right = 781.0f; //x
-		src.m_bottom = 581.0f; //y
+		if (chinamob->Sp_Flag() == true)
+		{
+			//切り取り位置の設定
+			src.m_top = 372.0f;   //y
+			src.m_left = 18.0f; //x
+			src.m_right = 781.0f; //x
+			src.m_bottom = 581.0f; //y
 
-		//表示位置の設定
-		dst.m_top = 0.0f;
-		dst.m_left = 0.0f;
-		dst.m_right = 32.0f;
-		dst.m_bottom = 32.0f;
+			//表示位置の設定
+			dst.m_top = 450.0f;
+			dst.m_left = 2.0f;
+			dst.m_right = 798.0f;
+			dst.m_bottom = 600.0f;
 
-		Draw::Draw(7, &src, &dst, c, 0.0f);
+			Draw::Draw(7, &src, &dst, c, 0.0f);
+		}
 	}
-
 }
 
