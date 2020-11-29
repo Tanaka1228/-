@@ -58,9 +58,27 @@ void CObjHero::Init()
 	m_posture = 0.0f; //右向き0.0f 左向き1.0f
 
 
-	m_ani_time=0; //アニメーションフレーム動作間隔
-    m_ani_frame=2; //描画フレーム
+	m_ani_time=0; //向きフレーム
+    m_ani_frame=2; //向き描画フレーム
 
+	//-----------------------------------------------------------------
+	//正面アニメーション
+	m_ani_time1 = 0; //アニメーションフレーム動作間隔
+    m_ani_frame1=0; //静止フレームを初期にする
+
+	//背面アニメーション
+	m_ani_time2 = 0; //アニメーションフレーム動作間隔
+	m_ani_frame2 = 0; //静止フレームを初期にする
+
+	//右アニメーション
+	m_ani_time3= 0; //アニメーションフレーム動作間隔
+	m_ani_frame3 = 0; //静止フレームを初期にする
+
+	//左アニメーション
+	m_ani_time4= 0; //アニメーションフレーム動作間隔
+	m_ani_frame4= 0; //静止フレームを初期にする
+
+	//------------------------------------------------------------------
 	m_hp = 10;//主人公のHP
 	//--------------------------------------------------------------------
 	m_f = true; //弾丸発射制御
@@ -519,6 +537,7 @@ void CObjHero::Action()
 		m_vx += m_x;
 		m_posture = 0.0f;
 		m_ani_frame = 2;
+		m_ani_time3 += 1;
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_x -= 2;
@@ -527,6 +546,20 @@ void CObjHero::Action()
 		
 		
 	}
+	else
+	{
+		m_ani_time3= 0;
+		m_ani_frame3 = 0;
+	}
+	if (m_ani_time3 > 2)
+	{
+		m_ani_frame3+= 1;
+		m_ani_time3 = 0;
+	}
+	if (m_ani_frame3 == 2)
+	{
+		m_ani_frame3 = 0;
+	}
 
 	if (Input::GetVKey(VK_LEFT) == true) //主人公移動キー 左
 	{
@@ -534,6 +567,7 @@ void CObjHero::Action()
 		m_vx -= m_x;
 		m_posture = 1.0f;
 		m_ani_frame = 3;
+		m_ani_time4 += 1;
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_x += 2;
@@ -542,12 +576,28 @@ void CObjHero::Action()
 		
 		
 	}
+	else
+	{
+		m_ani_time4 = 0;
+		m_ani_frame4 = 0;
+	}
+	if (m_ani_time4 > 2)
+	{
+		m_ani_frame4 += 1;
+		m_ani_time4 = 0;
+	}
+	if (m_ani_frame4 == 2)
+	{
+		m_ani_frame4= 0;
+	}
+
 
 	if (Input::GetVKey(VK_UP) == true) //主人公移動キー ↑
 	{
 		m_y -= 5.0f;
 		m_vy -= m_y;
 		m_ani_frame = 1;
+		m_ani_time2 += 1;
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_y += 2;
@@ -555,11 +605,28 @@ void CObjHero::Action()
 		}
 	
 	}
+	else
+	{
+		m_ani_time2 = 0;
+		m_ani_frame2 = 0;
+	}
+	if (m_ani_time2 > 3)
+	{
+		m_ani_frame2 += 1;
+		m_ani_time2 = 0;
+	}
+	if (m_ani_frame2 == 3)
+	{
+		m_ani_frame2 = 0;
+	}
+
+
 	if (Input::GetVKey(VK_DOWN) == true) //主人公移動キー ↓
 	{
 		m_y+= 5.0f;
 		m_vy += m_y;
 		m_ani_frame = 0;
+		m_ani_time1 += 1;
 		if (m_gun == 1)//武器を構えたら移動速度低下
 		{
 			m_y -= 2;
@@ -567,6 +634,34 @@ void CObjHero::Action()
 		}
 		
 	}
+	else
+	{
+		m_ani_time1 = 0;
+		m_ani_frame1 = 0;
+	}
+	if (m_ani_time1 > 3)
+	{
+		m_ani_frame1 += 1;
+		m_ani_time1 = 0;
+	}
+	if (m_ani_frame1 == 3)
+	{
+		m_ani_frame1 = 0;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	//移動ベクトルの正規化
 	UnitVec(&m_vy, &m_vx);
@@ -597,11 +692,22 @@ void CObjHero::Action()
 //ドロー
 void CObjHero::Draw()
 {
-	int AniData[4] = //向き情報を登録
+	int AniData1[3] = //正面向き情報を登録
 	{
-		0,1,2,3,
+		0,1,2,
 	};
-
+	int AniData2[3] = //背面向き情報を登録
+	{
+		0,1,2,
+	};
+	int AniData3[2] = //右向き情報を登録
+	{
+		0,1,
+	};
+	int AniData4[2] = //左向き情報を登録
+	{
+		0,1,
+	};
 
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 	RECT_F src;
@@ -613,8 +719,8 @@ void CObjHero::Draw()
 
 		//切り取り位置の設定
 		src.m_top = 64.0f;   //y
-		src.m_left = 0.0f; //x
-		src.m_right = 32.0f; //x
+		src.m_left = 0.0f + AniData3[m_ani_frame3] * 32.0f; //x
+		src.m_right = 32.0f + AniData3[m_ani_frame3] * 32.0f; //x
 		src.m_bottom = 96.0f; //y
 
 
@@ -623,8 +729,8 @@ void CObjHero::Draw()
 	{
 		//切り取り位置の設定
 		src.m_top = 32.0f;   //y
-		src.m_left = 0.0f; //x
-		src.m_right = 32.0f; //x
+		src.m_left = 0.0f + AniData2[m_ani_frame2] * 32.0f; //x
+		src.m_right = 32.0f + AniData2[m_ani_frame2] * 32.0f; //x
 		src.m_bottom = 64.0f; //y
 	}
 
@@ -632,8 +738,8 @@ void CObjHero::Draw()
 	{
 		//切り取り位置の設定
 		src.m_top = 0.0f;   //y
-		src.m_left = 0.0f; //x
-		src.m_right = 32.0f; //x
+		src.m_left = 0.0f+AniData1[m_ani_frame1]*32.0f; //x
+		src.m_right = 32.0f+AniData1[m_ani_frame1]*32.0f; //x
 		src.m_bottom =32.0f; //y
 	}
 
@@ -641,8 +747,8 @@ void CObjHero::Draw()
 	{
 		//切り取り位置の設定
 		src.m_top = 96.0f;   //y
-		src.m_left = 0.0f; //x
-		src.m_right = 32.0f; //x
+		src.m_left = 0.0f + AniData4[m_ani_frame4] * 32.0f; //x
+		src.m_right = 32.0f + AniData4[m_ani_frame4] * 32.0f; //x
 		src.m_bottom =128.0f; //y
 	}
 
