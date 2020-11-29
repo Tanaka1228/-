@@ -50,13 +50,14 @@ void CObjSpBack::Draw()
 	RECT_F dst;//描画先表示位置
 
 	CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
-
+	CObjBlock* block = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);//拠点
 	CObjDrugCampany* drug = (CObjDrugCampany*)Objs::GetObj(OBJ_DRUG_CAMPANY);//製薬会社の一階
 
 	CObjChinaMob* chinamob = (CObjChinaMob*)Objs::GetObj(OBJ_CHINA_MOB);//チャイナタウンのモブ
 	CObjInstMob* instmob = (CObjInstMob*)Objs::GetObj(OBJ_INST_MOB);//研究所のモブ
 	CObjHosMob* hosmob = (CObjHosMob*)Objs::GetObj(OBJ_HOS_MOB);//病院のモブ
 	CObjDrugMob* drugmob = (CObjDrugMob*)Objs::GetObj(OBJ_DRUG_MOB);//チャイナタウンのモブ
+	CObjHeroine* heroine = (CObjHeroine*)Objs::GetObj(OBJ_HEROINE);//ヒロイン
 
 	CObjChinaTown* chinatown = (CObjChinaTown*)Objs::GetObj(OBJ_CHINA_TOWN);
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
@@ -209,6 +210,26 @@ void CObjSpBack::Draw()
 			dst.m_bottom = 600.0f;
 
 			Draw::Draw(7, &src, &dst, c, 0.0f);
+		}
+	}
+	//拠点の会話の背景
+	if (block != nullptr)
+	{
+		if (heroine->Sp_Flag() == true)
+		{
+			//切り取り位置の設定
+			src.m_top = 372.0f;   //y
+			src.m_left = 18.0f; //x
+			src.m_right = 781.0f; //x
+			src.m_bottom = 581.0f; //y
+
+			//表示位置の設定
+			dst.m_top = 450.0f;
+			dst.m_left = 2.0f;
+			dst.m_right = 798.0f;
+			dst.m_bottom = 600.0f;
+
+			Draw::Draw(10, &src, &dst, c, 0.0f);
 		}
 	}
 }

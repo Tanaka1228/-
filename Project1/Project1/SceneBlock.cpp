@@ -65,7 +65,7 @@ void CSceneBlock::InitScene()
 
 	//ヒロインオブジェクト作成
 	CObjHeroine* objh=new CObjHeroine();
-	Objs::InsertObj(objh, OBJ_HEROINE, 4);
+	Objs::InsertObj(objh, OBJ_HEROINE, 6);
 
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();

@@ -46,34 +46,34 @@ void CObjHeroine::Action()
 				if (key_flag == 1)
 				{
 					m_sp = 1;
-
+					sp_flag = true;
 				}
 
 				if (key_flag == 2)
 				{
 					m_sp = 2;
-
+					sp_flag = true;
 				}
 				if ((key_flag == 3))
 				{
 
 					m_sp = 3;
-
+					sp_flag = true;
 				}
 				if ((key_flag == 4))
 				{
 					m_sp = 4;
-
+					sp_flag = true;
 				}
 				if ((key_flag == 5))
 				{
 					m_sp = 5;
-
+					sp_flag = true;
 				}
 				if ((key_flag == 6))
 				{
 					m_sp = 6;
-
+					sp_flag = true;
 				}
 				m_key_control = false;
 			}
@@ -163,7 +163,7 @@ void CObjHeroine::Draw()
 		fin >>str3;
 		sprintf_s(str3, "%s", str3);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
-		Font::StrDraw(wstr3, 50.0f, 480, 25, c);// X  Y  ‘å‚«‚³
+		Font::StrDraw(wstr3, 40.0f, 480, 25, c);// X  Y  ‘å‚«‚³
 
 		key_flag = 5;
 		fin.close();
@@ -179,7 +179,7 @@ void CObjHeroine::Draw()
 		fin >>str3;
 		sprintf_s(str3, "%s", str3);
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
-		Font::StrDraw(wstr3, 50.0f, 510, 25, c);// X  Y  ‘å‚«‚³
+		Font::StrDraw(wstr3, 40.0f, 510, 25, c);// X  Y  ‘å‚«‚³
 
 		key_flag = 5;
 		fin.close();
@@ -202,7 +202,7 @@ void CObjHeroine::Draw()
 	}
 	if (m_sp == 6)
 	{
-		sp_flag == true;
+		sp_flag ==false;
 		Font::StrDraw(L"  ", 100, 500, 30, c);
 		key_flag = 1;
 
