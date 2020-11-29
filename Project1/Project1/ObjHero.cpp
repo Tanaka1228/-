@@ -77,7 +77,7 @@ void CObjHero::Init()
 	//---------------------------------------------------------------
 
 	//当たり判定用HitBoxを作成
-	Hits::SetHitBox(this, m_x, m_y, 30, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
+	Hits::SetHitBox(this, m_x, m_y, 36, 36, ELEMENT_PLAYER, OBJ_HERO, 1);
 
 	//blockとの衝突状態確認用
 	m_hit_up = false;
@@ -612,45 +612,45 @@ void CObjHero::Draw()
 	{
 
 		//切り取り位置の設定
-		src.m_top = 0.0f;   //y
-		src.m_left = 431.0f; //x
-		src.m_right = 599.0f; //x
-		src.m_bottom = 240.0f; //y
+		src.m_top = 64.0f;   //y
+		src.m_left = 0.0f; //x
+		src.m_right = 32.0f; //x
+		src.m_bottom = 96.0f; //y
 
 
 	}
 	if (m_ani_frame == 1) //上
 	{
 		//切り取り位置の設定
-		src.m_top = 0.0f;   //y
-		src.m_left = 237.0f; //x
-		src.m_right = 417.0f; //x
-		src.m_bottom = 240.0f; //y
+		src.m_top = 32.0f;   //y
+		src.m_left = 0.0f; //x
+		src.m_right = 32.0f; //x
+		src.m_bottom = 64.0f; //y
 	}
 
 	if (m_ani_frame == 0) //前
 	{
 		//切り取り位置の設定
 		src.m_top = 0.0f;   //y
-		src.m_left = 20.0f; //x
-		src.m_right = 220.0f; //x
-		src.m_bottom = 240.0f; //y
+		src.m_left = 0.0f; //x
+		src.m_right = 32.0f; //x
+		src.m_bottom =32.0f; //y
 	}
 
 	if (m_ani_frame == 3)//左
 	{
 		//切り取り位置の設定
-		src.m_top = 0.0f;   //y
-		src.m_left = 631.0f; //x
-		src.m_right = 794.0f; //x
-		src.m_bottom = 240.0f; //y
+		src.m_top = 96.0f;   //y
+		src.m_left = 0.0f; //x
+		src.m_right = 32.0f; //x
+		src.m_bottom =128.0f; //y
 	}
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_y;
 	dst.m_left = 0.0f + m_x;
-	dst.m_right = 30.0f + m_x;
-	dst.m_bottom = 32.0f + m_y;
+	dst.m_right = 36.0f + m_x;
+	dst.m_bottom = 36.0f + m_y;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
