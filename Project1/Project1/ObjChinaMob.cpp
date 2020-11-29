@@ -103,34 +103,34 @@ void CObjChinaMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
-
+						sp_flag = true;
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
-
+						sp_flag = true;
 					}
 					m_key_control = false;
 				}
@@ -153,34 +153,34 @@ void CObjChinaMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
-
+						sp_flag = true;
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
-
+						sp_flag = true;
 					}
 					m_key_control = false;
 				}
@@ -201,34 +201,34 @@ void CObjChinaMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
-
+						sp_flag = true;
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
-
+						sp_flag = true;
 					}
 					m_key_control = false;
 				}
@@ -255,34 +255,34 @@ void CObjChinaMob::Action()
 						if (key_flag == 1)
 						{
 							m_sp = 1;
-
+							sp_flag = true;
 						}
 
 						if (key_flag == 2)
 						{
 							m_sp = 2;
-
+							sp_flag = true;
 						}
 						if ((key_flag == 3))
 						{
 
 							m_sp = 3;
-
+							sp_flag = true;
 						}
 						if ((key_flag == 4))
 						{
 							m_sp = 4;
-
+							sp_flag = true;
 						}
 						if ((key_flag == 5))
 						{
 							m_sp = 5;
-
+							sp_flag = true;
 						}
 						if ((key_flag == 6))
 						{
 							m_sp = 6;
-
+							sp_flag = true;
 						}
 						m_key_control = false;
 					}
@@ -445,7 +445,7 @@ void CObjChinaMob::Draw()
 		}
 		if (m_sp == 4)//エンターキーを一回押したとき
 		{
-
+			sp_flag = false;
 			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
 
 
@@ -513,10 +513,8 @@ void CObjChinaMob::Draw()
 		}
 		if (m_sp == 4)//エンターキーを一回押したとき
 		{
-
+			sp_flag = false;
 			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
-
-
 			key_flag = 1;
 
 		}
@@ -582,10 +580,8 @@ void CObjChinaMob::Draw()
 		}
 		if (m_sp == 4)//エンターキーを一回押したとき
 		{
-
+			sp_flag = false;
 			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
-
-
 			key_flag = 1;
 
 		}

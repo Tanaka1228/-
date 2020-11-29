@@ -55,6 +55,9 @@ void CSceneHospital2::InitScene()
 	//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"エレベーター.png", 7, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"会話.png", 8, TEX_SIZE_512);
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 2); //作った主人公オブジェクトをオブジェクトマネージャーに登録
@@ -70,6 +73,10 @@ void CSceneHospital2::InitScene()
 	//病院オブジェクト作成
 	CObjHospital2* objh = new CObjHospital2(); //病院オブジェクト作成
 	Objs::InsertObj(objh, OBJ_HOSPITAL2, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
+
+	//会話の背景オブジェクト作成
+	CObjSpBack* objsp = new CObjSpBack(); //会話の背景作成
+	Objs::InsertObj(objsp, OBJ_SP_BACK, 5); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
 }
 
 

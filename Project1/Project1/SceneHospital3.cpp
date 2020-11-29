@@ -72,6 +72,10 @@ void CSceneHospital3::InitScene()
 	//病院オブジェクト作成
 	CObjHospital3* objh = new CObjHospital3(); //病院オブジェクト作成
 	Objs::InsertObj(objh, OBJ_HOSPITAL3, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
+
+	//会話の背景オブジェクト作成
+	CObjSpBack* objsp = new CObjSpBack(); //会話の背景作成
+	Objs::InsertObj(objsp, OBJ_SP_BACK, 5); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
 }
 
 

@@ -53,33 +53,39 @@ void CObjHosMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
+						sp_flag = true;
 
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
+						sp_flag = true;
 
 					}
 					m_key_control = false;
@@ -102,33 +108,39 @@ void CObjHosMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
+						sp_flag = true;
 
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
+						sp_flag = true;
 
 					}
 					m_key_control = false;
@@ -160,33 +172,39 @@ void CObjHosMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
+						sp_flag = true;
 
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
+						sp_flag = true;
 
 					}
 					m_key_control = false;
@@ -207,33 +225,39 @@ void CObjHosMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
+						sp_flag = true;
 
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
+						sp_flag = true;
 
 					}
 					m_key_control = false;
@@ -261,33 +285,39 @@ void CObjHosMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
+						sp_flag = true;
 
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
+						sp_flag = true;
 
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
+						sp_flag = true;
 
 					}
 					m_key_control = false;
