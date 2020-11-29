@@ -181,11 +181,11 @@ void CObjHeroine::Draw()
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
 		Font::StrDraw(wstr3, 40.0f, 510, 25, c);// X  Y  ‘å‚«‚³
 
-		key_flag = 5;
+		key_flag =	3;
 		fin.close();
 	}
 
-	if (m_sp == 5)
+	if (m_sp == 3)
 	{
 		sp_flag == true;
 		ifstream fin("‰ï˜b.txt", ios::in);
@@ -197,10 +197,10 @@ void CObjHeroine::Draw()
 		MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
 		Font::StrDraw(wstr3, 50.0f, 480, 25, c);// X  Y  ‘å‚«‚³
 
-		key_flag = 6;
+		key_flag = 4;
 		fin.close();
 	}
-	if (m_sp == 6)
+	if (m_sp == 4)
 	{
 		sp_flag ==false;
 		Font::StrDraw(L"  ", 100, 500, 30, c);
