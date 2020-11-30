@@ -138,7 +138,7 @@ void CObjChinaEvent::Draw()
 			ifstream fin("チャイナタウンイベント.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(74, ios::cur);//0バイト数進める
+			fin.seekg(12, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
@@ -149,32 +149,33 @@ void CObjChinaEvent::Draw()
 			key_flag = 3;
 			fin.close();//ファイルを閉じる
 		}
-		if (m_sp == 2)//エンターキーを一回押したとき
+		if (m_sp == 3)//エンターキーを一回押したとき
 		{
 			sp_flag == true;
 
 			ifstream fin("チャイナタウンイベント.txt", ios::in);//テキストデータをを読み込み
 			char str1[64];//ただの配列
 			wchar_t wstr1[64];
-			fin.seekg(130, ios::cur);//0バイト数進める
+			fin.seekg(28, ios::cur);//0バイト数進める
 			fin >> str1;//str1にテキストを入れる
 
 			sprintf_s(str1, "%s", str1);//出力
 			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-			Font::StrDraw(wstr1, 200.0f, 530, 25, c);// X  Y  大きさ     
+			Font::StrDraw(wstr1, 200.0f, 500, 25, c);// X  Y  大きさ     
 
 
-			key_flag = 3;
+			key_flag = 4;
 			fin.close();//ファイルを閉じる
-		}
-		if (m_sp == 3)
-		{
-			sp_flag = false;
-			Font::StrDraw(L"", 200.0f, 530, 25, c);// X  Y  大きさ    
-			key_flag =4;
 		}
 		if (m_sp == 4)
 		{
+			sp_flag = false;
+			Font::StrDraw(L"", 200.0f, 530, 25, c);// X  Y  大きさ    
+			key_flag =5;
+		}
+		if (m_sp == 5)
+		{
+			sp_flag = false;
 			Scene::SetScene(new CSceneBlock());
 		}
 		
