@@ -483,26 +483,8 @@
     <ClInclude Include="ObjChinaMob.h">
       <Filter>ソース ファイル\Character\チャイナタウンのモブ</Filter>
     </ClInclude>
-    <ClInclude Include="ObjChinaTown_b.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneChinaTown_b.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjHosMob.h">
       <Filter>ソース ファイル\Character\病院のモブ</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjChinaTown_c.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneChinaTown_c.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjChinaTown_d.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneChinaTown_d.h">
-      <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="ObjInstMob.h">
       <Filter>ソース ファイル\Character\研究所のモブ</Filter>
@@ -510,14 +492,32 @@
     <ClInclude Include="ObjDrugMob.h">
       <Filter>ソース ファイル\Character\製薬会社のモブ</Filter>
     </ClInclude>
-    <ClInclude Include="ObjInstitute13A.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneInstitute13A.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjSpBack.h">
       <Filter>ソース ファイル\Character\会話の背景</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjChinaTown_b.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjChinaTown_c.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjChinaTown_d.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjInstitute13A.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneInstitute13A.h">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaTown_b.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaTown_c.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaTown_d.h">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -896,26 +896,8 @@
     <ClCompile Include="ObjChinaMob.cpp">
       <Filter>ソース ファイル\Character\チャイナタウンのモブ</Filter>
     </ClCompile>
-    <ClCompile Include="ObjChinaTown_b.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneChinaTown _b.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjHosMob.cpp">
       <Filter>ソース ファイル\Character\病院のモブ</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjChinaTown_c.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneChinaTown_c.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjChinaTown_d.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneChinaTown_d.cpp">
-      <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjInstMob.cpp">
       <Filter>ソース ファイル\Character\研究所のモブ</Filter>
@@ -923,14 +905,32 @@
     <ClCompile Include="ObjDrugMob.cpp">
       <Filter>ソース ファイル\Character\製薬会社のモブ</Filter>
     </ClCompile>
-    <ClCompile Include="ObjInstitute13A.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneInstitute13A.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjSpBack.cpp">
       <Filter>ソース ファイル\Character\会話の背景</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTown_b.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTown_c.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaTown_d.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjInstitute13A.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneInstitute13A.cpp">
+      <Filter>ソース ファイル\StageMap\研究所</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaTown _b.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaTown_c.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaTown_d.cpp">
+      <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
