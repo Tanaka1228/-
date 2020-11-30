@@ -44,7 +44,7 @@ void CObjGun::Draw()
 	RECT_F dst;
 
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
-	m_ani_frame = obj->Get_AniFlame();
+	m_ani_frame = obj->Get_AniFlame();//主人公の向きの情報
 
 	if (obj->Get_Gun()== 1)//ハンドガン
 	{
@@ -113,6 +113,7 @@ void CObjGun::Draw()
 		}
 	}
 
+	//リボルバー
 	if (obj->Get_GunType() == 0)
 	{
 		wchar_t guntype0[32];
@@ -124,6 +125,7 @@ void CObjGun::Draw()
 		Font::StrDraw(strb0, 300.0f, 560, 22, c);// X  Y  大きさ 
 
 	}
+	//アサルト
 	if (obj->Get_GunType() == 1)
 	{
 		wchar_t guntype1[32];

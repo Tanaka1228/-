@@ -49,9 +49,10 @@ void CObjChinaEvent::Action()
 	second = (m_time / 60) % 60;//秒
 	minute = (m_time / 60) / 60;//分
 
+	//-------------チャイナタウンのイベント------------------
 	if (chinaevent!= nullptr)
 	{
-		if (second == 1)//2秒たつと
+		if (second == 1)//秒たつと
 		{
 
 			if (key_flag == 1)
@@ -61,7 +62,7 @@ void CObjChinaEvent::Action()
 
 			}
 		}
-		if (second == 3)//2秒たつと
+		if (second == 3)//秒たつと
 		{
 
 			if (key_flag == 2)
@@ -71,7 +72,7 @@ void CObjChinaEvent::Action()
 
 			}
 		}
-		if (second == 5)//2秒たつと
+		if (second == 5)//秒たつと
 		{
 			if ((key_flag == 3))
 			{
@@ -81,7 +82,7 @@ void CObjChinaEvent::Action()
 
 			}
 		}
-		if (second == 7)//2秒たつと
+		if (second == 7)//秒たつと
 		{
 			if ((key_flag == 4))
 			{
@@ -90,7 +91,7 @@ void CObjChinaEvent::Action()
 
 			}
 		}
-		if (second == 8)//2秒たつと
+		if (second == 8)//秒たつと
 		{
 			if ((key_flag == 5))
 			{
@@ -99,31 +100,32 @@ void CObjChinaEvent::Action()
 
 			}
 		}
+		if (Input::GetVKey(VK_RETURN) == true) {
 
-			if (Input::GetVKey(VK_RETURN) == true) {
-
-				if (m_key_control == true)
-				{
-
-					
-					if ((key_flag == 6))
-					{
-						m_sp = 6;
-						sp_flag = true;
-
-					}
-					m_key_control = false;
-				}
-
-			}
-			else
+			if (m_key_control == true)
 			{
-				m_key_control = true;
 
+				
+				if ((key_flag == 6))
+				{
+					m_sp = 6;
+					sp_flag = true;
+
+				}
+				m_key_control = false;
 			}
-		
+		}
+		else
+		{
+			m_key_control = true;
 
+		}
 	}
+	//------------------------------------------------------
+
+
+
+
 }
 
 //ドロー
@@ -158,7 +160,7 @@ void CObjChinaEvent::Draw()
 			key_flag = 2;
 			fin.close();//ファイルを閉じる
 		}
-		if (m_sp == 2)//エンターキーを一回押したとき
+		if (m_sp == 2)//エンターキーを2回押したとき
 		{
 			sp_flag == true;
 
@@ -176,7 +178,7 @@ void CObjChinaEvent::Draw()
 			key_flag = 3;
 			fin.close();//ファイルを閉じる
 		}
-		if (m_sp == 3)//エンターキーを一回押したとき
+		if (m_sp == 3)//エンターキーを3回押したとき
 		{
 			sp_flag == true;
 
@@ -203,7 +205,7 @@ void CObjChinaEvent::Draw()
 		if (m_sp == 5)
 		{
 			sp_flag = false;
-			Scene::SetScene(new CSceneBlock());
+			Scene::SetScene(new CSceneBlock());//拠点にシーン切り替え
 		}
 		
 	}

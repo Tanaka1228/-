@@ -41,6 +41,7 @@ void CObjChinaMob::Action()
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);//チャイナタウンボス
 	CObjChinaTown_b* chinatown_b = (CObjChinaTown_b*)Objs::GetObj(OBJ_CHINA_TOWN_B);//チャイナタウンのB
 
+	//チャイナタウンのモブ
 	if (chinatown != nullptr)
 	{
 		if (hero->GetBT() == 99)
@@ -91,6 +92,8 @@ void CObjChinaMob::Action()
 			}
 		}
 	}
+
+	//ケビン
 	if (chinatownboss != nullptr)
 	{
 		if (hero->GetBT() == 99)
@@ -142,7 +145,7 @@ void CObjChinaMob::Action()
 			}
 		}
 
-
+		//マイケル
 		if (hero->GetBT() == 100)
 		{
 			mob_flag = 2;
@@ -191,6 +194,8 @@ void CObjChinaMob::Action()
 				m_key_control = true;
 			}
 		}
+
+		//トーマス
 		if (hero->GetBT() == 101)
 		{
 			mob_flag = 3;
