@@ -22,4 +22,5 @@ private:
 	bool m_key_control;//会話キー制御
 
 	int mob_flag;
+	int m_time;//時間フラグ
 };

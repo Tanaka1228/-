@@ -24,6 +24,7 @@ CObjChinaEvent::CObjChinaEvent()
 	sp_flag = false;
 	m_key_control = true;
 	mob_flag = 0;
+	m_time = 0;
 }
 
 
@@ -40,19 +41,31 @@ void CObjChinaEvent::Action()
 	//チャイナタウンのイベント情報
 	CObjChinaEvent* chinaevent = (CObjChinaEvent*)Objs::GetObj(OBJ_CHINA_EVENT);
 
+	int minute;//分
+	int second;//秒
+
+	m_time++;
+
+	second = (m_time / 60) % 60;//秒
+	minute = (m_time / 60) / 60;//分
+
 	if (chinaevent!= nullptr)
 	{
+		if (second == 1)//2秒たつと
+		{
+
+			if (key_flag == 1)
+			{
+				m_sp = 1;
+				sp_flag = true;
+
+			}
+		}
 
 			if (Input::GetVKey(VK_RETURN) == true) {
 
 				if (m_key_control == true)
 				{
-					if (key_flag == 1)
-					{
-						m_sp = 1;
-						sp_flag = true;
-
-					}
 
 					if (key_flag == 2)
 					{
