@@ -244,7 +244,7 @@ void CObjMap::Draw()
 			dst.m_right = 400.0f + 0.0f;
 			dst.m_bottom = 400.0f + 0.0f;
 
-			Draw::Draw(8, &src, &dst, c, 0.0f);
+			Draw::Draw(6, &src, &dst, c, 0.0f);
 		}
 
 	}
