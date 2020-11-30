@@ -61,35 +61,47 @@ void CObjChinaEvent::Action()
 
 			}
 		}
+		if (second == 3)//2•b‚½‚Â‚Æ
+		{
+
+			if (key_flag == 2)
+			{
+				m_sp = 2;
+				sp_flag = true;
+
+			}
+		}
+		if (second == 5)//2•b‚½‚Â‚Æ
+		{
+			if ((key_flag == 3))
+			{
+
+				m_sp = 3;
+				sp_flag = true;
+
+			}
+		}
+		if (second == 7)//2•b‚½‚Â‚Æ
+		{
+			if ((key_flag == 4))
+			{
+				m_sp = 4;
+				sp_flag = true;
+
+			}
+		}
+
 
 			if (Input::GetVKey(VK_RETURN) == true) {
 
 				if (m_key_control == true)
 				{
 
-					if (key_flag == 2)
-					{
-						m_sp = 2;
-						sp_flag = true;
-
-					}
-					if ((key_flag == 3))
-					{
-
-						m_sp = 3;
-						sp_flag = true;
-
-					}
-					if ((key_flag == 4))
-					{
-						m_sp = 4;
-						sp_flag = true;
-
-					}
+					
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-						sp_flag = true;
+						sp_flag = false;
 
 					}
 					if ((key_flag == 6))
