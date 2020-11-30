@@ -6,7 +6,7 @@
 #include"GameL\SceneObjManager.h"
 #include"GameL\DrawFont.h"
 #include"GameL/DrawTexture.h"
-
+#include"GameL/Audio.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -40,6 +40,13 @@ void CSceneTitle::InitScene()
 	Draw::LoadImage(L"メニュー画面 - コピー - コピー.png", 6, TEX_SIZE_512);//カーソル	
 	Draw::LoadImage(L"女の子正面.png", 5, TEX_SIZE_512);//カーソル	
 	
+	//音楽情報の読み込み
+	Audio::LoadAudio(0, L".wav", SOUND_TYPE::BACK_MUSIC);//Loop
+
+	//バックミュージックスタート
+	float Volume = Audio::VolumeMaster(-0.8f);//マスターボリュームを下げる
+	Audio::Start(0);//音楽スタート
+
 	//オブジェクト作成
 	CObjTitleBackground* back = new CObjTitleBackground();
 	Objs::InsertObj(back, OBJ_TITLE_BACKGROUND, 4), (back, OBJ_TITLE_BACKGROUND, 6),(back, OBJ_TITLE_BACKGROUND, 5);
