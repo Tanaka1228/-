@@ -49,6 +49,8 @@ void CSceneInstitute13A::InitScene()
 	//外部グラフィックファイルを読み込み6番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"研究所地下２階.png", 6, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
 
+	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImageW(L"武器商売ロボット.png", 7, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
@@ -65,6 +67,10 @@ void CSceneInstitute13A::InitScene()
 	//研究所オブジェクト作成
 	CObjInstitute13A* obji = new CObjInstitute13A(); //研究所オブジェクト作成
 	Objs::InsertObj(obji, OBJ_INSTITUTE13A, 4); //作った研究所オブジェクトをオブジェクトマネージャーに登録
+
+	//モブオブジェクト追加
+	CObjInstMob* objinstmob = new CObjInstMob();//モブ
+	Objs::InsertObj(objinstmob, OBJ_INST_MOB, 6);
 }
 
 
