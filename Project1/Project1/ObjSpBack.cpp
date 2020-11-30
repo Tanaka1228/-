@@ -62,6 +62,7 @@ void CObjSpBack::Draw()
 	CObjChinaTown* chinatown = (CObjChinaTown*)Objs::GetObj(OBJ_CHINA_TOWN);
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
 	CObjChinaTown_b* chinatown_b = (CObjChinaTown_b*)Objs::GetObj(OBJ_CHINA_TOWN_B);//チャイナタウンのB
+	CObjChinaEvent* chinaevent = (CObjChinaEvent*)Objs::GetObj(OBJ_CHINA_EVENT);//チャイナタウンのイベント
 
 	CObjInstitute* inst = (CObjInstitute*)Objs::GetObj(OBJ_INSTITUTE);//研究所1階
 	CObjInstitute13A* inst13a = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);//研究所地下2階
@@ -250,6 +251,26 @@ void CObjSpBack::Draw()
 			dst.m_bottom = 600.0f;
 
 			Draw::Draw(10, &src, &dst, c, 0.0f);
+		}
+	}
+	//チャイナタウンのイベント会話の背景
+	if (chinaevent != nullptr)
+	{
+		if (chinaevent->Sp_Flag() == true)
+		{
+			//切り取り位置の設定
+			src.m_top = 372.0f;   //y
+			src.m_left = 18.0f; //x
+			src.m_right = 781.0f; //x
+			src.m_bottom = 581.0f; //y
+
+			//表示位置の設定
+			dst.m_top = 450.0f;
+			dst.m_left = 2.0f;
+			dst.m_right = 798.0f;
+			dst.m_bottom = 600.0f;
+
+			Draw::Draw(8, &src, &dst, c, 0.0f);
 		}
 	}
 }

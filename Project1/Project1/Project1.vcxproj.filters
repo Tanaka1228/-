@@ -106,6 +106,9 @@
     <Filter Include="ソース ファイル\Character\会話の背景">
       <UniqueIdentifier>{93ab699d-0ef0-4446-b9e8-9327c28d8a73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\イベントシーン">
+      <UniqueIdentifier>{bccab1e2-092a-414b-a648-eb2de6e5f08e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -519,6 +522,12 @@
     <ClInclude Include="SceneChinaTown_d.h">
       <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
     </ClInclude>
+    <ClInclude Include="ObjChinaEvent.h">
+      <Filter>ソース ファイル\イベントシーン</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneChinaEvent.h">
+      <Filter>ソース ファイル\イベントシーン</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -931,6 +940,12 @@
     </ClCompile>
     <ClCompile Include="SceneChinaTown_d.cpp">
       <Filter>ソース ファイル\StageMap\チャイナタウン</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjChinaEvent.cpp">
+      <Filter>ソース ファイル\イベントシーン</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneChinaEvent.cpp">
+      <Filter>ソース ファイル\イベントシーン</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

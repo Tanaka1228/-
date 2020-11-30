@@ -41,7 +41,7 @@ enum OBJ_NAME
 					OBJ_CHINA_TOWN_C,//チャイナタウンc
 					OBJ_CHINA_TOWN_D,//チャイナタウンd
 					OBJ_CHINA_TOWN_BOSS_BOSS,//チャイナタウンのボス戦フィールドBOSS
-
+					OBJ_CHINA_EVENT,//チャイナタウンのEvent
 
 
 					OBJ_INSTITUTE_BOSS,//研究所ボス
@@ -203,7 +203,7 @@ struct UserData
 #include"ObjChinaTown_b.h"
 #include"ObjChinaTown_c.h"
 #include"ObjChinaTown_d.h"
-
+#include"ObjChinaEvent.h"
 
 #include"ObjChinaMob.h"
 #include"ObjHosMob.h"
@@ -262,6 +262,7 @@ struct UserData
 #include"SceneChinaTown_b.h"
 #include"SceneChinaTown_c.h"
 #include"SceneChinaTown_d.h"
+#include"SceneChinaEvent.h"
 
 //-----------------------------------------------
 
