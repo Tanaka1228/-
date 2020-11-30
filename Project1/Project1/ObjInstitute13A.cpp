@@ -14,8 +14,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjInstitute13A::Init()
 {
-	mx_scroll = 0.0f;
-	my_scroll = 0.0f;
+	mx_scroll = -430.0f;
+	my_scroll = -350.0f;
 
 	//マップ情報
 	int block_data[70][70] =
