@@ -90,7 +90,15 @@ void CObjChinaEvent::Action()
 
 			}
 		}
+		if (second == 8)//2•b‚½‚Â‚Æ
+		{
+			if ((key_flag == 5))
+			{
+				m_sp = 5;
+				sp_flag = false;
 
+			}
+		}
 
 			if (Input::GetVKey(VK_RETURN) == true) {
 
@@ -98,12 +106,6 @@ void CObjChinaEvent::Action()
 				{
 
 					
-					if ((key_flag == 5))
-					{
-						m_sp = 5;
-						sp_flag = false;
-
-					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
