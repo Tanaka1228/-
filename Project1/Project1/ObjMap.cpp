@@ -57,6 +57,13 @@ void CObjMap::Draw()
 	CObjInstitute14* inst14 = (CObjInstitute14*)Objs::GetObj(OBJ_INSTITUTE14);
 	CObjInstitute13A* inst13a = (CObjInstitute13A*)Objs::GetObj(OBJ_INSTITUTE13A);
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);
+	CObjRooftop* rooftop = (CObjRooftop*)Objs::GetObj(OBJ_ROOF_TOP);
+	CObjInstituteBoss* instboss = (CObjInstituteBoss*)Objs::GetObj(OBJ_INSTITUTE_BOSS);
+	CObjChinaTown* chinatown = (CObjChinaTown*)Objs::GetObj(OBJ_CHINA_TOWN);
+	CObjChinaTown_b* chinatown_b = (CObjChinaTown_b*)Objs::GetObj(OBJ_CHINA_TOWN_B);
+	CObjChinaTown_c* chinatown_c = (CObjChinaTown_c*)Objs::GetObj(OBJ_CHINA_TOWN_C);
+	CObjChinaTown_d* chinatown_d = (CObjChinaTown_d*)Objs::GetObj(OBJ_CHINA_TOWN_D);
+	CObjBlock* block = (CObjBlock*)Objs::GetObj(OBJ_BLOCK);
 
 	
 	//病院一階のマップ図
@@ -266,6 +273,156 @@ void CObjMap::Draw()
 			dst.m_bottom = 400.0f + 0.0f;
 
 			Draw::Draw(7, &src, &dst, c, 0.0f);
+		}
+
+	}
+	//病院の屋上
+	if (rooftop != nullptr)
+	{
+		if (rooftop->GetMap() == true)
+		{
+
+			//背景表示
+			src.m_top = 0.0f;   // Y
+			src.m_left = 0.0f;  // X
+			src.m_right = 500.0f; // X
+			src.m_bottom = 500.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(15, &src, &dst, c, 0.0f);
+		}
+
+	}
+	//研究所ボス戦フィールド
+	if (instboss != nullptr)
+	{
+		if (instboss->GetMap() == true)
+		{
+
+			//背景表示
+			src.m_top = 0.0f;   // Y
+			src.m_left = 0.0f;  // X
+			src.m_right = 500.0f; // X
+			src.m_bottom = 500.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(16, &src, &dst, c, 0.0f);
+		}
+
+	}
+	//チャイナタウン
+	if (chinatown != nullptr)
+	{
+		if (chinatown->GetMap() == true)
+		{
+
+			//背景表示
+			src.m_top = 0.0f;   // Y
+			src.m_left = 0.0f;  // X
+			src.m_right = 500.0f; // X
+			src.m_bottom = 500.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(15, &src, &dst, c, 0.0f);
+		}
+
+	}
+
+	//チャイナタウンb
+	if (chinatown_b != nullptr)
+	{
+		if (chinatown_b->GetMap() == true)
+		{
+
+			//背景表示
+			src.m_top = 0.0f;   // Y
+			src.m_left = 0.0f;  // X
+			src.m_right = 500.0f; // X
+			src.m_bottom = 500.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(18, &src, &dst, c, 0.0f);
+		}
+
+	}
+
+	//チャイナタウンc
+	if (chinatown_c != nullptr)
+	{
+		if (chinatown_c->GetMap() == true)
+		{
+
+			//背景表示
+			src.m_top = 0.0f;   // Y
+			src.m_left = 0.0f;  // X
+			src.m_right = 500.0f; // X
+			src.m_bottom = 500.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(15, &src, &dst, c, 0.0f);
+		}
+
+	}
+
+	//チャイナタウンd
+	if (chinatown_d != nullptr)
+	{
+		if (chinatown_d->GetMap() == true)
+		{
+
+			//背景表示
+			src.m_top = 0.0f;   // Y
+			src.m_left = 0.0f;  // X
+			src.m_right = 500.0f; // X
+			src.m_bottom = 500.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(15, &src, &dst, c, 0.0f);
+		}
+
+	}
+	//拠点
+	if (block != nullptr)
+	{
+		if (block->GetMap() == true)
+		{
+
+			//背景表示
+		src.m_top = 0.0f;   // Y
+			src.m_left = 0.0f;  // X
+			src.m_right = 500.0f; // X
+			src.m_bottom = 500.0f;// Y 
+
+			dst.m_top = 100.0f;
+			dst.m_left = 0.0f;
+			dst.m_right = 400.0f + 0.0f;
+			dst.m_bottom = 400.0f + 0.0f;
+
+			Draw::Draw(15, &src, &dst, c, 0.0f);
 		}
 
 	}
