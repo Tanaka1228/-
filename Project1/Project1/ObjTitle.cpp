@@ -127,10 +127,9 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"◆     ロード    ", 250, 400, 32, c);
 	
 	//設定画面に移行
-	Font::StrDraw(L"◆      設定     ", 250, 450, 32, c);
+	Font::StrDraw(L"◆ シャットダウン", 250, 450, 32, c);
 	//
-	//シャットダウン
-	Font::StrDraw(L"◆ シャットダウン", 250, 500, 32, c);
+	
 
 	//仮矢印位置表示
 	//wchar_t str[256];
