@@ -19,7 +19,7 @@ void CObjHospital::Init()
 	my_scroll = 0.0f;
 
 	//マップ情報
-	int block_data[26][50] =
+	int block_data[MAP_Y_MAX_1F][MAP_X_MAX_1F] =
 	{
 
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0},
@@ -50,7 +50,7 @@ void CObjHospital::Init()
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0},
 	};
 	//マップデータをコピー
-	memcpy(m_map, block_data, sizeof(int) * (26 * 50));
+	memcpy(m_map, block_data, sizeof(int) * (MAP_Y_MAX_1F * MAP_X_MAX_1F));
 
 	m_sp = false;
 	key_flag = 1;
@@ -127,9 +127,9 @@ void CObjHospital::Action()
 
 
 	//m_mapの全要素にアクセス
-	for (int i = 0; i < 26; i++)
+	for (int i = 0; i < MAP_Y_MAX_1F; i++)
 	{
-		for (int j = 0; j < 50; j++)
+		for (int j = 0; j < MAP_X_MAX_1F; j++)
 		{
 
 			if (m_map[i][j] > 0&&m_map[i][j]!=31)
@@ -351,9 +351,9 @@ void CObjHospital::Draw()
 	}
 
 	//マップチップによるblock設置
-	for (int i = 0; i < 26; i++)
+	for (int i = 0; i < MAP_Y_MAX_1F; i++)
 	{
-		for (int j = 0; j < 50; j++)
+		for (int j = 0; j < MAP_X_MAX_1F; j++)
 		{
 
 			if (m_map[i][j] == 1)//壁　ボス
