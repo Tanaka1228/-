@@ -60,6 +60,8 @@ void CObjRooftop::Init()
 	};
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (38 * 83));
+	map_flag = true;
+	map_flag2 = false;
 }
 //アクション
 void CObjRooftop::Action()
@@ -238,6 +240,23 @@ void CObjRooftop::Action()
 			}
 		  
 		
+	}
+
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
+
+
+			map_flag2 = true;
+			map_flag = false;
+
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
 	}
 
 }

@@ -16,6 +16,9 @@ public:
 	void Scene();//ゲームステージ実行中メソッド
 
 	
+	
 private:
+
+	
 	
 };

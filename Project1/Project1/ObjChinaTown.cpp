@@ -92,6 +92,8 @@ void CObjChinaTown::Init()
 
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (65 * 54));
+	map_flag = true;
+	map_flag2 = false;
 }
 
 //アクション
@@ -270,6 +272,23 @@ void CObjChinaTown::Action()
 
 	//			m_map[i][ex] = 0;		
 	//}
+
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
+
+
+			map_flag2 = true;
+			map_flag = false;
+
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
+	}
 }
 //ドロー
 void CObjChinaTown::Draw()
