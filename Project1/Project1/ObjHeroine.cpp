@@ -9,7 +9,7 @@
 #include"UtilityModule.h"
 #include<fstream>
 
-
+ 
 //使用するネームスペース
 using namespace GameL;
 
