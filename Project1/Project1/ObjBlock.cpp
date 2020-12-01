@@ -15,10 +15,12 @@
 //使用するネームスペース
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
 //イニシャライズ
 void CObjBlock::Init()
 {
-
+	ChinaTown_Hero_x = 0;
 	//マップ情報
 	int block_data[25][25] =
 	{

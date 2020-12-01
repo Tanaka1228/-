@@ -58,7 +58,7 @@ void CObjTitle::Action()
 		 if (m_key_enter == true)
 		 {
 			 //Scene::SetScene(new CSceneMain());
-			 Scene::SetScene(new CSceneChinaEvent());
+			 Scene::SetScene(new CSceneBlock());
 		 }
 	 }
 

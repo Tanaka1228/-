@@ -64,7 +64,7 @@ void CObjHeroine::Action()
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
-						sp_flag = false;
+						sp_flag = true;
 					}
 
 
@@ -73,7 +73,7 @@ void CObjHeroine::Action()
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-						sp_flag = true;
+						sp_flag = false;
 					}
 					if ((key_flag == 6))
 					{
@@ -205,6 +205,21 @@ void CObjHeroine::Draw()
 			fin.close();
 		}
 		if (m_sp == 4)
+		{
+			sp_flag == true;
+			ifstream fin("‰ï˜b.txt", ios::in);
+			char str3[64];//–{‘Ì
+			wchar_t wstr3[64];
+			fin.seekg(239, ios::cur);
+			fin >> str3;
+			sprintf_s(str3, "%s", str3);
+			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str3, 64, wstr3, 64);
+			Font::StrDraw(wstr3, 50.0f, 480, 25, c);// X  Y  ‘å‚«‚³
+
+			key_flag = 5;
+			fin.close();
+		}
+		if (m_sp == 5)
 		{
 			sp_flag == false;
 			Font::StrDraw(L"", 100, 500, 30, c);
