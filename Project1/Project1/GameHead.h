@@ -126,7 +126,8 @@ enum HIT_ELEMENTS
 struct UserData
 {
 	int mSeveData;	//サンプルセーブデータ
-
+	int mStage;   //進行度合い
+	int mBullet;   //弾丸数
 };
 //------------------------------------------------
 
