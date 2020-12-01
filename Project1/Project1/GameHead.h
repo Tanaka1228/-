@@ -18,23 +18,37 @@ enum OBJ_NAME
 					OBJ_HOMING_ENEMY,//誘導敵機
 					OBJ_SIN_ENEMY,//カーブ敵機
 					OBJ_DIFFUSION_ENEMY,//
-					OBJ_ANGLE_BULLET,
-					OBJ_HOMING_BULLET,
-					OBJ_END,
-					OBJ_FIN,
+					OBJ_ANGLE_BULLET,//拡散敵
+					OBJ_HOMING_BULLET,//誘導弾丸敵
+					OBJ_END,//エンド
+					OBJ_FIN,//クリア
 					OBJ_MANU,//メニュー
 					OBJ_HEROINE,//ヒロイン
 					OBJ_GUN,//武器銃
 					OBJ_ASS_BULLET,//アサルトライフルの弾丸
+					OBJ_MAP,//各マップの全体図
+
+					//-----------モブキャラクター-------------------
+					OBJ_CHINA_MOB,//チャイナタウンのモブ
+					OBJ_HOS_MOB,//病院のモブ
+					OBJ_INST_MOB,//研究所のモブ
+					OBJ_DRUG_MOB,//製薬会社のモブ
+					OBJ_SP_BACK,//会話の背景
+					//-------------------------------------------------
 
 					//------マップ-------------------------------------------
+					//------チャイナタウン----------------------------------
 					OBJ_BLOCK,//拠点
 					OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
 					OBJ_CHINA_TOWN,//チャイナタウン
+					OBJ_CHINA_TOWN_B,//チャイナタウンb
+					OBJ_CHINA_TOWN_C,//チャイナタウンc
+					OBJ_CHINA_TOWN_D,//チャイナタウンd
 					OBJ_CHINA_TOWN_BOSS_BOSS,//チャイナタウンのボス戦フィールドBOSS
+					OBJ_CHINA_EVENT,//チャイナタウンのEvent
+					//---------------------------------------------------------
 
-
-
+					//-------------研究所----------------------
 					OBJ_INSTITUTE_BOSS,//研究所ボス
 					OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
 					OBJ_INSTITUTE,//研究所
@@ -50,8 +64,11 @@ enum OBJ_NAME
 					OBJ_INSTITUTE10,//研究部屋10
 					OBJ_INSTITUTE11,//研究部屋11
 					OBJ_INSTITUTE12,//研究部屋12
-					OBJ_INSTITUTE13,//研究廊下13
+					OBJ_INSTITUTE13A,//研究廊下13
 					OBJ_INSTITUTE14,//研究廊下14
+					//----------------------------------------------
+
+
 					//--------------病院---------------------
 					OBJ_ROOF_TOP,//病院屋上
 					OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
@@ -66,6 +83,7 @@ enum OBJ_NAME
 
 					//----------------------------------------
 
+					//------------製薬会社---------------------
 
 					OBJ_DRUG_CAMPANY,//製薬会社
 					OBJ_DRUG_CAMPANY2,//製薬会社2階
@@ -80,6 +98,7 @@ enum OBJ_NAME
 					OBJ_DRUG_CAMPANY_ROOM8,//製薬会社部屋8
 					OBJ_DRUG_CAMPANY_ROOM9,//製薬会社部屋9
 
+					//-------------------------------------
 };
 //------------------------------------------------
 
@@ -107,7 +126,8 @@ enum HIT_ELEMENTS
 struct UserData
 {
 	int mSeveData;	//サンプルセーブデータ
-
+	int mStage;   //進行度合い
+	int mBullet;   //弾丸数
 };
 //------------------------------------------------
 
@@ -184,10 +204,22 @@ struct UserData
 #include"ObjInstitute10.h"
 #include"ObjInstitute11.h"
 #include"ObjInstitute12.h"
-#include"ObjInstitute13.h"
-#include"ObjInstitute13.h"
+#include"ObjInstitute13A.h"
+#include"ObjInstitute14.h"
+
 
 #include"CObjInstituteBossBoss.h"
+#include"ObjMap.h"
+#include"ObjChinaTown_b.h"
+#include"ObjChinaTown_c.h"
+#include"ObjChinaTown_d.h"
+#include"ObjChinaEvent.h"
+
+#include"ObjChinaMob.h"
+#include"ObjHosMob.h"
+#include"ObjInstMob.h"
+#include"ObjDrugMob.h"
+#include"ObjSpBack.h"
 
 //------------------------------------------------
 
@@ -235,19 +267,27 @@ struct UserData
 #include"SceneInstitute10.h"
 #include"SceneInstitute11.h"
 #include"SceneInstitute12.h"
-#include"SceneInstitute13.h"
+#include"SceneInstitute13A.h"
 #include"SceneInstitute14.h"
-
+#include"SceneChinaTown_b.h"
+#include"SceneChinaTown_c.h"
+#include"SceneChinaTown_d.h"
+#include"SceneChinaEvent.h"
 
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 ////ゲーム開始時のシーンクラス登録
 //#define SET_GAME_START CSceneGameOver
-#define SET_GAME_START CSceneTitle 
+#define SET_GAME_START CSceneTitle
+//#define SET_GAME_START CSceneRooftop
 //#define SET_GAME_START CSceneEnd 
 //#define SET_GAME_START CSceneFin
 //#define SET_GAME_START CSceneMain
 //#define SET_GAME_START CSceneStage
-//#define SET_GAME_START CSceneTemplateRoom
+//#define SET_GAME_START CSceneHospital2
+//#define SET_GAME_START CSceneInstitute13
+//#define SET_GAME_START CSceneDrugCampany3
+
+
 //-----------------------------------------------

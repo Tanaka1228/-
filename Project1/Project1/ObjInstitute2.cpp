@@ -175,7 +175,7 @@ void CObjInstitute2::Action()
 						}
 						if (m_map[i][j] == 25)//ƒhƒA‚É“ü‚é‚ÆˆÚ“®
 						{
-							Scene::SetScene(new CSceneInstitute13());
+							Scene::SetScene(new CSceneInstitute13A());
 						}
 					}
 				}
