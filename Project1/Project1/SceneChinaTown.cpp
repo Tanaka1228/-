@@ -14,7 +14,7 @@ using namespace GameL;
 #include"GameHead.h"
 #include "SceneChinaTown.h"
 
-
+extern int ChinaTown_Hero_x;
 
 //コンストラクタ
 CSceneChinaTown::CSceneChinaTown()

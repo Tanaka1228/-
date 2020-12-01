@@ -12,11 +12,15 @@
 //使用するネームスペース
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
 //イニシャライズ
 void CObjHospital::Init()
 {
 	mx_scroll =-420.0f;
 	my_scroll = 0.0f;
+
+	ChinaTown_Hero_x = 4;
 
 	//マップ情報
 	int block_data[MAP_Y_MAX_1F][MAP_X_MAX_1F] =
