@@ -31,8 +31,7 @@ void CObjTitle::Action()
 	 m_key_dy = (float)Input::GetVKey(VK_DOWN);
 	 //矢印キーのボタンの状態
 	 m_key_enter = Input::GetVKey(VK_RETURN);
-	 static bool init_stage;
-
+	
 	 if (Input::GetVKey(VK_UP) == true)//カーソルの移動
 	 {
 		 m_y -= 6.0f;
@@ -58,15 +57,12 @@ void CObjTitle::Action()
 		 //エンターキーが押されたらメインに還移
 		 if (m_key_enter == true)
 		 {
-			 if (init_stage == false)
-			 {
-				 ((UserData*)Save::GetData())->mStage=0;
-				 init_stage = true;
-			 }
-		
+		    ((UserData*)Save::GetData())->mStage=0;
+			Save::Seve();
 			 Scene::SetScene(new CSceneBlock());
 		 }
 	 }
+
 	 //ロード
 	 if (m_x > 200 && m_x < 550 && m_y>370 && m_y < 430)
 	 {
@@ -74,6 +70,10 @@ void CObjTitle::Action()
 		 if (m_key_enter == true)
 		 {
 			 Save::Open();
+			 if (((UserData*)Save::GetData())->mStage == 0)//チャイナタウン
+			 {
+				 Scene::SetScene(new CSceneBlock());
+			 }
 			 if (((UserData*)Save::GetData())->mStage == 1)//チャイナタウン
 			 {
 				 Scene::SetScene(new CSceneChinaTown());
