@@ -21,9 +21,9 @@ CObjChinaMob::CObjChinaMob()
 	key_flag = 1;
 	sp_flag = false;
 	m_key_control = true;
-	
+	m_time = 0;
 	mob_flag = 0;
-	
+	m_save_sp = 0;
 }
 
 
@@ -41,11 +41,25 @@ void CObjChinaMob::Action()
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);//チャイナタウンボス
 	CObjChinaTown_b* chinatown_b = (CObjChinaTown_b*)Objs::GetObj(OBJ_CHINA_TOWN_B);//チャイナタウンのB
 
+	int minute;//分
+	int second;//秒
+
+	m_time++;
+
+	second = (m_time / 60) % 60;//秒
+	minute = (m_time / 60) / 60;//分
+
+	
+
+
+
+
 	//チャイナタウンのモブ
 	if (chinatown != nullptr)
 	{
 		if (hero->GetBT() == 99)
 		{
+			mob_flag = 4;
 			if (Input::GetVKey(VK_RETURN) == true) {
 
 				if (m_key_control == true)
@@ -91,6 +105,28 @@ void CObjChinaMob::Action()
 				m_key_control = true;
 			}
 		}
+	}
+
+	if (chinatown != nullptr)
+	{
+		//セーブしました
+		if (chinatown->GetSaveSp() == true)
+		{
+			    mob_flag = 5;
+
+				if (second == 1) 
+				{
+					m_save_sp = 1;
+					sp_flag = true;
+				}
+				if(second==4)
+				{
+				   m_save_sp = 2;
+				   sp_flag = false;
+				}
+		}
+	 
+		
 	}
 
 	//ケビン
@@ -324,7 +360,7 @@ void CObjChinaMob::Draw()
 
 	if (chinatown != nullptr)
 	{
-		if (m_sp == 1)//エンターキーを一回押したとき
+		if (m_sp == 1&&mob_flag==4)//エンターキーを一回押したとき
 		{
 			sp_flag == true;
 
@@ -368,7 +404,23 @@ void CObjChinaMob::Draw()
 
 			key_flag = 1;
 		}
+
+
+		if (m_save_sp == 1 && mob_flag == 5)
+		{
+			sp_flag = true;
+			Font::StrDraw(L"セーブしました", 100.0f, 490, 40, c);// X  Y  大きさ     
+		}
+		if (m_save_sp == 2 && mob_flag == 5)
+		{
+			sp_flag = false;
+			key_flag = 1;
+		}
 	}
+
+	
+
+	
 
 
 	//ケビン

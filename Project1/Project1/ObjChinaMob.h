@@ -17,6 +17,7 @@ public:
 	bool Sp_Flag() { return sp_flag; }
 private:
 	int m_sp;//会話
+	int m_save_sp;//セーブ制御
 	int key_flag;//会話のフラグ
 	int mob_flag;//ケビン,マイケル、トーマス
 
@@ -24,4 +25,6 @@ private:
 	bool sp_flag;//会話のグラフィックのフラグ
 
 	bool m_key_control;//会話キー制御
+
+	int m_time;//時間
 };
