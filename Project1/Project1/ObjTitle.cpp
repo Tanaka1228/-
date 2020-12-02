@@ -7,6 +7,7 @@
 #include"GameHead.h"
 #include"ObjTitle.h"
 #include"SceneMain.h"
+#include"GameL/UserData.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -30,7 +31,7 @@ void CObjTitle::Action()
 	 m_key_dy = (float)Input::GetVKey(VK_DOWN);
 	 //矢印キーのボタンの状態
 	 m_key_enter = Input::GetVKey(VK_RETURN);
-
+	 static bool init_stage;
 
 	 if (Input::GetVKey(VK_UP) == true)//カーソルの移動
 	 {
@@ -57,8 +58,25 @@ void CObjTitle::Action()
 		 //エンターキーが押されたらメインに還移
 		 if (m_key_enter == true)
 		 {
-			 //Scene::SetScene(new CSceneMain());
+			 if (init_stage == false)
+			 {
+				 ((UserData*)Save::GetData())->mStage=0;
+				 init_stage = true;
+			 }
+		
 			 Scene::SetScene(new CSceneBlock());
+		 }
+	 }
+	 //ロード
+	 if (m_x > 200 && m_x < 550 && m_y>370 && m_y < 430)
+	 {
+		 //エンターキーが押されたらロードに還移
+		 if (m_key_enter == true)
+		 {
+			 Save::Open();
+			 if (((UserData*)Save::GetData())->mStage == 1) {
+				 Scene::SetScene(new CSceneChinaTown());
+			 }
 		 }
 	 }
 

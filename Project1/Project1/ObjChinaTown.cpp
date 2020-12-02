@@ -4,6 +4,7 @@
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
+#include"GameL/UserData.h"
 
 #include"GameHead.h"
 #include "ObjChinaTown.h"
@@ -261,7 +262,8 @@ void CObjChinaTown::Action()
 						{
 							if (Input::GetVKey(VK_RETURN) == true)
 							{
-
+								((UserData*)Save::GetData())->mStage = 1;
+								Save::Seve();
 							}
 						}
 					}
