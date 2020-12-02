@@ -6,6 +6,7 @@
 using namespace GameL;
 
 
+
 //オブジェクト：ブロック&背景
 class CObjChinaTown :public CObj
 {

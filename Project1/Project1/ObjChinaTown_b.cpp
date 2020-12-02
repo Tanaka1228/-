@@ -11,11 +11,23 @@
 //使用するネームスペース
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
 //イニシャライズ
 void CObjChinaTown_b::Init()
 {
-	mx_scroll = +300.0f;
-	my_scroll = -600.0f;
+	if (ChinaTown_Hero_x == 2)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -600.0f;
+	}
+	if (ChinaTown_Hero_x == 4)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = +600.0f;
+	}
+
+	ChinaTown_Hero_x = 3;
 
 	//マップ情報
 	int block_data[65][54] =

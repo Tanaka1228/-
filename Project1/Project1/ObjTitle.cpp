@@ -45,9 +45,9 @@ void CObjTitle::Action()
 	 {
 		 m_y = 349;
 	 }
-	 if (m_y > 500)
+	 if (m_y > 450)
 	 {
-		 m_y = 500;
+		 m_y = 450;
 	 }
 	 
 
@@ -58,11 +58,11 @@ void CObjTitle::Action()
 		 if (m_key_enter == true)
 		 {
 			 //Scene::SetScene(new CSceneMain());
-			 Scene::SetScene(new CSceneChinaEvent());
+			 Scene::SetScene(new CSceneBlock());
 		 }
 	 }
 
-	 if (m_x > 200 && m_x < 550 && m_y>480 && m_y < 501)
+	 if (m_x > 200 && m_x < 550 && m_y>440 && m_y < 470)
 	 {
 		 //エンターキーが押されたらシャットダウンに還移
 		 if (m_key_enter == true)
