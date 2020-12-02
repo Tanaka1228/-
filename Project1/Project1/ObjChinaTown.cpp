@@ -267,6 +267,7 @@ void CObjChinaTown::Action()
 								((UserData*)Save::GetData())->mStage = 1;
 								Save::Seve();
 							}
+							
 						}
 					}
 				}

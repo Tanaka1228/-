@@ -107,27 +107,20 @@ void CObjChinaMob::Action()
 		}
 	}
 
-	if (chinatown != nullptr)
-	{
-		//セーブしました
-		if (chinatown->GetSaveSp() == true)
-		{
-			    mob_flag = 5;
+	//if (chinatown != nullptr)
+	//{
+	//	//セーブしました
+	//	if (chinatown->GetSaveSp() == true)
+	//	{
+	//		mob_flag = 5;
+	//		m_save_sp = 1;
+	//		sp_flag = true;
+	//	
+	//	}
+	//	
 
-				if (second == 1) 
-				{
-					m_save_sp = 1;
-					sp_flag = true;
-				}
-				if(second==4)
-				{
-				   m_save_sp = 2;
-				   sp_flag = false;
-				}
-		}
-	 
-		
-	}
+	//	
+	//}
 
 	//ケビン
 	if (chinatownboss != nullptr)
@@ -414,7 +407,6 @@ void CObjChinaMob::Draw()
 		if (m_save_sp == 2 && mob_flag == 5)
 		{
 			sp_flag = false;
-			key_flag = 1;
 		}
 	}
 
