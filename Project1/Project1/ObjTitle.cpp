@@ -74,8 +74,13 @@ void CObjTitle::Action()
 		 if (m_key_enter == true)
 		 {
 			 Save::Open();
-			 if (((UserData*)Save::GetData())->mStage == 1) {
+			 if (((UserData*)Save::GetData())->mStage == 1)//チャイナタウン
+			 {
 				 Scene::SetScene(new CSceneChinaTown());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 8)//研究所
+			 {
+				 Scene::SetScene(new CSceneInstitute());
 			 }
 		 }
 	 }
