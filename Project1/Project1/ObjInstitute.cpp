@@ -50,6 +50,7 @@ void CObjInstitute::Init()
 	memcpy(m_map, block_data, sizeof(int) * (60* 60));
 	map_flag = true;
 	map_flag2 = false;
+	Save_sp = true;
 }
 
 void CObjInstitute::Action()
@@ -219,10 +220,18 @@ void CObjInstitute::Action()
 						{
 							if (Input::GetVKey(VK_RETURN) == true)
 							{
-								((UserData*)Save::GetData())->mStage = 8;
-								Save::Seve();
+								if (Save_sp == true) {
+									((UserData*)Save::GetData())->mStage = 8;
+									Save::Seve();
+									SetSaveSp(false);
+								}
+							}
+							else
+							{
+								SetSaveSp(true);
 							}
 						}
+		
 					}
 				}
 

@@ -22,6 +22,7 @@ CObjInstMob::CObjInstMob()
 	sp_flag = false;
 	m_key_control = true;
 	mob_flag = 0;
+	m_save_sp = 0;
 }
 
 
@@ -93,60 +94,25 @@ void CObjInstMob::Action()
 			}
 		}
 
-		//-------------2体目のモブフラグ--------------------------------------
-		//if (hero->GetBT() == 37)
-		//{
-		//	mob_flag = 2;//モブ2体目のフラグ
-		//	if (Input::GetVKey(VK_RETURN) == true) {
+		if (inst != nullptr)
+		{
+			//セーブしました
+			if (inst->GetSaveSp() == false)
+			{
+				mob_flag = 5;
+				m_save_sp = 1;
+				sp_flag = true;
 
-		//		if (m_key_control == true)
-		//		{
-		//			if (key_flag == 1)
-		//			{
-		//				m_sp = 1;
-
-		//			}
-
-		//			if (key_flag == 2)
-		//			{
-		//				m_sp = 2;
-
-		//			}
-		//			if ((key_flag == 3))
-		//			{
-
-		//				m_sp = 3;
-
-		//			}
-		//			if ((key_flag == 4))
-		//			{
-		//				m_sp = 4;
-
-		//			}
-		//			if ((key_flag == 5))
-		//			{
-		//				m_sp = 5;
-
-		//			}
-		//			if ((key_flag == 6))
-		//			{
-		//				m_sp = 6;
-
-		//			}
-		//			m_key_control = false;
-		//		}
-
-		//	}
-		//	else
-		//	{
-		//		m_key_control = true;
-
-		//	}
-		//}
-	}
-	//----------------------------------------------------------------
+			}
+			if (inst->GetSaveSp() == true)
+			{
+				m_save_sp = 2;
+				sp_flag = false;
+			}
 
 
+		}
+	
 
 
 
@@ -262,7 +228,7 @@ void CObjInstMob::Action()
 			}
 		}
 
-
+	}
 	}
 }
 
@@ -347,6 +313,19 @@ void CObjInstMob::Draw()
 			key_flag = 1;
 		}
 	}
+
+	if (inst != nullptr) {
+		if (m_save_sp == 1 && mob_flag == 5)
+		{
+			sp_flag = true;
+			Font::StrDraw(L"セーブしました", 100.0f, 490, 40, c);// X  Y  大きさ     
+		}
+		if (m_save_sp == 2 && mob_flag == 5)
+		{
+			sp_flag = false;
+		}
+	}
+
 	//----------------2体目の会話-----------------------------------------------------------------------
 	//if (inst != nullptr && mob_flag == 2)
 	//{

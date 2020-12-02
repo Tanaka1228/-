@@ -106,7 +106,7 @@ void CObjChinaTown::Init()
 	memcpy(m_map, block_data, sizeof(int) * (65 * 54));
 	map_flag = true;
 	map_flag2 = false;
-	Save_sp = false;
+	Save_sp = true;
 }
 
 //ƒAƒNƒVƒ‡ƒ“
@@ -263,11 +263,17 @@ void CObjChinaTown::Action()
 						{
 							if (Input::GetVKey(VK_RETURN) == true)
 							{
-								SetSaveSp(true);
-								((UserData*)Save::GetData())->mStage = 1;
-								Save::Seve();
+								if (Save_sp==true) 
+								{
+									((UserData*)Save::GetData())->mStage = 1;
+									Save::Seve();
+									SetSaveSp(false);
+								}
 							}
-							
+							else
+							{
+								SetSaveSp(true);
+							}
 						}
 					}
 				}
