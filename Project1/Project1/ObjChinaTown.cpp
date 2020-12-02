@@ -257,6 +257,13 @@ void CObjChinaTown::Action()
 							
 						}
 
+						if (m_map[i][j] == 83)//公衆電話でエンターをおすとセーブ
+						{
+							if (Input::GetVKey(VK_RETURN) == true)
+							{
+
+							}
+						}
 					}
 				}
 
@@ -265,24 +272,7 @@ void CObjChinaTown::Action()
 			}
 		}
 	}
-	//敵出現ライン
-	//float Xline = hx + (-mx_scroll) - 1100;
-	//float Yline = hy + (my_scroll)-400;
-
-	//int ex = ((int)Xline) / 32;
-	//int ey = ((int)Yline) / 32;
-
-	//for (int i = 0; i < 65; i++)
-	//{
-	//	for (int j = 0; j < 54; j++)
-
-	//		//if (m_map[i][ex] == 81)
-	//		//	////誘導敵機オブジェクト作成
-	//		//	//CObjChinaTownBossBoss* obj_chinatown_boss_boss = new CObjChinaTownBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-	//		//	//Objs::InsertObj(obj_chinatown_boss_boss, OBJ_CHINA_TOWN_BOSS_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
-
-	//			m_map[i][ex] = 0;		
-	//}
+	
 
 	if (Input::GetVKey('X') == true)
 	{
@@ -1723,7 +1713,7 @@ void CObjChinaTown::Draw()
 					//描画
 					Draw::Draw(4, &src, &dst, c, 0.0f);
 				}
-				if (m_map[i][j] == 83)//公衆電話
+				if (m_map[i][j] == 83)//公衆電話 セーブ
 				{
 					//切り取り位置の設定
 					src.m_top = 32.0f;   //y
