@@ -6,6 +6,7 @@
 #include"GameL\SceneObjManager.h"
 #include"GameL\DrawFont.h"
 #include"GameL/DrawTexture.h"
+#include"GameL/Audio.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -31,6 +32,14 @@ CSceneBlock::~CSceneBlock()
 //ゲームステージ初期化メソッド
 void CSceneBlock::InitScene()
 {
+	//音楽情報の読み込み
+	//Audio::LoadAudio(0, L".wav",BACK_MUSIC);//Loop
+
+	//バックミュージックスタート
+	//float v = Audio::VolumeMaster(1.5f);//マスターボリュームを下げる
+
+	//Audio::Start(0);//音楽スタート
+
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
 
