@@ -109,8 +109,8 @@ void CObjInstituteBoss::Action()
 	}
 
 	//“GoŒ»ƒ‰ƒCƒ“
-	float Xline = hx + (-mx_scroll) - 100;
-	float Yline = hy + (my_scroll)-50;
+	float Xline = hx + (-mx_scroll) -480;
+	float Yline = hy + (my_scroll)-600;
 
 	int ex = ((int)Xline) / 32;
 	int ey = ((int)Yline) / 32;
