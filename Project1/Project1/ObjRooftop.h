@@ -21,7 +21,7 @@ public:
 	void SetScroll2(float s) { my_scroll = s; }
 	float GetScroll2() { return my_scroll; }//Y
 
-	
+	bool GetMap() { return map_flag2; }
 
 private:
 	
@@ -29,5 +29,8 @@ private:
 
 	float mx_scroll; //左右スクロール用
 	float my_scroll; //左右スクロール用
+
+	bool map_flag;
+	bool map_flag2;
 
 };

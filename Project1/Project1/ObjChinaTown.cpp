@@ -4,6 +4,7 @@
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
+#include"GameL/UserData.h"
 
 #include"GameHead.h"
 #include "ObjChinaTown.h"
@@ -11,12 +12,23 @@
 //使用するネームスペース
 using namespace GameL;
 
+int ChinaTown_Hero_x;
+
 //イニシャライズ
 void CObjChinaTown::Init()
 {
-	mx_scroll = -200.0f;
-	my_scroll = +100.0f;
-
+	if (ChinaTown_Hero_x==2)
+	{
+		mx_scroll = -200.0f;
+		my_scroll = -1600.0f;
+	}
+	if (ChinaTown_Hero_x == 0)
+	{
+		mx_scroll = -200.0f;
+		my_scroll = +100.0f;
+	}
+	
+	ChinaTown_Hero_x = 1;
 	//マップ情報
 	int block_data[65][54] =
 	{
@@ -92,6 +104,9 @@ void CObjChinaTown::Init()
 
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (65 * 54));
+	map_flag = true;
+	map_flag2 = false;
+	Save_sp = true;
 }
 
 //アクション
@@ -241,8 +256,25 @@ void CObjChinaTown::Action()
 						if (m_map[i][j] == 98)//下に行くとチャイナタウンボス
 						{
 							Scene::SetScene(new CSceneChinaTownBoss());
+							
 						}
 
+						if (m_map[i][j] == 83)//公衆電話でエンターをおすとセーブ
+						{
+							if (Input::GetVKey(VK_RETURN) == true)
+							{
+								if (Save_sp==true) 
+								{
+									((UserData*)Save::GetData())->mStage = 1;
+									Save::Seve();
+									SetSaveSp(false);
+								}
+							}
+							else
+							{
+								SetSaveSp(true);
+							}
+						}
 					}
 				}
 
@@ -251,24 +283,24 @@ void CObjChinaTown::Action()
 			}
 		}
 	}
-	//敵出現ライン
-	//float Xline = hx + (-mx_scroll) - 1100;
-	//float Yline = hy + (my_scroll)-400;
+	
 
-	//int ex = ((int)Xline) / 32;
-	//int ey = ((int)Yline) / 32;
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
 
-	//for (int i = 0; i < 65; i++)
-	//{
-	//	for (int j = 0; j < 54; j++)
 
-	//		//if (m_map[i][ex] == 81)
-	//		//	////誘導敵機オブジェクト作成
-	//		//	//CObjChinaTownBossBoss* obj_chinatown_boss_boss = new CObjChinaTownBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-	//		//	//Objs::InsertObj(obj_chinatown_boss_boss, OBJ_CHINA_TOWN_BOSS_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
+			map_flag2 = true;
+			map_flag = false;
 
-	//			m_map[i][ex] = 0;		
-	//}
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
+	}
 }
 //ドロー
 void CObjChinaTown::Draw()
@@ -1692,7 +1724,7 @@ void CObjChinaTown::Draw()
 					//描画
 					Draw::Draw(4, &src, &dst, c, 0.0f);
 				}
-				if (m_map[i][j] == 83)//公衆電話
+				if (m_map[i][j] == 83)//公衆電話 セーブ
 				{
 					//切り取り位置の設定
 					src.m_top = 32.0f;   //y

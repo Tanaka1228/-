@@ -152,6 +152,7 @@
     <ClInclude Include="CObjSinEnemy.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjChinaEvent.h" />
     <ClInclude Include="ObjChinaTown_b.h" />
     <ClInclude Include="ObjChinaMob.h" />
     <ClInclude Include="ObjChinaTown.h" />
@@ -180,6 +181,7 @@
     <ClInclude Include="ObjDrugCampanyRoom7.h" />
     <ClInclude Include="ObjDrugCampanyRoom8.h" />
     <ClInclude Include="ObjDrugCampanyRoom9.h" />
+    <ClInclude Include="ObjDrugMob.h" />
     <ClInclude Include="ObjEnd.h" />
     <ClInclude Include="ObjEnemy.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -199,7 +201,10 @@
     <ClInclude Include="ObjInstitute10.h" />
     <ClInclude Include="ObjInstitute11.h" />
     <ClInclude Include="ObjInstitute12.h" />
-    <ClInclude Include="ObjInstitute13.h" />
+    <ClInclude Include="ObjInstitute13.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ObjInstitute13A.h" />
     <ClInclude Include="ObjInstitute14.h" />
     <ClInclude Include="ObjInstitute2.h" />
     <ClInclude Include="ObjInstitute3.h" />
@@ -217,11 +222,13 @@
     <ClInclude Include="ObjMenu.h" />
     <ClInclude Include="ObjOpeRoom.h" />
     <ClInclude Include="ObjRooftop.h" />
+    <ClInclude Include="ObjSpBack.h" />
     <ClInclude Include="ObjTemplateRoom.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="CObjRooftopBoss.h" />
     <ClInclude Include="ObjXRayRoom.h" />
     <ClInclude Include="SceneBlock.h" />
+    <ClInclude Include="SceneChinaEvent.h" />
     <ClInclude Include="SceneChinaTown.h" />
     <ClInclude Include="SceneChinaTownBoss.h" />
     <ClInclude Include="SceneChinaTown_b.h" />
@@ -251,7 +258,10 @@
     <ClInclude Include="SceneInstitute10.h" />
     <ClInclude Include="SceneInstitute11.h" />
     <ClInclude Include="SceneInstitute12.h" />
-    <ClInclude Include="SceneInstitute13.h" />
+    <ClInclude Include="SceneInstitute13.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="SceneInstitute13A.h" />
     <ClInclude Include="SceneInstitute14.h" />
     <ClInclude Include="SceneInstitute3.h" />
     <ClInclude Include="SceneInstitute4.h" />
@@ -302,6 +312,7 @@
     <ClCompile Include="CObjSinEnemy.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ObjChinaEvent.cpp" />
     <ClCompile Include="ObjChinaTown_b.cpp" />
     <ClCompile Include="ObjChinaMob.cpp" />
     <ClCompile Include="ObjChinaTown.cpp" />
@@ -330,6 +341,7 @@
     <ClCompile Include="ObjDrugCampanyRoom7.cpp" />
     <ClCompile Include="ObjDrugCampanyRoom8.cpp" />
     <ClCompile Include="ObjDrugCampanyRoom9.cpp" />
+    <ClCompile Include="ObjDrugMob.cpp" />
     <ClCompile Include="ObjEnd.cpp" />
     <ClCompile Include="ObjEventRoom.cpp" />
     <ClCompile Include="ObjExRoom.cpp" />
@@ -345,7 +357,10 @@
     <ClCompile Include="ObjInstitute10.cpp" />
     <ClCompile Include="ObjInstitute11.cpp" />
     <ClCompile Include="ObjInstitute12.cpp" />
-    <ClCompile Include="ObjInstitute13.cpp" />
+    <ClCompile Include="ObjInstitute13.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ObjInstitute13A.cpp" />
     <ClCompile Include="ObjInstitute14.cpp" />
     <ClCompile Include="ObjInstitute3.cpp" />
     <ClCompile Include="ObjInstitute4.cpp" />
@@ -363,9 +378,11 @@
     <ClCompile Include="ObjOpeRoom.cpp" />
     <ClCompile Include="ObjRooftop.cpp" />
     <ClCompile Include="CObjRooftopBoss.cpp" />
+    <ClCompile Include="ObjSpBack.cpp" />
     <ClCompile Include="ObjTemplateRoom.cpp" />
     <ClCompile Include="ObjXRayRoom.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
+    <ClCompile Include="SceneChinaEvent.cpp" />
     <ClCompile Include="SceneChinaTown _b.cpp" />
     <ClCompile Include="SceneChinaTown.cpp" />
     <ClCompile Include="SceneChinaTownBoss.cpp" />
@@ -400,7 +417,10 @@
     <ClCompile Include="SceneInstitute.cpp" />
     <ClCompile Include="SceneInstitute11.cpp" />
     <ClCompile Include="SceneInstitute12.cpp" />
-    <ClCompile Include="SceneInstitute13.cpp" />
+    <ClCompile Include="SceneInstitute13.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SceneInstitute13A.cpp" />
     <ClCompile Include="SceneInstitute14.cpp" />
     <ClCompile Include="SceneInstitute2.cpp" />
     <ClCompile Include="SceneInstitute3.cpp" />

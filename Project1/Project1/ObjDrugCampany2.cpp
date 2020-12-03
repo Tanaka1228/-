@@ -14,8 +14,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjDrugCampany2::Init()
 {
-	mx_scroll = 0.0f;
-	my_scroll = 0.0f;
+	mx_scroll = -1130.0f;
+	my_scroll = +30.0f;
 
 	//マップ情報
 	int block_data[200][200] =
@@ -297,29 +297,22 @@ void CObjDrugCampany2::Action()
 			}
 		}
 	}
-
-	//敵出現ライン
-	//float Xline = hx + (-mx_scroll) + 400;
-	//float Yline = hy + (my_scroll)-100;
-
-	//int ex = ((int)Xline) / 32;
-	//int ey = ((int)Yline) / 32;
-
-	//for (int i = 0; i < 25; i++)
-	//{
-	//	for (int j = 0; j < 25; j++)
-
-	//		if (m_map[i][ex] == 15)
-	//		{
-	//			//誘導敵機オブジェクト作成
-	//			CObjRooftopBoss* obj_rooftop_boss = new CObjRooftopBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-	//			Objs::InsertObj(obj_rooftop_boss, OBJ_ROOF_TOP_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
-
-	//			m_map[i][ex] = 0;
-	//		}
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
 
 
-	//}
+			map_flag2 = true;
+			map_flag = false;
+
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
+	}
 
 }
 //ドロー
@@ -336,10 +329,10 @@ void CObjDrugCampany2::Draw()
 	src.m_right = 500.0f; // X
 	src.m_bottom = 500.0f;// Y 
 
-	dst.m_top = 0.0f + my_scroll;
-	dst.m_left = 0.0f + mx_scroll;
-	dst.m_right = 4400.0f + mx_scroll;
-	dst.m_bottom = 4400.0 + my_scroll;
+	dst.m_top = 160.0f + my_scroll;
+	dst.m_left = 290.0f + mx_scroll;
+	dst.m_right = 2940.0f + mx_scroll;
+	dst.m_bottom = 3040.0 + my_scroll;
 	Draw::Draw(5, &src, &dst, c, 0.0f);
 
 	//マップチップによるblock設置

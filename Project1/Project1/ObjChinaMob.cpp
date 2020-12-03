@@ -21,9 +21,9 @@ CObjChinaMob::CObjChinaMob()
 	key_flag = 1;
 	sp_flag = false;
 	m_key_control = true;
-	
+	m_time = 0;
 	mob_flag = 0;
-	
+	m_save_sp = 0;
 }
 
 
@@ -41,10 +41,25 @@ void CObjChinaMob::Action()
 	CObjChinaTownBoss* chinatownboss = (CObjChinaTownBoss*)Objs::GetObj(OBJ_CHINA_TOWN_BOSS);//チャイナタウンボス
 	CObjChinaTown_b* chinatown_b = (CObjChinaTown_b*)Objs::GetObj(OBJ_CHINA_TOWN_B);//チャイナタウンのB
 
+	int minute;//分
+	int second;//秒
+
+	m_time++;
+
+	second = (m_time / 60) % 60;//秒
+	minute = (m_time / 60) / 60;//分
+
+	
+
+
+
+
+	//チャイナタウンのモブ
 	if (chinatown != nullptr)
 	{
 		if (hero->GetBT() == 99)
 		{
+			mob_flag = 4;
 			if (Input::GetVKey(VK_RETURN) == true) {
 
 				if (m_key_control == true)
@@ -52,34 +67,34 @@ void CObjChinaMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
-
+						sp_flag = true;
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
-
+						sp_flag = true;
 					}
 					m_key_control = false;
 				}
@@ -91,6 +106,27 @@ void CObjChinaMob::Action()
 			}
 		}
 	}
+
+	if (chinatown != nullptr)
+	{
+		//セーブしました
+		if (chinatown->GetSaveSp() == false)
+		{
+			mob_flag = 5;
+			m_save_sp = 1;
+			sp_flag = true;
+		
+		}
+		if (chinatown->GetSaveSp() == true)
+		{
+			m_save_sp = 2;
+			sp_flag = false;
+		}
+
+		
+	}
+
+	//ケビン
 	if (chinatownboss != nullptr)
 	{
 		if (hero->GetBT() == 99)
@@ -103,34 +139,34 @@ void CObjChinaMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
-
+						sp_flag = true;
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
-
+						sp_flag = true;
 					}
 					m_key_control = false;
 				}
@@ -142,7 +178,7 @@ void CObjChinaMob::Action()
 			}
 		}
 
-
+		//マイケル
 		if (hero->GetBT() == 100)
 		{
 			mob_flag = 2;
@@ -153,34 +189,34 @@ void CObjChinaMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
-
+						sp_flag = true;
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
-
+						sp_flag = true;
 					}
 					m_key_control = false;
 				}
@@ -191,6 +227,8 @@ void CObjChinaMob::Action()
 				m_key_control = true;
 			}
 		}
+
+		//トーマス
 		if (hero->GetBT() == 101)
 		{
 			mob_flag = 3;
@@ -201,34 +239,34 @@ void CObjChinaMob::Action()
 					if (key_flag == 1)
 					{
 						m_sp = 1;
-
+						sp_flag = true;
 					}
 
 					if (key_flag == 2)
 					{
 						m_sp = 2;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 3))
 					{
 
 						m_sp = 3;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 4))
 					{
 						m_sp = 4;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 5))
 					{
 						m_sp = 5;
-
+						sp_flag = true;
 					}
 					if ((key_flag == 6))
 					{
 						m_sp = 6;
-
+						sp_flag = true;
 					}
 					m_key_control = false;
 				}
@@ -255,34 +293,34 @@ void CObjChinaMob::Action()
 						if (key_flag == 1)
 						{
 							m_sp = 1;
-
+							sp_flag = true;
 						}
 
 						if (key_flag == 2)
 						{
 							m_sp = 2;
-
+							sp_flag = true;
 						}
 						if ((key_flag == 3))
 						{
 
 							m_sp = 3;
-
+							sp_flag = true;
 						}
 						if ((key_flag == 4))
 						{
 							m_sp = 4;
-
+							sp_flag = true;
 						}
 						if ((key_flag == 5))
 						{
 							m_sp = 5;
-
+							sp_flag = true;
 						}
 						if ((key_flag == 6))
 						{
 							m_sp = 6;
-
+							sp_flag = true;
 						}
 						m_key_control = false;
 					}
@@ -319,7 +357,7 @@ void CObjChinaMob::Draw()
 
 	if (chinatown != nullptr)
 	{
-		if (m_sp == 1)//エンターキーを一回押したとき
+		if (m_sp == 1&&mob_flag==4)//エンターキーを一回押したとき
 		{
 			sp_flag == true;
 
@@ -357,12 +395,28 @@ void CObjChinaMob::Draw()
 		}
 		if (m_sp == 3)//エンターキーを3回押したとき
 		{
-			
+			sp_flag = false;
+
 			Font::StrDraw(L"", 50.0f, 500, 25, c);// X  Y  大きさ     
 
 			key_flag = 1;
 		}
+
+
+		if (m_save_sp == 1 && mob_flag == 5)
+		{
+			sp_flag = true;
+			Font::StrDraw(L"セーブしました", 100.0f, 490, 40, c);// X  Y  大きさ     
+		}
+		if (m_save_sp == 2 && mob_flag == 5)
+		{
+			sp_flag = false;
+		}
 	}
+
+	
+
+	
 
 
 	//ケビン
@@ -382,7 +436,7 @@ void CObjChinaMob::Draw()
 
 				sprintf_s(str1, "%s", str1);//出力
 				MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-				Font::StrDraw(wstr1, 50.0f, 500, 30, c);// X  Y  大きさ     
+				Font::StrDraw(wstr1, 50.0f, 490, 30, c);// X  Y  大きさ     
 
 
 			key_flag = 2;
@@ -400,7 +454,7 @@ void CObjChinaMob::Draw()
 
 				sprintf_s(str1, "%s", str1);//出力
 				MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-				Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
+				Font::StrDraw(wstr1, 50.0f, 490, 30, c);// X  Y  大きさ     
 
 
 			key_flag = 3;
@@ -418,7 +472,7 @@ void CObjChinaMob::Draw()
 
 				sprintf_s(str1, "%s", str1);//出力
 				MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-				Font::StrDraw(wstr1, 50.0f, 530, 25, c);// X  Y  大きさ     
+				Font::StrDraw(wstr1, 50.0f, 520, 30, c);// X  Y  大きさ     
 
 
 			key_flag = 3;
@@ -431,12 +485,12 @@ void CObjChinaMob::Draw()
 				ifstream fin("チャイナタウンボス戦フィールドの会話.txt", ios::in);//テキストデータをを読み込み
 				char str1[64];//ただの配列
 				wchar_t wstr1[64];
-				fin.seekg(108, ios::cur);//0バイト数進める
+				fin.seekg(100, ios::cur);//0バイト数進める
 				fin >> str1;//str1にテキストを入れる
 
 				sprintf_s(str1, "%s", str1);//出力
 				MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, str1, 64, wstr1, 64);//文字をユニコードに変換する
-				Font::StrDraw(wstr1, 50.0f, 500, 25, c);// X  Y  大きさ     
+				Font::StrDraw(wstr1, 50.0f, 490, 30, c);// X  Y  大きさ     
 
 
 			key_flag = 4;
@@ -444,7 +498,7 @@ void CObjChinaMob::Draw()
 		}
 		if (m_sp == 4)//エンターキーを一回押したとき
 		{
-
+			sp_flag = false;
 			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
 
 
@@ -512,10 +566,8 @@ void CObjChinaMob::Draw()
 		}
 		if (m_sp == 4)//エンターキーを一回押したとき
 		{
-
+			sp_flag = false;
 			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
-
-
 			key_flag = 1;
 
 		}
@@ -581,10 +633,8 @@ void CObjChinaMob::Draw()
 		}
 		if (m_sp == 4)//エンターキーを一回押したとき
 		{
-
+			sp_flag = false;
 			Font::StrDraw(L"", 50.0f, 500, 30, c);// X  Y  大きさ     
-
-
 			key_flag = 1;
 
 		}

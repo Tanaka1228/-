@@ -22,5 +22,5 @@ class CObjTitle : public CObj
 		
 		int m_x;
 		int m_y;//ƒJ[ƒ\ƒ‹ˆÚ“®
-	
+		
 };

@@ -6,6 +6,11 @@
 using namespace GameL;
 
 
+//定数化
+#define MAP_X_MAX_1F (50)//病院の配列要素数
+#define MAP_Y_MAX_1F (26)
+
+
 //オブジェクト：ブロック&背景
 class CObjHospital :public CObj
 {
@@ -25,7 +30,7 @@ public:
 	bool GetMap() { return map_flag2; }
 
 private:
-	int m_map[26][50];//マップ情報(仮)
+	int m_map[MAP_Y_MAX_1F][MAP_X_MAX_1F];//マップ情報
 
 	float mx_scroll; //左右スクロール用
 	float my_scroll; //左右スクロール用

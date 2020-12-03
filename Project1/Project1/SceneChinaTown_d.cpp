@@ -49,8 +49,18 @@ void CSceneChinaTown_d::InitScene()
 	//外部グラフィックファイルを読み込み17番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"チャイナタウンボス戦フィールドの素材.png", 17, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み18番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"壁青.png", 18, TEX_SIZE_512);
+
 	//外部グラフィックファイルを読み込み3番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"製薬会社　床.png", 5, TEX_SIZE_512);//グラフィック
+
+	//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"研究所地下そざ.png", 6, TEX_SIZE_512);//弾丸グラフィック//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
+
+
+	//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"マップd.png", 15, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
@@ -64,6 +74,9 @@ void CSceneChinaTown_d::InitScene()
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
 	Objs::InsertObj(objg, OBJ_GUN, 6);
+
+	CObjMap* objm = new CObjMap();//マップ図
+	Objs::InsertObj(objm, OBJ_MAP, 7);
 }
 
 

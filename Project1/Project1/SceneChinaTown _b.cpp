@@ -55,6 +55,16 @@ void CSceneChinaTown_b::InitScene()
 	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"武器商売ロボット.png", 6, TEX_SIZE_512);
 
+	
+	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"会話.png", 8, TEX_SIZE_512);
+
+	//外部グラフィックファイルを読み込み13番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"病院の屋上の素材.png", 7, TEX_SIZE_512);
+
+	//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"マップb.png", 18, TEX_SIZE_512);
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 5); //作った主人公オブジェクトをオブジェクトマネージャーに登録
@@ -70,6 +80,13 @@ void CSceneChinaTown_b::InitScene()
 	//銃オブジェクト作成
 	CObjGun* objg = new CObjGun();
 	Objs::InsertObj(objg, OBJ_GUN, 6);
+
+	//会話の背景オブジェクト作成
+	CObjSpBack* objsp = new CObjSpBack(); //会話の背景作成
+	Objs::InsertObj(objsp, OBJ_SP_BACK, 5); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
+
+	CObjMap* objm = new CObjMap();//マップ図
+	Objs::InsertObj(objm, OBJ_MAP, 7);
 }
 
 

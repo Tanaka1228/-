@@ -56,7 +56,7 @@ void CObjTitleBackground::Draw()
 	dst.m_top = 330.0f;//y
 	dst.m_left = 230.0f;//x;
 	dst.m_right = 550.0f;//x
-	dst.m_bottom = 570.f; //y
+	dst.m_bottom = 510.f; //y
 
 	Draw::Draw(6, &src, &dst, c, 0.0f);
 	 
