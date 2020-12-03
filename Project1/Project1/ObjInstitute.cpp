@@ -12,11 +12,15 @@
 
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
 
 void CObjInstitute::Init()
 {
 	mx_scroll = +300.0f;
 	my_scroll = -100.0f;
+
+	ChinaTown_Hero_x = 8;
 
 	int block_data[60][60] =
 	{
