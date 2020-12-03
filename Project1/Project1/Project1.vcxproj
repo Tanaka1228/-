@@ -139,6 +139,7 @@
     <ClInclude Include="CObjAssBullet.h" />
     <ClInclude Include="CObjBullet.h" />
     <ClInclude Include="CObjBulletEnemy.h" />
+    <ClInclude Include="CObjChinaAtkEnemy.h" />
     <ClInclude Include="CObjChinaTownBossBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -299,6 +300,7 @@
     <ClCompile Include="CObjAssBullet.cpp" />
     <ClCompile Include="CObjBullet.cpp" />
     <ClCompile Include="CObjBulletEnemy.cpp" />
+    <ClCompile Include="CObjChinaAtkEnemy.cpp" />
     <ClCompile Include="CObjChinaTownBossBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>

@@ -14,11 +14,37 @@ using namespace GameL;
 
 extern int ChinaTown_Hero_x;
 
+extern int Inst_Hero_x;
+
 
 void CObjInstitute::Init()
 {
-	mx_scroll = +300.0f;
-	my_scroll = -100.0f;
+	if (ChinaTown_Hero_x == 7)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 1)
+	{
+		mx_scroll = -100.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 2)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 3)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 4)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	
 
 	ChinaTown_Hero_x = 8;
 

@@ -11,11 +11,42 @@
 //�g�p����l�[���X�y�[�X
 using namespace GameL;
 
+int Inst_Hero_x;
+int ChinaTown_Hero_x;
+
 //�C�j�V�����C�Y
 void CObjInstitute14::Init()
 {
+	if (ChinaTown_Hero_x == 8)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 6)
+	{
+		mx_scroll = -100.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 7)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 8)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 9)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+
 	mx_scroll = -555.0f;
 	my_scroll = +190.0f;
+
+	Inst_Hero_x = 5;
 
 	//�}�b�v���
 	int block_data[60][60] =

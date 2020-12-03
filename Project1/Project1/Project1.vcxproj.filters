@@ -109,6 +109,9 @@
     <Filter Include="ソース ファイル\イベントシーン">
       <UniqueIdentifier>{bccab1e2-092a-414b-a648-eb2de6e5f08e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\SceneMain\Enemy\EnemyMob">
+      <UniqueIdentifier>{8aa53a50-1ed5-4d1d-9b2a-9c1c08e6f4dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\チーム開発\GameL\Audio.h">
@@ -528,6 +531,9 @@
     <ClInclude Include="SceneChinaEvent.h">
       <Filter>ソース ファイル\イベントシーン</Filter>
     </ClInclude>
+    <ClInclude Include="CObjChinaAtkEnemy.h">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyMob</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\チーム開発\GameL\Audio.cpp">
@@ -946,6 +952,9 @@
     </ClCompile>
     <ClCompile Include="SceneChinaEvent.cpp">
       <Filter>ソース ファイル\イベントシーン</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjChinaAtkEnemy.cpp">
+      <Filter>ヘッダー ファイル\SceneMain\Enemy\EnemyMob</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
