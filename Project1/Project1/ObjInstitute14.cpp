@@ -11,8 +11,8 @@
 //�g�p����l�[���X�y�[�X
 using namespace GameL;
 
-int Inst_Hero_x;
-int ChinaTown_Hero_x;
+extern int Inst_Hero_x;
+extern int ChinaTown_Hero_x;
 
 //�C�j�V�����C�Y
 void CObjInstitute14::Init()
