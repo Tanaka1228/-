@@ -25,7 +25,7 @@ public:
 
 	bool GetMap() { return map_flag2; }
 
-	void SetSaveSp(float s) { Save_sp = s; }//セーブした際にでる(セーブしました)フラグ
+	void SetSaveSp(bool s) { Save_sp = s; }//セーブした際にでる(セーブしました)フラグ
 	bool GetSaveSp() { return Save_sp; }
 
 private:
