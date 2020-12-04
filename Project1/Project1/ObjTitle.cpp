@@ -82,6 +82,10 @@ void CObjTitle::Action()
 			 {
 				 Scene::SetScene(new CSceneHospital());
 			 }
+			 if (((UserData*)Save::GetData())->mStage == 3)//»–ò‰ïĞˆêŠK
+			 {
+				 Scene::SetScene(new CSceneDrugCampany());
+			 }
 			 if (((UserData*)Save::GetData())->mStage == 8)//Œ¤‹†Š
 			 {
 				 Scene::SetScene(new CSceneInstitute());
