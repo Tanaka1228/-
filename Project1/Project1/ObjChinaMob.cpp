@@ -136,23 +136,6 @@ void CObjChinaMob::Action()
 			}
 		}
 		
-		//}
-		//	//セーブしました
-		//	if (chinatown->GetSaveSp() == true)
-		//	{
-		//		mob_flag = 5;
-		//		m_save_sp = 1;
-		//		sp_flag = true;
-
-		//	}
-		//	if (chinatown->GetSaveSp() == false)
-		//	{
-		//		m_save_sp = 2;
-		//		sp_flag = false;
-		//	}
-		
-
-		
 	}
 
 	//ケビン

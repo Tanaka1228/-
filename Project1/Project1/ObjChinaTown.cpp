@@ -106,7 +106,7 @@ void CObjChinaTown::Init()
 	memcpy(m_map, block_data, sizeof(int) * (65 * 54));
 	map_flag = true;
 	map_flag2 = false;
-	Save_sp = true;
+
 }
 
 //ƒAƒNƒVƒ‡ƒ“
