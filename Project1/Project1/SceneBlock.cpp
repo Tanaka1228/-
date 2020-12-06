@@ -6,6 +6,7 @@
 #include"GameL\SceneObjManager.h"
 #include"GameL\DrawFont.h"
 #include"GameL/DrawTexture.h"
+#include"GameL/Audio.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -31,6 +32,14 @@ CSceneBlock::~CSceneBlock()
 //ゲームステージ初期化メソッド
 void CSceneBlock::InitScene()
 {
+	//音楽情報の読み込み
+	Audio::LoadAudio(0, L"拠点BGM.wav",BACK_MUSIC);//Loop
+
+	//バックミュージックスタート
+	float v = Audio::VolumeMaster(1.5f);//マスターボリュームを下げる
+
+	Audio::Start(0);//音楽スタート
+
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
 
@@ -55,6 +64,9 @@ void CSceneBlock::InitScene()
 	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"武器商売ロボット.png", 11, TEX_SIZE_512);
 
+	//外部グラフィックファイルを読み込み5番に登録(512×512ピクセル)あまり関係ないらしい
+	Draw::LoadImage(L"拠点のマップ.png", 15, TEX_SIZE_512);
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 4); //作った主人公オブジェクトをオブジェクトマネージャーに登録
@@ -74,6 +86,9 @@ void CSceneBlock::InitScene()
 	//会話の背景オブジェクト作成
 	CObjSpBack* objsp = new CObjSpBack(); //会話の背景作成
 	Objs::InsertObj(objsp, OBJ_SP_BACK, 5); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
+
+	CObjMap* objm = new CObjMap();//マップ図
+	Objs::InsertObj(objm, OBJ_MAP, 7);
 
 }
 

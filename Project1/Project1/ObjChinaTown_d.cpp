@@ -11,11 +11,25 @@
 //�g�p����l�[���X�y�[�X
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
 //�C�j�V�����C�Y
 void CObjChinaTown_d::Init()
 {
-	mx_scroll = +300.0f;
-	my_scroll = 0.0f;
+	if (ChinaTown_Hero_x == 5)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = 0.0f;
+	}
+	if (ChinaTown_Hero_x == 8)
+	{
+		mx_scroll = -300.0f;
+		my_scroll = -600.0f;
+	}
+
+	
+
+	ChinaTown_Hero_x = 7;
 
 	//�}�b�v���
 	int block_data[65][54] =
@@ -59,6 +73,8 @@ void CObjChinaTown_d::Init()
 
 	//�}�b�v�f�[�^��R�s�[
 	memcpy(m_map, block_data, sizeof(int) * (65 * 54));
+	map_flag = true;
+	map_flag2 = false;
 }
 
 //�A�N�V����
@@ -230,6 +246,23 @@ void CObjChinaTown_d::Action()
 
 	//			m_map[i][ex] = 0;		
 	//}
+
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
+
+
+			map_flag2 = true;
+			map_flag = false;
+
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
+	}
 }
 //�h���[
 void CObjChinaTown_d::Draw()

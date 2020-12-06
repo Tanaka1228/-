@@ -15,10 +15,12 @@
 //使用するネームスペース
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
 //イニシャライズ
 void CObjBlock::Init()
 {
-
+	ChinaTown_Hero_x = 0;
 	//マップ情報
 	int block_data[25][25] =
 	{
@@ -49,6 +51,8 @@ void CObjBlock::Init()
 	};
 	//マップデータをコピー
 	memcpy(m_map, block_data, sizeof(int) * (25 * 25));
+	map_flag = true;
+	map_flag2 = false;
 
 }
 //アクション
@@ -170,6 +174,23 @@ void CObjBlock::Action()
 		}
 	}
 
+
+	if (Input::GetVKey('X') == true)
+	{
+		if (map_flag == true)
+		{
+
+
+			map_flag2 = true;
+			map_flag = false;
+
+		}
+	}
+	else
+	{
+		map_flag = true;
+		map_flag2 = false;
+	}
 	
 }
 //ドロー

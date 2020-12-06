@@ -7,6 +7,7 @@
 #include"GameHead.h"
 #include"ObjTitle.h"
 #include"SceneMain.h"
+#include"GameL/UserData.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -30,8 +31,7 @@ void CObjTitle::Action()
 	 m_key_dy = (float)Input::GetVKey(VK_DOWN);
 	 //矢印キーのボタンの状態
 	 m_key_enter = Input::GetVKey(VK_RETURN);
-
-
+	
 	 if (Input::GetVKey(VK_UP) == true)//カーソルの移動
 	 {
 		 m_y -= 6.0f;
@@ -45,9 +45,9 @@ void CObjTitle::Action()
 	 {
 		 m_y = 349;
 	 }
-	 if (m_y > 500)
+	 if (m_y > 450)
 	 {
-		 m_y = 500;
+		 m_y = 450;
 	 }
 	 
 
@@ -57,12 +57,43 @@ void CObjTitle::Action()
 		 //エンターキーが押されたらメインに還移
 		 if (m_key_enter == true)
 		 {
-			 //Scene::SetScene(new CSceneMain());
+		    ((UserData*)Save::GetData())->mStage=0;
+			Save::Seve();
 			 Scene::SetScene(new CSceneBlock());
 		 }
 	 }
 
-	 if (m_x > 200 && m_x < 550 && m_y>480 && m_y < 501)
+	 //ロード
+	 if (m_x > 200 && m_x < 550 && m_y>370 && m_y < 430)
+	 {
+		 //エンターキーが押されたらロードに還移
+		 if (m_key_enter == true)
+		 {
+			 Save::Open();
+			 if (((UserData*)Save::GetData())->mStage == 0)//拠点ニューゲーム
+			 {
+				 Scene::SetScene(new CSceneBlock());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 1)//チャイナタウン
+			 {
+				 Scene::SetScene(new CSceneChinaTown());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 2)//病院1階
+			 {
+				 Scene::SetScene(new CSceneHospital());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 3)//製薬会社一階
+			 {
+				 Scene::SetScene(new CSceneDrugCampany());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 8)//研究所
+			 {
+				 Scene::SetScene(new CSceneInstitute());
+			 }
+		 }
+	 }
+
+	 if (m_x > 200 && m_x < 550 && m_y>440 && m_y < 470)
 	 {
 		 //エンターキーが押されたらシャットダウンに還移
 		 if (m_key_enter == true)
@@ -127,10 +158,9 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"◆     ロード    ", 250, 400, 32, c);
 	
 	//設定画面に移行
-	Font::StrDraw(L"◆      設定     ", 250, 450, 32, c);
+	Font::StrDraw(L"◆ シャットダウン", 250, 450, 32, c);
 	//
-	//シャットダウン
-	Font::StrDraw(L"◆ シャットダウン", 250, 500, 32, c);
+	
 
 	//仮矢印位置表示
 	//wchar_t str[256];

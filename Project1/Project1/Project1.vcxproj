@@ -139,6 +139,7 @@
     <ClInclude Include="CObjAssBullet.h" />
     <ClInclude Include="CObjBullet.h" />
     <ClInclude Include="CObjBulletEnemy.h" />
+    <ClInclude Include="CObjChinaAtkEnemy.h" />
     <ClInclude Include="CObjChinaTownBossBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -152,6 +153,7 @@
     <ClInclude Include="CObjSinEnemy.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjChinaEvent.h" />
     <ClInclude Include="ObjChinaTown_b.h" />
     <ClInclude Include="ObjChinaMob.h" />
     <ClInclude Include="ObjChinaTown.h" />
@@ -227,6 +229,7 @@
     <ClInclude Include="CObjRooftopBoss.h" />
     <ClInclude Include="ObjXRayRoom.h" />
     <ClInclude Include="SceneBlock.h" />
+    <ClInclude Include="SceneChinaEvent.h" />
     <ClInclude Include="SceneChinaTown.h" />
     <ClInclude Include="SceneChinaTownBoss.h" />
     <ClInclude Include="SceneChinaTown_b.h" />
@@ -297,6 +300,7 @@
     <ClCompile Include="CObjAssBullet.cpp" />
     <ClCompile Include="CObjBullet.cpp" />
     <ClCompile Include="CObjBulletEnemy.cpp" />
+    <ClCompile Include="CObjChinaAtkEnemy.cpp" />
     <ClCompile Include="CObjChinaTownBossBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -310,6 +314,7 @@
     <ClCompile Include="CObjSinEnemy.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ObjChinaEvent.cpp" />
     <ClCompile Include="ObjChinaTown_b.cpp" />
     <ClCompile Include="ObjChinaMob.cpp" />
     <ClCompile Include="ObjChinaTown.cpp" />
@@ -379,6 +384,7 @@
     <ClCompile Include="ObjTemplateRoom.cpp" />
     <ClCompile Include="ObjXRayRoom.cpp" />
     <ClCompile Include="SceneBlock.cpp" />
+    <ClCompile Include="SceneChinaEvent.cpp" />
     <ClCompile Include="SceneChinaTown _b.cpp" />
     <ClCompile Include="SceneChinaTown.cpp" />
     <ClCompile Include="SceneChinaTownBoss.cpp" />

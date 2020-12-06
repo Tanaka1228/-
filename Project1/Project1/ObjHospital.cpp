@@ -12,20 +12,24 @@
 //使用するネームスペース
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
 //イニシャライズ
 void CObjHospital::Init()
 {
 	mx_scroll =-420.0f;
 	my_scroll = 0.0f;
 
+	ChinaTown_Hero_x = 4;
+
 	//マップ情報
-	int block_data[26][50] =
+	int block_data[MAP_Y_MAX_1F][MAP_X_MAX_1F] =
 	{
 
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,28,0,0,28,0,0,0,0,0,0,28,0,0,28,0,0,1,0,0},
-		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,1,0,0},
+		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1,83,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,1,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,32,32,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,31,31,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0},
 		{0,1,1,1,1,1,1,1,1,1.1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,31,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1},
@@ -50,7 +54,7 @@ void CObjHospital::Init()
 		{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0,0},
 	};
 	//マップデータをコピー
-	memcpy(m_map, block_data, sizeof(int) * (26 * 50));
+	memcpy(m_map, block_data, sizeof(int) * (MAP_Y_MAX_1F * MAP_X_MAX_1F));
 
 	m_sp = false;
 	key_flag = 1;
@@ -127,9 +131,9 @@ void CObjHospital::Action()
 
 
 	//m_mapの全要素にアクセス
-	for (int i = 0; i < 26; i++)
+	for (int i = 0; i < MAP_Y_MAX_1F; i++)
 	{
-		for (int j = 0; j < 50; j++)
+		for (int j = 0; j < MAP_X_MAX_1F; j++)
 		{
 
 			if (m_map[i][j] > 0&&m_map[i][j]!=31)
@@ -171,7 +175,8 @@ void CObjHospital::Action()
 							//右
 							hero->SetRight(true);//主人公の左の部分が衝突している
 							hero->SetX2(x + 40.0f + (mx_scroll));//ブロックの位置+主人公の幅
-							hero->SetBT(m_map[i][j]);
+							if (m_map[i][j] == 36 || m_map[i][j] == 37 || m_map[i][j] == 83)
+								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 45 && r < 135)
@@ -179,7 +184,8 @@ void CObjHospital::Action()
 							//上
 							hero->SetDown(true);//主人公の下の部分が衝突している
 							hero->SetY2(y - 40.0f + (my_scroll));//ブロックの位置-主人公の幅
-							hero->SetBT(m_map[i][j]);
+							if (m_map[i][j] == 36 || m_map[i][j] == 37 || m_map[i][j] == 83)
+								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 
 						}
@@ -188,7 +194,8 @@ void CObjHospital::Action()
 							//左
 							hero->SetLeft(true);//主人公の右の部分が衝突している
 							hero->SetX2(x - 40.0f + (mx_scroll));//ブロックの位置-主人公の幅
-							hero->SetBT(m_map[i][j]);
+							if (m_map[i][j] == 36 || m_map[i][j] == 37 || m_map[i][j] == 83)
+								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
 						if (r > 225 && r < 315)
@@ -196,7 +203,8 @@ void CObjHospital::Action()
 							//下
 							hero->SetUp(true);//主人公の上の部分が衝突している
 							hero->SetY2(y + 40.0f + (my_scroll));//ブロックの位置+主人公の幅
-							hero->SetBT(m_map[i][j]);
+							if (m_map[i][j] == 36 || m_map[i][j] == 37 || m_map[i][j] == 83)
+								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
 						if (m_map[i][j] == 32)//ドアに入ると拠点に移動
@@ -351,9 +359,9 @@ void CObjHospital::Draw()
 	}
 
 	//マップチップによるblock設置
-	for (int i = 0; i < 26; i++)
+	for (int i = 0; i < MAP_Y_MAX_1F; i++)
 	{
-		for (int j = 0; j < 50; j++)
+		for (int j = 0; j < MAP_X_MAX_1F; j++)
 		{
 
 			if (m_map[i][j] == 1)//壁　ボス
@@ -994,6 +1002,23 @@ void CObjHospital::Draw()
 				dst.m_bottom = i * 32.0f + 64.0f + my_scroll;
 
 				Draw::Draw(7, &src, &dst, c, 0.0f);
+			}
+			if (m_map[i][j] == 83)//公衆電話 セーブ
+			{
+				//切り取り位置の設定
+				src.m_top = 32.0f;   //y
+				src.m_left = 251.0f; //x
+				src.m_right = 304.0f; //x
+				src.m_bottom = 138.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 40.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 72.0f + my_scroll;
+
+				//描画
+				Draw::Draw(10, &src, &dst, c, 0.0f);
 			}
 		}
 	}

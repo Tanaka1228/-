@@ -18,22 +18,26 @@ enum OBJ_NAME
 					OBJ_HOMING_ENEMY,//誘導敵機
 					OBJ_SIN_ENEMY,//カーブ敵機
 					OBJ_DIFFUSION_ENEMY,//
-					OBJ_ANGLE_BULLET,
-					OBJ_HOMING_BULLET,
-					OBJ_END,
-					OBJ_FIN,
+					OBJ_ANGLE_BULLET,//拡散敵
+					OBJ_HOMING_BULLET,//誘導弾丸敵
+					OBJ_END,//エンド
+					OBJ_FIN,//クリア
 					OBJ_MANU,//メニュー
 					OBJ_HEROINE,//ヒロイン
 					OBJ_GUN,//武器銃
 					OBJ_ASS_BULLET,//アサルトライフルの弾丸
 					OBJ_MAP,//各マップの全体図
+
+					//-----------モブキャラクター-------------------
 					OBJ_CHINA_MOB,//チャイナタウンのモブ
 					OBJ_HOS_MOB,//病院のモブ
 					OBJ_INST_MOB,//研究所のモブ
 					OBJ_DRUG_MOB,//製薬会社のモブ
 					OBJ_SP_BACK,//会話の背景
+					//-------------------------------------------------
 
 					//------マップ-------------------------------------------
+					//------チャイナタウン----------------------------------
 					OBJ_BLOCK,//拠点
 					OBJ_CHINA_TOWN_BOSS,//チャイナタウンのボス戦フィールド
 					OBJ_CHINA_TOWN,//チャイナタウン
@@ -41,9 +45,11 @@ enum OBJ_NAME
 					OBJ_CHINA_TOWN_C,//チャイナタウンc
 					OBJ_CHINA_TOWN_D,//チャイナタウンd
 					OBJ_CHINA_TOWN_BOSS_BOSS,//チャイナタウンのボス戦フィールドBOSS
+					OBJ_CHINA_EVENT,//チャイナタウンのEvent
+					OBJ_CHINA_ATK_ENEMY,//チャイナタウン雑魚
+					//---------------------------------------------------------
 
-
-
+					//-------------研究所----------------------
 					OBJ_INSTITUTE_BOSS,//研究所ボス
 					OBJ_INSTITUTE_BOSS_BOSS,//研究所ボスボス
 					OBJ_INSTITUTE,//研究所
@@ -61,7 +67,9 @@ enum OBJ_NAME
 					OBJ_INSTITUTE12,//研究部屋12
 					OBJ_INSTITUTE13A,//研究廊下13
 					OBJ_INSTITUTE14,//研究廊下14
-					
+					//----------------------------------------------
+
+
 					//--------------病院---------------------
 					OBJ_ROOF_TOP,//病院屋上
 					OBJ_ROOF_TOP_BOSS,//病院の屋上BOSS
@@ -76,6 +84,7 @@ enum OBJ_NAME
 
 					//----------------------------------------
 
+					//------------製薬会社---------------------
 
 					OBJ_DRUG_CAMPANY,//製薬会社
 					OBJ_DRUG_CAMPANY2,//製薬会社2階
@@ -90,6 +99,7 @@ enum OBJ_NAME
 					OBJ_DRUG_CAMPANY_ROOM8,//製薬会社部屋8
 					OBJ_DRUG_CAMPANY_ROOM9,//製薬会社部屋9
 
+					//-------------------------------------
 };
 //------------------------------------------------
 
@@ -117,7 +127,8 @@ enum HIT_ELEMENTS
 struct UserData
 {
 	int mSeveData;	//サンプルセーブデータ
-
+	int mStage;   //進行度合い
+	int mBullet;   //弾丸数
 };
 //------------------------------------------------
 
@@ -184,6 +195,7 @@ struct UserData
 #include"ObjInstitute2.h"
 #include"ObjInstitute3.h"  
 #include"CObjChinaTownBossBoss.h"
+#include"CObjChinaAtkEnemy.h"
 
 #include"ObjInstitute4.h"
 #include"ObjInstitute5.h"
@@ -203,7 +215,7 @@ struct UserData
 #include"ObjChinaTown_b.h"
 #include"ObjChinaTown_c.h"
 #include"ObjChinaTown_d.h"
-
+#include"ObjChinaEvent.h"
 
 #include"ObjChinaMob.h"
 #include"ObjHosMob.h"
@@ -262,6 +274,7 @@ struct UserData
 #include"SceneChinaTown_b.h"
 #include"SceneChinaTown_c.h"
 #include"SceneChinaTown_d.h"
+#include"SceneChinaEvent.h"
 
 //-----------------------------------------------
 

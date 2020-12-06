@@ -14,10 +14,12 @@ public:
 	void Action(); //アクション
 	void Draw(); //ドロー
 
+	bool GetMap() { return map_flag2; }
 private:
 	int m_map[25][25]; //マップ情報(仮）
 
-
+	bool map_flag;
+	bool map_flag2;
 
 
 };
