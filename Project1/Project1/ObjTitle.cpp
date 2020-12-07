@@ -7,6 +7,7 @@
 #include"GameHead.h"
 #include"ObjTitle.h"
 #include"SceneMain.h"
+#include"GameL/UserData.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -30,8 +31,7 @@ void CObjTitle::Action()
 	 m_key_dy = (float)Input::GetVKey(VK_DOWN);
 	 //矢印キーのボタンの状態
 	 m_key_enter = Input::GetVKey(VK_RETURN);
-
-
+	
 	 if (Input::GetVKey(VK_UP) == true)//カーソルの移動
 	 {
 		 m_y -= 6.0f;
@@ -57,8 +57,39 @@ void CObjTitle::Action()
 		 //エンターキーが押されたらメインに還移
 		 if (m_key_enter == true)
 		 {
-			 //Scene::SetScene(new CSceneMain());
+		    ((UserData*)Save::GetData())->mStage=0;
+			Save::Seve();
 			 Scene::SetScene(new CSceneBlock());
+		 }
+	 }
+
+	 //ロード
+	 if (m_x > 200 && m_x < 550 && m_y>370 && m_y < 430)
+	 {
+		 //エンターキーが押されたらロードに還移
+		 if (m_key_enter == true)
+		 {
+			 Save::Open();
+			 if (((UserData*)Save::GetData())->mStage == 0)//拠点ニューゲーム
+			 {
+				 Scene::SetScene(new CSceneBlock());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 1)//チャイナタウン
+			 {
+				 Scene::SetScene(new CSceneChinaTown());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 2)//病院1階
+			 {
+				 Scene::SetScene(new CSceneHospital());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 3)//製薬会社一階
+			 {
+				 Scene::SetScene(new CSceneDrugCampany());
+			 }
+			 if (((UserData*)Save::GetData())->mStage == 8)//研究所
+			 {
+				 Scene::SetScene(new CSceneInstitute());
+			 }
 		 }
 	 }
 

@@ -4,6 +4,7 @@
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
+#include"GameL/UserData.h"
 
 #include"GameHead.h"
 #include "ObjChinaTown.h"
@@ -105,6 +106,7 @@ void CObjChinaTown::Init()
 	memcpy(m_map, block_data, sizeof(int) * (65 * 54));
 	map_flag = true;
 	map_flag2 = false;
+
 }
 
 //アクション
@@ -219,7 +221,7 @@ void CObjChinaTown::Action()
 							//右
 							hero->SetRight(true);//主人公の左の部分が衝突している
 							hero->SetX2(x + 39.0f + (mx_scroll));//ブロックの位置+主人公の幅
-							if (m_map[i][j] == 99)
+							if (m_map[i][j] == 99 || m_map[i][j] == 83)
 								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
@@ -228,7 +230,7 @@ void CObjChinaTown::Action()
 							//上
 							hero->SetDown(true);//主人公の下の部分が衝突している
 							hero->SetY2(y - 39.0f + (my_scroll));//ブロックの位置-主人公の幅
-							if (m_map[i][j] == 99)
+							if (m_map[i][j] == 99 || m_map[i][j] == 83)
 								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 
@@ -238,7 +240,7 @@ void CObjChinaTown::Action()
 							//左
 							hero->SetLeft(true);//主人公の右の部分が衝突している
 							hero->SetX2(x - 39.0f + (mx_scroll));//ブロックの位置-主人公の幅
-							if (m_map[i][j] == 99)
+							if (m_map[i][j] == 99||m_map[i][j]==83)
 								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVX(0.0f);//-VX*反発係数
 						}
@@ -247,7 +249,7 @@ void CObjChinaTown::Action()
 							//下
 							hero->SetUp(true);//主人公の上の部分が衝突している
 							hero->SetY2(y + 39.0f + (my_scroll));//ブロックの位置+主人公の幅
-							if (m_map[i][j] == 99)
+							if (m_map[i][j] == 99 || m_map[i][j] == 83)
 								hero->SetBT(m_map[i][j]);//ブロックの要素(type)を主人公に渡す
 							hero->SetVY(0.0f);//-VX*反発係数
 						}
@@ -265,24 +267,7 @@ void CObjChinaTown::Action()
 			}
 		}
 	}
-	//敵出現ライン
-	//float Xline = hx + (-mx_scroll) - 1100;
-	//float Yline = hy + (my_scroll)-400;
-
-	//int ex = ((int)Xline) / 32;
-	//int ey = ((int)Yline) / 32;
-
-	//for (int i = 0; i < 65; i++)
-	//{
-	//	for (int j = 0; j < 54; j++)
-
-	//		//if (m_map[i][ex] == 81)
-	//		//	////誘導敵機オブジェクト作成
-	//		//	//CObjChinaTownBossBoss* obj_chinatown_boss_boss = new CObjChinaTownBossBoss(ex * 32, i * 32); //誘導敵機オブジェクト作成
-	//		//	//Objs::InsertObj(obj_chinatown_boss_boss, OBJ_CHINA_TOWN_BOSS_BOSS, 4); //誘導敵機オブジェクトをオブジェクトマネージャーに登録
-
-	//			m_map[i][ex] = 0;		
-	//}
+	
 
 	if (Input::GetVKey('X') == true)
 	{
@@ -1723,7 +1708,7 @@ void CObjChinaTown::Draw()
 					//描画
 					Draw::Draw(4, &src, &dst, c, 0.0f);
 				}
-				if (m_map[i][j] == 83)//公衆電話
+				if (m_map[i][j] == 83)//公衆電話 セーブ
 				{
 					//切り取り位置の設定
 					src.m_top = 32.0f;   //y

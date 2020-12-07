@@ -4,6 +4,7 @@
 #include"GameL\WinInputs.h"
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
+#include"GameL/UserData.h"
 
 #include"GameHead.h"
 #include "ObjInstitute.h"
@@ -11,11 +12,41 @@
 
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
+extern int Inst_Hero_x;
+
 
 void CObjInstitute::Init()
 {
-	mx_scroll = +300.0f;
-	my_scroll = -100.0f;
+	if (ChinaTown_Hero_x == 7)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 1)
+	{
+		mx_scroll = -100.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 2)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 3)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	if (Inst_Hero_x == 4)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = -100.0f;
+	}
+	
+
+	ChinaTown_Hero_x = 8;
 
 	int block_data[60][60] =
 	{
@@ -23,7 +54,7 @@ void CObjInstitute::Init()
 		{1,1,1,1,1,1,1,1,1,25,1,1,1,1,1,1,1,25,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,25,1,1,1,1,25,1,1,1,1,1,1,1,1,1,1},
 		{1,13,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,1},
 		{1,1,1,1,1,1,1,1,1,60,1,1,1,1,1,1,1,60,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,25,1,1,1,1,25,1,1,1,1,1,1,1,1,1,1},
-		{1,13,5,0,0,0,0,0,0,69,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,0,0,0,72,0,0,0,0,0,5,0,0,0,1},
+		{1,13,5,83,0,0,0,0,0,69,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,0,0,0,72,0,0,0,0,0,5,0,0,0,1},
 		{1,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{1,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
 		{1,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
@@ -49,6 +80,7 @@ void CObjInstitute::Init()
 	memcpy(m_map, block_data, sizeof(int) * (60* 60));
 	map_flag = true;
 	map_flag2 = false;
+	Save_sp = true;
 }
 
 void CObjInstitute::Action()
@@ -213,6 +245,23 @@ void CObjInstitute::Action()
 						{
 							Scene::SetScene(new CSceneChinaTown_d());
 						}
+
+						if (m_map[i][j] == 83)//公衆電話でエンターをおすとセーブ
+						{
+							if (Input::GetVKey(VK_RETURN) == true)
+							{
+								if (Save_sp == true) {
+									((UserData*)Save::GetData())->mStage = 8;
+									Save::Seve();
+									SetSaveSp(false);
+								}
+							}
+							else
+							{
+								SetSaveSp(true);
+							}
+						}
+		
 					}
 				}
 
@@ -797,6 +846,23 @@ void CObjInstitute::Draw()
 			if (m_map[i][j] == 74)
 			{
 
+			}
+			if (m_map[i][j] == 83)//公衆電話 セーブ
+			{
+				//切り取り位置の設定
+				src.m_top = 32.0f;   //y
+				src.m_left = 251.0f; //x
+				src.m_right = 304.0f; //x
+				src.m_bottom = 138.0f; //y
+
+				//表示位置の設定
+				dst.m_top = i * 32.0f + my_scroll;
+				dst.m_left = j * 32.0f + mx_scroll;
+				dst.m_right = j * 32.0f + 40.0f + mx_scroll;
+				dst.m_bottom = i * 32.0f + 72.0f + my_scroll;
+
+				//描画
+				Draw::Draw(4, &src, &dst, c, 0.0f);
 			}
 		}
 	}

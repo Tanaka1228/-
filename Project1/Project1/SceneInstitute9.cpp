@@ -14,7 +14,7 @@ using namespace GameL;
 #include"GameHead.h"
 #include"ObjInstitute9.h"
 
-
+extern int Inst_Hero_x;
 
 //コンストラクタ
 CSceneInstitute9::CSceneInstitute9()
