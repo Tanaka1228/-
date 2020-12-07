@@ -23,7 +23,7 @@ public:
 
 	bool GetMap() { return map_flag; }
 
-
+	
 private:
 
 	int m_map[100][100]; //マップ情報
@@ -32,5 +32,7 @@ private:
 	float my_scroll; //左右スクロール用
 
 	bool map_flag;
+
+
 
 };

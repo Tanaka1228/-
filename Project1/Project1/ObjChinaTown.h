@@ -24,6 +24,7 @@ public:
 	float GetScroll2() { return my_scroll; }
 
 	bool GetMap() { return map_flag2; }
+
 private:
 	int m_map[65][54];//ƒ}ƒbƒvî•ñ(‰¼)
 

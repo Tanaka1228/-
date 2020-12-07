@@ -11,11 +11,20 @@
 //使用するネームスペース
 using namespace GameL;
 
+int Inst_Hero_x;
+
+
+
 //イニシャライズ
 void CObjInstitute9::Init()
 {
-	mx_scroll = 0.0f;
-	my_scroll = 0.0f;
+	
+		mx_scroll = -50.0f;
+		my_scroll = 0.0f;
+
+	
+
+	Inst_Hero_x = 1;
 
 	//マップ情報
 	int block_data[40][40] =

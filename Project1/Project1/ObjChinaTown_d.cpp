@@ -11,11 +11,25 @@
 //�g�p����l�[���X�y�[�X
 using namespace GameL;
 
+extern int ChinaTown_Hero_x;
+
 //�C�j�V�����C�Y
 void CObjChinaTown_d::Init()
 {
-	mx_scroll = +300.0f;
-	my_scroll = 0.0f;
+	if (ChinaTown_Hero_x == 5)
+	{
+		mx_scroll = +300.0f;
+		my_scroll = 0.0f;
+	}
+	if (ChinaTown_Hero_x == 8)
+	{
+		mx_scroll = -600.0f;
+		my_scroll = +50.0f;
+	}
+
+	
+
+	ChinaTown_Hero_x = 7;
 
 	//�}�b�v���
 	int block_data[65][54] =
