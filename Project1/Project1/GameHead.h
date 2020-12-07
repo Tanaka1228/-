@@ -80,6 +80,14 @@ enum OBJ_NAME
 					OBJ_OPE_ROOM,//病院の手術室
 					OBJ_EX_ROOM,//病院の診察室
 					OBJ_XRAY_ROOM,//病院のレントゲン室
+					OBJ_Hospitalroom1cpp,
+					OBJ_Hospitalroom2cpp,
+					OBJ_Hospitalroom3cpp,
+					OBJ_Hospitalroom4cpp,
+					OBJ_Hospitalroom5cpp,
+					OBJ_Hospitalroom6cpp,
+					OBJ_Hospitalroom7cpp,
+					OBJ_Hospitalroom8cpp,
 
 					//----------------------------------------
 
@@ -221,6 +229,15 @@ struct UserData
 #include"ObjDrugMob.h"
 #include"ObjSpBack.h"
 
+#include"ObjHospitalroom1.h"
+#include"ObjHospitalroom2.h"
+#include"ObjHospitalroom3.h"
+#include"ObjHospitalroom4.h"
+#include"ObjHospitalroom5.h"
+#include"ObjHospitalroom6.h"
+#include"ObjHospitalroom7.h"
+#include"ObjHospitalroom8.h"
+
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -273,6 +290,14 @@ struct UserData
 #include"SceneChinaTown_c.h"
 #include"SceneChinaTown_d.h"
 #include"SceneChinaEvent.h"
+#include"SceneHospitalroom1.h"
+#include"SceneHospitalroom2.h"
+#include"SceneHospitalroom3.h"
+#include"SceneHospitalroom4.h"
+#include"SceneHospitalroom5.h"
+#include"SceneHospitalroom6.h"
+#include"SceneHospitalroom7.h"
+#include"SceneHospitalroom8.h"
 
 //-----------------------------------------------
 
