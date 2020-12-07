@@ -1,30 +1,19 @@
 #pragma once
-//使用するヘッダー
-#include"GameL\SceneObjManager.h"
+
+//使用するヘッダーファイル
 #include"GameL\SceneManager.h"
+
 //使用するネームスペース
 using namespace GameL;
 
-
-//オブジェクト：ブロック&背景
-class CObjOpeRoom :public CObj
+//シーン：ステージ
+class CSceneHospitalroom2 :public CScene
 {
 public:
-	CObjOpeRoom() {};
-	~CObjOpeRoom() {};
-	void Init();//イニシャライズ
-	void Action();//アクション
-	void Draw();//ドロー
-
-	void SetScroll(float s) { mx_scroll = s; }
-	float GetScroll() { return mx_scroll; }
-
-	void SetScroll2(float s) { my_scroll = s; }
-	float GetScroll2() { return my_scroll; }
+	CSceneHospitalroom2();//コンストラクタ
+	~CSceneHospitalroom2();//デストラクタ
+	void InitScene();//ゲームステージ初期化メソッド
+	void Scene();//ゲームステージ実行中メソッド
 private:
-	int m_map3[25][25];//マップ情報(仮)
-
-	float mx_scroll; //左右スクロール用
-	float my_scroll; //左右スクロール用
 
 };

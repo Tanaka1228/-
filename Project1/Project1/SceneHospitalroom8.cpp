@@ -12,7 +12,7 @@ using namespace GameL;
 
 //使用するヘッダー
 #include"GameHead.h"
-#include "OBJHospitalroom8.h"
+#include "SceneHospitalroom8.h"
 
 
 
@@ -58,8 +58,8 @@ void CSceneHospitalroom8::InitScene()
 	Objs::InsertObj(objg, OBJ_GUN, 3);
 
 	//病院オブジェクト作成
-	CObjHospitalroom8* objh = new CObjHospitalroom8(); //病院オブジェクト作成
-	Objs::InsertObj(objh, OBJHospitalroom8, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
+	CObjHospitalroom8* objo = new CObjHospitalroom8(); //病院オブジェクト作成
+	Objs::InsertObj(objo, OBJ_OPE_ROOM, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
 }
 
 

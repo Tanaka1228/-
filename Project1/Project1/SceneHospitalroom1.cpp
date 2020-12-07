@@ -58,8 +58,8 @@ void CSceneHospitalroom1::InitScene()
 	Objs::InsertObj(objg, OBJ_GUN, 3);
 
 	//病院オブジェクト作成
-	CObjHospitalroom1* objh = new CObjHospitalroom1(); //病院オブジェクト作成
-	Objs::InsertObj(objh, OBJ_Hospitalroom1, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
+	CObjHospitalroom1* objo = new CObjHospitalroom1(); //病院オブジェクト作成
+	Objs::InsertObj(objo, OBJ_OPE_ROOM, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
 }
 
 
