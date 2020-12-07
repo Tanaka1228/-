@@ -98,7 +98,15 @@ enum OBJ_NAME
 					OBJ_DRUG_CAMPANY_ROOM7,//製薬会社部屋7
 					OBJ_DRUG_CAMPANY_ROOM8,//製薬会社部屋8
 					OBJ_DRUG_CAMPANY_ROOM9,//製薬会社部屋9
-
+					OBJ_DRUG_CAMPANY_ROOM10,
+					OBJ_DRUG_CAMPANY_ROOM11,
+					OBJ_DRUG_CAMPANY_ROOM12,
+					OBJ_DRUG_CAMPANY_ROOM13,
+		            OBJ_DRUG_CAMPANY_ROOM14,
+		            OBJ_DRUG_CAMPANY_ROOM15,
+					OBJ_DRUG_CAMPANY_ROOM16,
+					OBJ_DRUG_CAMPANY_ROOM17,
+					OBJ_DRUG_CAMPANY_ROOM18,
 					//-------------------------------------
 };
 //------------------------------------------------
@@ -181,6 +189,16 @@ struct UserData
 #include"ObjDrugCampanyRoom7.h"
 #include"ObjDrugCampanyRoom8.h"
 #include"ObjDrugCampanyRoom9.h"
+#include"ObjDrugCampanyRoom10.h"
+#include"ObjDrugCampanyRoom11.h"
+#include"ObjDrugCampanyRoom12.h"
+#include"ObjDrugCampanyRoom13.h"
+#include"ObjDrugCampanyRoom14.h"
+#include"ObjDrugCampanyRoom15.h"
+#include"ObjDrugCampanyRoom16.h"
+#include"ObjDrugCampanyRoom17.h"
+#include"ObjDrugCampanyRoom18.h"
+
 #include"ObjHospital.h"
 #include"ObjHospital2.h"
 #include"ObjHospital3.h"
@@ -247,6 +265,15 @@ struct UserData
 #include"SceneDrugCampanyRoom7.h"
 #include"SceneDrugCampanyRoom8.h"
 #include"SceneDrugCampanyRoom9.h"
+#include"SceneDrugCampanyRoom10.h"
+#include"SceneDrugCampanyRoom11.h"
+#include"SceneDrugCampanyRoom12.h"
+#include"SceneDrugCampanyRoom13.h"
+#include"SceneDrugCampanyRoom14.h"
+#include"SceneDrugCampanyRoom15.h"
+#include"SceneDrugCampanyRoom16.h"
+#include"SceneDrugCampanyRoom17.h"
+#include"SceneDrugCampanyRoom18.h"
 #include"SceneHospital.h"
 #include"SceneHospital2.h"
 #include"SceneHospital3.h"
