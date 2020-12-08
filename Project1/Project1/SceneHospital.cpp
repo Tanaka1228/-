@@ -14,7 +14,7 @@ using namespace GameL;
 #include"GameHead.h"
 #include "SceneHospital.h"
 
-
+extern int Hos_Hero_x;
 
 //コンストラクタ
 CSceneHospital::CSceneHospital()
