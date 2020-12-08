@@ -12,24 +12,24 @@ using namespace GameL;
 
 //使用するヘッダー
 #include"GameHead.h"
-#include "SceneHospitalroom1.h"
+#include "SceneHospitalRoom1.h"
 
 
 
 //コンストラクタ
-CSceneHospitalroom1::CSceneHospitalroom1()
+CSceneHospitalRoom1::CSceneHospitalRoom1()
 {
 }
 
 //デストラクタ
-CSceneHospitalroom1::~CSceneHospitalroom1()
+CSceneHospitalRoom1::~CSceneHospitalRoom1()
 {
 }
 
 
 
 //ゲームステージ初期化メソッド
-void CSceneHospitalroom1::InitScene()
+void CSceneHospitalRoom1::InitScene()
 {
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
@@ -58,12 +58,12 @@ void CSceneHospitalroom1::InitScene()
 	Objs::InsertObj(objg, OBJ_GUN, 3);
 
 	//病院オブジェクト作成
-	CObjHospitalroom1* objo = new CObjHospitalroom1(); //病院オブジェクト作成
+	CObjHospitalRoom1* objo = new CObjHospitalRoom1(); //病院オブジェクト作成
 	Objs::InsertObj(objo, OBJ_OPE_ROOM, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
 }
 
 
 //ゲームステージ実行中メソッド
-void CSceneHospitalroom1::Scene()
+void CSceneHospitalRoom1::Scene()
 {
 }
