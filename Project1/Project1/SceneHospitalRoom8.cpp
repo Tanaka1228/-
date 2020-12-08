@@ -12,24 +12,24 @@ using namespace GameL;
 
 //使用するヘッダー
 #include"GameHead.h"
-#include "SceneEventRoom.h"
+#include "SceneHospitalroom8.h"
 
 
 
 //コンストラクタ
-CSceneEventRoom::CSceneEventRoom()
+CSceneHospitalroom8::CSceneHospitalroom8()
 {
 }
 
 //デストラクタ
-CSceneEventRoom::~CSceneEventRoom()
+CSceneHospitalroom8::~CSceneHospitalroom8()
 {
 }
 
 
 
 //ゲームステージ初期化メソッド
-void CSceneEventRoom::InitScene()
+void CSceneHospitalroom8::InitScene()
 {
 	//外部グラフィックファイルを読み込み0番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"Hero.png", 0, TEX_SIZE_512);//主人公グラフィック
@@ -49,12 +49,6 @@ void CSceneEventRoom::InitScene()
 	//外部グラフィックファイルを読み込み6番に登録(512×512ピクセル)あまり関係ないらしい
 	Draw::LoadImage(L"病院床.png", 6, TEX_SIZE_512);
 
-	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"武器商売ロボット.png", 7, TEX_SIZE_512);
-
-	//外部グラフィックファイルを読み込み10番に登録(512×512ピクセル)あまり関係ないらしい
-	Draw::LoadImage(L"会話.png", 8, TEX_SIZE_512);
-
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero(400, 280); //主人公オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 2); //作った主人公オブジェクトをオブジェクトマネージャーに登録
@@ -63,17 +57,13 @@ void CSceneEventRoom::InitScene()
 	CObjGun* objg = new CObjGun();
 	Objs::InsertObj(objg, OBJ_GUN, 3);
 
-	//病院の部屋オブジェクト作成
-	CObjEventRoom* obje = new CObjEventRoom(); //病院部屋オブジェクト作成
-	Objs::InsertObj(obje, OBJ_EVENT_ROOM, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
-
-	//会話の背景オブジェクト作成
-	CObjSpBack* objsp = new CObjSpBack(); //会話の背景作成
-	Objs::InsertObj(objsp, OBJ_SP_BACK, 5); //作った会話の背景オブジェクトをオブジェクトマネージャーに登録
+	//病院オブジェクト作成
+	CObjHospitalroom8* objo = new CObjHospitalroom8(); //病院オブジェクト作成
+	Objs::InsertObj(objo, OBJ_OPE_ROOM, 1); //作った病院オブジェクトをオブジェクトマネージャーに登録
 }
 
 
 //ゲームステージ実行中メソッド
-void CSceneEventRoom::Scene()
+void CSceneHospitalroom8::Scene()
 {
 }

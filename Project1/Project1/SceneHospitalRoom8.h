@@ -7,11 +7,11 @@
 using namespace GameL;
 
 //シーン：ステージ
-class CSceneHospitalRoom2 :public CScene
+class CSceneHospitalroom8 :public CScene
 {
 public:
-	CSceneHospitalRoom2();//コンストラクタ
-	~CSceneHospitalRoom2();//デストラクタ
+	CSceneHospitalroom8();//コンストラクタ
+	~CSceneHospitalroom8();//デストラクタ
 	void InitScene();//ゲームステージ初期化メソッド
 	void Scene();//ゲームステージ実行中メソッド
 private:

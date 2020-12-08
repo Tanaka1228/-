@@ -7,11 +7,11 @@ using namespace GameL;
 
 
 //オブジェクト：ブロック&背景
-class CObjHospitalRoom2 :public CObj
+class CObjHospitalroom2 :public CObj
 {
 public:
-	CObjHospitalRoom2() {};
-	~CObjHospitalRoom2() {};
+	CObjHospitalroom2() {};
+	~CObjHospitalroom2() {};
 	void Init();//イニシャライズ
 	void Action();//アクション
 	void Draw();//ドロー

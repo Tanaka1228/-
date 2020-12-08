@@ -13,6 +13,7 @@
 using namespace GameL;
 
 extern int ChinaTown_Hero_x;
+int Hos_Hero_x;
 
 //イニシャライズ
 void CObjHospital::Init()
@@ -21,6 +22,7 @@ void CObjHospital::Init()
 	my_scroll = 0.0f;
 
 	ChinaTown_Hero_x = 4;
+	Hos_Hero_x = 1;
 
 	//マップ情報
 	int block_data[MAP_Y_MAX_1F][MAP_X_MAX_1F] =
