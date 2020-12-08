@@ -81,6 +81,14 @@ enum OBJ_NAME
 					OBJ_OPE_ROOM,//病院の手術室
 					OBJ_EX_ROOM,//病院の診察室
 					OBJ_XRAY_ROOM,//病院のレントゲン室
+					OBJ_HOSPITAL_ROOM1,
+					OBJ_HOSPITAL_ROOM2,
+					OBJ_HOSPITAL_ROOM3,
+					OBJ_HOSPITAL_ROOM4,
+					OBJ_HOSPITAL_ROOM5,
+					OBJ_HOSPITAL_ROOM6,
+					OBJ_HOSPITAL_ROOM7,
+					OBJ_HOSPITAL_ROOM8,
 					OBJ_Hospitalroom1cpp,
 					OBJ_Hospitalroom2cpp,
 					OBJ_Hospitalroom3cpp,
@@ -249,6 +257,15 @@ struct UserData
 #include"ObjDrugMob.h"
 #include"ObjSpBack.h"
 
+#include"ObjHospitalRoom1.h"
+#include"ObjHospitalRoom2.h"
+#include"ObjHospitalRoom3.h"
+#include"ObjHospitalRoom4.h"
+#include"ObjHospitalRoom5.h"
+#include"ObjHospitalRoom6.h"
+#include"ObjHospitalRoom7.h"
+#include"ObjHospitalRoom8.h"
+
 #include"ObjHospitalroom1.h"
 #include"ObjHospitalroom2.h"
 #include"ObjHospitalroom3.h"
@@ -319,6 +336,15 @@ struct UserData
 #include"SceneChinaTown_c.h"
 #include"SceneChinaTown_d.h"
 #include"SceneChinaEvent.h"
+#include"SceneHospitalRoom1.h"
+#include"SceneHospitalRoom2.h"
+#include"SceneHospitalRoom3.h"
+#include"SceneHospitalRoom4.h"
+#include"SceneHospitalRoom5.h"
+#include"SceneHospitalRoom6.h"
+#include"SceneHospitalRoom7.h"
+#include"SceneHospitalRoom8.h"
+
 #include"SceneHospitalroom1.h"
 #include"SceneHospitalroom2.h"
 #include"SceneHospitalroom3.h"
