@@ -333,9 +333,9 @@ struct UserData
 //シーンスタートクラス---------------------------
 ////ゲーム開始時のシーンクラス登録
 //#define SET_GAME_START CSceneGameOver
-#define SET_GAME_START CSceneTitle
+//#define SET_GAME_START CSceneTitle
 //#define SET_GAME_START CSceneRooftop
-//#define SET_GAME_START CSceneInstitute
+#define SET_GAME_START CSceneInstitute14
 //#define SET_GAME_START CSceneEnd 
 //#define SET_GAME_START CSceneFin
 //#define SET_GAME_START CSceneMain
