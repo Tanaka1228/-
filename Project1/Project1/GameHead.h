@@ -89,6 +89,15 @@ enum OBJ_NAME
 					OBJ_HOSPITAL_ROOM6,
 					OBJ_HOSPITAL_ROOM7,
 					OBJ_HOSPITAL_ROOM8,
+					OBJ_Hospitalroom1cpp,
+					OBJ_Hospitalroom2cpp,
+					OBJ_Hospitalroom3cpp,
+					OBJ_Hospitalroom4cpp,
+					OBJ_Hospitalroom5cpp,
+					OBJ_Hospitalroom6cpp,
+					OBJ_Hospitalroom7cpp,
+					OBJ_Hospitalroom8cpp,
+
 					//----------------------------------------
 
 					//------------製薬会社---------------------
@@ -257,6 +266,15 @@ struct UserData
 #include"ObjHospitalRoom7.h"
 #include"ObjHospitalRoom8.h"
 
+#include"ObjHospitalroom1.h"
+#include"ObjHospitalroom2.h"
+#include"ObjHospitalroom3.h"
+#include"ObjHospitalroom4.h"
+#include"ObjHospitalroom5.h"
+#include"ObjHospitalroom6.h"
+#include"ObjHospitalroom7.h"
+#include"ObjHospitalroom8.h"
+
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -327,6 +345,14 @@ struct UserData
 #include"SceneHospitalRoom7.h"
 #include"SceneHospitalRoom8.h"
 
+#include"SceneHospitalroom1.h"
+#include"SceneHospitalroom2.h"
+#include"SceneHospitalroom3.h"
+#include"SceneHospitalroom4.h"
+#include"SceneHospitalroom5.h"
+#include"SceneHospitalroom6.h"
+#include"SceneHospitalroom7.h"
+#include"SceneHospitalroom8.h"
 
 //-----------------------------------------------
 
@@ -335,6 +361,7 @@ struct UserData
 //#define SET_GAME_START CSceneGameOver
 #define SET_GAME_START CSceneTitle
 //#define SET_GAME_START CSceneRooftop
+//#define SET_GAME_START CSceneInstitute
 //#define SET_GAME_START CSceneEnd 
 //#define SET_GAME_START CSceneFin
 //#define SET_GAME_START CSceneMain

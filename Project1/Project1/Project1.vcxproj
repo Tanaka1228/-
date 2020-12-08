@@ -215,6 +215,14 @@
     <ClInclude Include="ObjHospitalRoom6.h" />
     <ClInclude Include="ObjHospitalRoom7.h" />
     <ClInclude Include="ObjHospitalRoom8.h" />
+    <ClInclude Include="OBJHospitalroom1.h" />
+    <ClInclude Include="OBJHospitalroom2.h" />
+    <ClInclude Include="OBJHospitalroom3.h" />
+    <ClInclude Include="OBJHospitalroom4.h" />
+    <ClInclude Include="OBJHospitalroom5.h" />
+    <ClInclude Include="OBJHospitalroom6.h" />
+    <ClInclude Include="OBJHospitalroom7.h" />
+    <ClInclude Include="OBJHospitalroom8.h" />
     <ClInclude Include="ObjInstitute.h" />
     <ClInclude Include="ObjInstitute10.h" />
     <ClInclude Include="ObjInstitute11.h" />
@@ -289,6 +297,14 @@
     <ClInclude Include="SceneHospitalRoom6.h" />
     <ClInclude Include="SceneHospitalRoom7.h" />
     <ClInclude Include="SceneHospitalRoom8.h" />
+    <ClInclude Include="SceneHospitalroom1.h" />
+    <ClInclude Include="SceneHospitalroom2.h" />
+    <ClInclude Include="SceneHospitalroom3.h" />
+    <ClInclude Include="SceneHospitalroom4.h" />
+    <ClInclude Include="SceneHospitalroom5.h" />
+    <ClInclude Include="SceneHospitalroom6.h" />
+    <ClInclude Include="SceneHospitalroom7.h" />
+    <ClInclude Include="SceneHospitalroom8.h" />
     <ClInclude Include="SceneInstitute.h" />
     <ClInclude Include="SceneInstitute10.h" />
     <ClInclude Include="SceneInstitute11.h" />
@@ -406,6 +422,12 @@
     <ClCompile Include="ObjHospitalRoom6.cpp" />
     <ClCompile Include="ObjHospitalRoom7.cpp" />
     <ClCompile Include="ObjHospitalRoom8.cpp" />
+    <ClCompile Include="OBJHospitalroom3.cpp" />
+    <ClCompile Include="OBJHospitalroom4.cpp" />
+    <ClCompile Include="OBJHospitalroom5.cpp" />
+    <ClCompile Include="OBJHospitalroom6.cpp" />
+    <ClCompile Include="OBJHospitalroom7.cpp" />
+    <ClCompile Include="OBJHospitalroom8.cpp" />
     <ClCompile Include="ObjInstitute.cpp" />
     <ClCompile Include="ObjInstitute10.cpp" />
     <ClCompile Include="ObjInstitute11.cpp" />
@@ -484,6 +506,14 @@
     <ClCompile Include="SceneHospitalRoom6.cpp" />
     <ClCompile Include="SceneHospitalRoom7.cpp" />
     <ClCompile Include="SceneHospitalRoom8.cpp" />
+    <ClCompile Include="SceneHospitalroom1.cpp" />
+    <ClCompile Include="SceneHospitalroom2.cpp" />
+    <ClCompile Include="SceneHospitalroom3.cpp" />
+    <ClCompile Include="SceneHospitalroom4.cpp" />
+    <ClCompile Include="SceneHospitalroom5.cpp" />
+    <ClCompile Include="SceneHospitalroom6.cpp" />
+    <ClCompile Include="SceneHospitalroom7.cpp" />
+    <ClCompile Include="SceneHospitalroom8.cpp" />
     <ClCompile Include="SceneInstitute.cpp" />
     <ClCompile Include="SceneInstitute11.cpp" />
     <ClCompile Include="SceneInstitute12.cpp" />
@@ -511,6 +541,8 @@
     <ClCompile Include="ObjTitleBackground.cpp" />
     <ClCompile Include="SceneXRayRoom.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
+    <ClCompile Include="OBJHospitalroom1.cpp" />
+    <ClCompile Include="OBJHospitalroom2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
