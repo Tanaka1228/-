@@ -15,13 +15,23 @@ extern int Hos_Hero_x;
 //イニシャライズ
 void CObjHospital2::Init()
 {
-	if (Hos_Hero_x == 6)
+	if (Hos_Hero_x == 6)//イベント
 	{
-		mx_scroll = -220.0f;
+		mx_scroll = 100.0f;
 		my_scroll = 0.0f;
 	}
-
-	if (Hos_Hero_x == 1) {
+	if (Hos_Hero_x == 7)//テンプレ
+	{
+		mx_scroll = 0.0f;
+		my_scroll = -50.0f;
+	}
+	if (Hos_Hero_x == 1)
+	{
+		mx_scroll = -420.0f;
+		my_scroll = 0.0f;
+	}
+	if (Hos_Hero_x == 3)
+	{
 		mx_scroll = -420.0f;
 		my_scroll = 0.0f;
 	}
